@@ -1,5 +1,5 @@
 
-# Việt Hóa bằng google dịch ;)
+# Wuthering Waves Việt Hóa bằng google dịch ;)
 
 tải mod ở [ĐÂY](https://github.com/Lai-Hoang/wuwa-viet-hoa/releases/tag/WutheringWaveTiengViet)
 
