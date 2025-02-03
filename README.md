@@ -1,7 +1,7 @@
 
 # Wuthering Waves Việt Hóa 
 
-tải mod ở [ĐÂY](https://github.com/Lai-Hoang/wuwa-viet-hoa/releases/tag/WutheringWaveTiengViet)
+tải mod ở [ĐÂY](https://github.com/Lai-Hoang/wuwa-viet-hoa/releases)
 
 giải nén file và copy file TiengViet_99_P.pak đến đường dẫn dưới đây
 ```console
