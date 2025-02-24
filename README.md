@@ -8,7 +8,8 @@ giải nén file và copy thư mục đến đường dẫn dưới đây
 \Wuthering Waves\Wuthering Waves Game\
 ```
 cách xác định đường dẫn trên:
-chuột phải vào icon shortcut Wuthering Waves trên màn hình desktop chọn open file location
+chuột phải vào icon shortcut Wuthering Waves trên 
+màn hình desktop chọn open file location
 ![Ảnh chụp màn hình](https://imgur.com/rA4D1Fp.png)
 
 tìm thư mục có tên "Wuthering Waves Game" nhấn vào
