@@ -20,7 +20,7 @@ tìm thư mục có tên "Wuthering Waves Game" nhấn vào
 copy thư mục "client" vừa giải nén từ mod vào trong thư mục "Wuthering Waves Game"
 ![Ảnh chụp màn hình](https://imgur.com/idrxQOm.png)
 
-# lưu ý nếu dùng cùng mod khác hoặc xóa mod
+# lưu ý nếu xóa mod
 cần xóa 3 tệp tin libraries.txt, shorekeeper.dll, winhttp.dll
 ở đường dẫn
 ```console
