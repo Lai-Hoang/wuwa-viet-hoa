@@ -1,4 +1,4 @@
-
+# 28/2/2025 update ver 2.1.1
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 nếu tạo tài khoản phụ để chơi nên tạo ở server EU, NA trừ server sea, asia, CN. không nên tạo game thường cấm rất gắt ở server này. LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
