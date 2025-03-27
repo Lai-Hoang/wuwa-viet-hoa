@@ -1,7 +1,7 @@
-# 28/2/2025 update ver 2.1.1
+# 27/3/2025 update ver 2.2.0
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
-nếu tạo tài khoản phụ để chơi nên tạo ở server EU, NA trừ server sea, asia, CN. không nên tạo game thường cấm rất gắt ở server này. LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
+LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
 
 tải mod ở [ĐÂY](https://github.com/Lai-Hoang/wuwa-viet-hoa/releases)
 
@@ -21,7 +21,7 @@ copy thư mục "client" vừa giải nén từ mod vào trong thư mục "Wuthe
 ![Ảnh chụp màn hình](https://imgur.com/idrxQOm.png)
 
 # lưu ý nếu xóa mod
-cần xóa 3 tệp tin libraries.txt, shorekeeper.dll, winhttp.dll
+cần xóa 5 tệp tin libraries.txt, CenSerPatch.dll, version.dll, WuwaCheckBypass.dll, WuwaCheckBypass.json
 ở đường dẫn
 ```console
 \Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\
