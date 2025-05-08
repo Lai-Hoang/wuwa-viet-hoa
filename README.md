@@ -1,4 +1,5 @@
 # 29/04/2025 update ver 2.3.0 + FIX Mất kết nối 🤡
+# 08/05/2025 Đọc phần tải mod 😁
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
