@@ -4,7 +4,7 @@
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
 
-tải mod ở [ĐÂY](https://github.com/Lai-Hoang/wuwa-viet-hoa/releases)
+tải mod ở [ĐÂY](https://github.com/Lai-Hoang/wuwa-viet-hoa/releases/latest)
 
 giải nén file và copy thư mục đến đường dẫn dưới đây
 ```console
