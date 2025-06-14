@@ -1,4 +1,4 @@
-# 12/06/2025 update ver 2.4.0
+# 14/06/2025 update vì game update :).
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
