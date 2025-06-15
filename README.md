@@ -1,4 +1,4 @@
-# 15/06/2025 update không dùng VMProtect vào dll nữa để không dương tính nhầm phầm mềm độc hại :).
+# 15/06/2025 update không dùng mã hóa vào .dll nữa để không dương tính nhầm phầm mềm độc hại :).
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
