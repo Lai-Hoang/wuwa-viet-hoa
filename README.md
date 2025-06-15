@@ -2,6 +2,8 @@
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
+<br>
+Xem cách tránh bị game ban [ở đây](https://github.com/Lai-Hoang/wuwa-viet-hoa/blob/main/Cach_Tranh_Bi_Game_Ban.md) lưu ý vẫn luôn khuyên cách bạn không nên sử dụng trên tài khoản chính.
 
 tải mod ở [ĐÂY](https://github.com/Lai-Hoang/wuwa-viet-hoa/releases/latest)
 
