@@ -36,14 +36,28 @@ cần xóa 5 tệp tin libraries.txt, wuwaVietHoa.dll, version.dll, WuwaCheckByp
 (cần xóa thêm 3 tệp nữa nếu bạn sài mod trước đây: CenSerPatch.dll, winhttp.dll, shorekeeper.dll)
 <br>
 ở đường dẫn
+<br>
+bản Launcher :
 ```console
 \Wuthering Waves\Wuthering Waves Game\Client\Binaries\Win64\
 ```
+bản Steam :
+```console
+\Wuthering Waves\Client\Binaries\Win64\
+```
 <br>
-xóa mod tiếng việt ở đường dẫn
+
+Xóa mod tiếng việt ở đường dẫn
+<br>
+bản Launcher :
 
 ```console
 \Wuthering Waves\Wuthering Waves Game\Client\Content\Paks\
+```
+bản Steam :
+
+```console
+\Wuthering Waves\Client\Content\Paks\
 ```
 <br>
 tìm thư mục "~mods" và xóa nó
