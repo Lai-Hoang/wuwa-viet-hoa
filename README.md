@@ -1,4 +1,4 @@
-# 17/06/2025 update thêm lần nữa để hoàn toàn KHÔNG dương tính nhầm phầm mềm độc hại :).
+# 19/06/2025 update sửa thiếu text trong game .
 
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
