@@ -1,6 +1,5 @@
 # 19/06/2025 update sửa thiếu text trong game .
-## 28/06/2025 "có thể" 2.5 sẽ không có việt hóa :). vì anticheat update. tôi đoán bản ACE này sẽ ngang các tựa game FPS chẳng hạn như Strinova :).
-## 01/07/2025 tôi vẫn chưa nhận được bản vá đến từ launcher.
+## 22/07/2025 không có anticheat mới nhưng họ đã fix bypass sig pak :). bruhhh
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
