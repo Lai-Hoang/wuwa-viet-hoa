@@ -1,12 +1,13 @@
-# 19/06/2025 update sửa thiếu text trong game .
+# 23/07/2025 không biết update bypass chờ ai đó fix và copy paste bypass của họ. và sẽ không có bản update 2.5 :).
 ## 22/07/2025 không có anticheat mới nhưng họ đã fix bypass sig pak :). bruhhh
+<!--
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
 <br>
 <!--
 Xem cách tránh bị game ban [ở đây](https://github.com/Lai-Hoang/wuwa-viet-hoa/blob/main/Cach_Tranh_Bi_Game_Ban.md) lưu ý vẫn luôn khuyên cách bạn không nên sử dụng trên tài khoản chính.
--->
+--/>
 tải mod ở [ĐÂY](https://github.com/Lai-Hoang/wuwa-viet-hoa/releases/latest)
 <br>
 Video hướng dẫn: [Bản Launcher](https://streamable.com/qsgixc), [Bản Steam](https://streamable.com/601adx)
@@ -74,3 +75,4 @@ tìm thư mục "~mods" và xóa nó
 ![Ảnh chụp màn hình](https://i.imgur.com/o0GN3Nr.png)
 ![Ảnh chụp màn hình](https://i.imgur.com/zpMWNVW.png)
 ![Ảnh chụp màn hình](https://i.imgur.com/SSr5TyW.png)
+-->
