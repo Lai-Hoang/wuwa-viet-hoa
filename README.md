@@ -1,3 +1,4 @@
+# 24/07/2025 đợi ngày mai hoặc ngày mốt chắc sẽ có update việt hóa 2.5 bởi vì gặp vấn đề 2 ở 2 lí do dưới :).
 # 23/07/2025 không biết update bypass chờ ai đó fix và copy paste bypass của họ. và sẽ không có bản update 2.5 :).
 ## 22/07/2025 không có anticheat mới nhưng họ đã fix bypass sig pak :). bruhhh
 
