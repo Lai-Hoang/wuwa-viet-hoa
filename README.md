@@ -1,4 +1,4 @@
-# 25/07/2025 update ver 2.5.0
+# 25/07/2025 update ver 2.5.0 + (đã sửa dịch chuyển bị map đen).
 ## Anh chàng china đã fix lại bypass cũ và tôi đã copy paste ngay lập tức.
 
 # Wuthering Waves Việt Hóa 
