@@ -4,7 +4,16 @@
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
+
 <br>
+Giải thích 2 file version.dll,wuwaVietHoa.dll
+<br>
+version.dll có tác dụng để load wuwaVietHoa.dll vào game.
+<br>
+wuwaVietHoa.dll có tác dụng bỏ qua kiểm tra file của game (cần thiết. nếu không có chơi 15p sẽ bị văng game).
+<br>
+<br>
+
 <!--
 Xem cách tránh bị game ban [ở đây](https://github.com/Lai-Hoang/wuwa-viet-hoa/blob/main/Cach_Tranh_Bi_Game_Ban.md) lưu ý vẫn luôn khuyên cách bạn không nên sử dụng trên tài khoản chính.
 -->
