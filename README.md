@@ -5,7 +5,7 @@ lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
 <br>
 
-Trước khi đồ thừa cho cái gì ăn cắp thông tin của bạn tại sao không kiểm tra máy mình trước xem [hướng dẫn](https://github.com/Lai-Hoang/wuwa-viet-hoa/blob/main/Cach_quet_virus_may_ban.md).
+Trước khi đồ thừa cho cái gì ăn cắp thông tin của bạn tại sao không kiểm tra máy mình trước. Xem [hướng dẫn](https://github.com/Lai-Hoang/wuwa-viet-hoa/blob/main/Cach_quet_virus_may_ban.md).
 <br>
 Sử dụng Việt Hóa này bạn không cần phải tắt antivirus trên máy của bạn oke.
 <br>
