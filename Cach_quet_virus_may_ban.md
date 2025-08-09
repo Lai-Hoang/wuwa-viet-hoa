@@ -6,6 +6,6 @@ cài nó và thực hiện cài đặt thông số như thế này:
 <br>
 CHÚ Ý NHỮNG PHẦN MỀN BẠN CRACK CÓ THỂ DƯƠNG TÍNH NHẦM VỚI MÃ ĐỘC(những phần mềm cr4ck bây giờ rất hiếm khi dương tính nhầm). Bỏ tích nó trước khi loại bỏ.
 <br>
-nếu sau khi quét xong bạn loại bỏ những  mã độc và phần mềm này đề xuất restart thì nhấn yes.
+nếu sau khi quét xong bạn loại bỏ những mã độc và phần mềm này đề xuất restart pc thì nhấn yes(thường yêu cầu khi máy có mã độc nằm trong hệ thống. nếu không có thì không cần restart pc).
 <br>
 sau khi restart tiếp tục quét lại thêm 1 lần nữa và lập lại cách thao tác trên cho đến khi phần mềm loại bỏ mã độc ra khỏi máy mà không yêu cầu restart máy.
