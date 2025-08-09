@@ -1,4 +1,6 @@
 ## Phần mềm quét virus đề xuất: Malwarebytes. xem và tải nó [tại đây](https://www.malwarebytes.com/) .
+Mở tích scan root kit và quét. ko cần dùng bản trả phí dùng free quét cũng đc.
+<br>
 cài nó và thực hiện cài đặt thông số như thế này:
 <img width="1889" height="718" alt="image" src="https://github.com/user-attachments/assets/fe20cc41-7108-4204-b0ef-e45c0a9f06b3" />
 <br>
