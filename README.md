@@ -83,8 +83,17 @@ bản Steam :
 <br>
 tìm thư mục "~mods" và xóa nó
 
+## Khu vực ăn xin 💀💀💀 :)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/82c42a37-e5d5-4b52-bc1f-27348a734a8e" width="724" height="1459">
+</p>
+
 ## Ảnh chụp màn hình
 ![Ảnh chụp màn hình](https://i.imgur.com/oLXjeE9.png)
 ![Ảnh chụp màn hình](https://i.imgur.com/o0GN3Nr.png)
 ![Ảnh chụp màn hình](https://i.imgur.com/zpMWNVW.png)
 ![Ảnh chụp màn hình](https://i.imgur.com/SSr5TyW.png)
+
+
+
+
