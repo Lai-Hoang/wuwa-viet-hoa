@@ -1,1 +1,0 @@
-chưa update :) từ từ 
