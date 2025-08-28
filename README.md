@@ -1,5 +1,5 @@
 # 28/08/2025 update ver 2.6 dành cho launcher và steam.
-## NẾU CÓ LỖI. VUI LÒNG BÁO VỀ DISCORD. CHỨ CÁI NÀY CHỈ LÀ UPDATE TRƯỚC NÊN CHƯA TEST.
+## LỖI ĐÃ BIẾT ĐEN MÀN HÌNH KHI CHUYỂN MAP.
 
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
