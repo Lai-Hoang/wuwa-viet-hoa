@@ -1,5 +1,5 @@
 # 28/08/2025 update ver 2.6 dành cho launcher và steam.
-
+# update sửa lỗi và xóa luôn ẩn UID vì không biết update :).(đó là lí do gây lỗi màn đen khi dịch chuyển)
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
