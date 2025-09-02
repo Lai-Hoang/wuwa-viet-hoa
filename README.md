@@ -1,4 +1,4 @@
-# 28/08/2025 update ver 2.6 dành cho launcher và steam.
+# 02/09/2025 update thêm text do game cập nhật ver 2.6 dành cho launcher và steam.
 
 # Update sửa lỗi và xóa luôn ẩn UID vì không biết update :).(đó là lí do gây lỗi màn đen khi dịch chuyển)
 # Update thêm 1 lần nữa. cập nhật bypass auto update cho đến khi bị fix :).
