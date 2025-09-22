@@ -1,0 +1,3 @@
+https://github.com/new-world-tools/go-oodle/releases
+https://git.xeondev.com/ReversedRoomsMisc/repak
+git clone https://git.xeondev.com/ReversedRoomsMisc/repak.git
