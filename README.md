@@ -1,4 +1,4 @@
-# 10/07/2025 2.7 Họ lại fix bypass 1 lần nữa 😭. thời gian cập nhật ... ???..............
+# Mọi thứ sẵn sàng trong 2.7 :).
 # 16/09/2025 update thêm text do game cập nhật ver 2.6 dành cho launcher và steam.
 
 # Update sửa lỗi và xóa luôn ẩn UID vì không biết update :).(đó là lí do gây lỗi màn đen khi dịch chuyển)
