@@ -1,9 +1,5 @@
-# Mọi thứ sẵn sàng trong 2.7 :).
-# 16/09/2025 update thêm text do game cập nhật ver 2.6 dành cho launcher và steam.
+# 09/10/2025 update ver 2.7 dành cho launcher và steam.
 
-# Update sửa lỗi và xóa luôn ẩn UID vì không biết update :).(đó là lí do gây lỗi màn đen khi dịch chuyển)
-# Update thêm 1 lần nữa. cập nhật bypass auto update cho đến khi bị fix :).
-# Update lần 4. sửa 1 chút cho an toàn.
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
