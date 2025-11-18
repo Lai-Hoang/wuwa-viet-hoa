@@ -4,7 +4,7 @@
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
 <details>
-<summary>📌 Khu vực ăn xin 💀💀💀 :) </summary>
+<summary>📌 Click cho ăn xin :) </summary>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/82c42a37-e5d5-4b52-bc1f-27348a734a8e" width="724" height="1459">
 </p>
@@ -58,8 +58,10 @@ copy thư mục "client" vừa giải nén từ mod vào trong thư mục "Wuthe
 video hướng dẫn xóa: [Bản Launcher](https://streamable.com/gkcbgh), [Bản Steam](https://streamable.com/0kb87k)
 <br>
 cần xóa 2 tệp tin wuwaVietHoa.dll, version.dll
+<!--
 <br>
 (cần xóa thêm 6 tệp nữa nếu bạn sài mod trước đây: CenSerPatch.dll, winhttp.dll, shorekeeper.dll, WuwaCheckBypass.dll, WuwaCheckBypass.json, libraries.txt)
+-->
 <br>
 ở đường dẫn
 <br>

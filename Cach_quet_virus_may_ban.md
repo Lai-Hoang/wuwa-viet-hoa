@@ -9,3 +9,5 @@ CHÚ Ý NHỮNG PHẦN MỀN BẠN CRACK CÓ THỂ DƯƠNG TÍNH NHẦM VỚI M�
 nếu sau khi quét xong bạn loại bỏ những mã độc và phần mềm này đề xuất restart pc thì nhấn yes(thường yêu cầu khi máy có mã độc nằm trong hệ thống. nếu không có thì không cần restart pc).
 <br>
 sau khi restart tiếp tục quét lại thêm 1 lần nữa và lập lại cách thao tác trên cho đến khi phần mềm loại bỏ mã độc ra khỏi máy mà không yêu cầu restart máy.
+<br>
+(Nếu phát hiện virus cần XỊN bạn cần phải đổi password những tài khoản đã đăng nhập trên máy)
