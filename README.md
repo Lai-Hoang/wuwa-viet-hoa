@@ -63,6 +63,7 @@ cần xóa 2 tệp tin wuwaVietHoa.dll, version.dll
 (cần xóa thêm 6 tệp nữa nếu bạn sài mod trước đây: CenSerPatch.dll, winhttp.dll, shorekeeper.dll, WuwaCheckBypass.dll, WuwaCheckBypass.json, libraries.txt)
 -->
 <br>
+
 ở đường dẫn
 <br>
 bản Launcher :
