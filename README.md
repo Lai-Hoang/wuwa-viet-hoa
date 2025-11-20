@@ -1,4 +1,4 @@
-# 09/10/2025 update ver 2.7 dành cho launcher và steam.
+# 20/11/2025 update ver 2.8 dành cho launcher và steam.
 
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
