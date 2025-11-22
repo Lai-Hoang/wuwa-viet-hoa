@@ -1,4 +1,4 @@
-# 09/10/2025 update ver 2.7 dành cho launcher và steam.
+# 20/11/2025 update ver 2.8 dành cho launcher và steam.
 
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
@@ -63,6 +63,7 @@ cần xóa 2 tệp tin wuwaVietHoa.dll, version.dll
 (cần xóa thêm 6 tệp nữa nếu bạn sài mod trước đây: CenSerPatch.dll, winhttp.dll, shorekeeper.dll, WuwaCheckBypass.dll, WuwaCheckBypass.json, libraries.txt)
 -->
 <br>
+
 ở đường dẫn
 <br>
 bản Launcher :
