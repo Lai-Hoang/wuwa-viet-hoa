@@ -211,9 +211,20 @@ bool OpenGameProcess(HANDLE* phProcess, HANDLE* phThread, const char* additional
 	si.lpAttributeList = AttributeList;
 
 	PROCESS_INFORMATION pi{};
-	BOOL result = CreateProcessAsUserA(hToken, const_cast<LPSTR>(filePath->data()), lpstr,
+	/*BOOL result = CreateProcessAsUserA(hToken, const_cast<LPSTR>(filePath->data()), lpstr,
 		0, 0, 0, EXTENDED_STARTUPINFO_PRESENT | CREATE_SUSPENDED, 0,
-		(LPSTR)CurrentDirectory.data(), (LPSTARTUPINFOA)&si, &pi);
+		(LPSTR)CurrentDirectory.data(), (LPSTARTUPINFOA)&si, &pi);*/
+	BOOL result = CreateProcessAsUserA(
+		hToken,
+		const_cast<LPSTR>(filePath->data()),
+		(std::string("\"") + *filePath + "\" " + (lpstr ? lpstr : "")).data(),
+		nullptr, nullptr, FALSE,
+		EXTENDED_STARTUPINFO_PRESENT | CREATE_SUSPENDED,
+		nullptr,
+		(LPSTR)CurrentDirectory.data(),
+		(LPSTARTUPINFOA)&si,
+		&pi
+	);
 
 	bool isOpened = result;
 	if (isOpened)
