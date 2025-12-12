@@ -1,4 +1,4 @@
-# 12/12/2025 update ver 2.8.1 dành cho launcher và steam, và sửa 1 số thứ cần sửa. Vui lòng sài file mới, file cũ chữ ký đã bị vào black list và có 2+ antivirus phát hiện.
+# 12/12/2025 update ver 2.8.1 dành cho launcher và steam, và sửa 1 số thứ cần sửa. Vui lòng sài file mới vì 2 file dll cũ dùng chữ ký đã bị vào danh sách đen và có 2+ antivirus phát hiện 💀.
 ## 10/12.2025 Cái này biết được hơn 1 tuần rồi :). google gemini api (free) giờ đã giới hạn request ngày từ 1k xuống còn 20 lần ko biết ở phiên bản 3.0 còn update đc ko :). Còn ko được thì EXIT SCAM.
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
