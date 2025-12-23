@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EPositionStandard.EPositionStandard
-// NumValues: 0x000D
+// NumValues: 0x000E
 enum class EPositionStandard : uint8
 {
 	NewEnumerator0                           = 0,
@@ -30,7 +30,8 @@ enum class EPositionStandard : uint8
 	NewEnumerator10                          = 9,
 	NewEnumerator11                          = 10,
 	NewEnumerator12                          = 11,
-	EPositionStandard_MAX                    = 12,
+	NewEnumerator13                          = 12,
+	EPositionStandard_MAX                    = 13,
 };
 
 }

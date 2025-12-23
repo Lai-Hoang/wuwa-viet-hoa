@@ -86,6 +86,25 @@ void UPuertsBlueprintLibrary::PreloadJS(class UKuroPreloadJSCallback* Callback)
 }
 
 
+// Function Puerts.PuertsBlueprintLibrary.PreStartShareJsEnv
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UPuertsBlueprintLibrary::PreStartShareJsEnv()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("PuertsBlueprintLibrary", "PreStartShareJsEnv");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Puerts.PuertsBlueprintLibrary.SetEnableBlueprintBind
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

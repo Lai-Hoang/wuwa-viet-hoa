@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function LaunchScene.LaunchScene_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
+
+void ALaunchScene_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LaunchScene_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function LaunchScene.LaunchScene_C.ExecuteUbergraph_LaunchScene
 // (Final, UbergraphFunction)
 // Parameters:
@@ -34,20 +48,6 @@ void ALaunchScene_C::ExecuteUbergraph_LaunchScene(int32 EntryPoint)
 	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function LaunchScene.LaunchScene_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
-
-void ALaunchScene_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("LaunchScene_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

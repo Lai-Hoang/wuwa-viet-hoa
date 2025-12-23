@@ -323,6 +323,26 @@ void ABP_EffectActor_C::StopEffect()
 }
 
 
+// Function BP_EffectActor.BP_EffectActor_C.AfterSpawnEffect
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   EffectHandle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_EffectActor_C::AfterSpawnEffect(int32 EffectHandle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EffectActor_C", "AfterSpawnEffect");
+
+	Params::BP_EffectActor_C_AfterSpawnEffect Parms{};
+
+	Parms.EffectHandle = EffectHandle;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function BP_EffectActor.BP_EffectActor_C.GetHandle
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -341,6 +361,26 @@ void ABP_EffectActor_C::GetHandle(int32* Handle)
 
 	if (Handle != nullptr)
 		*Handle = Parms.Handle;
+}
+
+
+// Function BP_EffectActor.BP_EffectActor_C.GetStreamingBoundsEx
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+struct FBox ABP_EffectActor_C::GetStreamingBoundsEx() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_EffectActor_C", "GetStreamingBoundsEx");
+
+	Params::BP_EffectActor_C_GetStreamingBoundsEx Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 }

@@ -10,26 +10,63 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "SD_KuroTraceCloudData_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ExecuteUbergraph_BP_KuroVolumeCloud_Global
-// 0x0008 (0x0008 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0028)(ZeroConstructor)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue_1;        // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue_2;        // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetGameQualitySettingLevel_ReturnValue;   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_DoesDeviceSupportVariableRateShading_ReturnValue; // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x005E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x005F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global) == 0x000004, "Wrong alignment on BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global) == 0x000008, "Wrong size on BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global");
+static_assert(alignof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global) == 0x000008, "Wrong alignment on BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global");
+static_assert(sizeof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global) == 0x000060, "Wrong size on BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global");
 static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, EntryPoint) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_LessEqual_IntInt_ReturnValue) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_LessEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, K2Node_Event_DeltaSeconds) == 0x000008, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, K2Node_CreateDelegate_OutputDelegate) == 0x000010, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_GetGameUserSettings_ReturnValue) == 0x000038, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_GetGameUserSettings_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, K2Node_Event_EndPlayReason) == 0x000040, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_GetGameUserSettings_ReturnValue_1) == 0x000048, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_GetGameUserSettings_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_GetGameUserSettings_ReturnValue_2) == 0x000050, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_GetGameUserSettings_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_GetGameQualitySettingLevel_ReturnValue) == 0x000058, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_GetGameQualitySettingLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00005C, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_DoesDeviceSupportVariableRateShading_ReturnValue) == 0x00005D, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_DoesDeviceSupportVariableRateShading_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_IsValid_ReturnValue) == 0x00005E, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global, CallFunc_IsValid_ReturnValue_1) == 0x00005F, "Member 'BP_KuroVolumeCloud_Global_C_ExecuteUbergraph_BP_KuroVolumeCloud_Global::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ReceiveEndPlay
+// 0x0001 (0x0001 - 0x0000)
+struct BP_KuroVolumeCloud_Global_C_ReceiveEndPlay final
+{
+public:
+	EEndPlayReason                                EndPlayReason;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_KuroVolumeCloud_Global_C_ReceiveEndPlay) == 0x000001, "Wrong alignment on BP_KuroVolumeCloud_Global_C_ReceiveEndPlay");
+static_assert(sizeof(BP_KuroVolumeCloud_Global_C_ReceiveEndPlay) == 0x000001, "Wrong size on BP_KuroVolumeCloud_Global_C_ReceiveEndPlay");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)
@@ -224,125 +261,171 @@ static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, CallFunc_Less_
 static_assert(offsetof(BP_KuroVolumeCloud_Global_C_GetLerpGIData, K2Node_MakeStruct_SD_KuroTraceCloudData_1) == 0x0000E4, "Member 'BP_KuroVolumeCloud_Global_C_GetLerpGIData::K2Node_MakeStruct_SD_KuroTraceCloudData_1' has a wrong offset!");
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.Update
-// 0x0120 (0x0120 - 0x0000)
+// 0x01E8 (0x01E8 - 0x0000)
 struct BP_KuroVolumeCloud_Global_C_Update final
 {
 public:
-	float                                         temp;                                              // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   C;                                                 // 0x0004(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   B;                                                 // 0x0010(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   A;                                                 // 0x001C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBP_EWorldType                                Editor;                                            // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AGameStateBase*                         NewLocalVar_0;                                     // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ___name_Variable;                                  // 0x0038(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ___name_Variable_1;                                // 0x0044(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Variable;                                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ___bool_Variable;                                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_55[0x3];                                       // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ___float_Variable;                                 // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   K2Node_Select_Default;                             // 0x0064(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0075(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_76[0x2];                                       // 0x0076(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0078(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_D_GetWorldDeltaSeconds_ReturnValue;       // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue;           // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Default_1;                           // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue_1;    // 0x009C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Multiply_LinearColorFloat_ReturnValue;    // 0x00AC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Add_LinearColorLinearColor_ReturnValue;   // 0x00BC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_R;                             // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_G;                             // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_B;                             // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakColor_A;                             // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_FWrap_ReturnValue;                        // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EBP_EWorldType                                CallFunc_GetWorldType_ReturnValue;                 // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_FWrap_ReturnValue_1;                      // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_E9[0x3];                                       // 0x00E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x00EC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               K2Node_DynamicCast_As______;                       // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0119(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVectorDouble                          CamPos;                                            // 0x0000(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         temp;                                              // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   C;                                                 // 0x001C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   B;                                                 // 0x0028(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   A;                                                 // 0x0034(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBP_EWorldType                                Editor;                                            // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AGameStateBase*                         NewLocalVar_0;                                     // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable;                                  // 0x0050(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Variable;                                   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ___bool_Variable;                                  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ___float_Variable;                                 // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetLevelEditorCameraLocationAndForward_Position; // 0x0068(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetLevelEditorCameraLocationAndForward_Rotation; // 0x0074(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue; // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_Conv_VectorToVectorDouble_ReturnValue;    // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_1;                                // 0x00A0(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_AC[0x4];                                       // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x00B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Add_FloatFloat_ReturnValue;             // 0x00C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Vector_Distance_ReturnValue;            // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_GetPlayerPawn_ReturnValue;                // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_MapRangeClamped_ReturnValue;            // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_K2_GetActorLocation_ReturnValue;        // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Subtract_FloatFloat_ReturnValue;        // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue;           // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_10D[0x3];                                      // 0x010D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue;      // 0x0114(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   K2Node_Select_Default;                             // 0x012C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x013D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_13E[0x2];                                      // 0x013E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_D_GetWorldDeltaSeconds_ReturnValue;       // 0x0140(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue_1;         // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default_1;                           // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_GetVectorParameterValue_ReturnValue_1;    // 0x0154(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Multiply_LinearColorFloat_ReturnValue;    // 0x0164(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Multiply_LinearColorFloat_ReturnValue_1;  // 0x0174(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Add_LinearColorLinearColor_ReturnValue;   // 0x0184(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_R;                             // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_G;                             // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_B;                             // 0x019C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakColor_A;                             // 0x01A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FWrap_ReturnValue;                        // 0x01A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FWrap_ReturnValue_1;                      // 0x01A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_FWrap_ReturnValue_2;                      // 0x01AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_MakeColor_ReturnValue;                    // 0x01B0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBP_EWorldType                                CallFunc_GetWorldType_ReturnValue;                 // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C2[0x6];                                      // 0x01C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               K2Node_DynamicCast_As______;                       // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_KuroVolumeCloud_Global_C_Update) == 0x000008, "Wrong alignment on BP_KuroVolumeCloud_Global_C_Update");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_Update) == 0x000120, "Wrong size on BP_KuroVolumeCloud_Global_C_Update");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, temp) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_Update::temp' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, C) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_Update::C' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, B) == 0x000010, "Member 'BP_KuroVolumeCloud_Global_C_Update::B' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, A) == 0x00001C, "Member 'BP_KuroVolumeCloud_Global_C_Update::A' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, Editor) == 0x000028, "Member 'BP_KuroVolumeCloud_Global_C_Update::Editor' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, NewLocalVar_0) == 0x000030, "Member 'BP_KuroVolumeCloud_Global_C_Update::NewLocalVar_0' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___name_Variable) == 0x000038, "Member 'BP_KuroVolumeCloud_Global_C_Update::___name_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___name_Variable_1) == 0x000044, "Member 'BP_KuroVolumeCloud_Global_C_Update::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___int_Variable) == 0x000050, "Member 'BP_KuroVolumeCloud_Global_C_Update::___int_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___bool_Variable) == 0x000054, "Member 'BP_KuroVolumeCloud_Global_C_Update::___bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___float_Variable) == 0x000058, "Member 'BP_KuroVolumeCloud_Global_C_Update::___float_Variable' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetScalarParameterValue_ReturnValue) == 0x00005C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000060, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_Select_Default) == 0x000064, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000070, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000074, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000075, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000078, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_GetWorldDeltaSeconds_ReturnValue) == 0x000088, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000090, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000094, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_Select_Default_1) == 0x000098, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetVectorParameterValue_ReturnValue_1) == 0x00009C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetVectorParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x0000AC, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Add_LinearColorLinearColor_ReturnValue) == 0x0000BC, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Add_LinearColorLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_R) == 0x0000CC, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_R' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_G) == 0x0000D0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_G' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_B) == 0x0000D4, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_B' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_A) == 0x0000D8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_A' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_FWrap_ReturnValue) == 0x0000DC, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_FWrap_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetWorldType_ReturnValue) == 0x0000E0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetWorldType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_FWrap_ReturnValue_1) == 0x0000E4, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_FWrap_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0000E8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_MakeColor_ReturnValue) == 0x0000EC, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetMaterial_ReturnValue) == 0x000100, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000108, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_DynamicCast_As______) == 0x000110, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_DynamicCast_As______' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_DynamicCast_bSuccess) == 0x000118, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_IsValid_ReturnValue) == 0x000119, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(sizeof(BP_KuroVolumeCloud_Global_C_Update) == 0x0001E8, "Wrong size on BP_KuroVolumeCloud_Global_C_Update");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CamPos) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_Update::CamPos' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, temp) == 0x000018, "Member 'BP_KuroVolumeCloud_Global_C_Update::temp' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, C) == 0x00001C, "Member 'BP_KuroVolumeCloud_Global_C_Update::C' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, B) == 0x000028, "Member 'BP_KuroVolumeCloud_Global_C_Update::B' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, A) == 0x000034, "Member 'BP_KuroVolumeCloud_Global_C_Update::A' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, Editor) == 0x000040, "Member 'BP_KuroVolumeCloud_Global_C_Update::Editor' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, NewLocalVar_0) == 0x000048, "Member 'BP_KuroVolumeCloud_Global_C_Update::NewLocalVar_0' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___name_Variable) == 0x000050, "Member 'BP_KuroVolumeCloud_Global_C_Update::___name_Variable' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___int_Variable) == 0x00005C, "Member 'BP_KuroVolumeCloud_Global_C_Update::___int_Variable' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___bool_Variable) == 0x000060, "Member 'BP_KuroVolumeCloud_Global_C_Update::___bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___float_Variable) == 0x000064, "Member 'BP_KuroVolumeCloud_Global_C_Update::___float_Variable' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetLevelEditorCameraLocationAndForward_Position) == 0x000068, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetLevelEditorCameraLocationAndForward_Position' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetLevelEditorCameraLocationAndForward_Rotation) == 0x000074, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetLevelEditorCameraLocationAndForward_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue) == 0x000080, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x000088, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, ___name_Variable_1) == 0x0000A0, "Member 'BP_KuroVolumeCloud_Global_C_Update::___name_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x0000B0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_Add_FloatFloat_ReturnValue) == 0x0000C8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_Vector_Distance_ReturnValue) == 0x0000D0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_Vector_Distance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetPlayerPawn_ReturnValue) == 0x0000D8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetPlayerPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_MapRangeClamped_ReturnValue) == 0x0000E0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_MapRangeClamped_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_K2_GetActorLocation_ReturnValue) == 0x0000E8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_Subtract_FloatFloat_ReturnValue) == 0x000100, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000108, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_IsValid_ReturnValue) == 0x00010C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000110, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetVectorParameterValue_ReturnValue) == 0x000114, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetVectorParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000124, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000128, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_Select_Default) == 0x00012C, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000138, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Greater_FloatFloat_ReturnValue) == 0x00013C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00013D, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_D_GetWorldDeltaSeconds_ReturnValue) == 0x000140, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_D_GetWorldDeltaSeconds_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Conv_DoubleToFloat_ReturnValue_1) == 0x000148, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Conv_DoubleToFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x00014C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_Select_Default_1) == 0x000150, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetVectorParameterValue_ReturnValue_1) == 0x000154, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetVectorParameterValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x000164, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Multiply_LinearColorFloat_ReturnValue_1) == 0x000174, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Multiply_LinearColorFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_Add_LinearColorLinearColor_ReturnValue) == 0x000184, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_Add_LinearColorLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_R) == 0x000194, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_R' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_G) == 0x000198, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_G' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_B) == 0x00019C, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_B' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_BreakColor_A) == 0x0001A0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_BreakColor_A' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_FWrap_ReturnValue) == 0x0001A4, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_FWrap_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_FWrap_ReturnValue_1) == 0x0001A8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_FWrap_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_FWrap_ReturnValue_2) == 0x0001AC, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_FWrap_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_MakeColor_ReturnValue) == 0x0001B0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_MakeColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetWorldType_ReturnValue) == 0x0001C0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetWorldType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001C1, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_GetMaterial_ReturnValue) == 0x0001C8, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x0001D0, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_DynamicCast_As______) == 0x0001D8, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_DynamicCast_As______' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, K2Node_DynamicCast_bSuccess) == 0x0001E0, "Member 'BP_KuroVolumeCloud_Global_C_Update::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_Update, CallFunc_IsValid_ReturnValue_1) == 0x0001E1, "Member 'BP_KuroVolumeCloud_Global_C_Update::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.CheckNeed Update
-// 0x0048 (0x0048 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct BP_KuroVolumeCloud_Global_C_CheckNeed_Update final
 {
 public:
-	struct FVectorDouble                          CallFunc_D_K2_GetComponentScale_ReturnValue;       // 0x0000(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_D_EqualEqual_VectorVector_ReturnValue;    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_D_EqualEqual_VectorVector_ReturnValue_1;  // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0043(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7[0x1];                                        // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_D_K2_GetComponentScale_ReturnValue;       // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_D_EqualEqual_VectorVector_ReturnValue;    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_D_EqualEqual_VectorVector_ReturnValue_1;  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x004A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x004B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue_3;                 // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update) == 0x000008, "Wrong alignment on BP_KuroVolumeCloud_Global_C_CheckNeed_Update");
-static_assert(sizeof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update) == 0x000048, "Wrong size on BP_KuroVolumeCloud_Global_C_CheckNeed_Update");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_K2_GetComponentScale_ReturnValue) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_K2_GetComponentScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_GetMaterial_ReturnValue) == 0x000018, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_EqualEqual_VectorVector_ReturnValue) == 0x000020, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_EqualEqual_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x000028, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000040, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_EqualEqual_VectorVector_ReturnValue_1) == 0x000041, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_EqualEqual_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue) == 0x000042, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue_1) == 0x000043, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_Not_PreBool_ReturnValue) == 0x000044, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(sizeof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update) == 0x000050, "Wrong size on BP_KuroVolumeCloud_Global_C_CheckNeed_Update");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000005, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue) == 0x000006, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_K2_GetComponentScale_ReturnValue) == 0x000008, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_K2_GetComponentScale_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_GetMaterial_ReturnValue) == 0x000020, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_EqualEqual_VectorVector_ReturnValue) == 0x000028, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_EqualEqual_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x000030, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000048, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_D_EqualEqual_VectorVector_ReturnValue_1) == 0x000049, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_D_EqualEqual_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue_1) == 0x00004A, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue_2) == 0x00004B, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_BooleanAND_ReturnValue_3) == 0x00004C, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_BooleanAND_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CheckNeed_Update, CallFunc_Not_PreBool_ReturnValue) == 0x00004D, "Member 'BP_KuroVolumeCloud_Global_C_CheckNeed_Update::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.CleanMID
 // 0x0020 (0x0020 - 0x0000)
@@ -360,6 +443,39 @@ static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CleanMID, CallFunc_GetMateria
 static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CleanMID, CallFunc_GetMaterial_ReturnValue_1) == 0x000008, "Member 'BP_KuroVolumeCloud_Global_C_CleanMID::CallFunc_GetMaterial_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CleanMID, K2Node_DynamicCast_As______) == 0x000010, "Member 'BP_KuroVolumeCloud_Global_C_CleanMID::K2Node_DynamicCast_As______' has a wrong offset!");
 static_assert(offsetof(BP_KuroVolumeCloud_Global_C_CleanMID, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_KuroVolumeCloud_Global_C_CleanMID::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateCloudShadingRate
+// 0x0001 (0x0001 - 0x0000)
+struct BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate final
+{
+public:
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate) == 0x000001, "Wrong alignment on BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate");
+static_assert(sizeof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate) == 0x000001, "Wrong size on BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate, K2Node_SwitchInteger_CmpSuccess) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRate::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateCloudShadingRateLocal
+// 0x000C (0x000C - 0x0000)
+struct BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal final
+{
+public:
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_SwitchInteger_CmpSuccess;                   // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal) == 0x000004, "Wrong alignment on BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal");
+static_assert(sizeof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal) == 0x00000C, "Wrong size on BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000000, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_GetConsoleVariableIntValue_ReturnValue) == 0x000004, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_GetConsoleVariableIntValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000008, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_BooleanAND_ReturnValue) == 0x000009, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, K2Node_SwitchInteger_CmpSuccess) == 0x00000A, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::K2Node_SwitchInteger_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal, CallFunc_Not_PreBool_ReturnValue) == 0x00000B, "Member 'BP_KuroVolumeCloud_Global_C_UpdateCloudShadingRateLocal::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 
 }
 

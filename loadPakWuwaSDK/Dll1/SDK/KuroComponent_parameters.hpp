@@ -11,11 +11,23 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "KuroComponent_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function KuroComponent.GpuNpcDitherComponent.ResetDitherForAllInstance
+// 0x0004 (0x0004 - 0x0000)
+struct GpuNpcDitherComponent_ResetDitherForAllInstance final
+{
+public:
+	float                                         Value;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GpuNpcDitherComponent_ResetDitherForAllInstance) == 0x000004, "Wrong alignment on GpuNpcDitherComponent_ResetDitherForAllInstance");
+static_assert(sizeof(GpuNpcDitherComponent_ResetDitherForAllInstance) == 0x000004, "Wrong size on GpuNpcDitherComponent_ResetDitherForAllInstance");
+static_assert(offsetof(GpuNpcDitherComponent_ResetDitherForAllInstance, Value) == 0x000000, "Member 'GpuNpcDitherComponent_ResetDitherForAllInstance::Value' has a wrong offset!");
 
 // Function KuroComponent.KuroCharacterAnimationComponent.AddModelLocation
 // 0x000C (0x000C - 0x0000)
@@ -68,18 +80,54 @@ static_assert(sizeof(KuroCharacterAnimationComponent_GetTransformOffsetInWorld) 
 static_assert(offsetof(KuroCharacterAnimationComponent_GetTransformOffsetInWorld, Child) == 0x000000, "Member 'KuroCharacterAnimationComponent_GetTransformOffsetInWorld::Child' has a wrong offset!");
 static_assert(offsetof(KuroCharacterAnimationComponent_GetTransformOffsetInWorld, Parent) == 0x000030, "Member 'KuroCharacterAnimationComponent_GetTransformOffsetInWorld::Parent' has a wrong offset!");
 
+// Function KuroComponent.KuroCharacterAnimationComponent.SetOriginLocation
+// 0x000C (0x000C - 0x0000)
+struct KuroCharacterAnimationComponent_SetOriginLocation final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroCharacterAnimationComponent_SetOriginLocation) == 0x000004, "Wrong alignment on KuroCharacterAnimationComponent_SetOriginLocation");
+static_assert(sizeof(KuroCharacterAnimationComponent_SetOriginLocation) == 0x00000C, "Wrong size on KuroCharacterAnimationComponent_SetOriginLocation");
+static_assert(offsetof(KuroCharacterAnimationComponent_SetOriginLocation, Location) == 0x000000, "Member 'KuroCharacterAnimationComponent_SetOriginLocation::Location' has a wrong offset!");
+
+// Function KuroComponent.KuroRegionDetectComponent.GetRegionDetectId
+// 0x0004 (0x0004 - 0x0000)
+struct KuroRegionDetectComponent_GetRegionDetectId final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroRegionDetectComponent_GetRegionDetectId) == 0x000004, "Wrong alignment on KuroRegionDetectComponent_GetRegionDetectId");
+static_assert(sizeof(KuroRegionDetectComponent_GetRegionDetectId) == 0x000004, "Wrong size on KuroRegionDetectComponent_GetRegionDetectId");
+static_assert(offsetof(KuroRegionDetectComponent_GetRegionDetectId, ReturnValue) == 0x000000, "Member 'KuroRegionDetectComponent_GetRegionDetectId::ReturnValue' has a wrong offset!");
+
 // Function KuroComponent.KuroRegionDetectComponent.GetRegionEvent
-// 0x0018 (0x0018 - 0x0000)
+// 0x0020 (0x0020 - 0x0000)
 struct KuroRegionDetectComponent_GetRegionEvent final
 {
 public:
 	class FString                                 RegionName;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKuroRegionEventBinder*                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Id;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroRegionEventBinder*                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(KuroRegionDetectComponent_GetRegionEvent) == 0x000008, "Wrong alignment on KuroRegionDetectComponent_GetRegionEvent");
-static_assert(sizeof(KuroRegionDetectComponent_GetRegionEvent) == 0x000018, "Wrong size on KuroRegionDetectComponent_GetRegionEvent");
+static_assert(sizeof(KuroRegionDetectComponent_GetRegionEvent) == 0x000020, "Wrong size on KuroRegionDetectComponent_GetRegionEvent");
 static_assert(offsetof(KuroRegionDetectComponent_GetRegionEvent, RegionName) == 0x000000, "Member 'KuroRegionDetectComponent_GetRegionEvent::RegionName' has a wrong offset!");
-static_assert(offsetof(KuroRegionDetectComponent_GetRegionEvent, ReturnValue) == 0x000010, "Member 'KuroRegionDetectComponent_GetRegionEvent::ReturnValue' has a wrong offset!");
+static_assert(offsetof(KuroRegionDetectComponent_GetRegionEvent, Id) == 0x000010, "Member 'KuroRegionDetectComponent_GetRegionEvent::Id' has a wrong offset!");
+static_assert(offsetof(KuroRegionDetectComponent_GetRegionEvent, ReturnValue) == 0x000018, "Member 'KuroRegionDetectComponent_GetRegionEvent::ReturnValue' has a wrong offset!");
+
+// Function KuroComponent.KuroRegionDetectComponent.RemoveRegionDetect
+// 0x0004 (0x0004 - 0x0000)
+struct KuroRegionDetectComponent_RemoveRegionDetect final
+{
+public:
+	int32                                         Id;                                                // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroRegionDetectComponent_RemoveRegionDetect) == 0x000004, "Wrong alignment on KuroRegionDetectComponent_RemoveRegionDetect");
+static_assert(sizeof(KuroRegionDetectComponent_RemoveRegionDetect) == 0x000004, "Wrong size on KuroRegionDetectComponent_RemoveRegionDetect");
+static_assert(offsetof(KuroRegionDetectComponent_RemoveRegionDetect, Id) == 0x000000, "Member 'KuroRegionDetectComponent_RemoveRegionDetect::Id' has a wrong offset!");
 
 // Function KuroComponent.KuroRegionDetectComponent.SetDebugMode
 // 0x0001 (0x0001 - 0x0000)
@@ -93,26 +141,32 @@ static_assert(sizeof(KuroRegionDetectComponent_SetDebugMode) == 0x000001, "Wrong
 static_assert(offsetof(KuroRegionDetectComponent_SetDebugMode, IsOpen) == 0x000000, "Member 'KuroRegionDetectComponent_SetDebugMode::IsOpen' has a wrong offset!");
 
 // Function KuroComponent.KuroRegionDetectComponent.SetEventTarget
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct KuroRegionDetectComponent_SetEventTarget final
 {
 public:
 	class AActor*                                 DetectTarget;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Id;                                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KuroRegionDetectComponent_SetEventTarget) == 0x000008, "Wrong alignment on KuroRegionDetectComponent_SetEventTarget");
-static_assert(sizeof(KuroRegionDetectComponent_SetEventTarget) == 0x000008, "Wrong size on KuroRegionDetectComponent_SetEventTarget");
+static_assert(sizeof(KuroRegionDetectComponent_SetEventTarget) == 0x000010, "Wrong size on KuroRegionDetectComponent_SetEventTarget");
 static_assert(offsetof(KuroRegionDetectComponent_SetEventTarget, DetectTarget) == 0x000000, "Member 'KuroRegionDetectComponent_SetEventTarget::DetectTarget' has a wrong offset!");
+static_assert(offsetof(KuroRegionDetectComponent_SetEventTarget, Id) == 0x000008, "Member 'KuroRegionDetectComponent_SetEventTarget::Id' has a wrong offset!");
 
 // Function KuroComponent.KuroRegionDetectComponent.SetEventTargets
-// 0x0010 (0x0010 - 0x0000)
+// 0x0018 (0x0018 - 0x0000)
 struct KuroRegionDetectComponent_SetEventTargets final
 {
 public:
 	TArray<class AActor*>                         DetectTargets;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         Id;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KuroRegionDetectComponent_SetEventTargets) == 0x000008, "Wrong alignment on KuroRegionDetectComponent_SetEventTargets");
-static_assert(sizeof(KuroRegionDetectComponent_SetEventTargets) == 0x000010, "Wrong size on KuroRegionDetectComponent_SetEventTargets");
+static_assert(sizeof(KuroRegionDetectComponent_SetEventTargets) == 0x000018, "Wrong size on KuroRegionDetectComponent_SetEventTargets");
 static_assert(offsetof(KuroRegionDetectComponent_SetEventTargets, DetectTargets) == 0x000000, "Member 'KuroRegionDetectComponent_SetEventTargets::DetectTargets' has a wrong offset!");
+static_assert(offsetof(KuroRegionDetectComponent_SetEventTargets, Id) == 0x000010, "Member 'KuroRegionDetectComponent_SetEventTargets::Id' has a wrong offset!");
 
 // Function KuroComponent.KuroRegionDetectComponent.Detect
 // 0x0030 (0x0030 - 0x0000)
@@ -150,6 +204,95 @@ static_assert(offsetof(KuroSceneItemGuidePathComponent_StartTick, Finish) == 0x0
 static_assert(offsetof(KuroSceneItemGuidePathComponent_StartTick, ParameterName) == 0x000030, "Member 'KuroSceneItemGuidePathComponent_StartTick::ParameterName' has a wrong offset!");
 static_assert(offsetof(KuroSceneItemGuidePathComponent_StartTick, TotalCountDown) == 0x00003C, "Member 'KuroSceneItemGuidePathComponent_StartTick::TotalCountDown' has a wrong offset!");
 static_assert(offsetof(KuroSceneItemGuidePathComponent_StartTick, CurCountDown) == 0x000040, "Member 'KuroSceneItemGuidePathComponent_StartTick::CurCountDown' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.AddModelLocation
+// 0x000C (0x000C - 0x0000)
+struct KuroSceneItemModelBufferComponent_AddModelLocation final
+{
+public:
+	struct FVector                                Offset;                                            // 0x0000(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemModelBufferComponent_AddModelLocation) == 0x000004, "Wrong alignment on KuroSceneItemModelBufferComponent_AddModelLocation");
+static_assert(sizeof(KuroSceneItemModelBufferComponent_AddModelLocation) == 0x00000C, "Wrong size on KuroSceneItemModelBufferComponent_AddModelLocation");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_AddModelLocation, Offset) == 0x000000, "Member 'KuroSceneItemModelBufferComponent_AddModelLocation::Offset' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.AddModelQuat
+// 0x0020 (0x0020 - 0x0000)
+struct KuroSceneItemModelBufferComponent_AddModelQuat final
+{
+public:
+	struct FQuat                                  Quat;                                              // 0x0000(0x0010)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          LockCenter;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0xF];                                       // 0x0011(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroSceneItemModelBufferComponent_AddModelQuat) == 0x000010, "Wrong alignment on KuroSceneItemModelBufferComponent_AddModelQuat");
+static_assert(sizeof(KuroSceneItemModelBufferComponent_AddModelQuat) == 0x000020, "Wrong size on KuroSceneItemModelBufferComponent_AddModelQuat");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_AddModelQuat, Quat) == 0x000000, "Member 'KuroSceneItemModelBufferComponent_AddModelQuat::Quat' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_AddModelQuat, LockCenter) == 0x000010, "Member 'KuroSceneItemModelBufferComponent_AddModelQuat::LockCenter' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.D_GetTransformOffsetInWorld
+// 0x00C0 (0x00C0 - 0x0000)
+struct KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld final
+{
+public:
+	struct FTransformDouble                       Child;                                             // 0x0000(0x0040)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransformDouble                       Parent;                                            // 0x0040(0x0040)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransformDouble                       Out;                                               // 0x0080(0x0040)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld) == 0x000010, "Wrong alignment on KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld");
+static_assert(sizeof(KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld) == 0x0000C0, "Wrong size on KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld, Child) == 0x000000, "Member 'KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld::Child' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld, Parent) == 0x000040, "Member 'KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld::Parent' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld, Out) == 0x000080, "Member 'KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld::Out' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.GetTransformOffsetInWorld
+// 0x0060 (0x0060 - 0x0000)
+struct KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld final
+{
+public:
+	struct FTransform                             Child;                                             // 0x0000(0x0030)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransform                             Parent;                                            // 0x0030(0x0030)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld) == 0x000010, "Wrong alignment on KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld");
+static_assert(sizeof(KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld) == 0x000060, "Wrong size on KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld, Child) == 0x000000, "Member 'KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld::Child' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld, Parent) == 0x000030, "Member 'KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld::Parent' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.SetUpMeshComponent
+// 0x0008 (0x0008 - 0x0000)
+struct KuroSceneItemModelBufferComponent_SetUpMeshComponent final
+{
+public:
+	class USkeletalMeshComponent*                 InMeshComponent;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemModelBufferComponent_SetUpMeshComponent) == 0x000008, "Wrong alignment on KuroSceneItemModelBufferComponent_SetUpMeshComponent");
+static_assert(sizeof(KuroSceneItemModelBufferComponent_SetUpMeshComponent) == 0x000008, "Wrong size on KuroSceneItemModelBufferComponent_SetUpMeshComponent");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_SetUpMeshComponent, InMeshComponent) == 0x000000, "Member 'KuroSceneItemModelBufferComponent_SetUpMeshComponent::InMeshComponent' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.SetActorTransformExceptSkeletalMesh
+// 0x00C0 (0x00C0 - 0x0000)
+struct KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh final
+{
+public:
+	struct FVectorDouble                          NewLocation;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               NewRotation;                                       // 0x0018(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bSweep;                                            // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             SweepHitResult;                                    // 0x0028(0x0094)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bTeleport;                                         // 0x00BC(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreOverlap;                                    // 0x00BD(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00BE(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_BF[0x1];                                       // 0x00BF(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh) == 0x000008, "Wrong alignment on KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh");
+static_assert(sizeof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh) == 0x0000C0, "Wrong size on KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh, NewLocation) == 0x000000, "Member 'KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh::NewLocation' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh, NewRotation) == 0x000018, "Member 'KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh::NewRotation' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh, bSweep) == 0x000024, "Member 'KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh::bSweep' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh, SweepHitResult) == 0x000028, "Member 'KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh::SweepHitResult' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh, bTeleport) == 0x0000BC, "Member 'KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh::bTeleport' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh, bIgnoreOverlap) == 0x0000BD, "Member 'KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh::bIgnoreOverlap' has a wrong offset!");
+static_assert(offsetof(KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh, ReturnValue) == 0x0000BE, "Member 'KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh::ReturnValue' has a wrong offset!");
 
 // Function KuroComponent.KuroSceneItemMoveComponent.FindTimeByValueIn01Curve
 // 0x0020 (0x0020 - 0x0000)
@@ -214,6 +357,17 @@ static_assert(offsetof(KuroSceneItemMoveComponent_AddRotationStep, CdSec) == 0x0
 static_assert(offsetof(KuroSceneItemMoveComponent_AddRotationStep, RotateCurve) == 0x000020, "Member 'KuroSceneItemMoveComponent_AddRotationStep::RotateCurve' has a wrong offset!");
 static_assert(offsetof(KuroSceneItemMoveComponent_AddRotationStep, ReturnValue) == 0x000028, "Member 'KuroSceneItemMoveComponent_AddRotationStep::ReturnValue' has a wrong offset!");
 
+// Function KuroComponent.KuroSceneItemMoveComponent.CalcVelocity
+// 0x0004 (0x0004 - 0x0000)
+struct KuroSceneItemMoveComponent_CalcVelocity final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemMoveComponent_CalcVelocity) == 0x000004, "Wrong alignment on KuroSceneItemMoveComponent_CalcVelocity");
+static_assert(sizeof(KuroSceneItemMoveComponent_CalcVelocity) == 0x000004, "Wrong size on KuroSceneItemMoveComponent_CalcVelocity");
+static_assert(offsetof(KuroSceneItemMoveComponent_CalcVelocity, DeltaTime) == 0x000000, "Member 'KuroSceneItemMoveComponent_CalcVelocity::DeltaTime' has a wrong offset!");
+
 // Function KuroComponent.KuroSceneItemMoveComponent.GetNextMoveTarget
 // 0x0038 (0x0038 - 0x0000)
 struct KuroSceneItemMoveComponent_GetNextMoveTarget final
@@ -257,6 +411,28 @@ static_assert(alignof(KuroSceneItemMoveComponent_Kuro_SetGravityDirect) == 0x000
 static_assert(sizeof(KuroSceneItemMoveComponent_Kuro_SetGravityDirect) == 0x00000C, "Wrong size on KuroSceneItemMoveComponent_Kuro_SetGravityDirect");
 static_assert(offsetof(KuroSceneItemMoveComponent_Kuro_SetGravityDirect, InGravityDirect) == 0x000000, "Member 'KuroSceneItemMoveComponent_Kuro_SetGravityDirect::InGravityDirect' has a wrong offset!");
 
+// Function KuroComponent.KuroSceneItemMoveComponent.SetAvoidanceEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct KuroSceneItemMoveComponent_SetAvoidanceEnabled final
+{
+public:
+	bool                                          bEnable;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemMoveComponent_SetAvoidanceEnabled) == 0x000001, "Wrong alignment on KuroSceneItemMoveComponent_SetAvoidanceEnabled");
+static_assert(sizeof(KuroSceneItemMoveComponent_SetAvoidanceEnabled) == 0x000001, "Wrong size on KuroSceneItemMoveComponent_SetAvoidanceEnabled");
+static_assert(offsetof(KuroSceneItemMoveComponent_SetAvoidanceEnabled, bEnable) == 0x000000, "Member 'KuroSceneItemMoveComponent_SetAvoidanceEnabled::bEnable' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemMoveComponent.SetAvoidanceGroupMask
+// 0x0004 (0x0004 - 0x0000)
+struct KuroSceneItemMoveComponent_SetAvoidanceGroupMask final
+{
+public:
+	struct FNavAvoidanceMask                      GroupMask;                                         // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemMoveComponent_SetAvoidanceGroupMask) == 0x000004, "Wrong alignment on KuroSceneItemMoveComponent_SetAvoidanceGroupMask");
+static_assert(sizeof(KuroSceneItemMoveComponent_SetAvoidanceGroupMask) == 0x000004, "Wrong size on KuroSceneItemMoveComponent_SetAvoidanceGroupMask");
+static_assert(offsetof(KuroSceneItemMoveComponent_SetAvoidanceGroupMask, GroupMask) == 0x000000, "Member 'KuroSceneItemMoveComponent_SetAvoidanceGroupMask::GroupMask' has a wrong offset!");
+
 // Function KuroComponent.KuroSceneItemMoveComponent.SetEnableDebugForMove
 // 0x0001 (0x0001 - 0x0000)
 struct KuroSceneItemMoveComponent_SetEnableDebugForMove final
@@ -267,6 +443,28 @@ public:
 static_assert(alignof(KuroSceneItemMoveComponent_SetEnableDebugForMove) == 0x000001, "Wrong alignment on KuroSceneItemMoveComponent_SetEnableDebugForMove");
 static_assert(sizeof(KuroSceneItemMoveComponent_SetEnableDebugForMove) == 0x000001, "Wrong size on KuroSceneItemMoveComponent_SetEnableDebugForMove");
 static_assert(offsetof(KuroSceneItemMoveComponent_SetEnableDebugForMove, Enable) == 0x000000, "Member 'KuroSceneItemMoveComponent_SetEnableDebugForMove::Enable' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemMoveComponent.SetGroupsToAvoidMask
+// 0x0004 (0x0004 - 0x0000)
+struct KuroSceneItemMoveComponent_SetGroupsToAvoidMask final
+{
+public:
+	struct FNavAvoidanceMask                      GroupMask;                                         // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemMoveComponent_SetGroupsToAvoidMask) == 0x000004, "Wrong alignment on KuroSceneItemMoveComponent_SetGroupsToAvoidMask");
+static_assert(sizeof(KuroSceneItemMoveComponent_SetGroupsToAvoidMask) == 0x000004, "Wrong size on KuroSceneItemMoveComponent_SetGroupsToAvoidMask");
+static_assert(offsetof(KuroSceneItemMoveComponent_SetGroupsToAvoidMask, GroupMask) == 0x000000, "Member 'KuroSceneItemMoveComponent_SetGroupsToAvoidMask::GroupMask' has a wrong offset!");
+
+// Function KuroComponent.KuroSceneItemMoveComponent.SetGroupsToIgnoreMask
+// 0x0004 (0x0004 - 0x0000)
+struct KuroSceneItemMoveComponent_SetGroupsToIgnoreMask final
+{
+public:
+	struct FNavAvoidanceMask                      GroupMask;                                         // 0x0000(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroSceneItemMoveComponent_SetGroupsToIgnoreMask) == 0x000004, "Wrong alignment on KuroSceneItemMoveComponent_SetGroupsToIgnoreMask");
+static_assert(sizeof(KuroSceneItemMoveComponent_SetGroupsToIgnoreMask) == 0x000004, "Wrong size on KuroSceneItemMoveComponent_SetGroupsToIgnoreMask");
+static_assert(offsetof(KuroSceneItemMoveComponent_SetGroupsToIgnoreMask, GroupMask) == 0x000000, "Member 'KuroSceneItemMoveComponent_SetGroupsToIgnoreMask::GroupMask' has a wrong offset!");
 
 // Function KuroComponent.KuroSceneItemMoveComponent.SetMaxDeltaDegreePerSecondForUpdatingLookAt
 // 0x0004 (0x0004 - 0x0000)

@@ -460,7 +460,7 @@ float UTsMoveBlueprintFunctionLibrary_C::GetAimYawRate(int32 entityId, class UOb
 // Parameters:
 // int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSMovementSetting_State          ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSMovementSetting_State          ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
 struct FSMovementSetting_State UTsMoveBlueprintFunctionLibrary_C::GetMovementData(int32 entityId, class UObject* __WorldContext)
 {
@@ -3000,6 +3000,186 @@ bool UTsMoveBlueprintFunctionLibrary_C::SetActorLookAtWithContext(int32 entityId
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.MoveCharacter
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVectorDouble&             targetLocation                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   speed                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   arriveDist                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UTsMoveBlueprintFunctionLibrary_C::MoveCharacter(int32 entityId, const struct FVectorDouble& targetLocation, float speed, int32 arriveDist, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsMoveBlueprintFunctionLibrary_C", "MoveCharacter");
+
+	Params::TsMoveBlueprintFunctionLibrary_C_MoveCharacter Parms{};
+
+	Parms.entityId = entityId;
+	Parms.targetLocation = std::move(targetLocation);
+	Parms.speed = speed;
+	Parms.arriveDist = arriveDist;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LerpVelocityBlend
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVeloctiyBlend&            out                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// const struct FVeloctiyBlend&            to                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// float                                   alpha                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVeloctiyBlend                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+struct FVeloctiyBlend UTsMoveBlueprintFunctionLibrary_C::LerpVelocityBlend(const struct FVeloctiyBlend& out, const struct FVeloctiyBlend& to, float alpha, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsMoveBlueprintFunctionLibrary_C", "LerpVelocityBlend");
+
+	Params::TsMoveBlueprintFunctionLibrary_C_LerpVelocityBlend Parms{};
+
+	Parms.out = std::move(out);
+	Parms.to = std::move(to);
+	Parms.alpha = alpha;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LeftStartSwing
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsMoveBlueprintFunctionLibrary_C::LeftStartSwing(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsMoveBlueprintFunctionLibrary_C", "LeftStartSwing");
+
+	Params::TsMoveBlueprintFunctionLibrary_C_LeftStartSwing Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LeftLoopSwing
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsMoveBlueprintFunctionLibrary_C::LeftLoopSwing(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsMoveBlueprintFunctionLibrary_C", "LeftLoopSwing");
+
+	Params::TsMoveBlueprintFunctionLibrary_C_LeftLoopSwing Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.LeftEndSwing
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsMoveBlueprintFunctionLibrary_C::LeftEndSwing(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsMoveBlueprintFunctionLibrary_C", "LeftEndSwing");
+
+	Params::TsMoveBlueprintFunctionLibrary_C_LeftEndSwing Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsMoveBlueprintFunctionLibrary.TsMoveBlueprintFunctionLibrary_C.ResetClimbConfig
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    key                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UTsMoveBlueprintFunctionLibrary_C::ResetClimbConfig(int32 entityId, const class FString& key, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("TsMoveBlueprintFunctionLibrary_C", "ResetClimbConfig");
+
+	Params::TsMoveBlueprintFunctionLibrary_C_ResetClimbConfig Parms{};
+
+	Parms.entityId = entityId;
+	Parms.key = std::move(key);
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

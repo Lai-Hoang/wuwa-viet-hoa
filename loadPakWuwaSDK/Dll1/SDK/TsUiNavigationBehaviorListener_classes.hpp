@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "SNavigationMode_structs.hpp"
 #include "LGUI_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EHotKeyNameStateType_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SNavigationMode_structs.hpp"
 #include "SNavigationCursor_structs.hpp"
 
 
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C
-// 0x01A0 (0x02A8 - 0x0108)
+// 0x01A8 (0x02B0 - 0x0108)
 class UTsUiNavigationBehaviorListener_C final : public UUINavigationBehaviour
 {
 public:
@@ -51,6 +51,8 @@ public:
 	uint8                                         Pad_28D[0x3];                                      // 0x028D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         InteractiveParam;                                  // 0x0290(0x0010)(Edit, BlueprintVisible)
 	float                                         NavigateTolerance;                                 // 0x02A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NavigateToleranceReverse;                          // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsUseDrag;                                         // 0x02A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_TsUiNavigationBehaviorListener(int32 EntryPoint);
@@ -77,7 +79,7 @@ public:
 	}
 };
 static_assert(alignof(UTsUiNavigationBehaviorListener_C) == 0x000008, "Wrong alignment on UTsUiNavigationBehaviorListener_C");
-static_assert(sizeof(UTsUiNavigationBehaviorListener_C) == 0x0002A8, "Wrong size on UTsUiNavigationBehaviorListener_C");
+static_assert(sizeof(UTsUiNavigationBehaviorListener_C) == 0x0002B0, "Wrong size on UTsUiNavigationBehaviorListener_C");
 static_assert(offsetof(UTsUiNavigationBehaviorListener_C, UberGraphFrame) == 0x000108, "Member 'UTsUiNavigationBehaviorListener_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UTsUiNavigationBehaviorListener_C, GroupName) == 0x000110, "Member 'UTsUiNavigationBehaviorListener_C::GroupName' has a wrong offset!");
 static_assert(offsetof(UTsUiNavigationBehaviorListener_C, LayoutActor) == 0x000120, "Member 'UTsUiNavigationBehaviorListener_C::LayoutActor' has a wrong offset!");
@@ -101,6 +103,8 @@ static_assert(offsetof(UTsUiNavigationBehaviorListener_C, ExitTagPriority) == 0x
 static_assert(offsetof(UTsUiNavigationBehaviorListener_C, IsUsePool) == 0x00028C, "Member 'UTsUiNavigationBehaviorListener_C::IsUsePool' has a wrong offset!");
 static_assert(offsetof(UTsUiNavigationBehaviorListener_C, InteractiveParam) == 0x000290, "Member 'UTsUiNavigationBehaviorListener_C::InteractiveParam' has a wrong offset!");
 static_assert(offsetof(UTsUiNavigationBehaviorListener_C, NavigateTolerance) == 0x0002A0, "Member 'UTsUiNavigationBehaviorListener_C::NavigateTolerance' has a wrong offset!");
+static_assert(offsetof(UTsUiNavigationBehaviorListener_C, NavigateToleranceReverse) == 0x0002A4, "Member 'UTsUiNavigationBehaviorListener_C::NavigateToleranceReverse' has a wrong offset!");
+static_assert(offsetof(UTsUiNavigationBehaviorListener_C, IsUseDrag) == 0x0002A8, "Member 'UTsUiNavigationBehaviorListener_C::IsUseDrag' has a wrong offset!");
 
 }
 

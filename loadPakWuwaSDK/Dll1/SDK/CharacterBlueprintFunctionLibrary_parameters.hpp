@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "ESelfCenteredMode_structs.hpp"
 #include "SEntityTimeDilation_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ESelfCenteredMode_structs.hpp"
 
 
 namespace SDK::Params
@@ -546,6 +546,76 @@ static_assert(alignof(CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeE
 static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled");
 static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled, __WorldContext) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled::__WorldContext' has a wrong offset!");
 static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled, ReturnValue) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_IsAnySelfCenteredModeEnabled::ReturnValue' has a wrong offset!");
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetPlanarReflectionShowPlayers
+// 0x0010 (0x0010 - 0x0000)
+struct CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers final
+{
+public:
+	class UPlanarReflectionComponent*             comp;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers");
+static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers, comp) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers::comp' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers::__WorldContext' has a wrong offset!");
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCharacterDirectlySightLockEnableState
+// 0x0010 (0x0010 - 0x0000)
+struct CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState final
+{
+public:
+	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEnable;                                           // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState");
+static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState, id) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState::id' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState, bEnable) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState::bEnable' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState::__WorldContext' has a wrong offset!");
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.RestoreSightLockBoneLimit
+// 0x0010 (0x0010 - 0x0000)
+struct CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit final
+{
+public:
+	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit");
+static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit) == 0x000010, "Wrong size on CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit, id) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit::id' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit, __WorldContext) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit::__WorldContext' has a wrong offset!");
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCharacterSightLockBoneLimit
+// 0x0038 (0x0038 - 0x0000)
+struct CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit final
+{
+public:
+	int32                                         id;                                                // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         yawMin;                                            // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         yawMax;                                            // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         pitchMin;                                          // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         pitchMax;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         assistLimit;                                       // 0x0014(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                sightDirectInSightBone;                            // 0x0018(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                upAxisInSightBone;                                 // 0x0024(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit) == 0x000008, "Wrong alignment on CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit");
+static_assert(sizeof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit) == 0x000038, "Wrong size on CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, id) == 0x000000, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::id' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, yawMin) == 0x000004, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::yawMin' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, yawMax) == 0x000008, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::yawMax' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, pitchMin) == 0x00000C, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::pitchMin' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, pitchMax) == 0x000010, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::pitchMax' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, assistLimit) == 0x000014, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::assistLimit' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, sightDirectInSightBone) == 0x000018, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::sightDirectInSightBone' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, upAxisInSightBone) == 0x000024, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::upAxisInSightBone' has a wrong offset!");
+static_assert(offsetof(CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit, __WorldContext) == 0x000030, "Member 'CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit::__WorldContext' has a wrong offset!");
 
 }
 

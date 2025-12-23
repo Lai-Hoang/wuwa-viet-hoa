@@ -57,6 +57,10 @@ public:
 	static float GetInverseSelfCenteredTimeDilation(class UObject* __WorldContext);
 	static bool IsSelfCenteredModeEnabled(ESelfCenteredMode selfCenteredMode, class UObject* __WorldContext);
 	static bool IsAnySelfCenteredModeEnabled(class UObject* __WorldContext);
+	static void SetPlanarReflectionShowPlayers(class UPlanarReflectionComponent* comp, class UObject* __WorldContext);
+	static void SetCharacterDirectlySightLockEnableState(int32 id, bool bEnable, class UObject* __WorldContext);
+	static void RestoreSightLockBoneLimit(int32 id, class UObject* __WorldContext);
+	static void SetCharacterSightLockBoneLimit(int32 id, float yawMin, float yawMax, float pitchMin, float pitchMax, float assistLimit, const struct FVector& sightDirectInSightBone, const struct FVector& upAxisInSightBone, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -19,115 +19,133 @@ namespace SDK::Params
 {
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.ExecuteUbergraph_BP_CloudPrefab
-// 0x0340 (0x0340 - 0x0000)
+// 0x0360 (0x0360 - 0x0000)
 struct BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue;             // 0x0008(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetParentActor_ReturnValue;               // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_Clouds_C*                           K2Node_DynamicCast_AsBP_Clouds;                    // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaSeconds_1;                       // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaSeconds;                         // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_1;                         // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_2;                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_3;                         // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_72[0x6];                                       // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_4;                         // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0080(0x0008)(NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_8D[0x3];                                       // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWorld*                                 CallFunc_GetWorld_ReturnValue;                     // 0x0090(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_D_GetWorldCameraLocation_OutCameraLocation; // 0x00A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_D_GetWorldCameraLocation_ReturnValue;     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_ShouldCloudMove_bMove;                    // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_BA[0x6];                                       // 0x00BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_ShouldCloudMove_NewLocation;              // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_D_K2_SetActorLocation_SweepHitResult;     // 0x00D8(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_D_K2_SetActorLocation_ReturnValue;        // 0x016C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_16D[0x3];                                      // 0x016D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x0170(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Timer_time;                               // 0x0174(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Timer_Stop;                               // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_179[0x3];                                      // 0x0179(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_D_K2_SetRelativeLocation_SweepHitResult;  // 0x017C(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	struct FVectorDouble                          CallFunc_D_K2_GetComponentScale_ReturnValue;       // 0x0210(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVectorDouble_X;                      // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVectorDouble_Y;                      // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVectorDouble_Z;                      // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_244[0x4];                                      // 0x0244(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_D_Abs_ReturnValue;                        // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_1;           // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_D_Multiply_FloatFloat_ReturnValue;        // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_2;           // 0x0270(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Conv_FloatToDouble_ReturnValue;           // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_3;           // 0x0290(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_D_K2_SetRelativeLocation_SweepHitResult_1; // 0x02A8(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x033C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetParentActor_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_CloudFuBenNew_C*                    K2Node_DynamicCast_AsBP_Cloud_Fu_Ben_New;          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_Clouds_C*                           K2Node_DynamicCast_AsBP_Clouds;                    // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29[0x3];                                       // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         K2Node_Event_DeltaSeconds_1;                       // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaSeconds;                         // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue;             // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item;                           // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_1;                         // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_62[0x6];                                       // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_2;                         // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_3;                         // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_4;                         // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x0088(0x0008)(NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_95[0x3];                                       // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWorld*                                 CallFunc_GetWorld_ReturnValue;                     // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A1[0x7];                                       // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_D_GetWorldCameraLocation_OutCameraLocation; // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_D_GetWorldCameraLocation_ReturnValue;     // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_ShouldCloudMove_bMove;                    // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_ShouldCloudMove_NewLocation;              // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_D_K2_SetActorLocation_SweepHitResult;     // 0x00E0(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_D_K2_SetActorLocation_ReturnValue;        // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_175[0x3];                                      // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_D_K2_SetRelativeLocation_SweepHitResult;  // 0x0178(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Conv_FloatToDouble_ReturnValue;           // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_K2_GetComponentScale_ReturnValue;       // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_1;           // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVectorDouble_X;                      // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVectorDouble_Y;                      // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVectorDouble_Z;                      // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_D_K2_SetRelativeLocation_SweepHitResult_1; // 0x0260(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	uint8                                         Pad_2F4[0x4];                                      // 0x02F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_D_Abs_ReturnValue;                        // 0x02F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_2;           // 0x0300(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Multiply_FloatFloat_ReturnValue;        // 0x0318(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_MakeVectorDouble_ReturnValue_3;           // 0x0320(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_BoolBool_ReturnValue;          // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_339[0x3];                                      // 0x0339(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Timer_time;                               // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Timer_Stop;                               // 0x0344(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_345[0x3];                                      // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_MultiplyMultiply_FloatFloat_ReturnValue;  // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1; // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0350(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue_1;                // 0x0354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue_2;                // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_CurveProgress_stop;                       // 0x035C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x035D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab");
-static_assert(sizeof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab) == 0x000340, "Wrong size on BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab");
+static_assert(sizeof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab) == 0x000360, "Wrong size on BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab");
 static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, EntryPoint) == 0x000000, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::EntryPoint' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue) == 0x000020, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_GetParentActor_ReturnValue) == 0x000028, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_GetParentActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_AsBP_Clouds) == 0x000030, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_AsBP_Clouds' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_Event_DeltaSeconds_1) == 0x00003C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_Event_DeltaSeconds) == 0x000040, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_Event_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item) == 0x000048, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_1) == 0x000050, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_1) == 0x000058, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_2) == 0x000059, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_2) == 0x000060, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_3) == 0x000068, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_3) == 0x000070, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_4) == 0x000071, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_4) == 0x000078, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_K2_SetTimer_ReturnValue) == 0x000080, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Length_ReturnValue) == 0x000088, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x00008C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_GetWorld_ReturnValue) == 0x000090, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_GetWorld_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_5) == 0x000098, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_GetWorldCameraLocation_OutCameraLocation) == 0x0000A0, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_GetWorldCameraLocation_OutCameraLocation' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_GetWorldCameraLocation_ReturnValue) == 0x0000B8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_GetWorldCameraLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_ShouldCloudMove_bMove) == 0x0000B9, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_ShouldCloudMove_bMove' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_ShouldCloudMove_NewLocation) == 0x0000C0, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_ShouldCloudMove_NewLocation' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetActorLocation_SweepHitResult) == 0x0000D8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetActorLocation_ReturnValue) == 0x00016C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_SelectFloat_ReturnValue) == 0x000170, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Timer_time) == 0x000174, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Timer_time' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Timer_Stop) == 0x000178, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Timer_Stop' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetRelativeLocation_SweepHitResult) == 0x00017C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_GetComponentScale_ReturnValue) == 0x000210, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_GetComponentScale_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_X) == 0x000228, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_X' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_Y) == 0x000230, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_Z) == 0x000238, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000240, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_Abs_ReturnValue) == 0x000248, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_1) == 0x000250, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_Multiply_FloatFloat_ReturnValue) == 0x000268, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_2) == 0x000270, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000288, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_3) == 0x000290, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetRelativeLocation_SweepHitResult_1) == 0x0002A8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetRelativeLocation_SweepHitResult_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x00033C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue) == 0x000004, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_GetParentActor_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_GetParentActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_AsBP_Cloud_Fu_Ben_New) == 0x000010, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_AsBP_Cloud_Fu_Ben_New' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_AsBP_Clouds) == 0x000020, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_AsBP_Clouds' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_DynamicCast_bSuccess_1) == 0x000028, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_Event_DeltaSeconds_1) == 0x00002C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_Event_DeltaSeconds_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, K2Node_Event_DeltaSeconds) == 0x000030, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::K2Node_Event_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue) == 0x000038, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item) == 0x000050, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_1) == 0x000058, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_1) == 0x000060, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_2) == 0x000061, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_2) == 0x000068, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_3) == 0x000070, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_3) == 0x000078, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_4) == 0x000079, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Get_Item_4) == 0x000080, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_K2_SetTimer_ReturnValue) == 0x000088, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Array_Length_ReturnValue) == 0x000090, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000094, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_GetWorld_ReturnValue) == 0x000098, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_GetWorld_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_IsValid_ReturnValue_5) == 0x0000A0, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_GetWorldCameraLocation_OutCameraLocation) == 0x0000A8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_GetWorldCameraLocation_OutCameraLocation' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_GetWorldCameraLocation_ReturnValue) == 0x0000C0, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_GetWorldCameraLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_ShouldCloudMove_bMove) == 0x0000C1, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_ShouldCloudMove_bMove' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_ShouldCloudMove_NewLocation) == 0x0000C8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_ShouldCloudMove_NewLocation' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetActorLocation_SweepHitResult) == 0x0000E0, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetActorLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetActorLocation_ReturnValue) == 0x000174, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetRelativeLocation_SweepHitResult) == 0x000178, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Conv_FloatToDouble_ReturnValue) == 0x000210, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Conv_FloatToDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_GetComponentScale_ReturnValue) == 0x000218, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_GetComponentScale_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_1) == 0x000230, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_X) == 0x000248, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_X' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_Y) == 0x000250, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_Y' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BreakVectorDouble_Z) == 0x000258, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BreakVectorDouble_Z' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_K2_SetRelativeLocation_SweepHitResult_1) == 0x000260, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_K2_SetRelativeLocation_SweepHitResult_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_Abs_ReturnValue) == 0x0002F8, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_2) == 0x000300, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_D_Multiply_FloatFloat_ReturnValue) == 0x000318, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_D_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MakeVectorDouble_ReturnValue_3) == 0x000320, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MakeVectorDouble_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_EqualEqual_BoolBool_ReturnValue) == 0x000338, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_EqualEqual_BoolBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_SelectFloat_ReturnValue) == 0x00033C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Timer_time) == 0x000340, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Timer_time' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Timer_Stop) == 0x000344, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Timer_Stop' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue) == 0x000348, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1) == 0x00034C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_MultiplyMultiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000350, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_SelectFloat_ReturnValue_1) == 0x000354, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_SelectFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_SelectFloat_ReturnValue_2) == 0x000358, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_SelectFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_CurveProgress_stop) == 0x00035C, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_CurveProgress_stop' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab, CallFunc_BooleanOR_ReturnValue) == 0x00035D, "Member 'BP_CloudPrefab_C_ExecuteUbergraph_BP_CloudPrefab::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.EditorTick
 // 0x0004 (0x0004 - 0x0000)
@@ -274,127 +292,138 @@ static_assert(offsetof(BP_CloudPrefab_C_Timer, CallFunc_Add_FloatFloat_ReturnVal
 static_assert(offsetof(BP_CloudPrefab_C_Timer, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_CloudPrefab_C_Timer::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.Cloud Initial
-// 0x0208 (0x0208 - 0x0000)
+// 0x0218 (0x0218 - 0x0000)
 struct BP_CloudPrefab_C_Cloud_Initial final
 {
 public:
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item;                           // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Get_Item_1;                         // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Get_Item_2;                         // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      ___object_Variable;                                // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FCloudParameters                       K2Node_MakeStruct_CloudParameters;                 // 0x0030(0x00C0)()
-	bool                                          ___bool_Variable;                                  // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_3;                         // 0x00F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      K2Node_Select_Default;                             // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_4;                         // 0x0108(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_5;                         // 0x0110(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0118(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_11C[0x4];                                      // 0x011C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_6;                         // 0x0120(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_7;                         // 0x0130(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0138(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x0144(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDMI_ReturnValue;                    // 0x01D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue_1;              // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1E2[0x6];                                      // 0x01E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_8;                         // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_9;                         // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0204(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UMaterialInstance*                      ___object_Variable;                                // 0x0000(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ___bool_Variable;                                  // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      K2Node_Select_Default;                             // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_23[0x1];                                       // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SelectFloat_ReturnValue;                  // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue_1;                // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Get_Item;                           // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Get_Item_1;                         // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Get_Item_2;                         // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue_2;                // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue_3;                // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_3;                         // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_4;                         // 0x0050(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_5;                         // 0x0058(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_6;                         // 0x0060(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue_1;              // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDMI_ReturnValue;                    // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMeshComponent*                   CallFunc_Array_Get_Item_7;                         // 0x0078(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_8;                         // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_Array_Get_Item_9;                         // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x009C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x00A8(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x013C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue_2;                 // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SelectFloat_ReturnValue_4;                // 0x0144(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCloudParameters                       K2Node_MakeStruct_CloudParameters;                 // 0x0148(0x00C8)()
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_CloudPrefab_C_Cloud_Initial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_Cloud_Initial");
-static_assert(sizeof(BP_CloudPrefab_C_Cloud_Initial) == 0x000208, "Wrong size on BP_CloudPrefab_C_Cloud_Initial");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue_2) == 0x000002, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000004, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Less_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item) == 0x00000C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Length_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_1) == 0x000014, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000018, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_2) == 0x00001C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, ___object_Variable) == 0x000028, "Member 'BP_CloudPrefab_C_Cloud_Initial::___object_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, K2Node_MakeStruct_CloudParameters) == 0x000030, "Member 'BP_CloudPrefab_C_Cloud_Initial::K2Node_MakeStruct_CloudParameters' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, ___bool_Variable) == 0x0000F0, "Member 'BP_CloudPrefab_C_Cloud_Initial::___bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_3) == 0x0000F8, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, K2Node_Select_Default) == 0x000100, "Member 'BP_CloudPrefab_C_Cloud_Initial::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_4) == 0x000108, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_5) == 0x000110, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000118, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_6) == 0x000120, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_6' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_FloatFloat_ReturnValue) == 0x000128, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_7) == 0x000130, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_7' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_MakeRotator_ReturnValue) == 0x000138, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x000144, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_CreateDMI_ReturnValue) == 0x0001D8, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_CreateDMI_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SetStaticMesh_ReturnValue) == 0x0001E0, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SetStaticMesh_ReturnValue_1) == 0x0001E1, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SetStaticMesh_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_8) == 0x0001E8, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_8' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_9) == 0x0001F0, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_9' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue) == 0x0001F8, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue_1) == 0x0001FC, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue_2) == 0x000200, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000204, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(sizeof(BP_CloudPrefab_C_Cloud_Initial) == 0x000218, "Wrong size on BP_CloudPrefab_C_Cloud_Initial");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, ___object_Variable) == 0x000000, "Member 'BP_CloudPrefab_C_Cloud_Initial::___object_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, ___bool_Variable) == 0x00000C, "Member 'BP_CloudPrefab_C_Cloud_Initial::___bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Less_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue) == 0x000015, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue_1) == 0x000016, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, K2Node_Select_Default) == 0x000018, "Member 'BP_CloudPrefab_C_Cloud_Initial::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue_2) == 0x000020, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_IsValid_ReturnValue_3) == 0x000021, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_BooleanOR_ReturnValue) == 0x000022, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue) == 0x000024, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue_1) == 0x000028, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item) == 0x00002C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_1) == 0x000034, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_EqualEqual_IntInt_ReturnValue) == 0x000038, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_EqualEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_2) == 0x00003C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue_2) == 0x000040, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue_3) == 0x000044, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_3) == 0x000048, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_4) == 0x000050, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_5) == 0x000058, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_5' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_6) == 0x000060, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_6' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SetStaticMesh_ReturnValue) == 0x000068, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SetStaticMesh_ReturnValue_1) == 0x000069, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SetStaticMesh_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_CreateDMI_ReturnValue) == 0x000070, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_CreateDMI_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_7) == 0x000078, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_7' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_8) == 0x000080, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_8' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Array_Get_Item_9) == 0x000088, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Array_Get_Item_9' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000090, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_FloatFloat_ReturnValue) == 0x000094, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue) == 0x000098, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_MakeRotator_ReturnValue) == 0x00009C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x0000A8, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue_1) == 0x00013C, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_Add_IntInt_ReturnValue_2) == 0x000140, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_Add_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_SelectFloat_ReturnValue_4) == 0x000144, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_SelectFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, K2Node_MakeStruct_CloudParameters) == 0x000148, "Member 'BP_CloudPrefab_C_Cloud_Initial::K2Node_MakeStruct_CloudParameters' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Cloud_Initial, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000210, "Member 'BP_CloudPrefab_C_Cloud_Initial::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.Single Cloud Parameters Initial
-// 0x0198 (0x0198 - 0x0000)
+// 0x01A0 (0x01A0 - 0x0000)
 struct BP_CloudPrefab_C_Single_Cloud_Parameters_Initial final
 {
 public:
 	class UMaterialInstanceDynamic*               DMI_0;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UStaticMeshComponent*                   Mesh;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FCloudParameters                       CloudStructParameter;                              // 0x0010(0x00C0)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         TransSortNumber_0;                                 // 0x00D0(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D9[0x3];                                       // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x00DC(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x00EC(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_181[0x3];                                      // 0x0181(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_BoolToFloat_ReturnValue;             // 0x0184(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FCloudParameters                       CloudStructParameter;                              // 0x0010(0x00C8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         TransSortNumber_0;                                 // 0x00D8(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x00DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E1[0x3];                                       // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x00E4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_Conv_IntToFloat_ReturnValue;              // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FHitResult                             CallFunc_K2_SetWorldRotation_SweepHitResult;       // 0x00F4(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_189[0x3];                                      // 0x0189(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_1;           // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_BoolToFloat_ReturnValue;             // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_191[0x3];                                      // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Conv_BoolToFloat_ReturnValue_1;           // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue_1;    // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_Single_Cloud_Parameters_Initial");
-static_assert(sizeof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial) == 0x000198, "Wrong size on BP_CloudPrefab_C_Single_Cloud_Parameters_Initial");
+static_assert(sizeof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial) == 0x0001A0, "Wrong size on BP_CloudPrefab_C_Single_Cloud_Parameters_Initial");
 static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, DMI_0) == 0x000000, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::DMI_0' has a wrong offset!");
 static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, Mesh) == 0x000008, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::Mesh' has a wrong offset!");
 static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CloudStructParameter) == 0x000010, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CloudStructParameter' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, TransSortNumber_0) == 0x0000D0, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::TransSortNumber_0' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x0000D4, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Less_FloatFloat_ReturnValue) == 0x0000D8, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_MakeRotator_ReturnValue) == 0x0000DC, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000E8, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x0000EC, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_IsValid_ReturnValue) == 0x000180, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_BoolToFloat_ReturnValue) == 0x000184, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_BoolToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Not_PreBool_ReturnValue) == 0x000188, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_BoolToFloat_ReturnValue_1) == 0x00018C, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_BoolToFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000190, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, TransSortNumber_0) == 0x0000D8, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::TransSortNumber_0' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x0000DC, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Less_FloatFloat_ReturnValue) == 0x0000E0, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_MakeRotator_ReturnValue) == 0x0000E4, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_IntToFloat_ReturnValue) == 0x0000F0, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_IntToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_K2_SetWorldRotation_SweepHitResult) == 0x0000F4, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_K2_SetWorldRotation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_IsValid_ReturnValue) == 0x000188, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_BoolToFloat_ReturnValue) == 0x00018C, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_BoolToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Not_PreBool_ReturnValue) == 0x000190, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_Conv_BoolToFloat_ReturnValue_1) == 0x000194, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_Conv_BoolToFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_Single_Cloud_Parameters_Initial, CallFunc_GetScalarParameterValue_ReturnValue_1) == 0x000198, "Member 'BP_CloudPrefab_C_Single_Cloud_Parameters_Initial::CallFunc_GetScalarParameterValue_ReturnValue_1' has a wrong offset!");
 
 // Function BP_CloudPrefab.BP_CloudPrefab_C.Single Building Parameters Initial
 // 0x0100 (0x0100 - 0x0000)
@@ -541,6 +570,72 @@ static_assert(offsetof(BP_CloudPrefab_C_OverrideBigShapeMaterial, MaterialInstan
 static_assert(offsetof(BP_CloudPrefab_C_OverrideBigShapeMaterial, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_OverrideBigShapeMaterial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CloudPrefab_C_OverrideBigShapeMaterial, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000009, "Member 'BP_CloudPrefab_C_OverrideBigShapeMaterial::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CloudPrefab_C_OverrideBigShapeMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_OverrideBigShapeMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+
+// Function BP_CloudPrefab.BP_CloudPrefab_C.OverrideCloudTopMaterial
+// 0x0020 (0x0020 - 0x0000)
+struct BP_CloudPrefab_C_OverrideCloudTopMaterial final
+{
+public:
+	class UMaterialInstance*                      MaterialInstance;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CloudPrefab_C_OverrideCloudTopMaterial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_OverrideCloudTopMaterial");
+static_assert(sizeof(BP_CloudPrefab_C_OverrideCloudTopMaterial) == 0x000020, "Wrong size on BP_CloudPrefab_C_OverrideCloudTopMaterial");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideCloudTopMaterial, MaterialInstance) == 0x000000, "Member 'BP_CloudPrefab_C_OverrideCloudTopMaterial::MaterialInstance' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideCloudTopMaterial, CallFunc_IsValid_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_OverrideCloudTopMaterial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideCloudTopMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_OverrideCloudTopMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideCloudTopMaterial, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000018, "Member 'BP_CloudPrefab_C_OverrideCloudTopMaterial::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
+
+// Function BP_CloudPrefab.BP_CloudPrefab_C.CurveProgress
+// 0x000C (0x000C - 0x0000)
+struct BP_CloudPrefab_C_CurveProgress final
+{
+public:
+	bool                                          stop;                                              // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          curvestop;                                         // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_GetValue_Float_ReturnValue;               // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Add_FloatFloat_ReturnValue;               // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_CloudPrefab_C_CurveProgress) == 0x000004, "Wrong alignment on BP_CloudPrefab_C_CurveProgress");
+static_assert(sizeof(BP_CloudPrefab_C_CurveProgress) == 0x00000C, "Wrong size on BP_CloudPrefab_C_CurveProgress");
+static_assert(offsetof(BP_CloudPrefab_C_CurveProgress, stop) == 0x000000, "Member 'BP_CloudPrefab_C_CurveProgress::stop' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_CurveProgress, curvestop) == 0x000001, "Member 'BP_CloudPrefab_C_CurveProgress::curvestop' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_CurveProgress, CallFunc_GetValue_Float_ReturnValue) == 0x000004, "Member 'BP_CloudPrefab_C_CurveProgress::CallFunc_GetValue_Float_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_CurveProgress, CallFunc_Add_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_CloudPrefab_C_CurveProgress::CallFunc_Add_FloatFloat_ReturnValue' has a wrong offset!");
+
+// Function BP_CloudPrefab.BP_CloudPrefab_C.OverrideMountainMeshAndMaterial
+// 0x0028 (0x0028 - 0x0000)
+struct BP_CloudPrefab_C_OverrideMountainMeshAndMaterial final
+{
+public:
+	class UMaterialInstance*                      MaterialInstance;                                  // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UStaticMesh*                            Mesh;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetScalarParameterValue_ReturnValue;      // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0016(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_17[0x1];                                       // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_NotEqual_ObjectObject_ReturnValue;        // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial) == 0x000008, "Wrong alignment on BP_CloudPrefab_C_OverrideMountainMeshAndMaterial");
+static_assert(sizeof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial) == 0x000028, "Wrong size on BP_CloudPrefab_C_OverrideMountainMeshAndMaterial");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, MaterialInstance) == 0x000000, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::MaterialInstance' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, Mesh) == 0x000008, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::Mesh' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_GetScalarParameterValue_ReturnValue) == 0x000010, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_GetScalarParameterValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_IsValid_ReturnValue) == 0x000014, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_Less_FloatFloat_ReturnValue) == 0x000015, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_IsValid_ReturnValue_1) == 0x000016, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000018, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_SetStaticMesh_ReturnValue) == 0x000020, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_IsValid_ReturnValue_2) == 0x000021, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_CloudPrefab_C_OverrideMountainMeshAndMaterial, CallFunc_NotEqual_ObjectObject_ReturnValue) == 0x000022, "Member 'BP_CloudPrefab_C_OverrideMountainMeshAndMaterial::CallFunc_NotEqual_ObjectObject_ReturnValue' has a wrong offset!");
 
 }
 

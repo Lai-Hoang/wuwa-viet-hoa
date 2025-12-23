@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "EVisionType_structs.hpp"
+#include "Engine_classes.hpp"
 #include "EHookInteractTypeBp_structs.hpp"
 #include "EMorphType_structs.hpp"
-#include "EHitAnim_structs.hpp"
 #include "ECharacterLoadType_structs.hpp"
 #include "EFishingSkillType_structs.hpp"
+#include "EHitAnim_structs.hpp"
 #include "ESkillTargetDirection_structs.hpp"
 #include "EAimViewState_structs.hpp"
 #include "ECharViewDirectionState_structs.hpp"
-#include "ECharParentMoveState_structs.hpp"
 #include "ECharState_structs.hpp"
+#include "ECharParentMoveState_structs.hpp"
 
 
 namespace SDK
@@ -50,7 +50,7 @@ public:
 	static class FString GetGeDebugString(int32 entityId, class UObject* __WorldContext);
 	static class FString GetTagDebugStrings(int32 entityId, class UObject* __WorldContext);
 	static class FString GetBuffDebugStrings(int32 entityId, const class FString& buffStr, class UObject* __WorldContext);
-	static class FString GetShieldDebugString(int32 entityId, class UObject* __WorldContext);
+	static class FString GetShieldDebugString(int32 entityId, const class FString& filterStr, class UObject* __WorldContext);
 	static class FString GetPassiveSkillDebugString(int32 entityId, class UObject* __WorldContext);
 	static float GetShieldValue(int32 entityId, int32 shieldCid, class UObject* __WorldContext);
 	static class FString GetAttributeDebugString(int32 entityId, class UObject* __WorldContext);
@@ -290,12 +290,47 @@ public:
 	static void StartChargeSlash(int32 entityId, class UObject* __WorldContext);
 	static void StopChargeSlash(int32 entityId, class UObject* __WorldContext);
 	static void BeginSkillAsync(int32 entityId, class FName skillId, class AActor* target, class FName socketName, class UKuroBooleanEventBinder* eventBinder, class UObject* __WorldContext);
+	static class ATsBaseCharacter_C* GetCurrentPlayer(class UObject* __WorldContext);
 	static struct FVectorDouble SlashHookPointSafePointLoc(int32 entityId, class UObject* __WorldContext);
 	static struct FRotator SlashHookPointSafePointRot(int32 entityId, class UObject* __WorldContext);
 	static int32 GetFuLuoLuoSpecialEnergyType(int32 entityId, int32 index, class UObject* __WorldContext);
 	static void LockOnTargetAndSetShow(int32 entityId, const struct FSSkillTarget& config, class UObject* __WorldContext);
-	static class ATsBaseCharacter_C* GetCurrentPlayer(class UObject* __WorldContext);
+	static void EndAbsoluteTimeStop(int32 entityId, class UObject* __WorldContext);
+	static void BeginTimeStopRequest(int32 entityId, float duration, class UObject* __WorldContext);
+	static void EndTimeStopRequest(int32 entityId, class UObject* __WorldContext);
+	static void BeginAbsoluteTimeStop(int32 entityId, float duration, bool stopMove, class UObject* __WorldContext);
 	static bool IsEnemy(class ATsBaseCharacter_C* owner, class ATsBaseCharacter_C* other, class UObject* __WorldContext);
+	static void SetWalkOffLedge(int32 entityId, bool walkOff, class UObject* __WorldContext);
+	static void EmitGlobalClientEvent(const struct FGameplayTag& eventNameTag, class UObject* __WorldContext);
+	static bool FixHookIsGravityPoint(int32 entityId, class UObject* __WorldContext);
+	static int32 GetDriverEntityId(int32 vehicleEntityId, class UObject* __WorldContext);
+	static class FString GetFlyingFeatherTargetId(class ATsBaseCharacter_C* owner, class UObject* __WorldContext);
+	static class AActor* AddFlyingFeatherTargetTag(const struct FGameplayTag& tag, const class FString& entityId, class UObject* __WorldContext);
+	static struct FVectorDouble UpdateFlyingFeather(class ATsBaseCharacter_C* owner, const class FString& target, class UObject* __WorldContext);
+	static void StartFlyingFeather(class ATsBaseCharacter_C* owner, const struct FVectorDouble& initLocation, class UBP_FlyingFeatherConfig_C* config, class UObject* __WorldContext);
+	static struct FSGravityHookLockInfo GetGravityHookLockInfo(int32 entityId, class UObject* __WorldContext);
+	static void CreateSpecifiedTagPlayMontageAndWaitAbilityTask(class UGA_Base_C* gameplayAbility, bool checkHit, const struct FGameplayTag& skeletalMeshComponentTag, int32 montageIndex, class FName startSection, float startTimeSeconds, bool needTick, float animRootMotionTranslationScale, class UObject* __WorldContext);
+	static void StartCableWayMove(int32 id, class UKuroBooleanEventBinder* eventBinder, class UObject* __WorldContext);
+	static int32 GetBuffInstigatorId(int32 entityId, int32 buffId, bool getInstigatorSummoner, class UObject* __WorldContext);
+	static void ChangeGravityByHook(int32 entityId, int32 angleRangeMin, int32 angleRangeMax, float smoothSecondMin, float smoothSecondMax, class UObject* __WorldContext);
+	static void SetSubMeshOrder(int32 entityId, const class FString& meshName, bool visible, class UPD_CharacterControllerData_C* charControllerData, TSoftObjectPtr<class UEffectModelBase> effectDataAssetRef, float delayTime, class UObject* __WorldContext);
+	static float GetPilotThrowSpeed(class UObject* __WorldContext);
+	static struct FVectorDouble GetPilotThrowDirection(class UObject* __WorldContext);
+	static float GetPilotThrowGravity(class UObject* __WorldContext);
+	static void SendCombatEventForDebug(int32 entityId, const class FString& tagName, bool needSave, bool isMainState, class UObject* __WorldContext);
+	static void SendLevelEventForDebug(int32 entityId, const class FString& tagName, class UObject* __WorldContext);
+	static void StopCableWayMove(int32 id, class UObject* __WorldContext);
+	static class USkeletalMeshComponent* GetCurrentTargetPilotSkeletalMeshComponent(int32 entityId, class UObject* __WorldContext);
+	static bool GetPilotThrowNeedMotorRide(class UObject* __WorldContext);
+	static bool GetPilotThrowIsDisableInterrupt(class UObject* __WorldContext);
+	static void OpenPilotThrowGameplayCamera(int32 targetEntityId, class UObject* __WorldContext);
+	static int32 FixHookTargetEntityId(int32 entityId, class UObject* __WorldContext);
+	static void LevelFlowDeadlySkeletonMeshCastToCharacter(class UObject* __WorldContext);
+	static void LevelFlowAddBuff(int32 entityId, int32 buffId, class UObject* __WorldContext);
+	static void LevelFlowRemoveBuff(int32 entityId, int32 buffId, class UObject* __WorldContext);
+	static void LevelFlowCameraShake(const class FString& cameraShakeBp, class UObject* __WorldContext);
+	static void LevelFlowPlayLevelSequence(const class FString& path, const class FString& mark, class UObject* __WorldContext);
+	static struct FVectorDouble GetPilotCurrentInRangePoint(class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

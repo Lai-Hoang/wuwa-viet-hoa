@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SSkillTrigger.SSkillTrigger
-// 0x0040 (0x0040 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct FSSkillTrigger final
 {
 public:
@@ -23,13 +23,17 @@ public:
 	TArray<class FString>                         TriggerPreset_5_7766F7AA48C4AA380971A9B4FA085B6F;  // 0x0010(0x0010)(Edit, BlueprintVisible)
 	class FString                                 TriggerParams_10_0B8BCCB6424F70FCD32451BF5E363B27; // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 TriggerFormula_11_05C6F52D48C9B57ACB5C85A076462A38; // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TriggerTarget_14_4FBFA2194402F3F89FE451AFA771EC33; // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 TriggerTargetSocket_17_D17D9CE14BEEC1E628D4109AF3AB4F78; // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FSSkillTrigger) == 0x000008, "Wrong alignment on FSSkillTrigger");
-static_assert(sizeof(FSSkillTrigger) == 0x000040, "Wrong size on FSSkillTrigger");
+static_assert(sizeof(FSSkillTrigger) == 0x000060, "Wrong size on FSSkillTrigger");
 static_assert(offsetof(FSSkillTrigger, TriggerType_2_A4B916C949F97F67C63AEFA1E4A3F1CC) == 0x000000, "Member 'FSSkillTrigger::TriggerType_2_A4B916C949F97F67C63AEFA1E4A3F1CC' has a wrong offset!");
 static_assert(offsetof(FSSkillTrigger, TriggerPreset_5_7766F7AA48C4AA380971A9B4FA085B6F) == 0x000010, "Member 'FSSkillTrigger::TriggerPreset_5_7766F7AA48C4AA380971A9B4FA085B6F' has a wrong offset!");
 static_assert(offsetof(FSSkillTrigger, TriggerParams_10_0B8BCCB6424F70FCD32451BF5E363B27) == 0x000020, "Member 'FSSkillTrigger::TriggerParams_10_0B8BCCB6424F70FCD32451BF5E363B27' has a wrong offset!");
 static_assert(offsetof(FSSkillTrigger, TriggerFormula_11_05C6F52D48C9B57ACB5C85A076462A38) == 0x000030, "Member 'FSSkillTrigger::TriggerFormula_11_05C6F52D48C9B57ACB5C85A076462A38' has a wrong offset!");
+static_assert(offsetof(FSSkillTrigger, TriggerTarget_14_4FBFA2194402F3F89FE451AFA771EC33) == 0x000040, "Member 'FSSkillTrigger::TriggerTarget_14_4FBFA2194402F3F89FE451AFA771EC33' has a wrong offset!");
+static_assert(offsetof(FSSkillTrigger, TriggerTargetSocket_17_D17D9CE14BEEC1E628D4109AF3AB4F78) == 0x000050, "Member 'FSSkillTrigger::TriggerTargetSocket_17_D17D9CE14BEEC1E628D4109AF3AB4F78' has a wrong offset!");
 
 }
 

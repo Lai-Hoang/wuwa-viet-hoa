@@ -15,14 +15,15 @@ namespace SDK
 {
 
 // UserDefinedEnum ESkillTargetDirection.ESkillTargetDirection
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class ESkillTargetDirection : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator5                           = 1,
 	NewEnumerator4                           = 2,
 	NewEnumerator3                           = 3,
-	ESkillTargetDirection_MAX                = 4,
+	NewEnumerator6                           = 4,
+	ESkillTargetDirection_MAX                = 5,
 };
 
 }

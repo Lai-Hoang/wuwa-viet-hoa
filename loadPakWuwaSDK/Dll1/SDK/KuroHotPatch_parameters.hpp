@@ -419,6 +419,17 @@ static_assert(alignof(KuroLauncherLibrary_GetTotalPrecompileShaders) == 0x000004
 static_assert(sizeof(KuroLauncherLibrary_GetTotalPrecompileShaders) == 0x000004, "Wrong size on KuroLauncherLibrary_GetTotalPrecompileShaders");
 static_assert(offsetof(KuroLauncherLibrary_GetTotalPrecompileShaders, ReturnValue) == 0x000000, "Member 'KuroLauncherLibrary_GetTotalPrecompileShaders::ReturnValue' has a wrong offset!");
 
+// Function KuroHotPatch.KuroLauncherLibrary.IsEnableOptionalPackage
+// 0x0001 (0x0001 - 0x0000)
+struct KuroLauncherLibrary_IsEnableOptionalPackage final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroLauncherLibrary_IsEnableOptionalPackage) == 0x000001, "Wrong alignment on KuroLauncherLibrary_IsEnableOptionalPackage");
+static_assert(sizeof(KuroLauncherLibrary_IsEnableOptionalPackage) == 0x000001, "Wrong size on KuroLauncherLibrary_IsEnableOptionalPackage");
+static_assert(offsetof(KuroLauncherLibrary_IsEnableOptionalPackage, ReturnValue) == 0x000000, "Member 'KuroLauncherLibrary_IsEnableOptionalPackage::ReturnValue' has a wrong offset!");
+
 // Function KuroHotPatch.KuroLauncherLibrary.IsFirstIntoLauncher
 // 0x0001 (0x0001 - 0x0000)
 struct KuroLauncherLibrary_IsFirstIntoLauncher final
@@ -440,6 +451,17 @@ public:
 static_assert(alignof(KuroLauncherLibrary_IsLocalPackaging) == 0x000001, "Wrong alignment on KuroLauncherLibrary_IsLocalPackaging");
 static_assert(sizeof(KuroLauncherLibrary_IsLocalPackaging) == 0x000001, "Wrong size on KuroLauncherLibrary_IsLocalPackaging");
 static_assert(offsetof(KuroLauncherLibrary_IsLocalPackaging, ReturnValue) == 0x000000, "Member 'KuroLauncherLibrary_IsLocalPackaging::ReturnValue' has a wrong offset!");
+
+// Function KuroHotPatch.KuroLauncherLibrary.IsSeparateVideo
+// 0x0001 (0x0001 - 0x0000)
+struct KuroLauncherLibrary_IsSeparateVideo final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroLauncherLibrary_IsSeparateVideo) == 0x000001, "Wrong alignment on KuroLauncherLibrary_IsSeparateVideo");
+static_assert(sizeof(KuroLauncherLibrary_IsSeparateVideo) == 0x000001, "Wrong size on KuroLauncherLibrary_IsSeparateVideo");
+static_assert(offsetof(KuroLauncherLibrary_IsSeparateVideo, ReturnValue) == 0x000000, "Member 'KuroLauncherLibrary_IsSeparateVideo::ReturnValue' has a wrong offset!");
 
 // Function KuroHotPatch.KuroLauncherLibrary.IsStartupMountSuccess
 // 0x0001 (0x0001 - 0x0000)

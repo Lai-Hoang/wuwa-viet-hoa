@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
@@ -18,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C
-// 0x0078 (0x0388 - 0x0310)
+// 0x00C8 (0x03D8 - 0x0310)
 class ABP_BaseRole_Seq_V2_C : public APawn
 {
 public:
@@ -39,6 +40,11 @@ public:
 	class ABP_Fx_Scanning_C*                      BPScanning;                                        // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCharRenderingComponent_C*              CharRenderingComponent;                            // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         TalkID_SP;                                         // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableKeyLightChan;                                // 0x0384(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          ToonLightChan0;                                    // 0x0385(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          ToonLightChan1;                                    // 0x0386(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          ToonLightChan2;                                    // 0x0387(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	TMap<class FName, struct FTransform>          CustomData;                                        // 0x0388(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_BaseRole_Seq_V2(int32 EntryPoint);
@@ -55,16 +61,20 @@ public:
 	void 添加角色材质控制器();
 	void 卸载角色材质控制器();
 	void 添加扫描效果();
-	void BeginSwitchPose_ToSeq(class AActor* From, class AActor* To, float SwitchTime, bool ErrorLog);
+	void Begin_Switch_Pose_to_Seq(class AActor* From, class AActor* To, float SwitchTime, bool ErrorLog);
 	void BeginSwitchPose_ToBP(class AActor* From, class AActor* To, float SwitchTime, bool ErrorLog);
 	void EndSwitchPose_ToSeq(class AActor* To, bool Log);
 	void EndSwitchPose_ToBP(class AActor* To, bool Log);
+	void LightChanel();
 	void GetABPC_Body_V2(class UABPC_Seq_Body_V2_C** ABPC_Body_V2_0);
 	bool SetAnimDataVector(const TMap<class FName, struct FVector>& VectorCurveData);
 	bool SetAnimDataFloat(const TArray<struct FNamedCurveValue>& FloatCurveData);
 	bool GetAnimDataVector(TMap<class FName, struct FVector>* VectorCurveData);
 	bool GetAnimDataFloat(TArray<struct FNamedCurveValue>* FloatCurveData);
 	TArray<class FName> GetSupportGroupNames();
+	bool SetAnimDataTransform(const TMap<class FName, struct FTransform>& FloatCurveData);
+	bool IsCustomSupport();
+	bool GetAnimDataTransform(TMap<class FName, struct FTransform>* FloatCurveData);
 	void GetSeqAudio(class USeqAudio_Seq_V2_C** SeqAudio);
 
 public:
@@ -78,7 +88,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_BaseRole_Seq_V2_C) == 0x000008, "Wrong alignment on ABP_BaseRole_Seq_V2_C");
-static_assert(sizeof(ABP_BaseRole_Seq_V2_C) == 0x000388, "Wrong size on ABP_BaseRole_Seq_V2_C");
+static_assert(sizeof(ABP_BaseRole_Seq_V2_C) == 0x0003D8, "Wrong size on ABP_BaseRole_Seq_V2_C");
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C, UberGraphFrame) == 0x000310, "Member 'ABP_BaseRole_Seq_V2_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C, SeqAudio_Seq_V2) == 0x000318, "Member 'ABP_BaseRole_Seq_V2_C::SeqAudio_Seq_V2' has a wrong offset!");
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C, Hulu) == 0x000320, "Member 'ABP_BaseRole_Seq_V2_C::Hulu' has a wrong offset!");
@@ -95,6 +105,11 @@ static_assert(offsetof(ABP_BaseRole_Seq_V2_C, Data) == 0x000368, "Member 'ABP_Ba
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C, BPScanning) == 0x000370, "Member 'ABP_BaseRole_Seq_V2_C::BPScanning' has a wrong offset!");
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C, CharRenderingComponent) == 0x000378, "Member 'ABP_BaseRole_Seq_V2_C::CharRenderingComponent' has a wrong offset!");
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C, TalkID_SP) == 0x000380, "Member 'ABP_BaseRole_Seq_V2_C::TalkID_SP' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C, EnableKeyLightChan) == 0x000384, "Member 'ABP_BaseRole_Seq_V2_C::EnableKeyLightChan' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C, ToonLightChan0) == 0x000385, "Member 'ABP_BaseRole_Seq_V2_C::ToonLightChan0' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C, ToonLightChan1) == 0x000386, "Member 'ABP_BaseRole_Seq_V2_C::ToonLightChan1' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C, ToonLightChan2) == 0x000387, "Member 'ABP_BaseRole_Seq_V2_C::ToonLightChan2' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C, CustomData) == 0x000388, "Member 'ABP_BaseRole_Seq_V2_C::CustomData' has a wrong offset!");
 
 }
 

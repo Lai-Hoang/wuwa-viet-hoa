@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "SReBulletDataScale_structs.hpp"
 #include "SReBulletDataPerformance_structs.hpp"
 #include "SReBulletDataBase_structs.hpp"
 #include "SReBulletDataLogic_structs.hpp"
 #include "SReBulletDataAimed_structs.hpp"
-#include "SReBulletDataTime_structs.hpp"
-#include "SReBulletDataMove_structs.hpp"
-#include "SReBulletDataScale_structs.hpp"
 #include "SReBulletDataExe_structs.hpp"
+#include "SReBulletDataMove_structs.hpp"
+#include "SReBulletDataTime_structs.hpp"
 #include "SReBulletDataEntity_structs.hpp"
 #include "SReBulletDataChildren_structs.hpp"
 #include "SReBulletDataObstacles_structs.hpp"

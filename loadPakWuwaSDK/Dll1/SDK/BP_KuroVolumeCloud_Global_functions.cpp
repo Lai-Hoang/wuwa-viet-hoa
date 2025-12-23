@@ -37,15 +37,35 @@ void ABP_KuroVolumeCloud_Global_C::ExecuteUbergraph_BP_KuroVolumeCloud_Global(in
 }
 
 
-// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ReceiveBeginPlay
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ReceiveEndPlay
 // (Event, Protected, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_KuroVolumeCloud_Global_C::ReceiveBeginPlay()
+void ABP_KuroVolumeCloud_Global_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "ReceiveBeginPlay");
+		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "ReceiveEndPlay");
+
+	Params::BP_KuroVolumeCloud_Global_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateQualitySwitch
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_KuroVolumeCloud_Global_C::UpdateQualitySwitch()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "UpdateQualitySwitch");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -93,6 +113,20 @@ void ABP_KuroVolumeCloud_Global_C::BeforeCookForMobile()
 }
 
 
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.EditorTick
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_KuroVolumeCloud_Global_C::EditorTick()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "EditorTick");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ReceiveTick
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -113,15 +147,15 @@ void ABP_KuroVolumeCloud_Global_C::ReceiveTick(float DeltaSeconds)
 }
 
 
-// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.EditorTick
-// (BlueprintCallable, BlueprintEvent)
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.ReceiveBeginPlay
+// (Event, Protected, BlueprintEvent)
 
-void ABP_KuroVolumeCloud_Global_C::EditorTick()
+void ABP_KuroVolumeCloud_Global_C::ReceiveBeginPlay()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "EditorTick");
+		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "ReceiveBeginPlay");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -230,6 +264,34 @@ void ABP_KuroVolumeCloud_Global_C::CleanMID()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "CleanMID");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateCloudShadingRate
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_KuroVolumeCloud_Global_C::UpdateCloudShadingRate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "UpdateCloudShadingRate");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C.UpdateCloudShadingRateLocal
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_KuroVolumeCloud_Global_C::UpdateCloudShadingRateLocal()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_KuroVolumeCloud_Global_C", "UpdateCloudShadingRateLocal");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

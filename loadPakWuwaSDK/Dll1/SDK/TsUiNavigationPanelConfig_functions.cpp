@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function TsUiNavigationPanelConfig.TsUiNavigationPanelConfig_C.ExecuteUbergraph_TsUiNavigationPanelConfig
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -33,12 +33,17 @@ void UTsUiNavigationPanelConfig_C::ExecuteUbergraph_TsUiNavigationPanelConfig(in
 
 	Parms.EntryPoint = EntryPoint;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationPanelConfig.TsUiNavigationPanelConfig_C.StartBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationPanelConfig_C::StartBP()
 {
@@ -47,12 +52,17 @@ void UTsUiNavigationPanelConfig_C::StartBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationPanelConfig_C", "StartBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationPanelConfig.TsUiNavigationPanelConfig_C.OnDisableBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationPanelConfig_C::OnDisableBP()
 {
@@ -61,12 +71,17 @@ void UTsUiNavigationPanelConfig_C::OnDisableBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationPanelConfig_C", "OnDisableBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationPanelConfig.TsUiNavigationPanelConfig_C.OnEnableBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationPanelConfig_C::OnEnableBP()
 {
@@ -75,12 +90,17 @@ void UTsUiNavigationPanelConfig_C::OnEnableBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationPanelConfig_C", "OnEnableBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationPanelConfig.TsUiNavigationPanelConfig_C.AwakeBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationPanelConfig_C::AwakeBP()
 {
@@ -89,12 +109,17 @@ void UTsUiNavigationPanelConfig_C::AwakeBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationPanelConfig_C", "AwakeBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationPanelConfig.TsUiNavigationPanelConfig_C.OnDestroyBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationPanelConfig_C::OnDestroyBP()
 {
@@ -103,7 +128,12 @@ void UTsUiNavigationPanelConfig_C::OnDestroyBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationPanelConfig_C", "OnDestroyBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

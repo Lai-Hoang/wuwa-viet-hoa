@@ -165,5 +165,35 @@ void ABP_LevelSequenceHalo_C::UpdateEditor()
 	UObject::ProcessEvent(Func, nullptr);
 }
 
+
+// Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.SetLightQualityMaterial
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPrimitiveComponent*              HaloComponent_0                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    UseTranslucentMaterial_0                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    Use_DOF_Material_0                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UMaterialInterface*               M_PointLightHalo_Translucent_DOF                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInterface*               M_PointLightHalo_Translucent                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInterface*               M_PointLightHalo                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_LevelSequenceHalo_C::SetLightQualityMaterial(class UPrimitiveComponent* HaloComponent_0, bool UseTranslucentMaterial_0, bool Use_DOF_Material_0, class UMaterialInterface* M_PointLightHalo_Translucent_DOF, class UMaterialInterface* M_PointLightHalo_Translucent, class UMaterialInterface* M_PointLightHalo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_LevelSequenceHalo_C", "SetLightQualityMaterial");
+
+	Params::BP_LevelSequenceHalo_C_SetLightQualityMaterial Parms{};
+
+	Parms.HaloComponent_0 = HaloComponent_0;
+	Parms.UseTranslucentMaterial_0 = UseTranslucentMaterial_0;
+	Parms.Use_DOF_Material_0 = Use_DOF_Material_0;
+	Parms.M_PointLightHalo_Translucent_DOF = M_PointLightHalo_Translucent_DOF;
+	Parms.M_PointLightHalo_Translucent = M_PointLightHalo_Translucent;
+	Parms.M_PointLightHalo = M_PointLightHalo;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

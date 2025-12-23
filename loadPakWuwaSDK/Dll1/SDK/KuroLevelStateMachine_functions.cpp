@@ -49,8 +49,9 @@ bool UKuroLevelStateMachineComponent::HasState(class FName StateName)
 // (Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             StateName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   PlayRate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroLevelStateMachineComponent::SetState(class FName StateName)
+void UKuroLevelStateMachineComponent::SetState(class FName StateName, float PlayRate)
 {
 	static class UFunction* Func = nullptr;
 
@@ -60,6 +61,7 @@ void UKuroLevelStateMachineComponent::SetState(class FName StateName)
 	Params::KuroLevelStateMachineComponent_SetState Parms{};
 
 	Parms.StateName = StateName;
+	Parms.PlayRate = PlayRate;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

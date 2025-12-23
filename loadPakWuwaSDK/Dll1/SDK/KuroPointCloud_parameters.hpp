@@ -109,36 +109,81 @@ static_assert(offsetof(KuroPointCloudCache_SetMetaDataInt, Name_0) == 0x000000, 
 static_assert(offsetof(KuroPointCloudCache_SetMetaDataInt, Value) == 0x00000C, "Member 'KuroPointCloudCache_SetMetaDataInt::Value' has a wrong offset!");
 
 // Function KuroPointCloud.KuroPointCloudCache.UpdateFromData
-// 0x0030 (0x0030 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct KuroPointCloudCache_UpdateFromData final
 {
 public:
 	TArray<struct FVector>                        Positions;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FQuat>                          Rotations;                                         // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        Scales;                                            // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KuroPointCloudCache_UpdateFromData) == 0x000008, "Wrong alignment on KuroPointCloudCache_UpdateFromData");
-static_assert(sizeof(KuroPointCloudCache_UpdateFromData) == 0x000030, "Wrong size on KuroPointCloudCache_UpdateFromData");
+static_assert(sizeof(KuroPointCloudCache_UpdateFromData) == 0x000038, "Wrong size on KuroPointCloudCache_UpdateFromData");
 static_assert(offsetof(KuroPointCloudCache_UpdateFromData, Positions) == 0x000000, "Member 'KuroPointCloudCache_UpdateFromData::Positions' has a wrong offset!");
 static_assert(offsetof(KuroPointCloudCache_UpdateFromData, Rotations) == 0x000010, "Member 'KuroPointCloudCache_UpdateFromData::Rotations' has a wrong offset!");
 static_assert(offsetof(KuroPointCloudCache_UpdateFromData, Scales) == 0x000020, "Member 'KuroPointCloudCache_UpdateFromData::Scales' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromData, ReturnValue) == 0x000030, "Member 'KuroPointCloudCache_UpdateFromData::ReturnValue' has a wrong offset!");
 
-// Function KuroPointCloud.KuroPointCloudCache.UpdateFromDataWithIndices
-// 0x0040 (0x0040 - 0x0000)
-struct KuroPointCloudCache_UpdateFromDataWithIndices final
+// Function KuroPointCloud.KuroPointCloudCache.UpdateFromDataEx
+// 0x0088 (0x0088 - 0x0000)
+struct KuroPointCloudCache_UpdateFromDataEx final
 {
 public:
 	TArray<struct FVector>                        Positions;                                         // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FQuat>                          Rotations;                                         // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        Scales;                                            // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Indices;                                           // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<float>                                 Ages;                                              // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Indices;                                           // 0x0040(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FKuroPointCloudCacheCustomFloat> CustomFloats;                                     // 0x0050(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<float>                                 CurveStartTimes;                                   // 0x0060(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FKuroPointCloudCacheCustomFloat> CurveCustomFloats;                                // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(KuroPointCloudCache_UpdateFromDataWithIndices) == 0x000008, "Wrong alignment on KuroPointCloudCache_UpdateFromDataWithIndices");
-static_assert(sizeof(KuroPointCloudCache_UpdateFromDataWithIndices) == 0x000040, "Wrong size on KuroPointCloudCache_UpdateFromDataWithIndices");
-static_assert(offsetof(KuroPointCloudCache_UpdateFromDataWithIndices, Positions) == 0x000000, "Member 'KuroPointCloudCache_UpdateFromDataWithIndices::Positions' has a wrong offset!");
-static_assert(offsetof(KuroPointCloudCache_UpdateFromDataWithIndices, Rotations) == 0x000010, "Member 'KuroPointCloudCache_UpdateFromDataWithIndices::Rotations' has a wrong offset!");
-static_assert(offsetof(KuroPointCloudCache_UpdateFromDataWithIndices, Scales) == 0x000020, "Member 'KuroPointCloudCache_UpdateFromDataWithIndices::Scales' has a wrong offset!");
-static_assert(offsetof(KuroPointCloudCache_UpdateFromDataWithIndices, Indices) == 0x000030, "Member 'KuroPointCloudCache_UpdateFromDataWithIndices::Indices' has a wrong offset!");
+static_assert(alignof(KuroPointCloudCache_UpdateFromDataEx) == 0x000008, "Wrong alignment on KuroPointCloudCache_UpdateFromDataEx");
+static_assert(sizeof(KuroPointCloudCache_UpdateFromDataEx) == 0x000088, "Wrong size on KuroPointCloudCache_UpdateFromDataEx");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, Positions) == 0x000000, "Member 'KuroPointCloudCache_UpdateFromDataEx::Positions' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, Rotations) == 0x000010, "Member 'KuroPointCloudCache_UpdateFromDataEx::Rotations' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, Scales) == 0x000020, "Member 'KuroPointCloudCache_UpdateFromDataEx::Scales' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, Ages) == 0x000030, "Member 'KuroPointCloudCache_UpdateFromDataEx::Ages' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, Indices) == 0x000040, "Member 'KuroPointCloudCache_UpdateFromDataEx::Indices' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, CustomFloats) == 0x000050, "Member 'KuroPointCloudCache_UpdateFromDataEx::CustomFloats' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, CurveStartTimes) == 0x000060, "Member 'KuroPointCloudCache_UpdateFromDataEx::CurveStartTimes' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, CurveCustomFloats) == 0x000070, "Member 'KuroPointCloudCache_UpdateFromDataEx::CurveCustomFloats' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_UpdateFromDataEx, ReturnValue) == 0x000080, "Member 'KuroPointCloudCache_UpdateFromDataEx::ReturnValue' has a wrong offset!");
+
+// Function KuroPointCloud.KuroPointCloudCache.CheckConsistency
+// 0x0002 (0x0002 - 0x0000)
+struct KuroPointCloudCache_CheckConsistency final
+{
+public:
+	bool                                          Verbosity;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0001(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroPointCloudCache_CheckConsistency) == 0x000001, "Wrong alignment on KuroPointCloudCache_CheckConsistency");
+static_assert(sizeof(KuroPointCloudCache_CheckConsistency) == 0x000002, "Wrong size on KuroPointCloudCache_CheckConsistency");
+static_assert(offsetof(KuroPointCloudCache_CheckConsistency, Verbosity) == 0x000000, "Member 'KuroPointCloudCache_CheckConsistency::Verbosity' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudCache_CheckConsistency, ReturnValue) == 0x000001, "Member 'KuroPointCloudCache_CheckConsistency::ReturnValue' has a wrong offset!");
+
+// Function KuroPointCloud.KuroPointCloudFunctionLibrary.SetNiagaraKuroPointCloudCache
+// 0x0020 (0x0020 - 0x0000)
+struct KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache final
+{
+public:
+	class UNiagaraComponent*                      NiagaraComponent;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKuroPointCloudCache*                   KuroPointCloudCache;                               // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ParameterName;                                     // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache) == 0x000008, "Wrong alignment on KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache");
+static_assert(sizeof(KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache) == 0x000020, "Wrong size on KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache");
+static_assert(offsetof(KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache, NiagaraComponent) == 0x000000, "Member 'KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache::NiagaraComponent' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache, KuroPointCloudCache) == 0x000008, "Member 'KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache::KuroPointCloudCache' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache, ParameterName) == 0x000010, "Member 'KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache::ParameterName' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache, ReturnValue) == 0x00001C, "Member 'KuroPointCloudFunctionLibrary_SetNiagaraKuroPointCloudCache::ReturnValue' has a wrong offset!");
 
 // Function KuroPointCloud.KuroPointCloudInstance.BuildFrom2DPoints
 // 0x0050 (0x0050 - 0x0000)
@@ -181,6 +226,17 @@ public:
 static_assert(alignof(KuroPointCloudInstance_GetBound) == 0x000004, "Wrong alignment on KuroPointCloudInstance_GetBound");
 static_assert(sizeof(KuroPointCloudInstance_GetBound) == 0x00001C, "Wrong size on KuroPointCloudInstance_GetBound");
 static_assert(offsetof(KuroPointCloudInstance_GetBound, ReturnValue) == 0x000000, "Member 'KuroPointCloudInstance_GetBound::ReturnValue' has a wrong offset!");
+
+// Function KuroPointCloud.KuroPointCloudInstance.GetPointCloudCache
+// 0x0008 (0x0008 - 0x0000)
+struct KuroPointCloudInstance_GetPointCloudCache final
+{
+public:
+	class UKuroPointCloudCache*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroPointCloudInstance_GetPointCloudCache) == 0x000008, "Wrong alignment on KuroPointCloudInstance_GetPointCloudCache");
+static_assert(sizeof(KuroPointCloudInstance_GetPointCloudCache) == 0x000008, "Wrong size on KuroPointCloudInstance_GetPointCloudCache");
+static_assert(offsetof(KuroPointCloudInstance_GetPointCloudCache, ReturnValue) == 0x000000, "Member 'KuroPointCloudInstance_GetPointCloudCache::ReturnValue' has a wrong offset!");
 
 // Function KuroPointCloud.KuroPointCloudInstance.GetQueryPointsNum
 // 0x0028 (0x0028 - 0x0000)
@@ -290,6 +346,34 @@ public:
 static_assert(alignof(KuroPointCloudWorldComponent_SetInstance) == 0x000008, "Wrong alignment on KuroPointCloudWorldComponent_SetInstance");
 static_assert(sizeof(KuroPointCloudWorldComponent_SetInstance) == 0x000008, "Wrong size on KuroPointCloudWorldComponent_SetInstance");
 static_assert(offsetof(KuroPointCloudWorldComponent_SetInstance, Instance) == 0x000000, "Member 'KuroPointCloudWorldComponent_SetInstance::Instance' has a wrong offset!");
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.GetNumDynamicPoints
+// 0x0004 (0x0004 - 0x0000)
+struct KuroPointCloudWorldComponent_GetNumDynamicPoints final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroPointCloudWorldComponent_GetNumDynamicPoints) == 0x000004, "Wrong alignment on KuroPointCloudWorldComponent_GetNumDynamicPoints");
+static_assert(sizeof(KuroPointCloudWorldComponent_GetNumDynamicPoints) == 0x000004, "Wrong size on KuroPointCloudWorldComponent_GetNumDynamicPoints");
+static_assert(offsetof(KuroPointCloudWorldComponent_GetNumDynamicPoints, ReturnValue) == 0x000000, "Member 'KuroPointCloudWorldComponent_GetNumDynamicPoints::ReturnValue' has a wrong offset!");
+
+// Function KuroPointCloud.KuroPointCloudWorldComponent.SampleDynamicPoint
+// 0x0050 (0x0050 - 0x0000)
+struct KuroPointCloudWorldComponent_SampleDynamicPoint final
+{
+public:
+	int32                                         Index_0;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0xC];                                        // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OutTransform;                                      // 0x0010(0x0030)(Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0xF];                                       // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroPointCloudWorldComponent_SampleDynamicPoint) == 0x000010, "Wrong alignment on KuroPointCloudWorldComponent_SampleDynamicPoint");
+static_assert(sizeof(KuroPointCloudWorldComponent_SampleDynamicPoint) == 0x000050, "Wrong size on KuroPointCloudWorldComponent_SampleDynamicPoint");
+static_assert(offsetof(KuroPointCloudWorldComponent_SampleDynamicPoint, Index_0) == 0x000000, "Member 'KuroPointCloudWorldComponent_SampleDynamicPoint::Index_0' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudWorldComponent_SampleDynamicPoint, OutTransform) == 0x000010, "Member 'KuroPointCloudWorldComponent_SampleDynamicPoint::OutTransform' has a wrong offset!");
+static_assert(offsetof(KuroPointCloudWorldComponent_SampleDynamicPoint, ReturnValue) == 0x000040, "Member 'KuroPointCloudWorldComponent_SampleDynamicPoint::ReturnValue' has a wrong offset!");
 
 // Function KuroPointCloud.KuroPointCloudWorldSystem.SetStreamingConfig
 // 0x0010 (0x0010 - 0x0000)

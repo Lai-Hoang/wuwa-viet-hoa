@@ -3945,34 +3945,6 @@ bool UWorldFunctionLibrary_C::AttachToActor(class UObject* callObject1, class AA
 }
 
 
-// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetPlayerFollower
-// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-int32 UWorldFunctionLibrary_C::GetPlayerFollower(class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetPlayerFollower");
-
-	Params::WorldFunctionLibrary_C_GetPlayerFollower Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function WorldFunctionLibrary.WorldFunctionLibrary_C.AttachToComponent
 // (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -4062,61 +4034,6 @@ bool UWorldFunctionLibrary_C::DetachActor(class UObject* callObject, class AActo
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsPlayerFollowerEnable
-// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UWorldFunctionLibrary_C::IsPlayerFollowerEnable(class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "IsPlayerFollowerEnable");
-
-	Params::WorldFunctionLibrary_C_IsPlayerFollowerEnable Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerEnable
-// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWorldFunctionLibrary_C::SetPlayerFollowerEnable(bool enable, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "SetPlayerFollowerEnable");
-
-	Params::WorldFunctionLibrary_C_SetPlayerFollowerEnable Parms{};
-
-	Parms.enable = enable;
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 }
 
 
@@ -4274,6 +4191,627 @@ int32 UWorldFunctionLibrary_C::GetSummonRandomEntity(int32 summonerId, int32 ind
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetTrapDefenseUseBpUsing
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UWorldFunctionLibrary_C::GetTrapDefenseUseBpUsing(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetTrapDefenseUseBpUsing");
+
+	Params::WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.DisableAllRoleWithoutControl
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    needEffect                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::DisableAllRoleWithoutControl(bool needEffect, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "DisableAllRoleWithoutControl");
+
+	Params::WorldFunctionLibrary_C_DisableAllRoleWithoutControl Parms{};
+
+	Parms.needEffect = needEffect;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetFormationActors
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+TArray<class AActor*> UWorldFunctionLibrary_C::GetFormationActors(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetFormationActors");
+
+	Params::WorldFunctionLibrary_C_GetFormationActors Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetEntityBindGroup
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+TArray<int32> UWorldFunctionLibrary_C::GetEntityBindGroup(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetEntityBindGroup");
+
+	Params::WorldFunctionLibrary_C_GetEntityBindGroup Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetVisionEntityIdList
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ownerEntityId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ReturnParm)
+
+TArray<int32> UWorldFunctionLibrary_C::GetVisionEntityIdList(int32 ownerEntityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetVisionEntityIdList");
+
+	Params::WorldFunctionLibrary_C_GetVisionEntityIdList Parms{};
+
+	Parms.ownerEntityId = ownerEntityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetVisionPos
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ownerEntityId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   pos                                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::SetVisionPos(int32 ownerEntityId, int32 pos, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "SetVisionPos");
+
+	Params::WorldFunctionLibrary_C_SetVisionPos Parms{};
+
+	Parms.ownerEntityId = ownerEntityId;
+	Parms.pos = pos;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetVisionPos
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   ownerEntityId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UWorldFunctionLibrary_C::GetVisionPos(int32 ownerEntityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetVisionPos");
+
+	Params::WorldFunctionLibrary_C_GetVisionPos Parms{};
+
+	Parms.ownerEntityId = ownerEntityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.PlayerEntityId
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UWorldFunctionLibrary_C::PlayerEntityId(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "PlayerEntityId");
+
+	Params::WorldFunctionLibrary_C_PlayerEntityId Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetFollowerShooterConfig
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBP_FollowShooterConfig_C*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class UBP_FollowShooterConfig_C* UWorldFunctionLibrary_C::GetFollowerShooterConfig(int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetFollowerShooterConfig");
+
+	Params::WorldFunctionLibrary_C_GetFollowerShooterConfig Parms{};
+
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetGameplayTagOriginName
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// const struct FGameplayTag&              gameplayTag                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class FName UWorldFunctionLibrary_C::GetGameplayTagOriginName(const struct FGameplayTag& gameplayTag, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetGameplayTagOriginName");
+
+	Params::WorldFunctionLibrary_C_GetGameplayTagOriginName Parms{};
+
+	Parms.gameplayTag = std::move(gameplayTag);
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.CurrentFrontRoleEntityId
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UWorldFunctionLibrary_C::CurrentFrontRoleEntityId(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "CurrentFrontRoleEntityId");
+
+	Params::WorldFunctionLibrary_C_CurrentFrontRoleEntityId Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetPlayerFollower
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UWorldFunctionLibrary_C::GetPlayerFollower(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetPlayerFollower");
+
+	Params::WorldFunctionLibrary_C_GetPlayerFollower Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsPlayerFollowerEnable
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UWorldFunctionLibrary_C::IsPlayerFollowerEnable(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "IsPlayerFollowerEnable");
+
+	Params::WorldFunctionLibrary_C_IsPlayerFollowerEnable Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerEnable
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::SetPlayerFollowerEnable(bool enable, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "SetPlayerFollowerEnable");
+
+	Params::WorldFunctionLibrary_C_SetPlayerFollowerEnable Parms{};
+
+	Parms.enable = enable;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetPlayerFollowerMotor
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UWorldFunctionLibrary_C::GetPlayerFollowerMotor(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "GetPlayerFollowerMotor");
+
+	Params::WorldFunctionLibrary_C_GetPlayerFollowerMotor Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerMotorEnable
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::SetPlayerFollowerMotorEnable(bool enable, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "SetPlayerFollowerMotorEnable");
+
+	Params::WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable Parms{};
+
+	Parms.enable = enable;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsPlayerFollowerMotorEnable
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UWorldFunctionLibrary_C::IsPlayerFollowerMotorEnable(class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "IsPlayerFollowerMotorEnable");
+
+	Params::WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable Parms{};
+
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.RegisterDayNightBpToBpActorController
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TScriptInterface<class IBPI_DayNightEvent_C>dayNightBp                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::RegisterDayNightBpToBpActorController(TScriptInterface<class IBPI_DayNightEvent_C> dayNightBp, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "RegisterDayNightBpToBpActorController");
+
+	Params::WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController Parms{};
+
+	Parms.dayNightBp = dayNightBp;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.UnregisterDayNightBpToBpActorController
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TScriptInterface<class IBPI_DayNightEvent_C>dayNightBp                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::UnregisterDayNightBpToBpActorController(TScriptInterface<class IBPI_DayNightEvent_C> dayNightBp, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "UnregisterDayNightBpToBpActorController");
+
+	Params::WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController Parms{};
+
+	Parms.dayNightBp = dayNightBp;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerCustomEntityId
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    customKey                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// int32                                   entityId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::SetPlayerFollowerCustomEntityId(const class FString& customKey, int32 entityId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "SetPlayerFollowerCustomEntityId");
+
+	Params::WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId Parms{};
+
+	Parms.customKey = std::move(customKey);
+	Parms.entityId = entityId;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.RemovePlayerFollowerCustomEntityId
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    customKey                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::RemovePlayerFollowerCustomEntityId(const class FString& customKey, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "RemovePlayerFollowerCustomEntityId");
+
+	Params::WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId Parms{};
+
+	Parms.customKey = std::move(customKey);
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.ShowTipsByTextId
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    textId                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWorldFunctionLibrary_C::ShowTipsByTextId(const class FString& textId, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("WorldFunctionLibrary_C", "ShowTipsByTextId");
+
+	Params::WorldFunctionLibrary_C_ShowTipsByTextId Parms{};
+
+	Parms.textId = std::move(textId);
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

@@ -18,28 +18,33 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ControlTodTime.BP_ControlTodTime_C
-// 0x0028 (0x02E8 - 0x02C0)
-class ABP_ControlTodTime_C final : public AKuroEditorTickActor
+// 0x0120 (0x03D0 - 0x02B0)
+class ABP_ControlTodTime_C final : public AKuroControlTodTime
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	float                                         TodTime;                                           // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableTodTime;                                     // 0x02D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	float                                         TodTime;                                           // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableTodTime;                                     // 0x02C4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	uint8                                         Pad_2C5[0x3];                                      // 0x02C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SunVerticalAngle;                                  // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableSunVerticalAngle;                            // 0x02CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	uint8                                         Pad_2CD[0x3];                                      // 0x02CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SunHorizontalAngle;                                // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	bool                                          EnableSunHorizontalAngle;                          // 0x02D4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
 	uint8                                         Pad_2D5[0x3];                                      // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SunVerticalAngle;                                  // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableSunVerticalAngle;                            // 0x02DC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	uint8                                         Pad_2DD[0x3];                                      // 0x02DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SunHorizontalAngle;                                // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	bool                                          EnableSunHorizontalAngle;                          // 0x02E4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	float                                         AccumulatedTime;                                   // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2DC[0x4];                                      // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<int32>                                   CameraChangedTime;                                 // 0x02E0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TSet<int32>                                   TSetCall;                                          // 0x0330(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TSet<int32>                                   TSetUncall;                                        // 0x0380(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:
 	void ExecuteUbergraph_BP_ControlTodTime(int32 EntryPoint);
-	void EditorTick(float DeltaSeconds);
+	void DoUpdate(float DeltaTime);
+	void ReceiveDestroyed();
 	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void UserConstructionScript();
 	void Update();
 
 public:
@@ -53,15 +58,19 @@ public:
 	}
 };
 static_assert(alignof(ABP_ControlTodTime_C) == 0x000008, "Wrong alignment on ABP_ControlTodTime_C");
-static_assert(sizeof(ABP_ControlTodTime_C) == 0x0002E8, "Wrong size on ABP_ControlTodTime_C");
-static_assert(offsetof(ABP_ControlTodTime_C, UberGraphFrame) == 0x0002C0, "Member 'ABP_ControlTodTime_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, DefaultSceneRoot) == 0x0002C8, "Member 'ABP_ControlTodTime_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, TodTime) == 0x0002D0, "Member 'ABP_ControlTodTime_C::TodTime' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, EnableTodTime) == 0x0002D4, "Member 'ABP_ControlTodTime_C::EnableTodTime' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, SunVerticalAngle) == 0x0002D8, "Member 'ABP_ControlTodTime_C::SunVerticalAngle' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, EnableSunVerticalAngle) == 0x0002DC, "Member 'ABP_ControlTodTime_C::EnableSunVerticalAngle' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, SunHorizontalAngle) == 0x0002E0, "Member 'ABP_ControlTodTime_C::SunHorizontalAngle' has a wrong offset!");
-static_assert(offsetof(ABP_ControlTodTime_C, EnableSunHorizontalAngle) == 0x0002E4, "Member 'ABP_ControlTodTime_C::EnableSunHorizontalAngle' has a wrong offset!");
+static_assert(sizeof(ABP_ControlTodTime_C) == 0x0003D0, "Wrong size on ABP_ControlTodTime_C");
+static_assert(offsetof(ABP_ControlTodTime_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_ControlTodTime_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_ControlTodTime_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, TodTime) == 0x0002C0, "Member 'ABP_ControlTodTime_C::TodTime' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, EnableTodTime) == 0x0002C4, "Member 'ABP_ControlTodTime_C::EnableTodTime' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, SunVerticalAngle) == 0x0002C8, "Member 'ABP_ControlTodTime_C::SunVerticalAngle' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, EnableSunVerticalAngle) == 0x0002CC, "Member 'ABP_ControlTodTime_C::EnableSunVerticalAngle' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, SunHorizontalAngle) == 0x0002D0, "Member 'ABP_ControlTodTime_C::SunHorizontalAngle' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, EnableSunHorizontalAngle) == 0x0002D4, "Member 'ABP_ControlTodTime_C::EnableSunHorizontalAngle' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, AccumulatedTime) == 0x0002D8, "Member 'ABP_ControlTodTime_C::AccumulatedTime' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, CameraChangedTime) == 0x0002E0, "Member 'ABP_ControlTodTime_C::CameraChangedTime' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, TSetCall) == 0x000330, "Member 'ABP_ControlTodTime_C::TSetCall' has a wrong offset!");
+static_assert(offsetof(ABP_ControlTodTime_C, TSetUncall) == 0x000380, "Member 'ABP_ControlTodTime_C::TSetUncall' has a wrong offset!");
 
 }
 

@@ -20,7 +20,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_BasePathLine_Edgewall.BP_BasePathLine_Edgewall_C
 // 0x0030 (0x02E0 - 0x02B0)
-class ABP_BasePathLine_Edgewall_C final : public AActor
+class ABP_BasePathLine_Edgewall_C : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

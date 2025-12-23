@@ -12,24 +12,30 @@
 
 #include "LGUI_structs.hpp"
 #include "LGUI_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class LGUI_TexturePackerImporter.LGUITexturePackerImporterData
-// 0x00E8 (0x0118 - 0x0030)
+// 0x0160 (0x0190 - 0x0030)
 class ULGUITexturePackerImporterData final : public ULGUISpriteData_BaseImporter
 {
 public:
 	class FString                                 Version;                                           // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class FName>                           Sprites;                                           // 0x0040(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
 	TArray<class UTexture2D*>                     AtlasTextures;                                     // 0x0050(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
-	TMap<uint16, uint8>                           SpriteAtlasTextureMap;                             // 0x0060(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TMap<uint16, struct FLGUISpriteInfo>          SpriteInfoMap;                                     // 0x00B0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
-	TArray<class ULGUISpriteData_BaseObject*>     SpriteDatas;                                       // 0x0100(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_110[0x4];                                      // 0x0110(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MaxTextureSize;                                    // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FSoftObjectPath>                SoftAtlasTextures;                                 // 0x0060(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TMap<uint16, uint8>                           SpriteAtlasTextureMap;                             // 0x0070(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TMap<uint16, struct FLGUISpriteInfo>          SpriteInfoMap;                                     // 0x00C0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TMap<class FName, struct FIntPoint>           SpriteFrameInfoMap;                                // 0x0110(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TArray<class ULGUISpriteData_BaseObject*>     SpriteDatas;                                       // 0x0160(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_170[0x4];                                      // 0x0170(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxTextureSize;                                    // 0x0174(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bCanAddToDynamicAtlas;                             // 0x0178(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_179[0x7];                                      // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CustomDynamicAtlasTag;                             // 0x0180(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -42,17 +48,21 @@ public:
 	}
 };
 static_assert(alignof(ULGUITexturePackerImporterData) == 0x000008, "Wrong alignment on ULGUITexturePackerImporterData");
-static_assert(sizeof(ULGUITexturePackerImporterData) == 0x000118, "Wrong size on ULGUITexturePackerImporterData");
+static_assert(sizeof(ULGUITexturePackerImporterData) == 0x000190, "Wrong size on ULGUITexturePackerImporterData");
 static_assert(offsetof(ULGUITexturePackerImporterData, Version) == 0x000030, "Member 'ULGUITexturePackerImporterData::Version' has a wrong offset!");
 static_assert(offsetof(ULGUITexturePackerImporterData, Sprites) == 0x000040, "Member 'ULGUITexturePackerImporterData::Sprites' has a wrong offset!");
 static_assert(offsetof(ULGUITexturePackerImporterData, AtlasTextures) == 0x000050, "Member 'ULGUITexturePackerImporterData::AtlasTextures' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, SpriteAtlasTextureMap) == 0x000060, "Member 'ULGUITexturePackerImporterData::SpriteAtlasTextureMap' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, SpriteInfoMap) == 0x0000B0, "Member 'ULGUITexturePackerImporterData::SpriteInfoMap' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, SpriteDatas) == 0x000100, "Member 'ULGUITexturePackerImporterData::SpriteDatas' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerImporterData, MaxTextureSize) == 0x000114, "Member 'ULGUITexturePackerImporterData::MaxTextureSize' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerImporterData, SoftAtlasTextures) == 0x000060, "Member 'ULGUITexturePackerImporterData::SoftAtlasTextures' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerImporterData, SpriteAtlasTextureMap) == 0x000070, "Member 'ULGUITexturePackerImporterData::SpriteAtlasTextureMap' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerImporterData, SpriteInfoMap) == 0x0000C0, "Member 'ULGUITexturePackerImporterData::SpriteInfoMap' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerImporterData, SpriteFrameInfoMap) == 0x000110, "Member 'ULGUITexturePackerImporterData::SpriteFrameInfoMap' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerImporterData, SpriteDatas) == 0x000160, "Member 'ULGUITexturePackerImporterData::SpriteDatas' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerImporterData, MaxTextureSize) == 0x000174, "Member 'ULGUITexturePackerImporterData::MaxTextureSize' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerImporterData, bCanAddToDynamicAtlas) == 0x000178, "Member 'ULGUITexturePackerImporterData::bCanAddToDynamicAtlas' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerImporterData, CustomDynamicAtlasTag) == 0x000180, "Member 'ULGUITexturePackerImporterData::CustomDynamicAtlasTag' has a wrong offset!");
 
 // Class LGUI_TexturePackerImporter.LGUITexturePackerSpriteData
-// 0x0060 (0x0090 - 0x0030)
+// 0x00E8 (0x0118 - 0x0030)
 class ULGUITexturePackerSpriteData final : public ULGUISpriteData_BaseObject
 {
 public:
@@ -61,13 +71,20 @@ public:
 	uint16                                        BorderRight;                                       // 0x0034(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint16                                        BorderTop;                                         // 0x0036(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	uint16                                        BorderBottom;                                      // 0x0038(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3A[0x2];                                       // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CustomUVOffsetX;                                   // 0x003C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         CustomUVOffsetY;                                   // 0x0040(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULGUITexturePackerImporterData*         Importer;                                          // 0x0048(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UTexture2D*                             Texture2D;                                         // 0x0050(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_58[0x38];                                      // 0x0058(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint16                                        StartLeft;                                         // 0x003A(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint16                                        EndRight;                                          // 0x003C(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint16                                        EndTop;                                            // 0x003E(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint16                                        StartBottom;                                       // 0x0040(0x0002)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<uint16>                                BorderHorizontalArray;                             // 0x0048(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<uint16>                                BorderVerticalArray;                               // 0x0058(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
+	float                                         CustomUVOffsetX;                                   // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         CustomUVOffsetY;                                   // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class ULGUITexturePackerImporterData*         Importer;                                          // 0x0070(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UTexture2D*                             Texture2D;                                         // 0x0078(0x0008)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FLGUISpriteInfo                        CacheSpriteInfo;                                   // 0x0080(0x0090)(Edit, Transient, EditConst, NativeAccessSpecifierPrivate)
+	int16                                         Version;                                           // 0x0110(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_112[0x6];                                      // 0x0112(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -80,15 +97,23 @@ public:
 	}
 };
 static_assert(alignof(ULGUITexturePackerSpriteData) == 0x000008, "Wrong alignment on ULGUITexturePackerSpriteData");
-static_assert(sizeof(ULGUITexturePackerSpriteData) == 0x000090, "Wrong size on ULGUITexturePackerSpriteData");
+static_assert(sizeof(ULGUITexturePackerSpriteData) == 0x000118, "Wrong size on ULGUITexturePackerSpriteData");
 static_assert(offsetof(ULGUITexturePackerSpriteData, BorderLeft) == 0x000032, "Member 'ULGUITexturePackerSpriteData::BorderLeft' has a wrong offset!");
 static_assert(offsetof(ULGUITexturePackerSpriteData, BorderRight) == 0x000034, "Member 'ULGUITexturePackerSpriteData::BorderRight' has a wrong offset!");
 static_assert(offsetof(ULGUITexturePackerSpriteData, BorderTop) == 0x000036, "Member 'ULGUITexturePackerSpriteData::BorderTop' has a wrong offset!");
 static_assert(offsetof(ULGUITexturePackerSpriteData, BorderBottom) == 0x000038, "Member 'ULGUITexturePackerSpriteData::BorderBottom' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, CustomUVOffsetX) == 0x00003C, "Member 'ULGUITexturePackerSpriteData::CustomUVOffsetX' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, CustomUVOffsetY) == 0x000040, "Member 'ULGUITexturePackerSpriteData::CustomUVOffsetY' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, Importer) == 0x000048, "Member 'ULGUITexturePackerSpriteData::Importer' has a wrong offset!");
-static_assert(offsetof(ULGUITexturePackerSpriteData, Texture2D) == 0x000050, "Member 'ULGUITexturePackerSpriteData::Texture2D' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, StartLeft) == 0x00003A, "Member 'ULGUITexturePackerSpriteData::StartLeft' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, EndRight) == 0x00003C, "Member 'ULGUITexturePackerSpriteData::EndRight' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, EndTop) == 0x00003E, "Member 'ULGUITexturePackerSpriteData::EndTop' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, StartBottom) == 0x000040, "Member 'ULGUITexturePackerSpriteData::StartBottom' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, BorderHorizontalArray) == 0x000048, "Member 'ULGUITexturePackerSpriteData::BorderHorizontalArray' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, BorderVerticalArray) == 0x000058, "Member 'ULGUITexturePackerSpriteData::BorderVerticalArray' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, CustomUVOffsetX) == 0x000068, "Member 'ULGUITexturePackerSpriteData::CustomUVOffsetX' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, CustomUVOffsetY) == 0x00006C, "Member 'ULGUITexturePackerSpriteData::CustomUVOffsetY' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, Importer) == 0x000070, "Member 'ULGUITexturePackerSpriteData::Importer' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, Texture2D) == 0x000078, "Member 'ULGUITexturePackerSpriteData::Texture2D' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, CacheSpriteInfo) == 0x000080, "Member 'ULGUITexturePackerSpriteData::CacheSpriteInfo' has a wrong offset!");
+static_assert(offsetof(ULGUITexturePackerSpriteData, Version) == 0x000110, "Member 'ULGUITexturePackerSpriteData::Version' has a wrong offset!");
 
 }
 

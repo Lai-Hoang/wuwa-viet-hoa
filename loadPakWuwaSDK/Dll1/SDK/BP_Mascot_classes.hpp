@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "KuroCurve_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "KuroCurve_structs.hpp"
 
 
 namespace SDK
@@ -46,6 +46,9 @@ public:
 	TArray<class FName> GetSupportGroupNames();
 	bool GetAnimDataVector(TMap<class FName, struct FVector>* VectorCurveData);
 	bool GetAnimDataFloat(TArray<struct FNamedCurveValue>* FloatCurveData);
+	bool SetAnimDataTransform(const TMap<class FName, struct FTransform>& FloatCurveData);
+	bool IsCustomSupport();
+	bool GetAnimDataTransform(TMap<class FName, struct FTransform>* FloatCurveData);
 	void GetAddSpineValue(struct FRotator* AddSpine);
 	void GetAddSpineHeadValue(struct FRotator* AddSpineHead);
 

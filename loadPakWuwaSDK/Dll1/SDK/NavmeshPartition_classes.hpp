@@ -17,6 +17,26 @@
 namespace SDK
 {
 
+// Class NavmeshPartition.NavmeshPartitionComponent
+// 0x0050 (0x0270 - 0x0220)
+class UNavmeshPartitionComponent final : public USceneComponent
+{
+public:
+	uint8                                         Pad_218[0x58];                                     // 0x0218(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NavmeshPartitionComponent">();
+	}
+	static class UNavmeshPartitionComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNavmeshPartitionComponent>();
+	}
+};
+static_assert(alignof(UNavmeshPartitionComponent) == 0x000010, "Wrong alignment on UNavmeshPartitionComponent");
+static_assert(sizeof(UNavmeshPartitionComponent) == 0x000270, "Wrong size on UNavmeshPartitionComponent");
+
 // Class NavmeshPartition.AudioMaterialComponent
 // 0x0010 (0x0230 - 0x0220)
 class UAudioMaterialComponent final : public USceneComponent
@@ -81,26 +101,6 @@ public:
 static_assert(alignof(ANavmeshPartitionActor) == 0x000008, "Wrong alignment on ANavmeshPartitionActor");
 static_assert(sizeof(ANavmeshPartitionActor) == 0x0002C8, "Wrong size on ANavmeshPartitionActor");
 static_assert(offsetof(ANavmeshPartitionActor, AudioMaterialComp) == 0x0002C0, "Member 'ANavmeshPartitionActor::AudioMaterialComp' has a wrong offset!");
-
-// Class NavmeshPartition.NavmeshPartitionComponent
-// 0x0050 (0x0270 - 0x0220)
-class UNavmeshPartitionComponent final : public USceneComponent
-{
-public:
-	uint8                                         Pad_218[0x58];                                     // 0x0218(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NavmeshPartitionComponent">();
-	}
-	static class UNavmeshPartitionComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNavmeshPartitionComponent>();
-	}
-};
-static_assert(alignof(UNavmeshPartitionComponent) == 0x000010, "Wrong alignment on UNavmeshPartitionComponent");
-static_assert(sizeof(UNavmeshPartitionComponent) == 0x000270, "Wrong size on UNavmeshPartitionComponent");
 
 // Class NavmeshPartition.NavmeshPartitionGlobalBaseActor
 // 0x0010 (0x02C0 - 0x02B0)

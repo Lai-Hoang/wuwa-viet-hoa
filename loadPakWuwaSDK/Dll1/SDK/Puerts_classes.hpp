@@ -25,6 +25,7 @@ public:
 	static void ClearJSCache();
 	static void ExecuteModuleInSharedJsEnv(class FName ModuleName);
 	static void PreloadJS(class UKuroPreloadJSCallback* Callback);
+	static void PreStartShareJsEnv();
 	static void SetEnableBlueprintBind(bool value);
 	static void StartShareJsEnv(class FName ModuleName, class UGameInstance* GameInstance);
 

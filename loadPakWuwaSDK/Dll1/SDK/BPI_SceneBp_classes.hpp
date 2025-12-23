@@ -26,6 +26,7 @@ public:
 	void Stop();
 	void Pause();
 	void Resume();
+	void ShouldStopOnHide(bool* ret);
 
 	void GetAoiRange(int32* ret) const;
 

@@ -17,6 +17,50 @@
 namespace SDK
 {
 
+// Function KuroComponent.GpuNpcAvoidComponent.InitGpuNpcAvoid
+// (Final, Native, Public, BlueprintCallable)
+
+void UGpuNpcAvoidComponent::InitGpuNpcAvoid()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GpuNpcAvoidComponent", "InitGpuNpcAvoid");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.GpuNpcDitherComponent.ResetDitherForAllInstance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGpuNpcDitherComponent::ResetDitherForAllInstance(float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GpuNpcDitherComponent", "ResetDitherForAllInstance");
+
+	Params::GpuNpcDitherComponent_ResetDitherForAllInstance Parms{};
+
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroComponent.KuroAnimPerfTestComponent.DestroySkeletalMeshActors
 // (Final, Native, Public, BlueprintCallable)
 
@@ -218,6 +262,31 @@ void UKuroCharacterAnimationComponent::ResetModelQuat()
 }
 
 
+// Function KuroComponent.KuroCharacterAnimationComponent.SetOriginLocation
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroCharacterAnimationComponent::SetOriginLocation(const struct FVector& Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCharacterAnimationComponent", "SetOriginLocation");
+
+	Params::KuroCharacterAnimationComponent_SetOriginLocation Parms{};
+
+	Parms.Location = std::move(Location);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroComponent.KuroCharacterAnimationComponent.StopModelBuffer
 // (Final, Native, Public, BlueprintCallable)
 
@@ -237,22 +306,19 @@ void UKuroCharacterAnimationComponent::StopModelBuffer()
 }
 
 
-// Function KuroComponent.KuroRegionDetectComponent.GetRegionEvent
+// Function KuroComponent.KuroRegionDetectComponent.GetRegionDetectId
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const class FString&                    RegionName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UKuroRegionEventBinder*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UKuroRegionEventBinder* UKuroRegionDetectComponent::GetRegionEvent(const class FString& RegionName)
+int32 UKuroRegionDetectComponent::GetRegionDetectId()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroRegionDetectComponent", "GetRegionEvent");
+		Func = Class->GetFunction("KuroRegionDetectComponent", "GetRegionDetectId");
 
-	Params::KuroRegionDetectComponent_GetRegionEvent Parms{};
-
-	Parms.RegionName = std::move(RegionName);
+	Params::KuroRegionDetectComponent_GetRegionDetectId Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -262,6 +328,61 @@ class UKuroRegionEventBinder* UKuroRegionDetectComponent::GetRegionEvent(const c
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function KuroComponent.KuroRegionDetectComponent.GetRegionEvent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    RegionName                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Id                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKuroRegionEventBinder*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UKuroRegionEventBinder* UKuroRegionDetectComponent::GetRegionEvent(const class FString& RegionName, int32 Id)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroRegionDetectComponent", "GetRegionEvent");
+
+	Params::KuroRegionDetectComponent_GetRegionEvent Parms{};
+
+	Parms.RegionName = std::move(RegionName);
+	Parms.Id = Id;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroComponent.KuroRegionDetectComponent.RemoveRegionDetect
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   Id                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRegionDetectComponent::RemoveRegionDetect(int32 Id)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroRegionDetectComponent", "RemoveRegionDetect");
+
+	Params::KuroRegionDetectComponent_RemoveRegionDetect Parms{};
+
+	Parms.Id = Id;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -313,8 +434,9 @@ void UKuroRegionDetectComponent::SetDebugMode(const bool IsOpen)
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           DetectTarget                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Id                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroRegionDetectComponent::SetEventTarget(class AActor* DetectTarget)
+void UKuroRegionDetectComponent::SetEventTarget(class AActor* DetectTarget, int32 Id)
 {
 	static class UFunction* Func = nullptr;
 
@@ -324,6 +446,7 @@ void UKuroRegionDetectComponent::SetEventTarget(class AActor* DetectTarget)
 	Params::KuroRegionDetectComponent_SetEventTarget Parms{};
 
 	Parms.DetectTarget = DetectTarget;
+	Parms.Id = Id;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -338,8 +461,9 @@ void UKuroRegionDetectComponent::SetEventTarget(class AActor* DetectTarget)
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // const TArray<class AActor*>&            DetectTargets                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// int32                                   Id                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroRegionDetectComponent::SetEventTargets(const TArray<class AActor*>& DetectTargets)
+void UKuroRegionDetectComponent::SetEventTargets(const TArray<class AActor*>& DetectTargets, int32 Id)
 {
 	static class UFunction* Func = nullptr;
 
@@ -349,6 +473,7 @@ void UKuroRegionDetectComponent::SetEventTargets(const TArray<class AActor*>& De
 	Params::KuroRegionDetectComponent_SetEventTargets Parms{};
 
 	Parms.DetectTargets = std::move(DetectTargets);
+	Parms.Id = Id;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -421,6 +546,238 @@ void UKuroSceneItemGuidePathComponent::StartTick(const struct FLinearColor& Norm
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.AddModelLocation
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   Offset                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemModelBufferComponent::AddModelLocation(const struct FVector& Offset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "AddModelLocation");
+
+	Params::KuroSceneItemModelBufferComponent_AddModelLocation Parms{};
+
+	Parms.Offset = std::move(Offset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.AddModelQuat
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FQuat&                     Quat                                                   (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    LockCenter                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemModelBufferComponent::AddModelQuat(const struct FQuat& Quat, bool LockCenter)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "AddModelQuat");
+
+	Params::KuroSceneItemModelBufferComponent_AddModelQuat Parms{};
+
+	Parms.Quat = std::move(Quat);
+	Parms.LockCenter = LockCenter;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.D_GetTransformOffsetInWorld
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FTransformDouble&          Child                                                  (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTransformDouble&          Parent                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FTransformDouble*                Out                                                    (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemModelBufferComponent::D_GetTransformOffsetInWorld(const struct FTransformDouble& Child, const struct FTransformDouble& Parent, struct FTransformDouble* Out)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "D_GetTransformOffsetInWorld");
+
+	Params::KuroSceneItemModelBufferComponent_D_GetTransformOffsetInWorld Parms{};
+
+	Parms.Child = std::move(Child);
+	Parms.Parent = std::move(Parent);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Out != nullptr)
+		*Out = std::move(Parms.Out);
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.GetTransformOffsetInWorld
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FTransform&                Child                                                  (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FTransform&                Parent                                                 (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemModelBufferComponent::GetTransformOffsetInWorld(const struct FTransform& Child, const struct FTransform& Parent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "GetTransformOffsetInWorld");
+
+	Params::KuroSceneItemModelBufferComponent_GetTransformOffsetInWorld Parms{};
+
+	Parms.Child = std::move(Child);
+	Parms.Parent = std::move(Parent);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.ResetModelLocation
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroSceneItemModelBufferComponent::ResetModelLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "ResetModelLocation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.ResetModelQuat
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroSceneItemModelBufferComponent::ResetModelQuat()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "ResetModelQuat");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.SetUpMeshComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMeshComponent*           InMeshComponent                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemModelBufferComponent::SetUpMeshComponent(class USkeletalMeshComponent* InMeshComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "SetUpMeshComponent");
+
+	Params::KuroSceneItemModelBufferComponent_SetUpMeshComponent Parms{};
+
+	Parms.InMeshComponent = InMeshComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.StopModelBuffer
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroSceneItemModelBufferComponent::StopModelBuffer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "StopModelBuffer");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemModelBufferComponent.SetActorTransformExceptSkeletalMesh
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FVectorDouble&             NewLocation                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  NewRotation                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bSweep                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FHitResult*                      SweepHitResult                                         (Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    bTeleport                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIgnoreOverlap                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroSceneItemModelBufferComponent::SetActorTransformExceptSkeletalMesh(const struct FVectorDouble& NewLocation, const struct FRotator& NewRotation, bool bSweep, struct FHitResult* SweepHitResult, bool bTeleport, bool bIgnoreOverlap) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemModelBufferComponent", "SetActorTransformExceptSkeletalMesh");
+
+	Params::KuroSceneItemModelBufferComponent_SetActorTransformExceptSkeletalMesh Parms{};
+
+	Parms.NewLocation = std::move(NewLocation);
+	Parms.NewRotation = std::move(NewRotation);
+	Parms.bSweep = bSweep;
+	Parms.bTeleport = bTeleport;
+	Parms.bIgnoreOverlap = bIgnoreOverlap;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SweepHitResult != nullptr)
+		*SweepHitResult = std::move(Parms.SweepHitResult);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -531,6 +888,31 @@ bool UKuroSceneItemMoveComponent::AddRotationStep(const struct FRotator& BeginRo
 }
 
 
+// Function KuroComponent.KuroSceneItemMoveComponent.CalcVelocity
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const float                             DeltaTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemMoveComponent::CalcVelocity(const float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemMoveComponent", "CalcVelocity");
+
+	Params::KuroSceneItemMoveComponent_CalcVelocity Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroComponent.KuroSceneItemMoveComponent.GetNextMoveTarget
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -619,6 +1001,56 @@ void UKuroSceneItemMoveComponent::Kuro_SetGravityDirect(const struct FVector& In
 }
 
 
+// Function KuroComponent.KuroSceneItemMoveComponent.SetAvoidanceEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemMoveComponent::SetAvoidanceEnabled(bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemMoveComponent", "SetAvoidanceEnabled");
+
+	Params::KuroSceneItemMoveComponent_SetAvoidanceEnabled Parms{};
+
+	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemMoveComponent.SetAvoidanceGroupMask
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FNavAvoidanceMask&         GroupMask                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemMoveComponent::SetAvoidanceGroupMask(const struct FNavAvoidanceMask& GroupMask)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemMoveComponent", "SetAvoidanceGroupMask");
+
+	Params::KuroSceneItemMoveComponent_SetAvoidanceGroupMask Parms{};
+
+	Parms.GroupMask = std::move(GroupMask);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroComponent.KuroSceneItemMoveComponent.SetEnableDebugForMove
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -634,6 +1066,56 @@ void UKuroSceneItemMoveComponent::SetEnableDebugForMove(bool Enable)
 	Params::KuroSceneItemMoveComponent_SetEnableDebugForMove Parms{};
 
 	Parms.Enable = Enable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemMoveComponent.SetGroupsToAvoidMask
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FNavAvoidanceMask&         GroupMask                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemMoveComponent::SetGroupsToAvoidMask(const struct FNavAvoidanceMask& GroupMask)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemMoveComponent", "SetGroupsToAvoidMask");
+
+	Params::KuroSceneItemMoveComponent_SetGroupsToAvoidMask Parms{};
+
+	Parms.GroupMask = std::move(GroupMask);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroComponent.KuroSceneItemMoveComponent.SetGroupsToIgnoreMask
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FNavAvoidanceMask&         GroupMask                                              (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UKuroSceneItemMoveComponent::SetGroupsToIgnoreMask(const struct FNavAvoidanceMask& GroupMask)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneItemMoveComponent", "SetGroupsToIgnoreMask");
+
+	Params::KuroSceneItemMoveComponent_SetGroupsToIgnoreMask Parms{};
+
+	Parms.GroupMask = std::move(GroupMask);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

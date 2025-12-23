@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function TsBaseCharacter.TsBaseCharacter_C.ExecuteUbergraph_TsBaseCharacter
-// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ATsBaseCharacter_C::ExecuteUbergraph_TsBaseCharacter(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("TsBaseCharacter_C", "ExecuteUbergraph_TsBaseCharacter");
-
-	Params::TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function TsBaseCharacter.TsBaseCharacter_C.GetEntityId
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -64,6 +39,33 @@ int32 ATsBaseCharacter_C::GetEntityId()
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function TsBaseCharacter.TsBaseCharacter_C.BindGameplayEnableState
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool&                                   gameplayEnable                                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+
+void ATsBaseCharacter_C::BindGameplayEnableState(bool& gameplayEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseCharacter_C", "BindGameplayEnableState");
+
+	Params::TsBaseCharacter_C_BindGameplayEnableState Parms{};
+
+	Parms.gameplayEnable = gameplayEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	gameplayEnable = Parms.gameplayEnable;
 }
 
 
@@ -258,6 +260,31 @@ void ATsBaseCharacter_C::ReceiveDestroyed()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function TsBaseCharacter.TsBaseCharacter_C.ExecuteUbergraph_TsBaseCharacter
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ATsBaseCharacter_C::ExecuteUbergraph_TsBaseCharacter(int32 EntryPoint)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("TsBaseCharacter_C", "ExecuteUbergraph_TsBaseCharacter");
+
+	Params::TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

@@ -176,30 +176,5 @@ void UXeSSBlueprintLibrary::SetXeSSQualityMode(EXeSSQualityMode QualityMode)
 	Func->FunctionFlags = Flgs;
 }
 
-
-// Function XeSSBlueprint.XeSSBlueprintLibrary.ShouldXeSSWarningOldDriver
-// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UXeSSBlueprintLibrary::ShouldXeSSWarningOldDriver()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("XeSSBlueprintLibrary", "ShouldXeSSWarningOldDriver");
-
-	Params::XeSSBlueprintLibrary_ShouldXeSSWarningOldDriver Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
 }
 

@@ -22,10 +22,10 @@ namespace SDK
 class UStreamlineLibrary final : public UBlueprintFunctionLibrary
 {
 public:
-	static void BreakStreamlineFeatureRequirements(EUStreamlineFeatureRequirementsFlags Requirements, bool* D3D11Supported, bool* D3D12Supported, bool* VulkanSupported, bool* VSyncOffRequired, bool* HardwareSchedulingRequired);
-	static struct FStreamlineFeatureRequirements GetStreamlineFeatureInformation(EUStreamlineFeature Feature);
-	static bool IsStreamlineFeatureSupported(EUStreamlineFeature Feature);
-	static EUStreamlineFeatureSupport QueryStreamlineFeatureSupport(EUStreamlineFeature Feature);
+	static void BreakStreamlineFeatureRequirements(EStreamlineFeatureRequirementsFlags Requirements, bool* D3D11Supported, bool* D3D12Supported, bool* VulkanSupported, bool* VSyncOffRequired, bool* HardwareSchedulingRequired);
+	static struct FStreamlineFeatureRequirements GetStreamlineFeatureInformation(EStreamlineFeature Feature);
+	static bool IsStreamlineFeatureSupported(EStreamlineFeature Feature);
+	static EStreamlineFeatureSupport QueryStreamlineFeatureSupport(EStreamlineFeature Feature);
 
 public:
 	static class UClass* StaticClass()
@@ -39,60 +39,6 @@ public:
 };
 static_assert(alignof(UStreamlineLibrary) == 0x000008, "Wrong alignment on UStreamlineLibrary");
 static_assert(sizeof(UStreamlineLibrary) == 0x000030, "Wrong size on UStreamlineLibrary");
-
-// Class StreamlineBlueprint.StreamlineLibraryDLSSG
-// 0x0000 (0x0030 - 0x0030)
-class UStreamlineLibraryDLSSG final : public UBlueprintFunctionLibrary
-{
-public:
-	static EUStreamlineDLSSGMode GetDefaultDLSSGMode();
-	static void GetDLSSGFrameTiming(float* FrameRateInHertz, int32* FramesPresented);
-	static EUStreamlineDLSSGMode GetDLSSGMode();
-	static TArray<EUStreamlineDLSSGMode> GetSupportedDLSSGModes();
-	static bool IsDLSSGModeSupported(EUStreamlineDLSSGMode DLSSGMode);
-	static bool IsDLSSGSupported();
-	static EUStreamlineFeatureSupport QueryDLSSGSupport();
-	static void SetDLSSGMode(EUStreamlineDLSSGMode DLSSGMode);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"StreamlineLibraryDLSSG">();
-	}
-	static class UStreamlineLibraryDLSSG* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UStreamlineLibraryDLSSG>();
-	}
-};
-static_assert(alignof(UStreamlineLibraryDLSSG) == 0x000008, "Wrong alignment on UStreamlineLibraryDLSSG");
-static_assert(sizeof(UStreamlineLibraryDLSSG) == 0x000030, "Wrong size on UStreamlineLibraryDLSSG");
-
-// Class StreamlineBlueprint.StreamlineLibraryReflex
-// 0x0000 (0x0030 - 0x0030)
-class UStreamlineLibraryReflex final : public UBlueprintFunctionLibrary
-{
-public:
-	static EUStreamlineReflexMode GetDefaultReflexMode();
-	static float GetGameLatencyInMs();
-	static float GetGameToRenderLatencyInMs();
-	static EUStreamlineReflexMode GetReflexMode();
-	static float GetRenderLatencyInMs();
-	static bool IsReflexSupported();
-	static EUStreamlineFeatureSupport QueryReflexSupport();
-	static void SetReflexMode(const EUStreamlineReflexMode Mode);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"StreamlineLibraryReflex">();
-	}
-	static class UStreamlineLibraryReflex* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UStreamlineLibraryReflex>();
-	}
-};
-static_assert(alignof(UStreamlineLibraryReflex) == 0x000008, "Wrong alignment on UStreamlineLibraryReflex");
-static_assert(sizeof(UStreamlineLibraryReflex) == 0x000030, "Wrong size on UStreamlineLibraryReflex");
 
 }
 

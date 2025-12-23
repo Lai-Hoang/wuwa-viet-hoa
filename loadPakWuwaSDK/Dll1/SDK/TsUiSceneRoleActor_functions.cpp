@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function TsUiSceneRoleActor.TsUiSceneRoleActor_C.IsShowUiWepaonEffect
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -31,14 +31,19 @@ bool ATsUiSceneRoleActor_C::IsShowUiWepaonEffect()
 
 	Params::TsUiSceneRoleActor_C_IsShowUiWepaonEffect Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function TsUiSceneRoleActor.TsUiSceneRoleActor_C.ReceiveTick
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -53,12 +58,17 @@ void ATsUiSceneRoleActor_C::ReceiveTick(float DeltaSeconds)
 
 	Parms.DeltaSeconds = DeltaSeconds;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiSceneRoleActor.TsUiSceneRoleActor_C.ExecuteUbergraph_TsUiSceneRoleActor
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -73,7 +83,12 @@ void ATsUiSceneRoleActor_C::ExecuteUbergraph_TsUiSceneRoleActor(int32 EntryPoint
 
 	Parms.EntryPoint = EntryPoint;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

@@ -235,7 +235,7 @@ static_assert(offsetof(BP_LightsGroup_C_ToggleLightsIntensity, CallFunc_Timer_El
 static_assert(offsetof(BP_LightsGroup_C_ToggleLightsIntensity, CallFunc_LessEqual_FloatFloat_ReturnValue_1) == 0x00000C, "Member 'BP_LightsGroup_C_ToggleLightsIntensity::CallFunc_LessEqual_FloatFloat_ReturnValue_1' has a wrong offset!");
 
 // Function BP_LightsGroup.BP_LightsGroup_C.ToggleLights
-// 0x0038 (0x0038 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct BP_LightsGroup_C_ToggleLights final
 {
 public:
@@ -251,9 +251,13 @@ public:
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0034(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 K2Node_ClassDynamicCast_AsKuro_Light_Actor_Base;   // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_LightsGroup_C_ToggleLights) == 0x000008, "Wrong alignment on BP_LightsGroup_C_ToggleLights");
-static_assert(sizeof(BP_LightsGroup_C_ToggleLights) == 0x000038, "Wrong size on BP_LightsGroup_C_ToggleLights");
+static_assert(sizeof(BP_LightsGroup_C_ToggleLights) == 0x000050, "Wrong size on BP_LightsGroup_C_ToggleLights");
 static_assert(offsetof(BP_LightsGroup_C_ToggleLights, inEnable) == 0x000000, "Member 'BP_LightsGroup_C_ToggleLights::inEnable' has a wrong offset!");
 static_assert(offsetof(BP_LightsGroup_C_ToggleLights, ___int_Array_Index_Variable) == 0x000004, "Member 'BP_LightsGroup_C_ToggleLights::___int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Not_PreBool_ReturnValue) == 0x000008, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
@@ -263,6 +267,9 @@ static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_GetAttachedActors
 static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Array_Length_ReturnValue) == 0x000030, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_Less_IntInt_ReturnValue) == 0x000034, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LightsGroup_C_ToggleLights, CallFunc_GetObjectClass_ReturnValue) == 0x000038, "Member 'BP_LightsGroup_C_ToggleLights::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LightsGroup_C_ToggleLights, K2Node_ClassDynamicCast_AsKuro_Light_Actor_Base) == 0x000040, "Member 'BP_LightsGroup_C_ToggleLights::K2Node_ClassDynamicCast_AsKuro_Light_Actor_Base' has a wrong offset!");
+static_assert(offsetof(BP_LightsGroup_C_ToggleLights, K2Node_ClassDynamicCast_bSuccess) == 0x000048, "Member 'BP_LightsGroup_C_ToggleLights::K2Node_ClassDynamicCast_bSuccess' has a wrong offset!");
 
 // Function BP_LightsGroup.BP_LightsGroup_C.ReceiveTick
 // 0x0004 (0x0004 - 0x0000)

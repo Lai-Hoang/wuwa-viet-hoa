@@ -10,8 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
+#include "KuroGameplay_structs.hpp"
 #include "KuroMovement_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 
@@ -65,14 +66,14 @@ static_assert(alignof(UKuroClimbObject) == 0x000008, "Wrong alignment on UKuroCl
 static_assert(sizeof(UKuroClimbObject) == 0x000220, "Wrong size on UKuroClimbObject");
 
 // Class KuroMovement.KuroDebugMovementComponent
-// 0x01A0 (0x06B0 - 0x0510)
+// 0x01A0 (0x06D0 - 0x0530)
 class UKuroDebugMovementComponent final : public UPrimitiveComponent
 {
 public:
-	int32                                         DrawDebugCount;                                    // 0x0510(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bShowLog : 1;                                      // 0x0514(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	EKDMDrawDebugType                             bDrawDebug;                                        // 0x0515(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_516[0x19A];                                    // 0x0516(0x019A)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         DrawDebugCount;                                    // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bShowLog : 1;                                      // 0x052C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	EKDMDrawDebugType                             bDrawDebug;                                        // 0x052D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_52E[0x1A2];                                    // 0x052E(0x01A2)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class FString KuroDebugMovementBaseRecordToString(const struct FBaseRecord& Record);
@@ -99,9 +100,9 @@ public:
 	}
 };
 static_assert(alignof(UKuroDebugMovementComponent) == 0x000010, "Wrong alignment on UKuroDebugMovementComponent");
-static_assert(sizeof(UKuroDebugMovementComponent) == 0x0006B0, "Wrong size on UKuroDebugMovementComponent");
-static_assert(offsetof(UKuroDebugMovementComponent, DrawDebugCount) == 0x000510, "Member 'UKuroDebugMovementComponent::DrawDebugCount' has a wrong offset!");
-static_assert(offsetof(UKuroDebugMovementComponent, bDrawDebug) == 0x000515, "Member 'UKuroDebugMovementComponent::bDrawDebug' has a wrong offset!");
+static_assert(sizeof(UKuroDebugMovementComponent) == 0x0006D0, "Wrong size on UKuroDebugMovementComponent");
+static_assert(offsetof(UKuroDebugMovementComponent, DrawDebugCount) == 0x000528, "Member 'UKuroDebugMovementComponent::DrawDebugCount' has a wrong offset!");
+static_assert(offsetof(UKuroDebugMovementComponent, bDrawDebug) == 0x00052D, "Member 'UKuroDebugMovementComponent::bDrawDebug' has a wrong offset!");
 
 // Class KuroMovement.KuroMoveTrigger
 // 0x0008 (0x02B8 - 0x02B0)
@@ -178,6 +179,8 @@ static_assert(offsetof(AKuroMoveBrushTrigger, Root) == 0x0002C0, "Member 'AKuroM
 class UKuroMovementBPLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static float KuroBinarySearchCurve(class UCurveFloat* Curve, float Y, float From, float To, float tolerance);
+	static int32 KuroEaseSpeedTo(class UPawnMovementComponent* PawnMoveComp, const float TargetSpeed, const EKuroEasingFuncType EaseType, const float TransitionTime, const float Exponent, const class FString& CurvePath);
 	static bool KuroKite(float DeltaSeconds, class UCharacterMovementComponent* CharMoveComp, const struct FVector& TargetPrevPos, const struct FVector& TargetNextPos, float MinDist, float MaxDist, float MinAccel, float MaxAccel, float Friction, struct FVector* InOutTargetForward, float FacingLerpSpeed, float FacingLerpRate);
 	static bool KuroRoll(float DeltaSeconds, class UCharacterMovementComponent* CharMoveComp, float TargetSpeed, float Friction, float AccelOnGround, struct FVector* FloorNormal, float Gravity, float StepUpHeight, float MaxSpeed);
 	static int32 KuroSki(float DeltaTime, class UCharacterMovementComponent* CharMoveComp, const struct FVector& PrevBlockNormal, const struct FVector& Direction, const struct FVector& SpeedParams, float IgnoreStepHeight, class UCurveFloat* SpeedReduceCurve);

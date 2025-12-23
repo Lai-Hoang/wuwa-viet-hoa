@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Seq_Nanzhu_Final.ABP_Seq_Nanzhu_Final_C
-// 0x0240 (0x08A0 - 0x0660)
+// 0x0240 (0x0970 - 0x0730)
 class UABP_Seq_Nanzhu_Final_C final : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0660(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0668(0x0038)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_2;                   // 0x06A0(0x00A8)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_1;                   // 0x0748(0x00A8)()
-	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x07F0(0x00A8)()
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0738(0x0038)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_2;                   // 0x0770(0x00A8)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph_1;                   // 0x0818(0x00A8)()
+	struct FAnimNode_LinkedAnimGraph              AnimGraphNode_LinkedAnimGraph;                     // 0x08C0(0x00A8)()
 
 public:
 	void ExecuteUbergraph_ABP_Seq_Nanzhu_Final(int32 EntryPoint);
@@ -43,12 +43,12 @@ public:
 	}
 };
 static_assert(alignof(UABP_Seq_Nanzhu_Final_C) == 0x000010, "Wrong alignment on UABP_Seq_Nanzhu_Final_C");
-static_assert(sizeof(UABP_Seq_Nanzhu_Final_C) == 0x0008A0, "Wrong size on UABP_Seq_Nanzhu_Final_C");
-static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, UberGraphFrame) == 0x000660, "Member 'UABP_Seq_Nanzhu_Final_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, AnimGraphNode_Root) == 0x000668, "Member 'UABP_Seq_Nanzhu_Final_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, AnimGraphNode_LinkedAnimGraph_2) == 0x0006A0, "Member 'UABP_Seq_Nanzhu_Final_C::AnimGraphNode_LinkedAnimGraph_2' has a wrong offset!");
-static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, AnimGraphNode_LinkedAnimGraph_1) == 0x000748, "Member 'UABP_Seq_Nanzhu_Final_C::AnimGraphNode_LinkedAnimGraph_1' has a wrong offset!");
-static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, AnimGraphNode_LinkedAnimGraph) == 0x0007F0, "Member 'UABP_Seq_Nanzhu_Final_C::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
+static_assert(sizeof(UABP_Seq_Nanzhu_Final_C) == 0x000970, "Wrong size on UABP_Seq_Nanzhu_Final_C");
+static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, UberGraphFrame) == 0x000730, "Member 'UABP_Seq_Nanzhu_Final_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_Seq_Nanzhu_Final_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, AnimGraphNode_LinkedAnimGraph_2) == 0x000770, "Member 'UABP_Seq_Nanzhu_Final_C::AnimGraphNode_LinkedAnimGraph_2' has a wrong offset!");
+static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, AnimGraphNode_LinkedAnimGraph_1) == 0x000818, "Member 'UABP_Seq_Nanzhu_Final_C::AnimGraphNode_LinkedAnimGraph_1' has a wrong offset!");
+static_assert(offsetof(UABP_Seq_Nanzhu_Final_C, AnimGraphNode_LinkedAnimGraph) == 0x0008C0, "Member 'UABP_Seq_Nanzhu_Final_C::AnimGraphNode_LinkedAnimGraph' has a wrong offset!");
 
 }
 

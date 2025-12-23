@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Niagara_classes.hpp"
-#include "KuroPointCloud_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroPointCloud_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Niagara_classes.hpp"
 
 
 namespace SDK
@@ -61,16 +61,34 @@ static_assert(offsetof(AKuroPointCloudActor, KdTree) == 0x0002D0, "Member 'AKuro
 static_assert(offsetof(AKuroPointCloudActor, CustomData) == 0x000328, "Member 'AKuroPointCloudActor::CustomData' has a wrong offset!");
 
 // Class KuroPointCloud.KuroPointCloudCache
-// 0x00E0 (0x0110 - 0x0030)
+// 0x0228 (0x0258 - 0x0030)
 class UKuroPointCloudCache final : public UObject
 {
 public:
-	TArray<struct FVector>                        PositionCache;                                     // 0x0030(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FQuat>                          RotationCache;                                     // 0x0040(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FVector>                        ScaleCache;                                        // 0x0050(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<int32>                                 IndexCache;                                        // 0x0060(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, int32>                      MetaDataInt;                                       // 0x0070(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, float>                      MetaDataFloat;                                     // 0x00C0(0x0050)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FVector>                        PositionCache;                                     // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FQuat>                          RotationCache;                                     // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FVector>                        ScaleCache;                                        // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<float>                                 AgeCache;                                          // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<int32>                                 IndexCache;                                        // 0x0070(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<float>                                 FlatCustomFloatCache;                              // 0x0080(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	int32                                         CustomFloatCacheStride;                            // 0x0090(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, int32>                      CustomFloatCacheDataOffsets;                       // 0x0098(0x0050)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FKuroPointCloudCacheCustomFloat> CustomFloatCache;                                 // 0x00E8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<int32>                                 CurveMapCache;                                     // 0x00F8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<float>                                 CurveStartTimeCache;                               // 0x0108(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<float>                                 FlatCurveCustomFloatCache;                         // 0x0118(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	int32                                         CurveCustomFloatCacheStride;                       // 0x0128(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_12C[0x4];                                      // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, int32>                      CurveCustomFloatCacheDataOffsets;                  // 0x0130(0x0050)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FKuroPointCloudCacheCustomFloat> CurveCustomFloatCache;                            // 0x0180(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, int32>                      MetaDataInt;                                       // 0x0190(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, float>                      MetaDataFloat;                                     // 0x01E0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	int32                                         NumPoints;                                         // 0x0230(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         NumCurves;                                         // 0x0234(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          ReleaseCPUData;                                    // 0x0238(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsCookedPlatformWithCPUDataReleased;              // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_23A[0x1E];                                     // 0x023A(0x001E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	float GetMetaDataFloat(class FName Name_0);
@@ -79,8 +97,10 @@ public:
 	bool HasMetaDataInt(class FName Name_0);
 	void SetMetaDataFloat(class FName Name_0, float Value);
 	void SetMetaDataInt(class FName Name_0, int32 Value);
-	void UpdateFromData(const TArray<struct FVector>& Positions, const TArray<struct FQuat>& Rotations, const TArray<struct FVector>& Scales);
-	void UpdateFromDataWithIndices(const TArray<struct FVector>& Positions, const TArray<struct FQuat>& Rotations, const TArray<struct FVector>& Scales, const TArray<int32>& Indices);
+	bool UpdateFromData(const TArray<struct FVector>& Positions, const TArray<struct FQuat>& Rotations, const TArray<struct FVector>& Scales);
+	bool UpdateFromDataEx(const TArray<struct FVector>& Positions, const TArray<struct FQuat>& Rotations, const TArray<struct FVector>& Scales, const TArray<float>& Ages, const TArray<int32>& Indices, const TArray<struct FKuroPointCloudCacheCustomFloat>& CustomFloats, const TArray<float>& CurveStartTimes, const TArray<struct FKuroPointCloudCacheCustomFloat>& CurveCustomFloats);
+
+	bool CheckConsistency(bool Verbosity) const;
 
 public:
 	static class UClass* StaticClass()
@@ -93,13 +113,48 @@ public:
 	}
 };
 static_assert(alignof(UKuroPointCloudCache) == 0x000008, "Wrong alignment on UKuroPointCloudCache");
-static_assert(sizeof(UKuroPointCloudCache) == 0x000110, "Wrong size on UKuroPointCloudCache");
+static_assert(sizeof(UKuroPointCloudCache) == 0x000258, "Wrong size on UKuroPointCloudCache");
 static_assert(offsetof(UKuroPointCloudCache, PositionCache) == 0x000030, "Member 'UKuroPointCloudCache::PositionCache' has a wrong offset!");
 static_assert(offsetof(UKuroPointCloudCache, RotationCache) == 0x000040, "Member 'UKuroPointCloudCache::RotationCache' has a wrong offset!");
 static_assert(offsetof(UKuroPointCloudCache, ScaleCache) == 0x000050, "Member 'UKuroPointCloudCache::ScaleCache' has a wrong offset!");
-static_assert(offsetof(UKuroPointCloudCache, IndexCache) == 0x000060, "Member 'UKuroPointCloudCache::IndexCache' has a wrong offset!");
-static_assert(offsetof(UKuroPointCloudCache, MetaDataInt) == 0x000070, "Member 'UKuroPointCloudCache::MetaDataInt' has a wrong offset!");
-static_assert(offsetof(UKuroPointCloudCache, MetaDataFloat) == 0x0000C0, "Member 'UKuroPointCloudCache::MetaDataFloat' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, AgeCache) == 0x000060, "Member 'UKuroPointCloudCache::AgeCache' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, IndexCache) == 0x000070, "Member 'UKuroPointCloudCache::IndexCache' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, FlatCustomFloatCache) == 0x000080, "Member 'UKuroPointCloudCache::FlatCustomFloatCache' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, CustomFloatCacheStride) == 0x000090, "Member 'UKuroPointCloudCache::CustomFloatCacheStride' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, CustomFloatCacheDataOffsets) == 0x000098, "Member 'UKuroPointCloudCache::CustomFloatCacheDataOffsets' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, CustomFloatCache) == 0x0000E8, "Member 'UKuroPointCloudCache::CustomFloatCache' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, CurveMapCache) == 0x0000F8, "Member 'UKuroPointCloudCache::CurveMapCache' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, CurveStartTimeCache) == 0x000108, "Member 'UKuroPointCloudCache::CurveStartTimeCache' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, FlatCurveCustomFloatCache) == 0x000118, "Member 'UKuroPointCloudCache::FlatCurveCustomFloatCache' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, CurveCustomFloatCacheStride) == 0x000128, "Member 'UKuroPointCloudCache::CurveCustomFloatCacheStride' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, CurveCustomFloatCacheDataOffsets) == 0x000130, "Member 'UKuroPointCloudCache::CurveCustomFloatCacheDataOffsets' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, CurveCustomFloatCache) == 0x000180, "Member 'UKuroPointCloudCache::CurveCustomFloatCache' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, MetaDataInt) == 0x000190, "Member 'UKuroPointCloudCache::MetaDataInt' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, MetaDataFloat) == 0x0001E0, "Member 'UKuroPointCloudCache::MetaDataFloat' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, NumPoints) == 0x000230, "Member 'UKuroPointCloudCache::NumPoints' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, NumCurves) == 0x000234, "Member 'UKuroPointCloudCache::NumCurves' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, ReleaseCPUData) == 0x000238, "Member 'UKuroPointCloudCache::ReleaseCPUData' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudCache, bIsCookedPlatformWithCPUDataReleased) == 0x000239, "Member 'UKuroPointCloudCache::bIsCookedPlatformWithCPUDataReleased' has a wrong offset!");
+
+// Class KuroPointCloud.KuroPointCloudFunctionLibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKuroPointCloudFunctionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool SetNiagaraKuroPointCloudCache(class UNiagaraComponent* NiagaraComponent, class UKuroPointCloudCache* KuroPointCloudCache, class FName ParameterName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroPointCloudFunctionLibrary">();
+	}
+	static class UKuroPointCloudFunctionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroPointCloudFunctionLibrary>();
+	}
+};
+static_assert(alignof(UKuroPointCloudFunctionLibrary) == 0x000008, "Wrong alignment on UKuroPointCloudFunctionLibrary");
+static_assert(sizeof(UKuroPointCloudFunctionLibrary) == 0x000030, "Wrong size on UKuroPointCloudFunctionLibrary");
 
 // Class KuroPointCloud.KuroPointCloudInstance
 // 0x0068 (0x0098 - 0x0030)
@@ -116,6 +171,7 @@ public:
 	void ResetData();
 
 	struct FBox GetBound() const;
+	class UKuroPointCloudCache* GetPointCloudCache() const;
 	int32 GetQueryPointsNum(const struct FKuroPointCloudInstanceQueryResult& QueryResult) const;
 	bool GetQueryPointTransform(const struct FKuroPointCloudInstanceQueryResult& QueryResult, int32 Index_0, struct FVector* OutPosition, struct FQuat* OutRotation, struct FVector* OutScale) const;
 	struct FKuroPointCloudInstanceQueryResult SphereQuery(const struct FVector& SphereCenter, float SphereRadius) const;
@@ -246,18 +302,24 @@ static_assert(offsetof(AKuroPointCloudWorldActor, GroupName) == 0x0002C0, "Membe
 static_assert(offsetof(AKuroPointCloudWorldActor, SubGroupName) == 0x0002CC, "Member 'AKuroPointCloudWorldActor::SubGroupName' has a wrong offset!");
 
 // Class KuroPointCloud.KuroPointCloudWorldComponent
-// 0x0020 (0x00E0 - 0x00C0)
-class UKuroPointCloudWorldComponent final : public UActorComponent
+// 0x0030 (0x0250 - 0x0220)
+class UKuroPointCloudWorldComponent final : public USceneComponent
 {
 public:
-	class FName                                   KuroPointCloudCollectionName;                      // 0x00C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CC[0xC];                                       // 0x00CC(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroPointCloudInstance*                PointCloudInstance;                                // 0x00D8(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FName                                   KuroPointCloudCollectionName;                      // 0x0218(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_224[0xC];                                      // 0x0224(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroPointCloudInstance*                PointCloudInstance;                                // 0x0230(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EKPCWorldComponentDynamicPointMode            DynamicPointMode;                                  // 0x0238(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKPCWDynamicPointSocketInfo>    SocketInfos;                                       // 0x0240(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	class UKuroPointCloudInstance* GetInstance(bool bCreateIfNull);
 	void MarkUpdate();
 	void SetInstance(class UKuroPointCloudInstance* Instance);
+
+	int32 GetNumDynamicPoints() const;
+	bool SampleDynamicPoint(int32 Index_0, struct FTransform* OutTransform) const;
 
 public:
 	static class UClass* StaticClass()
@@ -269,10 +331,12 @@ public:
 		return GetDefaultObjImpl<UKuroPointCloudWorldComponent>();
 	}
 };
-static_assert(alignof(UKuroPointCloudWorldComponent) == 0x000008, "Wrong alignment on UKuroPointCloudWorldComponent");
-static_assert(sizeof(UKuroPointCloudWorldComponent) == 0x0000E0, "Wrong size on UKuroPointCloudWorldComponent");
-static_assert(offsetof(UKuroPointCloudWorldComponent, KuroPointCloudCollectionName) == 0x0000C0, "Member 'UKuroPointCloudWorldComponent::KuroPointCloudCollectionName' has a wrong offset!");
-static_assert(offsetof(UKuroPointCloudWorldComponent, PointCloudInstance) == 0x0000D8, "Member 'UKuroPointCloudWorldComponent::PointCloudInstance' has a wrong offset!");
+static_assert(alignof(UKuroPointCloudWorldComponent) == 0x000010, "Wrong alignment on UKuroPointCloudWorldComponent");
+static_assert(sizeof(UKuroPointCloudWorldComponent) == 0x000250, "Wrong size on UKuroPointCloudWorldComponent");
+static_assert(offsetof(UKuroPointCloudWorldComponent, KuroPointCloudCollectionName) == 0x000218, "Member 'UKuroPointCloudWorldComponent::KuroPointCloudCollectionName' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudWorldComponent, PointCloudInstance) == 0x000230, "Member 'UKuroPointCloudWorldComponent::PointCloudInstance' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudWorldComponent, DynamicPointMode) == 0x000238, "Member 'UKuroPointCloudWorldComponent::DynamicPointMode' has a wrong offset!");
+static_assert(offsetof(UKuroPointCloudWorldComponent, SocketInfos) == 0x000240, "Member 'UKuroPointCloudWorldComponent::SocketInfos' has a wrong offset!");
 
 // Class KuroPointCloud.KuroPointCloudWorldSystem
 // 0x0078 (0x00B0 - 0x0038)
@@ -348,8 +412,8 @@ static_assert(offsetof(UKuroVirtualPointCloud2DQTree, PointCloudLocalToWorld) ==
 class UNiagaraDataInterfaceKuroPointCloud final : public UNiagaraDataInterface
 {
 public:
-	class UKuroPointCloudCache*                   PointCloudCache;                                   // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FName                                   WorldCollectionName;                               // 0x0048(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UKuroPointCloudCache*                   PointCloudCache;                                   // 0x0040(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   WorldCollectionName;                               // 0x0048(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:

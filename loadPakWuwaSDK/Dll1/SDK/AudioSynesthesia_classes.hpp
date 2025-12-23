@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "AudioAnalyzer_classes.hpp"
-#include "Engine_structs.hpp"
 #include "AudioSynesthesia_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK

@@ -17,109 +17,6 @@
 namespace SDK::Params
 {
 
-// Function KuroAudio.KuroAmbientSoundComponent.IsPlaying
-// 0x0001 (0x0001 - 0x0000)
-struct KuroAmbientSoundComponent_IsPlaying final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroAmbientSoundComponent_IsPlaying) == 0x000001, "Wrong alignment on KuroAmbientSoundComponent_IsPlaying");
-static_assert(sizeof(KuroAmbientSoundComponent_IsPlaying) == 0x000001, "Wrong size on KuroAmbientSoundComponent_IsPlaying");
-static_assert(offsetof(KuroAmbientSoundComponent_IsPlaying, ReturnValue) == 0x000000, "Member 'KuroAmbientSoundComponent_IsPlaying::ReturnValue' has a wrong offset!");
-
-// Function KuroAudio.KuroAudioDelegates.SetAudioPauseDelegate
-// 0x0028 (0x0028 - 0x0000)
-struct KuroAudioDelegates_SetAudioPauseDelegate final
-{
-public:
-	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroAudioDelegates_SetAudioPauseDelegate) == 0x000004, "Wrong alignment on KuroAudioDelegates_SetAudioPauseDelegate");
-static_assert(sizeof(KuroAudioDelegates_SetAudioPauseDelegate) == 0x000028, "Wrong size on KuroAudioDelegates_SetAudioPauseDelegate");
-static_assert(offsetof(KuroAudioDelegates_SetAudioPauseDelegate, InDelegate) == 0x000000, "Member 'KuroAudioDelegates_SetAudioPauseDelegate::InDelegate' has a wrong offset!");
-
-// Function KuroAudio.KuroAudioDelegates.SetAudioResumeDelegate
-// 0x0028 (0x0028 - 0x0000)
-struct KuroAudioDelegates_SetAudioResumeDelegate final
-{
-public:
-	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroAudioDelegates_SetAudioResumeDelegate) == 0x000004, "Wrong alignment on KuroAudioDelegates_SetAudioResumeDelegate");
-static_assert(sizeof(KuroAudioDelegates_SetAudioResumeDelegate) == 0x000028, "Wrong size on KuroAudioDelegates_SetAudioResumeDelegate");
-static_assert(offsetof(KuroAudioDelegates_SetAudioResumeDelegate, InDelegate) == 0x000000, "Member 'KuroAudioDelegates_SetAudioResumeDelegate::InDelegate' has a wrong offset!");
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.D_DynamicReverbTrace
-// 0x0020 (0x0020 - 0x0000)
-struct KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace final
-{
-public:
-	struct FVectorDouble                          Location;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceUpdate;                                      // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace) == 0x000008, "Wrong alignment on KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace");
-static_assert(sizeof(KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace) == 0x000020, "Wrong size on KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace::Location' has a wrong offset!");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace, bForceUpdate) == 0x000018, "Member 'KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace::bForceUpdate' has a wrong offset!");
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.DynamicReverbTrace
-// 0x0010 (0x0010 - 0x0000)
-struct KuroAudioEnvironmentSubsystem_DynamicReverbTrace final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForceUpdate;                                      // 0x000C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(KuroAudioEnvironmentSubsystem_DynamicReverbTrace) == 0x000004, "Wrong alignment on KuroAudioEnvironmentSubsystem_DynamicReverbTrace");
-static_assert(sizeof(KuroAudioEnvironmentSubsystem_DynamicReverbTrace) == 0x000010, "Wrong size on KuroAudioEnvironmentSubsystem_DynamicReverbTrace");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_DynamicReverbTrace, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_DynamicReverbTrace::Location' has a wrong offset!");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_DynamicReverbTrace, bForceUpdate) == 0x00000C, "Member 'KuroAudioEnvironmentSubsystem_DynamicReverbTrace::bForceUpdate' has a wrong offset!");
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentInfo
-// 0x0028 (0x0028 - 0x0000)
-struct KuroAudioEnvironmentSubsystem_GetEnvironmentInfo final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroAudioEnvironmentInfo              ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo) == 0x000008, "Wrong alignment on KuroAudioEnvironmentSubsystem_GetEnvironmentInfo");
-static_assert(sizeof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo) == 0x000028, "Wrong size on KuroAudioEnvironmentSubsystem_GetEnvironmentInfo");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentInfo::Location' has a wrong offset!");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo, ReturnValue) == 0x000010, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentInfo::ReturnValue' has a wrong offset!");
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentInfo_MusicCompatible
-// 0x0028 (0x0028 - 0x0000)
-struct KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FKuroAudioEnvironmentInfo              ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible) == 0x000008, "Wrong alignment on KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible");
-static_assert(sizeof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible) == 0x000028, "Wrong size on KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible::Location' has a wrong offset!");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible, ReturnValue) == 0x000010, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible::ReturnValue' has a wrong offset!");
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentStates
-// 0x0060 (0x0060 - 0x0000)
-struct KuroAudioEnvironmentSubsystem_GetEnvironmentStates final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, class FString>            ReturnValue;                                       // 0x0010(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroAudioEnvironmentSubsystem_GetEnvironmentStates) == 0x000008, "Wrong alignment on KuroAudioEnvironmentSubsystem_GetEnvironmentStates");
-static_assert(sizeof(KuroAudioEnvironmentSubsystem_GetEnvironmentStates) == 0x000060, "Wrong size on KuroAudioEnvironmentSubsystem_GetEnvironmentStates");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentStates, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentStates::Location' has a wrong offset!");
-static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentStates, ReturnValue) == 0x000010, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentStates::ReturnValue' has a wrong offset!");
-
 // Function KuroAudio.KuroAudioStatics.ExecuteActionOnEvent
 // 0x0020 (0x0020 - 0x0000)
 struct KuroAudioStatics_ExecuteActionOnEvent final
@@ -351,6 +248,109 @@ public:
 static_assert(alignof(KuroAudioStatics_StopAll) == 0x000008, "Wrong alignment on KuroAudioStatics_StopAll");
 static_assert(sizeof(KuroAudioStatics_StopAll) == 0x000008, "Wrong size on KuroAudioStatics_StopAll");
 static_assert(offsetof(KuroAudioStatics_StopAll, Actor) == 0x000000, "Member 'KuroAudioStatics_StopAll::Actor' has a wrong offset!");
+
+// Function KuroAudio.KuroAmbientSoundComponent.IsPlaying
+// 0x0001 (0x0001 - 0x0000)
+struct KuroAmbientSoundComponent_IsPlaying final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAmbientSoundComponent_IsPlaying) == 0x000001, "Wrong alignment on KuroAmbientSoundComponent_IsPlaying");
+static_assert(sizeof(KuroAmbientSoundComponent_IsPlaying) == 0x000001, "Wrong size on KuroAmbientSoundComponent_IsPlaying");
+static_assert(offsetof(KuroAmbientSoundComponent_IsPlaying, ReturnValue) == 0x000000, "Member 'KuroAmbientSoundComponent_IsPlaying::ReturnValue' has a wrong offset!");
+
+// Function KuroAudio.KuroAudioDelegates.SetAudioPauseDelegate
+// 0x0028 (0x0028 - 0x0000)
+struct KuroAudioDelegates_SetAudioPauseDelegate final
+{
+public:
+	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAudioDelegates_SetAudioPauseDelegate) == 0x000004, "Wrong alignment on KuroAudioDelegates_SetAudioPauseDelegate");
+static_assert(sizeof(KuroAudioDelegates_SetAudioPauseDelegate) == 0x000028, "Wrong size on KuroAudioDelegates_SetAudioPauseDelegate");
+static_assert(offsetof(KuroAudioDelegates_SetAudioPauseDelegate, InDelegate) == 0x000000, "Member 'KuroAudioDelegates_SetAudioPauseDelegate::InDelegate' has a wrong offset!");
+
+// Function KuroAudio.KuroAudioDelegates.SetAudioResumeDelegate
+// 0x0028 (0x0028 - 0x0000)
+struct KuroAudioDelegates_SetAudioResumeDelegate final
+{
+public:
+	TDelegate<void()>                             InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAudioDelegates_SetAudioResumeDelegate) == 0x000004, "Wrong alignment on KuroAudioDelegates_SetAudioResumeDelegate");
+static_assert(sizeof(KuroAudioDelegates_SetAudioResumeDelegate) == 0x000028, "Wrong size on KuroAudioDelegates_SetAudioResumeDelegate");
+static_assert(offsetof(KuroAudioDelegates_SetAudioResumeDelegate, InDelegate) == 0x000000, "Member 'KuroAudioDelegates_SetAudioResumeDelegate::InDelegate' has a wrong offset!");
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.D_DynamicReverbTrace
+// 0x0020 (0x0020 - 0x0000)
+struct KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace final
+{
+public:
+	struct FVectorDouble                          Location;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceUpdate;                                      // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace) == 0x000008, "Wrong alignment on KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace");
+static_assert(sizeof(KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace) == 0x000020, "Wrong size on KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace::Location' has a wrong offset!");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace, bForceUpdate) == 0x000018, "Member 'KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace::bForceUpdate' has a wrong offset!");
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.DynamicReverbTrace
+// 0x0010 (0x0010 - 0x0000)
+struct KuroAudioEnvironmentSubsystem_DynamicReverbTrace final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceUpdate;                                      // 0x000C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroAudioEnvironmentSubsystem_DynamicReverbTrace) == 0x000004, "Wrong alignment on KuroAudioEnvironmentSubsystem_DynamicReverbTrace");
+static_assert(sizeof(KuroAudioEnvironmentSubsystem_DynamicReverbTrace) == 0x000010, "Wrong size on KuroAudioEnvironmentSubsystem_DynamicReverbTrace");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_DynamicReverbTrace, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_DynamicReverbTrace::Location' has a wrong offset!");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_DynamicReverbTrace, bForceUpdate) == 0x00000C, "Member 'KuroAudioEnvironmentSubsystem_DynamicReverbTrace::bForceUpdate' has a wrong offset!");
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentInfo
+// 0x0028 (0x0028 - 0x0000)
+struct KuroAudioEnvironmentSubsystem_GetEnvironmentInfo final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroAudioEnvironmentInfo              ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo) == 0x000008, "Wrong alignment on KuroAudioEnvironmentSubsystem_GetEnvironmentInfo");
+static_assert(sizeof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo) == 0x000028, "Wrong size on KuroAudioEnvironmentSubsystem_GetEnvironmentInfo");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentInfo::Location' has a wrong offset!");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo, ReturnValue) == 0x000010, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentInfo::ReturnValue' has a wrong offset!");
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentInfo_MusicCompatible
+// 0x0028 (0x0028 - 0x0000)
+struct KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKuroAudioEnvironmentInfo              ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible) == 0x000008, "Wrong alignment on KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible");
+static_assert(sizeof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible) == 0x000028, "Wrong size on KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible::Location' has a wrong offset!");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible, ReturnValue) == 0x000010, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible::ReturnValue' has a wrong offset!");
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentStates
+// 0x0060 (0x0060 - 0x0000)
+struct KuroAudioEnvironmentSubsystem_GetEnvironmentStates final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, class FString>            ReturnValue;                                       // 0x0010(0x0050)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAudioEnvironmentSubsystem_GetEnvironmentStates) == 0x000008, "Wrong alignment on KuroAudioEnvironmentSubsystem_GetEnvironmentStates");
+static_assert(sizeof(KuroAudioEnvironmentSubsystem_GetEnvironmentStates) == 0x000060, "Wrong size on KuroAudioEnvironmentSubsystem_GetEnvironmentStates");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentStates, Location) == 0x000000, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentStates::Location' has a wrong offset!");
+static_assert(offsetof(KuroAudioEnvironmentSubsystem_GetEnvironmentStates, ReturnValue) == 0x000010, "Member 'KuroAudioEnvironmentSubsystem_GetEnvironmentStates::ReturnValue' has a wrong offset!");
 
 }
 

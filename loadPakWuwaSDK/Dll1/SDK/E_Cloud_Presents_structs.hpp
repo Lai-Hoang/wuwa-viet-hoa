@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum E_Cloud_Presents.E_Cloud_Presents
-// NumValues: 0x004B
+// NumValues: 0x0068
 enum class E_Cloud_Presents : uint8
 {
 	NewEnumerator0                           = 0,
@@ -92,7 +92,36 @@ enum class E_Cloud_Presents : uint8
 	NewEnumerator74                          = 71,
 	NewEnumerator75                          = 72,
 	NewEnumerator76                          = 73,
-	E_Cloud_MAX                              = 74,
+	NewEnumerator77                          = 74,
+	NewEnumerator78                          = 75,
+	NewEnumerator79                          = 76,
+	NewEnumerator80                          = 77,
+	NewEnumerator81                          = 78,
+	NewEnumerator82                          = 79,
+	NewEnumerator83                          = 80,
+	NewEnumerator84                          = 81,
+	NewEnumerator85                          = 82,
+	NewEnumerator86                          = 83,
+	NewEnumerator89                          = 84,
+	NewEnumerator90                          = 85,
+	NewEnumerator91                          = 86,
+	NewEnumerator92                          = 87,
+	NewEnumerator93                          = 88,
+	NewEnumerator94                          = 89,
+	NewEnumerator95                          = 90,
+	NewEnumerator96                          = 91,
+	NewEnumerator97                          = 92,
+	NewEnumerator98                          = 93,
+	NewEnumerator99                          = 94,
+	NewEnumerator100                         = 95,
+	NewEnumerator101                         = 96,
+	NewEnumerator102                         = 97,
+	NewEnumerator103                         = 98,
+	NewEnumerator104                         = 99,
+	NewEnumerator105                         = 100,
+	NewEnumerator106                         = 101,
+	NewEnumerator107                         = 102,
+	E_Cloud_MAX                              = 103,
 };
 
 }

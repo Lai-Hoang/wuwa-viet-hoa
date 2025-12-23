@@ -186,24 +186,6 @@ static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_HideHulu, entityId) 
 static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_HideHulu, bHidden) == 0x000004, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_HideHulu::bHidden' has a wrong offset!");
 static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_HideHulu, __WorldContext) == 0x000008, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_HideHulu::__WorldContext' has a wrong offset!");
 
-// Function TsMeshAnimBlueprintFunctionLibrary.TsMeshAnimBlueprintFunctionLibrary_C.ChangeMeshAnim
-// 0x0020 (0x0020 - 0x0000)
-struct TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim final
-{
-public:
-	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMesh*                          meshClass;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 animBlueprintClass;                                // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim) == 0x000008, "Wrong alignment on TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim");
-static_assert(sizeof(TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim) == 0x000020, "Wrong size on TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim");
-static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim, entityId) == 0x000000, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim::entityId' has a wrong offset!");
-static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim, meshClass) == 0x000008, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim::meshClass' has a wrong offset!");
-static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim, animBlueprintClass) == 0x000010, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim::animBlueprintClass' has a wrong offset!");
-static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim, __WorldContext) == 0x000018, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_ChangeMeshAnim::__WorldContext' has a wrong offset!");
-
 // Function TsMeshAnimBlueprintFunctionLibrary.TsMeshAnimBlueprintFunctionLibrary_C.GetDegMovementSlope
 // 0x0018 (0x0018 - 0x0000)
 struct TsMeshAnimBlueprintFunctionLibrary_C_GetDegMovementSlope final
@@ -470,6 +452,70 @@ static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAndGetRotateBo
 static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAndGetRotateBonesMap, outMap) == 0x000008, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_UpdateAndGetRotateBonesMap::outMap' has a wrong offset!");
 static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAndGetRotateBonesMap, outOffset) == 0x000058, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_UpdateAndGetRotateBonesMap::outOffset' has a wrong offset!");
 static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAndGetRotateBonesMap, __WorldContext) == 0x000068, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_UpdateAndGetRotateBonesMap::__WorldContext' has a wrong offset!");
+
+// Function TsMeshAnimBlueprintFunctionLibrary.TsMeshAnimBlueprintFunctionLibrary_C.UpdateAnimInfoHoldingHandsRoleNpc
+// 0x0018 (0x0018 - 0x0000)
+struct TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_ABPLogicParams_C*                   animLogicParams;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc) == 0x000008, "Wrong alignment on TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc");
+static_assert(sizeof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc) == 0x000018, "Wrong size on TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc, entityId) == 0x000000, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc::entityId' has a wrong offset!");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc, animLogicParams) == 0x000008, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc::animLogicParams' has a wrong offset!");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc, __WorldContext) == 0x000010, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_UpdateAnimInfoHoldingHandsRoleNpc::__WorldContext' has a wrong offset!");
+
+// Function TsMeshAnimBlueprintFunctionLibrary.TsMeshAnimBlueprintFunctionLibrary_C.MainAnimInstanceForVehicle
+// 0x0018 (0x0018 - 0x0000)
+struct TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimInstance*                          ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle) == 0x000008, "Wrong alignment on TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle");
+static_assert(sizeof(TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle) == 0x000018, "Wrong size on TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle, entityId) == 0x000000, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle::entityId' has a wrong offset!");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle, __WorldContext) == 0x000008, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle::__WorldContext' has a wrong offset!");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle, ReturnValue) == 0x000010, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_MainAnimInstanceForVehicle::ReturnValue' has a wrong offset!");
+
+// Function TsMeshAnimBlueprintFunctionLibrary.TsMeshAnimBlueprintFunctionLibrary_C.GetDisableBlink
+// 0x0018 (0x0018 - 0x0000)
+struct TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink) == 0x000008, "Wrong alignment on TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink");
+static_assert(sizeof(TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink) == 0x000018, "Wrong size on TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink, entityId) == 0x000000, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink::entityId' has a wrong offset!");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink, __WorldContext) == 0x000008, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink::__WorldContext' has a wrong offset!");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink, ReturnValue) == 0x000010, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_GetDisableBlink::ReturnValue' has a wrong offset!");
+
+// Function TsMeshAnimBlueprintFunctionLibrary.TsMeshAnimBlueprintFunctionLibrary_C.GetHeadBaseYawBuffer
+// 0x0018 (0x0018 - 0x0000)
+struct TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer) == 0x000008, "Wrong alignment on TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer");
+static_assert(sizeof(TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer) == 0x000018, "Wrong size on TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer, entityId) == 0x000000, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer::entityId' has a wrong offset!");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer, __WorldContext) == 0x000008, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer::__WorldContext' has a wrong offset!");
+static_assert(offsetof(TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer, ReturnValue) == 0x000010, "Member 'TsMeshAnimBlueprintFunctionLibrary_C_GetHeadBaseYawBuffer::ReturnValue' has a wrong offset!");
 
 }
 

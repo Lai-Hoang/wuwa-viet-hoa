@@ -81,23 +81,6 @@ enum class EMoveHitType : uint8
 	EMoveHitType_MAX                         = 3,
 };
 
-// ScriptStruct KuroMovement.OverlapActorRecord
-// 0x0018 (0x0018 - 0x0000)
-struct FOverlapActorRecord final
-{
-public:
-	ETriggerAreaType                              Area;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnterOverlap;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FOverlapActorRecord) == 0x000008, "Wrong alignment on FOverlapActorRecord");
-static_assert(sizeof(FOverlapActorRecord) == 0x000018, "Wrong size on FOverlapActorRecord");
-static_assert(offsetof(FOverlapActorRecord, Area) == 0x000000, "Member 'FOverlapActorRecord::Area' has a wrong offset!");
-static_assert(offsetof(FOverlapActorRecord, Actor) == 0x000008, "Member 'FOverlapActorRecord::Actor' has a wrong offset!");
-static_assert(offsetof(FOverlapActorRecord, EnterOverlap) == 0x000010, "Member 'FOverlapActorRecord::EnterOverlap' has a wrong offset!");
-
 // ScriptStruct KuroMovement.BaseRecord
 // 0x0044 (0x0044 - 0x0000)
 struct FBaseRecord final
@@ -133,6 +116,23 @@ static_assert(alignof(FDebugModifyRecord) == 0x000008, "Wrong alignment on FDebu
 static_assert(sizeof(FDebugModifyRecord) == 0x000058, "Wrong size on FDebugModifyRecord");
 static_assert(offsetof(FDebugModifyRecord, Context) == 0x000000, "Member 'FDebugModifyRecord::Context' has a wrong offset!");
 static_assert(offsetof(FDebugModifyRecord, Record) == 0x000010, "Member 'FDebugModifyRecord::Record' has a wrong offset!");
+
+// ScriptStruct KuroMovement.OverlapActorRecord
+// 0x0018 (0x0018 - 0x0000)
+struct FOverlapActorRecord final
+{
+public:
+	ETriggerAreaType                              Area;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Actor;                                             // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnterOverlap;                                      // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FOverlapActorRecord) == 0x000008, "Wrong alignment on FOverlapActorRecord");
+static_assert(sizeof(FOverlapActorRecord) == 0x000018, "Wrong size on FOverlapActorRecord");
+static_assert(offsetof(FOverlapActorRecord, Area) == 0x000000, "Member 'FOverlapActorRecord::Area' has a wrong offset!");
+static_assert(offsetof(FOverlapActorRecord, Actor) == 0x000008, "Member 'FOverlapActorRecord::Actor' has a wrong offset!");
+static_assert(offsetof(FOverlapActorRecord, EnterOverlap) == 0x000010, "Member 'FOverlapActorRecord::EnterOverlap' has a wrong offset!");
 
 // ScriptStruct KuroMovement.DebugTickGroupRecord
 // 0x0058 (0x0058 - 0x0000)

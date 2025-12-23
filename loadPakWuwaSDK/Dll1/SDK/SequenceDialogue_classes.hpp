@@ -10,19 +10,46 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_classes.hpp"
 #include "MovieScene_classes.hpp"
 #include "SequenceDialogue_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
 
+// Class SequenceDialogue.SeqAnimDataSetting
+// 0x0020 (0x0050 - 0x0030)
+class USeqAnimDataSetting final : public UObject
+{
+public:
+	TArray<struct FSeqAnimCurveFloatDesc>         SeqAnimCurveFloats;                                // 0x0030(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+	TArray<struct FSeqAnimCurveVectorDesc>        SeqAnimCurveVectors;                               // 0x0040(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SeqAnimDataSetting">();
+	}
+	static class USeqAnimDataSetting* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USeqAnimDataSetting>();
+	}
+};
+static_assert(alignof(USeqAnimDataSetting) == 0x000008, "Wrong alignment on USeqAnimDataSetting");
+static_assert(sizeof(USeqAnimDataSetting) == 0x000050, "Wrong size on USeqAnimDataSetting");
+static_assert(offsetof(USeqAnimDataSetting, SeqAnimCurveFloats) == 0x000030, "Member 'USeqAnimDataSetting::SeqAnimCurveFloats' has a wrong offset!");
+static_assert(offsetof(USeqAnimDataSetting, SeqAnimCurveVectors) == 0x000040, "Member 'USeqAnimDataSetting::SeqAnimCurveVectors' has a wrong offset!");
+
 // Class SequenceDialogue.MovieSceneAutoTransformSection
-// 0x0000 (0x00F8 - 0x00F8)
+// 0x0008 (0x0100 - 0x00F8)
 class UMovieSceneAutoTransformSection final : public UMovieSceneSection
 {
+public:
+	bool                                          bApplyCameraProperties;                            // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x7];                                       // 0x00F9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -34,7 +61,8 @@ public:
 	}
 };
 static_assert(alignof(UMovieSceneAutoTransformSection) == 0x000008, "Wrong alignment on UMovieSceneAutoTransformSection");
-static_assert(sizeof(UMovieSceneAutoTransformSection) == 0x0000F8, "Wrong size on UMovieSceneAutoTransformSection");
+static_assert(sizeof(UMovieSceneAutoTransformSection) == 0x000100, "Wrong size on UMovieSceneAutoTransformSection");
+static_assert(offsetof(UMovieSceneAutoTransformSection, bApplyCameraProperties) == 0x0000F8, "Member 'UMovieSceneAutoTransformSection::bApplyCameraProperties' has a wrong offset!");
 
 // Class SequenceDialogue.MovieSceneAutoTransformTrack
 // 0x0018 (0x0098 - 0x0080)
@@ -57,6 +85,43 @@ public:
 static_assert(alignof(UMovieSceneAutoTransformTrack) == 0x000008, "Wrong alignment on UMovieSceneAutoTransformTrack");
 static_assert(sizeof(UMovieSceneAutoTransformTrack) == 0x000098, "Wrong size on UMovieSceneAutoTransformTrack");
 static_assert(offsetof(UMovieSceneAutoTransformTrack, Sections) == 0x000088, "Member 'UMovieSceneAutoTransformTrack::Sections' has a wrong offset!");
+
+// Class SequenceDialogue.MovieSceneQteManager
+// 0x0108 (0x0138 - 0x0030)
+class UMovieSceneQteManager final : public UObject
+{
+public:
+	TMulticastInlineDelegate<void(int32 QteId)>   OnQteAnimEnd;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const struct FMovieSceneQteEventParam& Param)> OnQteStart;         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMap<class UAnimInstance*, struct FMovieSceneQteAnimParams> AnimMap;                             // 0x0050(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	class ALevelSequenceActor*                    QteSeqActor;                                       // 0x00A0(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_A8[0x8];                                       // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UAnimMontage*, class UAnimInstance*> MontageToAnimInstance;                           // 0x00B0(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_100[0x38];                                     // 0x0100(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void FinishQte(int32 Id);
+	void OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted);
+	void OnSequencePaused();
+	void UpdateQte(int32 Id, bool bProgress, float ProgressPercentage);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MovieSceneQteManager">();
+	}
+	static class UMovieSceneQteManager* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneQteManager>();
+	}
+};
+static_assert(alignof(UMovieSceneQteManager) == 0x000008, "Wrong alignment on UMovieSceneQteManager");
+static_assert(sizeof(UMovieSceneQteManager) == 0x000138, "Wrong size on UMovieSceneQteManager");
+static_assert(offsetof(UMovieSceneQteManager, OnQteAnimEnd) == 0x000030, "Member 'UMovieSceneQteManager::OnQteAnimEnd' has a wrong offset!");
+static_assert(offsetof(UMovieSceneQteManager, OnQteStart) == 0x000040, "Member 'UMovieSceneQteManager::OnQteStart' has a wrong offset!");
+static_assert(offsetof(UMovieSceneQteManager, AnimMap) == 0x000050, "Member 'UMovieSceneQteManager::AnimMap' has a wrong offset!");
+static_assert(offsetof(UMovieSceneQteManager, QteSeqActor) == 0x0000A0, "Member 'UMovieSceneQteManager::QteSeqActor' has a wrong offset!");
+static_assert(offsetof(UMovieSceneQteManager, MontageToAnimInstance) == 0x0000B0, "Member 'UMovieSceneQteManager::MontageToAnimInstance' has a wrong offset!");
 
 // Class SequenceDialogue.MovieSceneDialogueAudioSection
 // 0x0018 (0x0110 - 0x00F8)
@@ -179,6 +244,40 @@ static_assert(alignof(UMovieSceneDialogueStateSection) == 0x000008, "Wrong align
 static_assert(sizeof(UMovieSceneDialogueStateSection) == 0x000100, "Wrong size on UMovieSceneDialogueStateSection");
 static_assert(offsetof(UMovieSceneDialogueStateSection, SectionData) == 0x0000F8, "Member 'UMovieSceneDialogueStateSection::SectionData' has a wrong offset!");
 
+// Class SequenceDialogue.MovieSceneSeqAnimDataSection
+// 0x0020 (0x0118 - 0x00F8)
+class UMovieSceneSeqAnimDataSection final : public UMovieSceneSection
+{
+public:
+	TArray<struct FFloatNameAndCurve>             FloatNamesAndCurves;                               // 0x00F8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FVectorNameAndCurve>            VectorNameAndCurves;                               // 0x0108(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	void AddScalarParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, float InValue);
+	void AddScalarParameterKeyCustom(const struct FSeqAnimCurveFloatDesc& InParameterName, const struct FFrameNumber& InTime, float InValue);
+	void AddVectorParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FVector& InValue);
+	void AddVectorParameterKeyCustom(const struct FSeqAnimCurveVectorDesc& InParameterName, const struct FFrameNumber& InTime, const struct FVector& InValue);
+	void EmptyParameters();
+	bool GetScalarParameters(const struct FFrameNumber& InTime, TMap<class FName, float>* Floats);
+	bool GetVectorParameter(class FName InParameterName, const struct FFrameNumber& InTime, struct FVector* Value);
+	bool RemoveCategory(class FName InParameterName);
+	bool RemoveScalarParameter(class FName InParameterName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MovieSceneSeqAnimDataSection">();
+	}
+	static class UMovieSceneSeqAnimDataSection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneSeqAnimDataSection>();
+	}
+};
+static_assert(alignof(UMovieSceneSeqAnimDataSection) == 0x000008, "Wrong alignment on UMovieSceneSeqAnimDataSection");
+static_assert(sizeof(UMovieSceneSeqAnimDataSection) == 0x000118, "Wrong size on UMovieSceneSeqAnimDataSection");
+static_assert(offsetof(UMovieSceneSeqAnimDataSection, FloatNamesAndCurves) == 0x0000F8, "Member 'UMovieSceneSeqAnimDataSection::FloatNamesAndCurves' has a wrong offset!");
+static_assert(offsetof(UMovieSceneSeqAnimDataSection, VectorNameAndCurves) == 0x000108, "Member 'UMovieSceneSeqAnimDataSection::VectorNameAndCurves' has a wrong offset!");
+
 // Class SequenceDialogue.MovieSceneDialogueStateTrack
 // 0x0018 (0x0098 - 0x0080)
 class UMovieSceneDialogueStateTrack final : public UMovieSceneNameableTrack
@@ -202,22 +301,26 @@ static_assert(sizeof(UMovieSceneDialogueStateTrack) == 0x000098, "Wrong size on 
 static_assert(offsetof(UMovieSceneDialogueStateTrack, Sections) == 0x000088, "Member 'UMovieSceneDialogueStateTrack::Sections' has a wrong offset!");
 
 // Class SequenceDialogue.MovieSceneDialogueSubsystem
-// 0x0068 (0x00A0 - 0x0038)
+// 0x0080 (0x00B8 - 0x0038)
 class UMovieSceneDialogueSubsystem final : public UWorldSubsystem
 {
 public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMulticastInlineDelegate<void(bool bShow, const class FText& DialogueID, const int32 GuardTime, const int32 AudioDelay, const int32 AudioTransitionDuration, const ELanguageAudio LanguageType, const int32 AutoPlayDelay)> OnShowDialogue; // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(bool bShow, const class FString& AudioKey, const int32 AudioTransitionDuration)> OnShowDialogueAudio; // 0x0050(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_60[0x10];                                      // 0x0060(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 AutoTransformActor;                                // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMovieScene3DTransformTrack*            AutoTransformDataTrack;                            // 0x0078(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_80[0x20];                                      // 0x0080(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UMovieSceneQteManager*                  QteManager;                                        // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_68[0x10];                                      // 0x0068(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 AutoTransformActor;                                // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMovieScene3DTransformTrack*            AutoTransformDataTrack;                            // 0x0080(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<class UMovieScenePropertyTrack*>       AutoTransformPropertyTracks;                       // 0x0088(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_98[0x20];                                      // 0x0098(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ShowDialogue(bool bShow, const class FText& DialogueID, const int32 GuardTime, const int32 AudioDelay, const int32 AudioTransitionDuration, const ELanguageAudio LanguageType, const int32 AutoPlayDelay);
 	void ShowDialogueAudio(bool bShow, const class FString& AudioKey, const int32 AudioTransitionDuration);
-	bool TryGetAutoTransformByOffsetTime(struct FTransform* OutTrans, float OffsetTime);
+	bool TryGetAutoTransformByOffsetTime(struct FTransform* OutTrans, float OffsetTime, bool bApplyCameraProperties);
+
+	class UMovieSceneQteManager* GetQteManager() const;
 
 public:
 	static class UClass* StaticClass()
@@ -230,11 +333,13 @@ public:
 	}
 };
 static_assert(alignof(UMovieSceneDialogueSubsystem) == 0x000008, "Wrong alignment on UMovieSceneDialogueSubsystem");
-static_assert(sizeof(UMovieSceneDialogueSubsystem) == 0x0000A0, "Wrong size on UMovieSceneDialogueSubsystem");
+static_assert(sizeof(UMovieSceneDialogueSubsystem) == 0x0000B8, "Wrong size on UMovieSceneDialogueSubsystem");
 static_assert(offsetof(UMovieSceneDialogueSubsystem, OnShowDialogue) == 0x000040, "Member 'UMovieSceneDialogueSubsystem::OnShowDialogue' has a wrong offset!");
 static_assert(offsetof(UMovieSceneDialogueSubsystem, OnShowDialogueAudio) == 0x000050, "Member 'UMovieSceneDialogueSubsystem::OnShowDialogueAudio' has a wrong offset!");
-static_assert(offsetof(UMovieSceneDialogueSubsystem, AutoTransformActor) == 0x000070, "Member 'UMovieSceneDialogueSubsystem::AutoTransformActor' has a wrong offset!");
-static_assert(offsetof(UMovieSceneDialogueSubsystem, AutoTransformDataTrack) == 0x000078, "Member 'UMovieSceneDialogueSubsystem::AutoTransformDataTrack' has a wrong offset!");
+static_assert(offsetof(UMovieSceneDialogueSubsystem, QteManager) == 0x000060, "Member 'UMovieSceneDialogueSubsystem::QteManager' has a wrong offset!");
+static_assert(offsetof(UMovieSceneDialogueSubsystem, AutoTransformActor) == 0x000078, "Member 'UMovieSceneDialogueSubsystem::AutoTransformActor' has a wrong offset!");
+static_assert(offsetof(UMovieSceneDialogueSubsystem, AutoTransformDataTrack) == 0x000080, "Member 'UMovieSceneDialogueSubsystem::AutoTransformDataTrack' has a wrong offset!");
+static_assert(offsetof(UMovieSceneDialogueSubsystem, AutoTransformPropertyTracks) == 0x000088, "Member 'UMovieSceneDialogueSubsystem::AutoTransformPropertyTracks' has a wrong offset!");
 
 // Class SequenceDialogue.MovieSceneDialogueTrack
 // 0x0020 (0x00A0 - 0x0080)
@@ -261,37 +366,69 @@ static_assert(sizeof(UMovieSceneDialogueTrack) == 0x0000A0, "Wrong size on UMovi
 static_assert(offsetof(UMovieSceneDialogueTrack, Sections) == 0x000088, "Member 'UMovieSceneDialogueTrack::Sections' has a wrong offset!");
 static_assert(offsetof(UMovieSceneDialogueTrack, LanguageType) == 0x000098, "Member 'UMovieSceneDialogueTrack::LanguageType' has a wrong offset!");
 
-// Class SequenceDialogue.MovieSceneSeqAnimDataSection
-// 0x0020 (0x0118 - 0x00F8)
-class UMovieSceneSeqAnimDataSection final : public UMovieSceneSection
+// Class SequenceDialogue.MovieSceneQteSection
+// 0x0098 (0x0190 - 0x00F8)
+class UMovieSceneQteSection final : public UMovieSceneSection
 {
 public:
-	TArray<struct FFloatNameAndCurve>             FloatNamesAndCurves;                               // 0x00F8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FVectorNameAndCurve>            VectorNameAndCurves;                               // 0x0108(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	void AddScalarParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, float InValue);
-	void AddVectorParameterKey(class FName InParameterName, const struct FFrameNumber& InTime, const struct FVector& InValue);
-	void EmptyParameters();
-	bool GetScalarParameters(const struct FFrameNumber& InTime, TMap<class FName, float>* Floats);
-	bool GetVectorParameter(class FName InParameterName, const struct FFrameNumber& InTime, struct FVector* Value);
-	bool RemoveCategory(class FName InParameterName);
-	bool RemoveScalarParameter(class FName InParameterName);
+	struct FMovieSceneQteParams                   Params_0;                                          // 0x00F8(0x0098)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"MovieSceneSeqAnimDataSection">();
+		return StaticClassImpl<"MovieSceneQteSection">();
 	}
-	static class UMovieSceneSeqAnimDataSection* GetDefaultObj()
+	static class UMovieSceneQteSection* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UMovieSceneSeqAnimDataSection>();
+		return GetDefaultObjImpl<UMovieSceneQteSection>();
 	}
 };
-static_assert(alignof(UMovieSceneSeqAnimDataSection) == 0x000008, "Wrong alignment on UMovieSceneSeqAnimDataSection");
-static_assert(sizeof(UMovieSceneSeqAnimDataSection) == 0x000118, "Wrong size on UMovieSceneSeqAnimDataSection");
-static_assert(offsetof(UMovieSceneSeqAnimDataSection, FloatNamesAndCurves) == 0x0000F8, "Member 'UMovieSceneSeqAnimDataSection::FloatNamesAndCurves' has a wrong offset!");
-static_assert(offsetof(UMovieSceneSeqAnimDataSection, VectorNameAndCurves) == 0x000108, "Member 'UMovieSceneSeqAnimDataSection::VectorNameAndCurves' has a wrong offset!");
+static_assert(alignof(UMovieSceneQteSection) == 0x000008, "Wrong alignment on UMovieSceneQteSection");
+static_assert(sizeof(UMovieSceneQteSection) == 0x000190, "Wrong size on UMovieSceneQteSection");
+static_assert(offsetof(UMovieSceneQteSection, Params_0) == 0x0000F8, "Member 'UMovieSceneQteSection::Params_0' has a wrong offset!");
+
+// Class SequenceDialogue.MovieSceneQteTrack
+// 0x0018 (0x0098 - 0x0080)
+class UMovieSceneQteTrack final : public UMovieSceneNameableTrack
+{
+public:
+	uint8                                         Pad_80[0x8];                                       // 0x0080(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0088(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MovieSceneQteTrack">();
+	}
+	static class UMovieSceneQteTrack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneQteTrack>();
+	}
+};
+static_assert(alignof(UMovieSceneQteTrack) == 0x000008, "Wrong alignment on UMovieSceneQteTrack");
+static_assert(sizeof(UMovieSceneQteTrack) == 0x000098, "Wrong size on UMovieSceneQteTrack");
+static_assert(offsetof(UMovieSceneQteTrack, Sections) == 0x000088, "Member 'UMovieSceneQteTrack::Sections' has a wrong offset!");
+
+// Class SequenceDialogue.MovieSceneQteTriggerSection
+// 0x0088 (0x0180 - 0x00F8)
+class UMovieSceneQteTriggerSection final : public UMovieSceneSection
+{
+public:
+	struct FMovieSceneQteTriggerChannel           DataChannel;                                       // 0x00F8(0x0088)(NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"MovieSceneQteTriggerSection">();
+	}
+	static class UMovieSceneQteTriggerSection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UMovieSceneQteTriggerSection>();
+	}
+};
+static_assert(alignof(UMovieSceneQteTriggerSection) == 0x000008, "Wrong alignment on UMovieSceneQteTriggerSection");
+static_assert(sizeof(UMovieSceneQteTriggerSection) == 0x000180, "Wrong size on UMovieSceneQteTriggerSection");
+static_assert(offsetof(UMovieSceneQteTriggerSection, DataChannel) == 0x0000F8, "Member 'UMovieSceneQteTriggerSection::DataChannel' has a wrong offset!");
 
 // Class SequenceDialogue.MovieSceneSeqAnimDataTrack
 // 0x0018 (0x0098 - 0x0080)
@@ -315,38 +452,18 @@ static_assert(alignof(UMovieSceneSeqAnimDataTrack) == 0x000008, "Wrong alignment
 static_assert(sizeof(UMovieSceneSeqAnimDataTrack) == 0x000098, "Wrong size on UMovieSceneSeqAnimDataTrack");
 static_assert(offsetof(UMovieSceneSeqAnimDataTrack, Sections) == 0x000088, "Member 'UMovieSceneSeqAnimDataTrack::Sections' has a wrong offset!");
 
-// Class SequenceDialogue.SeqAnimDataSetting
-// 0x0020 (0x0050 - 0x0030)
-class USeqAnimDataSetting final : public UObject
-{
-public:
-	TArray<struct FSeqAnimCurveFloatDesc>         SeqAnimCurveFloats;                                // 0x0030(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
-	TArray<struct FSeqAnimCurveVectorDesc>        SeqAnimCurveVectors;                               // 0x0040(0x0010)(Edit, ZeroConstructor, Config, GlobalConfig, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SeqAnimDataSetting">();
-	}
-	static class USeqAnimDataSetting* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USeqAnimDataSetting>();
-	}
-};
-static_assert(alignof(USeqAnimDataSetting) == 0x000008, "Wrong alignment on USeqAnimDataSetting");
-static_assert(sizeof(USeqAnimDataSetting) == 0x000050, "Wrong size on USeqAnimDataSetting");
-static_assert(offsetof(USeqAnimDataSetting, SeqAnimCurveFloats) == 0x000030, "Member 'USeqAnimDataSetting::SeqAnimCurveFloats' has a wrong offset!");
-static_assert(offsetof(USeqAnimDataSetting, SeqAnimCurveVectors) == 0x000040, "Member 'USeqAnimDataSetting::SeqAnimCurveVectors' has a wrong offset!");
-
 // Class SequenceDialogue.SeqAnimDataInterface
 // 0x0000 (0x0000 - 0x0000)
 class ISeqAnimDataInterface final
 {
 public:
 	bool GetAnimDataFloat(TArray<struct FNamedCurveValue>* FloatCurveData);
+	bool GetAnimDataTransform(TMap<class FName, struct FTransform>* FloatCurveData);
 	bool GetAnimDataVector(TMap<class FName, struct FVector>* VectorCurveData);
 	TArray<class FName> GetSupportGroupNames();
+	bool IsCustomSupport();
 	bool SetAnimDataFloat(const TArray<struct FNamedCurveValue>& FloatCurveData);
+	bool SetAnimDataTransform(const TMap<class FName, struct FTransform>& FloatCurveData);
 	bool SetAnimDataVector(const TMap<class FName, struct FVector>& VectorCurveData);
 
 public:
@@ -400,6 +517,36 @@ public:
 };
 static_assert(alignof(ISeqAutoTransformInterface) == 0x000001, "Wrong alignment on ISeqAutoTransformInterface");
 static_assert(sizeof(ISeqAutoTransformInterface) == 0x000001, "Wrong size on ISeqAutoTransformInterface");
+
+// Class SequenceDialogue.SeqQteAnimInterface
+// 0x0000 (0x0000 - 0x0000)
+class ISeqQteAnimInterface final
+{
+public:
+	float GetStateAnimAlpha();
+	void SetStateAnimAlpha(float Alpha);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SeqQteAnimInterface">();
+	}
+	static class ISeqQteAnimInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ISeqQteAnimInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(ISeqQteAnimInterface) == 0x000001, "Wrong alignment on ISeqQteAnimInterface");
+static_assert(sizeof(ISeqQteAnimInterface) == 0x000001, "Wrong size on ISeqQteAnimInterface");
 
 }
 

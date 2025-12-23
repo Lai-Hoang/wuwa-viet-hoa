@@ -11,34 +11,13 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "CoreUObject_structs.hpp"
 #include "KuroAudio_structs.hpp"
 
 
 namespace SDK
 {
-
-// Class KuroAudio.KuroAmbientSoundActor
-// 0x0008 (0x02B8 - 0x02B0)
-class AKuroAmbientSoundActor final : public AActor
-{
-public:
-	class UKuroAmbientSoundComponent*             AmbientSoundComponent;                             // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroAmbientSoundActor">();
-	}
-	static class AKuroAmbientSoundActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AKuroAmbientSoundActor>();
-	}
-};
-static_assert(alignof(AKuroAmbientSoundActor) == 0x000008, "Wrong alignment on AKuroAmbientSoundActor");
-static_assert(sizeof(AKuroAmbientSoundActor) == 0x0002B8, "Wrong size on AKuroAmbientSoundActor");
-static_assert(offsetof(AKuroAmbientSoundActor, AmbientSoundComponent) == 0x0002B0, "Member 'AKuroAmbientSoundActor::AmbientSoundComponent' has a wrong offset!");
 
 // Class KuroAudio.KuroAudioStateVolume
 // 0x0028 (0x0310 - 0x02E8)
@@ -65,6 +44,62 @@ static_assert(sizeof(AKuroAudioStateVolume) == 0x000310, "Wrong size on AKuroAud
 static_assert(offsetof(AKuroAudioStateVolume, Group) == 0x0002E8, "Member 'AKuroAudioStateVolume::Group' has a wrong offset!");
 static_assert(offsetof(AKuroAudioStateVolume, State) == 0x0002F8, "Member 'AKuroAudioStateVolume::State' has a wrong offset!");
 static_assert(offsetof(AKuroAudioStateVolume, Priority) == 0x000308, "Member 'AKuroAudioStateVolume::Priority' has a wrong offset!");
+
+// Class KuroAudio.KuroAmbientSoundActor
+// 0x0008 (0x02B8 - 0x02B0)
+class AKuroAmbientSoundActor final : public AActor
+{
+public:
+	class UKuroAmbientSoundComponent*             AmbientSoundComponent;                             // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroAmbientSoundActor">();
+	}
+	static class AKuroAmbientSoundActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKuroAmbientSoundActor>();
+	}
+};
+static_assert(alignof(AKuroAmbientSoundActor) == 0x000008, "Wrong alignment on AKuroAmbientSoundActor");
+static_assert(sizeof(AKuroAmbientSoundActor) == 0x0002B8, "Wrong size on AKuroAmbientSoundActor");
+static_assert(offsetof(AKuroAmbientSoundActor, AmbientSoundComponent) == 0x0002B0, "Member 'AKuroAmbientSoundActor::AmbientSoundComponent' has a wrong offset!");
+
+// Class KuroAudio.KuroAudioStatics
+// 0x0000 (0x0030 - 0x0030)
+class UKuroAudioStatics final : public UBlueprintFunctionLibrary
+{
+public:
+	static void ChangeIosAudioSessionProperties();
+	static void ExecuteActionOnEvent(const class UAkAudioEvent* AudioEvent, const EAudioActionType ActionType, const class AActor* Actor, const int32 TransitionDuration, const EAudioFadeCurve TransitionFadeCurve);
+	static void ExecuteActionOnEventName(const class FString& EventName, const EAudioActionType ActionType, const class AActor* Actor, const int32 TransitionDuration, const EAudioFadeCurve TransitionFadeCurve);
+	static void ExecuteActionOnPlayingId(const int32 PlayingId, const EAudioActionType ActionType, const int32 TransitionDuration, const EAudioFadeCurve TransitionFadeCurve);
+	static class UAkComponent* GetAkComponent(class USceneComponent* Parent, const class FName& SocketName, bool* bCreated);
+	static class UKuroAudioEnvironmentSubsystem* GetAudioEnvironmentSubsystem(const class UWorld* World);
+	static int32 GetSourcePlayPosition(const int32 PlayingId);
+	static bool IsAndroidApiUsingOpenSL();
+	static bool IsDolbyAtmosGameSupported();
+	static void PostNotifyEvent(const class UAkAudioEvent* NotifyEvent, const class AActor* Actor);
+	static void SeekOnEventName(const class FString& EventName, const int32 Position, const class AActor* Actor, const int32 PlayingId, const bool bSnapToMarker);
+	static void SetIosAuditPackage(bool IsAuditPackage);
+	static void SetRtpcValue(const class FString& RtpcName, const float Value, const class AActor* Actor, const int32 TransitionDuration, const EAudioFadeCurve TransitionFadeCurve);
+	static void SetState(const class FString& StateGroup, const class FString& State);
+	static void SetSwitch(const class FString& SwitchGroup, const class FString& SwitchState, const class AActor* Actor);
+	static void StopAll(const class AActor* Actor);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroAudioStatics">();
+	}
+	static class UKuroAudioStatics* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroAudioStatics>();
+	}
+};
+static_assert(alignof(UKuroAudioStatics) == 0x000008, "Wrong alignment on UKuroAudioStatics");
+static_assert(sizeof(UKuroAudioStatics) == 0x000030, "Wrong size on UKuroAudioStatics");
 
 // Class KuroAudio.KuroAmbientSoundComponent
 // 0x0050 (0x0270 - 0x0220)
@@ -102,12 +137,11 @@ static_assert(offsetof(UKuroAmbientSoundComponent, AttenuationScalingFactor) == 
 static_assert(offsetof(UKuroAmbientSoundComponent, SoundPositions) == 0x000228, "Member 'UKuroAmbientSoundComponent::SoundPositions' has a wrong offset!");
 
 // Class KuroAudio.KuroAmbientSoundPositionsProxyComponent
-// 0x0010 (0x0690 - 0x0680)
+// 0x0000 (0x06B0 - 0x06B0)
 class UKuroAmbientSoundPositionsProxyComponent final : public UInstancedStaticMeshComponent
 {
 public:
-	class UKuroAmbientSoundComponent*             TargetComponent;                                   // 0x0680(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_688[0x8];                                      // 0x0688(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKuroAmbientSoundComponent*             TargetComponent;                                   // 0x06A8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -120,8 +154,8 @@ public:
 	}
 };
 static_assert(alignof(UKuroAmbientSoundPositionsProxyComponent) == 0x000010, "Wrong alignment on UKuroAmbientSoundPositionsProxyComponent");
-static_assert(sizeof(UKuroAmbientSoundPositionsProxyComponent) == 0x000690, "Wrong size on UKuroAmbientSoundPositionsProxyComponent");
-static_assert(offsetof(UKuroAmbientSoundPositionsProxyComponent, TargetComponent) == 0x000680, "Member 'UKuroAmbientSoundPositionsProxyComponent::TargetComponent' has a wrong offset!");
+static_assert(sizeof(UKuroAmbientSoundPositionsProxyComponent) == 0x0006B0, "Wrong size on UKuroAmbientSoundPositionsProxyComponent");
+static_assert(offsetof(UKuroAmbientSoundPositionsProxyComponent, TargetComponent) == 0x0006A8, "Member 'UKuroAmbientSoundPositionsProxyComponent::TargetComponent' has a wrong offset!");
 
 // Class KuroAudio.KuroAudioDelegates
 // 0x0000 (0x0030 - 0x0030)
@@ -179,41 +213,6 @@ static_assert(alignof(UKuroAudioEnvironmentSubsystem) == 0x000010, "Wrong alignm
 static_assert(sizeof(UKuroAudioEnvironmentSubsystem) == 0x0007E0, "Wrong size on UKuroAudioEnvironmentSubsystem");
 static_assert(offsetof(UKuroAudioEnvironmentSubsystem, EnvironmentUpdatedDelegate) == 0x0002B0, "Member 'UKuroAudioEnvironmentSubsystem::EnvironmentUpdatedDelegate' has a wrong offset!");
 
-// Class KuroAudio.KuroAudioStatics
-// 0x0000 (0x0030 - 0x0030)
-class UKuroAudioStatics final : public UBlueprintFunctionLibrary
-{
-public:
-	static void ChangeIosAudioSessionProperties();
-	static void ExecuteActionOnEvent(const class UAkAudioEvent* AudioEvent, const EAudioActionType ActionType, const class AActor* Actor, const int32 TransitionDuration, const EAudioFadeCurve TransitionFadeCurve);
-	static void ExecuteActionOnEventName(const class FString& EventName, const EAudioActionType ActionType, const class AActor* Actor, const int32 TransitionDuration, const EAudioFadeCurve TransitionFadeCurve);
-	static void ExecuteActionOnPlayingId(const int32 PlayingId, const EAudioActionType ActionType, const int32 TransitionDuration, const EAudioFadeCurve TransitionFadeCurve);
-	static class UAkComponent* GetAkComponent(class USceneComponent* Parent, const class FName& SocketName, bool* bCreated);
-	static class UKuroAudioEnvironmentSubsystem* GetAudioEnvironmentSubsystem(const class UWorld* World);
-	static int32 GetSourcePlayPosition(const int32 PlayingId);
-	static bool IsAndroidApiUsingOpenSL();
-	static bool IsDolbyAtmosGameSupported();
-	static void PostNotifyEvent(const class UAkAudioEvent* NotifyEvent, const class AActor* Actor);
-	static void SeekOnEventName(const class FString& EventName, const int32 Position, const class AActor* Actor, const int32 PlayingId, const bool bSnapToMarker);
-	static void SetIosAuditPackage(bool IsAuditPackage);
-	static void SetRtpcValue(const class FString& RtpcName, const float Value, const class AActor* Actor, const int32 TransitionDuration, const EAudioFadeCurve TransitionFadeCurve);
-	static void SetState(const class FString& StateGroup, const class FString& State);
-	static void SetSwitch(const class FString& SwitchGroup, const class FString& SwitchState, const class AActor* Actor);
-	static void StopAll(const class AActor* Actor);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroAudioStatics">();
-	}
-	static class UKuroAudioStatics* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroAudioStatics>();
-	}
-};
-static_assert(alignof(UKuroAudioStatics) == 0x000008, "Wrong alignment on UKuroAudioStatics");
-static_assert(sizeof(UKuroAudioStatics) == 0x000030, "Wrong size on UKuroAudioStatics");
-
 // Class KuroAudio.KuroAudioVolume
 // 0x0018 (0x0300 - 0x02E8)
 class AKuroAudioVolume final : public AVolume
@@ -265,17 +264,19 @@ static_assert(alignof(UKuroBgPlayerStatic) == 0x000008, "Wrong alignment on UKur
 static_assert(sizeof(UKuroBgPlayerStatic) == 0x000030, "Wrong size on UKuroBgPlayerStatic");
 
 // Class KuroAudio.MovieSceneKuroAudioEventSection
-// 0x0018 (0x0110 - 0x00F8)
+// 0x0048 (0x0140 - 0x00F8)
 class UMovieSceneKuroAudioEventSection final : public UMovieSceneSection
 {
 public:
-	class UAkAudioEvent*                          AudioEvent;                                        // 0x00F8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStopAtSectionEnd;                                 // 0x0100(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_101[0x3];                                      // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         FadeDuration;                                      // 0x0104(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioFadeCurve                               FadeCurve;                                         // 0x0108(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSyncAudio;                                        // 0x0109(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_10A[0x6];                                      // 0x010A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bStopAtSectionEnd;                                 // 0x00F8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         FadeDuration;                                      // 0x00FC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioFadeCurve                               FadeCurve;                                         // 0x0100(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSyncAudio;                                        // 0x0101(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoMatchLength;                                  // 0x0102(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_103[0x5];                                      // 0x0103(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAudioEvent*                          AudioEvent;                                        // 0x0108(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSoftObjectPtr<class UAkAudioEvent>           SoftAudioEvent;                                    // 0x0110(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -288,12 +289,14 @@ public:
 	}
 };
 static_assert(alignof(UMovieSceneKuroAudioEventSection) == 0x000008, "Wrong alignment on UMovieSceneKuroAudioEventSection");
-static_assert(sizeof(UMovieSceneKuroAudioEventSection) == 0x000110, "Wrong size on UMovieSceneKuroAudioEventSection");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, AudioEvent) == 0x0000F8, "Member 'UMovieSceneKuroAudioEventSection::AudioEvent' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, bStopAtSectionEnd) == 0x000100, "Member 'UMovieSceneKuroAudioEventSection::bStopAtSectionEnd' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, FadeDuration) == 0x000104, "Member 'UMovieSceneKuroAudioEventSection::FadeDuration' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, FadeCurve) == 0x000108, "Member 'UMovieSceneKuroAudioEventSection::FadeCurve' has a wrong offset!");
-static_assert(offsetof(UMovieSceneKuroAudioEventSection, bSyncAudio) == 0x000109, "Member 'UMovieSceneKuroAudioEventSection::bSyncAudio' has a wrong offset!");
+static_assert(sizeof(UMovieSceneKuroAudioEventSection) == 0x000140, "Wrong size on UMovieSceneKuroAudioEventSection");
+static_assert(offsetof(UMovieSceneKuroAudioEventSection, bStopAtSectionEnd) == 0x0000F8, "Member 'UMovieSceneKuroAudioEventSection::bStopAtSectionEnd' has a wrong offset!");
+static_assert(offsetof(UMovieSceneKuroAudioEventSection, FadeDuration) == 0x0000FC, "Member 'UMovieSceneKuroAudioEventSection::FadeDuration' has a wrong offset!");
+static_assert(offsetof(UMovieSceneKuroAudioEventSection, FadeCurve) == 0x000100, "Member 'UMovieSceneKuroAudioEventSection::FadeCurve' has a wrong offset!");
+static_assert(offsetof(UMovieSceneKuroAudioEventSection, bSyncAudio) == 0x000101, "Member 'UMovieSceneKuroAudioEventSection::bSyncAudio' has a wrong offset!");
+static_assert(offsetof(UMovieSceneKuroAudioEventSection, bAutoMatchLength) == 0x000102, "Member 'UMovieSceneKuroAudioEventSection::bAutoMatchLength' has a wrong offset!");
+static_assert(offsetof(UMovieSceneKuroAudioEventSection, AudioEvent) == 0x000108, "Member 'UMovieSceneKuroAudioEventSection::AudioEvent' has a wrong offset!");
+static_assert(offsetof(UMovieSceneKuroAudioEventSection, SoftAudioEvent) == 0x000110, "Member 'UMovieSceneKuroAudioEventSection::SoftAudioEvent' has a wrong offset!");
 
 // Class KuroAudio.MovieSceneKuroAudioEventTrack
 // 0x0018 (0x0098 - 0x0080)

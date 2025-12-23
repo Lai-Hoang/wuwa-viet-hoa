@@ -10,22 +10,87 @@
 
 #include "Basic.hpp"
 
-#include "KuroSimpleCombat_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
+#include "KuroSimpleCombat_structs.hpp"
 
 
 namespace SDK
 {
 
-// Class KuroSimpleCombat.KSC_AttrSet
-// 0x0058 (0x0088 - 0x0030)
-class UKSC_AttrSet final : public UObject
+// Class KuroSimpleCombat.InstanceCapsuleComponent
+// 0x0020 (0x0550 - 0x0530)
+class UInstanceCapsuleComponent final : public UPrimitiveComponent
 {
 public:
-	class UKSC_Entity*                            Owner_;                                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<EKSC_AttrType, int32>                    Attrs_;                                            // 0x0038(0x0050)(Protected, NativeAccessSpecifierProtected)
+	float                                         CapsuleHalfHeight;                                 // 0x0528(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         CapsuleRadius;                                     // 0x052C(0x0004)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UBodySetup*                             ShapeBodySetup;                                    // 0x0530(0x0008)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_538[0x18];                                     // 0x0538(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	int32 AddNewInstanceData(const struct FTransform& WorldSpaceInstanceTransform);
+	void ClearAllInstanceBodies();
+	void UpdateInstanceBodyTransform(int32 InstanceIndex, const struct FTransform& WorldSpaceInstanceTransform);
+	void UpdateInstanceTransforms(const TArray<int32>& InstanceIndices, const TArray<struct FTransform>& InTransforms);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InstanceCapsuleComponent">();
+	}
+	static class UInstanceCapsuleComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInstanceCapsuleComponent>();
+	}
+};
+static_assert(alignof(UInstanceCapsuleComponent) == 0x000010, "Wrong alignment on UInstanceCapsuleComponent");
+static_assert(sizeof(UInstanceCapsuleComponent) == 0x000550, "Wrong size on UInstanceCapsuleComponent");
+static_assert(offsetof(UInstanceCapsuleComponent, CapsuleHalfHeight) == 0x000528, "Member 'UInstanceCapsuleComponent::CapsuleHalfHeight' has a wrong offset!");
+static_assert(offsetof(UInstanceCapsuleComponent, CapsuleRadius) == 0x00052C, "Member 'UInstanceCapsuleComponent::CapsuleRadius' has a wrong offset!");
+static_assert(offsetof(UInstanceCapsuleComponent, ShapeBodySetup) == 0x000530, "Member 'UInstanceCapsuleComponent::ShapeBodySetup' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_BaseObject
+// 0x0008 (0x0038 - 0x0030)
+class UKSC_BaseObject : public UObject
+{
+public:
+	class UKSC_World*                             KscWorld;                                          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_BaseObject">();
+	}
+	static class UKSC_BaseObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_BaseObject>();
+	}
+};
+static_assert(alignof(UKSC_BaseObject) == 0x000008, "Wrong alignment on UKSC_BaseObject");
+static_assert(sizeof(UKSC_BaseObject) == 0x000038, "Wrong size on UKSC_BaseObject");
+static_assert(offsetof(UKSC_BaseObject, KscWorld) == 0x000030, "Member 'UKSC_BaseObject::KscWorld' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_AttrSet
+// 0x02A8 (0x02E0 - 0x0038)
+class UKSC_AttrSet final : public UKSC_BaseObject
+{
+public:
+	class UKSC_SkillComp*                         Owner_;                                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<EKSC_AttrType, int32>                    Attrs_;                                            // 0x0040(0x0050)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	TMap<class UObject*, int32>                   MoveReduceAttrs;                                   // 0x0090(0x0050)(Protected, NativeAccessSpecifierProtected)
+	class UObject*                                CurMoveReduceObject;                               // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_E8[0x50];                                      // 0x00E8(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EKSC_AttrType, int32>                    AttrsLockLowerBound;                               // 0x0138(0x0050)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	TMap<int32, struct FKSC_AttrBoundLocker>      LowerBoundLockerMap;                               // 0x0188(0x0050)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1D8[0x108];                                    // 0x01D8(0x0108)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AssignAttrListen(EKSC_AttrType Id, const TDelegate<void(EKSC_AttrType AttrType, int32 Value)>& InDelegate);
+	void RemoveAttrListen(EKSC_AttrType Id, const TDelegate<void(EKSC_AttrType AttrType, int32 Value)>& InDelegate);
 
 public:
 	static class UClass* StaticClass()
@@ -38,19 +103,64 @@ public:
 	}
 };
 static_assert(alignof(UKSC_AttrSet) == 0x000008, "Wrong alignment on UKSC_AttrSet");
-static_assert(sizeof(UKSC_AttrSet) == 0x000088, "Wrong size on UKSC_AttrSet");
-static_assert(offsetof(UKSC_AttrSet, Owner_) == 0x000030, "Member 'UKSC_AttrSet::Owner_' has a wrong offset!");
-static_assert(offsetof(UKSC_AttrSet, Attrs_) == 0x000038, "Member 'UKSC_AttrSet::Attrs_' has a wrong offset!");
+static_assert(sizeof(UKSC_AttrSet) == 0x0002E0, "Wrong size on UKSC_AttrSet");
+static_assert(offsetof(UKSC_AttrSet, Owner_) == 0x000038, "Member 'UKSC_AttrSet::Owner_' has a wrong offset!");
+static_assert(offsetof(UKSC_AttrSet, Attrs_) == 0x000040, "Member 'UKSC_AttrSet::Attrs_' has a wrong offset!");
+static_assert(offsetof(UKSC_AttrSet, MoveReduceAttrs) == 0x000090, "Member 'UKSC_AttrSet::MoveReduceAttrs' has a wrong offset!");
+static_assert(offsetof(UKSC_AttrSet, CurMoveReduceObject) == 0x0000E0, "Member 'UKSC_AttrSet::CurMoveReduceObject' has a wrong offset!");
+static_assert(offsetof(UKSC_AttrSet, AttrsLockLowerBound) == 0x000138, "Member 'UKSC_AttrSet::AttrsLockLowerBound' has a wrong offset!");
+static_assert(offsetof(UKSC_AttrSet, LowerBoundLockerMap) == 0x000188, "Member 'UKSC_AttrSet::LowerBoundLockerMap' has a wrong offset!");
 
-// Class KuroSimpleCombat.KSC_Buff
-// 0x0020 (0x0050 - 0x0030)
-class UKSC_Buff : public UObject
+// Class KuroSimpleCombat.KSC_BaseActor
+// 0x0008 (0x02B8 - 0x02B0)
+class AKSC_BaseActor : public AActor
 {
 public:
-	class UKSC_Entity*                            Caster_;                                           // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UKSC_Entity*                            Owner_;                                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UKSC_DA_Buff*                           DaBuff_;                                           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_48[0x8];                                       // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKSC_World*                             KscWorld;                                          // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_BaseActor">();
+	}
+	static class AKSC_BaseActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_BaseActor>();
+	}
+};
+static_assert(alignof(AKSC_BaseActor) == 0x000008, "Wrong alignment on AKSC_BaseActor");
+static_assert(sizeof(AKSC_BaseActor) == 0x0002B8, "Wrong size on AKSC_BaseActor");
+static_assert(offsetof(AKSC_BaseActor, KscWorld) == 0x0002B0, "Member 'AKSC_BaseActor::KscWorld' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_BossHeadUiHandle
+// 0x0010 (0x0048 - 0x0038)
+class UKSC_BossHeadUiHandle final : public UKSC_BaseObject
+{
+public:
+	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_BossHeadUiHandle">();
+	}
+	static class UKSC_BossHeadUiHandle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_BossHeadUiHandle>();
+	}
+};
+static_assert(alignof(UKSC_BossHeadUiHandle) == 0x000008, "Wrong alignment on UKSC_BossHeadUiHandle");
+static_assert(sizeof(UKSC_BossHeadUiHandle) == 0x000048, "Wrong size on UKSC_BossHeadUiHandle");
+
+// Class KuroSimpleCombat.KSC_Buff
+// 0x0028 (0x0060 - 0x0038)
+class UKSC_Buff : public UKSC_BaseObject
+{
+public:
+	class UKSC_SkillComp*                         Caster_;                                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_SkillComp*                         Owner_;                                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_DA_Buff*                           DaBuff_;                                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -63,17 +173,522 @@ public:
 	}
 };
 static_assert(alignof(UKSC_Buff) == 0x000008, "Wrong alignment on UKSC_Buff");
-static_assert(sizeof(UKSC_Buff) == 0x000050, "Wrong size on UKSC_Buff");
-static_assert(offsetof(UKSC_Buff, Caster_) == 0x000030, "Member 'UKSC_Buff::Caster_' has a wrong offset!");
-static_assert(offsetof(UKSC_Buff, Owner_) == 0x000038, "Member 'UKSC_Buff::Owner_' has a wrong offset!");
-static_assert(offsetof(UKSC_Buff, DaBuff_) == 0x000040, "Member 'UKSC_Buff::DaBuff_' has a wrong offset!");
+static_assert(sizeof(UKSC_Buff) == 0x000060, "Wrong size on UKSC_Buff");
+static_assert(offsetof(UKSC_Buff, Caster_) == 0x000038, "Member 'UKSC_Buff::Caster_' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff, Owner_) == 0x000040, "Member 'UKSC_Buff::Owner_' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff, DaBuff_) == 0x000048, "Member 'UKSC_Buff::DaBuff_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_AddSkill
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_AddSkill final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_AddSkill*                  DaBuffAddSkill_;                                   // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_AddSkill">();
+	}
+	static class UKSC_Buff_AddSkill* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_AddSkill>();
+	}
+};
+static_assert(alignof(UKSC_Buff_AddSkill) == 0x000008, "Wrong alignment on UKSC_Buff_AddSkill");
+static_assert(sizeof(UKSC_Buff_AddSkill) == 0x000068, "Wrong size on UKSC_Buff_AddSkill");
+static_assert(offsetof(UKSC_Buff_AddSkill, DaBuffAddSkill_) == 0x000060, "Member 'UKSC_Buff_AddSkill::DaBuffAddSkill_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_AddTargetFaction
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_AddTargetFaction final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_AddTargetFaction*          DaBuffAddTarget_;                                  // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_AddTargetFaction">();
+	}
+	static class UKSC_Buff_AddTargetFaction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_AddTargetFaction>();
+	}
+};
+static_assert(alignof(UKSC_Buff_AddTargetFaction) == 0x000008, "Wrong alignment on UKSC_Buff_AddTargetFaction");
+static_assert(sizeof(UKSC_Buff_AddTargetFaction) == 0x000068, "Wrong size on UKSC_Buff_AddTargetFaction");
+static_assert(offsetof(UKSC_Buff_AddTargetFaction, DaBuffAddTarget_) == 0x000060, "Member 'UKSC_Buff_AddTargetFaction::DaBuffAddTarget_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_AttrLockLowerBound
+// 0x0010 (0x0070 - 0x0060)
+class UKSC_Buff_AttrLockLowerBound final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_AttrLockLowerBound*        DaBuffAttrLockLowerBound_;                         // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_AttrLockLowerBound">();
+	}
+	static class UKSC_Buff_AttrLockLowerBound* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_AttrLockLowerBound>();
+	}
+};
+static_assert(alignof(UKSC_Buff_AttrLockLowerBound) == 0x000008, "Wrong alignment on UKSC_Buff_AttrLockLowerBound");
+static_assert(sizeof(UKSC_Buff_AttrLockLowerBound) == 0x000070, "Wrong size on UKSC_Buff_AttrLockLowerBound");
+static_assert(offsetof(UKSC_Buff_AttrLockLowerBound, DaBuffAttrLockLowerBound_) == 0x000060, "Member 'UKSC_Buff_AttrLockLowerBound::DaBuffAttrLockLowerBound_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Aura
+// 0x0010 (0x0070 - 0x0060)
+class UKSC_Buff_Aura final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_Aura*                      DaBuffAura_;                                       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Aura">();
+	}
+	static class UKSC_Buff_Aura* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Aura>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Aura) == 0x000008, "Wrong alignment on UKSC_Buff_Aura");
+static_assert(sizeof(UKSC_Buff_Aura) == 0x000070, "Wrong size on UKSC_Buff_Aura");
+static_assert(offsetof(UKSC_Buff_Aura, DaBuffAura_) == 0x000060, "Member 'UKSC_Buff_Aura::DaBuffAura_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Stack
+// 0x0080 (0x00E0 - 0x0060)
+class UKSC_Buff_Stack : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_Stack*                     DaBuffStack_;                                      // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x78];                                      // 0x0068(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Stack">();
+	}
+	static class UKSC_Buff_Stack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Stack>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Stack) == 0x000008, "Wrong alignment on UKSC_Buff_Stack");
+static_assert(sizeof(UKSC_Buff_Stack) == 0x0000E0, "Wrong size on UKSC_Buff_Stack");
+static_assert(offsetof(UKSC_Buff_Stack, DaBuffStack_) == 0x000060, "Member 'UKSC_Buff_Stack::DaBuffStack_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_AuraWithStack
+// 0x0018 (0x00F8 - 0x00E0)
+class UKSC_Buff_AuraWithStack final : public UKSC_Buff_Stack
+{
+public:
+	class UKSC_DA_Buff_AuraWithStack*             DaBuffAuraWithStack;                               // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_E8[0x10];                                      // 0x00E8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_AuraWithStack">();
+	}
+	static class UKSC_Buff_AuraWithStack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_AuraWithStack>();
+	}
+};
+static_assert(alignof(UKSC_Buff_AuraWithStack) == 0x000008, "Wrong alignment on UKSC_Buff_AuraWithStack");
+static_assert(sizeof(UKSC_Buff_AuraWithStack) == 0x0000F8, "Wrong size on UKSC_Buff_AuraWithStack");
+static_assert(offsetof(UKSC_Buff_AuraWithStack, DaBuffAuraWithStack) == 0x0000E0, "Member 'UKSC_Buff_AuraWithStack::DaBuffAuraWithStack' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ChainLightning
+// 0x0058 (0x00B8 - 0x0060)
+class UKSC_Buff_ChainLightning final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ChainLightning*            DaBuff_ChainLightning_;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x50];                                      // 0x0068(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ChainLightning">();
+	}
+	static class UKSC_Buff_ChainLightning* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ChainLightning>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ChainLightning) == 0x000008, "Wrong alignment on UKSC_Buff_ChainLightning");
+static_assert(sizeof(UKSC_Buff_ChainLightning) == 0x0000B8, "Wrong size on UKSC_Buff_ChainLightning");
+static_assert(offsetof(UKSC_Buff_ChainLightning, DaBuff_ChainLightning_) == 0x000060, "Member 'UKSC_Buff_ChainLightning::DaBuff_ChainLightning_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Damage
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_Damage final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_Damage*                    DaBuffDamage_;                                     // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Damage">();
+	}
+	static class UKSC_Buff_Damage* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Damage>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Damage) == 0x000008, "Wrong alignment on UKSC_Buff_Damage");
+static_assert(sizeof(UKSC_Buff_Damage) == 0x000068, "Wrong size on UKSC_Buff_Damage");
+static_assert(offsetof(UKSC_Buff_Damage, DaBuffDamage_) == 0x000060, "Member 'UKSC_Buff_Damage::DaBuffDamage_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_DamageAllEnemy
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_DamageAllEnemy final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_DamageAllEnemy*            DaBuffDamageAllEnemy_;                             // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_DamageAllEnemy">();
+	}
+	static class UKSC_Buff_DamageAllEnemy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_DamageAllEnemy>();
+	}
+};
+static_assert(alignof(UKSC_Buff_DamageAllEnemy) == 0x000008, "Wrong alignment on UKSC_Buff_DamageAllEnemy");
+static_assert(sizeof(UKSC_Buff_DamageAllEnemy) == 0x000068, "Wrong size on UKSC_Buff_DamageAllEnemy");
+static_assert(offsetof(UKSC_Buff_DamageAllEnemy, DaBuffDamageAllEnemy_) == 0x000060, "Member 'UKSC_Buff_DamageAllEnemy::DaBuffDamageAllEnemy_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_DiffTransferAddAttr
+// 0x0080 (0x0160 - 0x00E0)
+class UKSC_Buff_DiffTransferAddAttr final : public UKSC_Buff_Stack
+{
+public:
+	uint8                                         Pad_E0[0x78];                                      // 0x00E0(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff_DiffTransferAddAttr*       TransferAddAttr;                                   // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	void OnAttrChange(EKSC_AttrType AttrType, int32 Value);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_DiffTransferAddAttr">();
+	}
+	static class UKSC_Buff_DiffTransferAddAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_DiffTransferAddAttr>();
+	}
+};
+static_assert(alignof(UKSC_Buff_DiffTransferAddAttr) == 0x000008, "Wrong alignment on UKSC_Buff_DiffTransferAddAttr");
+static_assert(sizeof(UKSC_Buff_DiffTransferAddAttr) == 0x000160, "Wrong size on UKSC_Buff_DiffTransferAddAttr");
+static_assert(offsetof(UKSC_Buff_DiffTransferAddAttr, TransferAddAttr) == 0x000158, "Member 'UKSC_Buff_DiffTransferAddAttr::TransferAddAttr' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ImmuneBuff
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_ImmuneBuff final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ImmuneBuff*                DaBuffImmuneBuff_;                                 // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ImmuneBuff">();
+	}
+	static class UKSC_Buff_ImmuneBuff* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ImmuneBuff>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ImmuneBuff) == 0x000008, "Wrong alignment on UKSC_Buff_ImmuneBuff");
+static_assert(sizeof(UKSC_Buff_ImmuneBuff) == 0x000068, "Wrong size on UKSC_Buff_ImmuneBuff");
+static_assert(offsetof(UKSC_Buff_ImmuneBuff, DaBuffImmuneBuff_) == 0x000060, "Member 'UKSC_Buff_ImmuneBuff::DaBuffImmuneBuff_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Invisible
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_Invisible final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_Invisible*                 DaBuffInvisible_;                                  // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Invisible">();
+	}
+	static class UKSC_Buff_Invisible* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Invisible>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Invisible) == 0x000008, "Wrong alignment on UKSC_Buff_Invisible");
+static_assert(sizeof(UKSC_Buff_Invisible) == 0x000068, "Wrong size on UKSC_Buff_Invisible");
+static_assert(offsetof(UKSC_Buff_Invisible, DaBuffInvisible_) == 0x000060, "Member 'UKSC_Buff_Invisible::DaBuffInvisible_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_LandFireSpawner
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_LandFireSpawner final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_LandFireSpawner*           DaBuffLandFireSpawner_;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_LandFireSpawner">();
+	}
+	static class UKSC_Buff_LandFireSpawner* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_LandFireSpawner>();
+	}
+};
+static_assert(alignof(UKSC_Buff_LandFireSpawner) == 0x000008, "Wrong alignment on UKSC_Buff_LandFireSpawner");
+static_assert(sizeof(UKSC_Buff_LandFireSpawner) == 0x000068, "Wrong size on UKSC_Buff_LandFireSpawner");
+static_assert(offsetof(UKSC_Buff_LandFireSpawner, DaBuffLandFireSpawner_) == 0x000060, "Member 'UKSC_Buff_LandFireSpawner::DaBuffLandFireSpawner_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ListenEvent
+// 0x00B0 (0x0110 - 0x0060)
+class UKSC_Buff_ListenEvent final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ListenEvent*               DaBuffListenEvent_;                                // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EKSC_Buff_ListenEvent_ListenType              ListenEvent;                                       // 0x0068(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EKSC_Buff_ListenEvent_Response                ListenEvent_Response;                              // 0x0069(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_6A[0x6];                                       // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_TagFilter                         ResponseCheckTagFilter;                            // 0x0070(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FKSC_DamageTypeFilter                  DamageTypeFilter;                                  // 0x0098(0x0018)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	EKSC_Event_HitTarget                          CheckTarget;                                       // 0x00B0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B1[0x7];                                       // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  ResponseTag;                                       // 0x00B8(0x0020)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FGameplayTag                           ListenTag;                                         // 0x00D8(0x000C)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ListenTagCount;                                    // 0x00E4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          ClearListenTag;                                    // 0x00E8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          CheckTagOnBeginBuff;                               // 0x00E9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_EA[0x6];                                       // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff*                           AddOrRemoveBuff;                                   // 0x00F0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         BuffStackNum;                                      // 0x00F8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_AdditionalAttack*               AdditionalAttack;                                  // 0x0100(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ListenEvent">();
+	}
+	static class UKSC_Buff_ListenEvent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ListenEvent>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ListenEvent) == 0x000008, "Wrong alignment on UKSC_Buff_ListenEvent");
+static_assert(sizeof(UKSC_Buff_ListenEvent) == 0x000110, "Wrong size on UKSC_Buff_ListenEvent");
+static_assert(offsetof(UKSC_Buff_ListenEvent, DaBuffListenEvent_) == 0x000060, "Member 'UKSC_Buff_ListenEvent::DaBuffListenEvent_' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, ListenEvent) == 0x000068, "Member 'UKSC_Buff_ListenEvent::ListenEvent' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, ListenEvent_Response) == 0x000069, "Member 'UKSC_Buff_ListenEvent::ListenEvent_Response' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, ResponseCheckTagFilter) == 0x000070, "Member 'UKSC_Buff_ListenEvent::ResponseCheckTagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, DamageTypeFilter) == 0x000098, "Member 'UKSC_Buff_ListenEvent::DamageTypeFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, CheckTarget) == 0x0000B0, "Member 'UKSC_Buff_ListenEvent::CheckTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, ResponseTag) == 0x0000B8, "Member 'UKSC_Buff_ListenEvent::ResponseTag' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, ListenTag) == 0x0000D8, "Member 'UKSC_Buff_ListenEvent::ListenTag' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, ListenTagCount) == 0x0000E4, "Member 'UKSC_Buff_ListenEvent::ListenTagCount' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, ClearListenTag) == 0x0000E8, "Member 'UKSC_Buff_ListenEvent::ClearListenTag' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, CheckTagOnBeginBuff) == 0x0000E9, "Member 'UKSC_Buff_ListenEvent::CheckTagOnBeginBuff' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, AddOrRemoveBuff) == 0x0000F0, "Member 'UKSC_Buff_ListenEvent::AddOrRemoveBuff' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, BuffStackNum) == 0x0000F8, "Member 'UKSC_Buff_ListenEvent::BuffStackNum' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ListenEvent, AdditionalAttack) == 0x000100, "Member 'UKSC_Buff_ListenEvent::AdditionalAttack' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ModifyAttr
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_ModifyAttr final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ModifyAttr*                DaBuffModifyAttr_;                                 // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ModifyAttr">();
+	}
+	static class UKSC_Buff_ModifyAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ModifyAttr>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ModifyAttr) == 0x000008, "Wrong alignment on UKSC_Buff_ModifyAttr");
+static_assert(sizeof(UKSC_Buff_ModifyAttr) == 0x000068, "Wrong size on UKSC_Buff_ModifyAttr");
+static_assert(offsetof(UKSC_Buff_ModifyAttr, DaBuffModifyAttr_) == 0x000060, "Member 'UKSC_Buff_ModifyAttr::DaBuffModifyAttr_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ModifyAttr_BeforeAfterApplyBuff
+// 0x0010 (0x0070 - 0x0060)
+class UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff* DaBuffModifyAttr_;                           // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ModifyAttr_BeforeAfterApplyBuff">();
+	}
+	static class UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff) == 0x000008, "Wrong alignment on UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff");
+static_assert(sizeof(UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff) == 0x000070, "Wrong size on UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff, DaBuffModifyAttr_) == 0x000060, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterApplyBuff::DaBuffModifyAttr_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ModifyAttr_BeforeAfterHit
+// 0x00C0 (0x0120 - 0x0060)
+class UKSC_Buff_ModifyAttr_BeforeAfterHit final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ModifyAttr_BeforeAfterHit* DaBuffModifyAttr_;                                 // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EKSC_Buff_ModifyAttr_BeforeAfterHit_CheckType CheckType;                                         // 0x0068(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_DamageTypeFilter                  DamageTypeFilter;                                  // 0x0070(0x0018)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	EKSC_Event_HitTarget                          CheckTarget;                                       // 0x0088(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EKSC_Event_HitTarget                          ModifyTarget;                                      // 0x0089(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_8A[0x6];                                       // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_TagFilter                         CheckTagFilter;                                    // 0x0090(0x0028)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	struct FGameplayTag                           CheckCountTag;                                     // 0x00B8(0x000C)(Edit, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         TagCount;                                          // 0x00C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<EKSC_AttrType, int32>                    ModifyMap;                                         // 0x00C8(0x0050)(Edit, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_118[0x8];                                      // 0x0118(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ModifyAttr_BeforeAfterHit">();
+	}
+	static class UKSC_Buff_ModifyAttr_BeforeAfterHit* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ModifyAttr_BeforeAfterHit>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ModifyAttr_BeforeAfterHit) == 0x000008, "Wrong alignment on UKSC_Buff_ModifyAttr_BeforeAfterHit");
+static_assert(sizeof(UKSC_Buff_ModifyAttr_BeforeAfterHit) == 0x000120, "Wrong size on UKSC_Buff_ModifyAttr_BeforeAfterHit");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, DaBuffModifyAttr_) == 0x000060, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::DaBuffModifyAttr_' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, CheckType) == 0x000068, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::CheckType' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, DamageTypeFilter) == 0x000070, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::DamageTypeFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, CheckTarget) == 0x000088, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::CheckTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, ModifyTarget) == 0x000089, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::ModifyTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, CheckTagFilter) == 0x000090, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::CheckTagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, CheckCountTag) == 0x0000B8, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::CheckCountTag' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, TagCount) == 0x0000C4, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::TagCount' has a wrong offset!");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_BeforeAfterHit, ModifyMap) == 0x0000C8, "Member 'UKSC_Buff_ModifyAttr_BeforeAfterHit::ModifyMap' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ModifyAttr_ByWorldAttr
+// 0x0010 (0x0070 - 0x0060)
+class UKSC_Buff_ModifyAttr_ByWorldAttr final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ModifyAttr_ByWorldAttr*    DaBuffModifyAttr_;                                 // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ModifyAttr_ByWorldAttr">();
+	}
+	static class UKSC_Buff_ModifyAttr_ByWorldAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ModifyAttr_ByWorldAttr>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ModifyAttr_ByWorldAttr) == 0x000008, "Wrong alignment on UKSC_Buff_ModifyAttr_ByWorldAttr");
+static_assert(sizeof(UKSC_Buff_ModifyAttr_ByWorldAttr) == 0x000070, "Wrong size on UKSC_Buff_ModifyAttr_ByWorldAttr");
+static_assert(offsetof(UKSC_Buff_ModifyAttr_ByWorldAttr, DaBuffModifyAttr_) == 0x000060, "Member 'UKSC_Buff_ModifyAttr_ByWorldAttr::DaBuffModifyAttr_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ModifyAttrRatio
+// 0x0058 (0x00B8 - 0x0060)
+class UKSC_Buff_ModifyAttrRatio final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ModifyAttrRatio*           DaBuffModifyAttrRatio_;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x50];                                      // 0x0068(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ModifyAttrRatio">();
+	}
+	static class UKSC_Buff_ModifyAttrRatio* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ModifyAttrRatio>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ModifyAttrRatio) == 0x000008, "Wrong alignment on UKSC_Buff_ModifyAttrRatio");
+static_assert(sizeof(UKSC_Buff_ModifyAttrRatio) == 0x0000B8, "Wrong size on UKSC_Buff_ModifyAttrRatio");
+static_assert(offsetof(UKSC_Buff_ModifyAttrRatio, DaBuffModifyAttrRatio_) == 0x000060, "Member 'UKSC_Buff_ModifyAttrRatio::DaBuffModifyAttrRatio_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ModifyHitDamage
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_ModifyHitDamage final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ModifyHitDamage*           DaBuffModifyHitDamage_;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ModifyHitDamage">();
+	}
+	static class UKSC_Buff_ModifyHitDamage* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ModifyHitDamage>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ModifyHitDamage) == 0x000008, "Wrong alignment on UKSC_Buff_ModifyHitDamage");
+static_assert(sizeof(UKSC_Buff_ModifyHitDamage) == 0x000068, "Wrong size on UKSC_Buff_ModifyHitDamage");
+static_assert(offsetof(UKSC_Buff_ModifyHitDamage, DaBuffModifyHitDamage_) == 0x000060, "Member 'UKSC_Buff_ModifyHitDamage::DaBuffModifyHitDamage_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ModifyLifeRatio
+// 0x0010 (0x0070 - 0x0060)
+class UKSC_Buff_ModifyLifeRatio final : public UKSC_Buff
+{
+public:
+	class UKsc_Da_Buff_ModifyLifeRatio*           DaBuffModifyHpPercent_;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ModifyLifeRatio">();
+	}
+	static class UKSC_Buff_ModifyLifeRatio* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ModifyLifeRatio>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ModifyLifeRatio) == 0x000008, "Wrong alignment on UKSC_Buff_ModifyLifeRatio");
+static_assert(sizeof(UKSC_Buff_ModifyLifeRatio) == 0x000070, "Wrong size on UKSC_Buff_ModifyLifeRatio");
+static_assert(offsetof(UKSC_Buff_ModifyLifeRatio, DaBuffModifyHpPercent_) == 0x000060, "Member 'UKSC_Buff_ModifyLifeRatio::DaBuffModifyHpPercent_' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_Buff_Period
-// 0x0010 (0x0060 - 0x0050)
+// 0x0018 (0x0078 - 0x0060)
 class UKSC_Buff_Period : public UKSC_Buff
 {
 public:
-	uint8                                         Pad_50[0x10];                                      // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff_Period*                    DaBuffPeriod_;                                     // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x10];                                      // 0x0068(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -86,46 +701,350 @@ public:
 	}
 };
 static_assert(alignof(UKSC_Buff_Period) == 0x000008, "Wrong alignment on UKSC_Buff_Period");
-static_assert(sizeof(UKSC_Buff_Period) == 0x000060, "Wrong size on UKSC_Buff_Period");
+static_assert(sizeof(UKSC_Buff_Period) == 0x000078, "Wrong size on UKSC_Buff_Period");
+static_assert(offsetof(UKSC_Buff_Period, DaBuffPeriod_) == 0x000060, "Member 'UKSC_Buff_Period::DaBuffPeriod_' has a wrong offset!");
 
-// Class KuroSimpleCombat.KSC_Buff_Period_Damage
-// 0x0008 (0x0068 - 0x0060)
-class UKSC_Buff_Period_Damage final : public UKSC_Buff_Period
+// Class KuroSimpleCombat.KSC_Buff_Period_Action
+// 0x0008 (0x0080 - 0x0078)
+class UKSC_Buff_Period_Action final : public UKSC_Buff_Period
 {
 public:
-	uint8                                         Pad_60[0x8];                                       // 0x0060(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff_Period_Action*             DaBuffPeriodAction_;                               // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_Buff_Period_Damage">();
+		return StaticClassImpl<"KSC_Buff_Period_Action">();
 	}
-	static class UKSC_Buff_Period_Damage* GetDefaultObj()
+	static class UKSC_Buff_Period_Action* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSC_Buff_Period_Damage>();
+		return GetDefaultObjImpl<UKSC_Buff_Period_Action>();
 	}
 };
-static_assert(alignof(UKSC_Buff_Period_Damage) == 0x000008, "Wrong alignment on UKSC_Buff_Period_Damage");
-static_assert(sizeof(UKSC_Buff_Period_Damage) == 0x000068, "Wrong size on UKSC_Buff_Period_Damage");
+static_assert(alignof(UKSC_Buff_Period_Action) == 0x000008, "Wrong alignment on UKSC_Buff_Period_Action");
+static_assert(sizeof(UKSC_Buff_Period_Action) == 0x000080, "Wrong size on UKSC_Buff_Period_Action");
+static_assert(offsetof(UKSC_Buff_Period_Action, DaBuffPeriodAction_) == 0x000078, "Member 'UKSC_Buff_Period_Action::DaBuffPeriodAction_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Pull
+// 0x0090 (0x00F0 - 0x0060)
+class alignas(0x10) UKSC_Buff_Pull final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_Pull*                      DaBuffPull_;                                       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x88];                                      // 0x0068(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Pull">();
+	}
+	static class UKSC_Buff_Pull* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Pull>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Pull) == 0x000010, "Wrong alignment on UKSC_Buff_Pull");
+static_assert(sizeof(UKSC_Buff_Pull) == 0x0000F0, "Wrong size on UKSC_Buff_Pull");
+static_assert(offsetof(UKSC_Buff_Pull, DaBuffPull_) == 0x000060, "Member 'UKSC_Buff_Pull::DaBuffPull_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Push
+// 0x0038 (0x0098 - 0x0060)
+class UKSC_Buff_Push final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_Push*                      DaBuffPush_;                                       // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x30];                                      // 0x0068(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Push">();
+	}
+	static class UKSC_Buff_Push* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Push>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Push) == 0x000008, "Wrong alignment on UKSC_Buff_Push");
+static_assert(sizeof(UKSC_Buff_Push) == 0x000098, "Wrong size on UKSC_Buff_Push");
+static_assert(offsetof(UKSC_Buff_Push, DaBuffPush_) == 0x000060, "Member 'UKSC_Buff_Push::DaBuffPush_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_RemoveBuffByTags
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_RemoveBuffByTags final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_RemoveBuffByTags*          DaBuff_RemoveBuffByTag_;                           // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_RemoveBuffByTags">();
+	}
+	static class UKSC_Buff_RemoveBuffByTags* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_RemoveBuffByTags>();
+	}
+};
+static_assert(alignof(UKSC_Buff_RemoveBuffByTags) == 0x000008, "Wrong alignment on UKSC_Buff_RemoveBuffByTags");
+static_assert(sizeof(UKSC_Buff_RemoveBuffByTags) == 0x000068, "Wrong size on UKSC_Buff_RemoveBuffByTags");
+static_assert(offsetof(UKSC_Buff_RemoveBuffByTags, DaBuff_RemoveBuffByTag_) == 0x000060, "Member 'UKSC_Buff_RemoveBuffByTags::DaBuff_RemoveBuffByTag_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_ShieldEffect
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_ShieldEffect final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_ShieldEffect*              DaBuffShield_;                                     // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_ShieldEffect">();
+	}
+	static class UKSC_Buff_ShieldEffect* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_ShieldEffect>();
+	}
+};
+static_assert(alignof(UKSC_Buff_ShieldEffect) == 0x000008, "Wrong alignment on UKSC_Buff_ShieldEffect");
+static_assert(sizeof(UKSC_Buff_ShieldEffect) == 0x000068, "Wrong size on UKSC_Buff_ShieldEffect");
+static_assert(offsetof(UKSC_Buff_ShieldEffect, DaBuffShield_) == 0x000060, "Member 'UKSC_Buff_ShieldEffect::DaBuffShield_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Stack_ModifyAttr
+// 0x0010 (0x00F0 - 0x00E0)
+class UKSC_Buff_Stack_ModifyAttr final : public UKSC_Buff_Stack
+{
+public:
+	class UKSC_DA_Buff_Stack_ModifyAttr*          DaBuffStackModifyAttr_;                            // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Stack_ModifyAttr">();
+	}
+	static class UKSC_Buff_Stack_ModifyAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Stack_ModifyAttr>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Stack_ModifyAttr) == 0x000008, "Wrong alignment on UKSC_Buff_Stack_ModifyAttr");
+static_assert(sizeof(UKSC_Buff_Stack_ModifyAttr) == 0x0000F0, "Wrong size on UKSC_Buff_Stack_ModifyAttr");
+static_assert(offsetof(UKSC_Buff_Stack_ModifyAttr, DaBuffStackModifyAttr_) == 0x0000E0, "Member 'UKSC_Buff_Stack_ModifyAttr::DaBuffStackModifyAttr_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Stack_ModifyLifeRatio
+// 0x0010 (0x00F0 - 0x00E0)
+class UKSC_Buff_Stack_ModifyLifeRatio final : public UKSC_Buff_Stack
+{
+public:
+	class UKSC_DA_Buff_Stack_ModifyLifeRatio*     DaBuffStackModifyLifeRatio_;                       // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_E8[0x8];                                       // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Stack_ModifyLifeRatio">();
+	}
+	static class UKSC_Buff_Stack_ModifyLifeRatio* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Stack_ModifyLifeRatio>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Stack_ModifyLifeRatio) == 0x000008, "Wrong alignment on UKSC_Buff_Stack_ModifyLifeRatio");
+static_assert(sizeof(UKSC_Buff_Stack_ModifyLifeRatio) == 0x0000F0, "Wrong size on UKSC_Buff_Stack_ModifyLifeRatio");
+static_assert(offsetof(UKSC_Buff_Stack_ModifyLifeRatio, DaBuffStackModifyLifeRatio_) == 0x0000E0, "Member 'UKSC_Buff_Stack_ModifyLifeRatio::DaBuffStackModifyLifeRatio_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_StopAction
+// 0x0010 (0x0070 - 0x0060)
+class UKSC_Buff_StopAction final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_StopAction*                DaBuffMoveStop_;                                   // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_StopAction">();
+	}
+	static class UKSC_Buff_StopAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_StopAction>();
+	}
+};
+static_assert(alignof(UKSC_Buff_StopAction) == 0x000008, "Wrong alignment on UKSC_Buff_StopAction");
+static_assert(sizeof(UKSC_Buff_StopAction) == 0x000070, "Wrong size on UKSC_Buff_StopAction");
+static_assert(offsetof(UKSC_Buff_StopAction, DaBuffMoveStop_) == 0x000060, "Member 'UKSC_Buff_StopAction::DaBuffMoveStop_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_TransferAddAttr
+// 0x0080 (0x0160 - 0x00E0)
+class UKSC_Buff_TransferAddAttr final : public UKSC_Buff_Stack
+{
+public:
+	uint8                                         Pad_E0[0x78];                                      // 0x00E0(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff_TransferAddAttr*           TransferAddAttr;                                   // 0x0158(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	void OnAttrChange(EKSC_AttrType AttrType, int32 Value);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_TransferAddAttr">();
+	}
+	static class UKSC_Buff_TransferAddAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_TransferAddAttr>();
+	}
+};
+static_assert(alignof(UKSC_Buff_TransferAddAttr) == 0x000008, "Wrong alignment on UKSC_Buff_TransferAddAttr");
+static_assert(sizeof(UKSC_Buff_TransferAddAttr) == 0x000160, "Wrong size on UKSC_Buff_TransferAddAttr");
+static_assert(offsetof(UKSC_Buff_TransferAddAttr, TransferAddAttr) == 0x000158, "Member 'UKSC_Buff_TransferAddAttr::TransferAddAttr' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Buff_Unattackable_Spline
+// 0x0008 (0x0068 - 0x0060)
+class UKSC_Buff_Unattackable_Spline final : public UKSC_Buff
+{
+public:
+	class UKSC_DA_Buff_Unattackable_Spline*       DaBuffUnattackable_;                               // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Buff_Unattackable_Spline">();
+	}
+	static class UKSC_Buff_Unattackable_Spline* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Buff_Unattackable_Spline>();
+	}
+};
+static_assert(alignof(UKSC_Buff_Unattackable_Spline) == 0x000008, "Wrong alignment on UKSC_Buff_Unattackable_Spline");
+static_assert(sizeof(UKSC_Buff_Unattackable_Spline) == 0x000068, "Wrong size on UKSC_Buff_Unattackable_Spline");
+static_assert(offsetof(UKSC_Buff_Unattackable_Spline, DaBuffUnattackable_) == 0x000060, "Member 'UKSC_Buff_Unattackable_Spline::DaBuffUnattackable_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_BuffId
+// 0x0050 (0x0080 - 0x0030)
+class UKSC_BuffId final : public UObject
+{
+public:
+	TMap<int32, class UKSC_DA_Buff*>              BuffDa;                                            // 0x0030(0x0050)(NativeAccessSpecifierPrivate)
+
+public:
+	void AddBuffDA(const int64 BuffId, class UKSC_DA_Buff* Data);
+	void ClearBuffDA();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_BuffId">();
+	}
+	static class UKSC_BuffId* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_BuffId>();
+	}
+};
+static_assert(alignof(UKSC_BuffId) == 0x000008, "Wrong alignment on UKSC_BuffId");
+static_assert(sizeof(UKSC_BuffId) == 0x000080, "Wrong size on UKSC_BuffId");
+static_assert(offsetof(UKSC_BuffId, BuffDa) == 0x000030, "Member 'UKSC_BuffId::BuffDa' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Bullet
+// 0x00E8 (0x0120 - 0x0038)
+#pragma pack(push, 0x1)
+class alignas(0x10) UKSC_Bullet : public UKSC_BaseObject
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_SkillComp*                         Owner_;                                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNiagaraComponent*                      Niagara;                                           // 0x0048(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_SkillComp*                         TargetEntity;                                      // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_58[0x8];                                       // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_BulletTargetContext               TargetContext;                                     // 0x0060(0x0040)(NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A0[0x78];                                      // 0x00A0(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Bullet">();
+	}
+	static class UKSC_Bullet* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Bullet>();
+	}
+};
+#pragma pack(pop)
+static_assert(alignof(UKSC_Bullet) == 0x000010, "Wrong alignment on UKSC_Bullet");
+static_assert(sizeof(UKSC_Bullet) == 0x000120, "Wrong size on UKSC_Bullet");
+static_assert(offsetof(UKSC_Bullet, Owner_) == 0x000040, "Member 'UKSC_Bullet::Owner_' has a wrong offset!");
+static_assert(offsetof(UKSC_Bullet, Niagara) == 0x000048, "Member 'UKSC_Bullet::Niagara' has a wrong offset!");
+static_assert(offsetof(UKSC_Bullet, TargetEntity) == 0x000050, "Member 'UKSC_Bullet::TargetEntity' has a wrong offset!");
+static_assert(offsetof(UKSC_Bullet, TargetContext) == 0x000060, "Member 'UKSC_Bullet::TargetContext' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_BulletPierce
+// 0x0030 (0x0150 - 0x0120)
+class UKSC_BulletPierce final : public UKSC_Bullet
+{
+public:
+	TArray<class UKSC_SkillComp*>                 Targets_;                                          // 0x0118(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_128[0x28];                                     // 0x0128(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_BulletPierce">();
+	}
+	static class UKSC_BulletPierce* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_BulletPierce>();
+	}
+};
+static_assert(alignof(UKSC_BulletPierce) == 0x000010, "Wrong alignment on UKSC_BulletPierce");
+static_assert(sizeof(UKSC_BulletPierce) == 0x000150, "Wrong size on UKSC_BulletPierce");
+static_assert(offsetof(UKSC_BulletPierce, Targets_) == 0x000118, "Member 'UKSC_BulletPierce::Targets_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_CompBase
+// 0x0018 (0x0050 - 0x0038)
+class UKSC_CompBase : public UKSC_BaseObject
+{
+public:
+	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_CompBase">();
+	}
+	static class UKSC_CompBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_CompBase>();
+	}
+};
+static_assert(alignof(UKSC_CompBase) == 0x000008, "Wrong alignment on UKSC_CompBase");
+static_assert(sizeof(UKSC_CompBase) == 0x000050, "Wrong size on UKSC_CompBase");
 
 // Class KuroSimpleCombat.KSC_DA_Entity
-// 0x0058 (0x0090 - 0x0038)
+// 0x00C0 (0x00F8 - 0x0038)
 class UKSC_DA_Entity : public UDataAsset
 {
 public:
-	TSubclassOf<class UKSC_Entity>                RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_SearchType                               SelfNeighborsType;                                 // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_SearchType                               TargetNeighborsType;                               // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_42[0x6];                                       // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_DA_EntityRender*                   Render;                                            // 0x0048(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_AttrSet*                        AttrSet;                                           // 0x0050(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_Move*                           Move;                                              // 0x0058(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UKSC_DA_Skill*>                  Skills;                                            // 0x0060(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<class UKSC_DA_Buff*>                   Buffs;                                             // 0x0070(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	float                                         ColliderRadius;                                    // 0x0080(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         NeighborDist;                                      // 0x0084(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MaxNeighborsNum;                                   // 0x0088(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TurnRate;                                          // 0x008C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AKSC_Entity>                RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class AActor>                     EntityClass;                                       // 0x0040(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Faction                                  Default_Faction;                                   // 0x0048(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKSC_Faction>                          Default_IgnoreFactions;                            // 0x0050(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class UKSC_DA_SceneComp*                      SceneComp;                                         // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_SkillComp*                      SkillComp;                                         // 0x0068(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_EntityRender*                   Render;                                            // 0x0070(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_Move*                           Move;                                              // 0x0078(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RemoveDelay;                                       // 0x0080(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableHeadUI;                                      // 0x0084(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_HeadUiType                               HeadUiType;                                        // 0x0085(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_86[0x2];                                       // 0x0086(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                HeadUiOffset;                                      // 0x0088(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfHeight;                                        // 0x0094(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EnemyUIType;                                       // 0x0098(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   EntityTypeName;                                    // 0x009C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FTransform>          SocketTransform;                                   // 0x00A8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -138,28 +1057,130 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_Entity) == 0x000008, "Wrong alignment on UKSC_DA_Entity");
-static_assert(sizeof(UKSC_DA_Entity) == 0x000090, "Wrong size on UKSC_DA_Entity");
+static_assert(sizeof(UKSC_DA_Entity) == 0x0000F8, "Wrong size on UKSC_DA_Entity");
 static_assert(offsetof(UKSC_DA_Entity, RuntimeClass) == 0x000038, "Member 'UKSC_DA_Entity::RuntimeClass' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, SelfNeighborsType) == 0x000040, "Member 'UKSC_DA_Entity::SelfNeighborsType' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, TargetNeighborsType) == 0x000041, "Member 'UKSC_DA_Entity::TargetNeighborsType' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, Render) == 0x000048, "Member 'UKSC_DA_Entity::Render' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, AttrSet) == 0x000050, "Member 'UKSC_DA_Entity::AttrSet' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, Move) == 0x000058, "Member 'UKSC_DA_Entity::Move' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, Skills) == 0x000060, "Member 'UKSC_DA_Entity::Skills' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, Buffs) == 0x000070, "Member 'UKSC_DA_Entity::Buffs' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, ColliderRadius) == 0x000080, "Member 'UKSC_DA_Entity::ColliderRadius' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, NeighborDist) == 0x000084, "Member 'UKSC_DA_Entity::NeighborDist' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, MaxNeighborsNum) == 0x000088, "Member 'UKSC_DA_Entity::MaxNeighborsNum' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Entity, TurnRate) == 0x00008C, "Member 'UKSC_DA_Entity::TurnRate' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, EntityClass) == 0x000040, "Member 'UKSC_DA_Entity::EntityClass' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, Default_Faction) == 0x000048, "Member 'UKSC_DA_Entity::Default_Faction' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, Default_IgnoreFactions) == 0x000050, "Member 'UKSC_DA_Entity::Default_IgnoreFactions' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, SceneComp) == 0x000060, "Member 'UKSC_DA_Entity::SceneComp' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, SkillComp) == 0x000068, "Member 'UKSC_DA_Entity::SkillComp' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, Render) == 0x000070, "Member 'UKSC_DA_Entity::Render' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, Move) == 0x000078, "Member 'UKSC_DA_Entity::Move' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, RemoveDelay) == 0x000080, "Member 'UKSC_DA_Entity::RemoveDelay' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, EnableHeadUI) == 0x000084, "Member 'UKSC_DA_Entity::EnableHeadUI' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, HeadUiType) == 0x000085, "Member 'UKSC_DA_Entity::HeadUiType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, HeadUiOffset) == 0x000088, "Member 'UKSC_DA_Entity::HeadUiOffset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, HalfHeight) == 0x000094, "Member 'UKSC_DA_Entity::HalfHeight' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, EnemyUIType) == 0x000098, "Member 'UKSC_DA_Entity::EnemyUIType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, EntityTypeName) == 0x00009C, "Member 'UKSC_DA_Entity::EntityTypeName' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity, SocketTransform) == 0x0000A8, "Member 'UKSC_DA_Entity::SocketTransform' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_CompBase
+// 0x0008 (0x0040 - 0x0038)
+class UKSC_DA_CompBase : public UDataAsset
+{
+public:
+	TSubclassOf<class UKSC_CompBase>              RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_CompBase">();
+	}
+	static class UKSC_DA_CompBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_CompBase>();
+	}
+};
+static_assert(alignof(UKSC_DA_CompBase) == 0x000008, "Wrong alignment on UKSC_DA_CompBase");
+static_assert(sizeof(UKSC_DA_CompBase) == 0x000040, "Wrong size on UKSC_DA_CompBase");
+static_assert(offsetof(UKSC_DA_CompBase, RuntimeClass) == 0x000038, "Member 'UKSC_DA_CompBase::RuntimeClass' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_SceneComp
+// 0x0090 (0x00D0 - 0x0040)
+class UKSC_DA_SceneComp final : public UKSC_DA_CompBase
+{
+public:
+	EKSC_SearchType                               SelfNeighborsType;                                 // 0x0040(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKSC_SearchType>                       TargetNeighborsTypes;                              // 0x0048(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	float                                         NeighborDist;                                      // 0x0058(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxNeighborsNum;                                   // 0x005C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ColliderRadius;                                    // 0x0060(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Mass;                                              // 0x0064(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableCapsuleComponent;                           // 0x0068(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIgnoreUpdateOverlap;                              // 0x0069(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OverrideNeighborCenter;                            // 0x006A(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6B[0x5];                                       // 0x006B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_Range                             OverrideNeighborRange;                             // 0x0070(0x0050)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          CheckWorldObstacles;                               // 0x00C0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C1[0xF];                                       // 0x00C1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_SceneComp">();
+	}
+	static class UKSC_DA_SceneComp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_SceneComp>();
+	}
+};
+static_assert(alignof(UKSC_DA_SceneComp) == 0x000010, "Wrong alignment on UKSC_DA_SceneComp");
+static_assert(sizeof(UKSC_DA_SceneComp) == 0x0000D0, "Wrong size on UKSC_DA_SceneComp");
+static_assert(offsetof(UKSC_DA_SceneComp, SelfNeighborsType) == 0x000040, "Member 'UKSC_DA_SceneComp::SelfNeighborsType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, TargetNeighborsTypes) == 0x000048, "Member 'UKSC_DA_SceneComp::TargetNeighborsTypes' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, NeighborDist) == 0x000058, "Member 'UKSC_DA_SceneComp::NeighborDist' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, MaxNeighborsNum) == 0x00005C, "Member 'UKSC_DA_SceneComp::MaxNeighborsNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, ColliderRadius) == 0x000060, "Member 'UKSC_DA_SceneComp::ColliderRadius' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, Mass) == 0x000064, "Member 'UKSC_DA_SceneComp::Mass' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, bEnableCapsuleComponent) == 0x000068, "Member 'UKSC_DA_SceneComp::bEnableCapsuleComponent' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, bIgnoreUpdateOverlap) == 0x000069, "Member 'UKSC_DA_SceneComp::bIgnoreUpdateOverlap' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, OverrideNeighborCenter) == 0x00006A, "Member 'UKSC_DA_SceneComp::OverrideNeighborCenter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, OverrideNeighborRange) == 0x000070, "Member 'UKSC_DA_SceneComp::OverrideNeighborRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SceneComp, CheckWorldObstacles) == 0x0000C0, "Member 'UKSC_DA_SceneComp::CheckWorldObstacles' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_SkillComp
+// 0x0050 (0x0090 - 0x0040)
+class UKSC_DA_SkillComp final : public UKSC_DA_CompBase
+{
+public:
+	class UKSC_DA_AttrSet*                        AttrSet;                                           // 0x0040(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UKSC_DA_Skill*>                  Skills;                                            // 0x0048(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<class UKSC_DA_Buff*>                   Buffs;                                             // 0x0058(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  Tags;                                              // 0x0068(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          bAddHitInfo;                                       // 0x0088(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_89[0x7];                                       // 0x0089(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_SkillComp">();
+	}
+	static class UKSC_DA_SkillComp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_SkillComp>();
+	}
+};
+static_assert(alignof(UKSC_DA_SkillComp) == 0x000008, "Wrong alignment on UKSC_DA_SkillComp");
+static_assert(sizeof(UKSC_DA_SkillComp) == 0x000090, "Wrong size on UKSC_DA_SkillComp");
+static_assert(offsetof(UKSC_DA_SkillComp, AttrSet) == 0x000040, "Member 'UKSC_DA_SkillComp::AttrSet' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SkillComp, Skills) == 0x000048, "Member 'UKSC_DA_SkillComp::Skills' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SkillComp, Buffs) == 0x000058, "Member 'UKSC_DA_SkillComp::Buffs' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SkillComp, Tags) == 0x000068, "Member 'UKSC_DA_SkillComp::Tags' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_SkillComp, bAddHitInfo) == 0x000088, "Member 'UKSC_DA_SkillComp::bAddHitInfo' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_EntityRender
-// 0x0010 (0x0048 - 0x0038)
+// 0x0068 (0x00A0 - 0x0038)
 class UKSC_DA_EntityRender final : public UDataAsset
 {
 public:
 	bool                                          bIsGPUNPC;                                         // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class AActor>                     RenderActorClass;                                  // 0x0040(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_GPUNPCAnimState                          InitAnimState;                                     // 0x0048(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EKSC_GPUNPCAnimState, struct FKSC_TimeLineData> TimeLine;                                   // 0x0050(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -172,18 +1193,22 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_EntityRender) == 0x000008, "Wrong alignment on UKSC_DA_EntityRender");
-static_assert(sizeof(UKSC_DA_EntityRender) == 0x000048, "Wrong size on UKSC_DA_EntityRender");
+static_assert(sizeof(UKSC_DA_EntityRender) == 0x0000A0, "Wrong size on UKSC_DA_EntityRender");
 static_assert(offsetof(UKSC_DA_EntityRender, bIsGPUNPC) == 0x000038, "Member 'UKSC_DA_EntityRender::bIsGPUNPC' has a wrong offset!");
 static_assert(offsetof(UKSC_DA_EntityRender, RenderActorClass) == 0x000040, "Member 'UKSC_DA_EntityRender::RenderActorClass' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_EntityRender, InitAnimState) == 0x000048, "Member 'UKSC_DA_EntityRender::InitAnimState' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_EntityRender, TimeLine) == 0x000050, "Member 'UKSC_DA_EntityRender::TimeLine' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_Move
-// 0x0010 (0x0048 - 0x0038)
+// 0x0018 (0x0050 - 0x0038)
 class UKSC_DA_Move : public UDataAsset
 {
 public:
 	TSubclassOf<class UKSC_Move>                  RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MoveSpeed;                                         // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MoveSpeedDeviation;                                // 0x0044(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrunRate;                                          // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x004C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -196,24 +1221,50 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_Move) == 0x000008, "Wrong alignment on UKSC_DA_Move");
-static_assert(sizeof(UKSC_DA_Move) == 0x000048, "Wrong size on UKSC_DA_Move");
+static_assert(sizeof(UKSC_DA_Move) == 0x000050, "Wrong size on UKSC_DA_Move");
 static_assert(offsetof(UKSC_DA_Move, RuntimeClass) == 0x000038, "Member 'UKSC_DA_Move::RuntimeClass' has a wrong offset!");
 static_assert(offsetof(UKSC_DA_Move, MoveSpeed) == 0x000040, "Member 'UKSC_DA_Move::MoveSpeed' has a wrong offset!");
 static_assert(offsetof(UKSC_DA_Move, MoveSpeedDeviation) == 0x000044, "Member 'UKSC_DA_Move::MoveSpeedDeviation' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move, TrunRate) == 0x000048, "Member 'UKSC_DA_Move::TrunRate' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move, Height) == 0x00004C, "Member 'UKSC_DA_Move::Height' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_Skill
-// 0x0020 (0x0058 - 0x0038)
+// 0x0118 (0x0150 - 0x0038)
 class UKSC_DA_Skill : public UDataAsset
 {
 public:
 	TSubclassOf<class UKSC_Skill>                 RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsAutoCast;                                        // 0x0040(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_TargetFaction                            TargetFaction;                                     // 0x0040(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CoolDown;                                          // 0x0044(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CostMP;                                            // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PreDelay;                                          // 0x004C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PostDelay;                                         // 0x0050(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CastRange;                                         // 0x0054(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TargetNum;                                         // 0x0044(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          GenerateStateEvent;                                // 0x0048(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsAutoCast;                                        // 0x0049(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          UseAttrCD;                                         // 0x004A(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4B[0x1];                                       // 0x004B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CoolDown;                                          // 0x004C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CostMP;                                            // 0x0050(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PreDelay;                                          // 0x0054(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PreCastDelay;                                      // 0x0058(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PostDelay;                                         // 0x005C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CastRange;                                         // 0x0060(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSCDamage                             Damage;                                            // 0x0064(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         DamageID;                                          // 0x0070(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DamageMaterial;                                    // 0x0074(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_75[0x3];                                       // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_AdditionalAttack*               AdditionalAttack;                                  // 0x0078(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_Buff*                           AddBuff;                                           // 0x0080(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UKSC_DA_Buff*>                   AddBuffs;                                          // 0x0088(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class UEffectModelBase*                       KuroSkillFX;                                       // 0x0098(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             KuroSkillFX_Offset;                                // 0x00A0(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          KuroSkillFX_BindingTarget;                         // 0x00D0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D1[0x7];                                       // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       KuroCastFX;                                        // 0x00D8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             KuroCastFX_Offset;                                 // 0x00E0(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          KuroCastFX_BindingTarget;                          // 0x0110(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_111[0x3];                                      // 0x0111(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         KuroHitFX_MaxNum;                                  // 0x0114(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEffectModelBase*                       KuroHitFX;                                         // 0x0118(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             KuroHitFX_Offset;                                  // 0x0120(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -225,55 +1276,78 @@ public:
 		return GetDefaultObjImpl<UKSC_DA_Skill>();
 	}
 };
-static_assert(alignof(UKSC_DA_Skill) == 0x000008, "Wrong alignment on UKSC_DA_Skill");
-static_assert(sizeof(UKSC_DA_Skill) == 0x000058, "Wrong size on UKSC_DA_Skill");
+static_assert(alignof(UKSC_DA_Skill) == 0x000010, "Wrong alignment on UKSC_DA_Skill");
+static_assert(sizeof(UKSC_DA_Skill) == 0x000150, "Wrong size on UKSC_DA_Skill");
 static_assert(offsetof(UKSC_DA_Skill, RuntimeClass) == 0x000038, "Member 'UKSC_DA_Skill::RuntimeClass' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill, IsAutoCast) == 0x000040, "Member 'UKSC_DA_Skill::IsAutoCast' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill, CoolDown) == 0x000044, "Member 'UKSC_DA_Skill::CoolDown' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill, CostMP) == 0x000048, "Member 'UKSC_DA_Skill::CostMP' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill, PreDelay) == 0x00004C, "Member 'UKSC_DA_Skill::PreDelay' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill, PostDelay) == 0x000050, "Member 'UKSC_DA_Skill::PostDelay' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill, CastRange) == 0x000054, "Member 'UKSC_DA_Skill::CastRange' has a wrong offset!");
-
-// Class KuroSimpleCombat.KSC_RenderEntityInterface
-// 0x0000 (0x0000 - 0x0000)
-class IKSC_RenderEntityInterface final
-{
-public:
-	void KSC_AddEntity(const int32& EntityId, const struct FTransform& InTransform);
-	void KSC_RemoveEntity(const int32& EntityId);
-	void KSC_SetActorTransform(const int32& EntityId, const struct FTransform& InTransform);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KSC_RenderEntityInterface">();
-	}
-	static class IKSC_RenderEntityInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IKSC_RenderEntityInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(IKSC_RenderEntityInterface) == 0x000001, "Wrong alignment on IKSC_RenderEntityInterface");
-static_assert(sizeof(IKSC_RenderEntityInterface) == 0x000001, "Wrong size on IKSC_RenderEntityInterface");
+static_assert(offsetof(UKSC_DA_Skill, TargetFaction) == 0x000040, "Member 'UKSC_DA_Skill::TargetFaction' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, TargetNum) == 0x000044, "Member 'UKSC_DA_Skill::TargetNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, GenerateStateEvent) == 0x000048, "Member 'UKSC_DA_Skill::GenerateStateEvent' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, IsAutoCast) == 0x000049, "Member 'UKSC_DA_Skill::IsAutoCast' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, UseAttrCD) == 0x00004A, "Member 'UKSC_DA_Skill::UseAttrCD' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, CoolDown) == 0x00004C, "Member 'UKSC_DA_Skill::CoolDown' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, CostMP) == 0x000050, "Member 'UKSC_DA_Skill::CostMP' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, PreDelay) == 0x000054, "Member 'UKSC_DA_Skill::PreDelay' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, PreCastDelay) == 0x000058, "Member 'UKSC_DA_Skill::PreCastDelay' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, PostDelay) == 0x00005C, "Member 'UKSC_DA_Skill::PostDelay' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, CastRange) == 0x000060, "Member 'UKSC_DA_Skill::CastRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, Damage) == 0x000064, "Member 'UKSC_DA_Skill::Damage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, DamageID) == 0x000070, "Member 'UKSC_DA_Skill::DamageID' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, DamageMaterial) == 0x000074, "Member 'UKSC_DA_Skill::DamageMaterial' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, AdditionalAttack) == 0x000078, "Member 'UKSC_DA_Skill::AdditionalAttack' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, AddBuff) == 0x000080, "Member 'UKSC_DA_Skill::AddBuff' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, AddBuffs) == 0x000088, "Member 'UKSC_DA_Skill::AddBuffs' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroSkillFX) == 0x000098, "Member 'UKSC_DA_Skill::KuroSkillFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroSkillFX_Offset) == 0x0000A0, "Member 'UKSC_DA_Skill::KuroSkillFX_Offset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroSkillFX_BindingTarget) == 0x0000D0, "Member 'UKSC_DA_Skill::KuroSkillFX_BindingTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroCastFX) == 0x0000D8, "Member 'UKSC_DA_Skill::KuroCastFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroCastFX_Offset) == 0x0000E0, "Member 'UKSC_DA_Skill::KuroCastFX_Offset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroCastFX_BindingTarget) == 0x000110, "Member 'UKSC_DA_Skill::KuroCastFX_BindingTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroHitFX_MaxNum) == 0x000114, "Member 'UKSC_DA_Skill::KuroHitFX_MaxNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroHitFX) == 0x000118, "Member 'UKSC_DA_Skill::KuroHitFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill, KuroHitFX_Offset) == 0x000120, "Member 'UKSC_DA_Skill::KuroHitFX_Offset' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_Buff
-// 0x0010 (0x0048 - 0x0038)
-class UKSC_DA_Buff : public UDataAsset
+// 0x0178 (0x01B0 - 0x0038)
+#pragma pack(push, 0x1)
+class alignas(0x10) UKSC_DA_Buff : public UDataAsset
 {
 public:
 	TSubclassOf<class UKSC_Buff>                  RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Duration;                                          // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FKSC_TagFilter                         TagFilter;                                         // 0x0040(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EKSC_Buff_DurationType                        DurationType;                                      // 0x0068(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Duration;                                          // 0x006C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InstantNeedUpdate;                                 // 0x0070(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  BuffTags;                                          // 0x0078(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<class UKSC_DA_Buff*>                   BuffAddBuffs;                                      // 0x0098(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          RemoveChildBuffWhenEnd;                            // 0x00A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A9[0x7];                                       // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       BuffFX;                                            // 0x00B0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B8[0x8];                                       // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             BuffFX_Offset;                                     // 0x00C0(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   Socket;                                            // 0x00F0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackLocation;                             // 0x00FC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackRotation;                             // 0x00FD(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackScale;                                // 0x00FE(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_DetachOnEnd;                                // 0x00FF(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEffectModelBase*                       BuffFX_Add;                                        // 0x0100(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_108[0x8];                                      // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             BuffFX_Offset_Add;                                 // 0x0110(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   Socket_Add;                                        // 0x0140(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackLocation_Add;                         // 0x014C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackRotation_Add;                         // 0x014D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackScale_Add;                            // 0x014E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14F[0x1];                                      // 0x014F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       BuffFX_Remove;                                     // 0x0150(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             BuffFX_Offset_Remove;                              // 0x0160(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   Socket_Remove;                                     // 0x0190(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackLocation_Remove;                      // 0x019C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackRotation_Remove;                      // 0x019D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackScale_Remove;                         // 0x019E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19F[0x1];                                      // 0x019F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroMaterialControllerDataAsset*       Material;                                          // 0x01A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -285,10 +1359,188 @@ public:
 		return GetDefaultObjImpl<UKSC_DA_Buff>();
 	}
 };
-static_assert(alignof(UKSC_DA_Buff) == 0x000008, "Wrong alignment on UKSC_DA_Buff");
-static_assert(sizeof(UKSC_DA_Buff) == 0x000048, "Wrong size on UKSC_DA_Buff");
+#pragma pack(pop)
+static_assert(alignof(UKSC_DA_Buff) == 0x000010, "Wrong alignment on UKSC_DA_Buff");
+static_assert(sizeof(UKSC_DA_Buff) == 0x0001B0, "Wrong size on UKSC_DA_Buff");
 static_assert(offsetof(UKSC_DA_Buff, RuntimeClass) == 0x000038, "Member 'UKSC_DA_Buff::RuntimeClass' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Buff, Duration) == 0x000040, "Member 'UKSC_DA_Buff::Duration' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, TagFilter) == 0x000040, "Member 'UKSC_DA_Buff::TagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, DurationType) == 0x000068, "Member 'UKSC_DA_Buff::DurationType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, Duration) == 0x00006C, "Member 'UKSC_DA_Buff::Duration' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, InstantNeedUpdate) == 0x000070, "Member 'UKSC_DA_Buff::InstantNeedUpdate' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffTags) == 0x000078, "Member 'UKSC_DA_Buff::BuffTags' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffAddBuffs) == 0x000098, "Member 'UKSC_DA_Buff::BuffAddBuffs' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, RemoveChildBuffWhenEnd) == 0x0000A8, "Member 'UKSC_DA_Buff::RemoveChildBuffWhenEnd' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX) == 0x0000B0, "Member 'UKSC_DA_Buff::BuffFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_Offset) == 0x0000C0, "Member 'UKSC_DA_Buff::BuffFX_Offset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, Socket) == 0x0000F0, "Member 'UKSC_DA_Buff::Socket' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackLocation) == 0x0000FC, "Member 'UKSC_DA_Buff::BuffFX_AttackLocation' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackRotation) == 0x0000FD, "Member 'UKSC_DA_Buff::BuffFX_AttackRotation' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackScale) == 0x0000FE, "Member 'UKSC_DA_Buff::BuffFX_AttackScale' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_DetachOnEnd) == 0x0000FF, "Member 'UKSC_DA_Buff::BuffFX_DetachOnEnd' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_Add) == 0x000100, "Member 'UKSC_DA_Buff::BuffFX_Add' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_Offset_Add) == 0x000110, "Member 'UKSC_DA_Buff::BuffFX_Offset_Add' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, Socket_Add) == 0x000140, "Member 'UKSC_DA_Buff::Socket_Add' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackLocation_Add) == 0x00014C, "Member 'UKSC_DA_Buff::BuffFX_AttackLocation_Add' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackRotation_Add) == 0x00014D, "Member 'UKSC_DA_Buff::BuffFX_AttackRotation_Add' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackScale_Add) == 0x00014E, "Member 'UKSC_DA_Buff::BuffFX_AttackScale_Add' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_Remove) == 0x000150, "Member 'UKSC_DA_Buff::BuffFX_Remove' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_Offset_Remove) == 0x000160, "Member 'UKSC_DA_Buff::BuffFX_Offset_Remove' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, Socket_Remove) == 0x000190, "Member 'UKSC_DA_Buff::Socket_Remove' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackLocation_Remove) == 0x00019C, "Member 'UKSC_DA_Buff::BuffFX_AttackLocation_Remove' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackRotation_Remove) == 0x00019D, "Member 'UKSC_DA_Buff::BuffFX_AttackRotation_Remove' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, BuffFX_AttackScale_Remove) == 0x00019E, "Member 'UKSC_DA_Buff::BuffFX_AttackScale_Remove' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff, Material) == 0x0001A0, "Member 'UKSC_DA_Buff::Material' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Decorator
+// 0x0030 (0x0068 - 0x0038)
+class UKSC_DA_Decorator : public UDataAsset
+{
+public:
+	TSubclassOf<class UKSC_Decorator>             RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSC_TagFilter                         TagFilter;                                         // 0x0040(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Decorator">();
+	}
+	static class UKSC_DA_Decorator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Decorator>();
+	}
+};
+static_assert(alignof(UKSC_DA_Decorator) == 0x000008, "Wrong alignment on UKSC_DA_Decorator");
+static_assert(sizeof(UKSC_DA_Decorator) == 0x000068, "Wrong size on UKSC_DA_Decorator");
+static_assert(offsetof(UKSC_DA_Decorator, RuntimeClass) == 0x000038, "Member 'UKSC_DA_Decorator::RuntimeClass' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Decorator, TagFilter) == 0x000040, "Member 'UKSC_DA_Decorator::TagFilter' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_FX
+// 0x0058 (0x0090 - 0x0038)
+class UKSC_DA_FX final : public UDataAsset
+{
+public:
+	EKSC_FXBindingType                            FXBindingType;                                     // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             OffsetTrans;                                       // 0x0040(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class UNiagaraSystem*                         FX;                                                // 0x0070(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FKSC_FXParam>                   Params_0;                                          // 0x0078(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x8];                                       // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_FX">();
+	}
+	static class UKSC_DA_FX* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_FX>();
+	}
+};
+static_assert(alignof(UKSC_DA_FX) == 0x000010, "Wrong alignment on UKSC_DA_FX");
+static_assert(sizeof(UKSC_DA_FX) == 0x000090, "Wrong size on UKSC_DA_FX");
+static_assert(offsetof(UKSC_DA_FX, FXBindingType) == 0x000038, "Member 'UKSC_DA_FX::FXBindingType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_FX, OffsetTrans) == 0x000040, "Member 'UKSC_DA_FX::OffsetTrans' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_FX, FX) == 0x000070, "Member 'UKSC_DA_FX::FX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_FX, Params_0) == 0x000078, "Member 'UKSC_DA_FX::Params_0' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_AdditionalAttack
+// 0x0118 (0x0150 - 0x0038)
+class UKSC_DA_AdditionalAttack final : public UDataAsset
+{
+public:
+	EKSC_AdditionalAttackSource                   AttackSourceType;                                  // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_AdditionalAttackSourceTarget             AttackTargetType;                                  // 0x0039(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3A[0x6];                                       // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EKSC_Faction>                          IgnoreFactions;                                    // 0x0040(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class FName                                   AdditionalAttackSocket;                            // 0x0050(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_Range                             AdditionalAttackRange;                             // 0x0060(0x0050)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKSCDamage                             Damage;                                            // 0x00B0(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         DamageID;                                          // 0x00BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DamageMaterial;                                    // 0x00C0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          TriggerHitEvent;                                   // 0x00C1(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C2[0x6];                                       // 0x00C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff*                           AddBuff;                                           // 0x00C8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEffectModelBase*                       KuroCastFX;                                        // 0x00D0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             KuroCastFX_Offset;                                 // 0x00E0(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         KuroHitFX_MaxNum;                                  // 0x0110(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       KuroHitFX;                                         // 0x0118(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             KuroHitFX_Offset;                                  // 0x0120(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_AdditionalAttack">();
+	}
+	static class UKSC_DA_AdditionalAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_AdditionalAttack>();
+	}
+};
+static_assert(alignof(UKSC_DA_AdditionalAttack) == 0x000010, "Wrong alignment on UKSC_DA_AdditionalAttack");
+static_assert(sizeof(UKSC_DA_AdditionalAttack) == 0x000150, "Wrong size on UKSC_DA_AdditionalAttack");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, AttackSourceType) == 0x000038, "Member 'UKSC_DA_AdditionalAttack::AttackSourceType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, AttackTargetType) == 0x000039, "Member 'UKSC_DA_AdditionalAttack::AttackTargetType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, IgnoreFactions) == 0x000040, "Member 'UKSC_DA_AdditionalAttack::IgnoreFactions' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, AdditionalAttackSocket) == 0x000050, "Member 'UKSC_DA_AdditionalAttack::AdditionalAttackSocket' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, AdditionalAttackRange) == 0x000060, "Member 'UKSC_DA_AdditionalAttack::AdditionalAttackRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, Damage) == 0x0000B0, "Member 'UKSC_DA_AdditionalAttack::Damage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, DamageID) == 0x0000BC, "Member 'UKSC_DA_AdditionalAttack::DamageID' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, DamageMaterial) == 0x0000C0, "Member 'UKSC_DA_AdditionalAttack::DamageMaterial' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, TriggerHitEvent) == 0x0000C1, "Member 'UKSC_DA_AdditionalAttack::TriggerHitEvent' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, AddBuff) == 0x0000C8, "Member 'UKSC_DA_AdditionalAttack::AddBuff' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, KuroCastFX) == 0x0000D0, "Member 'UKSC_DA_AdditionalAttack::KuroCastFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, KuroCastFX_Offset) == 0x0000E0, "Member 'UKSC_DA_AdditionalAttack::KuroCastFX_Offset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, KuroHitFX_MaxNum) == 0x000110, "Member 'UKSC_DA_AdditionalAttack::KuroHitFX_MaxNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, KuroHitFX) == 0x000118, "Member 'UKSC_DA_AdditionalAttack::KuroHitFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_AdditionalAttack, KuroHitFX_Offset) == 0x000120, "Member 'UKSC_DA_AdditionalAttack::KuroHitFX_Offset' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Bullet
+// 0x0018 (0x0050 - 0x0038)
+class UKSC_DA_Bullet : public UDataAsset
+{
+public:
+	TSubclassOf<class UKSC_Bullet>                RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_FX*                             FX;                                                // 0x0040(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_FXUpdateType                             UpdateType;                                        // 0x0048(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Speed;                                             // 0x004C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Bullet">();
+	}
+	static class UKSC_DA_Bullet* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Bullet>();
+	}
+};
+static_assert(alignof(UKSC_DA_Bullet) == 0x000008, "Wrong alignment on UKSC_DA_Bullet");
+static_assert(sizeof(UKSC_DA_Bullet) == 0x000050, "Wrong size on UKSC_DA_Bullet");
+static_assert(offsetof(UKSC_DA_Bullet, RuntimeClass) == 0x000038, "Member 'UKSC_DA_Bullet::RuntimeClass' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Bullet, FX) == 0x000040, "Member 'UKSC_DA_Bullet::FX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Bullet, UpdateType) == 0x000048, "Member 'UKSC_DA_Bullet::UpdateType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Bullet, Speed) == 0x00004C, "Member 'UKSC_DA_Bullet::Speed' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_BulletPierce
+// 0x0000 (0x0050 - 0x0050)
+class UKSC_DA_BulletPierce final : public UKSC_DA_Bullet
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_BulletPierce">();
+	}
+	static class UKSC_DA_BulletPierce* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_BulletPierce>();
+	}
+};
+static_assert(alignof(UKSC_DA_BulletPierce) == 0x000008, "Wrong alignment on UKSC_DA_BulletPierce");
+static_assert(sizeof(UKSC_DA_BulletPierce) == 0x000050, "Wrong size on UKSC_DA_BulletPierce");
 
 // Class KuroSimpleCombat.KSC_DA_AttrSet
 // 0x0058 (0x0090 - 0x0038)
@@ -313,36 +1565,297 @@ static_assert(sizeof(UKSC_DA_AttrSet) == 0x000090, "Wrong size on UKSC_DA_AttrSe
 static_assert(offsetof(UKSC_DA_AttrSet, RuntimeClass) == 0x000038, "Member 'UKSC_DA_AttrSet::RuntimeClass' has a wrong offset!");
 static_assert(offsetof(UKSC_DA_AttrSet, Attrs) == 0x000040, "Member 'UKSC_DA_AttrSet::Attrs' has a wrong offset!");
 
-// Class KuroSimpleCombat.KSC_Skill
-// 0x0038 (0x0068 - 0x0030)
-class UKSC_Skill : public UObject
+// Class KuroSimpleCombat.KSC_DA_Move_Approach
+// 0x0018 (0x0068 - 0x0050)
+class UKSC_DA_Move_Approach final : public UKSC_DA_Move
 {
 public:
-	class UKSC_DA_Skill*                          DaSkill_;                                          // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UKSC_Entity*                            Caster_;                                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UKSC_Entity*                            Target_;                                           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_48[0x20];                                      // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         MaxDistance;                                       // 0x0050(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinDistance;                                       // 0x0054(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Acc;                                               // 0x0058(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimChangeThreshold;                               // 0x005C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AngleTurning;                                      // 0x0060(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_Skill">();
+		return StaticClassImpl<"KSC_DA_Move_Approach">();
 	}
-	static class UKSC_Skill* GetDefaultObj()
+	static class UKSC_DA_Move_Approach* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSC_Skill>();
+		return GetDefaultObjImpl<UKSC_DA_Move_Approach>();
 	}
 };
-static_assert(alignof(UKSC_Skill) == 0x000008, "Wrong alignment on UKSC_Skill");
-static_assert(sizeof(UKSC_Skill) == 0x000068, "Wrong size on UKSC_Skill");
-static_assert(offsetof(UKSC_Skill, DaSkill_) == 0x000030, "Member 'UKSC_Skill::DaSkill_' has a wrong offset!");
-static_assert(offsetof(UKSC_Skill, Caster_) == 0x000038, "Member 'UKSC_Skill::Caster_' has a wrong offset!");
-static_assert(offsetof(UKSC_Skill, Target_) == 0x000040, "Member 'UKSC_Skill::Target_' has a wrong offset!");
+static_assert(alignof(UKSC_DA_Move_Approach) == 0x000008, "Wrong alignment on UKSC_DA_Move_Approach");
+static_assert(sizeof(UKSC_DA_Move_Approach) == 0x000068, "Wrong size on UKSC_DA_Move_Approach");
+static_assert(offsetof(UKSC_DA_Move_Approach, MaxDistance) == 0x000050, "Member 'UKSC_DA_Move_Approach::MaxDistance' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move_Approach, MinDistance) == 0x000054, "Member 'UKSC_DA_Move_Approach::MinDistance' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move_Approach, Acc) == 0x000058, "Member 'UKSC_DA_Move_Approach::Acc' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move_Approach, AnimChangeThreshold) == 0x00005C, "Member 'UKSC_DA_Move_Approach::AnimChangeThreshold' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move_Approach, AngleTurning) == 0x000060, "Member 'UKSC_DA_Move_Approach::AngleTurning' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Move_Random
+// 0x0018 (0x0068 - 0x0050)
+class UKSC_DA_Move_Random final : public UKSC_DA_Move
+{
+public:
+	float                                         MinInterval;                                       // 0x0050(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxInterval;                                       // 0x0054(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinDistance;                                       // 0x0058(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxDistance;                                       // 0x005C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DegSpeed;                                          // 0x0060(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x4];                                       // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Move_Random">();
+	}
+	static class UKSC_DA_Move_Random* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Move_Random>();
+	}
+};
+static_assert(alignof(UKSC_DA_Move_Random) == 0x000008, "Wrong alignment on UKSC_DA_Move_Random");
+static_assert(sizeof(UKSC_DA_Move_Random) == 0x000068, "Wrong size on UKSC_DA_Move_Random");
+static_assert(offsetof(UKSC_DA_Move_Random, MinInterval) == 0x000050, "Member 'UKSC_DA_Move_Random::MinInterval' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move_Random, MaxInterval) == 0x000054, "Member 'UKSC_DA_Move_Random::MaxInterval' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move_Random, MinDistance) == 0x000058, "Member 'UKSC_DA_Move_Random::MinDistance' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move_Random, MaxDistance) == 0x00005C, "Member 'UKSC_DA_Move_Random::MaxDistance' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Move_Random, DegSpeed) == 0x000060, "Member 'UKSC_DA_Move_Random::DegSpeed' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_Anim
+// 0x0010 (0x0160 - 0x0150)
+class UKSC_DA_Skill_Anim : public UKSC_DA_Skill
+{
+public:
+	EKSC_GPUNPCAnimState                          AnimState;                                         // 0x0150(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AnimDuration;                                      // 0x0154(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_GPUNPCAnimState                          AnimStateIdle;                                     // 0x0158(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsStopMoveBeingSkill;                              // 0x0159(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15A[0x6];                                      // 0x015A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_Anim">();
+	}
+	static class UKSC_DA_Skill_Anim* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_Anim>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_Anim) == 0x000010, "Wrong alignment on UKSC_DA_Skill_Anim");
+static_assert(sizeof(UKSC_DA_Skill_Anim) == 0x000160, "Wrong size on UKSC_DA_Skill_Anim");
+static_assert(offsetof(UKSC_DA_Skill_Anim, AnimState) == 0x000150, "Member 'UKSC_DA_Skill_Anim::AnimState' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_Anim, AnimDuration) == 0x000154, "Member 'UKSC_DA_Skill_Anim::AnimDuration' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_Anim, AnimStateIdle) == 0x000158, "Member 'UKSC_DA_Skill_Anim::AnimStateIdle' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_Anim, IsStopMoveBeingSkill) == 0x000159, "Member 'UKSC_DA_Skill_Anim::IsStopMoveBeingSkill' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_WorldBounds
+// 0x0010 (0x0048 - 0x0038)
+class UKSC_DA_WorldBounds : public UDataAsset
+{
+public:
+	TSubclassOf<class UKSC_WorldBounds>           RuntimeClass;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GroundPositionZ;                                   // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_44[0x4];                                       // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_WorldBounds">();
+	}
+	static class UKSC_DA_WorldBounds* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_WorldBounds>();
+	}
+};
+static_assert(alignof(UKSC_DA_WorldBounds) == 0x000008, "Wrong alignment on UKSC_DA_WorldBounds");
+static_assert(sizeof(UKSC_DA_WorldBounds) == 0x000048, "Wrong size on UKSC_DA_WorldBounds");
+static_assert(offsetof(UKSC_DA_WorldBounds, RuntimeClass) == 0x000038, "Member 'UKSC_DA_WorldBounds::RuntimeClass' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_WorldBounds, GroundPositionZ) == 0x000040, "Member 'UKSC_DA_WorldBounds::GroundPositionZ' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_WorldBoundsRound
+// 0x0020 (0x0068 - 0x0048)
+class UKSC_DA_WorldBoundsRound final : public UKSC_DA_WorldBounds
+{
+public:
+	float                                         WorldRadius;                                       // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          WorldCenterOffset;                                 // 0x0050(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_WorldBoundsRound">();
+	}
+	static class UKSC_DA_WorldBoundsRound* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_WorldBoundsRound>();
+	}
+};
+static_assert(alignof(UKSC_DA_WorldBoundsRound) == 0x000008, "Wrong alignment on UKSC_DA_WorldBoundsRound");
+static_assert(sizeof(UKSC_DA_WorldBoundsRound) == 0x000068, "Wrong size on UKSC_DA_WorldBoundsRound");
+static_assert(offsetof(UKSC_DA_WorldBoundsRound, WorldRadius) == 0x000048, "Member 'UKSC_DA_WorldBoundsRound::WorldRadius' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_WorldBoundsRound, WorldCenterOffset) == 0x000050, "Member 'UKSC_DA_WorldBoundsRound::WorldCenterOffset' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_AddSkill
+// 0x0000 (0x01B0 - 0x01B0)
+class UKSC_DA_Buff_AddSkill final : public UKSC_DA_Buff
+{
+public:
+	class UKSC_DA_Skill*                          DaSkill;                                           // 0x01A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_AddSkill">();
+	}
+	static class UKSC_DA_Buff_AddSkill* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_AddSkill>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_AddSkill) == 0x000010, "Wrong alignment on UKSC_DA_Buff_AddSkill");
+static_assert(sizeof(UKSC_DA_Buff_AddSkill) == 0x0001B0, "Wrong size on UKSC_DA_Buff_AddSkill");
+static_assert(offsetof(UKSC_DA_Buff_AddSkill, DaSkill) == 0x0001A8, "Member 'UKSC_DA_Buff_AddSkill::DaSkill' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_AttrLockLowerBound
+// 0x0000 (0x01B0 - 0x01B0)
+class UKSC_DA_Buff_AttrLockLowerBound final : public UKSC_DA_Buff
+{
+public:
+	EKSC_AttrType                                 Id;                                                // 0x01A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Value;                                             // 0x01AC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_AttrLockLowerBound">();
+	}
+	static class UKSC_DA_Buff_AttrLockLowerBound* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_AttrLockLowerBound>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_AttrLockLowerBound) == 0x000010, "Wrong alignment on UKSC_DA_Buff_AttrLockLowerBound");
+static_assert(sizeof(UKSC_DA_Buff_AttrLockLowerBound) == 0x0001B0, "Wrong size on UKSC_DA_Buff_AttrLockLowerBound");
+static_assert(offsetof(UKSC_DA_Buff_AttrLockLowerBound, Id) == 0x0001A8, "Member 'UKSC_DA_Buff_AttrLockLowerBound::Id' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AttrLockLowerBound, Value) == 0x0001AC, "Member 'UKSC_DA_Buff_AttrLockLowerBound::Value' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Stack
+// 0x0010 (0x01C0 - 0x01B0)
+#pragma pack(push, 0x1)
+class alignas(0x10) UKSC_DA_Buff_Stack : public UKSC_DA_Buff
+{
+public:
+	int32                                         StackNum;                                          // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          MultiStackTime;                                    // 0x01AC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OneSourceOneStack;                                 // 0x01AD(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          UseStackTimeType;                                  // 0x01AE(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Buff_StackTimeType                       StackTimeType;                                     // 0x01AF(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ChangeTagCountByStack;                             // 0x01B0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B1[0x7];                                      // 0x01B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Stack">();
+	}
+	static class UKSC_DA_Buff_Stack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Stack>();
+	}
+};
+#pragma pack(pop)
+static_assert(alignof(UKSC_DA_Buff_Stack) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Stack");
+static_assert(sizeof(UKSC_DA_Buff_Stack) == 0x0001C0, "Wrong size on UKSC_DA_Buff_Stack");
+static_assert(offsetof(UKSC_DA_Buff_Stack, StackNum) == 0x0001A8, "Member 'UKSC_DA_Buff_Stack::StackNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Stack, MultiStackTime) == 0x0001AC, "Member 'UKSC_DA_Buff_Stack::MultiStackTime' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Stack, OneSourceOneStack) == 0x0001AD, "Member 'UKSC_DA_Buff_Stack::OneSourceOneStack' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Stack, UseStackTimeType) == 0x0001AE, "Member 'UKSC_DA_Buff_Stack::UseStackTimeType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Stack, StackTimeType) == 0x0001AF, "Member 'UKSC_DA_Buff_Stack::StackTimeType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Stack, ChangeTagCountByStack) == 0x0001B0, "Member 'UKSC_DA_Buff_Stack::ChangeTagCountByStack' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_TransferAddAttr
+// 0x0050 (0x0210 - 0x01C0)
+class UKSC_DA_Buff_TransferAddAttr final : public UKSC_DA_Buff_Stack
+{
+public:
+	TMap<EKSC_AttrType, struct FKSC_TransferAddAttr> Addition;                                       // 0x01B8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_208[0x8];                                      // 0x0208(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_TransferAddAttr">();
+	}
+	static class UKSC_DA_Buff_TransferAddAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_TransferAddAttr>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_TransferAddAttr) == 0x000010, "Wrong alignment on UKSC_DA_Buff_TransferAddAttr");
+static_assert(sizeof(UKSC_DA_Buff_TransferAddAttr) == 0x000210, "Wrong size on UKSC_DA_Buff_TransferAddAttr");
+static_assert(offsetof(UKSC_DA_Buff_TransferAddAttr, Addition) == 0x0001B8, "Member 'UKSC_DA_Buff_TransferAddAttr::Addition' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_DiffTransferAddAttr
+// 0x0050 (0x0210 - 0x01C0)
+class UKSC_DA_Buff_DiffTransferAddAttr final : public UKSC_DA_Buff_Stack
+{
+public:
+	TMap<EKSC_AttrType, struct FKSC_DiffTransferAddAttr> Addition;                                   // 0x01B8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_208[0x8];                                      // 0x0208(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_DiffTransferAddAttr">();
+	}
+	static class UKSC_DA_Buff_DiffTransferAddAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_DiffTransferAddAttr>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_DiffTransferAddAttr) == 0x000010, "Wrong alignment on UKSC_DA_Buff_DiffTransferAddAttr");
+static_assert(sizeof(UKSC_DA_Buff_DiffTransferAddAttr) == 0x000210, "Wrong size on UKSC_DA_Buff_DiffTransferAddAttr");
+static_assert(offsetof(UKSC_DA_Buff_DiffTransferAddAttr, Addition) == 0x0001B8, "Member 'UKSC_DA_Buff_DiffTransferAddAttr::Addition' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ModifyAttrRatio
+// 0x0050 (0x0200 - 0x01B0)
+class UKSC_DA_Buff_ModifyAttrRatio final : public UKSC_DA_Buff
+{
+public:
+	bool                                          bIsRevertAttr;                                     // 0x01A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EKSC_AttrType, int32>                    ModifyMap;                                         // 0x01B0(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ModifyAttrRatio">();
+	}
+	static class UKSC_DA_Buff_ModifyAttrRatio* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ModifyAttrRatio>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ModifyAttrRatio) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ModifyAttrRatio");
+static_assert(sizeof(UKSC_DA_Buff_ModifyAttrRatio) == 0x000200, "Wrong size on UKSC_DA_Buff_ModifyAttrRatio");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttrRatio, bIsRevertAttr) == 0x0001A8, "Member 'UKSC_DA_Buff_ModifyAttrRatio::bIsRevertAttr' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttrRatio, ModifyMap) == 0x0001B0, "Member 'UKSC_DA_Buff_ModifyAttrRatio::ModifyMap' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_Entity_Tower
-// 0x0000 (0x0090 - 0x0090)
+// 0x0050 (0x0148 - 0x00F8)
 class UKSC_DA_Entity_Tower final : public UKSC_DA_Entity
 {
+public:
+	TMap<EKSC_Skill_State, class FName>           SkillStateMap;                                     // 0x00F8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
 public:
 	static class UClass* StaticClass()
 	{
@@ -354,10 +1867,11 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_Entity_Tower) == 0x000008, "Wrong alignment on UKSC_DA_Entity_Tower");
-static_assert(sizeof(UKSC_DA_Entity_Tower) == 0x000090, "Wrong size on UKSC_DA_Entity_Tower");
+static_assert(sizeof(UKSC_DA_Entity_Tower) == 0x000148, "Wrong size on UKSC_DA_Entity_Tower");
+static_assert(offsetof(UKSC_DA_Entity_Tower, SkillStateMap) == 0x0000F8, "Member 'UKSC_DA_Entity_Tower::SkillStateMap' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_Entity_Enemy
-// 0x0000 (0x0090 - 0x0090)
+// 0x0000 (0x00F8 - 0x00F8)
 class UKSC_DA_Entity_Enemy final : public UKSC_DA_Entity
 {
 public:
@@ -371,15 +1885,49 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_Entity_Enemy) == 0x000008, "Wrong alignment on UKSC_DA_Entity_Enemy");
-static_assert(sizeof(UKSC_DA_Entity_Enemy) == 0x000090, "Wrong size on UKSC_DA_Entity_Enemy");
+static_assert(sizeof(UKSC_DA_Entity_Enemy) == 0x0000F8, "Wrong size on UKSC_DA_Entity_Enemy");
+
+// Class KuroSimpleCombat.KSC_DA_Entity_Player
+// 0x0000 (0x00F8 - 0x00F8)
+class UKSC_DA_Entity_Player final : public UKSC_DA_Entity
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Entity_Player">();
+	}
+	static class UKSC_DA_Entity_Player* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Entity_Player>();
+	}
+};
+static_assert(alignof(UKSC_DA_Entity_Player) == 0x000008, "Wrong alignment on UKSC_DA_Entity_Player");
+static_assert(sizeof(UKSC_DA_Entity_Player) == 0x0000F8, "Wrong size on UKSC_DA_Entity_Player");
+
+// Class KuroSimpleCombat.KSC_DA_Entity_Coin
+// 0x0000 (0x00F8 - 0x00F8)
+class UKSC_DA_Entity_Coin final : public UKSC_DA_Entity
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Entity_Coin">();
+	}
+	static class UKSC_DA_Entity_Coin* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Entity_Coin>();
+	}
+};
+static_assert(alignof(UKSC_DA_Entity_Coin) == 0x000008, "Wrong alignment on UKSC_DA_Entity_Coin");
+static_assert(sizeof(UKSC_DA_Entity_Coin) == 0x0000F8, "Wrong size on UKSC_DA_Entity_Coin");
 
 // Class KuroSimpleCombat.KSC_DA_Entity_Projectile
-// 0x0008 (0x0098 - 0x0090)
+// 0x0010 (0x0108 - 0x00F8)
 class UKSC_DA_Entity_Projectile final : public UKSC_DA_Entity
 {
 public:
-	struct FKSCDamage                             Damage;                                            // 0x0090(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_92[0x6];                                       // 0x0092(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FKSCDamage                             Damage;                                            // 0x00F8(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         DamageID;                                          // 0x0104(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -392,57 +1940,29 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_Entity_Projectile) == 0x000008, "Wrong alignment on UKSC_DA_Entity_Projectile");
-static_assert(sizeof(UKSC_DA_Entity_Projectile) == 0x000098, "Wrong size on UKSC_DA_Entity_Projectile");
-static_assert(offsetof(UKSC_DA_Entity_Projectile, Damage) == 0x000090, "Member 'UKSC_DA_Entity_Projectile::Damage' has a wrong offset!");
+static_assert(sizeof(UKSC_DA_Entity_Projectile) == 0x000108, "Wrong size on UKSC_DA_Entity_Projectile");
+static_assert(offsetof(UKSC_DA_Entity_Projectile, Damage) == 0x0000F8, "Member 'UKSC_DA_Entity_Projectile::Damage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Entity_Projectile, DamageID) == 0x000104, "Member 'UKSC_DA_Entity_Projectile::DamageID' has a wrong offset!");
 
-// Class KuroSimpleCombat.KSC_Move
-// 0x0018 (0x0048 - 0x0030)
-class UKSC_Move : public UObject
+// Class KuroSimpleCombat.KSC_DA_Entity_AssistMachine
+// 0x0000 (0x00F8 - 0x00F8)
+class UKSC_DA_Entity_AssistMachine final : public UKSC_DA_Entity
 {
-public:
-	class UKSC_Entity*                            Owner_;                                            // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_Move">();
+		return StaticClassImpl<"KSC_DA_Entity_AssistMachine">();
 	}
-	static class UKSC_Move* GetDefaultObj()
+	static class UKSC_DA_Entity_AssistMachine* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSC_Move>();
+		return GetDefaultObjImpl<UKSC_DA_Entity_AssistMachine>();
 	}
 };
-static_assert(alignof(UKSC_Move) == 0x000008, "Wrong alignment on UKSC_Move");
-static_assert(sizeof(UKSC_Move) == 0x000048, "Wrong size on UKSC_Move");
-static_assert(offsetof(UKSC_Move, Owner_) == 0x000030, "Member 'UKSC_Move::Owner_' has a wrong offset!");
-
-// Class KuroSimpleCombat.KSC_Move_Spline
-// 0x0010 (0x0058 - 0x0048)
-class UKSC_Move_Spline final : public UKSC_Move
-{
-public:
-	uint8                                         Pad_48[0x10];                                      // 0x0048(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetSpline(class USplineComponent* SplineComp);
-	void SetSplineWide(const float Width);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KSC_Move_Spline">();
-	}
-	static class UKSC_Move_Spline* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKSC_Move_Spline>();
-	}
-};
-static_assert(alignof(UKSC_Move_Spline) == 0x000008, "Wrong alignment on UKSC_Move_Spline");
-static_assert(sizeof(UKSC_Move_Spline) == 0x000058, "Wrong size on UKSC_Move_Spline");
+static_assert(alignof(UKSC_DA_Entity_AssistMachine) == 0x000008, "Wrong alignment on UKSC_DA_Entity_AssistMachine");
+static_assert(sizeof(UKSC_DA_Entity_AssistMachine) == 0x0000F8, "Wrong size on UKSC_DA_Entity_AssistMachine");
 
 // Class KuroSimpleCombat.KSC_DA_Move_Spline
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0050 - 0x0050)
 class UKSC_DA_Move_Spline final : public UKSC_DA_Move
 {
 public:
@@ -456,10 +1976,10 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_Move_Spline) == 0x000008, "Wrong alignment on UKSC_DA_Move_Spline");
-static_assert(sizeof(UKSC_DA_Move_Spline) == 0x000048, "Wrong size on UKSC_DA_Move_Spline");
+static_assert(sizeof(UKSC_DA_Move_Spline) == 0x000050, "Wrong size on UKSC_DA_Move_Spline");
 
 // Class KuroSimpleCombat.KSC_DA_Move_Straight
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0050 - 0x0050)
 class UKSC_DA_Move_Straight final : public UKSC_DA_Move
 {
 public:
@@ -473,10 +1993,10 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_Move_Straight) == 0x000008, "Wrong alignment on UKSC_DA_Move_Straight");
-static_assert(sizeof(UKSC_DA_Move_Straight) == 0x000048, "Wrong size on UKSC_DA_Move_Straight");
+static_assert(sizeof(UKSC_DA_Move_Straight) == 0x000050, "Wrong size on UKSC_DA_Move_Straight");
 
 // Class KuroSimpleCombat.KSC_DA_Move_Follow
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0050 - 0x0050)
 class UKSC_DA_Move_Follow final : public UKSC_DA_Move
 {
 public:
@@ -490,40 +2010,16 @@ public:
 	}
 };
 static_assert(alignof(UKSC_DA_Move_Follow) == 0x000008, "Wrong alignment on UKSC_DA_Move_Follow");
-static_assert(sizeof(UKSC_DA_Move_Follow) == 0x000048, "Wrong size on UKSC_DA_Move_Follow");
-
-// Class KuroSimpleCombat.KSC_Skill_ChainAttack
-// 0x0018 (0x0080 - 0x0068)
-class UKSC_Skill_ChainAttack final : public UKSC_Skill
-{
-public:
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UKSC_Entity*>                    Targets_;                                          // 0x0070(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KSC_Skill_ChainAttack">();
-	}
-	static class UKSC_Skill_ChainAttack* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKSC_Skill_ChainAttack>();
-	}
-};
-static_assert(alignof(UKSC_Skill_ChainAttack) == 0x000008, "Wrong alignment on UKSC_Skill_ChainAttack");
-static_assert(sizeof(UKSC_Skill_ChainAttack) == 0x000080, "Wrong size on UKSC_Skill_ChainAttack");
-static_assert(offsetof(UKSC_Skill_ChainAttack, Targets_) == 0x000070, "Member 'UKSC_Skill_ChainAttack::Targets_' has a wrong offset!");
+static_assert(sizeof(UKSC_DA_Move_Follow) == 0x000050, "Wrong size on UKSC_DA_Move_Follow");
 
 // Class KuroSimpleCombat.KSC_DA_Skill_Attack
-// 0x0020 (0x0078 - 0x0058)
+// 0x0060 (0x01B0 - 0x0150)
 class UKSC_DA_Skill_Attack final : public UKSC_DA_Skill
 {
 public:
-	struct FKSCDamage                             Damage;                                            // 0x0058(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_DA_Buff*                           AddBuff;                                           // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_FX*                             SkillFX;                                           // 0x0068(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_FX*                             HitFX;                                             // 0x0070(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          OverrideCheckRange;                                // 0x0150(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_151[0xF];                                      // 0x0151(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_Range                             CheckRange;                                        // 0x0160(0x0050)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -535,24 +2031,122 @@ public:
 		return GetDefaultObjImpl<UKSC_DA_Skill_Attack>();
 	}
 };
-static_assert(alignof(UKSC_DA_Skill_Attack) == 0x000008, "Wrong alignment on UKSC_DA_Skill_Attack");
-static_assert(sizeof(UKSC_DA_Skill_Attack) == 0x000078, "Wrong size on UKSC_DA_Skill_Attack");
-static_assert(offsetof(UKSC_DA_Skill_Attack, Damage) == 0x000058, "Member 'UKSC_DA_Skill_Attack::Damage' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_Attack, AddBuff) == 0x000060, "Member 'UKSC_DA_Skill_Attack::AddBuff' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_Attack, SkillFX) == 0x000068, "Member 'UKSC_DA_Skill_Attack::SkillFX' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_Attack, HitFX) == 0x000070, "Member 'UKSC_DA_Skill_Attack::HitFX' has a wrong offset!");
+static_assert(alignof(UKSC_DA_Skill_Attack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_Attack");
+static_assert(sizeof(UKSC_DA_Skill_Attack) == 0x0001B0, "Wrong size on UKSC_DA_Skill_Attack");
+static_assert(offsetof(UKSC_DA_Skill_Attack, OverrideCheckRange) == 0x000150, "Member 'UKSC_DA_Skill_Attack::OverrideCheckRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_Attack, CheckRange) == 0x000160, "Member 'UKSC_DA_Skill_Attack::CheckRange' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_Attack_Persistent
+// 0x0010 (0x0160 - 0x0150)
+class UKSC_DA_Skill_Attack_Persistent : public UKSC_DA_Skill
+{
+public:
+	float                                         PersistentTime;                                    // 0x0150(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Period;                                            // 0x0154(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          PeriodImmediately;                                 // 0x0158(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_159[0x7];                                      // 0x0159(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_Attack_Persistent">();
+	}
+	static class UKSC_DA_Skill_Attack_Persistent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_Attack_Persistent>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_Attack_Persistent) == 0x000010, "Wrong alignment on UKSC_DA_Skill_Attack_Persistent");
+static_assert(sizeof(UKSC_DA_Skill_Attack_Persistent) == 0x000160, "Wrong size on UKSC_DA_Skill_Attack_Persistent");
+static_assert(offsetof(UKSC_DA_Skill_Attack_Persistent, PersistentTime) == 0x000150, "Member 'UKSC_DA_Skill_Attack_Persistent::PersistentTime' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_Attack_Persistent, Period) == 0x000154, "Member 'UKSC_DA_Skill_Attack_Persistent::Period' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_Attack_Persistent, PeriodImmediately) == 0x000158, "Member 'UKSC_DA_Skill_Attack_Persistent::PeriodImmediately' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_Attack_Persistent_Cannon
+// 0x0010 (0x0170 - 0x0160)
+class UKSC_DA_Skill_Attack_Persistent_Cannon final : public UKSC_DA_Skill_Attack_Persistent
+{
+public:
+	float                                         RotSpeed;                                          // 0x0160(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CannonLength;                                      // 0x0164(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_168[0x8];                                      // 0x0168(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_Attack_Persistent_Cannon">();
+	}
+	static class UKSC_DA_Skill_Attack_Persistent_Cannon* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_Attack_Persistent_Cannon>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_Attack_Persistent_Cannon) == 0x000010, "Wrong alignment on UKSC_DA_Skill_Attack_Persistent_Cannon");
+static_assert(sizeof(UKSC_DA_Skill_Attack_Persistent_Cannon) == 0x000170, "Wrong size on UKSC_DA_Skill_Attack_Persistent_Cannon");
+static_assert(offsetof(UKSC_DA_Skill_Attack_Persistent_Cannon, RotSpeed) == 0x000160, "Member 'UKSC_DA_Skill_Attack_Persistent_Cannon::RotSpeed' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_Attack_Persistent_Cannon, CannonLength) == 0x000164, "Member 'UKSC_DA_Skill_Attack_Persistent_Cannon::CannonLength' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_BulletAttack
+// 0x0010 (0x0160 - 0x0150)
+class UKSC_DA_Skill_BulletAttack final : public UKSC_DA_Skill
+{
+public:
+	class UKSC_DA_Bullet*                         Bullet;                                            // 0x0150(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_BulletAttack">();
+	}
+	static class UKSC_DA_Skill_BulletAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_BulletAttack>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_BulletAttack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_BulletAttack");
+static_assert(sizeof(UKSC_DA_Skill_BulletAttack) == 0x000160, "Wrong size on UKSC_DA_Skill_BulletAttack");
+static_assert(offsetof(UKSC_DA_Skill_BulletAttack, Bullet) == 0x000150, "Member 'UKSC_DA_Skill_BulletAttack::Bullet' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_ManualBulletAttack
+// 0x0020 (0x0170 - 0x0150)
+class UKSC_DA_Skill_ManualBulletAttack final : public UKSC_DA_Skill
+{
+public:
+	class UKSC_DA_Bullet*                         Bullet;                                            // 0x0150(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AttackDist;                                        // 0x0158(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TraceAngle;                                        // 0x015C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_LockTarget                               LockTargetType;                                    // 0x0160(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_ManualSkillAttack                        AttackType;                                        // 0x0161(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Faction                                  SelectTargetFaction;                               // 0x0162(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_163[0xD];                                      // 0x0163(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_ManualBulletAttack">();
+	}
+	static class UKSC_DA_Skill_ManualBulletAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_ManualBulletAttack>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_ManualBulletAttack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_ManualBulletAttack");
+static_assert(sizeof(UKSC_DA_Skill_ManualBulletAttack) == 0x000170, "Wrong size on UKSC_DA_Skill_ManualBulletAttack");
+static_assert(offsetof(UKSC_DA_Skill_ManualBulletAttack, Bullet) == 0x000150, "Member 'UKSC_DA_Skill_ManualBulletAttack::Bullet' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_ManualBulletAttack, AttackDist) == 0x000158, "Member 'UKSC_DA_Skill_ManualBulletAttack::AttackDist' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_ManualBulletAttack, TraceAngle) == 0x00015C, "Member 'UKSC_DA_Skill_ManualBulletAttack::TraceAngle' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_ManualBulletAttack, LockTargetType) == 0x000160, "Member 'UKSC_DA_Skill_ManualBulletAttack::LockTargetType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_ManualBulletAttack, AttackType) == 0x000161, "Member 'UKSC_DA_Skill_ManualBulletAttack::AttackType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_ManualBulletAttack, SelectTargetFaction) == 0x000162, "Member 'UKSC_DA_Skill_ManualBulletAttack::SelectTargetFaction' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_Skill_MultiAttack
-// 0x0020 (0x0078 - 0x0058)
+// 0x0010 (0x0160 - 0x0150)
 class UKSC_DA_Skill_MultiAttack final : public UKSC_DA_Skill
 {
 public:
-	struct FKSCDamage                             Damage;                                            // 0x0058(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MultiNum;                                          // 0x005C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_Buff*                           AddBuff;                                           // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_FX*                             SkillFX;                                           // 0x0068(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_FX*                             HitFX;                                             // 0x0070(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MultiNum;                                          // 0x0150(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_154[0xC];                                      // 0x0154(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -564,25 +2158,17 @@ public:
 		return GetDefaultObjImpl<UKSC_DA_Skill_MultiAttack>();
 	}
 };
-static_assert(alignof(UKSC_DA_Skill_MultiAttack) == 0x000008, "Wrong alignment on UKSC_DA_Skill_MultiAttack");
-static_assert(sizeof(UKSC_DA_Skill_MultiAttack) == 0x000078, "Wrong size on UKSC_DA_Skill_MultiAttack");
-static_assert(offsetof(UKSC_DA_Skill_MultiAttack, Damage) == 0x000058, "Member 'UKSC_DA_Skill_MultiAttack::Damage' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_MultiAttack, MultiNum) == 0x00005C, "Member 'UKSC_DA_Skill_MultiAttack::MultiNum' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_MultiAttack, AddBuff) == 0x000060, "Member 'UKSC_DA_Skill_MultiAttack::AddBuff' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_MultiAttack, SkillFX) == 0x000068, "Member 'UKSC_DA_Skill_MultiAttack::SkillFX' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_MultiAttack, HitFX) == 0x000070, "Member 'UKSC_DA_Skill_MultiAttack::HitFX' has a wrong offset!");
+static_assert(alignof(UKSC_DA_Skill_MultiAttack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_MultiAttack");
+static_assert(sizeof(UKSC_DA_Skill_MultiAttack) == 0x000160, "Wrong size on UKSC_DA_Skill_MultiAttack");
+static_assert(offsetof(UKSC_DA_Skill_MultiAttack, MultiNum) == 0x000150, "Member 'UKSC_DA_Skill_MultiAttack::MultiNum' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_Skill_ChainAttack
-// 0x0020 (0x0078 - 0x0058)
+// 0x0010 (0x0160 - 0x0150)
 class UKSC_DA_Skill_ChainAttack final : public UKSC_DA_Skill
 {
 public:
-	struct FKSCDamage                             Damage;                                            // 0x0058(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5A[0x2];                                       // 0x005A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ChainNum;                                          // 0x005C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_Buff*                           AddBuff;                                           // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_FX*                             SkillFX;                                           // 0x0068(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_FX*                             HitFX;                                             // 0x0070(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChainNum;                                          // 0x0150(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_154[0xC];                                      // 0x0154(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -594,31 +2180,20 @@ public:
 		return GetDefaultObjImpl<UKSC_DA_Skill_ChainAttack>();
 	}
 };
-static_assert(alignof(UKSC_DA_Skill_ChainAttack) == 0x000008, "Wrong alignment on UKSC_DA_Skill_ChainAttack");
-static_assert(sizeof(UKSC_DA_Skill_ChainAttack) == 0x000078, "Wrong size on UKSC_DA_Skill_ChainAttack");
-static_assert(offsetof(UKSC_DA_Skill_ChainAttack, Damage) == 0x000058, "Member 'UKSC_DA_Skill_ChainAttack::Damage' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_ChainAttack, ChainNum) == 0x00005C, "Member 'UKSC_DA_Skill_ChainAttack::ChainNum' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_ChainAttack, AddBuff) == 0x000060, "Member 'UKSC_DA_Skill_ChainAttack::AddBuff' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_ChainAttack, SkillFX) == 0x000068, "Member 'UKSC_DA_Skill_ChainAttack::SkillFX' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_ChainAttack, HitFX) == 0x000070, "Member 'UKSC_DA_Skill_ChainAttack::HitFX' has a wrong offset!");
+static_assert(alignof(UKSC_DA_Skill_ChainAttack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_ChainAttack");
+static_assert(sizeof(UKSC_DA_Skill_ChainAttack) == 0x000160, "Wrong size on UKSC_DA_Skill_ChainAttack");
+static_assert(offsetof(UKSC_DA_Skill_ChainAttack, ChainNum) == 0x000150, "Member 'UKSC_DA_Skill_ChainAttack::ChainNum' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_DA_Skill_RangeAttack
-// 0x0050 (0x00A8 - 0x0058)
-class UKSC_DA_Skill_RangeAttack final : public UKSC_DA_Skill
+// 0x00B0 (0x0200 - 0x0150)
+#pragma pack(push, 0x1)
+class alignas(0x10) UKSC_DA_Skill_RangeAttack : public UKSC_DA_Skill
 {
 public:
-	struct FKSCDamage                             Damage;                                            // 0x0058(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5A[0x6];                                       // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_DA_Buff*                           AddBuff;                                           // 0x0060(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EKSC_ShapeType                                RangeAttackShapeType;                              // 0x0068(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Offset;                                            // 0x006C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                HalfExtent;                                        // 0x0078(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rot;                                               // 0x0084(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         Radius;                                            // 0x0090(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_DA_FX*                             SkillFX;                                           // 0x0098(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UKSC_DA_FX*                             HitFX;                                             // 0x00A0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSC_Range                             CheckRange;                                        // 0x0150(0x0050)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKSC_Range                             DamageRange;                                       // 0x01A0(0x0050)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ForceDoSkill;                                      // 0x01F0(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F1[0x7];                                      // 0x01F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -630,20 +2205,1699 @@ public:
 		return GetDefaultObjImpl<UKSC_DA_Skill_RangeAttack>();
 	}
 };
-static_assert(alignof(UKSC_DA_Skill_RangeAttack) == 0x000008, "Wrong alignment on UKSC_DA_Skill_RangeAttack");
-static_assert(sizeof(UKSC_DA_Skill_RangeAttack) == 0x0000A8, "Wrong size on UKSC_DA_Skill_RangeAttack");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, Damage) == 0x000058, "Member 'UKSC_DA_Skill_RangeAttack::Damage' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, AddBuff) == 0x000060, "Member 'UKSC_DA_Skill_RangeAttack::AddBuff' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, RangeAttackShapeType) == 0x000068, "Member 'UKSC_DA_Skill_RangeAttack::RangeAttackShapeType' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, Offset) == 0x00006C, "Member 'UKSC_DA_Skill_RangeAttack::Offset' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, HalfExtent) == 0x000078, "Member 'UKSC_DA_Skill_RangeAttack::HalfExtent' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, Rot) == 0x000084, "Member 'UKSC_DA_Skill_RangeAttack::Rot' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, Radius) == 0x000090, "Member 'UKSC_DA_Skill_RangeAttack::Radius' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, SkillFX) == 0x000098, "Member 'UKSC_DA_Skill_RangeAttack::SkillFX' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Skill_RangeAttack, HitFX) == 0x0000A0, "Member 'UKSC_DA_Skill_RangeAttack::HitFX' has a wrong offset!");
+#pragma pack(pop)
+static_assert(alignof(UKSC_DA_Skill_RangeAttack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_RangeAttack");
+static_assert(sizeof(UKSC_DA_Skill_RangeAttack) == 0x000200, "Wrong size on UKSC_DA_Skill_RangeAttack");
+static_assert(offsetof(UKSC_DA_Skill_RangeAttack, CheckRange) == 0x000150, "Member 'UKSC_DA_Skill_RangeAttack::CheckRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_RangeAttack, DamageRange) == 0x0001A0, "Member 'UKSC_DA_Skill_RangeAttack::DamageRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_RangeAttack, ForceDoSkill) == 0x0001F0, "Member 'UKSC_DA_Skill_RangeAttack::ForceDoSkill' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_RangeAttackApplyBuffToFriend
+// 0x0000 (0x0200 - 0x0200)
+class UKSC_DA_Skill_RangeAttackApplyBuffToFriend final : public UKSC_DA_Skill_RangeAttack
+{
+public:
+	class UKSC_DA_Buff*                           ApplyBuffToFriend;                                 // 0x01F8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_RangeAttackApplyBuffToFriend">();
+	}
+	static class UKSC_DA_Skill_RangeAttackApplyBuffToFriend* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_RangeAttackApplyBuffToFriend>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_RangeAttackApplyBuffToFriend) == 0x000010, "Wrong alignment on UKSC_DA_Skill_RangeAttackApplyBuffToFriend");
+static_assert(sizeof(UKSC_DA_Skill_RangeAttackApplyBuffToFriend) == 0x000200, "Wrong size on UKSC_DA_Skill_RangeAttackApplyBuffToFriend");
+static_assert(offsetof(UKSC_DA_Skill_RangeAttackApplyBuffToFriend, ApplyBuffToFriend) == 0x0001F8, "Member 'UKSC_DA_Skill_RangeAttackApplyBuffToFriend::ApplyBuffToFriend' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_RangePersistentAttack
+// 0x0000 (0x0200 - 0x0200)
+class UKSC_DA_Skill_RangePersistentAttack final : public UKSC_DA_Skill_RangeAttack
+{
+public:
+	float                                         PersistentTime;                                    // 0x01F8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Period;                                            // 0x01FC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_RangePersistentAttack">();
+	}
+	static class UKSC_DA_Skill_RangePersistentAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_RangePersistentAttack>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_RangePersistentAttack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_RangePersistentAttack");
+static_assert(sizeof(UKSC_DA_Skill_RangePersistentAttack) == 0x000200, "Wrong size on UKSC_DA_Skill_RangePersistentAttack");
+static_assert(offsetof(UKSC_DA_Skill_RangePersistentAttack, PersistentTime) == 0x0001F8, "Member 'UKSC_DA_Skill_RangePersistentAttack::PersistentTime' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_RangePersistentAttack, Period) == 0x0001FC, "Member 'UKSC_DA_Skill_RangePersistentAttack::Period' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_RangeSectionAttack
+// 0x0000 (0x0200 - 0x0200)
+class UKSC_DA_Skill_RangeSectionAttack final : public UKSC_DA_Skill_RangeAttack
+{
+public:
+	int32                                         SectionCount;                                      // 0x01F8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SectionTime;                                       // 0x01FC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_RangeSectionAttack">();
+	}
+	static class UKSC_DA_Skill_RangeSectionAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_RangeSectionAttack>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_RangeSectionAttack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_RangeSectionAttack");
+static_assert(sizeof(UKSC_DA_Skill_RangeSectionAttack) == 0x000200, "Wrong size on UKSC_DA_Skill_RangeSectionAttack");
+static_assert(offsetof(UKSC_DA_Skill_RangeSectionAttack, SectionCount) == 0x0001F8, "Member 'UKSC_DA_Skill_RangeSectionAttack::SectionCount' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_RangeSectionAttack, SectionTime) == 0x0001FC, "Member 'UKSC_DA_Skill_RangeSectionAttack::SectionTime' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_LandFire
+// 0x0020 (0x0220 - 0x0200)
+class UKSC_DA_Skill_LandFire final : public UKSC_DA_Skill_RangeAttack
+{
+public:
+	struct FGameplayTag                           ListenTag;                                         // 0x01F8(0x000C)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ListenRange;                                       // 0x0204(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ListenTagIncTime;                                  // 0x0208(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff*                           AddBuff6;                                          // 0x0210(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_Buff*                           AddBuff7;                                          // 0x0218(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_LandFire">();
+	}
+	static class UKSC_DA_Skill_LandFire* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_LandFire>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_LandFire) == 0x000010, "Wrong alignment on UKSC_DA_Skill_LandFire");
+static_assert(sizeof(UKSC_DA_Skill_LandFire) == 0x000220, "Wrong size on UKSC_DA_Skill_LandFire");
+static_assert(offsetof(UKSC_DA_Skill_LandFire, ListenTag) == 0x0001F8, "Member 'UKSC_DA_Skill_LandFire::ListenTag' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LandFire, ListenRange) == 0x000204, "Member 'UKSC_DA_Skill_LandFire::ListenRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LandFire, ListenTagIncTime) == 0x000208, "Member 'UKSC_DA_Skill_LandFire::ListenTagIncTime' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LandFire, AddBuff6) == 0x000210, "Member 'UKSC_DA_Skill_LandFire::AddBuff6' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LandFire, AddBuff7) == 0x000218, "Member 'UKSC_DA_Skill_LandFire::AddBuff7' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_LoadBomb
+// 0x00A0 (0x02A0 - 0x0200)
+class UKSC_DA_Skill_LoadBomb final : public UKSC_DA_Skill_RangeAttack
+{
+public:
+	int32                                         MaxBombNum;                                        // 0x01F8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BombEndRadius;                                     // 0x01FC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BombStartOffset1;                                  // 0x0200(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BombStartOffset2;                                  // 0x020C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BombStartOffset3;                                  // 0x0218(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BombStartOffset4;                                  // 0x0224(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BombEndOffset1;                                    // 0x0230(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BombEndOffset2;                                    // 0x023C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BombEndOffset3;                                    // 0x0248(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BombEndOffset4;                                    // 0x0254(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BombLifeTimeOffset1;                               // 0x0260(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BombLifeTimeOffset2;                               // 0x0264(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BombLifeTimeOffset3;                               // 0x0268(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BombLifeTimeOffset4;                               // 0x026C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEffectModelBase*                       KuroLoadBombFX;                                    // 0x0270(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LaunchBombSize;                                    // 0x0278(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LaunchOffset;                                      // 0x027C(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<EObjectTypeQuery>                      ObjectTypes;                                       // 0x0288(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_298[0x8];                                      // 0x0298(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_LoadBomb">();
+	}
+	static class UKSC_DA_Skill_LoadBomb* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_LoadBomb>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_LoadBomb) == 0x000010, "Wrong alignment on UKSC_DA_Skill_LoadBomb");
+static_assert(sizeof(UKSC_DA_Skill_LoadBomb) == 0x0002A0, "Wrong size on UKSC_DA_Skill_LoadBomb");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, MaxBombNum) == 0x0001F8, "Member 'UKSC_DA_Skill_LoadBomb::MaxBombNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombEndRadius) == 0x0001FC, "Member 'UKSC_DA_Skill_LoadBomb::BombEndRadius' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombStartOffset1) == 0x000200, "Member 'UKSC_DA_Skill_LoadBomb::BombStartOffset1' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombStartOffset2) == 0x00020C, "Member 'UKSC_DA_Skill_LoadBomb::BombStartOffset2' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombStartOffset3) == 0x000218, "Member 'UKSC_DA_Skill_LoadBomb::BombStartOffset3' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombStartOffset4) == 0x000224, "Member 'UKSC_DA_Skill_LoadBomb::BombStartOffset4' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombEndOffset1) == 0x000230, "Member 'UKSC_DA_Skill_LoadBomb::BombEndOffset1' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombEndOffset2) == 0x00023C, "Member 'UKSC_DA_Skill_LoadBomb::BombEndOffset2' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombEndOffset3) == 0x000248, "Member 'UKSC_DA_Skill_LoadBomb::BombEndOffset3' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombEndOffset4) == 0x000254, "Member 'UKSC_DA_Skill_LoadBomb::BombEndOffset4' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombLifeTimeOffset1) == 0x000260, "Member 'UKSC_DA_Skill_LoadBomb::BombLifeTimeOffset1' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombLifeTimeOffset2) == 0x000264, "Member 'UKSC_DA_Skill_LoadBomb::BombLifeTimeOffset2' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombLifeTimeOffset3) == 0x000268, "Member 'UKSC_DA_Skill_LoadBomb::BombLifeTimeOffset3' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, BombLifeTimeOffset4) == 0x00026C, "Member 'UKSC_DA_Skill_LoadBomb::BombLifeTimeOffset4' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, KuroLoadBombFX) == 0x000270, "Member 'UKSC_DA_Skill_LoadBomb::KuroLoadBombFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, LaunchBombSize) == 0x000278, "Member 'UKSC_DA_Skill_LoadBomb::LaunchBombSize' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, LaunchOffset) == 0x00027C, "Member 'UKSC_DA_Skill_LoadBomb::LaunchOffset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_LoadBomb, ObjectTypes) == 0x000288, "Member 'UKSC_DA_Skill_LoadBomb::ObjectTypes' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_Projectile
+// 0x0010 (0x0160 - 0x0150)
+class UKSC_DA_Skill_Projectile final : public UKSC_DA_Skill
+{
+public:
+	class UKSC_DA_Entity_Projectile*              Projectile;                                        // 0x0150(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_158[0x8];                                      // 0x0158(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_Projectile">();
+	}
+	static class UKSC_DA_Skill_Projectile* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_Projectile>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_Projectile) == 0x000010, "Wrong alignment on UKSC_DA_Skill_Projectile");
+static_assert(sizeof(UKSC_DA_Skill_Projectile) == 0x000160, "Wrong size on UKSC_DA_Skill_Projectile");
+static_assert(offsetof(UKSC_DA_Skill_Projectile, Projectile) == 0x000150, "Member 'UKSC_DA_Skill_Projectile::Projectile' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Skill_BulletPierceAttack
+// 0x0020 (0x0170 - 0x0150)
+class UKSC_DA_Skill_BulletPierceAttack final : public UKSC_DA_Skill
+{
+public:
+	class UKSC_DA_BulletPierce*                   Bullet;                                            // 0x0150(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BulletRadius;                                      // 0x0158(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PierceNum;                                         // 0x015C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PierceRange;                                       // 0x0160(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_164[0xC];                                      // 0x0164(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Skill_BulletPierceAttack">();
+	}
+	static class UKSC_DA_Skill_BulletPierceAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Skill_BulletPierceAttack>();
+	}
+};
+static_assert(alignof(UKSC_DA_Skill_BulletPierceAttack) == 0x000010, "Wrong alignment on UKSC_DA_Skill_BulletPierceAttack");
+static_assert(sizeof(UKSC_DA_Skill_BulletPierceAttack) == 0x000170, "Wrong size on UKSC_DA_Skill_BulletPierceAttack");
+static_assert(offsetof(UKSC_DA_Skill_BulletPierceAttack, Bullet) == 0x000150, "Member 'UKSC_DA_Skill_BulletPierceAttack::Bullet' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_BulletPierceAttack, BulletRadius) == 0x000158, "Member 'UKSC_DA_Skill_BulletPierceAttack::BulletRadius' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_BulletPierceAttack, PierceNum) == 0x00015C, "Member 'UKSC_DA_Skill_BulletPierceAttack::PierceNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Skill_BulletPierceAttack, PierceRange) == 0x000160, "Member 'UKSC_DA_Skill_BulletPierceAttack::PierceRange' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Push
+// 0x0040 (0x01F0 - 0x01B0)
+class UKSC_DA_Buff_Push final : public UKSC_DA_Buff
+{
+public:
+	struct FVector                                PushDir;                                           // 0x01A8(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PushSpeed;                                         // 0x01B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSimTime;                                        // 0x01B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SimFrequency;                                      // 0x01BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         QueryOffset;                                       // 0x01C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          TraceWithCollision;                                // 0x01C4(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C5[0x3];                                      // 0x01C5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      ObjectTypes;                                       // 0x01C8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	ECollisionChannel                             TraceChannel;                                      // 0x01D8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D9[0x3];                                      // 0x01D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                NavSearch;                                         // 0x01DC(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E8[0x8];                                      // 0x01E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Push">();
+	}
+	static class UKSC_DA_Buff_Push* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Push>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Push) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Push");
+static_assert(sizeof(UKSC_DA_Buff_Push) == 0x0001F0, "Wrong size on UKSC_DA_Buff_Push");
+static_assert(offsetof(UKSC_DA_Buff_Push, PushDir) == 0x0001A8, "Member 'UKSC_DA_Buff_Push::PushDir' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Push, PushSpeed) == 0x0001B4, "Member 'UKSC_DA_Buff_Push::PushSpeed' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Push, MaxSimTime) == 0x0001B8, "Member 'UKSC_DA_Buff_Push::MaxSimTime' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Push, SimFrequency) == 0x0001BC, "Member 'UKSC_DA_Buff_Push::SimFrequency' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Push, QueryOffset) == 0x0001C0, "Member 'UKSC_DA_Buff_Push::QueryOffset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Push, TraceWithCollision) == 0x0001C4, "Member 'UKSC_DA_Buff_Push::TraceWithCollision' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Push, ObjectTypes) == 0x0001C8, "Member 'UKSC_DA_Buff_Push::ObjectTypes' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Push, TraceChannel) == 0x0001D8, "Member 'UKSC_DA_Buff_Push::TraceChannel' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Push, NavSearch) == 0x0001DC, "Member 'UKSC_DA_Buff_Push::NavSearch' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Pull
+// 0x0020 (0x01D0 - 0x01B0)
+class UKSC_DA_Buff_Pull final : public UKSC_DA_Buff
+{
+public:
+	struct FVector                                PullPos;                                           // 0x01A8(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RandomRange;                                       // 0x01B4(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PullSpeed;                                         // 0x01C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_GPUNPCAnimState                          PullAnimState;                                     // 0x01C4(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C5[0xB];                                      // 0x01C5(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Pull">();
+	}
+	static class UKSC_DA_Buff_Pull* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Pull>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Pull) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Pull");
+static_assert(sizeof(UKSC_DA_Buff_Pull) == 0x0001D0, "Wrong size on UKSC_DA_Buff_Pull");
+static_assert(offsetof(UKSC_DA_Buff_Pull, PullPos) == 0x0001A8, "Member 'UKSC_DA_Buff_Pull::PullPos' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Pull, RandomRange) == 0x0001B4, "Member 'UKSC_DA_Buff_Pull::RandomRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Pull, PullSpeed) == 0x0001C0, "Member 'UKSC_DA_Buff_Pull::PullSpeed' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Pull, PullAnimState) == 0x0001C4, "Member 'UKSC_DA_Buff_Pull::PullAnimState' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ShieldEffect
+// 0x0040 (0x01F0 - 0x01B0)
+class UKSC_DA_Buff_ShieldEffect final : public UKSC_DA_Buff
+{
+public:
+	class UEffectModelBase*                       ShieldBuffFX;                                      // 0x01A8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             ShieldBuffFX_Offset;                               // 0x01B0(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   ShieldSocket;                                      // 0x01E0(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EC[0x4];                                      // 0x01EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ShieldEffect">();
+	}
+	static class UKSC_DA_Buff_ShieldEffect* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ShieldEffect>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ShieldEffect) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ShieldEffect");
+static_assert(sizeof(UKSC_DA_Buff_ShieldEffect) == 0x0001F0, "Wrong size on UKSC_DA_Buff_ShieldEffect");
+static_assert(offsetof(UKSC_DA_Buff_ShieldEffect, ShieldBuffFX) == 0x0001A8, "Member 'UKSC_DA_Buff_ShieldEffect::ShieldBuffFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ShieldEffect, ShieldBuffFX_Offset) == 0x0001B0, "Member 'UKSC_DA_Buff_ShieldEffect::ShieldBuffFX_Offset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ShieldEffect, ShieldSocket) == 0x0001E0, "Member 'UKSC_DA_Buff_ShieldEffect::ShieldSocket' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_RemoveBuffByTags
+// 0x0020 (0x01D0 - 0x01B0)
+class UKSC_DA_Buff_RemoveBuffByTags final : public UKSC_DA_Buff
+{
+public:
+	struct FGameplayTagContainer                  ToCheckTags;                                       // 0x01A8(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_RemoveBuffByTags">();
+	}
+	static class UKSC_DA_Buff_RemoveBuffByTags* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_RemoveBuffByTags>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_RemoveBuffByTags) == 0x000010, "Wrong alignment on UKSC_DA_Buff_RemoveBuffByTags");
+static_assert(sizeof(UKSC_DA_Buff_RemoveBuffByTags) == 0x0001D0, "Wrong size on UKSC_DA_Buff_RemoveBuffByTags");
+static_assert(offsetof(UKSC_DA_Buff_RemoveBuffByTags, ToCheckTags) == 0x0001A8, "Member 'UKSC_DA_Buff_RemoveBuffByTags::ToCheckTags' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ModifyAttr
+// 0x0050 (0x0200 - 0x01B0)
+class UKSC_DA_Buff_ModifyAttr final : public UKSC_DA_Buff
+{
+public:
+	bool                                          bIsRevertAttr;                                     // 0x01A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EKSC_AttrType, int32>                    ModifyMap;                                         // 0x01B0(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ModifyAttr">();
+	}
+	static class UKSC_DA_Buff_ModifyAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ModifyAttr>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ModifyAttr) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ModifyAttr");
+static_assert(sizeof(UKSC_DA_Buff_ModifyAttr) == 0x000200, "Wrong size on UKSC_DA_Buff_ModifyAttr");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr, bIsRevertAttr) == 0x0001A8, "Member 'UKSC_DA_Buff_ModifyAttr::bIsRevertAttr' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr, ModifyMap) == 0x0001B0, "Member 'UKSC_DA_Buff_ModifyAttr::ModifyMap' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ModifyAttr_BeforeAfterHit
+// 0x00B0 (0x0260 - 0x01B0)
+class UKSC_DA_Buff_ModifyAttr_BeforeAfterHit final : public UKSC_DA_Buff
+{
+public:
+	EKSC_Buff_ModifyAttr_BeforeAfterHit_CheckType CheckType;                                         // 0x01A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_DamageTypeFilter                  DamageTypeFilter;                                  // 0x01B0(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EKSC_Event_HitTarget                          CheckTarget;                                       // 0x01C8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Event_HitTarget                          ModifyTarget;                                      // 0x01C9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ListenZeroDamage;                                  // 0x01CA(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CB[0x5];                                      // 0x01CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_TagFilter                         CheckTagFilter;                                    // 0x01D0(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FGameplayTag                           CheckCountTag;                                     // 0x01F8(0x000C)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TagCount;                                          // 0x0204(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<EKSC_AttrType, int32>                    ModifyMap;                                         // 0x0208(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_258[0x8];                                      // 0x0258(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ModifyAttr_BeforeAfterHit">();
+	}
+	static class UKSC_DA_Buff_ModifyAttr_BeforeAfterHit* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ModifyAttr_BeforeAfterHit>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ModifyAttr_BeforeAfterHit");
+static_assert(sizeof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit) == 0x000260, "Wrong size on UKSC_DA_Buff_ModifyAttr_BeforeAfterHit");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, CheckType) == 0x0001A8, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::CheckType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, DamageTypeFilter) == 0x0001B0, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::DamageTypeFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, CheckTarget) == 0x0001C8, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::CheckTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, ModifyTarget) == 0x0001C9, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::ModifyTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, ListenZeroDamage) == 0x0001CA, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::ListenZeroDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, CheckTagFilter) == 0x0001D0, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::CheckTagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, CheckCountTag) == 0x0001F8, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::CheckCountTag' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, TagCount) == 0x000204, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::TagCount' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterHit, ModifyMap) == 0x000208, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterHit::ModifyMap' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ModifyAttr_ByWorldAttr
+// 0x0060 (0x0210 - 0x01B0)
+class UKSC_DA_Buff_ModifyAttr_ByWorldAttr final : public UKSC_DA_Buff
+{
+public:
+	TMap<EKSC_AttrType, int32>                    ModifyMap;                                         // 0x01A8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EKSC_WorldAttrType                            BindWorldAttr;                                     // 0x01F8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BindWorldAttrFactor;                               // 0x01FC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_WorldAttrType                            MaxWorldAttr;                                      // 0x0200(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_201[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MaxWorldAttrFactor;                                // 0x0204(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_208[0x8];                                      // 0x0208(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ModifyAttr_ByWorldAttr">();
+	}
+	static class UKSC_DA_Buff_ModifyAttr_ByWorldAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ModifyAttr_ByWorldAttr>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ModifyAttr_ByWorldAttr) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ModifyAttr_ByWorldAttr");
+static_assert(sizeof(UKSC_DA_Buff_ModifyAttr_ByWorldAttr) == 0x000210, "Wrong size on UKSC_DA_Buff_ModifyAttr_ByWorldAttr");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_ByWorldAttr, ModifyMap) == 0x0001A8, "Member 'UKSC_DA_Buff_ModifyAttr_ByWorldAttr::ModifyMap' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_ByWorldAttr, BindWorldAttr) == 0x0001F8, "Member 'UKSC_DA_Buff_ModifyAttr_ByWorldAttr::BindWorldAttr' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_ByWorldAttr, BindWorldAttrFactor) == 0x0001FC, "Member 'UKSC_DA_Buff_ModifyAttr_ByWorldAttr::BindWorldAttrFactor' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_ByWorldAttr, MaxWorldAttr) == 0x000200, "Member 'UKSC_DA_Buff_ModifyAttr_ByWorldAttr::MaxWorldAttr' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_ByWorldAttr, MaxWorldAttrFactor) == 0x000204, "Member 'UKSC_DA_Buff_ModifyAttr_ByWorldAttr::MaxWorldAttrFactor' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff
+// 0x0070 (0x0220 - 0x01B0)
+class UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff final : public UKSC_DA_Buff
+{
+public:
+	struct FGameplayTagContainer                  CheckTag;                                          // 0x01A8(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TMap<EKSC_AttrType, int32>                    ModifyMap;                                         // 0x01C8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff">();
+	}
+	static class UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff");
+static_assert(sizeof(UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff) == 0x000220, "Wrong size on UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff, CheckTag) == 0x0001A8, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff::CheckTag' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff, ModifyMap) == 0x0001C8, "Member 'UKSC_DA_Buff_ModifyAttr_BeforeAfterApplyBuff::ModifyMap' has a wrong offset!");
+
+// Class KuroSimpleCombat.Ksc_Da_Buff_ModifyLifeRatio
+// 0x0000 (0x01B0 - 0x01B0)
+class UKsc_Da_Buff_ModifyLifeRatio final : public UKSC_DA_Buff
+{
+public:
+	int32                                         LifeRatio;                                         // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"Ksc_Da_Buff_ModifyLifeRatio">();
+	}
+	static class UKsc_Da_Buff_ModifyLifeRatio* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKsc_Da_Buff_ModifyLifeRatio>();
+	}
+};
+static_assert(alignof(UKsc_Da_Buff_ModifyLifeRatio) == 0x000010, "Wrong alignment on UKsc_Da_Buff_ModifyLifeRatio");
+static_assert(sizeof(UKsc_Da_Buff_ModifyLifeRatio) == 0x0001B0, "Wrong size on UKsc_Da_Buff_ModifyLifeRatio");
+static_assert(offsetof(UKsc_Da_Buff_ModifyLifeRatio, LifeRatio) == 0x0001A8, "Member 'UKsc_Da_Buff_ModifyLifeRatio::LifeRatio' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Damage
+// 0x0050 (0x0200 - 0x01B0)
+class UKSC_DA_Buff_Damage final : public UKSC_DA_Buff
+{
+public:
+	int32                                         Probability;                                       // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSCDamage                             Damage;                                            // 0x01AC(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         DamageID;                                          // 0x01B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCheckSpTarget;                                    // 0x01BC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1BD[0x3];                                      // 0x01BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_TagFilter                         SpTagFilter;                                       // 0x01C0(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FKSCDamage                             SpDamage;                                          // 0x01E8(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         SpDamageID;                                        // 0x01F4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F8[0x8];                                      // 0x01F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Damage">();
+	}
+	static class UKSC_DA_Buff_Damage* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Damage>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Damage) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Damage");
+static_assert(sizeof(UKSC_DA_Buff_Damage) == 0x000200, "Wrong size on UKSC_DA_Buff_Damage");
+static_assert(offsetof(UKSC_DA_Buff_Damage, Probability) == 0x0001A8, "Member 'UKSC_DA_Buff_Damage::Probability' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Damage, Damage) == 0x0001AC, "Member 'UKSC_DA_Buff_Damage::Damage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Damage, DamageID) == 0x0001B8, "Member 'UKSC_DA_Buff_Damage::DamageID' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Damage, bCheckSpTarget) == 0x0001BC, "Member 'UKSC_DA_Buff_Damage::bCheckSpTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Damage, SpTagFilter) == 0x0001C0, "Member 'UKSC_DA_Buff_Damage::SpTagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Damage, SpDamage) == 0x0001E8, "Member 'UKSC_DA_Buff_Damage::SpDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Damage, SpDamageID) == 0x0001F4, "Member 'UKSC_DA_Buff_Damage::SpDamageID' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_DamageAllEnemy
+// 0x0010 (0x01C0 - 0x01B0)
+class UKSC_DA_Buff_DamageAllEnemy final : public UKSC_DA_Buff
+{
+public:
+	struct FKSCDamage                             Damage;                                            // 0x01A8(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B4[0xC];                                      // 0x01B4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_DamageAllEnemy">();
+	}
+	static class UKSC_DA_Buff_DamageAllEnemy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_DamageAllEnemy>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_DamageAllEnemy) == 0x000010, "Wrong alignment on UKSC_DA_Buff_DamageAllEnemy");
+static_assert(sizeof(UKSC_DA_Buff_DamageAllEnemy) == 0x0001C0, "Wrong size on UKSC_DA_Buff_DamageAllEnemy");
+static_assert(offsetof(UKSC_DA_Buff_DamageAllEnemy, Damage) == 0x0001A8, "Member 'UKSC_DA_Buff_DamageAllEnemy::Damage' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Period
+// 0x0050 (0x0200 - 0x01B0)
+class UKSC_DA_Buff_Period : public UKSC_DA_Buff
+{
+public:
+	float                                         Period;                                            // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          PeriodImmediately;                                 // 0x01AC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AD[0x3];                                      // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FGameplayTag, float>              TagPeriodInCrease;                                 // 0x01B0(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Period">();
+	}
+	static class UKSC_DA_Buff_Period* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Period>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Period) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Period");
+static_assert(sizeof(UKSC_DA_Buff_Period) == 0x000200, "Wrong size on UKSC_DA_Buff_Period");
+static_assert(offsetof(UKSC_DA_Buff_Period, Period) == 0x0001A8, "Member 'UKSC_DA_Buff_Period::Period' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period, PeriodImmediately) == 0x0001AC, "Member 'UKSC_DA_Buff_Period::PeriodImmediately' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period, TagPeriodInCrease) == 0x0001B0, "Member 'UKSC_DA_Buff_Period::TagPeriodInCrease' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Stack_ModifyAttr
+// 0x00A0 (0x0260 - 0x01C0)
+class UKSC_DA_Buff_Stack_ModifyAttr final : public UKSC_DA_Buff_Stack
+{
+public:
+	TMap<EKSC_AttrType, int32>                    ModifyMap;                                         // 0x01B8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          IsFullStackModify;                                 // 0x0208(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_209[0x7];                                      // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EKSC_AttrType, int32>                    FullStackModifyMap;                                // 0x0210(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Stack_ModifyAttr">();
+	}
+	static class UKSC_DA_Buff_Stack_ModifyAttr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Stack_ModifyAttr>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Stack_ModifyAttr) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Stack_ModifyAttr");
+static_assert(sizeof(UKSC_DA_Buff_Stack_ModifyAttr) == 0x000260, "Wrong size on UKSC_DA_Buff_Stack_ModifyAttr");
+static_assert(offsetof(UKSC_DA_Buff_Stack_ModifyAttr, ModifyMap) == 0x0001B8, "Member 'UKSC_DA_Buff_Stack_ModifyAttr::ModifyMap' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Stack_ModifyAttr, IsFullStackModify) == 0x000208, "Member 'UKSC_DA_Buff_Stack_ModifyAttr::IsFullStackModify' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Stack_ModifyAttr, FullStackModifyMap) == 0x000210, "Member 'UKSC_DA_Buff_Stack_ModifyAttr::FullStackModifyMap' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Stack_ModifyLifeRatio
+// 0x0000 (0x01C0 - 0x01C0)
+class UKSC_DA_Buff_Stack_ModifyLifeRatio final : public UKSC_DA_Buff_Stack
+{
+public:
+	int32                                         LifeRatio;                                         // 0x01B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Stack_ModifyLifeRatio">();
+	}
+	static class UKSC_DA_Buff_Stack_ModifyLifeRatio* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Stack_ModifyLifeRatio>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Stack_ModifyLifeRatio) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Stack_ModifyLifeRatio");
+static_assert(sizeof(UKSC_DA_Buff_Stack_ModifyLifeRatio) == 0x0001C0, "Wrong size on UKSC_DA_Buff_Stack_ModifyLifeRatio");
+static_assert(offsetof(UKSC_DA_Buff_Stack_ModifyLifeRatio, LifeRatio) == 0x0001B8, "Member 'UKSC_DA_Buff_Stack_ModifyLifeRatio::LifeRatio' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Period_Action
+// 0x0070 (0x0270 - 0x0200)
+class UKSC_DA_Buff_Period_Action final : public UKSC_DA_Buff_Period
+{
+public:
+	bool                                          ApplyDamage;                                       // 0x0200(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_201[0x3];                                      // 0x0201(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSCDamage                             Damage;                                            // 0x0204(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         DamageID;                                          // 0x0210(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff*                           ToDoBuff;                                          // 0x0218(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_AdditionalAttack*               AdditionalAttack;                                  // 0x0220(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         KuroBuffHitFX_MaxNum;                              // 0x0228(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22C[0x4];                                      // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       KuroBuffHitFX;                                     // 0x0230(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_238[0x8];                                      // 0x0238(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             KuroBuffHitFX_Offset;                              // 0x0240(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Period_Action">();
+	}
+	static class UKSC_DA_Buff_Period_Action* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Period_Action>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Period_Action) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Period_Action");
+static_assert(sizeof(UKSC_DA_Buff_Period_Action) == 0x000270, "Wrong size on UKSC_DA_Buff_Period_Action");
+static_assert(offsetof(UKSC_DA_Buff_Period_Action, ApplyDamage) == 0x000200, "Member 'UKSC_DA_Buff_Period_Action::ApplyDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period_Action, Damage) == 0x000204, "Member 'UKSC_DA_Buff_Period_Action::Damage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period_Action, DamageID) == 0x000210, "Member 'UKSC_DA_Buff_Period_Action::DamageID' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period_Action, ToDoBuff) == 0x000218, "Member 'UKSC_DA_Buff_Period_Action::ToDoBuff' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period_Action, AdditionalAttack) == 0x000220, "Member 'UKSC_DA_Buff_Period_Action::AdditionalAttack' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period_Action, KuroBuffHitFX_MaxNum) == 0x000228, "Member 'UKSC_DA_Buff_Period_Action::KuroBuffHitFX_MaxNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period_Action, KuroBuffHitFX) == 0x000230, "Member 'UKSC_DA_Buff_Period_Action::KuroBuffHitFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Period_Action, KuroBuffHitFX_Offset) == 0x000240, "Member 'UKSC_DA_Buff_Period_Action::KuroBuffHitFX_Offset' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_LandFireSpawner
+// 0x0050 (0x0200 - 0x01B0)
+class UKSC_DA_Buff_LandFireSpawner final : public UKSC_DA_Buff
+{
+public:
+	TMap<EKSC_AttrType, int32>                    ModifyMap;                                         // 0x01A8(0x0050)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class UKSC_DA_AdditionalAttack*               AdditionalAttack;                                  // 0x01F8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_LandFireSpawner">();
+	}
+	static class UKSC_DA_Buff_LandFireSpawner* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_LandFireSpawner>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_LandFireSpawner) == 0x000010, "Wrong alignment on UKSC_DA_Buff_LandFireSpawner");
+static_assert(sizeof(UKSC_DA_Buff_LandFireSpawner) == 0x000200, "Wrong size on UKSC_DA_Buff_LandFireSpawner");
+static_assert(offsetof(UKSC_DA_Buff_LandFireSpawner, ModifyMap) == 0x0001A8, "Member 'UKSC_DA_Buff_LandFireSpawner::ModifyMap' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_LandFireSpawner, AdditionalAttack) == 0x0001F8, "Member 'UKSC_DA_Buff_LandFireSpawner::AdditionalAttack' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ListenEvent
+// 0x00A0 (0x0250 - 0x01B0)
+class UKSC_DA_Buff_ListenEvent final : public UKSC_DA_Buff
+{
+public:
+	float                                         ListenEventCoolDown;                               // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Buff_ListenEvent_ListenType              ListenEvent;                                       // 0x01AC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AD[0x3];                                      // 0x01AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_DamageTypeFilter                  DamageTypeFilter;                                  // 0x01B0(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EKSC_Event_HitTarget                          CheckTarget;                                       // 0x01C8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ListenZeroDamage;                                  // 0x01C9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CA[0x2];                                      // 0x01CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           ListenTag;                                         // 0x01CC(0x000C)(Edit, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ListenTagCount;                                    // 0x01D8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ClearListenTag;                                    // 0x01DC(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          CheckOnBeginBuff;                                  // 0x01DD(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DE[0x2];                                      // 0x01DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LifeChangeDownValue;                               // 0x01E0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Buff_ListenEvent_Response                ListenEvent_Response;                              // 0x01E4(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E5[0x3];                                      // 0x01E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_TagFilter                         ResponseCheckTagFilter;                            // 0x01E8(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  ResponseTag;                                       // 0x0210(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class UKSC_DA_Buff*                           AddBuff;                                           // 0x0230(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BuffStackNum;                                      // 0x0238(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_23C[0x4];                                      // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_AdditionalAttack*               AdditionalAttack;                                  // 0x0240(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_248[0x8];                                      // 0x0248(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ListenEvent">();
+	}
+	static class UKSC_DA_Buff_ListenEvent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ListenEvent>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ListenEvent) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ListenEvent");
+static_assert(sizeof(UKSC_DA_Buff_ListenEvent) == 0x000250, "Wrong size on UKSC_DA_Buff_ListenEvent");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ListenEventCoolDown) == 0x0001A8, "Member 'UKSC_DA_Buff_ListenEvent::ListenEventCoolDown' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ListenEvent) == 0x0001AC, "Member 'UKSC_DA_Buff_ListenEvent::ListenEvent' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, DamageTypeFilter) == 0x0001B0, "Member 'UKSC_DA_Buff_ListenEvent::DamageTypeFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, CheckTarget) == 0x0001C8, "Member 'UKSC_DA_Buff_ListenEvent::CheckTarget' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ListenZeroDamage) == 0x0001C9, "Member 'UKSC_DA_Buff_ListenEvent::ListenZeroDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ListenTag) == 0x0001CC, "Member 'UKSC_DA_Buff_ListenEvent::ListenTag' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ListenTagCount) == 0x0001D8, "Member 'UKSC_DA_Buff_ListenEvent::ListenTagCount' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ClearListenTag) == 0x0001DC, "Member 'UKSC_DA_Buff_ListenEvent::ClearListenTag' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, CheckOnBeginBuff) == 0x0001DD, "Member 'UKSC_DA_Buff_ListenEvent::CheckOnBeginBuff' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, LifeChangeDownValue) == 0x0001E0, "Member 'UKSC_DA_Buff_ListenEvent::LifeChangeDownValue' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ListenEvent_Response) == 0x0001E4, "Member 'UKSC_DA_Buff_ListenEvent::ListenEvent_Response' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ResponseCheckTagFilter) == 0x0001E8, "Member 'UKSC_DA_Buff_ListenEvent::ResponseCheckTagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, ResponseTag) == 0x000210, "Member 'UKSC_DA_Buff_ListenEvent::ResponseTag' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, AddBuff) == 0x000230, "Member 'UKSC_DA_Buff_ListenEvent::AddBuff' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, BuffStackNum) == 0x000238, "Member 'UKSC_DA_Buff_ListenEvent::BuffStackNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ListenEvent, AdditionalAttack) == 0x000240, "Member 'UKSC_DA_Buff_ListenEvent::AdditionalAttack' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Aura
+// 0x00B0 (0x0260 - 0x01B0)
+class UKSC_DA_Buff_Aura final : public UKSC_DA_Buff
+{
+public:
+	float                                         UpdateFeq;                                         // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Range;                                             // 0x01AC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxRangeOffset;                                    // 0x01B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxAuraCount;                                      // 0x01B4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Buff_Aura_TargetType                     TargetType;                                        // 0x01B8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Faction                                  SelectFaction;                                     // 0x01B9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Buff_Aura_EnableType                     EnableType;                                        // 0x01BA(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1BB[0x5];                                      // 0x01BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_TagFilter                         EnableTypeTagFilter;                               // 0x01C0(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<class UKSC_DA_Buff*>                   AddBuffs;                                          // 0x01E8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          ApplyDamage;                                       // 0x01F8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F9[0x3];                                      // 0x01F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSCDamage                             Damage;                                            // 0x01FC(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         DamageID;                                          // 0x0208(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20C[0x4];                                      // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       BuffFX_Check;                                      // 0x0210(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_218[0x8];                                      // 0x0218(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             BuffFX_Offset_Check;                               // 0x0220(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   Socket_Check;                                      // 0x0250(0x000C)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackLocation_Check;                       // 0x025C(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackRotation_Check;                       // 0x025D(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          BuffFX_AttackScale_Check;                          // 0x025E(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25F[0x1];                                      // 0x025F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Aura">();
+	}
+	static class UKSC_DA_Buff_Aura* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Aura>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Aura) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Aura");
+static_assert(sizeof(UKSC_DA_Buff_Aura) == 0x000260, "Wrong size on UKSC_DA_Buff_Aura");
+static_assert(offsetof(UKSC_DA_Buff_Aura, UpdateFeq) == 0x0001A8, "Member 'UKSC_DA_Buff_Aura::UpdateFeq' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, Range) == 0x0001AC, "Member 'UKSC_DA_Buff_Aura::Range' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, MaxRangeOffset) == 0x0001B0, "Member 'UKSC_DA_Buff_Aura::MaxRangeOffset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, MaxAuraCount) == 0x0001B4, "Member 'UKSC_DA_Buff_Aura::MaxAuraCount' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, TargetType) == 0x0001B8, "Member 'UKSC_DA_Buff_Aura::TargetType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, SelectFaction) == 0x0001B9, "Member 'UKSC_DA_Buff_Aura::SelectFaction' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, EnableType) == 0x0001BA, "Member 'UKSC_DA_Buff_Aura::EnableType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, EnableTypeTagFilter) == 0x0001C0, "Member 'UKSC_DA_Buff_Aura::EnableTypeTagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, AddBuffs) == 0x0001E8, "Member 'UKSC_DA_Buff_Aura::AddBuffs' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, ApplyDamage) == 0x0001F8, "Member 'UKSC_DA_Buff_Aura::ApplyDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, Damage) == 0x0001FC, "Member 'UKSC_DA_Buff_Aura::Damage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, DamageID) == 0x000208, "Member 'UKSC_DA_Buff_Aura::DamageID' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, BuffFX_Check) == 0x000210, "Member 'UKSC_DA_Buff_Aura::BuffFX_Check' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, BuffFX_Offset_Check) == 0x000220, "Member 'UKSC_DA_Buff_Aura::BuffFX_Offset_Check' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, Socket_Check) == 0x000250, "Member 'UKSC_DA_Buff_Aura::Socket_Check' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, BuffFX_AttackLocation_Check) == 0x00025C, "Member 'UKSC_DA_Buff_Aura::BuffFX_AttackLocation_Check' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, BuffFX_AttackRotation_Check) == 0x00025D, "Member 'UKSC_DA_Buff_Aura::BuffFX_AttackRotation_Check' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Aura, BuffFX_AttackScale_Check) == 0x00025E, "Member 'UKSC_DA_Buff_Aura::BuffFX_AttackScale_Check' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_AuraWithStack
+// 0x0060 (0x0220 - 0x01C0)
+class UKSC_DA_Buff_AuraWithStack final : public UKSC_DA_Buff_Stack
+{
+public:
+	float                                         UpdateFeq;                                         // 0x01B8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Range;                                             // 0x01BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxRangeOffset;                                    // 0x01C0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxAuraCount;                                      // 0x01C4(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Buff_Aura_TargetType                     TargetType;                                        // 0x01C8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Faction                                  SelectFaction;                                     // 0x01C9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKSC_Buff_Aura_EnableType                     EnableType;                                        // 0x01CA(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CB[0x5];                                      // 0x01CB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSC_TagFilter                         EnableTypeTagFilter;                               // 0x01D0(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<class UKSC_DA_Buff*>                   AddBuffs;                                          // 0x01F8(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          ApplyDamage;                                       // 0x0208(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_209[0x3];                                      // 0x0209(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKSCDamage                             Damage;                                            // 0x020C(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         DamageID;                                          // 0x0218(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RangeIncreasePerStack;                             // 0x021C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_AuraWithStack">();
+	}
+	static class UKSC_DA_Buff_AuraWithStack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_AuraWithStack>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_AuraWithStack) == 0x000010, "Wrong alignment on UKSC_DA_Buff_AuraWithStack");
+static_assert(sizeof(UKSC_DA_Buff_AuraWithStack) == 0x000220, "Wrong size on UKSC_DA_Buff_AuraWithStack");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, UpdateFeq) == 0x0001B8, "Member 'UKSC_DA_Buff_AuraWithStack::UpdateFeq' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, Range) == 0x0001BC, "Member 'UKSC_DA_Buff_AuraWithStack::Range' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, MaxRangeOffset) == 0x0001C0, "Member 'UKSC_DA_Buff_AuraWithStack::MaxRangeOffset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, MaxAuraCount) == 0x0001C4, "Member 'UKSC_DA_Buff_AuraWithStack::MaxAuraCount' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, TargetType) == 0x0001C8, "Member 'UKSC_DA_Buff_AuraWithStack::TargetType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, SelectFaction) == 0x0001C9, "Member 'UKSC_DA_Buff_AuraWithStack::SelectFaction' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, EnableType) == 0x0001CA, "Member 'UKSC_DA_Buff_AuraWithStack::EnableType' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, EnableTypeTagFilter) == 0x0001D0, "Member 'UKSC_DA_Buff_AuraWithStack::EnableTypeTagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, AddBuffs) == 0x0001F8, "Member 'UKSC_DA_Buff_AuraWithStack::AddBuffs' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, ApplyDamage) == 0x000208, "Member 'UKSC_DA_Buff_AuraWithStack::ApplyDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, Damage) == 0x00020C, "Member 'UKSC_DA_Buff_AuraWithStack::Damage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, DamageID) == 0x000218, "Member 'UKSC_DA_Buff_AuraWithStack::DamageID' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AuraWithStack, RangeIncreasePerStack) == 0x00021C, "Member 'UKSC_DA_Buff_AuraWithStack::RangeIncreasePerStack' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_AddTargetFaction
+// 0x0010 (0x01C0 - 0x01B0)
+class UKSC_DA_Buff_AddTargetFaction final : public UKSC_DA_Buff
+{
+public:
+	EKSC_Faction                                  SelectFaction;                                     // 0x01A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A9[0x3];                                      // 0x01A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Range;                                             // 0x01AC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MaxNum;                                            // 0x01B0(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B4[0xC];                                      // 0x01B4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_AddTargetFaction">();
+	}
+	static class UKSC_DA_Buff_AddTargetFaction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_AddTargetFaction>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_AddTargetFaction) == 0x000010, "Wrong alignment on UKSC_DA_Buff_AddTargetFaction");
+static_assert(sizeof(UKSC_DA_Buff_AddTargetFaction) == 0x0001C0, "Wrong size on UKSC_DA_Buff_AddTargetFaction");
+static_assert(offsetof(UKSC_DA_Buff_AddTargetFaction, SelectFaction) == 0x0001A8, "Member 'UKSC_DA_Buff_AddTargetFaction::SelectFaction' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AddTargetFaction, Range) == 0x0001AC, "Member 'UKSC_DA_Buff_AddTargetFaction::Range' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_AddTargetFaction, MaxNum) == 0x0001B0, "Member 'UKSC_DA_Buff_AddTargetFaction::MaxNum' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ChainLightning
+// 0x00E0 (0x0290 - 0x01B0)
+class UKSC_DA_Buff_ChainLightning final : public UKSC_DA_Buff
+{
+public:
+	float                                         AttackRange;                                       // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ChainkNum;                                         // 0x01AC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSCDamage                             BaseDamage;                                        // 0x01B0(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         BaseDamageID;                                      // 0x01BC(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSC_TagFilter                         TargetTagFilter;                                   // 0x01C0(0x0028)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	EKSC_Faction                                  TargetFaction;                                     // 0x01E8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ListenZeroDamage;                                  // 0x01E9(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1EA[0x6];                                      // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Buff*                           AddBuffHitBefore;                                  // 0x01F0(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_Buff*                           AddBuffHitAfter;                                   // 0x01F8(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinCheckHP;                                        // 0x0200(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKSCDamage                             AdditionalDamage;                                  // 0x0204(0x000C)(Edit, DisableEditOnInstance, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         AdditionalDamageID;                                // 0x0210(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_214[0x4];                                      // 0x0214(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       KuroCastFX;                                        // 0x0218(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             KuroCastFX_Offset;                                 // 0x0220(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         KuroHitFX_MaxNum;                                  // 0x0250(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_254[0x4];                                      // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectModelBase*                       KuroHitFX;                                         // 0x0258(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             KuroHitFX_Offset;                                  // 0x0260(0x0030)(Edit, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ChainLightning">();
+	}
+	static class UKSC_DA_Buff_ChainLightning* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ChainLightning>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ChainLightning) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ChainLightning");
+static_assert(sizeof(UKSC_DA_Buff_ChainLightning) == 0x000290, "Wrong size on UKSC_DA_Buff_ChainLightning");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, AttackRange) == 0x0001A8, "Member 'UKSC_DA_Buff_ChainLightning::AttackRange' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, ChainkNum) == 0x0001AC, "Member 'UKSC_DA_Buff_ChainLightning::ChainkNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, BaseDamage) == 0x0001B0, "Member 'UKSC_DA_Buff_ChainLightning::BaseDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, BaseDamageID) == 0x0001BC, "Member 'UKSC_DA_Buff_ChainLightning::BaseDamageID' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, TargetTagFilter) == 0x0001C0, "Member 'UKSC_DA_Buff_ChainLightning::TargetTagFilter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, TargetFaction) == 0x0001E8, "Member 'UKSC_DA_Buff_ChainLightning::TargetFaction' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, ListenZeroDamage) == 0x0001E9, "Member 'UKSC_DA_Buff_ChainLightning::ListenZeroDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, AddBuffHitBefore) == 0x0001F0, "Member 'UKSC_DA_Buff_ChainLightning::AddBuffHitBefore' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, AddBuffHitAfter) == 0x0001F8, "Member 'UKSC_DA_Buff_ChainLightning::AddBuffHitAfter' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, MinCheckHP) == 0x000200, "Member 'UKSC_DA_Buff_ChainLightning::MinCheckHP' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, AdditionalDamage) == 0x000204, "Member 'UKSC_DA_Buff_ChainLightning::AdditionalDamage' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, AdditionalDamageID) == 0x000210, "Member 'UKSC_DA_Buff_ChainLightning::AdditionalDamageID' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, KuroCastFX) == 0x000218, "Member 'UKSC_DA_Buff_ChainLightning::KuroCastFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, KuroCastFX_Offset) == 0x000220, "Member 'UKSC_DA_Buff_ChainLightning::KuroCastFX_Offset' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, KuroHitFX_MaxNum) == 0x000250, "Member 'UKSC_DA_Buff_ChainLightning::KuroHitFX_MaxNum' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, KuroHitFX) == 0x000258, "Member 'UKSC_DA_Buff_ChainLightning::KuroHitFX' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_ChainLightning, KuroHitFX_Offset) == 0x000260, "Member 'UKSC_DA_Buff_ChainLightning::KuroHitFX_Offset' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_StopAction
+// 0x0000 (0x01B0 - 0x01B0)
+class UKSC_DA_Buff_StopAction final : public UKSC_DA_Buff
+{
+public:
+	EKSC_Buff_StopAction_ActionType               ActionType;                                        // 0x01A8(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1A9[0x7];                                      // 0x01A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_StopAction">();
+	}
+	static class UKSC_DA_Buff_StopAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_StopAction>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_StopAction) == 0x000010, "Wrong alignment on UKSC_DA_Buff_StopAction");
+static_assert(sizeof(UKSC_DA_Buff_StopAction) == 0x0001B0, "Wrong size on UKSC_DA_Buff_StopAction");
+static_assert(offsetof(UKSC_DA_Buff_StopAction, ActionType) == 0x0001A8, "Member 'UKSC_DA_Buff_StopAction::ActionType' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Invisible
+// 0x0020 (0x01D0 - 0x01B0)
+class UKSC_DA_Buff_Invisible final : public UKSC_DA_Buff
+{
+public:
+	struct FGameplayTagContainer                  InvisibleTags;                                     // 0x01A8(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Invisible">();
+	}
+	static class UKSC_DA_Buff_Invisible* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Invisible>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Invisible) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Invisible");
+static_assert(sizeof(UKSC_DA_Buff_Invisible) == 0x0001D0, "Wrong size on UKSC_DA_Buff_Invisible");
+static_assert(offsetof(UKSC_DA_Buff_Invisible, InvisibleTags) == 0x0001A8, "Member 'UKSC_DA_Buff_Invisible::InvisibleTags' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_Unattackable_Spline
+// 0x0040 (0x01F0 - 0x01B0)
+class UKSC_DA_Buff_Unattackable_Spline final : public UKSC_DA_Buff
+{
+public:
+	float                                         InputKeyOver;                                      // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTagContainer                  InvisibleTags;                                     // 0x01B0(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  ImmuneBuffTags;                                    // 0x01D0(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_Unattackable_Spline">();
+	}
+	static class UKSC_DA_Buff_Unattackable_Spline* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_Unattackable_Spline>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_Unattackable_Spline) == 0x000010, "Wrong alignment on UKSC_DA_Buff_Unattackable_Spline");
+static_assert(sizeof(UKSC_DA_Buff_Unattackable_Spline) == 0x0001F0, "Wrong size on UKSC_DA_Buff_Unattackable_Spline");
+static_assert(offsetof(UKSC_DA_Buff_Unattackable_Spline, InputKeyOver) == 0x0001A8, "Member 'UKSC_DA_Buff_Unattackable_Spline::InputKeyOver' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Unattackable_Spline, InvisibleTags) == 0x0001B0, "Member 'UKSC_DA_Buff_Unattackable_Spline::InvisibleTags' has a wrong offset!");
+static_assert(offsetof(UKSC_DA_Buff_Unattackable_Spline, ImmuneBuffTags) == 0x0001D0, "Member 'UKSC_DA_Buff_Unattackable_Spline::ImmuneBuffTags' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ImmuneBuff
+// 0x0020 (0x01D0 - 0x01B0)
+class UKSC_DA_Buff_ImmuneBuff final : public UKSC_DA_Buff
+{
+public:
+	struct FGameplayTagContainer                  ImmuneBuffTags;                                    // 0x01A8(0x0020)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C8[0x8];                                      // 0x01C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ImmuneBuff">();
+	}
+	static class UKSC_DA_Buff_ImmuneBuff* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ImmuneBuff>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ImmuneBuff) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ImmuneBuff");
+static_assert(sizeof(UKSC_DA_Buff_ImmuneBuff) == 0x0001D0, "Wrong size on UKSC_DA_Buff_ImmuneBuff");
+static_assert(offsetof(UKSC_DA_Buff_ImmuneBuff, ImmuneBuffTags) == 0x0001A8, "Member 'UKSC_DA_Buff_ImmuneBuff::ImmuneBuffTags' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Buff_ModifyHitDamage
+// 0x0000 (0x01B0 - 0x01B0)
+class UKSC_DA_Buff_ModifyHitDamage final : public UKSC_DA_Buff
+{
+public:
+	int32                                         ModifyValue;                                       // 0x01A8(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1AC[0x4];                                      // 0x01AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Buff_ModifyHitDamage">();
+	}
+	static class UKSC_DA_Buff_ModifyHitDamage* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Buff_ModifyHitDamage>();
+	}
+};
+static_assert(alignof(UKSC_DA_Buff_ModifyHitDamage) == 0x000010, "Wrong alignment on UKSC_DA_Buff_ModifyHitDamage");
+static_assert(sizeof(UKSC_DA_Buff_ModifyHitDamage) == 0x0001B0, "Wrong size on UKSC_DA_Buff_ModifyHitDamage");
+static_assert(offsetof(UKSC_DA_Buff_ModifyHitDamage, ModifyValue) == 0x0001A8, "Member 'UKSC_DA_Buff_ModifyHitDamage::ModifyValue' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DA_Decorator_AddSkill
+// 0x0008 (0x0070 - 0x0068)
+class UKSC_DA_Decorator_AddSkill final : public UKSC_DA_Decorator
+{
+public:
+	class UKSC_DA_Skill*                          AddSkill;                                          // 0x0068(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DA_Decorator_AddSkill">();
+	}
+	static class UKSC_DA_Decorator_AddSkill* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DA_Decorator_AddSkill>();
+	}
+};
+static_assert(alignof(UKSC_DA_Decorator_AddSkill) == 0x000008, "Wrong alignment on UKSC_DA_Decorator_AddSkill");
+static_assert(sizeof(UKSC_DA_Decorator_AddSkill) == 0x000070, "Wrong size on UKSC_DA_Decorator_AddSkill");
+static_assert(offsetof(UKSC_DA_Decorator_AddSkill, AddSkill) == 0x000068, "Member 'UKSC_DA_Decorator_AddSkill::AddSkill' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DamageId
+// 0x0050 (0x0080 - 0x0030)
+class UKSC_DamageId final : public UObject
+{
+public:
+	uint8                                         Pad_30[0x50];                                      // 0x0030(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddDamageData(const int32 DamageId, const struct FKSCDamage& Data);
+	void ClearDamageData();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DamageId">();
+	}
+	static class UKSC_DamageId* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DamageId>();
+	}
+};
+static_assert(alignof(UKSC_DamageId) == 0x000008, "Wrong alignment on UKSC_DamageId");
+static_assert(sizeof(UKSC_DamageId) == 0x000080, "Wrong size on UKSC_DamageId");
+
+// Class KuroSimpleCombat.KSC_Decorator
+// 0x0008 (0x0040 - 0x0038)
+class UKSC_Decorator : public UKSC_BaseObject
+{
+public:
+	class UKSC_DA_Decorator*                      Da_Decorator_;                                     // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Decorator">();
+	}
+	static class UKSC_Decorator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Decorator>();
+	}
+};
+static_assert(alignof(UKSC_Decorator) == 0x000008, "Wrong alignment on UKSC_Decorator");
+static_assert(sizeof(UKSC_Decorator) == 0x000040, "Wrong size on UKSC_Decorator");
+static_assert(offsetof(UKSC_Decorator, Da_Decorator_) == 0x000038, "Member 'UKSC_Decorator::Da_Decorator_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Decorator_AddSkill
+// 0x0058 (0x0098 - 0x0040)
+class UKSC_Decorator_AddSkill final : public UKSC_Decorator
+{
+public:
+	class UKSC_DA_Decorator_AddSkill*             Da_Decorator_AddSkill_;                            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_48[0x50];                                      // 0x0048(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Decorator_AddSkill">();
+	}
+	static class UKSC_Decorator_AddSkill* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Decorator_AddSkill>();
+	}
+};
+static_assert(alignof(UKSC_Decorator_AddSkill) == 0x000008, "Wrong alignment on UKSC_Decorator_AddSkill");
+static_assert(sizeof(UKSC_Decorator_AddSkill) == 0x000098, "Wrong size on UKSC_Decorator_AddSkill");
+static_assert(offsetof(UKSC_Decorator_AddSkill, Da_Decorator_AddSkill_) == 0x000040, "Member 'UKSC_Decorator_AddSkill::Da_Decorator_AddSkill_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_DefaultHeadUiHandle
+// 0x0018 (0x0050 - 0x0038)
+class UKSC_DefaultHeadUiHandle final : public UKSC_BaseObject
+{
+public:
+	uint8                                         Pad_38[0x18];                                      // 0x0038(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_DefaultHeadUiHandle">();
+	}
+	static class UKSC_DefaultHeadUiHandle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_DefaultHeadUiHandle>();
+	}
+};
+static_assert(alignof(UKSC_DefaultHeadUiHandle) == 0x000008, "Wrong alignment on UKSC_DefaultHeadUiHandle");
+static_assert(sizeof(UKSC_DefaultHeadUiHandle) == 0x000050, "Wrong size on UKSC_DefaultHeadUiHandle");
+
+// Class KuroSimpleCombat.KSC_Entity
+// 0x00D0 (0x0388 - 0x02B8)
+class AKSC_Entity : public AKSC_BaseActor
+{
+public:
+	class UKSC_SceneComp*                         SceneComp_;                                        // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_Move*                              Move_;                                             // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_SkillComp*                         SkillComp_;                                        // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_DA_Entity*                         DaEntity_;                                         // 0x02D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FVector>             SocketOffsets;                                     // 0x02D8(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	int32                                         EntityId_;                                         // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32C[0x6];                                      // 0x032C(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          IsKscEnable;                                       // 0x0332(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_333[0x25];                                     // 0x0333(0x0025)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IKSC_HeadUiHandle>     HeadUiHandle;                                      // 0x0358(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_368[0x8];                                      // 0x0368(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 RenderActor_;                                      // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_378[0x10];                                     // 0x0378(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void ApplyBuffSelf(class UKSC_DA_Buff* DaBuff);
+	void Dead(int32 KillBy);
+	class UKSC_Move* GetMoveComponent();
+	class AActor* GetRenderActor();
+	void RemoveBuffSelf(class UKSC_DA_Buff* DaBuff);
+	void RemoveDaBuffImmediately(class UKSC_DA_Buff* DaBuff);
+	void SetAttr(EKSC_AttrType Type, int32 Value);
+	void SetFaction(EKSC_Faction Faction);
+	void SetIgnoreFactions(const TArray<EKSC_Faction>& Factions);
+	void SetLocationByWorld(const struct FVectorDouble& D_Location);
+	void SetRenderActor(class AActor* RenderActor);
+	void SetTransformByWorld(const struct FTransformDouble& D_Transform);
+	void TryActiveSKill(const int32 SkillIndex);
+	void UpdateBuffWithStackNumSelf(class UKSC_DA_Buff* DaBuff, int32 StackNum);
+
+	class UKSC_SceneComp* GetSceneComp() const;
+	class UKSC_SkillComp* GetSkillComp() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Entity">();
+	}
+	static class AKSC_Entity* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_Entity>();
+	}
+};
+static_assert(alignof(AKSC_Entity) == 0x000008, "Wrong alignment on AKSC_Entity");
+static_assert(sizeof(AKSC_Entity) == 0x000388, "Wrong size on AKSC_Entity");
+static_assert(offsetof(AKSC_Entity, SceneComp_) == 0x0002B8, "Member 'AKSC_Entity::SceneComp_' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity, Move_) == 0x0002C0, "Member 'AKSC_Entity::Move_' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity, SkillComp_) == 0x0002C8, "Member 'AKSC_Entity::SkillComp_' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity, DaEntity_) == 0x0002D0, "Member 'AKSC_Entity::DaEntity_' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity, SocketOffsets) == 0x0002D8, "Member 'AKSC_Entity::SocketOffsets' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity, EntityId_) == 0x000328, "Member 'AKSC_Entity::EntityId_' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity, IsKscEnable) == 0x000332, "Member 'AKSC_Entity::IsKscEnable' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity, HeadUiHandle) == 0x000358, "Member 'AKSC_Entity::HeadUiHandle' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity, RenderActor_) == 0x000370, "Member 'AKSC_Entity::RenderActor_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_RenderEntityInterface
+// 0x0000 (0x0000 - 0x0000)
+class IKSC_RenderEntityInterface final
+{
+public:
+	void KSC_AddEntity(const int32& EntityId, const struct FTransform& InTransform, bool InIsPreview);
+	void KSC_DelayRemoveEntity(const int32& EntityId, const float& DelayTime);
+	void KSC_InitData(class UKSC_DA_EntityRender* DaEntityRender);
+	void KSC_RemoveEntity(const int32& EntityId);
+	void KSC_SetActorTransform_AnyThread(const int32& EntityId, const struct FTransform& InTransform);
+	void KSC_UpdateEntity(float DeltaSeconds);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_RenderEntityInterface">();
+	}
+	static class IKSC_RenderEntityInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IKSC_RenderEntityInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IKSC_RenderEntityInterface) == 0x000001, "Wrong alignment on IKSC_RenderEntityInterface");
+static_assert(sizeof(IKSC_RenderEntityInterface) == 0x000001, "Wrong size on IKSC_RenderEntityInterface");
+
+// Class KuroSimpleCombat.KSC_RenderEntityHeadUIInterface
+// 0x0000 (0x0000 - 0x0000)
+class IKSC_RenderEntityHeadUIInterface final
+{
+public:
+	void KSC_AddEntity(const int32& EntityId, const struct FVector& InLocation);
+	void KSC_RemoveEntity(const int32& EntityId);
+	void KSC_SetActorLocation(const int32& EntityId, const struct FVector& InLocation);
+	void KSC_SetHP(const int32& EntityId, float Percent);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_RenderEntityHeadUIInterface">();
+	}
+	static class IKSC_RenderEntityHeadUIInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IKSC_RenderEntityHeadUIInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IKSC_RenderEntityHeadUIInterface) == 0x000001, "Wrong alignment on IKSC_RenderEntityHeadUIInterface");
+static_assert(sizeof(IKSC_RenderEntityHeadUIInterface) == 0x000001, "Wrong size on IKSC_RenderEntityHeadUIInterface");
+
+// Class KuroSimpleCombat.KSC_Entity_AssistMachine
+// 0x0070 (0x03F8 - 0x0388)
+class AKSC_Entity_AssistMachine final : public AKSC_Entity
+{
+public:
+	class UKSC_DA_Entity_AssistMachine*           DaEntity_AssistMachine_;                           // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_390[0x8];                                      // 0x0390(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ListenCDSkillIndex;                                // 0x0398(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(int32 skillIndex, float cd)>   OnSkillCD;                                         // 0x03A0(0x0028)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	int32                                         ListenSkillReadyIndex;                             // 0x03C8(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             OnSkillReady;                                      // 0x03D0(0x0028)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+
+public:
+	void D_Fire(const struct FTransformDouble& D_FireTrans, const int32 SkillIndex);
+	void SetSkillAutoCast(const int32& SkillIndex, const EKSC_SkillAutoCast AutoCast);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Entity_AssistMachine">();
+	}
+	static class AKSC_Entity_AssistMachine* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_Entity_AssistMachine>();
+	}
+};
+static_assert(alignof(AKSC_Entity_AssistMachine) == 0x000008, "Wrong alignment on AKSC_Entity_AssistMachine");
+static_assert(sizeof(AKSC_Entity_AssistMachine) == 0x0003F8, "Wrong size on AKSC_Entity_AssistMachine");
+static_assert(offsetof(AKSC_Entity_AssistMachine, DaEntity_AssistMachine_) == 0x000388, "Member 'AKSC_Entity_AssistMachine::DaEntity_AssistMachine_' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity_AssistMachine, ListenCDSkillIndex) == 0x000398, "Member 'AKSC_Entity_AssistMachine::ListenCDSkillIndex' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity_AssistMachine, OnSkillCD) == 0x0003A0, "Member 'AKSC_Entity_AssistMachine::OnSkillCD' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity_AssistMachine, ListenSkillReadyIndex) == 0x0003C8, "Member 'AKSC_Entity_AssistMachine::ListenSkillReadyIndex' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity_AssistMachine, OnSkillReady) == 0x0003D0, "Member 'AKSC_Entity_AssistMachine::OnSkillReady' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Entity_Coin
+// 0x0000 (0x0388 - 0x0388)
+class AKSC_Entity_Coin final : public AKSC_Entity
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Entity_Coin">();
+	}
+	static class AKSC_Entity_Coin* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_Entity_Coin>();
+	}
+};
+static_assert(alignof(AKSC_Entity_Coin) == 0x000008, "Wrong alignment on AKSC_Entity_Coin");
+static_assert(sizeof(AKSC_Entity_Coin) == 0x000388, "Wrong size on AKSC_Entity_Coin");
+
+// Class KuroSimpleCombat.KSC_Entity_Enemy
+// 0x0078 (0x0400 - 0x0388)
+class AKSC_Entity_Enemy final : public AKSC_Entity
+{
+public:
+	TMap<struct FGameplayTag, struct FKSC_Enemy_Delay_KuroMatFX> DelayDeadTagMaterialMap;            // 0x0388(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FKSC_Enemy_Delay_KuroMatFX             DelayDeadMaterial;                                 // 0x03D8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKSC_Enemy_Delay_KuroMatFX             DelayArrivalMaterial;                              // 0x03E8(0x0010)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3F8[0x8];                                      // 0x03F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Entity_Enemy">();
+	}
+	static class AKSC_Entity_Enemy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_Entity_Enemy>();
+	}
+};
+static_assert(alignof(AKSC_Entity_Enemy) == 0x000008, "Wrong alignment on AKSC_Entity_Enemy");
+static_assert(sizeof(AKSC_Entity_Enemy) == 0x000400, "Wrong size on AKSC_Entity_Enemy");
+static_assert(offsetof(AKSC_Entity_Enemy, DelayDeadTagMaterialMap) == 0x000388, "Member 'AKSC_Entity_Enemy::DelayDeadTagMaterialMap' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity_Enemy, DelayDeadMaterial) == 0x0003D8, "Member 'AKSC_Entity_Enemy::DelayDeadMaterial' has a wrong offset!");
+static_assert(offsetof(AKSC_Entity_Enemy, DelayArrivalMaterial) == 0x0003E8, "Member 'AKSC_Entity_Enemy::DelayArrivalMaterial' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_RenderEntityAnimInterface
+// 0x0000 (0x0000 - 0x0000)
+class IKSC_RenderEntityAnimInterface final
+{
+public:
+	void KSC_PauseAnim(const int32& EntityId);
+	void KSC_ResumeAnim(const int32& EntityId);
+	void KSC_UpdateAnimState(const int32& EntityId, const EKSC_GPUNPCAnimState& EnemyState);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_RenderEntityAnimInterface">();
+	}
+	static class IKSC_RenderEntityAnimInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IKSC_RenderEntityAnimInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IKSC_RenderEntityAnimInterface) == 0x000001, "Wrong alignment on IKSC_RenderEntityAnimInterface");
+static_assert(sizeof(IKSC_RenderEntityAnimInterface) == 0x000001, "Wrong size on IKSC_RenderEntityAnimInterface");
+
+// Class KuroSimpleCombat.KSC_RenderEntityMaterialInterface
+// 0x0000 (0x0000 - 0x0000)
+class IKSC_RenderEntityMaterialInterface final
+{
+public:
+	int32 KSC_AddMaterial(const int32& EntityId, class UKuroMaterialControllerDataAsset* DataAsset, bool bLoop);
+	void KSC_ApplyBeHitMaterial(const int32& EntityId);
+	void KSC_DelayAddMaterial(const int32& EntityId, float Delay, class UKuroMaterialControllerDataAsset* DataAsset);
+	void KSC_RemoveMaterial(const int32& EntityId, int32 HandleId);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_RenderEntityMaterialInterface">();
+	}
+	static class IKSC_RenderEntityMaterialInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IKSC_RenderEntityMaterialInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IKSC_RenderEntityMaterialInterface) == 0x000001, "Wrong alignment on IKSC_RenderEntityMaterialInterface");
+static_assert(sizeof(IKSC_RenderEntityMaterialInterface) == 0x000001, "Wrong size on IKSC_RenderEntityMaterialInterface");
+
+// Class KuroSimpleCombat.KSC_Entity_Player
+// 0x0000 (0x0388 - 0x0388)
+class AKSC_Entity_Player final : public AKSC_Entity
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Entity_Player">();
+	}
+	static class AKSC_Entity_Player* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_Entity_Player>();
+	}
+};
+static_assert(alignof(AKSC_Entity_Player) == 0x000008, "Wrong alignment on AKSC_Entity_Player");
+static_assert(sizeof(AKSC_Entity_Player) == 0x000388, "Wrong size on AKSC_Entity_Player");
+
+// Class KuroSimpleCombat.KSC_Projectile
+// 0x0008 (0x0390 - 0x0388)
+class AKSC_Projectile final : public AKSC_Entity
+{
+public:
+	class UKSC_DA_Entity_Projectile*              DaEntityProjectile_;                               // 0x0388(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Projectile">();
+	}
+	static class AKSC_Projectile* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_Projectile>();
+	}
+};
+static_assert(alignof(AKSC_Projectile) == 0x000008, "Wrong alignment on AKSC_Projectile");
+static_assert(sizeof(AKSC_Projectile) == 0x000390, "Wrong size on AKSC_Projectile");
+static_assert(offsetof(AKSC_Projectile, DaEntityProjectile_) == 0x000388, "Member 'AKSC_Projectile::DaEntityProjectile_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Entity_Tower
+// 0x0010 (0x0398 - 0x0388)
+class AKSC_Entity_Tower final : public AKSC_Entity
+{
+public:
+	uint8                                         Pad_388[0x8];                                      // 0x0388(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Entity_Tower*                   DaEntity_Tower_;                                   // 0x0390(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Entity_Tower">();
+	}
+	static class AKSC_Entity_Tower* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_Entity_Tower>();
+	}
+};
+static_assert(alignof(AKSC_Entity_Tower) == 0x000008, "Wrong alignment on AKSC_Entity_Tower");
+static_assert(sizeof(AKSC_Entity_Tower) == 0x000398, "Wrong size on AKSC_Entity_Tower");
+static_assert(offsetof(AKSC_Entity_Tower, DaEntity_Tower_) == 0x000390, "Member 'AKSC_Entity_Tower::DaEntity_Tower_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_GPUNPCActor
+// 0x0420 (0x06F0 - 0x02D0)
+class AKSC_GPUNPCActor final : public ABakedBoneMeshActor
+{
+public:
+	uint8                                         Pad_2D0[0x18];                                     // 0x02D0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_EntityRender*                   DA_EntityRender;                                   // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<int32>                                 RemovedIndices;                                    // 0x02F0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, float>                            DelayRemovedIndices;                               // 0x0300(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_350[0x10];                                     // 0x0350(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 InstanceAnim;                                      // 0x0360(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TArray<struct FTransform>                     InstanceTransform;                                 // 0x0370(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, int32>                            EntityToInstanceMap;                               // 0x0380(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3D0[0xB8];                                     // 0x03D0(0x00B8)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBakedBoneMeshComponent*                MeshComp;                                          // 0x0488(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UKuroMaterialControllerComponent*       MaterialComp;                                      // 0x0490(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_498[0x50];                                     // 0x0498(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, float>                            DelayAddMatIndices;                                // 0x04E8(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, class UKuroMaterialControllerDataAsset*> DelayAddMatMap;                             // 0x0538(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_588[0x10];                                     // 0x0588(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<int32, struct FVector2D>                 CurTimeLineData;                                   // 0x0598(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5E8[0x28];                                     // 0x05E8(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             RelativeTrans;                                     // 0x0610(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TMap<EKSC_GPUNPCAnimState, int32>             AnimMap;                                           // 0x0640(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TMap<class UKuroMaterialControllerDataAsset*, int32> MaterialMap;                                // 0x0690(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UKuroMaterialControllerDataAsset*       BeHitMaterialDataAsset;                            // 0x06E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6E8[0x8];                                      // 0x06E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void InitGPUNPC();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_GPUNPCActor">();
+	}
+	static class AKSC_GPUNPCActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_GPUNPCActor>();
+	}
+};
+static_assert(alignof(AKSC_GPUNPCActor) == 0x000010, "Wrong alignment on AKSC_GPUNPCActor");
+static_assert(sizeof(AKSC_GPUNPCActor) == 0x0006F0, "Wrong size on AKSC_GPUNPCActor");
+static_assert(offsetof(AKSC_GPUNPCActor, DA_EntityRender) == 0x0002E8, "Member 'AKSC_GPUNPCActor::DA_EntityRender' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, RemovedIndices) == 0x0002F0, "Member 'AKSC_GPUNPCActor::RemovedIndices' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, DelayRemovedIndices) == 0x000300, "Member 'AKSC_GPUNPCActor::DelayRemovedIndices' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, InstanceAnim) == 0x000360, "Member 'AKSC_GPUNPCActor::InstanceAnim' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, InstanceTransform) == 0x000370, "Member 'AKSC_GPUNPCActor::InstanceTransform' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, EntityToInstanceMap) == 0x000380, "Member 'AKSC_GPUNPCActor::EntityToInstanceMap' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, MeshComp) == 0x000488, "Member 'AKSC_GPUNPCActor::MeshComp' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, MaterialComp) == 0x000490, "Member 'AKSC_GPUNPCActor::MaterialComp' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, DelayAddMatIndices) == 0x0004E8, "Member 'AKSC_GPUNPCActor::DelayAddMatIndices' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, DelayAddMatMap) == 0x000538, "Member 'AKSC_GPUNPCActor::DelayAddMatMap' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, CurTimeLineData) == 0x000598, "Member 'AKSC_GPUNPCActor::CurTimeLineData' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, RelativeTrans) == 0x000610, "Member 'AKSC_GPUNPCActor::RelativeTrans' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, AnimMap) == 0x000640, "Member 'AKSC_GPUNPCActor::AnimMap' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, MaterialMap) == 0x000690, "Member 'AKSC_GPUNPCActor::MaterialMap' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUNPCActor, BeHitMaterialDataAsset) == 0x0006E0, "Member 'AKSC_GPUNPCActor::BeHitMaterialDataAsset' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_GPUHeadUI
+// 0x00A0 (0x0350 - 0x02B0)
+class AKSC_GPUHeadUI final : public AActor
+{
+public:
+	uint8                                         Pad_2B0[0x10];                                     // 0x02B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 InstanceIndices;                                   // 0x02C0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TArray<int32>                                 RemovedIndices;                                    // 0x02D0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TArray<struct FTransform>                     InstanceTransform;                                 // 0x02E0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, int32>                            EntityToInstanceMap;                               // 0x02F0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	class UInstancedStaticMeshComponent*          Comp;                                              // 0x0340(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMaterialInstanceDynamic*               MI;                                                // 0x0348(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	void InitHeadUI();
+	void InitHeadUIInternal(class UInstancedStaticMeshComponent* InComp, class UMaterialInstanceDynamic* InMI);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_GPUHeadUI">();
+	}
+	static class AKSC_GPUHeadUI* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_GPUHeadUI>();
+	}
+};
+static_assert(alignof(AKSC_GPUHeadUI) == 0x000008, "Wrong alignment on AKSC_GPUHeadUI");
+static_assert(sizeof(AKSC_GPUHeadUI) == 0x000350, "Wrong size on AKSC_GPUHeadUI");
+static_assert(offsetof(AKSC_GPUHeadUI, InstanceIndices) == 0x0002C0, "Member 'AKSC_GPUHeadUI::InstanceIndices' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUHeadUI, RemovedIndices) == 0x0002D0, "Member 'AKSC_GPUHeadUI::RemovedIndices' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUHeadUI, InstanceTransform) == 0x0002E0, "Member 'AKSC_GPUHeadUI::InstanceTransform' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUHeadUI, EntityToInstanceMap) == 0x0002F0, "Member 'AKSC_GPUHeadUI::EntityToInstanceMap' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUHeadUI, Comp) == 0x000340, "Member 'AKSC_GPUHeadUI::Comp' has a wrong offset!");
+static_assert(offsetof(AKSC_GPUHeadUI, MI) == 0x000348, "Member 'AKSC_GPUHeadUI::MI' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_HeadUiHandle
+// 0x0000 (0x0000 - 0x0000)
+class IKSC_HeadUiHandle final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_HeadUiHandle">();
+	}
+	static class IKSC_HeadUiHandle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IKSC_HeadUiHandle>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IKSC_HeadUiHandle) == 0x000001, "Wrong alignment on IKSC_HeadUiHandle");
+static_assert(sizeof(IKSC_HeadUiHandle) == 0x000001, "Wrong size on IKSC_HeadUiHandle");
+
+// Class KuroSimpleCombat.KSC_Move
+// 0x00F0 (0x0128 - 0x0038)
+class UKSC_Move : public UKSC_BaseObject
+{
+public:
+	class AKSC_Entity*                            Owner_;                                            // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_40[0xE8];                                      // 0x0040(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Move">();
+	}
+	static class UKSC_Move* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Move>();
+	}
+};
+static_assert(alignof(UKSC_Move) == 0x000008, "Wrong alignment on UKSC_Move");
+static_assert(sizeof(UKSC_Move) == 0x000128, "Wrong size on UKSC_Move");
+static_assert(offsetof(UKSC_Move, Owner_) == 0x000038, "Member 'UKSC_Move::Owner_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Move_Approach
+// 0x0028 (0x0150 - 0x0128)
+class UKSC_Move_Approach final : public UKSC_Move
+{
+public:
+	uint8                                         Pad_128[0x28];                                     // 0x0128(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetTargetEntity(class AKSC_Entity* Entity);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Move_Approach">();
+	}
+	static class UKSC_Move_Approach* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Move_Approach>();
+	}
+};
+static_assert(alignof(UKSC_Move_Approach) == 0x000008, "Wrong alignment on UKSC_Move_Approach");
+static_assert(sizeof(UKSC_Move_Approach) == 0x000150, "Wrong size on UKSC_Move_Approach");
+
+// Class KuroSimpleCombat.KSC_Move_Follow
+// 0x0020 (0x0148 - 0x0128)
+class UKSC_Move_Follow final : public UKSC_Move
+{
+public:
+	uint8                                         Pad_128[0x20];                                     // 0x0128(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Move_Follow">();
+	}
+	static class UKSC_Move_Follow* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Move_Follow>();
+	}
+};
+static_assert(alignof(UKSC_Move_Follow) == 0x000008, "Wrong alignment on UKSC_Move_Follow");
+static_assert(sizeof(UKSC_Move_Follow) == 0x000148, "Wrong size on UKSC_Move_Follow");
+
+// Class KuroSimpleCombat.KSC_Move_Random
+// 0x0048 (0x0170 - 0x0128)
+class UKSC_Move_Random final : public UKSC_Move
+{
+public:
+	uint8                                         Pad_128[0x48];                                     // 0x0128(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Move_Random">();
+	}
+	static class UKSC_Move_Random* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Move_Random>();
+	}
+};
+static_assert(alignof(UKSC_Move_Random) == 0x000008, "Wrong alignment on UKSC_Move_Random");
+static_assert(sizeof(UKSC_Move_Random) == 0x000170, "Wrong size on UKSC_Move_Random");
+
+// Class KuroSimpleCombat.KSC_Move_Spline
+// 0x0040 (0x0168 - 0x0128)
+class UKSC_Move_Spline final : public UKSC_Move
+{
+public:
+	class USplineComponent*                       SplineComp_;                                       // 0x0128(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_130[0x38];                                     // 0x0130(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetSpline(class USplineComponent* SplineComp);
+	void SetSplineHeight(const float Height);
+	void SetSplineWide(const float Width);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Move_Spline">();
+	}
+	static class UKSC_Move_Spline* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Move_Spline>();
+	}
+};
+static_assert(alignof(UKSC_Move_Spline) == 0x000008, "Wrong alignment on UKSC_Move_Spline");
+static_assert(sizeof(UKSC_Move_Spline) == 0x000168, "Wrong size on UKSC_Move_Spline");
+static_assert(offsetof(UKSC_Move_Spline, SplineComp_) == 0x000128, "Member 'UKSC_Move_Spline::SplineComp_' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_Move_Straight
-// 0x0000 (0x0048 - 0x0048)
+// 0x0000 (0x0128 - 0x0128)
 class UKSC_Move_Straight final : public UKSC_Move
 {
 public:
@@ -657,250 +3911,134 @@ public:
 	}
 };
 static_assert(alignof(UKSC_Move_Straight) == 0x000008, "Wrong alignment on UKSC_Move_Straight");
-static_assert(sizeof(UKSC_Move_Straight) == 0x000048, "Wrong size on UKSC_Move_Straight");
+static_assert(sizeof(UKSC_Move_Straight) == 0x000128, "Wrong size on UKSC_Move_Straight");
 
-// Class KuroSimpleCombat.KSC_DA_FX
-// 0x0010 (0x0048 - 0x0038)
-class UKSC_DA_FX final : public UDataAsset
+// Class KuroSimpleCombat.KSC_PlayerHeadUiHandle
+// 0x0040 (0x0078 - 0x0038)
+class UKSC_PlayerHeadUiHandle final : public UKSC_BaseObject
 {
 public:
-	EKSC_FXType                                   FXType;                                            // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UNiagaraSystem*                         FX;                                                // 0x0040(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x40];                                      // 0x0038(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnAttrChange(EKSC_AttrType AttrType, int32 Value);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_DA_FX">();
+		return StaticClassImpl<"KSC_PlayerHeadUiHandle">();
 	}
-	static class UKSC_DA_FX* GetDefaultObj()
+	static class UKSC_PlayerHeadUiHandle* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSC_DA_FX>();
+		return GetDefaultObjImpl<UKSC_PlayerHeadUiHandle>();
 	}
 };
-static_assert(alignof(UKSC_DA_FX) == 0x000008, "Wrong alignment on UKSC_DA_FX");
-static_assert(sizeof(UKSC_DA_FX) == 0x000048, "Wrong size on UKSC_DA_FX");
-static_assert(offsetof(UKSC_DA_FX, FXType) == 0x000038, "Member 'UKSC_DA_FX::FXType' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_FX, FX) == 0x000040, "Member 'UKSC_DA_FX::FX' has a wrong offset!");
+static_assert(alignof(UKSC_PlayerHeadUiHandle) == 0x000008, "Wrong alignment on UKSC_PlayerHeadUiHandle");
+static_assert(sizeof(UKSC_PlayerHeadUiHandle) == 0x000078, "Wrong size on UKSC_PlayerHeadUiHandle");
 
-// Class KuroSimpleCombat.KSC_Skill_RangeAttack
-// 0x0028 (0x0090 - 0x0068)
-class UKSC_Skill_RangeAttack final : public UKSC_Skill
+// Class KuroSimpleCombat.KSC_RenderActor
+// 0x0010 (0x02C0 - 0x02B0)
+class AKSC_RenderActor final : public AActor
 {
 public:
-	class UKSC_DA_Skill_RangeAttack*              DaSkillRangeAttack_;                               // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UKSC_Entity*>                    Targets_;                                          // 0x0070(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_80[0x10];                                      // 0x0080(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2B0[0x10];                                     // 0x02B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_Skill_RangeAttack">();
+		return StaticClassImpl<"KSC_RenderActor">();
 	}
-	static class UKSC_Skill_RangeAttack* GetDefaultObj()
+	static class AKSC_RenderActor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSC_Skill_RangeAttack>();
+		return GetDefaultObjImpl<AKSC_RenderActor>();
 	}
 };
-static_assert(alignof(UKSC_Skill_RangeAttack) == 0x000008, "Wrong alignment on UKSC_Skill_RangeAttack");
-static_assert(sizeof(UKSC_Skill_RangeAttack) == 0x000090, "Wrong size on UKSC_Skill_RangeAttack");
-static_assert(offsetof(UKSC_Skill_RangeAttack, DaSkillRangeAttack_) == 0x000068, "Member 'UKSC_Skill_RangeAttack::DaSkillRangeAttack_' has a wrong offset!");
-static_assert(offsetof(UKSC_Skill_RangeAttack, Targets_) == 0x000070, "Member 'UKSC_Skill_RangeAttack::Targets_' has a wrong offset!");
+static_assert(alignof(AKSC_RenderActor) == 0x000008, "Wrong alignment on AKSC_RenderActor");
+static_assert(sizeof(AKSC_RenderActor) == 0x0002C0, "Wrong size on AKSC_RenderActor");
 
-// Class KuroSimpleCombat.KSC_DA_Skill_Projectile
-// 0x0008 (0x0060 - 0x0058)
-class UKSC_DA_Skill_Projectile final : public UKSC_DA_Skill
+// Class KuroSimpleCombat.KSC_SceneComp
+// 0x0180 (0x01D0 - 0x0050)
+class alignas(0x10) UKSC_SceneComp final : public UKSC_CompBase
 {
 public:
-	class UKSC_DA_Entity_Projectile*              Projectile;                                        // 0x0058(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x168];                                     // 0x0050(0x0168)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_SceneComp*                      Da_SceneComp;                                      // 0x01B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C0[0x10];                                     // 0x01C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_DA_Skill_Projectile">();
+		return StaticClassImpl<"KSC_SceneComp">();
 	}
-	static class UKSC_DA_Skill_Projectile* GetDefaultObj()
+	static class UKSC_SceneComp* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSC_DA_Skill_Projectile>();
+		return GetDefaultObjImpl<UKSC_SceneComp>();
 	}
 };
-static_assert(alignof(UKSC_DA_Skill_Projectile) == 0x000008, "Wrong alignment on UKSC_DA_Skill_Projectile");
-static_assert(sizeof(UKSC_DA_Skill_Projectile) == 0x000060, "Wrong size on UKSC_DA_Skill_Projectile");
-static_assert(offsetof(UKSC_DA_Skill_Projectile, Projectile) == 0x000058, "Member 'UKSC_DA_Skill_Projectile::Projectile' has a wrong offset!");
+static_assert(alignof(UKSC_SceneComp) == 0x000010, "Wrong alignment on UKSC_SceneComp");
+static_assert(sizeof(UKSC_SceneComp) == 0x0001D0, "Wrong size on UKSC_SceneComp");
+static_assert(offsetof(UKSC_SceneComp, Da_SceneComp) == 0x0001B8, "Member 'UKSC_SceneComp::Da_SceneComp' has a wrong offset!");
 
-// Class KuroSimpleCombat.KSC_DA_Buff_Period
-// 0x0008 (0x0050 - 0x0048)
-class UKSC_DA_Buff_Period : public UKSC_DA_Buff
+// Class KuroSimpleCombat.KSC_Skill
+// 0x0060 (0x0098 - 0x0038)
+class UKSC_Skill : public UKSC_BaseObject
 {
 public:
-	float                                         Period;                                            // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Skill*                          DaSkill_;                                          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_SkillComp*                         Caster_;                                           // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_SkillComp*                         Target_;                                           // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UKSC_SkillComp*>                 Targets_;                                          // 0x0050(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_60[0x38];                                      // 0x0060(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	float GetSkillCoolDownMax();
+	float GetSkillCoolDownRemain();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_DA_Buff_Period">();
+		return StaticClassImpl<"KSC_Skill">();
 	}
-	static class UKSC_DA_Buff_Period* GetDefaultObj()
+	static class UKSC_Skill* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSC_DA_Buff_Period>();
+		return GetDefaultObjImpl<UKSC_Skill>();
 	}
 };
-static_assert(alignof(UKSC_DA_Buff_Period) == 0x000008, "Wrong alignment on UKSC_DA_Buff_Period");
-static_assert(sizeof(UKSC_DA_Buff_Period) == 0x000050, "Wrong size on UKSC_DA_Buff_Period");
-static_assert(offsetof(UKSC_DA_Buff_Period, Period) == 0x000048, "Member 'UKSC_DA_Buff_Period::Period' has a wrong offset!");
+static_assert(alignof(UKSC_Skill) == 0x000008, "Wrong alignment on UKSC_Skill");
+static_assert(sizeof(UKSC_Skill) == 0x000098, "Wrong size on UKSC_Skill");
+static_assert(offsetof(UKSC_Skill, DaSkill_) == 0x000038, "Member 'UKSC_Skill::DaSkill_' has a wrong offset!");
+static_assert(offsetof(UKSC_Skill, Caster_) == 0x000040, "Member 'UKSC_Skill::Caster_' has a wrong offset!");
+static_assert(offsetof(UKSC_Skill, Target_) == 0x000048, "Member 'UKSC_Skill::Target_' has a wrong offset!");
+static_assert(offsetof(UKSC_Skill, Targets_) == 0x000050, "Member 'UKSC_Skill::Targets_' has a wrong offset!");
 
-// Class KuroSimpleCombat.KSC_DA_Buff_Period_Damage
-// 0x0010 (0x0060 - 0x0050)
-class UKSC_DA_Buff_Period_Damage final : public UKSC_DA_Buff_Period
+// Class KuroSimpleCombat.KSC_Skill_Anim
+// 0x0010 (0x00A8 - 0x0098)
+class UKSC_Skill_Anim : public UKSC_Skill
 {
 public:
-	struct FKSCDamage                             Damage;                                            // 0x0050(0x0002)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_52[0x6];                                       // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_DA_FX*                             HitFX;                                             // 0x0058(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_DA_Skill_Anim*                     DaSkillAnim_;                                      // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"KSC_DA_Buff_Period_Damage">();
+		return StaticClassImpl<"KSC_Skill_Anim">();
 	}
-	static class UKSC_DA_Buff_Period_Damage* GetDefaultObj()
+	static class UKSC_Skill_Anim* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UKSC_DA_Buff_Period_Damage>();
+		return GetDefaultObjImpl<UKSC_Skill_Anim>();
 	}
 };
-static_assert(alignof(UKSC_DA_Buff_Period_Damage) == 0x000008, "Wrong alignment on UKSC_DA_Buff_Period_Damage");
-static_assert(sizeof(UKSC_DA_Buff_Period_Damage) == 0x000060, "Wrong size on UKSC_DA_Buff_Period_Damage");
-static_assert(offsetof(UKSC_DA_Buff_Period_Damage, Damage) == 0x000050, "Member 'UKSC_DA_Buff_Period_Damage::Damage' has a wrong offset!");
-static_assert(offsetof(UKSC_DA_Buff_Period_Damage, HitFX) == 0x000058, "Member 'UKSC_DA_Buff_Period_Damage::HitFX' has a wrong offset!");
-
-// Class KuroSimpleCombat.KSCDelegateBase
-// 0x0000 (0x0030 - 0x0030)
-class UKSCDelegateBase : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KSCDelegateBase">();
-	}
-	static class UKSCDelegateBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKSCDelegateBase>();
-	}
-};
-static_assert(alignof(UKSCDelegateBase) == 0x000008, "Wrong alignment on UKSCDelegateBase");
-static_assert(sizeof(UKSCDelegateBase) == 0x000030, "Wrong size on UKSCDelegateBase");
-
-// Class KuroSimpleCombat.KSCDelegateCommon
-// 0x0040 (0x0070 - 0x0030)
-class UKSCDelegateCommon final : public UKSCDelegateBase
-{
-public:
-	uint8                                         Pad_30[0x40];                                      // 0x0030(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UKSCDelegateCommon* GetOrAddDelegate();
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KSCDelegateCommon">();
-	}
-	static class UKSCDelegateCommon* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKSCDelegateCommon>();
-	}
-};
-static_assert(alignof(UKSCDelegateCommon) == 0x000008, "Wrong alignment on UKSCDelegateCommon");
-static_assert(sizeof(UKSCDelegateCommon) == 0x000070, "Wrong size on UKSCDelegateCommon");
-
-// Class KuroSimpleCombat.KSC_Entity
-// 0x0160 (0x0190 - 0x0030)
-class alignas(0x10) UKSC_Entity : public UObject
-{
-public:
-	class UKSC_Move*                              Move_;                                             // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UKSC_Skill*>                     Skills_;                                           // 0x0038(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TMap<TSubclassOf<class UKSC_Buff>, class UKSC_Buff*> Buffs_;                                     // 0x0048(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TMap<TSubclassOf<class UKSC_Buff>, class UKSC_Buff*> ToRemoveBuffs_;                             // 0x0098(0x0050)(Protected, NativeAccessSpecifierProtected)
-	class UKSC_AttrSet*                           AttrSet_;                                          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F0[0x60];                                      // 0x00F0(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 RenderActor_;                                      // 0x0150(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158[0x38];                                     // 0x0158(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class UKSC_Move* GetMoveComponent();
-	void SetFaction(EKSC_Faction Faction);
-	void SetHP(int32 Value);
-
-	class UKSC_AttrSet* GetAttrComponent() const;
-	int32 GetHP() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KSC_Entity">();
-	}
-	static class UKSC_Entity* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKSC_Entity>();
-	}
-};
-static_assert(alignof(UKSC_Entity) == 0x000010, "Wrong alignment on UKSC_Entity");
-static_assert(sizeof(UKSC_Entity) == 0x000190, "Wrong size on UKSC_Entity");
-static_assert(offsetof(UKSC_Entity, Move_) == 0x000030, "Member 'UKSC_Entity::Move_' has a wrong offset!");
-static_assert(offsetof(UKSC_Entity, Skills_) == 0x000038, "Member 'UKSC_Entity::Skills_' has a wrong offset!");
-static_assert(offsetof(UKSC_Entity, Buffs_) == 0x000048, "Member 'UKSC_Entity::Buffs_' has a wrong offset!");
-static_assert(offsetof(UKSC_Entity, ToRemoveBuffs_) == 0x000098, "Member 'UKSC_Entity::ToRemoveBuffs_' has a wrong offset!");
-static_assert(offsetof(UKSC_Entity, AttrSet_) == 0x0000E8, "Member 'UKSC_Entity::AttrSet_' has a wrong offset!");
-static_assert(offsetof(UKSC_Entity, RenderActor_) == 0x000150, "Member 'UKSC_Entity::RenderActor_' has a wrong offset!");
-
-// Class KuroSimpleCombat.KSC_Move_Follow
-// 0x0020 (0x0068 - 0x0048)
-class UKSC_Move_Follow final : public UKSC_Move
-{
-public:
-	uint8                                         Pad_48[0x20];                                      // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KSC_Move_Follow">();
-	}
-	static class UKSC_Move_Follow* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKSC_Move_Follow>();
-	}
-};
-static_assert(alignof(UKSC_Move_Follow) == 0x000008, "Wrong alignment on UKSC_Move_Follow");
-static_assert(sizeof(UKSC_Move_Follow) == 0x000068, "Wrong size on UKSC_Move_Follow");
-
-// Class KuroSimpleCombat.KSC_Projectile
-// 0x0010 (0x01A0 - 0x0190)
-class UKSC_Projectile final : public UKSC_Entity
-{
-public:
-	uint8                                         Pad_190[0x10];                                     // 0x0190(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KSC_Projectile">();
-	}
-	static class UKSC_Projectile* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKSC_Projectile>();
-	}
-};
-static_assert(alignof(UKSC_Projectile) == 0x000010, "Wrong alignment on UKSC_Projectile");
-static_assert(sizeof(UKSC_Projectile) == 0x0001A0, "Wrong size on UKSC_Projectile");
+static_assert(alignof(UKSC_Skill_Anim) == 0x000008, "Wrong alignment on UKSC_Skill_Anim");
+static_assert(sizeof(UKSC_Skill_Anim) == 0x0000A8, "Wrong size on UKSC_Skill_Anim");
+static_assert(offsetof(UKSC_Skill_Anim, DaSkillAnim_) == 0x000098, "Member 'UKSC_Skill_Anim::DaSkillAnim_' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_Skill_Attack
-// 0x0008 (0x0070 - 0x0068)
+// 0x0008 (0x00A0 - 0x0098)
 class UKSC_Skill_Attack final : public UKSC_Skill
 {
 public:
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Skill_Attack*                   DaSkillAttack_;                                    // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -913,15 +4051,221 @@ public:
 	}
 };
 static_assert(alignof(UKSC_Skill_Attack) == 0x000008, "Wrong alignment on UKSC_Skill_Attack");
-static_assert(sizeof(UKSC_Skill_Attack) == 0x000070, "Wrong size on UKSC_Skill_Attack");
+static_assert(sizeof(UKSC_Skill_Attack) == 0x0000A0, "Wrong size on UKSC_Skill_Attack");
+static_assert(offsetof(UKSC_Skill_Attack, DaSkillAttack_) == 0x000098, "Member 'UKSC_Skill_Attack::DaSkillAttack_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_Attack_Persistent
+// 0x0010 (0x00A8 - 0x0098)
+class UKSC_Skill_Attack_Persistent : public UKSC_Skill
+{
+public:
+	class UKSC_DA_Skill_Attack_Persistent*        DaSkillAttackPersistent_;                          // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A0[0x8];                                       // 0x00A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_Attack_Persistent">();
+	}
+	static class UKSC_Skill_Attack_Persistent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_Attack_Persistent>();
+	}
+};
+static_assert(alignof(UKSC_Skill_Attack_Persistent) == 0x000008, "Wrong alignment on UKSC_Skill_Attack_Persistent");
+static_assert(sizeof(UKSC_Skill_Attack_Persistent) == 0x0000A8, "Wrong size on UKSC_Skill_Attack_Persistent");
+static_assert(offsetof(UKSC_Skill_Attack_Persistent, DaSkillAttackPersistent_) == 0x000098, "Member 'UKSC_Skill_Attack_Persistent::DaSkillAttackPersistent_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_Attack_Persistent_Cannon
+// 0x0058 (0x0100 - 0x00A8)
+class alignas(0x10) UKSC_Skill_Attack_Persistent_Cannon final : public UKSC_Skill_Attack_Persistent
+{
+public:
+	class UKSC_DA_Skill_Attack_Persistent_Cannon* DaSkillAttackPersistentCannon_;                    // 0x00A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_B0[0x50];                                      // 0x00B0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_Attack_Persistent_Cannon">();
+	}
+	static class UKSC_Skill_Attack_Persistent_Cannon* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_Attack_Persistent_Cannon>();
+	}
+};
+static_assert(alignof(UKSC_Skill_Attack_Persistent_Cannon) == 0x000010, "Wrong alignment on UKSC_Skill_Attack_Persistent_Cannon");
+static_assert(sizeof(UKSC_Skill_Attack_Persistent_Cannon) == 0x000100, "Wrong size on UKSC_Skill_Attack_Persistent_Cannon");
+static_assert(offsetof(UKSC_Skill_Attack_Persistent_Cannon, DaSkillAttackPersistentCannon_) == 0x0000A8, "Member 'UKSC_Skill_Attack_Persistent_Cannon::DaSkillAttackPersistentCannon_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_BulletAttack
+// 0x0018 (0x00B0 - 0x0098)
+class alignas(0x10) UKSC_Skill_BulletAttack final : public UKSC_Skill
+{
+public:
+	class UKSC_DA_Skill_BulletAttack*             DaSkillBulletAttack_;                              // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A0[0x10];                                      // 0x00A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnBulletHit(const struct FKSC_BulletTargetContext& TargetContext);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_BulletAttack">();
+	}
+	static class UKSC_Skill_BulletAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_BulletAttack>();
+	}
+};
+static_assert(alignof(UKSC_Skill_BulletAttack) == 0x000010, "Wrong alignment on UKSC_Skill_BulletAttack");
+static_assert(sizeof(UKSC_Skill_BulletAttack) == 0x0000B0, "Wrong size on UKSC_Skill_BulletAttack");
+static_assert(offsetof(UKSC_Skill_BulletAttack, DaSkillBulletAttack_) == 0x000098, "Member 'UKSC_Skill_BulletAttack::DaSkillBulletAttack_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_BulletPierceAttack
+// 0x0018 (0x00B0 - 0x0098)
+class alignas(0x10) UKSC_Skill_BulletPierceAttack final : public UKSC_Skill
+{
+public:
+	class UKSC_DA_Skill_BulletPierceAttack*       DaSkillBulletPierceAttack_;                        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A0[0x10];                                      // 0x00A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnBulletHits(const TArray<class UKSC_SkillComp*>& Hits);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_BulletPierceAttack">();
+	}
+	static class UKSC_Skill_BulletPierceAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_BulletPierceAttack>();
+	}
+};
+static_assert(alignof(UKSC_Skill_BulletPierceAttack) == 0x000010, "Wrong alignment on UKSC_Skill_BulletPierceAttack");
+static_assert(sizeof(UKSC_Skill_BulletPierceAttack) == 0x0000B0, "Wrong size on UKSC_Skill_BulletPierceAttack");
+static_assert(offsetof(UKSC_Skill_BulletPierceAttack, DaSkillBulletPierceAttack_) == 0x000098, "Member 'UKSC_Skill_BulletPierceAttack::DaSkillBulletPierceAttack_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_ChainAttack
+// 0x0008 (0x00A0 - 0x0098)
+class UKSC_Skill_ChainAttack final : public UKSC_Skill
+{
+public:
+	class UKSC_DA_Skill_ChainAttack*              DaSkillChainAttack_;                               // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_ChainAttack">();
+	}
+	static class UKSC_Skill_ChainAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_ChainAttack>();
+	}
+};
+static_assert(alignof(UKSC_Skill_ChainAttack) == 0x000008, "Wrong alignment on UKSC_Skill_ChainAttack");
+static_assert(sizeof(UKSC_Skill_ChainAttack) == 0x0000A0, "Wrong size on UKSC_Skill_ChainAttack");
+static_assert(offsetof(UKSC_Skill_ChainAttack, DaSkillChainAttack_) == 0x000098, "Member 'UKSC_Skill_ChainAttack::DaSkillChainAttack_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_RangeAttack
+// 0x0038 (0x00D0 - 0x0098)
+class alignas(0x10) UKSC_Skill_RangeAttack : public UKSC_Skill
+{
+public:
+	class UKSC_DA_Skill_RangeAttack*              DaSkillRangeAttack_;                               // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A0[0x30];                                      // 0x00A0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_RangeAttack">();
+	}
+	static class UKSC_Skill_RangeAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_RangeAttack>();
+	}
+};
+static_assert(alignof(UKSC_Skill_RangeAttack) == 0x000010, "Wrong alignment on UKSC_Skill_RangeAttack");
+static_assert(sizeof(UKSC_Skill_RangeAttack) == 0x0000D0, "Wrong size on UKSC_Skill_RangeAttack");
+static_assert(offsetof(UKSC_Skill_RangeAttack, DaSkillRangeAttack_) == 0x000098, "Member 'UKSC_Skill_RangeAttack::DaSkillRangeAttack_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_LandFire
+// 0x0010 (0x00E0 - 0x00D0)
+class UKSC_Skill_LandFire final : public UKSC_Skill_RangeAttack
+{
+public:
+	class UKSC_DA_Skill_LandFire*                 DaSkillLandFire_;                                  // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_LandFire">();
+	}
+	static class UKSC_Skill_LandFire* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_LandFire>();
+	}
+};
+static_assert(alignof(UKSC_Skill_LandFire) == 0x000010, "Wrong alignment on UKSC_Skill_LandFire");
+static_assert(sizeof(UKSC_Skill_LandFire) == 0x0000E0, "Wrong size on UKSC_Skill_LandFire");
+static_assert(offsetof(UKSC_Skill_LandFire, DaSkillLandFire_) == 0x0000D0, "Member 'UKSC_Skill_LandFire::DaSkillLandFire_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_LoadBomb
+// 0x0080 (0x0150 - 0x00D0)
+class UKSC_Skill_LoadBomb final : public UKSC_Skill_RangeAttack
+{
+public:
+	class UKSC_DA_Skill_LoadBomb*                 DaSkillLoadBomb_;                                  // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D8[0x78];                                      // 0x00D8(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_LoadBomb">();
+	}
+	static class UKSC_Skill_LoadBomb* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_LoadBomb>();
+	}
+};
+static_assert(alignof(UKSC_Skill_LoadBomb) == 0x000010, "Wrong alignment on UKSC_Skill_LoadBomb");
+static_assert(sizeof(UKSC_Skill_LoadBomb) == 0x000150, "Wrong size on UKSC_Skill_LoadBomb");
+static_assert(offsetof(UKSC_Skill_LoadBomb, DaSkillLoadBomb_) == 0x0000D0, "Member 'UKSC_Skill_LoadBomb::DaSkillLoadBomb_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_ManualBulletAttack
+// 0x0058 (0x00F0 - 0x0098)
+class alignas(0x10) UKSC_Skill_ManualBulletAttack final : public UKSC_Skill
+{
+public:
+	class UKSC_DA_Skill_ManualBulletAttack*       DaSkillManualBulletAttack_;                        // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A0[0x50];                                      // 0x00A0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void OnBulletHit(const struct FKSC_BulletTargetContext& TargetContext);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_ManualBulletAttack">();
+	}
+	static class UKSC_Skill_ManualBulletAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_ManualBulletAttack>();
+	}
+};
+static_assert(alignof(UKSC_Skill_ManualBulletAttack) == 0x000010, "Wrong alignment on UKSC_Skill_ManualBulletAttack");
+static_assert(sizeof(UKSC_Skill_ManualBulletAttack) == 0x0000F0, "Wrong size on UKSC_Skill_ManualBulletAttack");
+static_assert(offsetof(UKSC_Skill_ManualBulletAttack, DaSkillManualBulletAttack_) == 0x000098, "Member 'UKSC_Skill_ManualBulletAttack::DaSkillManualBulletAttack_' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_Skill_MultiAttack
-// 0x0018 (0x0080 - 0x0068)
+// 0x0008 (0x00A0 - 0x0098)
 class UKSC_Skill_MultiAttack final : public UKSC_Skill
 {
 public:
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UKSC_Entity*>                    Targets_;                                          // 0x0070(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	class UKSC_DA_Skill_MultiAttack*              DaSkillMultiAttack_;                               // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -934,15 +4278,15 @@ public:
 	}
 };
 static_assert(alignof(UKSC_Skill_MultiAttack) == 0x000008, "Wrong alignment on UKSC_Skill_MultiAttack");
-static_assert(sizeof(UKSC_Skill_MultiAttack) == 0x000080, "Wrong size on UKSC_Skill_MultiAttack");
-static_assert(offsetof(UKSC_Skill_MultiAttack, Targets_) == 0x000070, "Member 'UKSC_Skill_MultiAttack::Targets_' has a wrong offset!");
+static_assert(sizeof(UKSC_Skill_MultiAttack) == 0x0000A0, "Wrong size on UKSC_Skill_MultiAttack");
+static_assert(offsetof(UKSC_Skill_MultiAttack, DaSkillMultiAttack_) == 0x000098, "Member 'UKSC_Skill_MultiAttack::DaSkillMultiAttack_' has a wrong offset!");
 
 // Class KuroSimpleCombat.KSC_Skill_Projectile
-// 0x0008 (0x0070 - 0x0068)
+// 0x0008 (0x00A0 - 0x0098)
 class UKSC_Skill_Projectile final : public UKSC_Skill
 {
 public:
-	uint8                                         Pad_68[0x8];                                       // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UKSC_DA_Skill_Projectile*               DaSkillProjectile_;                                // 0x0098(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -955,25 +4299,255 @@ public:
 	}
 };
 static_assert(alignof(UKSC_Skill_Projectile) == 0x000008, "Wrong alignment on UKSC_Skill_Projectile");
-static_assert(sizeof(UKSC_Skill_Projectile) == 0x000070, "Wrong size on UKSC_Skill_Projectile");
+static_assert(sizeof(UKSC_Skill_Projectile) == 0x0000A0, "Wrong size on UKSC_Skill_Projectile");
+static_assert(offsetof(UKSC_Skill_Projectile, DaSkillProjectile_) == 0x000098, "Member 'UKSC_Skill_Projectile::DaSkillProjectile_' has a wrong offset!");
 
-// Class KuroSimpleCombat.KSC_World
-// 0x0180 (0x01B0 - 0x0030)
-class UKSC_World final : public UObject
+// Class KuroSimpleCombat.KSC_Skill_RangeAttackApplyBuffToFriend
+// 0x0020 (0x00F0 - 0x00D0)
+class UKSC_Skill_RangeAttackApplyBuffToFriend final : public UKSC_Skill_RangeAttack
 {
 public:
-	TArray<class UKSC_Entity*>                    Entities_;                                         // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UKSC_Entity*>                    ToRemoveEntities_;                                 // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<class UKSC_Entity*>                    ToAddEntities_;                                    // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TMap<class UKSC_Entity*, class AActor*>       RenderActorMap_;                                   // 0x0060(0x0050)(NativeAccessSpecifierPublic)
-	TMap<class UKSC_DA_EntityRender*, class AActor*> SharedRenderActorDaMap_;                        // 0x00B0(0x0050)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_100[0x10];                                     // 0x0100(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UClass*, struct FKSC_ObjectPoll>   Pools_;                                            // 0x0110(0x0050)(NativeAccessSpecifierPrivate)
-	TSet<class UObject*>                          PoolHelper_;                                       // 0x0160(0x0050)(NativeAccessSpecifierPrivate)
+	class UKSC_DA_Skill_RangeAttackApplyBuffToFriend* DaSkillRangeAttackApplyBuffToFaction_;         // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D8[0x18];                                      // 0x00D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	class UKSC_Entity* AddDaEntity(class UKSC_DA_Entity* DaEntity, const struct FTransform& Transform);
-	void RemoveEntity(class UKSC_Entity* Entity);
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_RangeAttackApplyBuffToFriend">();
+	}
+	static class UKSC_Skill_RangeAttackApplyBuffToFriend* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_RangeAttackApplyBuffToFriend>();
+	}
+};
+static_assert(alignof(UKSC_Skill_RangeAttackApplyBuffToFriend) == 0x000010, "Wrong alignment on UKSC_Skill_RangeAttackApplyBuffToFriend");
+static_assert(sizeof(UKSC_Skill_RangeAttackApplyBuffToFriend) == 0x0000F0, "Wrong size on UKSC_Skill_RangeAttackApplyBuffToFriend");
+static_assert(offsetof(UKSC_Skill_RangeAttackApplyBuffToFriend, DaSkillRangeAttackApplyBuffToFaction_) == 0x0000D0, "Member 'UKSC_Skill_RangeAttackApplyBuffToFriend::DaSkillRangeAttackApplyBuffToFaction_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_RangePersistentAttack
+// 0x0010 (0x00E0 - 0x00D0)
+class UKSC_Skill_RangePersistentAttack final : public UKSC_Skill_RangeAttack
+{
+public:
+	class UKSC_DA_Skill_RangePersistentAttack*    DaSkillRangePersistentAttack_;                     // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D8[0x8];                                       // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_RangePersistentAttack">();
+	}
+	static class UKSC_Skill_RangePersistentAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_RangePersistentAttack>();
+	}
+};
+static_assert(alignof(UKSC_Skill_RangePersistentAttack) == 0x000010, "Wrong alignment on UKSC_Skill_RangePersistentAttack");
+static_assert(sizeof(UKSC_Skill_RangePersistentAttack) == 0x0000E0, "Wrong size on UKSC_Skill_RangePersistentAttack");
+static_assert(offsetof(UKSC_Skill_RangePersistentAttack, DaSkillRangePersistentAttack_) == 0x0000D0, "Member 'UKSC_Skill_RangePersistentAttack::DaSkillRangePersistentAttack_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_Skill_RangeSectionAttack
+// 0x0070 (0x0140 - 0x00D0)
+class UKSC_Skill_RangeSectionAttack final : public UKSC_Skill_RangeAttack
+{
+public:
+	class UKSC_DA_Skill_RangeSectionAttack*       DaSkillRangeSectionAttack_;                        // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_D8[0x18];                                      // 0x00D8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UKSC_SkillComp*>                   ProcessedTargets_;                                 // 0x00F0(0x0050)(Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_Skill_RangeSectionAttack">();
+	}
+	static class UKSC_Skill_RangeSectionAttack* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_Skill_RangeSectionAttack>();
+	}
+};
+static_assert(alignof(UKSC_Skill_RangeSectionAttack) == 0x000010, "Wrong alignment on UKSC_Skill_RangeSectionAttack");
+static_assert(sizeof(UKSC_Skill_RangeSectionAttack) == 0x000140, "Wrong size on UKSC_Skill_RangeSectionAttack");
+static_assert(offsetof(UKSC_Skill_RangeSectionAttack, DaSkillRangeSectionAttack_) == 0x0000D0, "Member 'UKSC_Skill_RangeSectionAttack::DaSkillRangeSectionAttack_' has a wrong offset!");
+static_assert(offsetof(UKSC_Skill_RangeSectionAttack, ProcessedTargets_) == 0x0000F0, "Member 'UKSC_Skill_RangeSectionAttack::ProcessedTargets_' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_SkillComp
+// 0x0648 (0x0698 - 0x0050)
+class UKSC_SkillComp final : public UKSC_CompBase
+{
+public:
+	class UKSC_AttrSet*                           AttrSet_;                                          // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_58[0x130];                                     // 0x0058(0x0130)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UKSC_DA_Skill*, class UKSC_Skill*> SkillMap;                                          // 0x0188(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TArray<class UKSC_Skill*>                     Skills_;                                           // 0x01D8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1E8[0x50];                                     // 0x01E8(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UKSC_Bullet*, class UKSC_Skill*>   Bullets_;                                          // 0x0238(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TArray<class UKSC_Bullet*>                    ToRemoveBullets_;                                  // 0x0288(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TMap<class UKSC_DA_Buff*, class UKSC_Buff*>   Buffs_;                                            // 0x0298(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<class UKSC_DA_Buff*, class UKSC_Buff*>   ToAddBuffs_;                                       // 0x02E8(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<class UKSC_DA_Buff*, class UKSC_Buff*>   ToRemoveBuffs_;                                    // 0x0338(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<class UKSC_DA_Buff*, class UKSC_Buff*>   UnEndRemoveBuffs_;                                 // 0x0388(0x0050)(Protected, NativeAccessSpecifierProtected)
+	class UKSC_DA_SkillComp*                      DA_SkillComp;                                      // 0x03D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3E0[0x158];                                    // 0x03E0(0x0158)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UObject*>                          StopCastSkill;                                     // 0x0538(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class UObject*, struct FGameplayTagContainer> InvisibleTagMap;                              // 0x0588(0x0050)(NativeAccessSpecifierPublic)
+	TSet<class UObject*>                          UnattackableSet;                                   // 0x05D8(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class UObject*, struct FGameplayTagContainer> ImmuneBuffMap;                                // 0x0628(0x0050)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_678[0x20];                                     // 0x0678(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	float GetSkillCollDown() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_SkillComp">();
+	}
+	static class UKSC_SkillComp* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_SkillComp>();
+	}
+};
+static_assert(alignof(UKSC_SkillComp) == 0x000008, "Wrong alignment on UKSC_SkillComp");
+static_assert(sizeof(UKSC_SkillComp) == 0x000698, "Wrong size on UKSC_SkillComp");
+static_assert(offsetof(UKSC_SkillComp, AttrSet_) == 0x000050, "Member 'UKSC_SkillComp::AttrSet_' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, SkillMap) == 0x000188, "Member 'UKSC_SkillComp::SkillMap' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, Skills_) == 0x0001D8, "Member 'UKSC_SkillComp::Skills_' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, Bullets_) == 0x000238, "Member 'UKSC_SkillComp::Bullets_' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, ToRemoveBullets_) == 0x000288, "Member 'UKSC_SkillComp::ToRemoveBullets_' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, Buffs_) == 0x000298, "Member 'UKSC_SkillComp::Buffs_' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, ToAddBuffs_) == 0x0002E8, "Member 'UKSC_SkillComp::ToAddBuffs_' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, ToRemoveBuffs_) == 0x000338, "Member 'UKSC_SkillComp::ToRemoveBuffs_' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, UnEndRemoveBuffs_) == 0x000388, "Member 'UKSC_SkillComp::UnEndRemoveBuffs_' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, DA_SkillComp) == 0x0003D8, "Member 'UKSC_SkillComp::DA_SkillComp' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, StopCastSkill) == 0x000538, "Member 'UKSC_SkillComp::StopCastSkill' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, InvisibleTagMap) == 0x000588, "Member 'UKSC_SkillComp::InvisibleTagMap' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, UnattackableSet) == 0x0005D8, "Member 'UKSC_SkillComp::UnattackableSet' has a wrong offset!");
+static_assert(offsetof(UKSC_SkillComp, ImmuneBuffMap) == 0x000628, "Member 'UKSC_SkillComp::ImmuneBuffMap' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_StaticMeshInstanceActor
+// 0x0230 (0x04E0 - 0x02B0)
+class AKSC_StaticMeshInstanceActor final : public AActor
+{
+public:
+	uint8                                         Pad_2B0[0x10];                                     // 0x02B0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 RemovedIndices;                                    // 0x02C0(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, float>                            DelayRemovedIndices;                               // 0x02D0(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_320[0x10];                                     // 0x0320(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 InstanceAnim;                                      // 0x0330(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TArray<struct FTransform>                     InstanceTransform;                                 // 0x0340(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPrivate)
+	TMap<int32, int32>                            EntityToInstanceMap;                               // 0x0350(0x0050)(Edit, EditConst, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3A0[0xB0];                                     // 0x03A0(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	class UInstancedStaticMeshComponent*          InstancedStaticMeshComponent;                      // 0x0450(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_458[0x8];                                      // 0x0458(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             RelativeTrans;                                     // 0x0460(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	TMap<EKSC_GPUNPCAnimState, int32>             AnimMap;                                           // 0x0490(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+
+public:
+	void InitRenderActor();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_StaticMeshInstanceActor">();
+	}
+	static class AKSC_StaticMeshInstanceActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKSC_StaticMeshInstanceActor>();
+	}
+};
+static_assert(alignof(AKSC_StaticMeshInstanceActor) == 0x000010, "Wrong alignment on AKSC_StaticMeshInstanceActor");
+static_assert(sizeof(AKSC_StaticMeshInstanceActor) == 0x0004E0, "Wrong size on AKSC_StaticMeshInstanceActor");
+static_assert(offsetof(AKSC_StaticMeshInstanceActor, RemovedIndices) == 0x0002C0, "Member 'AKSC_StaticMeshInstanceActor::RemovedIndices' has a wrong offset!");
+static_assert(offsetof(AKSC_StaticMeshInstanceActor, DelayRemovedIndices) == 0x0002D0, "Member 'AKSC_StaticMeshInstanceActor::DelayRemovedIndices' has a wrong offset!");
+static_assert(offsetof(AKSC_StaticMeshInstanceActor, InstanceAnim) == 0x000330, "Member 'AKSC_StaticMeshInstanceActor::InstanceAnim' has a wrong offset!");
+static_assert(offsetof(AKSC_StaticMeshInstanceActor, InstanceTransform) == 0x000340, "Member 'AKSC_StaticMeshInstanceActor::InstanceTransform' has a wrong offset!");
+static_assert(offsetof(AKSC_StaticMeshInstanceActor, EntityToInstanceMap) == 0x000350, "Member 'AKSC_StaticMeshInstanceActor::EntityToInstanceMap' has a wrong offset!");
+static_assert(offsetof(AKSC_StaticMeshInstanceActor, InstancedStaticMeshComponent) == 0x000450, "Member 'AKSC_StaticMeshInstanceActor::InstancedStaticMeshComponent' has a wrong offset!");
+static_assert(offsetof(AKSC_StaticMeshInstanceActor, RelativeTrans) == 0x000460, "Member 'AKSC_StaticMeshInstanceActor::RelativeTrans' has a wrong offset!");
+static_assert(offsetof(AKSC_StaticMeshInstanceActor, AnimMap) == 0x000490, "Member 'AKSC_StaticMeshInstanceActor::AnimMap' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_WorldBounds
+// 0x0000 (0x0030 - 0x0030)
+class UKSC_WorldBounds : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_WorldBounds">();
+	}
+	static class UKSC_WorldBounds* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_WorldBounds>();
+	}
+};
+static_assert(alignof(UKSC_WorldBounds) == 0x000008, "Wrong alignment on UKSC_WorldBounds");
+static_assert(sizeof(UKSC_WorldBounds) == 0x000030, "Wrong size on UKSC_WorldBounds");
+
+// Class KuroSimpleCombat.KSC_World
+// 0x06D0 (0x0700 - 0x0030)
+class alignas(0x10) UKSC_World final : public UObject
+{
+public:
+	TArray<class UKSC_SceneComp*>                 SceneComps_;                                       // 0x0030(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class AKSC_Entity*>                    Entities_;                                         // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<int32, class AKSC_Entity*>               EntityIdMap;                                       // 0x0050(0x0050)(NativeAccessSpecifierPublic)
+	TArray<class AKSC_Entity*>                    DeadEntities_;                                     // 0x00A0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<class AKSC_Entity*>                    ShowHeadUIEntities_;                               // 0x00B0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPublic)
+	TArray<class AKSC_Entity*>                    ToRemoveEntities_;                                 // 0x00C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<class AKSC_Entity*>                    ToAddEntities_;                                    // 0x00D0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FKSC_LandFireContext>           ToAddLandFire_;                                    // 0x00E0(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TMap<class AKSC_Entity*, class AActor*>       RenderActorMap_;                                   // 0x00F0(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class UKSC_DA_EntityRender*, class AActor*> SharedRenderActorDaMap_;                        // 0x0140(0x0050)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_190[0x80];                                     // 0x0190(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	class AKSC_GPUHeadUI*                         GPUHeadUI;                                         // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_218[0x60];                                     // 0x0218(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const TArray<struct FKSC_RemoveContext>& RemoveContext)> OnKSCBatchRemoveAfter;   // 0x0278(0x0028)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TDelegate<void(const TArray<struct FKSC_LandFireContext>& LandFireContext)> OnKSCLandFireSpawn;  // 0x02A0(0x0028)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UKSC_Decorator*>                 Decorators;                                        // 0x02C8(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D8[0x50];                                     // 0x02D8(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EKSC_HeadUiType, class UClass*>          HeadUiHandleClassMap;                              // 0x0328(0x0050)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_378[0x170];                                    // 0x0378(0x0170)(Fixing Size After Last Property [ Dumper-7 ])
+	TSet<class UObject*>                          PoolHelper_;                                       // 0x04E8(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_538[0x10];                                     // 0x0538(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKSC_WorldBounds*                       WorldBounds;                                       // 0x0548(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_550[0xB0];                                     // 0x0550(0x00B0)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UKSC_DA_Buff*, int32>              LoadedBuffDa;                                      // 0x0600(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class UKSC_DA_Entity*, int32>            LoadedEntityDa;                                    // 0x0650(0x0050)(NativeAccessSpecifierPublic)
+	TMap<class UKSC_DA_Skill*, int32>             LoadedSkillDa;                                     // 0x06A0(0x0050)(NativeAccessSpecifierPublic)
+	class UKSC_DamageId*                          DamageData;                                        // 0x06F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKSC_BuffId*                            BuffData;                                          // 0x06F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	class AKSC_Entity* AddDaEntity(class UKSC_DA_Entity* DaEntity, const struct FTransform& Transform, bool IsPreview, int32 CreatureId);
+	bool AddDecorator(class UKSC_DA_Decorator* DaDecorator);
+	bool AddHeadUI(TSubclassOf<class AKSC_GPUHeadUI> InHeadUIClass);
+	void AssignBatchRemoveDelegate(const TDelegate<void(const TArray<struct FKSC_RemoveContext>& RemoveContext)>& InDelegate);
+	void AssignLandFireSpawnDelegate(const TDelegate<void(const TArray<struct FKSC_LandFireContext>& LandFireContext)>& InDelegate);
+	void ClearDecorator();
+	class AKSC_Entity* D_AddDaEntity(class UKSC_DA_Entity* DaEntity, const struct FTransformDouble& Transform, bool InIsPreview, int32 CreatureId);
+	bool Debug_GetEntityAttr(int32 EntityId, TMap<EKSC_AttrType, int32>* Attr);
+	bool Debug_GetEntityBuffs(int32 EntityId, TMap<class UKSC_DA_Buff*, int32>* Buffs);
+	bool Debug_GetEntityTags(int32 EntityId, TMap<struct FGameplayTag, int32>* Tags);
+	class FString Debug_GetOriginalTagName(const class FName& TagName);
+	bool Debug_GetWorldAttr(TMap<EKSC_WorldAttrType, int32>* Attr);
+	bool Debug_IsEntityAlive(int32 EntityId);
+	bool Debug_SetEntityAttr(int32 EntityId, const EKSC_AttrType& Attr, int32 Value);
+	bool Debug_SetEntityTag(int32 EntityId, const struct FGameplayTag& Attr, int32 TagCount);
+	class AKSC_Entity* GetEntityById(int32 EntityId);
+	void GetEntityPositionsEx(TArray<struct FKSC_MiniMapContext>* EntityPositions);
+	void GetHeadHpInfos(TArray<struct FKSC_HeadHpContext>* HpInfos);
+	int32 GetWorldAttr(EKSC_WorldAttrType Type);
+	void InitHeadUiClassMap();
+	TArray<struct FKSC_HitContext> PopHitInfos();
+	bool RemoveDecorator(class UKSC_DA_Decorator* DaDecorator);
+	void RemoveEntity(class AKSC_Entity* Entity);
+	void RemoveEntityReason(class AKSC_Entity* Entity, class FName Reason);
+	void SetObstacleSegments(const TArray<struct FKSC_Segment>& InObstacleSegments);
+	void SetWorldAttr(EKSC_WorldAttrType Type, int32 Value);
+	void SetWorldBounds(class UKSC_DA_WorldBounds* DAWorldBounds);
+	void SetWorldTimeDilation(float NewTimeDilation);
+
+	class UKSC_BuffId* GetBuffData() const;
 
 public:
 	static class UClass* StaticClass()
@@ -985,31 +4559,64 @@ public:
 		return GetDefaultObjImpl<UKSC_World>();
 	}
 };
-static_assert(alignof(UKSC_World) == 0x000008, "Wrong alignment on UKSC_World");
-static_assert(sizeof(UKSC_World) == 0x0001B0, "Wrong size on UKSC_World");
-static_assert(offsetof(UKSC_World, Entities_) == 0x000030, "Member 'UKSC_World::Entities_' has a wrong offset!");
-static_assert(offsetof(UKSC_World, ToRemoveEntities_) == 0x000040, "Member 'UKSC_World::ToRemoveEntities_' has a wrong offset!");
-static_assert(offsetof(UKSC_World, ToAddEntities_) == 0x000050, "Member 'UKSC_World::ToAddEntities_' has a wrong offset!");
-static_assert(offsetof(UKSC_World, RenderActorMap_) == 0x000060, "Member 'UKSC_World::RenderActorMap_' has a wrong offset!");
-static_assert(offsetof(UKSC_World, SharedRenderActorDaMap_) == 0x0000B0, "Member 'UKSC_World::SharedRenderActorDaMap_' has a wrong offset!");
-static_assert(offsetof(UKSC_World, Pools_) == 0x000110, "Member 'UKSC_World::Pools_' has a wrong offset!");
-static_assert(offsetof(UKSC_World, PoolHelper_) == 0x000160, "Member 'UKSC_World::PoolHelper_' has a wrong offset!");
+static_assert(alignof(UKSC_World) == 0x000010, "Wrong alignment on UKSC_World");
+static_assert(sizeof(UKSC_World) == 0x000700, "Wrong size on UKSC_World");
+static_assert(offsetof(UKSC_World, SceneComps_) == 0x000030, "Member 'UKSC_World::SceneComps_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, Entities_) == 0x000040, "Member 'UKSC_World::Entities_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, EntityIdMap) == 0x000050, "Member 'UKSC_World::EntityIdMap' has a wrong offset!");
+static_assert(offsetof(UKSC_World, DeadEntities_) == 0x0000A0, "Member 'UKSC_World::DeadEntities_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, ShowHeadUIEntities_) == 0x0000B0, "Member 'UKSC_World::ShowHeadUIEntities_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, ToRemoveEntities_) == 0x0000C0, "Member 'UKSC_World::ToRemoveEntities_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, ToAddEntities_) == 0x0000D0, "Member 'UKSC_World::ToAddEntities_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, ToAddLandFire_) == 0x0000E0, "Member 'UKSC_World::ToAddLandFire_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, RenderActorMap_) == 0x0000F0, "Member 'UKSC_World::RenderActorMap_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, SharedRenderActorDaMap_) == 0x000140, "Member 'UKSC_World::SharedRenderActorDaMap_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, GPUHeadUI) == 0x000210, "Member 'UKSC_World::GPUHeadUI' has a wrong offset!");
+static_assert(offsetof(UKSC_World, OnKSCBatchRemoveAfter) == 0x000278, "Member 'UKSC_World::OnKSCBatchRemoveAfter' has a wrong offset!");
+static_assert(offsetof(UKSC_World, OnKSCLandFireSpawn) == 0x0002A0, "Member 'UKSC_World::OnKSCLandFireSpawn' has a wrong offset!");
+static_assert(offsetof(UKSC_World, Decorators) == 0x0002C8, "Member 'UKSC_World::Decorators' has a wrong offset!");
+static_assert(offsetof(UKSC_World, HeadUiHandleClassMap) == 0x000328, "Member 'UKSC_World::HeadUiHandleClassMap' has a wrong offset!");
+static_assert(offsetof(UKSC_World, PoolHelper_) == 0x0004E8, "Member 'UKSC_World::PoolHelper_' has a wrong offset!");
+static_assert(offsetof(UKSC_World, WorldBounds) == 0x000548, "Member 'UKSC_World::WorldBounds' has a wrong offset!");
+static_assert(offsetof(UKSC_World, LoadedBuffDa) == 0x000600, "Member 'UKSC_World::LoadedBuffDa' has a wrong offset!");
+static_assert(offsetof(UKSC_World, LoadedEntityDa) == 0x000650, "Member 'UKSC_World::LoadedEntityDa' has a wrong offset!");
+static_assert(offsetof(UKSC_World, LoadedSkillDa) == 0x0006A0, "Member 'UKSC_World::LoadedSkillDa' has a wrong offset!");
+static_assert(offsetof(UKSC_World, DamageData) == 0x0006F0, "Member 'UKSC_World::DamageData' has a wrong offset!");
+static_assert(offsetof(UKSC_World, BuffData) == 0x0006F8, "Member 'UKSC_World::BuffData' has a wrong offset!");
+
+// Class KuroSimpleCombat.KSC_WorldBoundsRound
+// 0x0008 (0x0038 - 0x0030)
+class UKSC_WorldBoundsRound final : public UKSC_WorldBounds
+{
+public:
+	class UKSC_DA_WorldBoundsRound*               DA_WorldBounds;                                    // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KSC_WorldBoundsRound">();
+	}
+	static class UKSC_WorldBoundsRound* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKSC_WorldBoundsRound>();
+	}
+};
+static_assert(alignof(UKSC_WorldBoundsRound) == 0x000008, "Wrong alignment on UKSC_WorldBoundsRound");
+static_assert(sizeof(UKSC_WorldBoundsRound) == 0x000038, "Wrong size on UKSC_WorldBoundsRound");
+static_assert(offsetof(UKSC_WorldBoundsRound, DA_WorldBounds) == 0x000030, "Member 'UKSC_WorldBoundsRound::DA_WorldBounds' has a wrong offset!");
 
 // Class KuroSimpleCombat.KuroSimpleCombatSubsystem
 // 0x0010 (0x0048 - 0x0038)
 class UKuroSimpleCombatSubsystem final : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKSC_World*                             world;                                             // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_World*                             KscWorld;                                          // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UKSC_World*                             OldKscWorld;                                       // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	class UKSC_World* CreateWorld();
 	void DestoryWorld();
-	void EntityBeginCastProxy(uint32 EntityId, TSubclassOf<class UKSC_Entity> EntityClass, const struct FTransform& EntityTransform, TSubclassOf<class UKSC_Skill> SkillClass);
-	void EntityHitProxy(uint32 FromEntityId, TSubclassOf<class UKSC_Entity> FromEntityClass, uint32 ToEntityId, TSubclassOf<class UKSC_Entity> ToEntityClass, const struct FTransform& HitTransform);
-	void EntityInitProxy(uint32 EntityId, TSubclassOf<class UKSC_Entity> EntityClass, const struct FTransform& EntityTransform);
-	void EntityUninitProxy(uint32 EntityId, TSubclassOf<class UKSC_Entity> EntityClass);
+	void DestroyWorld();
 	class UKSC_World* GetKSCWorld();
 
 public:
@@ -1024,7 +4631,8 @@ public:
 };
 static_assert(alignof(UKuroSimpleCombatSubsystem) == 0x000008, "Wrong alignment on UKuroSimpleCombatSubsystem");
 static_assert(sizeof(UKuroSimpleCombatSubsystem) == 0x000048, "Wrong size on UKuroSimpleCombatSubsystem");
-static_assert(offsetof(UKuroSimpleCombatSubsystem, world) == 0x000040, "Member 'UKuroSimpleCombatSubsystem::world' has a wrong offset!");
+static_assert(offsetof(UKuroSimpleCombatSubsystem, KscWorld) == 0x000038, "Member 'UKuroSimpleCombatSubsystem::KscWorld' has a wrong offset!");
+static_assert(offsetof(UKuroSimpleCombatSubsystem, OldKscWorld) == 0x000040, "Member 'UKuroSimpleCombatSubsystem::OldKscWorld' has a wrong offset!");
 
 }
 

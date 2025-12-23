@@ -36,6 +36,25 @@ enum class EConstraintType : uint8
 	MAX                                      = 2,
 };
 
+// ScriptStruct AnimationCore.ConstraintOffset
+// 0x0060 (0x0060 - 0x0000)
+struct FConstraintOffset final
+{
+public:
+	struct FVector                                Translation;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Scale;                                             // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Parent;                                            // 0x0030(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FConstraintOffset) == 0x000010, "Wrong alignment on FConstraintOffset");
+static_assert(sizeof(FConstraintOffset) == 0x000060, "Wrong size on FConstraintOffset");
+static_assert(offsetof(FConstraintOffset, Translation) == 0x000000, "Member 'FConstraintOffset::Translation' has a wrong offset!");
+static_assert(offsetof(FConstraintOffset, Rotation) == 0x000010, "Member 'FConstraintOffset::Rotation' has a wrong offset!");
+static_assert(offsetof(FConstraintOffset, Scale) == 0x000020, "Member 'FConstraintOffset::Scale' has a wrong offset!");
+static_assert(offsetof(FConstraintOffset, Parent) == 0x000030, "Member 'FConstraintOffset::Parent' has a wrong offset!");
+
 // ScriptStruct AnimationCore.NodeObject
 // 0x0018 (0x0018 - 0x0000)
 struct FNodeObject final
@@ -75,25 +94,6 @@ public:
 static_assert(alignof(FNodeHierarchyWithUserData) == 0x000008, "Wrong alignment on FNodeHierarchyWithUserData");
 static_assert(sizeof(FNodeHierarchyWithUserData) == 0x000078, "Wrong size on FNodeHierarchyWithUserData");
 static_assert(offsetof(FNodeHierarchyWithUserData, Hierarchy) == 0x000008, "Member 'FNodeHierarchyWithUserData::Hierarchy' has a wrong offset!");
-
-// ScriptStruct AnimationCore.ConstraintOffset
-// 0x0060 (0x0060 - 0x0000)
-struct FConstraintOffset final
-{
-public:
-	struct FVector                                Translation;                                       // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                Scale;                                             // 0x0020(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             Parent;                                            // 0x0030(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FConstraintOffset) == 0x000010, "Wrong alignment on FConstraintOffset");
-static_assert(sizeof(FConstraintOffset) == 0x000060, "Wrong size on FConstraintOffset");
-static_assert(offsetof(FConstraintOffset, Translation) == 0x000000, "Member 'FConstraintOffset::Translation' has a wrong offset!");
-static_assert(offsetof(FConstraintOffset, Rotation) == 0x000010, "Member 'FConstraintOffset::Rotation' has a wrong offset!");
-static_assert(offsetof(FConstraintOffset, Scale) == 0x000020, "Member 'FConstraintOffset::Scale' has a wrong offset!");
-static_assert(offsetof(FConstraintOffset, Parent) == 0x000030, "Member 'FConstraintOffset::Parent' has a wrong offset!");
 
 // ScriptStruct AnimationCore.FilterOptionPerAxis
 // 0x0003 (0x0003 - 0x0000)
@@ -186,6 +186,19 @@ static_assert(offsetof(FConstraintData, bMaintainOffset) == 0x000014, "Member 'F
 static_assert(offsetof(FConstraintData, Offset) == 0x000020, "Member 'FConstraintData::Offset' has a wrong offset!");
 static_assert(offsetof(FConstraintData, CurrentTransform) == 0x000050, "Member 'FConstraintData::CurrentTransform' has a wrong offset!");
 
+// ScriptStruct AnimationCore.ConstraintDescriptionEx
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FConstraintDescriptionEx
+{
+public:
+	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFilterOptionPerAxis                   AxesFilterOption;                                  // 0x0008(0x0003)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FConstraintDescriptionEx) == 0x000008, "Wrong alignment on FConstraintDescriptionEx");
+static_assert(sizeof(FConstraintDescriptionEx) == 0x000010, "Wrong size on FConstraintDescriptionEx");
+static_assert(offsetof(FConstraintDescriptionEx, AxesFilterOption) == 0x000008, "Member 'FConstraintDescriptionEx::AxesFilterOption' has a wrong offset!");
+
 // ScriptStruct AnimationCore.TransformFilter
 // 0x0009 (0x0009 - 0x0000)
 struct FTransformFilter final
@@ -226,20 +239,6 @@ static_assert(offsetof(FEulerTransform, Location) == 0x000000, "Member 'FEulerTr
 static_assert(offsetof(FEulerTransform, Rotation) == 0x00000C, "Member 'FEulerTransform::Rotation' has a wrong offset!");
 static_assert(offsetof(FEulerTransform, Scale) == 0x000018, "Member 'FEulerTransform::Scale' has a wrong offset!");
 
-// ScriptStruct AnimationCore.TransformNoScale
-// 0x0020 (0x0020 - 0x0000)
-struct FTransformNoScale final
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FTransformNoScale) == 0x000010, "Wrong alignment on FTransformNoScale");
-static_assert(sizeof(FTransformNoScale) == 0x000020, "Wrong size on FTransformNoScale");
-static_assert(offsetof(FTransformNoScale, Location) == 0x000000, "Member 'FTransformNoScale::Location' has a wrong offset!");
-static_assert(offsetof(FTransformNoScale, Rotation) == 0x000010, "Member 'FTransformNoScale::Rotation' has a wrong offset!");
-
 // ScriptStruct AnimationCore.FABRIKChainLink
 // 0x0038 (0x0038 - 0x0000)
 struct alignas(0x08) FFABRIKChainLink final
@@ -263,19 +262,6 @@ static_assert(alignof(FAxis) == 0x000004, "Wrong alignment on FAxis");
 static_assert(sizeof(FAxis) == 0x000010, "Wrong size on FAxis");
 static_assert(offsetof(FAxis, Axis) == 0x000000, "Member 'FAxis::Axis' has a wrong offset!");
 static_assert(offsetof(FAxis, bInLocalSpace) == 0x00000C, "Member 'FAxis::bInLocalSpace' has a wrong offset!");
-
-// ScriptStruct AnimationCore.ConstraintDescriptionEx
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FConstraintDescriptionEx
-{
-public:
-	uint8                                         Pad_0[0x8];                                        // 0x0000(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFilterOptionPerAxis                   AxesFilterOption;                                  // 0x0008(0x0003)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_B[0x5];                                        // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FConstraintDescriptionEx) == 0x000008, "Wrong alignment on FConstraintDescriptionEx");
-static_assert(sizeof(FConstraintDescriptionEx) == 0x000010, "Wrong size on FConstraintDescriptionEx");
-static_assert(offsetof(FConstraintDescriptionEx, AxesFilterOption) == 0x000008, "Member 'FConstraintDescriptionEx::AxesFilterOption' has a wrong offset!");
 
 // ScriptStruct AnimationCore.AimConstraintDescription
 // 0x0030 (0x0040 - 0x0010)
@@ -317,6 +303,20 @@ public:
 static_assert(alignof(FNodeChain) == 0x000008, "Wrong alignment on FNodeChain");
 static_assert(sizeof(FNodeChain) == 0x000010, "Wrong size on FNodeChain");
 static_assert(offsetof(FNodeChain, Nodes) == 0x000000, "Member 'FNodeChain::Nodes' has a wrong offset!");
+
+// ScriptStruct AnimationCore.TransformNoScale
+// 0x0020 (0x0020 - 0x0000)
+struct FTransformNoScale final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FTransformNoScale) == 0x000010, "Wrong alignment on FTransformNoScale");
+static_assert(sizeof(FTransformNoScale) == 0x000020, "Wrong size on FTransformNoScale");
+static_assert(offsetof(FTransformNoScale, Location) == 0x000000, "Member 'FTransformNoScale::Location' has a wrong offset!");
+static_assert(offsetof(FTransformNoScale, Rotation) == 0x000010, "Member 'FTransformNoScale::Rotation' has a wrong offset!");
 
 }
 

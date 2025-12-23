@@ -49,6 +49,40 @@ enum class EUKuroSDKEventType : uint8
 	UKuroSDKEventType_MAX                    = 18,
 };
 
+// ScriptStruct KuroSDK.BasicInfo
+// 0x0048 (0x0048 - 0x0000)
+struct FBasicInfo final
+{
+public:
+	class FString                                 DeviceId;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Platform;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ModelName;                                         // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CPUModelName;                                      // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValid;                                          // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FBasicInfo) == 0x000008, "Wrong alignment on FBasicInfo");
+static_assert(sizeof(FBasicInfo) == 0x000048, "Wrong size on FBasicInfo");
+static_assert(offsetof(FBasicInfo, DeviceId) == 0x000000, "Member 'FBasicInfo::DeviceId' has a wrong offset!");
+static_assert(offsetof(FBasicInfo, Platform) == 0x000010, "Member 'FBasicInfo::Platform' has a wrong offset!");
+static_assert(offsetof(FBasicInfo, ModelName) == 0x000020, "Member 'FBasicInfo::ModelName' has a wrong offset!");
+static_assert(offsetof(FBasicInfo, CPUModelName) == 0x000030, "Member 'FBasicInfo::CPUModelName' has a wrong offset!");
+static_assert(offsetof(FBasicInfo, bIsValid) == 0x000040, "Member 'FBasicInfo::bIsValid' has a wrong offset!");
+
+// ScriptStruct KuroSDK.AchievementStruct
+// 0x0018 (0x0018 - 0x0000)
+struct FAchievementStruct final
+{
+public:
+	class FString                                 AchievementId;                                     // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Progress;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAchievementStruct) == 0x000008, "Wrong alignment on FAchievementStruct");
+static_assert(sizeof(FAchievementStruct) == 0x000018, "Wrong size on FAchievementStruct");
+static_assert(offsetof(FAchievementStruct, AchievementId) == 0x000000, "Member 'FAchievementStruct::AchievementId' has a wrong offset!");
+static_assert(offsetof(FAchievementStruct, Progress) == 0x000010, "Member 'FAchievementStruct::Progress' has a wrong offset!");
+
 // ScriptStruct KuroSDK.LoginStruct
 // 0x0058 (0x0058 - 0x0000)
 struct FLoginStruct final
@@ -88,26 +122,6 @@ static_assert(offsetof(FPaymentStruct, OrderId) == 0x000000, "Member 'FPaymentSt
 static_assert(offsetof(FPaymentStruct, PaymentType) == 0x000010, "Member 'FPaymentStruct::PaymentType' has a wrong offset!");
 static_assert(offsetof(FPaymentStruct, Type) == 0x000018, "Member 'FPaymentStruct::Type' has a wrong offset!");
 static_assert(offsetof(FPaymentStruct, ExtraInfo) == 0x000028, "Member 'FPaymentStruct::ExtraInfo' has a wrong offset!");
-
-// ScriptStruct KuroSDK.BasicInfo
-// 0x0048 (0x0048 - 0x0000)
-struct FBasicInfo final
-{
-public:
-	class FString                                 DeviceId;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Platform;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ModelName;                                         // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 CPUModelName;                                      // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsValid;                                          // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FBasicInfo) == 0x000008, "Wrong alignment on FBasicInfo");
-static_assert(sizeof(FBasicInfo) == 0x000048, "Wrong size on FBasicInfo");
-static_assert(offsetof(FBasicInfo, DeviceId) == 0x000000, "Member 'FBasicInfo::DeviceId' has a wrong offset!");
-static_assert(offsetof(FBasicInfo, Platform) == 0x000010, "Member 'FBasicInfo::Platform' has a wrong offset!");
-static_assert(offsetof(FBasicInfo, ModelName) == 0x000020, "Member 'FBasicInfo::ModelName' has a wrong offset!");
-static_assert(offsetof(FBasicInfo, CPUModelName) == 0x000030, "Member 'FBasicInfo::CPUModelName' has a wrong offset!");
-static_assert(offsetof(FBasicInfo, bIsValid) == 0x000040, "Member 'FBasicInfo::bIsValid' has a wrong offset!");
 
 }
 

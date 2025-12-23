@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "ECameraGravityMode_structs.hpp"
 #include "EAimAssistMode_structs.hpp"
-#include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
 #include "ECameraAnsEffectiveClientType_structs.hpp"
 #include "ECustomCameraMode_structs.hpp"
 
@@ -93,6 +93,7 @@ public:
 	static void DisableCameraSpecificLockOnTarget(int32 id, class UObject* __WorldContext);
 	static bool IsCameraSpecificLockEnable(class UObject* __WorldContext);
 	static int32 GetCameraSpecificLockEntityId(class UObject* __WorldContext);
+	static int32 EnableCameraSpecificLockLocation(const struct FVectorDouble& location, float priority, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

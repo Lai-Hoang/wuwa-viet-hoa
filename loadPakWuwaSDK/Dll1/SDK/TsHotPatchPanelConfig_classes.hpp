@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SHotPatchGamepad_structs.hpp"
 #include "LGUI_classes.hpp"
+#include "SHotPatchGamepad_structs.hpp"
 
 
 namespace SDK

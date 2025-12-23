@@ -17,6 +17,44 @@
 namespace SDK
 {
 
+// Function GameplayTasks.GameplayTask.EndTask
+// (Final, Native, Public, BlueprintCallable)
+
+void UGameplayTask::EndTask()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayTask", "EndTask");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayTasks.GameplayTask.ReadyForActivation
+// (Final, Native, Public, BlueprintCallable)
+
+void UGameplayTask::ReadyForActivation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayTask", "ReadyForActivation");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -67,103 +105,6 @@ void UGameplayTasksComponent::OnRep_SimulatedTasks()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayTasks.GameplayTask.EndTask
-// (Final, Native, Public, BlueprintCallable)
-
-void UGameplayTask::EndTask()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayTask", "EndTask");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayTasks.GameplayTask.ReadyForActivation
-// (Final, Native, Public, BlueprintCallable)
-
-void UGameplayTask::ReadyForActivation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayTask", "ReadyForActivation");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class IGameplayTaskOwnerInterface>TaskOwner                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
-// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const uint8                             Priority                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    NeedTick                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGameplayTask_WaitDelay*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::TaskWaitDelay(TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, float Time, const uint8 Priority, bool NeedTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameplayTask_WaitDelay", "TaskWaitDelay");
-
-	Params::GameplayTask_WaitDelay_TaskWaitDelay Parms{};
-
-	Parms.TaskOwner = TaskOwner;
-	Parms.Time = Time;
-	Parms.Priority = Priority;
-	Parms.NeedTick = NeedTick;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayTasks.GameplayTask_WaitDelay.TickTask
-// (Final, Native, Public)
-// Parameters:
-// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UGameplayTask_WaitDelay::TickTask(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("GameplayTask_WaitDelay", "TickTask");
-
-	Params::GameplayTask_WaitDelay_TickTask Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -322,6 +263,65 @@ void UGameplayTask_SpawnActor::FinishSpawningActor(class UObject* WorldContextOb
 
 	Parms.WorldContextObject = WorldContextObject;
 	Parms.SpawnedActor = SpawnedActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class IGameplayTaskOwnerInterface>TaskOwner                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, NativeAccessSpecifierPublic)
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const uint8                             Priority                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    NeedTick                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGameplayTask_WaitDelay*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameplayTask_WaitDelay* UGameplayTask_WaitDelay::TaskWaitDelay(TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, float Time, const uint8 Priority, bool NeedTick)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GameplayTask_WaitDelay", "TaskWaitDelay");
+
+	Params::GameplayTask_WaitDelay_TaskWaitDelay Parms{};
+
+	Parms.TaskOwner = TaskOwner;
+	Parms.Time = Time;
+	Parms.Priority = Priority;
+	Parms.NeedTick = NeedTick;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayTasks.GameplayTask_WaitDelay.TickTask
+// (Final, Native, Public)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGameplayTask_WaitDelay::TickTask(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GameplayTask_WaitDelay", "TickTask");
+
+	Params::GameplayTask_WaitDelay_TickTask Parms{};
+
+	Parms.DeltaTime = DeltaTime;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

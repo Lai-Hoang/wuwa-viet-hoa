@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.ExecuteUbergraph_TsUiNavigationBehaviorListener
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -33,12 +33,17 @@ void UTsUiNavigationBehaviorListener_C::ExecuteUbergraph_TsUiNavigationBehaviorL
 
 	Parms.EntryPoint = EntryPoint;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnDisableBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationBehaviorListener_C::OnDisableBP()
 {
@@ -47,12 +52,17 @@ void UTsUiNavigationBehaviorListener_C::OnDisableBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "OnDisableBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnEnableBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationBehaviorListener_C::OnEnableBP()
 {
@@ -61,12 +71,17 @@ void UTsUiNavigationBehaviorListener_C::OnEnableBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "OnEnableBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.StartBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationBehaviorListener_C::StartBP()
 {
@@ -75,12 +90,17 @@ void UTsUiNavigationBehaviorListener_C::StartBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "StartBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnNotifyNavigationSelectBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULGUIPointerEventData*            eventData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -95,12 +115,17 @@ void UTsUiNavigationBehaviorListener_C::OnNotifyNavigationSelectBP(class ULGUIPo
 
 	Parms.eventData = eventData;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnNotifyNavigationEnterBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULGUIPointerEventData*            eventData                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -115,12 +140,17 @@ void UTsUiNavigationBehaviorListener_C::OnNotifyNavigationEnterBP(class ULGUIPoi
 
 	Parms.eventData = eventData;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnNotifyNotInteractiveBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationBehaviorListener_C::OnNotifyNotInteractiveBP()
 {
@@ -129,12 +159,17 @@ void UTsUiNavigationBehaviorListener_C::OnNotifyNotInteractiveBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "OnNotifyNotInteractiveBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnNotifyInteractiveBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationBehaviorListener_C::OnNotifyInteractiveBP()
 {
@@ -143,12 +178,17 @@ void UTsUiNavigationBehaviorListener_C::OnNotifyInteractiveBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "OnNotifyInteractiveBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnDestroyBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationBehaviorListener_C::OnDestroyBP()
 {
@@ -157,12 +197,17 @@ void UTsUiNavigationBehaviorListener_C::OnDestroyBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "OnDestroyBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.AwakeBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiNavigationBehaviorListener_C::AwakeBP()
 {
@@ -171,12 +216,17 @@ void UTsUiNavigationBehaviorListener_C::AwakeBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiNavigationBehaviorListener_C", "AwakeBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnCheckCanSetNavigationBP
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -189,14 +239,19 @@ bool UTsUiNavigationBehaviorListener_C::OnCheckCanSetNavigationBP()
 
 	Params::TsUiNavigationBehaviorListener_C_OnCheckCanSetNavigationBP Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function TsUiNavigationBehaviorListener.TsUiNavigationBehaviorListener_C.OnCheckLoopScrollChangeNavigationBP
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -209,7 +264,12 @@ bool UTsUiNavigationBehaviorListener_C::OnCheckLoopScrollChangeNavigationBP()
 
 	Params::TsUiNavigationBehaviorListener_C_OnCheckLoopScrollChangeNavigationBP Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }

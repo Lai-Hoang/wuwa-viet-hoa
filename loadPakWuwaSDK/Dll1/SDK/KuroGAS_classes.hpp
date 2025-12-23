@@ -10,16 +10,70 @@
 
 #include "Basic.hpp"
 
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
 #include "GameplayAbilities_classes.hpp"
+#include "GameplayTags_structs.hpp"
+#include "Engine_classes.hpp"
+#include "GameplayTasks_classes.hpp"
 #include "KuroGAS_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait
+// 0x00A8 (0x0130 - 0x0088)
+class UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait final : public UAbilityTask
+{
+public:
+	TMulticastInlineDelegate<void()>              OnCompleted;                                       // 0x0088(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnBlendOut;                                        // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnInterrupted;                                     // 0x00A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnCancelled;                                       // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void()>              OnTick;                                            // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D8[0x28];                                      // 0x00D8(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           MontageToPlay;                                     // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FName                                   SkeletalMeshComponentTag;                          // 0x0108(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         Rate;                                              // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FName                                   StartSection;                                      // 0x0118(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         AnimRootMotionTranslationScale;                    // 0x0124(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         StartTimeSeconds;                                  // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bStopWhenAbilityEnds;                              // 0x012C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_12D[0x3];                                      // 0x012D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait* CreatePlayMontageAndWaitProxy(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, class UAnimMontage* MontageToPlay_0, class FName SkeletalMeshComponentTag_0, float Rate_0, class FName StartSection_0, bool bStopWhenAbilityEnds_0, float AnimRootMotionTranslationScale_0, float StartTimeSeconds_0, bool NeedTick);
+
+	void OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted);
+	void OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted);
+	void OnMontageInterrupted();
+	void TickTask(float DeltaTime);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AbilityTask_SpecifiedAnimInstancePlayMontageAndWait">();
+	}
+	static class UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait>();
+	}
+};
+static_assert(alignof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait) == 0x000008, "Wrong alignment on UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait");
+static_assert(sizeof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait) == 0x000130, "Wrong size on UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnCompleted) == 0x000088, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnCompleted' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnBlendOut) == 0x000098, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnBlendOut' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnInterrupted) == 0x0000A8, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnInterrupted' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnCancelled) == 0x0000B8, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnCancelled' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, OnTick) == 0x0000C8, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnTick' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, MontageToPlay) == 0x000100, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::MontageToPlay' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, SkeletalMeshComponentTag) == 0x000108, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::SkeletalMeshComponentTag' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, Rate) == 0x000114, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::Rate' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, StartSection) == 0x000118, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::StartSection' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, AnimRootMotionTranslationScale) == 0x000124, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::AnimRootMotionTranslationScale' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, StartTimeSeconds) == 0x000128, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::StartTimeSeconds' has a wrong offset!");
+static_assert(offsetof(UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait, bStopWhenAbilityEnds) == 0x00012C, "Member 'UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::bStopWhenAbilityEnds' has a wrong offset!");
 
 // Class KuroGAS.AsyncTaskAnyAttributeChanged
 // 0x0018 (0x0050 - 0x0038)
@@ -283,7 +337,8 @@ public:
 	TMulticastInlineDelegate<void(bool bInterrupted)> BlendOutCallback;                              // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	TMulticastInlineDelegate<void(float RemainTime)> RemainCallback;                                 // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	bool                                          bShouldEmitOnEndedEvent;                           // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_69[0x3];                                       // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MontageLength;                                     // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UAnimInstance*                          AnimInstance;                                      // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UAnimMontage*                           MontageToPlay;                                     // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	uint8                                         Pad_80[0x30];                                      // 0x0080(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
@@ -311,8 +366,55 @@ static_assert(offsetof(UAsyncTaskPlayMontageAndWait, EndCallback) == 0x000038, "
 static_assert(offsetof(UAsyncTaskPlayMontageAndWait, BlendOutCallback) == 0x000048, "Member 'UAsyncTaskPlayMontageAndWait::BlendOutCallback' has a wrong offset!");
 static_assert(offsetof(UAsyncTaskPlayMontageAndWait, RemainCallback) == 0x000058, "Member 'UAsyncTaskPlayMontageAndWait::RemainCallback' has a wrong offset!");
 static_assert(offsetof(UAsyncTaskPlayMontageAndWait, bShouldEmitOnEndedEvent) == 0x000068, "Member 'UAsyncTaskPlayMontageAndWait::bShouldEmitOnEndedEvent' has a wrong offset!");
+static_assert(offsetof(UAsyncTaskPlayMontageAndWait, MontageLength) == 0x00006C, "Member 'UAsyncTaskPlayMontageAndWait::MontageLength' has a wrong offset!");
 static_assert(offsetof(UAsyncTaskPlayMontageAndWait, AnimInstance) == 0x000070, "Member 'UAsyncTaskPlayMontageAndWait::AnimInstance' has a wrong offset!");
 static_assert(offsetof(UAsyncTaskPlayMontageAndWait, MontageToPlay) == 0x000078, "Member 'UAsyncTaskPlayMontageAndWait::MontageToPlay' has a wrong offset!");
+
+// Class KuroGAS.AsyncTaskRotateSequence
+// 0x0140 (0x01B0 - 0x0070)
+class alignas(0x10) UAsyncTaskRotateSequence final : public UGameplayTask
+{
+public:
+	TMulticastInlineDelegate<void(class USceneComponent* AimPivot, const struct FVector& TargetLocation)> OnShootStepFired; // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(class USceneComponent* AimPivot)> OnSequenceFinished;              // 0x0080(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	float                                         AimToleranceDeg;                                   // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AimSpeedDegPerSec;                                 // 0x0094(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PostFireDelay;                                     // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeDilation;                                      // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bEaseOut : 1;                                      // 0x00A0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEaseIn : 1;                                       // 0x00A0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bForceShortestRoute : 1;                           // 0x00A0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_A1[0x3];                                       // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               RotateOffset;                                      // 0x00A4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B0[0x100];                                     // 0x00B0(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UAsyncTaskRotateSequence* D_StartRotateSequenceByTranslation(const TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, class USceneComponent* InAimPivot, const TArray<struct FVectorDouble>& InTargets, const float AimSpeedDegPerSec_0, const float AimToleranceDeg_0, const bool bEaseIn_0, const bool bEaseOut_0, const bool bForceShortestRoute_0, const float PostFireDelay_0, const struct FRotator& RotateOffset_0, const float TimeDilation_0);
+	static void RotateComponentTo(class USceneComponent* Component, const struct FRotator& TargetWorldRotation, const bool bEaseOut_0, const bool bEaseIn_0, const float OverTime, const bool bForceShortestRotationPath, const float TimeDilation_0, const ERotateComponentAction MoveAction, const struct FLatentActionInfo& LatentInfo);
+	static class UAsyncTaskRotateSequence* StartRotateSequenceByActor(const TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, class USceneComponent* InAimPivot, const TArray<class AActor*>& InTargets, const float AimSpeedDegPerSec_0, const float AimToleranceDeg_0, const bool bEaseIn_0, const bool bEaseOut_0, const bool bForceShortestRoute_0, const float PostFireDelay_0, const struct FRotator& RotateOffset_0, const float TimeDilation_0);
+	static class UAsyncTaskRotateSequence* StartRotateSequenceByTranslation(const TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, class USceneComponent* InAimPivot, const TArray<struct FVector>& InTargets, const float AimSpeedDegPerSec_0, const float AimToleranceDeg_0, const bool bEaseIn_0, const bool bEaseOut_0, const bool bForceShortestRoute_0, const float PostFireDelay_0, const struct FRotator& RotateOffset_0, const float TimeDilation_0);
+
+	void OnAimLatentFinished();
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AsyncTaskRotateSequence">();
+	}
+	static class UAsyncTaskRotateSequence* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAsyncTaskRotateSequence>();
+	}
+};
+static_assert(alignof(UAsyncTaskRotateSequence) == 0x000010, "Wrong alignment on UAsyncTaskRotateSequence");
+static_assert(sizeof(UAsyncTaskRotateSequence) == 0x0001B0, "Wrong size on UAsyncTaskRotateSequence");
+static_assert(offsetof(UAsyncTaskRotateSequence, OnShootStepFired) == 0x000070, "Member 'UAsyncTaskRotateSequence::OnShootStepFired' has a wrong offset!");
+static_assert(offsetof(UAsyncTaskRotateSequence, OnSequenceFinished) == 0x000080, "Member 'UAsyncTaskRotateSequence::OnSequenceFinished' has a wrong offset!");
+static_assert(offsetof(UAsyncTaskRotateSequence, AimToleranceDeg) == 0x000090, "Member 'UAsyncTaskRotateSequence::AimToleranceDeg' has a wrong offset!");
+static_assert(offsetof(UAsyncTaskRotateSequence, AimSpeedDegPerSec) == 0x000094, "Member 'UAsyncTaskRotateSequence::AimSpeedDegPerSec' has a wrong offset!");
+static_assert(offsetof(UAsyncTaskRotateSequence, PostFireDelay) == 0x000098, "Member 'UAsyncTaskRotateSequence::PostFireDelay' has a wrong offset!");
+static_assert(offsetof(UAsyncTaskRotateSequence, TimeDilation) == 0x00009C, "Member 'UAsyncTaskRotateSequence::TimeDilation' has a wrong offset!");
+static_assert(offsetof(UAsyncTaskRotateSequence, RotateOffset) == 0x0000A4, "Member 'UAsyncTaskRotateSequence::RotateOffset' has a wrong offset!");
 
 // Class KuroGAS.AsyncTaskTagCountChanged
 // 0x0028 (0x0060 - 0x0038)
@@ -451,7 +553,7 @@ static_assert(alignof(UBaseAbilitySystemComponent) == 0x000008, "Wrong alignment
 static_assert(sizeof(UBaseAbilitySystemComponent) == 0x001388, "Wrong size on UBaseAbilitySystemComponent");
 
 // Class KuroGAS.BaseAttributeSet
-// 0x0CD8 (0x0D10 - 0x0038)
+// 0x0D98 (0x0DD0 - 0x0038)
 class UBaseAttributeSet final : public UAttributeSet
 {
 public:
@@ -588,7 +690,15 @@ public:
 	struct FGameplayAttributeData                 RageChange;                                        // 0x0C68(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 	struct FGameplayAttributeData                 RageReduce;                                        // 0x0C80(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 	struct FGameplayAttributeData                 ToughRecoverDelayTime;                             // 0x0C98(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	uint8                                         Pad_CB0[0x60];                                     // 0x0CB0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGameplayAttributeData                 Jump;                                              // 0x0CB0(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	struct FGameplayAttributeData                 ParalysisTimeMax;                                  // 0x0CC8(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	struct FGameplayAttributeData                 ParalysisTime;                                     // 0x0CE0(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	struct FGameplayAttributeData                 ParalysisTimeRecover;                              // 0x0CF8(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	struct FGameplayAttributeData                 WeaknessBuildUp;                                   // 0x0D10(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	struct FGameplayAttributeData                 WeaknessBuildUpMax;                                // 0x0D28(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	struct FGameplayAttributeData                 WeaknessTotalBonus;                                // 0x0D40(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	struct FGameplayAttributeData                 WeaknessTotalResist;                               // 0x0D58(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D70[0x60];                                     // 0x0D70(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static void SetAttackSpeedMax(float InMaxSpeed);
@@ -613,7 +723,7 @@ public:
 	}
 };
 static_assert(alignof(UBaseAttributeSet) == 0x000008, "Wrong alignment on UBaseAttributeSet");
-static_assert(sizeof(UBaseAttributeSet) == 0x000D10, "Wrong size on UBaseAttributeSet");
+static_assert(sizeof(UBaseAttributeSet) == 0x000DD0, "Wrong size on UBaseAttributeSet");
 static_assert(offsetof(UBaseAttributeSet, Lv) == 0x000038, "Member 'UBaseAttributeSet::Lv' has a wrong offset!");
 static_assert(offsetof(UBaseAttributeSet, LifeMax) == 0x000050, "Member 'UBaseAttributeSet::LifeMax' has a wrong offset!");
 static_assert(offsetof(UBaseAttributeSet, Life) == 0x000068, "Member 'UBaseAttributeSet::Life' has a wrong offset!");
@@ -747,6 +857,14 @@ static_assert(offsetof(UBaseAttributeSet, RagePunishTime) == 0x000C50, "Member '
 static_assert(offsetof(UBaseAttributeSet, RageChange) == 0x000C68, "Member 'UBaseAttributeSet::RageChange' has a wrong offset!");
 static_assert(offsetof(UBaseAttributeSet, RageReduce) == 0x000C80, "Member 'UBaseAttributeSet::RageReduce' has a wrong offset!");
 static_assert(offsetof(UBaseAttributeSet, ToughRecoverDelayTime) == 0x000C98, "Member 'UBaseAttributeSet::ToughRecoverDelayTime' has a wrong offset!");
+static_assert(offsetof(UBaseAttributeSet, Jump) == 0x000CB0, "Member 'UBaseAttributeSet::Jump' has a wrong offset!");
+static_assert(offsetof(UBaseAttributeSet, ParalysisTimeMax) == 0x000CC8, "Member 'UBaseAttributeSet::ParalysisTimeMax' has a wrong offset!");
+static_assert(offsetof(UBaseAttributeSet, ParalysisTime) == 0x000CE0, "Member 'UBaseAttributeSet::ParalysisTime' has a wrong offset!");
+static_assert(offsetof(UBaseAttributeSet, ParalysisTimeRecover) == 0x000CF8, "Member 'UBaseAttributeSet::ParalysisTimeRecover' has a wrong offset!");
+static_assert(offsetof(UBaseAttributeSet, WeaknessBuildUp) == 0x000D10, "Member 'UBaseAttributeSet::WeaknessBuildUp' has a wrong offset!");
+static_assert(offsetof(UBaseAttributeSet, WeaknessBuildUpMax) == 0x000D28, "Member 'UBaseAttributeSet::WeaknessBuildUpMax' has a wrong offset!");
+static_assert(offsetof(UBaseAttributeSet, WeaknessTotalBonus) == 0x000D40, "Member 'UBaseAttributeSet::WeaknessTotalBonus' has a wrong offset!");
+static_assert(offsetof(UBaseAttributeSet, WeaknessTotalResist) == 0x000D58, "Member 'UBaseAttributeSet::WeaknessTotalResist' has a wrong offset!");
 
 // Class KuroGAS.BaseCharacter
 // 0x00D0 (0x0680 - 0x05B0)

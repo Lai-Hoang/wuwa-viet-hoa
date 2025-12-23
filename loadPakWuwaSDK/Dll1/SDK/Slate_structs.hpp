@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK
@@ -229,6 +229,17 @@ enum class EUserInterfaceActionType : uint8
 	EUserInterfaceActionType_MAX             = 6,
 };
 
+// ScriptStruct Slate.VirtualKeyboardOptions
+// 0x0001 (0x0001 - 0x0000)
+struct FVirtualKeyboardOptions final
+{
+public:
+	bool                                          bEnableAutocorrect;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVirtualKeyboardOptions) == 0x000001, "Wrong alignment on FVirtualKeyboardOptions");
+static_assert(sizeof(FVirtualKeyboardOptions) == 0x000001, "Wrong size on FVirtualKeyboardOptions");
+static_assert(offsetof(FVirtualKeyboardOptions, bEnableAutocorrect) == 0x000000, "Member 'FVirtualKeyboardOptions::bEnableAutocorrect' has a wrong offset!");
+
 // ScriptStruct Slate.CustomizedToolMenuEntry
 // 0x0004 (0x0004 - 0x0000)
 struct FCustomizedToolMenuEntry final
@@ -282,17 +293,6 @@ static_assert(offsetof(FCustomizedToolMenu, Entries) == 0x000010, "Member 'FCust
 static_assert(offsetof(FCustomizedToolMenu, Sections) == 0x000060, "Member 'FCustomizedToolMenu::Sections' has a wrong offset!");
 static_assert(offsetof(FCustomizedToolMenu, EntryOrder) == 0x0000B0, "Member 'FCustomizedToolMenu::EntryOrder' has a wrong offset!");
 static_assert(offsetof(FCustomizedToolMenu, SectionOrder) == 0x000100, "Member 'FCustomizedToolMenu::SectionOrder' has a wrong offset!");
-
-// ScriptStruct Slate.VirtualKeyboardOptions
-// 0x0001 (0x0001 - 0x0000)
-struct FVirtualKeyboardOptions final
-{
-public:
-	bool                                          bEnableAutocorrect;                                // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVirtualKeyboardOptions) == 0x000001, "Wrong alignment on FVirtualKeyboardOptions");
-static_assert(sizeof(FVirtualKeyboardOptions) == 0x000001, "Wrong size on FVirtualKeyboardOptions");
-static_assert(offsetof(FVirtualKeyboardOptions, bEnableAutocorrect) == 0x000000, "Member 'FVirtualKeyboardOptions::bEnableAutocorrect' has a wrong offset!");
 
 // ScriptStruct Slate.InputChord
 // 0x0028 (0x0028 - 0x0000)

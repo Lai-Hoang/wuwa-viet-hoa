@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "EAttributeType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "EAttributeType_structs.hpp"
 
 
 namespace SDK

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "SSequencesKeyFrames_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SequenceData_Generated.BP_SequenceData_Generated_C
-// 0x0068 (0x00A0 - 0x0038)
+// 0x0098 (0x00D0 - 0x0038)
 class UBP_SequenceData_Generated_C final : public UPrimaryDataAsset
 {
 public:
@@ -28,8 +28,13 @@ public:
 	TArray<class UClass*>                         BindingBP;                                         // 0x0058(0x0010)(Edit, BlueprintVisible)
 	TArray<bool>                                  IsFadeEnd;                                         // 0x0068(0x0010)(Edit, BlueprintVisible)
 	class FName                                   BlendInTag;                                        // 0x0078(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   BlendOutTag;                                       // 0x0084(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class FString>                         PreloadUiArray;                                    // 0x0090(0x0010)(Edit, BlueprintVisible)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           BlendInTags;                                       // 0x0088(0x0010)(Edit, BlueprintVisible)
+	class FName                                   BlendOutTag;                                       // 0x0098(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_A4[0x4];                                       // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           BlendOutTags;                                      // 0x00A8(0x0010)(Edit, BlueprintVisible)
+	TArray<class FString>                         PreloadUiArray;                                    // 0x00B8(0x0010)(Edit, BlueprintVisible)
+	bool                                          IsCustomizedFinalPos;                              // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -42,14 +47,17 @@ public:
 	}
 };
 static_assert(alignof(UBP_SequenceData_Generated_C) == 0x000008, "Wrong alignment on UBP_SequenceData_Generated_C");
-static_assert(sizeof(UBP_SequenceData_Generated_C) == 0x0000A0, "Wrong size on UBP_SequenceData_Generated_C");
+static_assert(sizeof(UBP_SequenceData_Generated_C) == 0x0000D0, "Wrong size on UBP_SequenceData_Generated_C");
 static_assert(offsetof(UBP_SequenceData_Generated_C, KeyFrames) == 0x000038, "Member 'UBP_SequenceData_Generated_C::KeyFrames' has a wrong offset!");
 static_assert(offsetof(UBP_SequenceData_Generated_C, FinalPos) == 0x000048, "Member 'UBP_SequenceData_Generated_C::FinalPos' has a wrong offset!");
 static_assert(offsetof(UBP_SequenceData_Generated_C, BindingBP) == 0x000058, "Member 'UBP_SequenceData_Generated_C::BindingBP' has a wrong offset!");
 static_assert(offsetof(UBP_SequenceData_Generated_C, IsFadeEnd) == 0x000068, "Member 'UBP_SequenceData_Generated_C::IsFadeEnd' has a wrong offset!");
 static_assert(offsetof(UBP_SequenceData_Generated_C, BlendInTag) == 0x000078, "Member 'UBP_SequenceData_Generated_C::BlendInTag' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, BlendOutTag) == 0x000084, "Member 'UBP_SequenceData_Generated_C::BlendOutTag' has a wrong offset!");
-static_assert(offsetof(UBP_SequenceData_Generated_C, PreloadUiArray) == 0x000090, "Member 'UBP_SequenceData_Generated_C::PreloadUiArray' has a wrong offset!");
+static_assert(offsetof(UBP_SequenceData_Generated_C, BlendInTags) == 0x000088, "Member 'UBP_SequenceData_Generated_C::BlendInTags' has a wrong offset!");
+static_assert(offsetof(UBP_SequenceData_Generated_C, BlendOutTag) == 0x000098, "Member 'UBP_SequenceData_Generated_C::BlendOutTag' has a wrong offset!");
+static_assert(offsetof(UBP_SequenceData_Generated_C, BlendOutTags) == 0x0000A8, "Member 'UBP_SequenceData_Generated_C::BlendOutTags' has a wrong offset!");
+static_assert(offsetof(UBP_SequenceData_Generated_C, PreloadUiArray) == 0x0000B8, "Member 'UBP_SequenceData_Generated_C::PreloadUiArray' has a wrong offset!");
+static_assert(offsetof(UBP_SequenceData_Generated_C, IsCustomizedFinalPos) == 0x0000C8, "Member 'UBP_SequenceData_Generated_C::IsCustomizedFinalPos' has a wrong offset!");
 
 }
 

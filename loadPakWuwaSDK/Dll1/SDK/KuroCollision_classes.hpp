@@ -11,23 +11,28 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "KuroCollision_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class KuroCollision.CollisionClusterComponent
-// 0x00D0 (0x05E0 - 0x0510)
+// 0x00F0 (0x0620 - 0x0530)
 class UCollisionClusterComponent final : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_510[0x78];                                     // 0x0510(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UPhysicalMaterial*>              PhysicalMaterials;                                 // 0x0588(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	TArray<class UBodySetup*>                     BodySetups;                                        // 0x0598(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5A8[0x10];                                     // 0x05A8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FBoxSphereBounds                       RelativeBounds;                                    // 0x05B8(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_5D4[0xC];                                      // 0x05D4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_528[0x78];                                     // 0x0528(0x0078)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSoftObjectPath>                StaticMeshPathNames;                               // 0x05A0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<class UPhysicalMaterial*>              PhysicalMaterials;                                 // 0x05B0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<struct FKAggregateGeom>                AggGeometries;                                     // 0x05C0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	TArray<class UBodySetup*>                     BodySetups;                                        // 0x05D0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5E0[0x10];                                     // 0x05E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 BodySetupComplexPhysicalMaterialNums;              // 0x05F0(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	struct FBoxSphereBounds                       RelativeBounds;                                    // 0x0600(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_61C[0x4];                                      // 0x061C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -40,10 +45,103 @@ public:
 	}
 };
 static_assert(alignof(UCollisionClusterComponent) == 0x000010, "Wrong alignment on UCollisionClusterComponent");
-static_assert(sizeof(UCollisionClusterComponent) == 0x0005E0, "Wrong size on UCollisionClusterComponent");
-static_assert(offsetof(UCollisionClusterComponent, PhysicalMaterials) == 0x000588, "Member 'UCollisionClusterComponent::PhysicalMaterials' has a wrong offset!");
-static_assert(offsetof(UCollisionClusterComponent, BodySetups) == 0x000598, "Member 'UCollisionClusterComponent::BodySetups' has a wrong offset!");
-static_assert(offsetof(UCollisionClusterComponent, RelativeBounds) == 0x0005B8, "Member 'UCollisionClusterComponent::RelativeBounds' has a wrong offset!");
+static_assert(sizeof(UCollisionClusterComponent) == 0x000620, "Wrong size on UCollisionClusterComponent");
+static_assert(offsetof(UCollisionClusterComponent, StaticMeshPathNames) == 0x0005A0, "Member 'UCollisionClusterComponent::StaticMeshPathNames' has a wrong offset!");
+static_assert(offsetof(UCollisionClusterComponent, PhysicalMaterials) == 0x0005B0, "Member 'UCollisionClusterComponent::PhysicalMaterials' has a wrong offset!");
+static_assert(offsetof(UCollisionClusterComponent, AggGeometries) == 0x0005C0, "Member 'UCollisionClusterComponent::AggGeometries' has a wrong offset!");
+static_assert(offsetof(UCollisionClusterComponent, BodySetups) == 0x0005D0, "Member 'UCollisionClusterComponent::BodySetups' has a wrong offset!");
+static_assert(offsetof(UCollisionClusterComponent, BodySetupComplexPhysicalMaterialNums) == 0x0005F0, "Member 'UCollisionClusterComponent::BodySetupComplexPhysicalMaterialNums' has a wrong offset!");
+static_assert(offsetof(UCollisionClusterComponent, RelativeBounds) == 0x000600, "Member 'UCollisionClusterComponent::RelativeBounds' has a wrong offset!");
+
+// Class KuroCollision.KuroCollisionLibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKuroCollisionLibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static bool CanCharacterStandOn(class UPrimitiveComponent* PrimitiveComponent, int32 InstanceIndex);
+	static bool CanCharacterStepUp(class UPrimitiveComponent* PrimitiveComponent, class APawn* Pawn, int32 InstanceIndex);
+	static struct FBodyInstance GetBodyInstance(const class UKuroHitResult* HitResult, int32 HitIndex);
+	static class FName GetCollisionProfileName(class UPrimitiveComponent* PrimitiveComponent, int32 InstanceIndex);
+	static ECollisionResponse GetCollisionResponseToChannel(class UPrimitiveComponent* PrimitiveComponent, ECollisionChannel Channel, int32 InstanceIndex);
+	static void GetOverlappingComponents(class UPrimitiveComponent* PrimitiveComponent, TArray<class UPrimitiveComponent*>* OutOverlappingComponents, TArray<int32>* OutOverlappingBodyIndices);
+	static const struct FWalkableSlopeOverride GetWalkableSlopeOverride(class UPrimitiveComponent* PrimitiveComponent, int32 InstanceIndex);
+	static void InitClearWpBodySetupBlackList(const TSet<class FName>& InClearWpBodySetupBlackList);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroCollisionLibrary">();
+	}
+	static class UKuroCollisionLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroCollisionLibrary>();
+	}
+};
+static_assert(alignof(UKuroCollisionLibrary) == 0x000008, "Wrong alignment on UKuroCollisionLibrary");
+static_assert(sizeof(UKuroCollisionLibrary) == 0x000030, "Wrong size on UKuroCollisionLibrary");
+
+// Class KuroCollision.KuroCollisionSubSystem
+// 0x00B8 (0x00F0 - 0x0038)
+class UKuroCollisionSubSystem final : public UEngineSubsystem
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FSoftObjectPath, struct FKuroBodySetupInfo> CollisionClusterBodySetups;              // 0x0040(0x0050)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_90[0x60];                                      // 0x0090(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroCollisionSubSystem">();
+	}
+	static class UKuroCollisionSubSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroCollisionSubSystem>();
+	}
+};
+static_assert(alignof(UKuroCollisionSubSystem) == 0x000008, "Wrong alignment on UKuroCollisionSubSystem");
+static_assert(sizeof(UKuroCollisionSubSystem) == 0x0000F0, "Wrong size on UKuroCollisionSubSystem");
+static_assert(offsetof(UKuroCollisionSubSystem, CollisionClusterBodySetups) == 0x000040, "Member 'UKuroCollisionSubSystem::CollisionClusterBodySetups' has a wrong offset!");
+
+// Class KuroCollision.KuroLandscapeHeightfieldCollisionComponent
+// 0x0080 (0x05B0 - 0x0530)
+class UKuroLandscapeHeightfieldCollisionComponent final : public UPrimitiveComponent
+{
+public:
+	uint8                                         Pad_528[0x8];                                      // 0x0528(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class ULandscapeLayerInfoObject*>      ComponentLayerInfos;                               // 0x0530(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         SectionBaseX;                                      // 0x0540(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         SectionBaseY;                                      // 0x0544(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         CollisionSizeQuads;                                // 0x0548(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         CollisionScale;                                    // 0x054C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         SimpleCollisionSizeQuads;                          // 0x0550(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGuid                                  HeightfieldGuid;                                   // 0x0554(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FBox                                   CachedLocalBox;                                    // 0x0564(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_580[0x10];                                     // 0x0580(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UPhysicalMaterial*>              CookedPhysicalMaterials;                           // 0x0590(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_5A0[0x10];                                     // 0x05A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroLandscapeHeightfieldCollisionComponent">();
+	}
+	static class UKuroLandscapeHeightfieldCollisionComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLandscapeHeightfieldCollisionComponent>();
+	}
+};
+static_assert(alignof(UKuroLandscapeHeightfieldCollisionComponent) == 0x000010, "Wrong alignment on UKuroLandscapeHeightfieldCollisionComponent");
+static_assert(sizeof(UKuroLandscapeHeightfieldCollisionComponent) == 0x0005B0, "Wrong size on UKuroLandscapeHeightfieldCollisionComponent");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, ComponentLayerInfos) == 0x000530, "Member 'UKuroLandscapeHeightfieldCollisionComponent::ComponentLayerInfos' has a wrong offset!");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, SectionBaseX) == 0x000540, "Member 'UKuroLandscapeHeightfieldCollisionComponent::SectionBaseX' has a wrong offset!");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, SectionBaseY) == 0x000544, "Member 'UKuroLandscapeHeightfieldCollisionComponent::SectionBaseY' has a wrong offset!");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, CollisionSizeQuads) == 0x000548, "Member 'UKuroLandscapeHeightfieldCollisionComponent::CollisionSizeQuads' has a wrong offset!");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, CollisionScale) == 0x00054C, "Member 'UKuroLandscapeHeightfieldCollisionComponent::CollisionScale' has a wrong offset!");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, SimpleCollisionSizeQuads) == 0x000550, "Member 'UKuroLandscapeHeightfieldCollisionComponent::SimpleCollisionSizeQuads' has a wrong offset!");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, HeightfieldGuid) == 0x000554, "Member 'UKuroLandscapeHeightfieldCollisionComponent::HeightfieldGuid' has a wrong offset!");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, CachedLocalBox) == 0x000564, "Member 'UKuroLandscapeHeightfieldCollisionComponent::CachedLocalBox' has a wrong offset!");
+static_assert(offsetof(UKuroLandscapeHeightfieldCollisionComponent, CookedPhysicalMaterials) == 0x000590, "Member 'UKuroLandscapeHeightfieldCollisionComponent::CookedPhysicalMaterials' has a wrong offset!");
 
 // Class KuroCollision.LevelCollisionActor
 // 0x0008 (0x02B8 - 0x02B0)
@@ -65,6 +163,29 @@ public:
 static_assert(alignof(ALevelCollisionActor) == 0x000008, "Wrong alignment on ALevelCollisionActor");
 static_assert(sizeof(ALevelCollisionActor) == 0x0002B8, "Wrong size on ALevelCollisionActor");
 static_assert(offsetof(ALevelCollisionActor, CollisionClusterComponent) == 0x0002B0, "Member 'ALevelCollisionActor::CollisionClusterComponent' has a wrong offset!");
+
+// Class KuroCollision.LevelLandscapeCollisionActor
+// 0x0010 (0x02C0 - 0x02B0)
+class ALevelLandscapeCollisionActor final : public AActor
+{
+public:
+	class UPhysicalMaterial*                      DefaultPhysMaterial;                               // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UKuroLandscapeHeightfieldCollisionComponent* CollisionComponent;                           // 0x02B8(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LevelLandscapeCollisionActor">();
+	}
+	static class ALevelLandscapeCollisionActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ALevelLandscapeCollisionActor>();
+	}
+};
+static_assert(alignof(ALevelLandscapeCollisionActor) == 0x000008, "Wrong alignment on ALevelLandscapeCollisionActor");
+static_assert(sizeof(ALevelLandscapeCollisionActor) == 0x0002C0, "Wrong size on ALevelLandscapeCollisionActor");
+static_assert(offsetof(ALevelLandscapeCollisionActor, DefaultPhysMaterial) == 0x0002B0, "Member 'ALevelLandscapeCollisionActor::DefaultPhysMaterial' has a wrong offset!");
+static_assert(offsetof(ALevelLandscapeCollisionActor, CollisionComponent) == 0x0002B8, "Member 'ALevelLandscapeCollisionActor::CollisionComponent' has a wrong offset!");
 
 }
 

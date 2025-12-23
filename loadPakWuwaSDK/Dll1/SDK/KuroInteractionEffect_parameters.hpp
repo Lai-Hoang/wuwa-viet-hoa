@@ -11,20 +11,21 @@
 #include "Basic.hpp"
 
 #include "KuroInteractionEffect_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function KuroInteractionEffect.KuroEnviInteractionComponent.GetEnviInteractionData
-// 0x0080 (0x0080 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct KuroEnviInteractionComponent_GetEnviInteractionData final
 {
 public:
-	struct FKuroEnviInteractionData               ReturnValue;                                       // 0x0000(0x0080)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKuroEnviInteractionData               ReturnValue;                                       // 0x0000(0x00C8)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(KuroEnviInteractionComponent_GetEnviInteractionData) == 0x000008, "Wrong alignment on KuroEnviInteractionComponent_GetEnviInteractionData");
-static_assert(sizeof(KuroEnviInteractionComponent_GetEnviInteractionData) == 0x000080, "Wrong size on KuroEnviInteractionComponent_GetEnviInteractionData");
+static_assert(sizeof(KuroEnviInteractionComponent_GetEnviInteractionData) == 0x0000C8, "Wrong size on KuroEnviInteractionComponent_GetEnviInteractionData");
 static_assert(offsetof(KuroEnviInteractionComponent_GetEnviInteractionData, ReturnValue) == 0x000000, "Member 'KuroEnviInteractionComponent_GetEnviInteractionData::ReturnValue' has a wrong offset!");
 
 // Function KuroInteractionEffect.KuroEnviInteractionComponent.GetRainWalkOcclusionParam
@@ -116,6 +117,33 @@ static_assert(alignof(KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp
 static_assert(sizeof(KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp) == 0x000010, "Wrong size on KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp");
 static_assert(offsetof(KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp, InNiagaraComp) == 0x000000, "Member 'KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp::InNiagaraComp' has a wrong offset!");
 static_assert(offsetof(KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp, SourceEIComp) == 0x000008, "Member 'KuroInteractionEffectSystem_RegisterSPModelCharacterEIComp::SourceEIComp' has a wrong offset!");
+
+// Function KuroInteractionEffect.KuroInteractionEffectSystem.SearchInteractionFoliage
+// 0x0018 (0x0018 - 0x0000)
+struct KuroInteractionEffectSystem_SearchInteractionFoliage final
+{
+public:
+	class FString                                 FoliageTypeName;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroInteractionEffectSystem_SearchInteractionFoliage) == 0x000008, "Wrong alignment on KuroInteractionEffectSystem_SearchInteractionFoliage");
+static_assert(sizeof(KuroInteractionEffectSystem_SearchInteractionFoliage) == 0x000018, "Wrong size on KuroInteractionEffectSystem_SearchInteractionFoliage");
+static_assert(offsetof(KuroInteractionEffectSystem_SearchInteractionFoliage, FoliageTypeName) == 0x000000, "Member 'KuroInteractionEffectSystem_SearchInteractionFoliage::FoliageTypeName' has a wrong offset!");
+static_assert(offsetof(KuroInteractionEffectSystem_SearchInteractionFoliage, ReturnValue) == 0x000010, "Member 'KuroInteractionEffectSystem_SearchInteractionFoliage::ReturnValue' has a wrong offset!");
+
+// Function KuroInteractionEffect.KuroInteractionEffectSystem.SearchInteractionPlacementTriggerActor
+// 0x0028 (0x0028 - 0x0000)
+struct KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor final
+{
+public:
+	class UStaticMesh*                            PlacementMesh;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        ReturnValue;                                       // 0x0008(0x0020)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor) == 0x000008, "Wrong alignment on KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor");
+static_assert(sizeof(KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor) == 0x000028, "Wrong size on KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor");
+static_assert(offsetof(KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor, PlacementMesh) == 0x000000, "Member 'KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor::PlacementMesh' has a wrong offset!");
+static_assert(offsetof(KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor, ReturnValue) == 0x000008, "Member 'KuroInteractionEffectSystem_SearchInteractionPlacementTriggerActor::ReturnValue' has a wrong offset!");
 
 }
 

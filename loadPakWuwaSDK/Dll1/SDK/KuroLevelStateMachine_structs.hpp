@@ -44,20 +44,52 @@ static_assert(offsetof(FKuroLevelPlaySequenceOverrideData, Object) == 0x000018, 
 static_assert(offsetof(FKuroLevelPlaySequenceOverrideData, bOverridesDefault) == 0x000020, "Member 'FKuroLevelPlaySequenceOverrideData::bOverridesDefault' has a wrong offset!");
 
 // ScriptStruct KuroLevelStateMachine.KuroLevelState
-// 0x0070 (0x0070 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct FKuroLevelState final
 {
 public:
 	class FName                                   StateName;                                         // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FName, class FName>                Transitions;                                       // 0x0010(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	TArray<class UKuroLevelStateAction*>          Actions;                                           // 0x0060(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	float                                         Duration;                                          // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBreakTransition;                                  // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, class FName>                Transitions;                                       // 0x0018(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	TArray<class UKuroLevelStateAction*>          Actions;                                           // 0x0068(0x0010)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TArray<class UKuroLevelStateAction*>          TickActions;                                       // 0x0078(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_88[0x10];                                      // 0x0088(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FKuroLevelState) == 0x000008, "Wrong alignment on FKuroLevelState");
-static_assert(sizeof(FKuroLevelState) == 0x000070, "Wrong size on FKuroLevelState");
+static_assert(sizeof(FKuroLevelState) == 0x000098, "Wrong size on FKuroLevelState");
 static_assert(offsetof(FKuroLevelState, StateName) == 0x000000, "Member 'FKuroLevelState::StateName' has a wrong offset!");
-static_assert(offsetof(FKuroLevelState, Transitions) == 0x000010, "Member 'FKuroLevelState::Transitions' has a wrong offset!");
-static_assert(offsetof(FKuroLevelState, Actions) == 0x000060, "Member 'FKuroLevelState::Actions' has a wrong offset!");
+static_assert(offsetof(FKuroLevelState, Duration) == 0x00000C, "Member 'FKuroLevelState::Duration' has a wrong offset!");
+static_assert(offsetof(FKuroLevelState, bBreakTransition) == 0x000010, "Member 'FKuroLevelState::bBreakTransition' has a wrong offset!");
+static_assert(offsetof(FKuroLevelState, Transitions) == 0x000018, "Member 'FKuroLevelState::Transitions' has a wrong offset!");
+static_assert(offsetof(FKuroLevelState, Actions) == 0x000068, "Member 'FKuroLevelState::Actions' has a wrong offset!");
+static_assert(offsetof(FKuroLevelState, TickActions) == 0x000078, "Member 'FKuroLevelState::TickActions' has a wrong offset!");
+
+// ScriptStruct KuroLevelStateMachine.KuroLevelStateLayer
+// 0x0088 (0x0088 - 0x0000)
+struct FKuroLevelStateLayer final
+{
+public:
+	class FName                                   InitialStateName;                                  // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKuroLevelState>                States;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_20[0x68];                                      // 0x0020(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FKuroLevelStateLayer) == 0x000008, "Wrong alignment on FKuroLevelStateLayer");
+static_assert(sizeof(FKuroLevelStateLayer) == 0x000088, "Wrong size on FKuroLevelStateLayer");
+static_assert(offsetof(FKuroLevelStateLayer, InitialStateName) == 0x000000, "Member 'FKuroLevelStateLayer::InitialStateName' has a wrong offset!");
+static_assert(offsetof(FKuroLevelStateLayer, States) == 0x000010, "Member 'FKuroLevelStateLayer::States' has a wrong offset!");
+
+// ScriptStruct KuroLevelStateMachine.KuroLevelStateMachineManagerTickFunction
+// 0x0008 (0x0030 - 0x0028)
+struct FKuroLevelStateMachineManagerTickFunction final : public FTickFunction
+{
+public:
+	uint8                                         Pad_28[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FKuroLevelStateMachineManagerTickFunction) == 0x000008, "Wrong alignment on FKuroLevelStateMachineManagerTickFunction");
+static_assert(sizeof(FKuroLevelStateMachineManagerTickFunction) == 0x000030, "Wrong size on FKuroLevelStateMachineManagerTickFunction");
 
 // ScriptStruct KuroLevelStateMachine.KuroLevelSwitchCollisionData
 // 0x0028 (0x0028 - 0x0000)
@@ -79,27 +111,6 @@ static_assert(offsetof(FKuroLevelSwitchCollisionData, bIncludeChildren) == 0x000
 static_assert(offsetof(FKuroLevelSwitchCollisionData, EnterCollision) == 0x00000C, "Member 'FKuroLevelSwitchCollisionData::EnterCollision' has a wrong offset!");
 static_assert(offsetof(FKuroLevelSwitchCollisionData, bExitReverse) == 0x000018, "Member 'FKuroLevelSwitchCollisionData::bExitReverse' has a wrong offset!");
 static_assert(offsetof(FKuroLevelSwitchCollisionData, ExitCollision) == 0x00001C, "Member 'FKuroLevelSwitchCollisionData::ExitCollision' has a wrong offset!");
-
-// ScriptStruct KuroLevelStateMachine.KuroLevelSwitchMaterialData
-// 0x0028 (0x0028 - 0x0000)
-struct FKuroLevelSwitchMaterialData final
-{
-public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeChildren;                                  // 0x0008(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      EnterMaterial;                                     // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bExitReverse;                                      // 0x0018(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      ExitMaterial;                                      // 0x0020(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FKuroLevelSwitchMaterialData) == 0x000008, "Wrong alignment on FKuroLevelSwitchMaterialData");
-static_assert(sizeof(FKuroLevelSwitchMaterialData) == 0x000028, "Wrong size on FKuroLevelSwitchMaterialData");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, Actor) == 0x000000, "Member 'FKuroLevelSwitchMaterialData::Actor' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, bIncludeChildren) == 0x000008, "Member 'FKuroLevelSwitchMaterialData::bIncludeChildren' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, EnterMaterial) == 0x000010, "Member 'FKuroLevelSwitchMaterialData::EnterMaterial' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, bExitReverse) == 0x000018, "Member 'FKuroLevelSwitchMaterialData::bExitReverse' has a wrong offset!");
-static_assert(offsetof(FKuroLevelSwitchMaterialData, ExitMaterial) == 0x000020, "Member 'FKuroLevelSwitchMaterialData::ExitMaterial' has a wrong offset!");
 
 // ScriptStruct KuroLevelStateMachine.KuroLevelToggleActiveData
 // 0x0010 (0x0010 - 0x0000)

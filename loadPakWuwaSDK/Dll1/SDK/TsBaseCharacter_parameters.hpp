@@ -10,37 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "ECharacterDitherType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ECharacterDitherType_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function TsBaseCharacter.TsBaseCharacter_C.ExecuteUbergraph_TsBaseCharacter
-// 0x0020 (0x0020 - 0x0000)
-struct TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter final
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 K2Node_Event_PrevMovementMode;                     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 K2Node_Event_NewMovementMode;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_Event_PrevCustomMode;                       // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_Event_NewCustomMode;                        // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AController*                            K2Node_Event_NewController;                        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AController*                            K2Node_Event_OldController;                        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Event_DeltaTime;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter) == 0x000008, "Wrong alignment on TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter");
-static_assert(sizeof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter) == 0x000020, "Wrong size on TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter");
-static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, EntryPoint) == 0x000000, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::EntryPoint' has a wrong offset!");
-static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_PrevMovementMode) == 0x000004, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_PrevMovementMode' has a wrong offset!");
-static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_NewMovementMode) == 0x000005, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_NewMovementMode' has a wrong offset!");
-static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_PrevCustomMode) == 0x000006, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_PrevCustomMode' has a wrong offset!");
-static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_NewCustomMode) == 0x000007, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_NewCustomMode' has a wrong offset!");
-static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_NewController) == 0x000008, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_NewController' has a wrong offset!");
-static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_OldController) == 0x000010, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_OldController' has a wrong offset!");
-static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_DeltaTime) == 0x000018, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_DeltaTime' has a wrong offset!");
 
 // Function TsBaseCharacter.TsBaseCharacter_C.GetEntityId
 // 0x0004 (0x0004 - 0x0000)
@@ -52,6 +27,17 @@ public:
 static_assert(alignof(TsBaseCharacter_C_GetEntityId) == 0x000004, "Wrong alignment on TsBaseCharacter_C_GetEntityId");
 static_assert(sizeof(TsBaseCharacter_C_GetEntityId) == 0x000004, "Wrong size on TsBaseCharacter_C_GetEntityId");
 static_assert(offsetof(TsBaseCharacter_C_GetEntityId, ReturnValue) == 0x000000, "Member 'TsBaseCharacter_C_GetEntityId::ReturnValue' has a wrong offset!");
+
+// Function TsBaseCharacter.TsBaseCharacter_C.BindGameplayEnableState
+// 0x0001 (0x0001 - 0x0000)
+struct TsBaseCharacter_C_BindGameplayEnableState final
+{
+public:
+	bool                                          gameplayEnable;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(TsBaseCharacter_C_BindGameplayEnableState) == 0x000001, "Wrong alignment on TsBaseCharacter_C_BindGameplayEnableState");
+static_assert(sizeof(TsBaseCharacter_C_BindGameplayEnableState) == 0x000001, "Wrong size on TsBaseCharacter_C_BindGameplayEnableState");
+static_assert(offsetof(TsBaseCharacter_C_BindGameplayEnableState, gameplayEnable) == 0x000000, "Member 'TsBaseCharacter_C_BindGameplayEnableState::gameplayEnable' has a wrong offset!");
 
 // Function TsBaseCharacter.TsBaseCharacter_C.SetDitherEffect
 // 0x0008 (0x0008 - 0x0000)
@@ -126,6 +112,31 @@ public:
 static_assert(alignof(TsBaseCharacter_C_K2_UpdateCustomMovement) == 0x000004, "Wrong alignment on TsBaseCharacter_C_K2_UpdateCustomMovement");
 static_assert(sizeof(TsBaseCharacter_C_K2_UpdateCustomMovement) == 0x000004, "Wrong size on TsBaseCharacter_C_K2_UpdateCustomMovement");
 static_assert(offsetof(TsBaseCharacter_C_K2_UpdateCustomMovement, DeltaTime) == 0x000000, "Member 'TsBaseCharacter_C_K2_UpdateCustomMovement::DeltaTime' has a wrong offset!");
+
+// Function TsBaseCharacter.TsBaseCharacter_C.ExecuteUbergraph_TsBaseCharacter
+// 0x0020 (0x0020 - 0x0000)
+struct TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter final
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 K2Node_Event_PrevMovementMode;                     // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 K2Node_Event_NewMovementMode;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_Event_PrevCustomMode;                       // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_Event_NewCustomMode;                        // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            K2Node_Event_NewController;                        // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AController*                            K2Node_Event_OldController;                        // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTime;                            // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter) == 0x000008, "Wrong alignment on TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter");
+static_assert(sizeof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter) == 0x000020, "Wrong size on TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter");
+static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, EntryPoint) == 0x000000, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::EntryPoint' has a wrong offset!");
+static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_PrevMovementMode) == 0x000004, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_PrevMovementMode' has a wrong offset!");
+static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_NewMovementMode) == 0x000005, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_NewMovementMode' has a wrong offset!");
+static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_PrevCustomMode) == 0x000006, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_PrevCustomMode' has a wrong offset!");
+static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_NewCustomMode) == 0x000007, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_NewCustomMode' has a wrong offset!");
+static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_NewController) == 0x000008, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_NewController' has a wrong offset!");
+static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_OldController) == 0x000010, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_OldController' has a wrong offset!");
+static_assert(offsetof(TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter, K2Node_Event_DeltaTime) == 0x000018, "Member 'TsBaseCharacter_C_ExecuteUbergraph_TsBaseCharacter::K2Node_Event_DeltaTime' has a wrong offset!");
 
 }
 

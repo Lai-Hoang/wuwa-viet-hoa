@@ -33,6 +33,30 @@ enum class ETouchIndex : uint8
 	ETouchIndex_MAX                          = 12,
 };
 
+// Enum InputCore.ETouchType
+// NumValues: 0x0008
+enum class ETouchType : uint8
+{
+	Began                                    = 0,
+	Moved                                    = 1,
+	Stationary                               = 2,
+	ForceChanged                             = 3,
+	FirstMove                                = 4,
+	Ended                                    = 5,
+	NumTypes                                 = 6,
+	ETouchType_MAX                           = 7,
+};
+
+// Enum InputCore.EConsoleForGamepadLabels
+// NumValues: 0x0004
+enum class EConsoleForGamepadLabels : uint8
+{
+	None                                     = 0,
+	XBoxOne                                  = 1,
+	PS4                                      = 2,
+	EConsoleForGamepadLabels_MAX             = 3,
+};
+
 // Enum InputCore.EControllerHand
 // NumValues: 0x0013
 enum class EControllerHand : uint8
@@ -56,30 +80,6 @@ enum class EControllerHand : uint8
 	Special_11                               = 16,
 	ControllerHand_Count                     = 17,
 	EControllerHand_MAX                      = 18,
-};
-
-// Enum InputCore.ETouchType
-// NumValues: 0x0008
-enum class ETouchType : uint8
-{
-	Began                                    = 0,
-	Moved                                    = 1,
-	Stationary                               = 2,
-	ForceChanged                             = 3,
-	FirstMove                                = 4,
-	Ended                                    = 5,
-	NumTypes                                 = 6,
-	ETouchType_MAX                           = 7,
-};
-
-// Enum InputCore.EConsoleForGamepadLabels
-// NumValues: 0x0004
-enum class EConsoleForGamepadLabels : uint8
-{
-	None                                     = 0,
-	XBoxOne                                  = 1,
-	PS4                                      = 2,
-	EConsoleForGamepadLabels_MAX             = 3,
 };
 
 // ScriptStruct InputCore.Key

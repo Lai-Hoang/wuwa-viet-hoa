@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "SMovementSetting_Posture_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "EWanderDirectionType_structs.hpp"
 
 
@@ -18,7 +19,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SMovementSetting_State.SMovementSetting_State
-// 0x0638 (0x0638 - 0x0000)
+// 0x0648 (0x0648 - 0x0000)
 struct FSMovementSetting_State final
 {
 public:
@@ -32,9 +33,12 @@ public:
 	struct FSMovementSetting_Posture              CustomSetting04_31_006E59BA4CA1B36C7D00BE997360C0CB; // 0x04D0(0x00B0)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSMovementSetting_Posture              CustomSetting05_32_FFFCFAB24E8044CFC2634C8F0FAEC69E; // 0x0580(0x00B0)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EWanderDirectionType                          WanderDirection_42_6DD7B6E046D2732FDAD16FAC63BAE9FC; // 0x0630(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_631[0x3];                                      // 0x0631(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGameplayTag                           EnableTag_45_6335230A44F8B743C29963A7E3C593E5;     // 0x0634(0x000C)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
+	float                                         WalkableFloorAngle_49_CB6590054FEDF71C43205F9A9E2604A9; // 0x0640(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FSMovementSetting_State) == 0x000008, "Wrong alignment on FSMovementSetting_State");
-static_assert(sizeof(FSMovementSetting_State) == 0x000638, "Wrong size on FSMovementSetting_State");
+static_assert(sizeof(FSMovementSetting_State) == 0x000648, "Wrong size on FSMovementSetting_State");
 static_assert(offsetof(FSMovementSetting_State, FaceDirection_35_752904864FF4C6441610D6BA533CEAD3) == 0x000000, "Member 'FSMovementSetting_State::FaceDirection_35_752904864FF4C6441610D6BA533CEAD3' has a wrong offset!");
 static_assert(offsetof(FSMovementSetting_State, LockDirection_36_3DDFB2394C43B3CFC79E85B754344D3B) == 0x0000B0, "Member 'FSMovementSetting_State::LockDirection_36_3DDFB2394C43B3CFC79E85B754344D3B' has a wrong offset!");
 static_assert(offsetof(FSMovementSetting_State, AimDirection_37_F202F3C642A28CAD3AB506BF93B9A8B1) == 0x000160, "Member 'FSMovementSetting_State::AimDirection_37_F202F3C642A28CAD3AB506BF93B9A8B1' has a wrong offset!");
@@ -45,6 +49,8 @@ static_assert(offsetof(FSMovementSetting_State, CustomSetting03_30_8A4C568C4F510
 static_assert(offsetof(FSMovementSetting_State, CustomSetting04_31_006E59BA4CA1B36C7D00BE997360C0CB) == 0x0004D0, "Member 'FSMovementSetting_State::CustomSetting04_31_006E59BA4CA1B36C7D00BE997360C0CB' has a wrong offset!");
 static_assert(offsetof(FSMovementSetting_State, CustomSetting05_32_FFFCFAB24E8044CFC2634C8F0FAEC69E) == 0x000580, "Member 'FSMovementSetting_State::CustomSetting05_32_FFFCFAB24E8044CFC2634C8F0FAEC69E' has a wrong offset!");
 static_assert(offsetof(FSMovementSetting_State, WanderDirection_42_6DD7B6E046D2732FDAD16FAC63BAE9FC) == 0x000630, "Member 'FSMovementSetting_State::WanderDirection_42_6DD7B6E046D2732FDAD16FAC63BAE9FC' has a wrong offset!");
+static_assert(offsetof(FSMovementSetting_State, EnableTag_45_6335230A44F8B743C29963A7E3C593E5) == 0x000634, "Member 'FSMovementSetting_State::EnableTag_45_6335230A44F8B743C29963A7E3C593E5' has a wrong offset!");
+static_assert(offsetof(FSMovementSetting_State, WalkableFloorAngle_49_CB6590054FEDF71C43205F9A9E2604A9) == 0x000640, "Member 'FSMovementSetting_State::WalkableFloorAngle_49_CB6590054FEDF71C43205F9A9E2604A9' has a wrong offset!");
 
 }
 

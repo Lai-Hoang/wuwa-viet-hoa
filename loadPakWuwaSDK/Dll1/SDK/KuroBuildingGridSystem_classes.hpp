@@ -10,32 +10,34 @@
 
 #include "Basic.hpp"
 
+#include "DeveloperSettings_classes.hpp"
 #include "KuroBuildingGridSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
-#include "DeveloperSettings_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class KuroBuildingGridSystem.KuroBuildingGrid
-// 0x0110 (0x03C0 - 0x02B0)
-class AKuroBuildingGrid final : public AActor
+// 0x0150 (0x0400 - 0x02B0)
+class alignas(0x10) AKuroBuildingGrid final : public AActor
 {
 public:
 	class UPrimitiveComponent*                    RenderingComp;                                     // 0x02B0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FKuroBuildingGridCellVector            GridSize;                                          // 0x02B8(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FKuroBuildingGridCellVector>    BlockCoords;                                       // 0x02C0(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	struct FGuid                                  BuildingGridSpawnGuid;                             // 0x02D0(0x0010)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2E0[0xE0];                                     // 0x02E0(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E0[0x120];                                    // 0x02E0(0x0120)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	bool OccupyTarget(const struct FKuroBuildingGridCellVector& InCoords, class UObject* InTarget);
+	bool OccupyTarget(const struct FKuroBuildingGridCellVector& InCoords, class UObject* InTarget, const float& DegreeAlongNormal);
 	bool UnoccupyTarget(class UObject* InTarget);
 
 	class FString GetBuildingGridGuidString() const;
+	bool GetCellIndex(const struct FKuroBuildingGridCellVector& InCoords, int32* OutIndex) const;
+	struct FVectorDouble GetPosition(const struct FKuroBuildingGridCellVector& InSize, const struct FKuroBuildingGridCellVector& InCoords) const;
 
 public:
 	static class UClass* StaticClass()
@@ -47,8 +49,8 @@ public:
 		return GetDefaultObjImpl<AKuroBuildingGrid>();
 	}
 };
-static_assert(alignof(AKuroBuildingGrid) == 0x000008, "Wrong alignment on AKuroBuildingGrid");
-static_assert(sizeof(AKuroBuildingGrid) == 0x0003C0, "Wrong size on AKuroBuildingGrid");
+static_assert(alignof(AKuroBuildingGrid) == 0x000010, "Wrong alignment on AKuroBuildingGrid");
+static_assert(sizeof(AKuroBuildingGrid) == 0x000400, "Wrong size on AKuroBuildingGrid");
 static_assert(offsetof(AKuroBuildingGrid, RenderingComp) == 0x0002B0, "Member 'AKuroBuildingGrid::RenderingComp' has a wrong offset!");
 static_assert(offsetof(AKuroBuildingGrid, GridSize) == 0x0002B8, "Member 'AKuroBuildingGrid::GridSize' has a wrong offset!");
 static_assert(offsetof(AKuroBuildingGrid, BlockCoords) == 0x0002C0, "Member 'AKuroBuildingGrid::BlockCoords' has a wrong offset!");
@@ -101,10 +103,12 @@ static_assert(offsetof(UKuroBuildingGridPlaceholderComponent, GridSize) == 0x000
 class IKuroBuildingGridPlaceholderInterface final
 {
 public:
-	struct FKuroBuildingGridCellVector GetSizeByDegree(float* Degree);
+	void Occupied(class AKuroBuildingGrid* InGrid, const struct FKuroBuildingGridCellVector& InCoords, const float& InDegree);
+	void Unoccupied();
 
 	bool CanBeRemoved() const;
 	struct FKuroBuildingGridCellVector GetSize() const;
+	struct FKuroBuildingGridCellVector GetSizeByDegree(float* Degree) const;
 
 public:
 	static class UClass* StaticClass()
@@ -129,11 +133,11 @@ static_assert(alignof(IKuroBuildingGridPlaceholderInterface) == 0x000001, "Wrong
 static_assert(sizeof(IKuroBuildingGridPlaceholderInterface) == 0x000001, "Wrong size on IKuroBuildingGridPlaceholderInterface");
 
 // Class KuroBuildingGridSystem.KuroBuildingGridRenderingComponent
-// 0x0010 (0x0570 - 0x0560)
+// 0x0010 (0x0590 - 0x0580)
 class UKuroBuildingGridRenderingComponent final : public UDebugDrawComponent
 {
 public:
-	uint8                                         Pad_560[0x10];                                     // 0x0560(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_580[0x10];                                     // 0x0580(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -146,7 +150,7 @@ public:
 	}
 };
 static_assert(alignof(UKuroBuildingGridRenderingComponent) == 0x000010, "Wrong alignment on UKuroBuildingGridRenderingComponent");
-static_assert(sizeof(UKuroBuildingGridRenderingComponent) == 0x000570, "Wrong size on UKuroBuildingGridRenderingComponent");
+static_assert(sizeof(UKuroBuildingGridRenderingComponent) == 0x000590, "Wrong size on UKuroBuildingGridRenderingComponent");
 
 // Class KuroBuildingGridSystem.KuroBuildingGridSettings
 // 0x0008 (0x0050 - 0x0048)
@@ -180,8 +184,11 @@ public:
 	class UKuroBuildingGridPersistentPlaceholder* PersistentPlaceholder;                             // 0x0088(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
+	static float GetGridCellSize();
+	static class AKuroBuildingGrid* K2_FindBuildingGrid(class UObject* WorldContextObject, const class FString& InGuidString);
+	static void K2_ForEachIntersectingCell(class UObject* WorldContextObject, const struct FVectorDouble& InPoint, const double& InRadius, const bool UseDirMask, const int32 DirMask, TDelegate<void(const class FString& GridGuid, const struct FKuroBuildingGridCellVector& Coords, const int32 CellIndex)> Func_0);
 	static bool K2_ProjectPointToGrid(class UObject* WorldContextObject, const struct FVectorDouble& InPoint, const struct FVector& InNormal, struct FKuroBuildingGridRaycastResult& OutResult);
-	static bool K2_RaycastGrid(class UObject* WorldContextObject, const struct FVector& Start, const struct FVector& End, struct FKuroBuildingGridRaycastResult& OutResult);
+	static bool K2_RaycastGrid(class UObject* WorldContextObject, const struct FVectorDouble& Start, const struct FVectorDouble& End, struct FKuroBuildingGridRaycastResult& OutResult);
 
 public:
 	static class UClass* StaticClass()

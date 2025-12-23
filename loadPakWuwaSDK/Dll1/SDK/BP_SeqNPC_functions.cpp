@@ -199,6 +199,73 @@ bool ABP_SeqNPC_C::GetAnimDataFloat(TArray<struct FNamedCurveValue>* FloatCurveD
 }
 
 
+// Function BP_SeqNPC.BP_SeqNPC_C.SetAnimDataTransform
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TMap<class FName, struct FTransform>&FloatCurveData                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_SeqNPC_C::SetAnimDataTransform(const TMap<class FName, struct FTransform>& FloatCurveData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SeqNPC_C", "SetAnimDataTransform");
+
+	Params::BP_SeqNPC_C_SetAnimDataTransform Parms{};
+
+	Parms.FloatCurveData = std::move(FloatCurveData);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_SeqNPC.BP_SeqNPC_C.IsCustomSupport
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_SeqNPC_C::IsCustomSupport()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SeqNPC_C", "IsCustomSupport");
+
+	Params::BP_SeqNPC_C_IsCustomSupport Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_SeqNPC.BP_SeqNPC_C.GetAnimDataTransform
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TMap<class FName, struct FTransform>*   FloatCurveData                                         (Parm, OutParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_SeqNPC_C::GetAnimDataTransform(TMap<class FName, struct FTransform>* FloatCurveData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_SeqNPC_C", "GetAnimDataTransform");
+
+	Params::BP_SeqNPC_C_GetAnimDataTransform Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (FloatCurveData != nullptr)
+		*FloatCurveData = std::move(Parms.FloatCurveData);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function BP_SeqNPC.BP_SeqNPC_C.GetABPC_Body_V2
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:

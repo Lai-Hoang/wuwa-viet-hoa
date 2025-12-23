@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function TsSkeletalObserver.TsSkeletalObserver_C.ReceiveTick
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -33,12 +33,17 @@ void ATsSkeletalObserver_C::ReceiveTick(float DeltaSeconds)
 
 	Parms.DeltaSeconds = DeltaSeconds;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsSkeletalObserver.TsSkeletalObserver_C.ExecuteUbergraph_TsSkeletalObserver
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -53,7 +58,12 @@ void ATsSkeletalObserver_C::ExecuteUbergraph_TsSkeletalObserver(int32 EntryPoint
 
 	Parms.EntryPoint = EntryPoint;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

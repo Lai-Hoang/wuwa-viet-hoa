@@ -31,6 +31,17 @@ public:
 	static float GetDrivedVehicleRotiationSpeed(int32 entityId, class UObject* __WorldContext);
 	static bool GetVehicleVelocity(int32 entityId, struct FVector& outVelocity, class UObject* __WorldContext);
 	static float GetVehicleRotiationSpeed(int32 entityId, class UObject* __WorldContext);
+	static void SmoothVehicleRotation(int32 entityId1, const struct FRotator& target, float speed, const class FString& context, class UObject* __WorldContext);
+	static void AddBuffToVehicleFromGA(int32 entityId, class ATsBaseVehicle_C* target, int64 buffId, const class FString& skillId, int32 addCount, class UObject* __WorldContext);
+	static void GetVehicleImpactInfo(int32 entityId, bool& isImpacted, struct FVector& impactVelocity, struct FHitResult& impactHitResult, class UObject* __WorldContext);
+	static void GetDrivingVehicleImpactInfo(int32 entityId, bool& isImpacted, struct FVector& impactVelocity, struct FHitResult& impactHitResult, class UObject* __WorldContext);
+	static void ClearMotorTimer(class UObject* __WorldContext);
+	static int32 TryGetPlayerMotorEntityId(class UObject* __WorldContext);
+	static void ClearMotorAppearanceTag(class ATsBaseVehicle_C* motor, class UObject* __WorldContext);
+	static void MotorAppearance(int32 entityId, class ATsBaseVehicle_C* motor, const class FString& skillId, bool forceBrake, float hangTimeAfterAppear, int64 endHangBuffId, float disappearDistance, float disappearTime, int64 disappearBuffId, class UObject* __WorldContext);
+	static class ATsBaseCharacter_C* GetPassengerOnVehicle(int32 entityId, int32 seat, class UObject* __WorldContext);
+	static class ATsBaseVehicle_C* SummonAndRideMotorcycle(int32 entityId, const struct FTransform& seatTrans, int64 motorSkillId, class UObject* __WorldContext);
+	static void SetMotorAndroidInitParams(class UKuroVehicleMovementComponent* vehicleMove, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

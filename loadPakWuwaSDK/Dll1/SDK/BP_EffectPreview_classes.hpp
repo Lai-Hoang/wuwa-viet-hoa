@@ -28,9 +28,9 @@ public:
 	int32                                         Transient;                                         // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void UserConstructionScript();
-	void EditorTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_EffectPreview(int32 EntryPoint);
+	void EditorTick(float DeltaSeconds);
+	void UserConstructionScript();
 
 public:
 	static class UClass* StaticClass()

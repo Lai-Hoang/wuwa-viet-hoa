@@ -251,7 +251,7 @@ void ABP_BaseRole_Seq_V2_C::添加扫描效果()
 }
 
 
-// Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.BeginSwitchPose_ToSeq
+// Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.Begin Switch Pose to Seq
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           From                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -259,14 +259,14 @@ void ABP_BaseRole_Seq_V2_C::添加扫描效果()
 // float                                   SwitchTime                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ErrorLog                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
-void ABP_BaseRole_Seq_V2_C::BeginSwitchPose_ToSeq(class AActor* From, class AActor* To, float SwitchTime, bool ErrorLog)
+void ABP_BaseRole_Seq_V2_C::Begin_Switch_Pose_to_Seq(class AActor* From, class AActor* To, float SwitchTime, bool ErrorLog)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseRole_Seq_V2_C", "BeginSwitchPose_ToSeq");
+		Func = Class->GetFunction("BP_BaseRole_Seq_V2_C", "Begin Switch Pose to Seq");
 
-	Params::BP_BaseRole_Seq_V2_C_BeginSwitchPose_ToSeq Parms{};
+	Params::BP_BaseRole_Seq_V2_C_Begin_Switch_Pose_to_Seq Parms{};
 
 	Parms.From = From;
 	Parms.To = To;
@@ -344,6 +344,20 @@ void ABP_BaseRole_Seq_V2_C::EndSwitchPose_ToBP(class AActor* To, bool Log)
 	Parms.Log = Log;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.LightChanel
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_BaseRole_Seq_V2_C::LightChanel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseRole_Seq_V2_C", "LightChanel");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -477,6 +491,73 @@ TArray<class FName> ABP_BaseRole_Seq_V2_C::GetSupportGroupNames()
 	Params::BP_BaseRole_Seq_V2_C_GetSupportGroupNames Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.SetAnimDataTransform
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TMap<class FName, struct FTransform>&FloatCurveData                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_BaseRole_Seq_V2_C::SetAnimDataTransform(const TMap<class FName, struct FTransform>& FloatCurveData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseRole_Seq_V2_C", "SetAnimDataTransform");
+
+	Params::BP_BaseRole_Seq_V2_C_SetAnimDataTransform Parms{};
+
+	Parms.FloatCurveData = std::move(FloatCurveData);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.IsCustomSupport
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_BaseRole_Seq_V2_C::IsCustomSupport()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseRole_Seq_V2_C", "IsCustomSupport");
+
+	Params::BP_BaseRole_Seq_V2_C_IsCustomSupport Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function BP_BaseRole_Seq_V2.BP_BaseRole_Seq_V2_C.GetAnimDataTransform
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TMap<class FName, struct FTransform>*   FloatCurveData                                         (Parm, OutParm)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool ABP_BaseRole_Seq_V2_C::GetAnimDataTransform(TMap<class FName, struct FTransform>* FloatCurveData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseRole_Seq_V2_C", "GetAnimDataTransform");
+
+	Params::BP_BaseRole_Seq_V2_C_GetAnimDataTransform Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (FloatCurveData != nullptr)
+		*FloatCurveData = std::move(Parms.FloatCurveData);
 
 	return Parms.ReturnValue;
 }

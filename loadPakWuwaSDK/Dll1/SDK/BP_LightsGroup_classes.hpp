@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LightsGroup.BP_LightsGroup_C
-// 0x0060 (0x0310 - 0x02B0)
+// 0x0068 (0x0318 - 0x02B0)
 class ABP_LightsGroup_C final : public AActor
 {
 public:
@@ -36,6 +36,7 @@ public:
 	struct FLinearColor                           ColorOriginal;                                     // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           ColorTarget;                                       // 0x02F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Test;                                              // 0x0300(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	bool                                          EnableLightsOnBeginPlay;                           // 0x0310(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void LightsColorChange(float ElapsedTime, const struct FLinearColor& ColorOriginal_0, const struct FLinearColor& ColorTarget_0);
@@ -61,7 +62,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_LightsGroup_C) == 0x000008, "Wrong alignment on ABP_LightsGroup_C");
-static_assert(sizeof(ABP_LightsGroup_C) == 0x000310, "Wrong size on ABP_LightsGroup_C");
+static_assert(sizeof(ABP_LightsGroup_C) == 0x000318, "Wrong size on ABP_LightsGroup_C");
 static_assert(offsetof(ABP_LightsGroup_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_LightsGroup_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(ABP_LightsGroup_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_LightsGroup_C::DefaultSceneRoot' has a wrong offset!");
 static_assert(offsetof(ABP_LightsGroup_C, IsTick) == 0x0002C0, "Member 'ABP_LightsGroup_C::IsTick' has a wrong offset!");
@@ -75,6 +76,7 @@ static_assert(offsetof(ABP_LightsGroup_C, LightsIntensity) == 0x0002D0, "Member 
 static_assert(offsetof(ABP_LightsGroup_C, ColorOriginal) == 0x0002E0, "Member 'ABP_LightsGroup_C::ColorOriginal' has a wrong offset!");
 static_assert(offsetof(ABP_LightsGroup_C, ColorTarget) == 0x0002F0, "Member 'ABP_LightsGroup_C::ColorTarget' has a wrong offset!");
 static_assert(offsetof(ABP_LightsGroup_C, Test) == 0x000300, "Member 'ABP_LightsGroup_C::Test' has a wrong offset!");
+static_assert(offsetof(ABP_LightsGroup_C, EnableLightsOnBeginPlay) == 0x000310, "Member 'ABP_LightsGroup_C::EnableLightsOnBeginPlay' has a wrong offset!");
 
 }
 

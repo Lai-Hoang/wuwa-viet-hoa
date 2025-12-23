@@ -87,6 +87,27 @@ void IBPI_SceneBp_C::Resume()
 }
 
 
+// Function BPI_SceneBp.BPI_SceneBp_C.ShouldStopOnHide
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   ret                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void IBPI_SceneBp_C::ShouldStopOnHide(bool* ret)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("BPI_SceneBp_C", "ShouldStopOnHide");
+
+	Params::BPI_SceneBp_C_ShouldStopOnHide Parms{};
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	if (ret != nullptr)
+		*ret = Parms.ret;
+}
+
+
 // Function BPI_SceneBp.BPI_SceneBp_C.GetAoiRange
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

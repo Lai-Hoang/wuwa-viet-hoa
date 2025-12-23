@@ -17,26 +17,6 @@
 namespace SDK
 {
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetNiagaraFrameDeltaTime
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ScreenEffectSystem_C::SetNiagaraFrameDeltaTime(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "SetNiagaraFrameDeltaTime");
-
-	Params::BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetEffectExtraStateDebug
 // (Public, BlueprintCallable, BlueprintEvent)
 
@@ -68,28 +48,6 @@ void ABP_ScreenEffectSystem_C::SetEffectExtraState(class UEffectScreenPlayData_C
 
 	Parms.EffectScreenPlayData = EffectScreenPlayData;
 	Parms.ExtraState = ExtraState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.TweenEffectParameter
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UEffectScreenPlayData_C*          EffectScreenPlayData                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   targetProgress                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ScreenEffectSystem_C::TweenEffectParameter(class UEffectScreenPlayData_C* EffectScreenPlayData, float targetProgress)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "TweenEffectParameter");
-
-	Params::BP_ScreenEffectSystem_C_TweenEffectParameter Parms{};
-
-	Parms.EffectScreenPlayData = EffectScreenPlayData;
-	Parms.targetProgress = targetProgress;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -487,6 +445,48 @@ void ABP_ScreenEffectSystem_C::ExecuteUbergraph_BP_ScreenEffectSystem(int32 Entr
 	Params::BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem Parms{};
 
 	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.TweenEffectParameter
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UEffectScreenPlayData_C*          EffectScreenPlayData                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   targetProgress                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::TweenEffectParameter(class UEffectScreenPlayData_C* EffectScreenPlayData, float targetProgress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "TweenEffectParameter");
+
+	Params::BP_ScreenEffectSystem_C_TweenEffectParameter Parms{};
+
+	Parms.EffectScreenPlayData = EffectScreenPlayData;
+	Parms.targetProgress = targetProgress;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetNiagaraFrameDeltaTime
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_ScreenEffectSystem_C::SetNiagaraFrameDeltaTime(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ScreenEffectSystem_C", "SetNiagaraFrameDeltaTime");
+
+	Params::BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime Parms{};
+
+	Parms.DeltaTime = DeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

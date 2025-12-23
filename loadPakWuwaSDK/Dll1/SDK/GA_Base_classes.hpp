@@ -35,6 +35,8 @@ public:
 	void K2_OnEndAbility(bool bWasCancelled);
 	void K2_ActivateAbility();
 	void 获取施法者(class ATsBaseCharacter_C** 施法者);
+	void 获取施法载具(class ATsBaseVehicle_C** 施法载具);
+	void 获取施法单位EntityId(int32* EntityId);
 	void 获取当前技能配置Id(class FString* 当前技能数据名_0);
 	void 获取当前技能配置(struct FSSkillInfo* 当前技能数据_0);
 	void 获取技能动画(int32 编号, class UAnimMontage** 动画);
@@ -121,6 +123,7 @@ public:
 	void Apply_Buff_with_Level(int64 buffId);
 	void 随机召唤(int32 召唤者Id, int32 Index_0, const struct FTransformDouble& Transform, int32 SkillId_0, bool IsVisivle);
 	void 获取随机召唤物(int32 召唤者, int32 Index_0, int32* 实体Id);
+	void 异步使用技能(class ATsBaseCharacter_C* 释放者, class FName 技能ID, class AActor* 技能目标, class FName Socket);
 
 	bool K2_CanActivateAbility(const struct FGameplayAbilityActorInfo& ActorInfo, struct FGameplayTagContainer* RelevantTags) const;
 

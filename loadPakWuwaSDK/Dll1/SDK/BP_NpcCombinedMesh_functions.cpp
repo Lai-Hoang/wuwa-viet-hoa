@@ -96,29 +96,38 @@ void ABP_NpcCombinedMesh_C::SetupSockets()
 }
 
 
-// Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetupSocket
+// Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.Setup Socket
 // (Private, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             SocketName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FTransform&                Transform                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 // class USkeletalMesh*                    SkeletalMesh                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FMorphTargetPreviewItem>& MorphTargets                                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// TArray<struct FSNpcHookPartMaterial>&   Materials                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// int32                                   index                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool*                                   Suc                                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class USkeletalMeshComponent**          SkeletalComp                                           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_NpcCombinedMesh_C::SetupSocket(class FName SocketName, const struct FTransform& Transform, class USkeletalMesh* SkeletalMesh, bool* Suc, class USkeletalMeshComponent** SkeletalComp)
+void ABP_NpcCombinedMesh_C::Setup_Socket(class FName SocketName, const struct FTransform& Transform, class USkeletalMesh* SkeletalMesh, TArray<struct FMorphTargetPreviewItem>& MorphTargets, TArray<struct FSNpcHookPartMaterial>& Materials, int32 index, bool* Suc, class USkeletalMeshComponent** SkeletalComp)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_NpcCombinedMesh_C", "SetupSocket");
+		Func = Class->GetFunction("BP_NpcCombinedMesh_C", "Setup Socket");
 
-	Params::BP_NpcCombinedMesh_C_SetupSocket Parms{};
+	Params::BP_NpcCombinedMesh_C_Setup_Socket Parms{};
 
 	Parms.SocketName = SocketName;
 	Parms.Transform = std::move(Transform);
 	Parms.SkeletalMesh = SkeletalMesh;
+	Parms.MorphTargets = std::move(MorphTargets);
+	Parms.Materials = std::move(Materials);
+	Parms.index = index;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	MorphTargets = std::move(Parms.MorphTargets);
+	Materials = std::move(Parms.Materials);
 
 	if (Suc != nullptr)
 		*Suc = Parms.Suc;

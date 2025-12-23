@@ -10,60 +10,73 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "E_BillboardMode_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_LevelSequenceHalo.BP_LevelSequenceHalo_C
-// 0x01A0 (0x0450 - 0x02B0)
+// 0x0200 (0x04B0 - 0x02B0)
 class ABP_LevelSequenceHalo_C final : public AActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UKuroHaloComponent*                     KuroHalo;                                          // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               DynamicMaterialInstance;                           // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Enable;                                            // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	bool                                          bAcceptGI;                                         // 0x02C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	uint8                                         Pad_2CA[0x2];                                      // 0x02CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SizeScale;                                         // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         IntensityScale;                                    // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         LightExponent;                                     // 0x02D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeStartRadius;                                   // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         FadeEndRadius;                                     // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	class UKuroHaloComponent*                     HaloComponent;                                     // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         DepthFadeDistance;                                 // 0x02E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         AspectRatio;                                       // 0x02EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	E_BillboardMode                               FaceCameraMode;                                    // 0x02F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2F1[0x7];                                      // 0x02F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStaticMesh*                            HaloMesh;                                          // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
-	float                                         MinDrawDistance;                                   // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxDrawDistance;                                   // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         MinDrawRange;                                      // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         MaxDrawRange;                                      // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         UseShapeTex;                                       // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_314[0x4];                                      // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UTexture2D*                             VolumeTex;                                         // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPD_HaloPointLightConfig_C*             HaloPointConfig;                                   // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EKuroFeatureLevel                             CurrentFeatureLevel;                               // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_329[0x3];                                      // 0x0329(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LightIntensity;                                    // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           LightColor;                                        // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         LightAttenRadius;                                  // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         LightFalloffExponent;                              // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	int32                                         TranslucentSortPriority;                           // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          UseTranslucentMaterial;                            // 0x034C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_34D[0x3];                                      // 0x034D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInterface*                     M_PointLightHalo_Translucent;                      // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, float>                      Scalar_Parameters;                                 // 0x0358(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, struct FLinearColor>        Vector_Parameters;                                 // 0x03A8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, class UTexture*>            Texture_Parameters;                                // 0x03F8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	float                                         AcceptGI;                                          // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBillboardComponent*                    Billboard;                                         // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UKuroHaloComponent*                     KuroHalo;                                          // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               DynamicMaterialInstance;                           // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Enable;                                            // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          bAcceptGI;                                         // 0x02D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	uint8                                         Pad_2D2[0x2];                                      // 0x02D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SizeScale;                                         // 0x02D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         IntensityScale;                                    // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         LightExponent;                                     // 0x02DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         FadeStartRadius;                                   // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         FadeEndRadius;                                     // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	class UKuroHaloComponent*                     HaloComponent;                                     // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         DepthFadeDistance;                                 // 0x02F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         AspectRatio;                                       // 0x02F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	E_BillboardMode                               FaceCameraMode;                                    // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_2F9[0x7];                                      // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UStaticMesh*                            HaloMesh;                                          // 0x0300(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash)
+	float                                         MinDrawDistance;                                   // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxDrawDistance;                                   // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         MinDrawRange;                                      // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         MaxDrawRange;                                      // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         UseShapeTex;                                       // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_31C[0x4];                                      // 0x031C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture2D*                             VolumeTex;                                         // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           VolumeTexUVSpeed;                                  // 0x0328(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPD_HaloPointLightConfig_C*             HaloPointConfig;                                   // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EKuroFeatureLevel                             CurrentFeatureLevel;                               // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_341[0x3];                                      // 0x0341(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LightIntensity;                                    // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           LightColor;                                        // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         LightAttenRadius;                                  // 0x0358(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         LightFalloffExponent;                              // 0x035C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	int32                                         TranslucentSortPriority;                           // 0x0360(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseTranslucentMaterial;                            // 0x0364(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_365[0x3];                                      // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     MI_PointLightHalo;                                 // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     MI_PointLightHalo_Translucent;                     // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     MI_PointLightHalo_Translucent_DOF;                 // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     MI_PointLightHalo_Plus;                            // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     MI_PointLightHalo_Translucent_Plus;                // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     MI_PointLightHalo_Translucent_DOF_Plus;            // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, float>                      Scalar_Parameters;                                 // 0x0398(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, struct FLinearColor>        Vector_Parameters;                                 // 0x03E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, class UTexture*>            Texture_Parameters;                                // 0x0438(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	float                                         AcceptGI;                                          // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Use_DOF_Material;                                  // 0x048C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          移动端低画质以上生效;                              // 0x048D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_48E[0x2];                                      // 0x048E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UTexture*                               NoiseTex;                                          // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           NoiseTexUV;                                        // 0x0498(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseStrength;                                     // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_LevelSequenceHalo(int32 EntryPoint);
@@ -74,6 +87,7 @@ public:
 	void GetHaloDrawParameters(float* MinDrawDistance_0, float* MaxDrawDistance_0, float* MinDrawRange_0, float* MaxDrawRange_0);
 	void Update();
 	void UpdateEditor();
+	void SetLightQualityMaterial(class UPrimitiveComponent* HaloComponent_0, bool UseTranslucentMaterial_0, bool Use_DOF_Material_0, class UMaterialInterface* M_PointLightHalo_Translucent_DOF, class UMaterialInterface* M_PointLightHalo_Translucent, class UMaterialInterface* M_PointLightHalo);
 
 public:
 	static class UClass* StaticClass()
@@ -86,41 +100,53 @@ public:
 	}
 };
 static_assert(alignof(ABP_LevelSequenceHalo_C) == 0x000008, "Wrong alignment on ABP_LevelSequenceHalo_C");
-static_assert(sizeof(ABP_LevelSequenceHalo_C) == 0x000450, "Wrong size on ABP_LevelSequenceHalo_C");
+static_assert(sizeof(ABP_LevelSequenceHalo_C) == 0x0004B0, "Wrong size on ABP_LevelSequenceHalo_C");
 static_assert(offsetof(ABP_LevelSequenceHalo_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_LevelSequenceHalo_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, KuroHalo) == 0x0002B8, "Member 'ABP_LevelSequenceHalo_C::KuroHalo' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, DynamicMaterialInstance) == 0x0002C0, "Member 'ABP_LevelSequenceHalo_C::DynamicMaterialInstance' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Enable) == 0x0002C8, "Member 'ABP_LevelSequenceHalo_C::Enable' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, bAcceptGI) == 0x0002C9, "Member 'ABP_LevelSequenceHalo_C::bAcceptGI' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, SizeScale) == 0x0002CC, "Member 'ABP_LevelSequenceHalo_C::SizeScale' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, IntensityScale) == 0x0002D0, "Member 'ABP_LevelSequenceHalo_C::IntensityScale' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightExponent) == 0x0002D4, "Member 'ABP_LevelSequenceHalo_C::LightExponent' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, FadeStartRadius) == 0x0002D8, "Member 'ABP_LevelSequenceHalo_C::FadeStartRadius' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, FadeEndRadius) == 0x0002DC, "Member 'ABP_LevelSequenceHalo_C::FadeEndRadius' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloComponent) == 0x0002E0, "Member 'ABP_LevelSequenceHalo_C::HaloComponent' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, DepthFadeDistance) == 0x0002E8, "Member 'ABP_LevelSequenceHalo_C::DepthFadeDistance' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, AspectRatio) == 0x0002EC, "Member 'ABP_LevelSequenceHalo_C::AspectRatio' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, FaceCameraMode) == 0x0002F0, "Member 'ABP_LevelSequenceHalo_C::FaceCameraMode' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloMesh) == 0x0002F8, "Member 'ABP_LevelSequenceHalo_C::HaloMesh' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MinDrawDistance) == 0x000300, "Member 'ABP_LevelSequenceHalo_C::MinDrawDistance' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MaxDrawDistance) == 0x000304, "Member 'ABP_LevelSequenceHalo_C::MaxDrawDistance' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MinDrawRange) == 0x000308, "Member 'ABP_LevelSequenceHalo_C::MinDrawRange' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, MaxDrawRange) == 0x00030C, "Member 'ABP_LevelSequenceHalo_C::MaxDrawRange' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, UseShapeTex) == 0x000310, "Member 'ABP_LevelSequenceHalo_C::UseShapeTex' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, VolumeTex) == 0x000318, "Member 'ABP_LevelSequenceHalo_C::VolumeTex' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloPointConfig) == 0x000320, "Member 'ABP_LevelSequenceHalo_C::HaloPointConfig' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, CurrentFeatureLevel) == 0x000328, "Member 'ABP_LevelSequenceHalo_C::CurrentFeatureLevel' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightIntensity) == 0x00032C, "Member 'ABP_LevelSequenceHalo_C::LightIntensity' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightColor) == 0x000330, "Member 'ABP_LevelSequenceHalo_C::LightColor' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightAttenRadius) == 0x000340, "Member 'ABP_LevelSequenceHalo_C::LightAttenRadius' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, LightFalloffExponent) == 0x000344, "Member 'ABP_LevelSequenceHalo_C::LightFalloffExponent' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, TranslucentSortPriority) == 0x000348, "Member 'ABP_LevelSequenceHalo_C::TranslucentSortPriority' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, UseTranslucentMaterial) == 0x00034C, "Member 'ABP_LevelSequenceHalo_C::UseTranslucentMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, M_PointLightHalo_Translucent) == 0x000350, "Member 'ABP_LevelSequenceHalo_C::M_PointLightHalo_Translucent' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Scalar_Parameters) == 0x000358, "Member 'ABP_LevelSequenceHalo_C::Scalar_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Vector_Parameters) == 0x0003A8, "Member 'ABP_LevelSequenceHalo_C::Vector_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, Texture_Parameters) == 0x0003F8, "Member 'ABP_LevelSequenceHalo_C::Texture_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_LevelSequenceHalo_C, AcceptGI) == 0x000448, "Member 'ABP_LevelSequenceHalo_C::AcceptGI' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, Billboard) == 0x0002B8, "Member 'ABP_LevelSequenceHalo_C::Billboard' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, KuroHalo) == 0x0002C0, "Member 'ABP_LevelSequenceHalo_C::KuroHalo' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, DynamicMaterialInstance) == 0x0002C8, "Member 'ABP_LevelSequenceHalo_C::DynamicMaterialInstance' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, Enable) == 0x0002D0, "Member 'ABP_LevelSequenceHalo_C::Enable' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, bAcceptGI) == 0x0002D1, "Member 'ABP_LevelSequenceHalo_C::bAcceptGI' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, SizeScale) == 0x0002D4, "Member 'ABP_LevelSequenceHalo_C::SizeScale' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, IntensityScale) == 0x0002D8, "Member 'ABP_LevelSequenceHalo_C::IntensityScale' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, LightExponent) == 0x0002DC, "Member 'ABP_LevelSequenceHalo_C::LightExponent' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, FadeStartRadius) == 0x0002E0, "Member 'ABP_LevelSequenceHalo_C::FadeStartRadius' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, FadeEndRadius) == 0x0002E4, "Member 'ABP_LevelSequenceHalo_C::FadeEndRadius' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloComponent) == 0x0002E8, "Member 'ABP_LevelSequenceHalo_C::HaloComponent' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, DepthFadeDistance) == 0x0002F0, "Member 'ABP_LevelSequenceHalo_C::DepthFadeDistance' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, AspectRatio) == 0x0002F4, "Member 'ABP_LevelSequenceHalo_C::AspectRatio' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, FaceCameraMode) == 0x0002F8, "Member 'ABP_LevelSequenceHalo_C::FaceCameraMode' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloMesh) == 0x000300, "Member 'ABP_LevelSequenceHalo_C::HaloMesh' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MinDrawDistance) == 0x000308, "Member 'ABP_LevelSequenceHalo_C::MinDrawDistance' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MaxDrawDistance) == 0x00030C, "Member 'ABP_LevelSequenceHalo_C::MaxDrawDistance' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MinDrawRange) == 0x000310, "Member 'ABP_LevelSequenceHalo_C::MinDrawRange' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MaxDrawRange) == 0x000314, "Member 'ABP_LevelSequenceHalo_C::MaxDrawRange' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, UseShapeTex) == 0x000318, "Member 'ABP_LevelSequenceHalo_C::UseShapeTex' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, VolumeTex) == 0x000320, "Member 'ABP_LevelSequenceHalo_C::VolumeTex' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, VolumeTexUVSpeed) == 0x000328, "Member 'ABP_LevelSequenceHalo_C::VolumeTexUVSpeed' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, HaloPointConfig) == 0x000338, "Member 'ABP_LevelSequenceHalo_C::HaloPointConfig' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, CurrentFeatureLevel) == 0x000340, "Member 'ABP_LevelSequenceHalo_C::CurrentFeatureLevel' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, LightIntensity) == 0x000344, "Member 'ABP_LevelSequenceHalo_C::LightIntensity' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, LightColor) == 0x000348, "Member 'ABP_LevelSequenceHalo_C::LightColor' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, LightAttenRadius) == 0x000358, "Member 'ABP_LevelSequenceHalo_C::LightAttenRadius' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, LightFalloffExponent) == 0x00035C, "Member 'ABP_LevelSequenceHalo_C::LightFalloffExponent' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, TranslucentSortPriority) == 0x000360, "Member 'ABP_LevelSequenceHalo_C::TranslucentSortPriority' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, UseTranslucentMaterial) == 0x000364, "Member 'ABP_LevelSequenceHalo_C::UseTranslucentMaterial' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo) == 0x000368, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Translucent) == 0x000370, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Translucent' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Translucent_DOF) == 0x000378, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Translucent_DOF' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Plus) == 0x000380, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Plus' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Translucent_Plus) == 0x000388, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Translucent_Plus' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, MI_PointLightHalo_Translucent_DOF_Plus) == 0x000390, "Member 'ABP_LevelSequenceHalo_C::MI_PointLightHalo_Translucent_DOF_Plus' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, Scalar_Parameters) == 0x000398, "Member 'ABP_LevelSequenceHalo_C::Scalar_Parameters' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, Vector_Parameters) == 0x0003E8, "Member 'ABP_LevelSequenceHalo_C::Vector_Parameters' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, Texture_Parameters) == 0x000438, "Member 'ABP_LevelSequenceHalo_C::Texture_Parameters' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, AcceptGI) == 0x000488, "Member 'ABP_LevelSequenceHalo_C::AcceptGI' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, Use_DOF_Material) == 0x00048C, "Member 'ABP_LevelSequenceHalo_C::Use_DOF_Material' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, 移动端低画质以上生效) == 0x00048D, "Member 'ABP_LevelSequenceHalo_C::移动端低画质以上生效' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, NoiseTex) == 0x000490, "Member 'ABP_LevelSequenceHalo_C::NoiseTex' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, NoiseTexUV) == 0x000498, "Member 'ABP_LevelSequenceHalo_C::NoiseTexUV' has a wrong offset!");
+static_assert(offsetof(ABP_LevelSequenceHalo_C, NoiseStrength) == 0x0004A8, "Member 'ABP_LevelSequenceHalo_C::NoiseStrength' has a wrong offset!");
 
 }
 

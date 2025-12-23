@@ -36,6 +36,64 @@ void UKuroSDKManager::BindAccount()
 }
 
 
+// Function KuroSDK.KuroSDKManager.CallPlugin
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    data                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroSDKManager::CallPlugin(const class FString& data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "CallPlugin");
+
+	Params::KuroSDKManager_CallPlugin Parms{};
+
+	Parms.data = std::move(data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSDK.KuroSDKManager.CallPluginAsync
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FString&                    data                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(const class FString& Result)>&callback                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroSDKManager::CallPluginAsync(const class FString& data, const TDelegate<void(const class FString& Result)>& callback)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "CallPluginAsync");
+
+	Params::KuroSDKManager_CallPluginAsync Parms{};
+
+	Parms.data = std::move(data);
+	Parms.callback = callback;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroSDK.KuroSDKManager.CheckApplinksActivation
 // (Final, Native, Static, Public)
 
@@ -143,6 +201,50 @@ void UKuroSDKManager::CloseWebView(const class FString& identifier)
 }
 
 
+// Function KuroSDK.KuroSDKManager.DoEngineExit
+// (Final, Native, Static, Public)
+
+void UKuroSDKManager::DoEngineExit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "DoEngineExit");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSDK.KuroSDKManager.DoInitSdkProcedure
+// (Final, Native, Static, Public)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroSDKManager::DoInitSdkProcedure()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "DoInitSdkProcedure");
+
+	Params::KuroSDKManager_DoInitSdkProcedure Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroSDK.KuroSDKManager.ExitGame
 // (Final, Native, Static, Public)
 
@@ -157,6 +259,31 @@ void UKuroSDKManager::ExitGame()
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSDK.KuroSDKManager.FreePlugin
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    data                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSDKManager::FreePlugin(const class FString& data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "FreePlugin");
+
+	Params::KuroSDKManager_FreePlugin Parms{};
+
+	Parms.data = std::move(data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -292,9 +419,9 @@ struct FBasicInfo UKuroSDKManager::GetBasicInfo()
 // Function KuroSDK.KuroSDKManager.GetChannelId
 // (Final, Native, Static, Public)
 // Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UKuroSDKManager::GetChannelId()
+class FString UKuroSDKManager::GetChannelId()
 {
 	static class UFunction* Func = nullptr;
 
@@ -907,6 +1034,25 @@ void UKuroSDKManager::PostSplashScreenEndSuccess()
 }
 
 
+// Function KuroSDK.KuroSDKManager.QueryExternalAchievements
+// (Final, Native, Static, Public)
+
+void UKuroSDKManager::QueryExternalAchievements()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "QueryExternalAchievements");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroSDK.KuroSDKManager.QueryProductInfo
 // (Final, Native, Static, Public)
 // Parameters:
@@ -1147,6 +1293,50 @@ void UKuroSDKManager::ShowExitGameDialog()
 }
 
 
+// Function KuroSDK.KuroSDKManager.ShowExternalLogin
+// (Final, Native, Static, Public)
+
+void UKuroSDKManager::ShowExternalLogin()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "ShowExternalLogin");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSDK.KuroSDKManager.ShowVirtualKeyboard
+// (Final, Native, Static, Public)
+// Parameters:
+// bool                                    state                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSDKManager::ShowVirtualKeyboard(bool state)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "ShowVirtualKeyboard");
+
+	Params::KuroSDKManager_ShowVirtualKeyboard Parms{};
+
+	Parms.state = state;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroSDK.KuroSDKManager.Start
 // (Final, Native, Static, Public)
 
@@ -1179,6 +1369,31 @@ void UKuroSDKManager::UpdateChannelEvent(const class FString& data)
 		Func = StaticClass()->GetFunction("KuroSDKManager", "UpdateChannelEvent");
 
 	Params::KuroSDKManager_UpdateChannelEvent Parms{};
+
+	Parms.data = std::move(data);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSDK.KuroSDKManager.WriteExternalAchievements
+// (Final, Native, Static, Public)
+// Parameters:
+// const class FString&                    data                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSDKManager::WriteExternalAchievements(const class FString& data)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKManager", "WriteExternalAchievements");
+
+	Params::KuroSDKManager_WriteExternalAchievements Parms{};
 
 	Parms.data = std::move(data);
 
@@ -1346,20 +1561,26 @@ void UKuroSDKStaticLibrary::GetBaseDeviceInfo()
 
 // Function KuroSDK.KuroSDKStaticLibrary.GetChannelId
 // (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroSDKStaticLibrary::GetChannelId()
+class FString UKuroSDKStaticLibrary::GetChannelId()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = StaticClass()->GetFunction("KuroSDKStaticLibrary", "GetChannelId");
 
+	Params::KuroSDKStaticLibrary_GetChannelId Parms{};
+
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	GetDefaultObj()->ProcessEvent(Func, nullptr);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1828,6 +2049,31 @@ void UKuroSDKStaticLibrary::ShowExitGameDialog()
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSDK.KuroSDKStaticLibrary.ShowVirtualKeyboard
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    state                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSDKStaticLibrary::ShowVirtualKeyboard(bool state)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSDKStaticLibrary", "ShowVirtualKeyboard");
+
+	Params::KuroSDKStaticLibrary_ShowVirtualKeyboard Parms{};
+
+	Parms.state = state;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

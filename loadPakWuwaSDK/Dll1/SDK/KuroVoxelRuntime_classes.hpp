@@ -11,12 +11,74 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
+#include "KuroVoxelRuntime_structs.hpp"
+#include "NavigationSystem_classes.hpp"
 #include "KuroWorldPartition_classes.hpp"
 #include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class KuroVoxelRuntime.KuroVoxelSystem
+// 0x00F8 (0x0130 - 0x0038)
+class UKuroVoxelSystem final : public UWorldSubsystem
+{
+public:
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FIntPoint, class AKuroVoxelPartitionActor*> LoadedPartitionActorsMap;                // 0x0040(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	TSet<class AKuroVoxelPartitionActor*>         ToAddActorSet;                                     // 0x0090(0x0050)(Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_E0[0x50];                                      // 0x00E0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static uint8 D_GetMaterialIDAtPos(class UWorld* World, const struct FVectorDouble& UEPos);
+	static struct FKuroVoxelInfo D_GetVoxelInfoAtPos(class UWorld* World, const struct FVectorDouble& UEPos, int32* ErrorCode, double SearchStep);
+	static bool D_IsCavernAtPos(class UWorld* World, const struct FVectorDouble& UEPos);
+	static bool D_TryGetVoxelInfoAtPos(class UWorld* World, const struct FVectorDouble& UEPos, struct FKuroVoxelInfo* OutVoxelInfo, int32* ErrorCode, double SearchStep);
+	static uint8 GetMaterialIDAtPos(class UWorld* World, const struct FVector& UEPos);
+	static class FString GetMtlNameByID(uint8 MtlID);
+	static struct FKuroVoxelInfo GetVoxelInfoAtPos(class UWorld* World, const struct FVector& UEPos, int32* ErrorCode, float SearchStep);
+	static bool IsCavernAtPos(class UWorld* World, const struct FVector& UEPos);
+	static bool IsVoxelSystemInitialized(class UWorld* World);
+	static bool TryGetVoxelInfoAtPos(class UWorld* World, const struct FVector& UEPos, struct FKuroVoxelInfo* OutVoxelInfo, int32* ErrorCode, float SearchStep);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroVoxelSystem">();
+	}
+	static class UKuroVoxelSystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroVoxelSystem>();
+	}
+};
+static_assert(alignof(UKuroVoxelSystem) == 0x000008, "Wrong alignment on UKuroVoxelSystem");
+static_assert(sizeof(UKuroVoxelSystem) == 0x000130, "Wrong size on UKuroVoxelSystem");
+static_assert(offsetof(UKuroVoxelSystem, LoadedPartitionActorsMap) == 0x000040, "Member 'UKuroVoxelSystem::LoadedPartitionActorsMap' has a wrong offset!");
+static_assert(offsetof(UKuroVoxelSystem, ToAddActorSet) == 0x000090, "Member 'UKuroVoxelSystem::ToAddActorSet' has a wrong offset!");
+
+// Class KuroVoxelRuntime.KuroCaveVolumeSubsystem
+// 0x0050 (0x0088 - 0x0038)
+class UKuroCaveVolumeSubsystem final : public UWorldSubsystem
+{
+public:
+	uint8                                         Pad_38[0x50];                                      // 0x0038(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static uint8 D_QueryVoxelCaveType(class UObject* WorldContext, const struct FVectorDouble& UELocation, bool bTraceDown);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroCaveVolumeSubsystem">();
+	}
+	static class UKuroCaveVolumeSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroCaveVolumeSubsystem>();
+	}
+};
+static_assert(alignof(UKuroCaveVolumeSubsystem) == 0x000008, "Wrong alignment on UKuroCaveVolumeSubsystem");
+static_assert(sizeof(UKuroCaveVolumeSubsystem) == 0x000088, "Wrong size on UKuroCaveVolumeSubsystem");
 
 // Class KuroVoxelRuntime.KuroVoxelGlobalActor
 // 0x0008 (0x02B8 - 0x02B0)
@@ -60,6 +122,28 @@ public:
 static_assert(alignof(UKuroVoxelGlobalComponent) == 0x000010, "Wrong alignment on UKuroVoxelGlobalComponent");
 static_assert(sizeof(UKuroVoxelGlobalComponent) == 0x000290, "Wrong size on UKuroVoxelGlobalComponent");
 static_assert(offsetof(UKuroVoxelGlobalComponent, Version) == 0x00028C, "Member 'UKuroVoxelGlobalComponent::Version' has a wrong offset!");
+
+// Class KuroVoxelRuntime.KuroVoxelModifierVolume
+// 0x0008 (0x0308 - 0x0300)
+class AKuroVoxelModifierVolume final : public ANavModifierVolume
+{
+public:
+	EKuroVoxelCaveType                            CaveType;                                          // 0x0300(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_301[0x7];                                      // 0x0301(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroVoxelModifierVolume">();
+	}
+	static class AKuroVoxelModifierVolume* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKuroVoxelModifierVolume>();
+	}
+};
+static_assert(alignof(AKuroVoxelModifierVolume) == 0x000008, "Wrong alignment on AKuroVoxelModifierVolume");
+static_assert(sizeof(AKuroVoxelModifierVolume) == 0x000308, "Wrong size on AKuroVoxelModifierVolume");
+static_assert(offsetof(AKuroVoxelModifierVolume, CaveType) == 0x000300, "Member 'AKuroVoxelModifierVolume::CaveType' has a wrong offset!");
 
 // Class KuroVoxelRuntime.KuroVoxelPartitionActor
 // 0x0010 (0x02C8 - 0x02B8)
@@ -108,43 +192,6 @@ static_assert(alignof(UKuroVoxelPartitionComponent) == 0x000008, "Wrong alignmen
 static_assert(sizeof(UKuroVoxelPartitionComponent) == 0x0000D8, "Wrong size on UKuroVoxelPartitionComponent");
 static_assert(offsetof(UKuroVoxelPartitionComponent, Priority) == 0x0000D0, "Member 'UKuroVoxelPartitionComponent::Priority' has a wrong offset!");
 static_assert(offsetof(UKuroVoxelPartitionComponent, Version) == 0x0000D4, "Member 'UKuroVoxelPartitionComponent::Version' has a wrong offset!");
-
-// Class KuroVoxelRuntime.KuroVoxelSystem
-// 0x00F8 (0x0130 - 0x0038)
-class UKuroVoxelSystem final : public UWorldSubsystem
-{
-public:
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FIntPoint, class AKuroVoxelPartitionActor*> LoadedPartitionActorsMap;                // 0x0040(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	TSet<class AKuroVoxelPartitionActor*>         ToAddActorSet;                                     // 0x0090(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_E0[0x50];                                      // 0x00E0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static uint8 D_GetMaterialIDAtPos(class UWorld* World, const struct FVectorDouble& UEPos);
-	static struct FKuroVoxelInfo D_GetVoxelInfoAtPos(class UWorld* World, const struct FVectorDouble& UEPos, int32* ErrorCode, double SearchStep);
-	static bool D_IsCavernAtPos(class UWorld* World, const struct FVectorDouble& UEPos);
-	static bool D_TryGetVoxelInfoAtPos(class UWorld* World, const struct FVectorDouble& UEPos, struct FKuroVoxelInfo* OutVoxelInfo, int32* ErrorCode, double SearchStep);
-	static uint8 GetMaterialIDAtPos(class UWorld* World, const struct FVector& UEPos);
-	static class FString GetMtlNameByID(uint8 MtlID);
-	static struct FKuroVoxelInfo GetVoxelInfoAtPos(class UWorld* World, const struct FVector& UEPos, int32* ErrorCode, float SearchStep);
-	static bool IsCavernAtPos(class UWorld* World, const struct FVector& UEPos);
-	static bool IsVoxelSystemInitialized(class UWorld* World);
-	static bool TryGetVoxelInfoAtPos(class UWorld* World, const struct FVector& UEPos, struct FKuroVoxelInfo* OutVoxelInfo, int32* ErrorCode, float SearchStep);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroVoxelSystem">();
-	}
-	static class UKuroVoxelSystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroVoxelSystem>();
-	}
-};
-static_assert(alignof(UKuroVoxelSystem) == 0x000008, "Wrong alignment on UKuroVoxelSystem");
-static_assert(sizeof(UKuroVoxelSystem) == 0x000130, "Wrong size on UKuroVoxelSystem");
-static_assert(offsetof(UKuroVoxelSystem, LoadedPartitionActorsMap) == 0x000040, "Member 'UKuroVoxelSystem::LoadedPartitionActorsMap' has a wrong offset!");
-static_assert(offsetof(UKuroVoxelSystem, ToAddActorSet) == 0x000090, "Member 'UKuroVoxelSystem::ToAddActorSet' has a wrong offset!");
 
 }
 

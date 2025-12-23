@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EFightCameraInput.EFightCameraInput
-// NumValues: 0x001A
+// NumValues: 0x001E
 enum class EFightCameraInput : uint8
 {
 	NewEnumerator6                           = 0,
@@ -43,7 +43,11 @@ enum class EFightCameraInput : uint8
 	NewEnumerator22                          = 22,
 	NewEnumerator23                          = 23,
 	NewEnumerator24                          = 24,
-	EFightCameraInput_MAX                    = 25,
+	NewEnumerator36                          = 25,
+	NewEnumerator37                          = 26,
+	NewEnumerator38                          = 27,
+	NewEnumerator39                          = 28,
+	EFightCameraInput_MAX                    = 29,
 };
 
 }

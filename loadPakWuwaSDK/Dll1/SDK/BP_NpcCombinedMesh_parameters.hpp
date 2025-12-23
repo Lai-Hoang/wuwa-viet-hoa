@@ -10,11 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "EBodyPartName_structs.hpp"
-#include "Engine_structs.hpp"
-#include "SNpcSetupPartInfo_structs.hpp"
 #include "SNpcHookPart_structs.hpp"
+#include "EBodyPartName_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SNpcSetupPartInfo_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SNpcHookPartMaterial_structs.hpp"
 
 
 namespace SDK::Params
@@ -128,7 +129,7 @@ static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFun
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents, CallFunc_IsValid_ReturnValue) == 0x000061, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponents::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetupSockets
-// 0x0380 (0x0380 - 0x0000)
+// 0x0440 (0x0440 - 0x0000)
 struct BP_NpcCombinedMesh_C_SetupSockets final
 {
 public:
@@ -148,59 +149,59 @@ public:
 	int32                                         CallFunc_Add_IntInt_ReturnValue_4;                 // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         ___int_Array_Index_Variable_4;                     // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSNpcHookPart                          CallFunc_Array_Get_Item;                           // 0x0040(0x0040)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_GetHeadTransform_OutTransform;            // 0x0080(0x0030)(IsPlainOldData, NoDestructor)
-	struct FSNpcHookPart                          CallFunc_Array_Get_Item_1;                         // 0x00B0(0x0040)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetupSocket_Suc;                          // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_SetupSocket_SkeletalComp;                 // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_GetLegTransform_OutTransform;             // 0x0100(0x0030)(IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetupSocket_Suc_1;                        // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSNpcHookPart                          CallFunc_Array_Get_Item;                           // 0x0040(0x0060)(HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetHeadTransform_OutTransform;            // 0x00A0(0x0030)(IsPlainOldData, NoDestructor)
+	struct FSNpcHookPart                          CallFunc_Array_Get_Item_1;                         // 0x00D0(0x0060)(HasGetValueTypeHash)
+	bool                                          CallFunc_Setup_Socket_Suc;                         // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_SetupSocket_SkeletalComp_1;               // 0x0138(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0140(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0144(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_145[0x3];                                      // 0x0145(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0148(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Loop_Counter_Variable_5;                    // 0x014C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_151[0x3];                                      // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Array_Index_Variable_5;                     // 0x0158(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_15C[0x4];                                      // 0x015C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSNpcHookPart                          CallFunc_Array_Get_Item_2;                         // 0x0160(0x0040)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_GetWeaponTransform_OutTransform;          // 0x01A0(0x0030)(IsPlainOldData, NoDestructor)
-	struct FSNpcHookPart                          CallFunc_Array_Get_Item_3;                         // 0x01D0(0x0040)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetupSocket_Suc_2;                        // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_211[0x7];                                      // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_SetupSocket_SkeletalComp_2;               // 0x0218(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_GetBackTransform_OutTransform;            // 0x0220(0x0030)(IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetupSocket_Suc_3;                        // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_251[0x7];                                      // 0x0251(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_SetupSocket_SkeletalComp_3;               // 0x0258(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0260(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0264(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_265[0x3];                                      // 0x0265(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0268(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x026C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_26D[0x3];                                      // 0x026D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSNpcHookPart                          CallFunc_Array_Get_Item_4;                         // 0x0270(0x0040)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSNpcHookPart                          CallFunc_Array_Get_Item_5;                         // 0x02B0(0x0040)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_GetArmTransform_OutTransform;             // 0x02F0(0x0030)(IsPlainOldData, NoDestructor)
-	struct FTransform                             CallFunc_GetWaistTransform_OutTransform;           // 0x0320(0x0030)(IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_SetupSocket_Suc_4;                        // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_351[0x7];                                      // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_SetupSocket_SkeletalComp_4;               // 0x0358(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetupSocket_Suc_5;                        // 0x0360(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_361[0x7];                                      // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_SetupSocket_SkeletalComp_5;               // 0x0368(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x0370(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x0374(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0378(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0379(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class USkeletalMeshComponent*                 CallFunc_Setup_Socket_SkeletalComp;                // 0x0138(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetLegTransform_OutTransform;             // 0x0140(0x0030)(IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Setup_Socket_Suc_1;                       // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_171[0x7];                                      // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Setup_Socket_SkeletalComp_1;              // 0x0178(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0184(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_185[0x3];                                      // 0x0185(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0188(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable_5;                    // 0x018C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_191[0x3];                                      // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_5;                 // 0x0194(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Array_Index_Variable_5;                     // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_19C[0x4];                                      // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSNpcHookPart                          CallFunc_Array_Get_Item_2;                         // 0x01A0(0x0060)(HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetWeaponTransform_OutTransform;          // 0x0200(0x0030)(IsPlainOldData, NoDestructor)
+	struct FSNpcHookPart                          CallFunc_Array_Get_Item_3;                         // 0x0230(0x0060)(HasGetValueTypeHash)
+	bool                                          CallFunc_Setup_Socket_Suc_2;                       // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_291[0x7];                                      // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Setup_Socket_SkeletalComp_2;              // 0x0298(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetBackTransform_OutTransform;            // 0x02A0(0x0030)(IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Setup_Socket_Suc_3;                       // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2D1[0x7];                                      // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Setup_Socket_SkeletalComp_3;              // 0x02D8(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x02E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x02E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2E5[0x3];                                      // 0x02E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x02EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2ED[0x3];                                      // 0x02ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSNpcHookPart                          CallFunc_Array_Get_Item_4;                         // 0x02F0(0x0060)(HasGetValueTypeHash)
+	struct FSNpcHookPart                          CallFunc_Array_Get_Item_5;                         // 0x0350(0x0060)(HasGetValueTypeHash)
+	struct FTransform                             CallFunc_GetArmTransform_OutTransform;             // 0x03B0(0x0030)(IsPlainOldData, NoDestructor)
+	struct FTransform                             CallFunc_GetWaistTransform_OutTransform;           // 0x03E0(0x0030)(IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Setup_Socket_Suc_4;                       // 0x0410(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_411[0x7];                                      // 0x0411(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Setup_Socket_SkeletalComp_4;              // 0x0418(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Setup_Socket_Suc_5;                       // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_421[0x7];                                      // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 CallFunc_Setup_Socket_SkeletalComp_5;              // 0x0428(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_4;               // 0x0430(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_5;               // 0x0434(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_4;                // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_5;                // 0x0439(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_NpcCombinedMesh_C_SetupSockets) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_SetupSockets");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetupSockets) == 0x000380, "Wrong size on BP_NpcCombinedMesh_C_SetupSockets");
+static_assert(sizeof(BP_NpcCombinedMesh_C_SetupSockets) == 0x000440, "Wrong size on BP_NpcCombinedMesh_C_SetupSockets");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_1) == 0x000004, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_1' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable) == 0x000008, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable' has a wrong offset!");
@@ -217,106 +218,158 @@ static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Va
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue_4) == 0x000034, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_4) == 0x000038, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_4' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item) == 0x000040, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetHeadTransform_OutTransform) == 0x000080, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetHeadTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_1) == 0x0000B0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_Suc) == 0x0000F0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_Suc' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_SkeletalComp) == 0x0000F8, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_SkeletalComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetLegTransform_OutTransform) == 0x000100, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetLegTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_Suc_1) == 0x000130, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_Suc_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_SkeletalComp_1) == 0x000138, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_SkeletalComp_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue) == 0x000140, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue) == 0x000144, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_1) == 0x000148, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable_5) == 0x00014C, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_1) == 0x000150, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue_5) == 0x000154, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_5) == 0x000158, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_2) == 0x000160, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetWeaponTransform_OutTransform) == 0x0001A0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetWeaponTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_3) == 0x0001D0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_Suc_2) == 0x000210, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_Suc_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_SkeletalComp_2) == 0x000218, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_SkeletalComp_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetBackTransform_OutTransform) == 0x000220, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetBackTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_Suc_3) == 0x000250, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_Suc_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_SkeletalComp_3) == 0x000258, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_SkeletalComp_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_2) == 0x000260, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_2) == 0x000264, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_3) == 0x000268, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_3) == 0x00026C, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_4) == 0x000270, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_5) == 0x0002B0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetArmTransform_OutTransform) == 0x0002F0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetArmTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetWaistTransform_OutTransform) == 0x000320, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetWaistTransform_OutTransform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_Suc_4) == 0x000350, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_Suc_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_SkeletalComp_4) == 0x000358, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_SkeletalComp_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_Suc_5) == 0x000360, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_Suc_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_SetupSocket_SkeletalComp_5) == 0x000368, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_SetupSocket_SkeletalComp_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_4) == 0x000370, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_5) == 0x000374, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_4) == 0x000378, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_5) == 0x000379, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetHeadTransform_OutTransform) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetHeadTransform_OutTransform' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_1) == 0x0000D0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc) == 0x000130, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp) == 0x000138, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetLegTransform_OutTransform) == 0x000140, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetLegTransform_OutTransform' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_1) == 0x000170, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_1) == 0x000178, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue) == 0x000180, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue) == 0x000184, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_1) == 0x000188, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Loop_Counter_Variable_5) == 0x00018C, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Loop_Counter_Variable_5' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_1) == 0x000190, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Add_IntInt_ReturnValue_5) == 0x000194, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Add_IntInt_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, ___int_Array_Index_Variable_5) == 0x000198, "Member 'BP_NpcCombinedMesh_C_SetupSockets::___int_Array_Index_Variable_5' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_2) == 0x0001A0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetWeaponTransform_OutTransform) == 0x000200, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetWeaponTransform_OutTransform' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_3) == 0x000230, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_3' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_2) == 0x000290, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_2) == 0x000298, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetBackTransform_OutTransform) == 0x0002A0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetBackTransform_OutTransform' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_3) == 0x0002D0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_3' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_3) == 0x0002D8, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_3' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_2) == 0x0002E0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_2) == 0x0002E4, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_3) == 0x0002E8, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_3) == 0x0002EC, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_4) == 0x0002F0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_4' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Get_Item_5) == 0x000350, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Get_Item_5' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetArmTransform_OutTransform) == 0x0003B0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetArmTransform_OutTransform' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_GetWaistTransform_OutTransform) == 0x0003E0, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_GetWaistTransform_OutTransform' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_4) == 0x000410, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_4' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_4) == 0x000418, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_4' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_Suc_5) == 0x000420, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_Suc_5' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Setup_Socket_SkeletalComp_5) == 0x000428, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Setup_Socket_SkeletalComp_5' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_4) == 0x000430, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Array_Length_ReturnValue_5) == 0x000434, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Array_Length_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_4) == 0x000438, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSockets, CallFunc_Less_IntInt_ReturnValue_5) == 0x000439, "Member 'BP_NpcCombinedMesh_C_SetupSockets::CallFunc_Less_IntInt_ReturnValue_5' has a wrong offset!");
 
-// Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetupSocket
-// 0x0180 (0x0180 - 0x0000)
-struct BP_NpcCombinedMesh_C_SetupSocket final
+// Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.Setup Socket
+// 0x0250 (0x0250 - 0x0000)
+struct BP_NpcCombinedMesh_C_Setup_Socket final
 {
 public:
 	class FName                                   SocketName;                                        // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
 	class USkeletalMesh*                          SkeletalMesh;                                      // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Suc;                                               // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 SkeletalComp;                                      // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 SocketSkelComp;                                    // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_63[0x5];                                       // 0x0063(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class USkeletalMeshComponent*                 CallFunc_AddComponentByClass_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0070(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x007C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0088(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0094(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0128(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0138(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0148(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0158(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_2;          // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x017B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x017C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_DoesSocketExist_ReturnValue;              // 0x017D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	TArray<struct FMorphTargetPreviewItem>        MorphTargets;                                      // 0x0048(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	TArray<struct FSNpcHookPartMaterial>          Materials;                                         // 0x0058(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	int32                                         index;                                             // 0x0068(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Suc;                                               // 0x006C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_6D[0x3];                                       // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 SkeletalComp;                                      // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 SocketSkelComp;                                    // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_9C[0x4];                                       // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_BuildString_Name_ReturnValue;             // 0x00A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x00B0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00C4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00C5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00C6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00C7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00C8(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x00D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x00E0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x00F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0100(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_2;          // 0x0130(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_NameName_ReturnValue;          // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0141(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0142(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_143[0x5];                                      // 0x0143(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UActorComponent*                        CallFunc_AddNamedComponent_ReturnValue;            // 0x0148(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_151[0x7];                                      // 0x0151(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USkeletalMeshComponent*                 K2Node_DynamicCast_As_______;                      // 0x0158(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0164(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	int32                                         ___int_Array_Index_Variable;                       // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1FC[0x4];                                      // 0x01FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMorphTargetPreviewItem                CallFunc_Array_Get_Item;                           // 0x0200(0x0018)()
+	class FName                                   CallFunc_Conv_StringToName_ReturnValue_1;          // 0x0218(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable_1;                    // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_229[0x3];                                      // 0x0229(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_DoesSocketExist_ReturnValue;              // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_232[0x2];                                      // 0x0232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ___int_Array_Index_Variable_1;                     // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSNpcHookPartMaterial                  CallFunc_Array_Get_Item_1;                         // 0x0238(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0248(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(BP_NpcCombinedMesh_C_SetupSocket) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_SetupSocket");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetupSocket) == 0x000180, "Wrong size on BP_NpcCombinedMesh_C_SetupSocket");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, SocketName) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetupSocket::SocketName' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, Transform) == 0x000010, "Member 'BP_NpcCombinedMesh_C_SetupSocket::Transform' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, SkeletalMesh) == 0x000040, "Member 'BP_NpcCombinedMesh_C_SetupSocket::SkeletalMesh' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, Suc) == 0x000048, "Member 'BP_NpcCombinedMesh_C_SetupSocket::Suc' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, SkeletalComp) == 0x000050, "Member 'BP_NpcCombinedMesh_C_SetupSocket::SkeletalComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, SocketSkelComp) == 0x000058, "Member 'BP_NpcCombinedMesh_C_SetupSocket::SocketSkelComp' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_IsValid_ReturnValue) == 0x000060, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_IsValid_ReturnValue_1) == 0x000061, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_Not_PreBool_ReturnValue) == 0x000062, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_AddComponentByClass_ReturnValue) == 0x000068, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_BreakTransform_Location) == 0x000070, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_BreakTransform_Location' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_BreakTransform_Rotation) == 0x00007C, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_BreakTransform_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_BreakTransform_Scale) == 0x000088, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_BreakTransform_Scale' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000094, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_Conv_NameToString_ReturnValue) == 0x000128, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000138, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_Concat_StrStr_ReturnValue) == 0x000148, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000158, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_Conv_NameToString_ReturnValue_2) == 0x000168, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_Conv_NameToString_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000178, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_IsEmpty_ReturnValue) == 0x000179, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_BooleanOR_ReturnValue) == 0x00017A, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_K2_AttachToComponent_ReturnValue) == 0x00017B, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_BooleanOR_ReturnValue_1) == 0x00017C, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSocket, CallFunc_DoesSocketExist_ReturnValue) == 0x00017D, "Member 'BP_NpcCombinedMesh_C_SetupSocket::CallFunc_DoesSocketExist_ReturnValue' has a wrong offset!");
+static_assert(alignof(BP_NpcCombinedMesh_C_Setup_Socket) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_Setup_Socket");
+static_assert(sizeof(BP_NpcCombinedMesh_C_Setup_Socket) == 0x000250, "Wrong size on BP_NpcCombinedMesh_C_Setup_Socket");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, SocketName) == 0x000000, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::SocketName' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, Transform) == 0x000010, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::Transform' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, SkeletalMesh) == 0x000040, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::SkeletalMesh' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, MorphTargets) == 0x000048, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::MorphTargets' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, Materials) == 0x000058, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::Materials' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, index) == 0x000068, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::index' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, Suc) == 0x00006C, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::Suc' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, SkeletalComp) == 0x000070, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::SkeletalComp' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, SocketSkelComp) == 0x000078, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::SocketSkelComp' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, ___int_Loop_Counter_Variable) == 0x000080, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::___int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_IntToString_ReturnValue) == 0x000088, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_IntToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Add_IntInt_ReturnValue) == 0x000098, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BuildString_Name_ReturnValue) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BuildString_Name_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_StringToName_ReturnValue) == 0x0000B0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Array_Length_ReturnValue) == 0x0000BC, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Array_Length_ReturnValue_1) == 0x0000C0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Less_IntInt_ReturnValue) == 0x0000C4, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_IsValid_ReturnValue) == 0x0000C5, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Not_PreBool_ReturnValue) == 0x0000C6, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_IsValid_ReturnValue_1) == 0x0000C7, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BreakTransform_Location) == 0x0000C8, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BreakTransform_Location' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BreakTransform_Rotation) == 0x0000D4, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BreakTransform_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BreakTransform_Scale) == 0x0000E0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BreakTransform_Scale' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_NameToString_ReturnValue) == 0x0000F0, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000100, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Concat_StrStr_ReturnValue) == 0x000110, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000120, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_NameToString_ReturnValue_2) == 0x000130, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_NameToString_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_EqualEqual_NameName_ReturnValue) == 0x000140, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_EqualEqual_NameName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_IsEmpty_ReturnValue) == 0x000141, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BooleanOR_ReturnValue) == 0x000142, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_AddNamedComponent_ReturnValue) == 0x000148, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_AddNamedComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_BooleanOR_ReturnValue_1) == 0x000150, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_BooleanOR_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, K2Node_DynamicCast_As_______) == 0x000158, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::K2Node_DynamicCast_As_______' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, K2Node_DynamicCast_bSuccess) == 0x000160, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000164, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, ___int_Array_Index_Variable) == 0x0001F8, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::___int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Array_Get_Item) == 0x000200, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Conv_StringToName_ReturnValue_1) == 0x000218, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Conv_StringToName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, ___int_Loop_Counter_Variable_1) == 0x000224, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::___int_Loop_Counter_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Less_IntInt_ReturnValue_1) == 0x000228, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Less_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Add_IntInt_ReturnValue_1) == 0x00022C, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Add_IntInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_K2_AttachToComponent_ReturnValue) == 0x000230, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_DoesSocketExist_ReturnValue) == 0x000231, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_DoesSocketExist_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, ___int_Array_Index_Variable_1) == 0x000234, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::___int_Array_Index_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_Array_Get_Item_1) == 0x000238, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_Setup_Socket, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000248, "Member 'BP_NpcCombinedMesh_C_Setup_Socket::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.GetArmTransform
 // 0x0070 (0x0070 - 0x0000)
@@ -399,7 +452,7 @@ static_assert(offsetof(BP_NpcCombinedMesh_C_GetWaistTransform, Index_0) == 0x000
 static_assert(offsetof(BP_NpcCombinedMesh_C_GetWaistTransform, OutTransform) == 0x000040, "Member 'BP_NpcCombinedMesh_C_GetWaistTransform::OutTransform' has a wrong offset!");
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.SetupSkeletalMeshComponent
-// 0x01A0 (0x01A0 - 0x0000)
+// 0x0200 (0x0200 - 0x0000)
 struct BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent final
 {
 public:
@@ -411,25 +464,36 @@ public:
 	struct FLinearColor                           NewLocalVar_0;                                     // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2A[0x2];                                       // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array;                            // 0x0040(0x0010)(ReferenceParm)
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_1;    // 0x0050(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_1;                          // 0x0060(0x0010)(ReferenceParm)
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_2;    // 0x0070(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_2;                          // 0x0080(0x0010)(ReferenceParm)
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_3;    // 0x0090(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_3;                          // 0x00A0(0x0010)(ReferenceParm)
-	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_4;                          // 0x00B0(0x0010)(ReferenceParm)
-	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_4;    // 0x00C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x00D0(0x0030)(IsPlainOldData, NoDestructor)
-	class USkeletalMeshComponent*                 CallFunc_AddComponentByClass_ReturnValue;          // 0x0100(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0108(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x0030(0x0030)(IsPlainOldData, NoDestructor)
+	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue;      // 0x0060(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array;                            // 0x0070(0x0010)(ReferenceParm)
+	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_1;    // 0x0080(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_1;                          // 0x0090(0x0010)(ReferenceParm)
+	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_2;    // 0x00A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_2;                          // 0x00B0(0x0010)(ReferenceParm)
+	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_3;    // 0x00C0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_3;                          // 0x00D0(0x0010)(ReferenceParm)
+	TArray<class UMaterialInstance*>              K2Node_MakeArray_Array_4;                          // 0x00E0(0x0010)(ReferenceParm)
+	struct FLinearColor                           CallFunc_Conv_ColorToLinearColor_ReturnValue_4;    // 0x00F0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable;                                  // 0x0100(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_1;                                // 0x010C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_2;                                // 0x0118(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_3;                                // 0x0124(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_4;                                // 0x0130(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EBodyPartName                                 ___byte_Variable;                                  // 0x013C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_13D[0x3];                                      // 0x013D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   K2Node_Select_Default;                             // 0x0140(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14C[0x4];                                      // 0x014C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UActorComponent*                        CallFunc_AddNamedComponent_ReturnValue;            // 0x0150(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 K2Node_DynamicCast_As_______;                      // 0x0158(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_K2_SetRelativeLocation_SweepHitResult;    // 0x0164(0x0094)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent) == 0x000010, "Wrong alignment on BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent");
-static_assert(sizeof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent) == 0x0001A0, "Wrong size on BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent");
+static_assert(sizeof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent) == 0x000200, "Wrong size on BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, InSkeletalMesh) == 0x000000, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::InSkeletalMesh' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, BodyType) == 0x000008, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::BodyType' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, Suc) == 0x000009, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::Suc' has a wrong offset!");
@@ -437,20 +501,29 @@ static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, Skeletal
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, NewLocalVar_0) == 0x000018, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::NewLocalVar_0' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_IsValid_ReturnValue) == 0x000028, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_SwitchEnum_CmpSuccess) == 0x000029, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue) == 0x00002C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array) == 0x000040, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_1) == 0x000050, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_1) == 0x000060, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_1' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_2) == 0x000070, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_2) == 0x000080, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_2' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_3) == 0x000090, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_3) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_3' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_4) == 0x0000B0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_4) == 0x0000C0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_MakeTransform_ReturnValue) == 0x0000D0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_AddComponentByClass_ReturnValue) == 0x000100, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_AddComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000108, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_K2_AttachToComponent_ReturnValue) == 0x00019C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_MakeTransform_ReturnValue) == 0x000030, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_MakeTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue) == 0x000060, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array) == 0x000070, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_1) == 0x000080, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_1) == 0x000090, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_2) == 0x0000A0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_2) == 0x0000B0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_3) == 0x0000C0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_3) == 0x0000D0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_3' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_MakeArray_Array_4) == 0x0000E0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_MakeArray_Array_4' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_Conv_ColorToLinearColor_ReturnValue_4) == 0x0000F0, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_Conv_ColorToLinearColor_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable) == 0x000100, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable_1) == 0x00010C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable_2) == 0x000118, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable_3) == 0x000124, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___name_Variable_4) == 0x000130, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___name_Variable_4' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, ___byte_Variable) == 0x00013C, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::___byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_Select_Default) == 0x000140, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_AddNamedComponent_ReturnValue) == 0x000150, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_AddNamedComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_DynamicCast_As_______) == 0x000158, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_DynamicCast_As_______' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, K2Node_DynamicCast_bSuccess) == 0x000160, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_K2_SetRelativeLocation_SweepHitResult) == 0x000164, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_K2_SetRelativeLocation_SweepHitResult' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0001F8, "Member 'BP_NpcCombinedMesh_C_SetupSkeletalMeshComponent::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
 
 // Function BP_NpcCombinedMesh.BP_NpcCombinedMesh_C.AddSkeletalComponent
 // 0x0058 (0x0058 - 0x0000)
@@ -588,8 +661,7 @@ public:
 	class FString                                 CallFunc_Split_LeftS;                              // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS;                             // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue;                        // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_71[0x3];                                       // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_71[0x7];                                       // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Split_LeftS_1;                            // 0x0078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS_1;                           // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue_1;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -600,7 +672,7 @@ public:
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x00D0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_4;              // 0x00E0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x00F0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IAssetRegistry>        CallFunc_GetAssetRegistry_ReturnValue;             // 0x0108(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	class UObject*                                CallFunc_Conv_InterfaceToObject_ReturnValue;       // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -627,7 +699,6 @@ static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Ge
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_LeftS) == 0x000050, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_LeftS' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_RightS) == 0x000060, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_RightS' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_ReturnValue) == 0x000070, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Add_IntInt_ReturnValue) == 0x000074, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_LeftS_1) == 0x000078, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_LeftS_1' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_RightS_1) == 0x000088, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_RightS_1' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Split_ReturnValue_1) == 0x000098, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Split_ReturnValue_1' has a wrong offset!");
@@ -637,6 +708,7 @@ static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Co
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0000D0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Concat_StrStr_ReturnValue_4) == 0x0000E0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Concat_StrStr_ReturnValue_4' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Conv_StringToName_ReturnValue) == 0x0000F0, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Conv_StringToName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Add_IntInt_ReturnValue) == 0x0000FC, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000100, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_GetAssetRegistry_ReturnValue) == 0x000108, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_GetAssetRegistry_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial, CallFunc_Conv_InterfaceToObject_ReturnValue) == 0x000118, "Member 'BP_NpcCombinedMesh_C_SetSkeletalMeshMaterial::CallFunc_Conv_InterfaceToObject_ReturnValue' has a wrong offset!");

@@ -17,6 +17,56 @@
 namespace SDK
 {
 
+// Function KuroVehicle.KuroAnimInstanceVehicle.GetDriver
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class ABaseCharacter*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class ABaseCharacter* UKuroAnimInstanceVehicle::GetDriver()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimInstanceVehicle", "GetDriver");
+
+	Params::KuroAnimInstanceVehicle_GetDriver Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroVehicle.KuroAnimInstanceVehicle.SetDriver
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class ABaseCharacter*                   InDriver                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroAnimInstanceVehicle::SetDriver(class ABaseCharacter* InDriver)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimInstanceVehicle", "SetDriver");
+
+	Params::KuroAnimInstanceVehicle_SetDriver Parms{};
+
+	Parms.InDriver = InDriver;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroVehicle.KuroBaseVehicle.K2_OnVehicleMovementModeChanged
 // (Event, Public, BlueprintEvent)
 // Parameters:
@@ -63,6 +113,427 @@ void AKuroBaseVehicle::K2_UpdateVehicleCustomMovement(float DeltaTime)
 }
 
 
+// Function KuroVehicle.KuroConfigHelper.AddSubConfig
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             KeyName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Priority                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              PropertyNames                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UObject*                          InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroConfigHelper::AddSubConfig(class FName KeyName, int32 Priority, const TArray<class FName>& PropertyNames, class UObject* InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroConfigHelper", "AddSubConfig");
+
+	Params::KuroConfigHelper_AddSubConfig Parms{};
+
+	Parms.KeyName = KeyName;
+	Parms.Priority = Priority;
+	Parms.PropertyNames = std::move(PropertyNames);
+	Parms.InData = InData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroConfigHelper.AddSubConfigByNumber
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             KeyName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Priority                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<int32>&                    PropertyIds                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UObject*                          InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroConfigHelper::AddSubConfigByNumber(class FName KeyName, int32 Priority, const TArray<int32>& PropertyIds, class UObject* InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroConfigHelper", "AddSubConfigByNumber");
+
+	Params::KuroConfigHelper_AddSubConfigByNumber Parms{};
+
+	Parms.KeyName = KeyName;
+	Parms.Priority = Priority;
+	Parms.PropertyIds = std::move(PropertyIds);
+	Parms.InData = InData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroConfigHelper.InitBase
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          InObject                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroConfigHelper::InitBase(class UObject* InObject, class UObject* InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroConfigHelper", "InitBase");
+
+	Params::KuroConfigHelper_InitBase Parms{};
+
+	Parms.InObject = InObject;
+	Parms.InData = InData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroConfigHelper.RefreshConfigs
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroConfigHelper::RefreshConfigs()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroConfigHelper", "RefreshConfigs");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroConfigHelper.RemoveSubConfig
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             KeyName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroConfigHelper::RemoveSubConfig(class FName KeyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroConfigHelper", "RemoveSubConfig");
+
+	Params::KuroConfigHelper_RemoveSubConfig Parms{};
+
+	Parms.KeyName = KeyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroConfigHelper.SetEnumMapping
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UEnum*                            Enumtype                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FString>&            PropertyNames                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UKuroConfigHelper::SetEnumMapping(class UEnum* Enumtype, const TArray<class FString>& PropertyNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroConfigHelper", "SetEnumMapping");
+
+	Params::KuroConfigHelper_SetEnumMapping Parms{};
+
+	Parms.Enumtype = Enumtype;
+	Parms.PropertyNames = std::move(PropertyNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.BackToRecord
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::BackToRecord(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "BackToRecord");
+
+	Params::KuroVehicleMovementComponent_BackToRecord Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.EnableFixFlyMode
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    enable                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EFixFlyModeType                         Type                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::EnableFixFlyMode(bool enable, EFixFlyModeType Type)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "EnableFixFlyMode");
+
+	Params::KuroVehicleMovementComponent_EnableFixFlyMode Parms{};
+
+	Parms.enable = enable;
+	Parms.Type = Type;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetBaseMovement
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class UPrimitiveComponent*>*     Out                                                    (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::GetBaseMovement(TArray<class UPrimitiveComponent*>* Out)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetBaseMovement");
+
+	Params::KuroVehicleMovementComponent_GetBaseMovement Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Out != nullptr)
+		*Out = std::move(Parms.Out);
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetCurrentMotorFrontPulling
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UKuroVehicleMovementComponent::GetCurrentMotorFrontPulling()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetCurrentMotorFrontPulling");
+
+	Params::KuroVehicleMovementComponent_GetCurrentMotorFrontPulling Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetCurrentMotorPower
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroVehicleMovementComponent::GetCurrentMotorPower()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetCurrentMotorPower");
+
+	Params::KuroVehicleMovementComponent_GetCurrentMotorPower Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetCurrentMotorRearPulling
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UKuroVehicleMovementComponent::GetCurrentMotorRearPulling()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetCurrentMotorRearPulling");
+
+	Params::KuroVehicleMovementComponent_GetCurrentMotorRearPulling Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetMotorInputDirect
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UKuroVehicleMovementComponent::GetMotorInputDirect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetMotorInputDirect");
+
+	Params::KuroVehicleMovementComponent_GetMotorInputDirect Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetMotorNormal
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UKuroVehicleMovementComponent::GetMotorNormal()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetMotorNormal");
+
+	Params::KuroVehicleMovementComponent_GetMotorNormal Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetRecordDataString
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroVehicleMovementComponent::GetRecordDataString(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetRecordDataString");
+
+	Params::KuroVehicleMovementComponent_GetRecordDataString Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.GetRecordInfo
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32*                                  CurrentIndex                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  RecordLength                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::GetRecordInfo(int32* CurrentIndex, int32* RecordLength)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "GetRecordInfo");
+
+	Params::KuroVehicleMovementComponent_GetRecordInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (CurrentIndex != nullptr)
+		*CurrentIndex = Parms.CurrentIndex;
+
+	if (RecordLength != nullptr)
+		*RecordLength = Parms.RecordLength;
+}
+
+
 // Function KuroVehicle.KuroVehicleMovementComponent.IgnoreMoveFriction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -104,6 +575,36 @@ void UKuroVehicleMovementComponent::InitVehicleShapes()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.IsValidTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FTransformDouble&          Trans                                                  (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            IgnoreActors                                           (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroVehicleMovementComponent::IsValidTransform(const struct FTransformDouble& Trans, const TArray<class AActor*>& IgnoreActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "IsValidTransform");
+
+	Params::KuroVehicleMovementComponent_IsValidTransform Parms{};
+
+	Parms.Trans = std::move(Trans);
+	Parms.IgnoreActors = std::move(IgnoreActors);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -165,6 +666,250 @@ void UKuroVehicleMovementComponent::KuroShipping_HandlePassiveImpact(class UPrim
 }
 
 
+// Function KuroVehicle.KuroVehicleMovementComponent.MotorAddSubConfig
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             KeyName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Priority                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class FName>&              PropertyNames                                          (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class UMotorcycleConfigs*               SubConfig                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::MotorAddSubConfig(class FName KeyName, int32 Priority, const TArray<class FName>& PropertyNames, class UMotorcycleConfigs* SubConfig)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "MotorAddSubConfig");
+
+	Params::KuroVehicleMovementComponent_MotorAddSubConfig Parms{};
+
+	Parms.KeyName = KeyName;
+	Parms.Priority = Priority;
+	Parms.PropertyNames = std::move(PropertyNames);
+	Parms.SubConfig = SubConfig;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.MotorInitBaseConfig
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMotorcycleConfigs*               BaseConfig                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::MotorInitBaseConfig(class UMotorcycleConfigs* BaseConfig)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "MotorInitBaseConfig");
+
+	Params::KuroVehicleMovementComponent_MotorInitBaseConfig Parms{};
+
+	Parms.BaseConfig = BaseConfig;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.MotorRefreshSubConfig
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroVehicleMovementComponent::MotorRefreshSubConfig()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "MotorRefreshSubConfig");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.MotorRemoveSubConfig
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             KeyName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::MotorRemoveSubConfig(class FName KeyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "MotorRemoveSubConfig");
+
+	Params::KuroVehicleMovementComponent_MotorRemoveSubConfig Parms{};
+
+	Parms.KeyName = KeyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.MoveMotorcycle
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   LocationDelta                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuat&                     QuatDelta                                              (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bSweep                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::MoveMotorcycle(const struct FVector& LocationDelta, const struct FQuat& QuatDelta, bool bSweep)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "MoveMotorcycle");
+
+	Params::KuroVehicleMovementComponent_MoveMotorcycle Parms{};
+
+	Parms.LocationDelta = std::move(LocationDelta);
+	Parms.QuatDelta = std::move(QuatDelta);
+	Parms.bSweep = bSweep;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.ResetBaseMovement
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroVehicleMovementComponent::ResetBaseMovement()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "ResetBaseMovement");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.ResetMotorcycle
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroVehicleMovementComponent::ResetMotorcycle()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "ResetMotorcycle");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.ResetMotorRailMoveData
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroVehicleMovementComponent::ResetMotorRailMoveData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "ResetMotorRailMoveData");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.SetMotorInput
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   InputDirect                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   FrontBraking                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   BackBraking                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   AirRotateInput                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::SetMotorInput(const struct FVector& InputDirect, float FrontBraking, float BackBraking, const struct FVector& AirRotateInput)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "SetMotorInput");
+
+	Params::KuroVehicleMovementComponent_SetMotorInput Parms{};
+
+	Parms.InputDirect = std::move(InputDirect);
+	Parms.FrontBraking = FrontBraking;
+	Parms.BackBraking = BackBraking;
+	Parms.AirRotateInput = std::move(AirRotateInput);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.SetMotorRotateSpeed
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   Axis                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   SpeedRad                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::SetMotorRotateSpeed(const struct FVector& Axis, float SpeedRad)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "SetMotorRotateSpeed");
+
+	Params::KuroVehicleMovementComponent_SetMotorRotateSpeed Parms{};
+
+	Parms.Axis = std::move(Axis);
+	Parms.SpeedRad = SpeedRad;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroVehicle.KuroVehicleMovementComponent.SetMovementMode
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -182,6 +927,88 @@ void UKuroVehicleMovementComponent::SetMovementMode(EKuroVehicleMovementMode New
 
 	Parms.NewMovementMode = NewMovementMode;
 	Parms.NewCustomMode = NewCustomMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.SetSimulatedMotorWheelInfos
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FMotorWheelDisplayInfo>*  In                                                     (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::SetSimulatedMotorWheelInfos(TArray<struct FMotorWheelDisplayInfo>* In)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "SetSimulatedMotorWheelInfos");
+
+	Params::KuroVehicleMovementComponent_SetSimulatedMotorWheelInfos Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (In != nullptr)
+		*In = std::move(Parms.In);
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.TryMotorcyclingOneStep
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::TryMotorcyclingOneStep(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "TryMotorcyclingOneStep");
+
+	Params::KuroVehicleMovementComponent_TryMotorcyclingOneStep Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroVehicle.KuroVehicleMovementComponent.UpdateMotorRailMoveTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransformDouble&          TargetTransform                                        (Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bApplyRootMotion                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSweep                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroVehicleMovementComponent::UpdateMotorRailMoveTransform(float DeltaSeconds, const struct FTransformDouble& TargetTransform, bool bApplyRootMotion, bool bSweep)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroVehicleMovementComponent", "UpdateMotorRailMoveTransform");
+
+	Params::KuroVehicleMovementComponent_UpdateMotorRailMoveTransform Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.TargetTransform = std::move(TargetTransform);
+	Parms.bApplyRootMotion = bApplyRootMotion;
+	Parms.bSweep = bSweep;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

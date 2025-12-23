@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EHitAnim.EHitAnim
-// NumValues: 0x000D
+// NumValues: 0x000E
 enum class EHitAnim : uint8
 {
 	NewEnumerator0                           = 0,
@@ -30,7 +30,8 @@ enum class EHitAnim : uint8
 	NewEnumerator9                           = 9,
 	NewEnumerator10                          = 10,
 	NewEnumerator11                          = 11,
-	EHitAnim_MAX                             = 12,
+	NewEnumerator12                          = 12,
+	EHitAnim_MAX                             = 13,
 };
 
 }

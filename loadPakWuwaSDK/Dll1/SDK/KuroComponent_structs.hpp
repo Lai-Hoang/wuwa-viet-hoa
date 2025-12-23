@@ -114,6 +114,51 @@ enum class ESimpleRunState : uint8
 	ESimpleRunState_MAX                      = 3,
 };
 
+// ScriptStruct KuroComponent.GpuNpcTransition
+// 0x0050 (0x0050 - 0x0000)
+struct FGpuNpcTransition final
+{
+public:
+	TMap<int32, int32>                            Transitions;                                       // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FGpuNpcTransition) == 0x000008, "Wrong alignment on FGpuNpcTransition");
+static_assert(sizeof(FGpuNpcTransition) == 0x000050, "Wrong size on FGpuNpcTransition");
+static_assert(offsetof(FGpuNpcTransition, Transitions) == 0x000000, "Member 'FGpuNpcTransition::Transitions' has a wrong offset!");
+
+// ScriptStruct KuroComponent.GpuNpcConfig
+// 0x0058 (0x0058 - 0x0000)
+struct FGpuNpcConfig final
+{
+public:
+	int32                                         MaxState;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartAngle;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 AnimEndTimes;                                      // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 StateAnimMap;                                      // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FGpuNpcTransition>              TransitionStateMaps;                               // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x20];                                      // 0x0038(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FGpuNpcConfig) == 0x000008, "Wrong alignment on FGpuNpcConfig");
+static_assert(sizeof(FGpuNpcConfig) == 0x000058, "Wrong size on FGpuNpcConfig");
+static_assert(offsetof(FGpuNpcConfig, MaxState) == 0x000000, "Member 'FGpuNpcConfig::MaxState' has a wrong offset!");
+static_assert(offsetof(FGpuNpcConfig, StartAngle) == 0x000004, "Member 'FGpuNpcConfig::StartAngle' has a wrong offset!");
+static_assert(offsetof(FGpuNpcConfig, AnimEndTimes) == 0x000008, "Member 'FGpuNpcConfig::AnimEndTimes' has a wrong offset!");
+static_assert(offsetof(FGpuNpcConfig, StateAnimMap) == 0x000018, "Member 'FGpuNpcConfig::StateAnimMap' has a wrong offset!");
+static_assert(offsetof(FGpuNpcConfig, TransitionStateMaps) == 0x000028, "Member 'FGpuNpcConfig::TransitionStateMaps' has a wrong offset!");
+
+// ScriptStruct KuroComponent.RegionDetectInfo
+// 0x00B0 (0x00B0 - 0x0000)
+struct FRegionDetectInfo final
+{
+public:
+	TMap<class FString, class UKuroRegionEventBinder*> RegionEventMap;                               // 0x0000(0x0050)(NativeAccessSpecifierPublic)
+	TArray<TWeakObjectPtr<class AActor>>          EventTargets;                                      // 0x0050(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_60[0x50];                                      // 0x0060(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FRegionDetectInfo) == 0x000008, "Wrong alignment on FRegionDetectInfo");
+static_assert(sizeof(FRegionDetectInfo) == 0x0000B0, "Wrong size on FRegionDetectInfo");
+static_assert(offsetof(FRegionDetectInfo, RegionEventMap) == 0x000000, "Member 'FRegionDetectInfo::RegionEventMap' has a wrong offset!");
+static_assert(offsetof(FRegionDetectInfo, EventTargets) == 0x000050, "Member 'FRegionDetectInfo::EventTargets' has a wrong offset!");
+
 // ScriptStruct KuroComponent.RotateStepInfo
 // 0x0030 (0x0030 - 0x0000)
 struct alignas(0x10) FRotateStepInfo final
@@ -188,14 +233,14 @@ static_assert(offsetof(FSplineMoveData, StaticTimeDisData) == 0x000038, "Member 
 static_assert(offsetof(FSplineMoveData, DynamicSpeedData) == 0x000058, "Member 'FSplineMoveData::DynamicSpeedData' has a wrong offset!");
 
 // ScriptStruct KuroComponent.SimpleMoveData
-// 0x0090 (0x0090 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct alignas(0x08) FSimpleMoveData final
 {
 public:
-	uint8                                         Pad_0[0x90];                                       // 0x0000(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_0[0x98];                                       // 0x0000(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSimpleMoveData) == 0x000008, "Wrong alignment on FSimpleMoveData");
-static_assert(sizeof(FSimpleMoveData) == 0x000090, "Wrong size on FSimpleMoveData");
+static_assert(sizeof(FSimpleMoveData) == 0x000098, "Wrong size on FSimpleMoveData");
 
 }
 

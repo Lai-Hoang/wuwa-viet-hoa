@@ -49,7 +49,7 @@ void UBPL_CharacterUtility_C::GetLocalWind(class UAnimInstance* AnimInstance, cl
 // class UDataTable*                       dataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FName                             rowName                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSMovementSetting_State*         data                                                   (Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSMovementSetting_State*         data                                                   (Parm, OutParm, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
 bool UBPL_CharacterUtility_C::DtGetMovementSettings(class UDataTable* dataTable, class FName rowName, class UObject* __WorldContext, struct FSMovementSetting_State* data)

@@ -19,19 +19,19 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Switch_Seq_V2.ABP_Switch_Seq_V2_C
-// 0x0320 (0x0980 - 0x0660)
+// 0x0320 (0x0A50 - 0x0730)
 class UABP_Switch_Seq_V2_C : public UAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0660(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0668(0x0038)()
-	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x06A0(0x00B0)()
-	struct FAnimNode_PoseSnapshot                 AnimGraphNode_PoseSnapshot;                        // 0x0750(0x00B0)()
-	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x0800(0x0138)()
-	struct FPoseSnapshot                          CachePose;                                         // 0x0938(0x0040)(Edit, BlueprintVisible)
-	bool                                          EnableSwitchPose;                                  // 0x0978(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_979[0x3];                                      // 0x0979(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FalseBlendTime;                                    // 0x097C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0730(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0738(0x0038)()
+	struct FAnimNode_BlendListByBool              AnimGraphNode_BlendListByBool;                     // 0x0770(0x00B0)()
+	struct FAnimNode_PoseSnapshot                 AnimGraphNode_PoseSnapshot;                        // 0x0820(0x00B0)()
+	struct FAnimNode_LinkedInputPose              AnimGraphNode_LinkedInputPose;                     // 0x08D0(0x0138)()
+	struct FPoseSnapshot                          CachePose;                                         // 0x0A08(0x0040)(Edit, BlueprintVisible)
+	bool                                          EnableSwitchPose;                                  // 0x0A48(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A49[0x3];                                      // 0x0A49(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FalseBlendTime;                                    // 0x0A4C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_ABP_Switch_Seq_V2(int32 EntryPoint);
@@ -48,15 +48,15 @@ public:
 	}
 };
 static_assert(alignof(UABP_Switch_Seq_V2_C) == 0x000010, "Wrong alignment on UABP_Switch_Seq_V2_C");
-static_assert(sizeof(UABP_Switch_Seq_V2_C) == 0x000980, "Wrong size on UABP_Switch_Seq_V2_C");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, UberGraphFrame) == 0x000660, "Member 'UABP_Switch_Seq_V2_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_Root) == 0x000668, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_Root' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_BlendListByBool) == 0x0006A0, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_PoseSnapshot) == 0x000750, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_PoseSnapshot' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_LinkedInputPose) == 0x000800, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, CachePose) == 0x000938, "Member 'UABP_Switch_Seq_V2_C::CachePose' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, EnableSwitchPose) == 0x000978, "Member 'UABP_Switch_Seq_V2_C::EnableSwitchPose' has a wrong offset!");
-static_assert(offsetof(UABP_Switch_Seq_V2_C, FalseBlendTime) == 0x00097C, "Member 'UABP_Switch_Seq_V2_C::FalseBlendTime' has a wrong offset!");
+static_assert(sizeof(UABP_Switch_Seq_V2_C) == 0x000A50, "Wrong size on UABP_Switch_Seq_V2_C");
+static_assert(offsetof(UABP_Switch_Seq_V2_C, UberGraphFrame) == 0x000730, "Member 'UABP_Switch_Seq_V2_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_Root) == 0x000738, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_Root' has a wrong offset!");
+static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_BlendListByBool) == 0x000770, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_BlendListByBool' has a wrong offset!");
+static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_PoseSnapshot) == 0x000820, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_PoseSnapshot' has a wrong offset!");
+static_assert(offsetof(UABP_Switch_Seq_V2_C, AnimGraphNode_LinkedInputPose) == 0x0008D0, "Member 'UABP_Switch_Seq_V2_C::AnimGraphNode_LinkedInputPose' has a wrong offset!");
+static_assert(offsetof(UABP_Switch_Seq_V2_C, CachePose) == 0x000A08, "Member 'UABP_Switch_Seq_V2_C::CachePose' has a wrong offset!");
+static_assert(offsetof(UABP_Switch_Seq_V2_C, EnableSwitchPose) == 0x000A48, "Member 'UABP_Switch_Seq_V2_C::EnableSwitchPose' has a wrong offset!");
+static_assert(offsetof(UABP_Switch_Seq_V2_C, FalseBlendTime) == 0x000A4C, "Member 'UABP_Switch_Seq_V2_C::FalseBlendTime' has a wrong offset!");
 
 }
 

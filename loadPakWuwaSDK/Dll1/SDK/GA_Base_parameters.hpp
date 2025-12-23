@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "GameplayAbilities_structs.hpp"
-#include "GameplayTags_structs.hpp"
+#include "EPawnChannel_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "EPawnChannel_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "EAimViewState_structs.hpp"
 #include "SSkillInfo_structs.hpp"
 
@@ -23,24 +23,24 @@ namespace SDK::Params
 {
 
 // Function GA_Base.GA_Base_C.ExecuteUbergraph_GA_Base
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct GA_Base_C_ExecuteUbergraph_GA_Base final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Event_bWasCancelled;                        // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_6[0x2];                                        // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class ATsBaseCharacter_C*                     CallFunc__________;                                // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_OnActivateAbility_ReturnValue;            // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_______EntityId_EntityId;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Event_bWasCancelled;                        // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_K2_CommitAbility_ReturnValue;             // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_OnActivateAbility_ReturnValue;            // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(GA_Base_C_ExecuteUbergraph_GA_Base) == 0x000008, "Wrong alignment on GA_Base_C_ExecuteUbergraph_GA_Base");
-static_assert(sizeof(GA_Base_C_ExecuteUbergraph_GA_Base) == 0x000018, "Wrong size on GA_Base_C_ExecuteUbergraph_GA_Base");
+static_assert(alignof(GA_Base_C_ExecuteUbergraph_GA_Base) == 0x000004, "Wrong alignment on GA_Base_C_ExecuteUbergraph_GA_Base");
+static_assert(sizeof(GA_Base_C_ExecuteUbergraph_GA_Base) == 0x000010, "Wrong size on GA_Base_C_ExecuteUbergraph_GA_Base");
 static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, EntryPoint) == 0x000000, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::EntryPoint' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, K2Node_Event_bWasCancelled) == 0x000004, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::K2Node_Event_bWasCancelled' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, CallFunc_K2_CommitAbility_ReturnValue) == 0x000005, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::CallFunc_K2_CommitAbility_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, CallFunc__________) == 0x000008, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::CallFunc__________' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, CallFunc_OnActivateAbility_ReturnValue) == 0x000010, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::CallFunc_OnActivateAbility_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, CallFunc_______EntityId_EntityId) == 0x000004, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::CallFunc_______EntityId_EntityId' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, K2Node_Event_bWasCancelled) == 0x000008, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::K2Node_Event_bWasCancelled' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, CallFunc_K2_CommitAbility_ReturnValue) == 0x000009, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::CallFunc_K2_CommitAbility_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_ExecuteUbergraph_GA_Base, CallFunc_OnActivateAbility_ReturnValue) == 0x00000C, "Member 'GA_Base_C_ExecuteUbergraph_GA_Base::CallFunc_OnActivateAbility_ReturnValue' has a wrong offset!");
 
 // Function GA_Base.GA_Base_C.K2_OnEndAbility
 // 0x0001 (0x0001 - 0x0000)
@@ -70,6 +70,44 @@ static_assert(offsetof(GA_Base_C_获取施法者, CallFunc_GetOwningActorFromAct
 static_assert(offsetof(GA_Base_C_获取施法者, K2Node_DynamicCast_AsTs_Base_Character) == 0x000010, "Member 'GA_Base_C_获取施法者::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
 static_assert(offsetof(GA_Base_C_获取施法者, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Base_C_获取施法者::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 
+// Function GA_Base.GA_Base_C.获取施法载具
+// 0x0020 (0x0020 - 0x0000)
+struct GA_Base_C_获取施法载具 final
+{
+public:
+	class ATsBaseVehicle_C*                       施法载具;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ATsBaseVehicle_C*                       K2Node_DynamicCast_AsTs_Base_Vehicle;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(GA_Base_C_获取施法载具) == 0x000008, "Wrong alignment on GA_Base_C_获取施法载具");
+static_assert(sizeof(GA_Base_C_获取施法载具) == 0x000020, "Wrong size on GA_Base_C_获取施法载具");
+static_assert(offsetof(GA_Base_C_获取施法载具, 施法载具) == 0x000000, "Member 'GA_Base_C_获取施法载具::施法载具' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取施法载具, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000008, "Member 'GA_Base_C_获取施法载具::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取施法载具, K2Node_DynamicCast_AsTs_Base_Vehicle) == 0x000010, "Member 'GA_Base_C_获取施法载具::K2Node_DynamicCast_AsTs_Base_Vehicle' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取施法载具, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'GA_Base_C_获取施法载具::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function GA_Base.GA_Base_C.获取施法单位EntityId
+// 0x0028 (0x0028 - 0x0000)
+struct GA_Base_C_获取施法单位EntityId final
+{
+public:
+	int32                                         EntityId;                                          // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class IBPI_CreatureInterface_C> K2Node_DynamicCast_AsBPI_Creature_Interface;    // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetEntityId_ReturnValue;                  // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Base_C_获取施法单位EntityId) == 0x000008, "Wrong alignment on GA_Base_C_获取施法单位EntityId");
+static_assert(sizeof(GA_Base_C_获取施法单位EntityId) == 0x000028, "Wrong size on GA_Base_C_获取施法单位EntityId");
+static_assert(offsetof(GA_Base_C_获取施法单位EntityId, EntityId) == 0x000000, "Member 'GA_Base_C_获取施法单位EntityId::EntityId' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取施法单位EntityId, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000008, "Member 'GA_Base_C_获取施法单位EntityId::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取施法单位EntityId, K2Node_DynamicCast_AsBPI_Creature_Interface) == 0x000010, "Member 'GA_Base_C_获取施法单位EntityId::K2Node_DynamicCast_AsBPI_Creature_Interface' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取施法单位EntityId, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'GA_Base_C_获取施法单位EntityId::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取施法单位EntityId, CallFunc_GetEntityId_ReturnValue) == 0x000024, "Member 'GA_Base_C_获取施法单位EntityId::CallFunc_GetEntityId_ReturnValue' has a wrong offset!");
+
 // Function GA_Base.GA_Base_C.获取当前技能配置Id
 // 0x0010 (0x0010 - 0x0000)
 struct GA_Base_C_获取当前技能配置Id final
@@ -93,7 +131,7 @@ static_assert(sizeof(GA_Base_C_获取当前技能配置) == 0x0001A0, "Wrong siz
 static_assert(offsetof(GA_Base_C_获取当前技能配置, 当前技能数据_0) == 0x000000, "Member 'GA_Base_C_获取当前技能配置::当前技能数据_0' has a wrong offset!");
 
 // Function GA_Base.GA_Base_C.获取技能动画
-// 0x0378 (0x0378 - 0x0000)
+// 0x0368 (0x0368 - 0x0000)
 struct GA_Base_C_获取技能动画 final
 {
 public:
@@ -102,24 +140,20 @@ public:
 	class UAnimMontage*                           动画;                                              // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FSSkillInfo                            SkillInfo;                                         // 0x0010(0x01A0)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class UAnimMontage*                           Montage;                                           // 0x01B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSSkillInfo                            CallFunc________________;                          // 0x01B8(0x01A0)(HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwningActorFromActorInfo_ReturnValue;  // 0x0358(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ATsBaseCharacter_C*                     K2Node_DynamicCast_AsTs_Base_Character;            // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0368(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_369[0x7];                                      // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAnimMontage*                           CallFunc_GetSkillMontageInstance_ReturnValue;      // 0x0370(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_______EntityId_EntityId;                  // 0x01B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1BC[0x4];                                      // 0x01BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSSkillInfo                            CallFunc________________;                          // 0x01C0(0x01A0)(HasGetValueTypeHash)
+	class UAnimMontage*                           CallFunc_GetSkillMontageInstance_ReturnValue;      // 0x0360(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(GA_Base_C_获取技能动画) == 0x000008, "Wrong alignment on GA_Base_C_获取技能动画");
-static_assert(sizeof(GA_Base_C_获取技能动画) == 0x000378, "Wrong size on GA_Base_C_获取技能动画");
+static_assert(sizeof(GA_Base_C_获取技能动画) == 0x000368, "Wrong size on GA_Base_C_获取技能动画");
 static_assert(offsetof(GA_Base_C_获取技能动画, 编号) == 0x000000, "Member 'GA_Base_C_获取技能动画::编号' has a wrong offset!");
 static_assert(offsetof(GA_Base_C_获取技能动画, 动画) == 0x000008, "Member 'GA_Base_C_获取技能动画::动画' has a wrong offset!");
 static_assert(offsetof(GA_Base_C_获取技能动画, SkillInfo) == 0x000010, "Member 'GA_Base_C_获取技能动画::SkillInfo' has a wrong offset!");
 static_assert(offsetof(GA_Base_C_获取技能动画, Montage) == 0x0001B0, "Member 'GA_Base_C_获取技能动画::Montage' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_获取技能动画, CallFunc________________) == 0x0001B8, "Member 'GA_Base_C_获取技能动画::CallFunc________________' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_获取技能动画, CallFunc_GetOwningActorFromActorInfo_ReturnValue) == 0x000358, "Member 'GA_Base_C_获取技能动画::CallFunc_GetOwningActorFromActorInfo_ReturnValue' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_获取技能动画, K2Node_DynamicCast_AsTs_Base_Character) == 0x000360, "Member 'GA_Base_C_获取技能动画::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_获取技能动画, K2Node_DynamicCast_bSuccess) == 0x000368, "Member 'GA_Base_C_获取技能动画::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(GA_Base_C_获取技能动画, CallFunc_GetSkillMontageInstance_ReturnValue) == 0x000370, "Member 'GA_Base_C_获取技能动画::CallFunc_GetSkillMontageInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取技能动画, CallFunc_______EntityId_EntityId) == 0x0001B8, "Member 'GA_Base_C_获取技能动画::CallFunc_______EntityId_EntityId' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取技能动画, CallFunc________________) == 0x0001C0, "Member 'GA_Base_C_获取技能动画::CallFunc________________' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_获取技能动画, CallFunc_GetSkillMontageInstance_ReturnValue) == 0x000360, "Member 'GA_Base_C_获取技能动画::CallFunc_GetSkillMontageInstance_ReturnValue' has a wrong offset!");
 
 // Function GA_Base.GA_Base_C.获取技能所有动画
 // 0x0040 (0x0040 - 0x0000)
@@ -2241,6 +2275,24 @@ static_assert(offsetof(GA_Base_C_获取随机召唤物, 召唤者) == 0x000000, 
 static_assert(offsetof(GA_Base_C_获取随机召唤物, Index_0) == 0x000004, "Member 'GA_Base_C_获取随机召唤物::Index_0' has a wrong offset!");
 static_assert(offsetof(GA_Base_C_获取随机召唤物, 实体Id) == 0x000008, "Member 'GA_Base_C_获取随机召唤物::实体Id' has a wrong offset!");
 static_assert(offsetof(GA_Base_C_获取随机召唤物, CallFunc_GetSummonRandomEntity_ReturnValue) == 0x00000C, "Member 'GA_Base_C_获取随机召唤物::CallFunc_GetSummonRandomEntity_ReturnValue' has a wrong offset!");
+
+// Function GA_Base.GA_Base_C.异步使用技能
+// 0x0030 (0x0030 - 0x0000)
+struct GA_Base_C_异步使用技能 final
+{
+public:
+	class ATsBaseCharacter_C*                     释放者;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   技能ID;                                            // 0x0008(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 技能目标;                                          // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Socket;                                            // 0x0020(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(GA_Base_C_异步使用技能) == 0x000008, "Wrong alignment on GA_Base_C_异步使用技能");
+static_assert(sizeof(GA_Base_C_异步使用技能) == 0x000030, "Wrong size on GA_Base_C_异步使用技能");
+static_assert(offsetof(GA_Base_C_异步使用技能, 释放者) == 0x000000, "Member 'GA_Base_C_异步使用技能::释放者' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_异步使用技能, 技能ID) == 0x000008, "Member 'GA_Base_C_异步使用技能::技能ID' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_异步使用技能, 技能目标) == 0x000018, "Member 'GA_Base_C_异步使用技能::技能目标' has a wrong offset!");
+static_assert(offsetof(GA_Base_C_异步使用技能, Socket) == 0x000020, "Member 'GA_Base_C_异步使用技能::Socket' has a wrong offset!");
 
 // Function GA_Base.GA_Base_C.K2_CanActivateAbility
 // 0x0078 (0x0078 - 0x0000)

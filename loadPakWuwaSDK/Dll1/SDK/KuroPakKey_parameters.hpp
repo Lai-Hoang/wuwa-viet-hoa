@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function KuroPakKey.KuroPakKeyLibrary.BindPakMountedCallback
+// 0x0028 (0x0028 - 0x0000)
+struct KuroPakKeyLibrary_BindPakMountedCallback final
+{
+public:
+	TDelegate<void(const class FString& Tag)>     Callback;                                          // 0x0000(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroPakKeyLibrary_BindPakMountedCallback) == 0x000004, "Wrong alignment on KuroPakKeyLibrary_BindPakMountedCallback");
+static_assert(sizeof(KuroPakKeyLibrary_BindPakMountedCallback) == 0x000028, "Wrong size on KuroPakKeyLibrary_BindPakMountedCallback");
+static_assert(offsetof(KuroPakKeyLibrary_BindPakMountedCallback, Callback) == 0x000000, "Member 'KuroPakKeyLibrary_BindPakMountedCallback::Callback' has a wrong offset!");
+
 // Function KuroPakKey.KuroPakKeyLibrary.GetUpdateInterval
 // 0x0004 (0x0004 - 0x0000)
 struct KuroPakKeyLibrary_GetUpdateInterval final
@@ -72,17 +83,6 @@ public:
 static_assert(alignof(KuroPakKeyLibrary_NeedExtPakKeys) == 0x000001, "Wrong alignment on KuroPakKeyLibrary_NeedExtPakKeys");
 static_assert(sizeof(KuroPakKeyLibrary_NeedExtPakKeys) == 0x000001, "Wrong size on KuroPakKeyLibrary_NeedExtPakKeys");
 static_assert(offsetof(KuroPakKeyLibrary_NeedExtPakKeys, ReturnValue) == 0x000000, "Member 'KuroPakKeyLibrary_NeedExtPakKeys::ReturnValue' has a wrong offset!");
-
-// Function KuroPakKey.KuroPakKeyLibrary.SetCompleteCallback
-// 0x0028 (0x0028 - 0x0000)
-struct KuroPakKeyLibrary_SetCompleteCallback final
-{
-public:
-	TDelegate<void(bool Success)>                 Callback;                                          // 0x0000(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(KuroPakKeyLibrary_SetCompleteCallback) == 0x000004, "Wrong alignment on KuroPakKeyLibrary_SetCompleteCallback");
-static_assert(sizeof(KuroPakKeyLibrary_SetCompleteCallback) == 0x000028, "Wrong size on KuroPakKeyLibrary_SetCompleteCallback");
-static_assert(offsetof(KuroPakKeyLibrary_SetCompleteCallback, Callback) == 0x000000, "Member 'KuroPakKeyLibrary_SetCompleteCallback::Callback' has a wrong offset!");
 
 // Function KuroPakKey.KuroPakKeyLibrary.SetLoadCallback
 // 0x0028 (0x0028 - 0x0000)

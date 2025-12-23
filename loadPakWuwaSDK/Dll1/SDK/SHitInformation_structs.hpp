@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SHitEffect_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SHitEffect_structs.hpp"
 #include "SReBulletDataMain_structs.hpp"
 
 

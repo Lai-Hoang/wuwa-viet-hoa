@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum ESkillBehaviorLocationType.ESkillBehaviorLocationType
-// NumValues: 0x0009
+// NumValues: 0x000A
 enum class ESkillBehaviorLocationType : uint8
 {
 	NewEnumerator0                           = 0,
@@ -26,7 +26,8 @@ enum class ESkillBehaviorLocationType : uint8
 	NewEnumerator11                          = 5,
 	NewEnumerator13                          = 6,
 	NewEnumerator14                          = 7,
-	ESkillBehaviorLocationType_MAX           = 8,
+	NewEnumerator15                          = 8,
+	ESkillBehaviorLocationType_MAX           = 9,
 };
 
 }

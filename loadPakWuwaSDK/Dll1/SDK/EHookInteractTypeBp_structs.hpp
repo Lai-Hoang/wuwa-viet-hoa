@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EHookInteractTypeBp.EHookInteractTypeBp
-// NumValues: 0x000A
+// NumValues: 0x000B
 enum class EHookInteractTypeBp : uint8
 {
 	NewEnumerator0                           = 0,
@@ -27,7 +27,8 @@ enum class EHookInteractTypeBp : uint8
 	NewEnumerator6                           = 6,
 	NewEnumerator8                           = 7,
 	NewEnumerator7                           = 8,
-	EHookInteractTypeBp_MAX                  = 9,
+	NewEnumerator9                           = 9,
+	EHookInteractTypeBp_MAX                  = 10,
 };
 
 }

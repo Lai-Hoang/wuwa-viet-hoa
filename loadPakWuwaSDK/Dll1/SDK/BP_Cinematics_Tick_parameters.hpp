@@ -522,8 +522,10 @@ public:
 	bool                                          IsHideMesh_0;                                      // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsHideEffect_0;                                    // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          isDestroyed;                                       // 0x000A(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          IsHideNpcMesh_0;                                   // 0x000B(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          IsHideNpcEffect_0;                                 // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_E[0x2];                                        // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class ATsBaseCharacter_C*                     K2Node_DynamicCast_AsTs_Base_Character;            // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsAutonomousProxy_ReturnValue;            // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -534,7 +536,9 @@ static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, InActor) =
 static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, IsHideMesh_0) == 0x000008, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::IsHideMesh_0' has a wrong offset!");
 static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, IsHideEffect_0) == 0x000009, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::IsHideEffect_0' has a wrong offset!");
 static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, isDestroyed) == 0x00000A, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::isDestroyed' has a wrong offset!");
-static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, CallFunc_Not_PreBool_ReturnValue) == 0x00000B, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, IsHideNpcMesh_0) == 0x00000B, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::IsHideNpcMesh_0' has a wrong offset!");
+static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, IsHideNpcEffect_0) == 0x00000C, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::IsHideNpcEffect_0' has a wrong offset!");
+static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, CallFunc_Not_PreBool_ReturnValue) == 0x00000D, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, K2Node_DynamicCast_AsTs_Base_Character) == 0x000010, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::K2Node_DynamicCast_AsTs_Base_Character' has a wrong offset!");
 static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, K2Node_DynamicCast_bSuccess) == 0x000018, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::K2Node_DynamicCast_bSuccess' has a wrong offset!");
 static_assert(offsetof(BP_Cinematics_Tick_C_UpdateMeshAndEffectState, CallFunc_IsAutonomousProxy_ReturnValue) == 0x000019, "Member 'BP_Cinematics_Tick_C_UpdateMeshAndEffectState::CallFunc_IsAutonomousProxy_ReturnValue' has a wrong offset!");

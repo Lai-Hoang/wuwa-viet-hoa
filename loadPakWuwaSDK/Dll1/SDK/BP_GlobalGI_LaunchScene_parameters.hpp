@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -122,6 +122,7 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_ApplyFog_bVolumeCloudNotAffectedByVRS;    // 0x0063(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BP_GlobalGI_LaunchScene_C_Update_Fog) == 0x000008, "Wrong alignment on BP_GlobalGI_LaunchScene_C_Update_Fog");
 static_assert(sizeof(BP_GlobalGI_LaunchScene_C_Update_Fog) == 0x000068, "Wrong size on BP_GlobalGI_LaunchScene_C_Update_Fog");
@@ -137,6 +138,7 @@ static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_CreateDyna
 static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_IsValid_ReturnValue_1) == 0x000060, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_IsValid_ReturnValue_2) == 0x000061, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
 static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_IsValid_ReturnValue_3) == 0x000062, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_GlobalGI_LaunchScene_C_Update_Fog, CallFunc_ApplyFog_bVolumeCloudNotAffectedByVRS) == 0x000063, "Member 'BP_GlobalGI_LaunchScene_C_Update_Fog::CallFunc_ApplyFog_bVolumeCloudNotAffectedByVRS' has a wrong offset!");
 
 // Function BP_GlobalGI_LaunchScene.BP_GlobalGI_LaunchScene_C.Is Day
 // 0x000C (0x000C - 0x0000)

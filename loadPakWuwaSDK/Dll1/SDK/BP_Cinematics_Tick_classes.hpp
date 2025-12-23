@@ -11,111 +11,115 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Cinematics_Tick.BP_Cinematics_Tick_C
-// 0x01C8 (0x0488 - 0x02C0)
+// 0x01D0 (0x0588 - 0x03B8)
 class ABP_Cinematics_Tick_C final : public AKuroEditorTickActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	int32                                         Is_Tick;                                           // 0x02D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2D4[0x4];                                      // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABaseCharacter*                         BP_Character_1;                                    // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Character_1_LightYaw;                              // 0x02E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Character_1_FaceLightYaw;                          // 0x02E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABaseCharacter*                         BP_Character_2;                                    // 0x02E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Character_2_LightYaw;                              // 0x02F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Character_2_FaceLightYaw;                          // 0x02F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABaseCharacter*                         BP_Character_3;                                    // 0x02F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Character_3_LightYaw;                              // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Character_3_FaceLightYaw;                          // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABaseCharacter*                         BP_Character_4;                                    // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Character_4_LightYaw;                              // 0x0310(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Character_4_FaceLightYaw;                          // 0x0314(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASkeletalMeshActor*                     SkeletalMesh_1;                                    // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_1_LightYaw;                           // 0x0320(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_1_FaceLightYaw;                       // 0x0324(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASkeletalMeshActor*                     SkeletalMesh_2;                                    // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_2_LightYaw;                           // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_2_FaceLightYaw;                       // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASkeletalMeshActor*                     SkeletalMesh_3;                                    // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_3_LightYaw;                           // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_3_FaceLightYaw;                       // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASkeletalMeshActor*                     SkeletalMesh_4;                                    // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_4_LightYaw;                           // 0x0350(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_4_FaceLightYaw;                       // 0x0354(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASkeletalMeshActor*                     SkeletalMesh_5;                                    // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_5_LightYaw;                           // 0x0360(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_5_FaceLightYaw;                       // 0x0364(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASkeletalMeshActor*                     SkeletalMesh_6;                                    // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_6_LightYaw;                           // 0x0370(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         SkeletalMesh_6_FaceLightYaw;                       // 0x0374(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 UISceneRole;                                       // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 UISceneRole_2;                                     // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 BP_NanzhuSeqV2;                                    // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_NanzhuSeqV2_LightYaw;                           // 0x0390(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_NanzhuSeqV2_LightPitch;                         // 0x0394(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_NanzhuSeqV2_FaceLightYaw;                       // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_39C[0x4];                                      // 0x039C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 BP_NvzhuSeqV2;                                     // 0x03A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_NvzhuSeqV2_LightYaw;                            // 0x03A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_NvzhuSeqV2_LightPitch;                          // 0x03AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         BP_NvzhuSeqV2_FaceLightYaw;                        // 0x03B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B4[0x4];                                      // 0x03B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Target_1;                                          // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_1_LightYaw;                                 // 0x03C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_1_LightPitch;                               // 0x03C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_1_FaceLightYaw;                             // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	int32                                         Is_Tick;                                           // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_3CC[0x4];                                      // 0x03CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Target_2;                                          // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_2_LightYaw;                                 // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_2_LightPitch;                               // 0x03DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_2_FaceLightYaw;                             // 0x03E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E4[0x4];                                      // 0x03E4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Target_3;                                          // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_3_LightYaw;                                 // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_3_LightPitch;                               // 0x03F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_3_FaceLightYaw;                             // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3FC[0x4];                                      // 0x03FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Target_4;                                          // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_4_LightYaw;                                 // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_4_LightPitch;                               // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_4_FaceLightYaw;                             // 0x0410(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414[0x4];                                      // 0x0414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Target_5;                                          // 0x0418(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_5_LightYaw;                                 // 0x0420(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_5_LightPitch;                               // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_5_FaceLightYaw;                             // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42C[0x4];                                      // 0x042C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Target_6;                                          // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_6_LightYaw;                                 // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_6_LightPitch;                               // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         Target_6_FaceLightYaw;                             // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsHideMesh;                                        // 0x0444(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	bool                                          IsHideEffect;                                      // 0x0445(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	uint8                                         Pad_446[0x2];                                      // 0x0446(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LightShakeSpeed_Float;                             // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         LightShakeSpeed_Float_Default;                     // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LightShakePositionX_Float;                         // 0x0450(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         LightShakePositionX_Float_Default;                 // 0x0454(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LightShakePositionY_Float;                         // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	float                                         LightShakePositionY_Float_Default;                 // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LightShakeScale_Float;                             // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LightShakeScale_Float_Default;                     // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                MainTexColorTint_Vector;                           // 0x0468(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                MainTexColorTint_Vector_Default;                   // 0x0474(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	bool                                          MaterialControllerToggle;                          // 0x0480(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	bool                                          ReceiveRoleLight;                                  // 0x0481(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor)
-	bool                                          IsDisableCameraCollision;                          // 0x0482(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	bool                                          IsAutonomousHideMesh;                              // 0x0483(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	bool                                          IsAutonomousHideEffect;                            // 0x0484(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	class ABaseCharacter*                         BP_Character_1;                                    // 0x03D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Character_1_LightYaw;                              // 0x03D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Character_1_FaceLightYaw;                          // 0x03DC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         BP_Character_2;                                    // 0x03E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Character_2_LightYaw;                              // 0x03E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Character_2_FaceLightYaw;                          // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         BP_Character_3;                                    // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Character_3_LightYaw;                              // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Character_3_FaceLightYaw;                          // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABaseCharacter*                         BP_Character_4;                                    // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Character_4_LightYaw;                              // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Character_4_FaceLightYaw;                          // 0x040C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASkeletalMeshActor*                     SkeletalMesh_1;                                    // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_1_LightYaw;                           // 0x0418(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_1_FaceLightYaw;                       // 0x041C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASkeletalMeshActor*                     SkeletalMesh_2;                                    // 0x0420(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_2_LightYaw;                           // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_2_FaceLightYaw;                       // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASkeletalMeshActor*                     SkeletalMesh_3;                                    // 0x0430(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_3_LightYaw;                           // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_3_FaceLightYaw;                       // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASkeletalMeshActor*                     SkeletalMesh_4;                                    // 0x0440(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_4_LightYaw;                           // 0x0448(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_4_FaceLightYaw;                       // 0x044C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASkeletalMeshActor*                     SkeletalMesh_5;                                    // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_5_LightYaw;                           // 0x0458(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_5_FaceLightYaw;                       // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASkeletalMeshActor*                     SkeletalMesh_6;                                    // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_6_LightYaw;                           // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SkeletalMesh_6_FaceLightYaw;                       // 0x046C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 UISceneRole;                                       // 0x0470(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 UISceneRole_2;                                     // 0x0478(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 BP_NanzhuSeqV2;                                    // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_NanzhuSeqV2_LightYaw;                           // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_NanzhuSeqV2_LightPitch;                         // 0x048C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_NanzhuSeqV2_FaceLightYaw;                       // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_494[0x4];                                      // 0x0494(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 BP_NvzhuSeqV2;                                     // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_NvzhuSeqV2_LightYaw;                            // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_NvzhuSeqV2_LightPitch;                          // 0x04A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         BP_NvzhuSeqV2_FaceLightYaw;                        // 0x04A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4AC[0x4];                                      // 0x04AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Target_1;                                          // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_1_LightYaw;                                 // 0x04B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_1_LightPitch;                               // 0x04BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_1_FaceLightYaw;                             // 0x04C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4C4[0x4];                                      // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Target_2;                                          // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_2_LightYaw;                                 // 0x04D0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_2_LightPitch;                               // 0x04D4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_2_FaceLightYaw;                             // 0x04D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4DC[0x4];                                      // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Target_3;                                          // 0x04E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_3_LightYaw;                                 // 0x04E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_3_LightPitch;                               // 0x04EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_3_FaceLightYaw;                             // 0x04F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4F4[0x4];                                      // 0x04F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Target_4;                                          // 0x04F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_4_LightYaw;                                 // 0x0500(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_4_LightPitch;                               // 0x0504(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_4_FaceLightYaw;                             // 0x0508(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_50C[0x4];                                      // 0x050C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Target_5;                                          // 0x0510(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_5_LightYaw;                                 // 0x0518(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_5_LightPitch;                               // 0x051C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_5_FaceLightYaw;                             // 0x0520(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_524[0x4];                                      // 0x0524(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Target_6;                                          // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_6_LightYaw;                                 // 0x0530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_6_LightPitch;                               // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         Target_6_FaceLightYaw;                             // 0x0538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsHideMesh;                                        // 0x053C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          IsHideEffect;                                      // 0x053D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	uint8                                         Pad_53E[0x2];                                      // 0x053E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LightShakeSpeed_Float;                             // 0x0540(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         LightShakeSpeed_Float_Default;                     // 0x0544(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightShakePositionX_Float;                         // 0x0548(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         LightShakePositionX_Float_Default;                 // 0x054C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightShakePositionY_Float;                         // 0x0550(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	float                                         LightShakePositionY_Float_Default;                 // 0x0554(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightShakeScale_Float;                             // 0x0558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightShakeScale_Float_Default;                     // 0x055C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                MainTexColorTint_Vector;                           // 0x0560(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                MainTexColorTint_Vector_Default;                   // 0x056C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	bool                                          MaterialControllerToggle;                          // 0x0578(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          ReceiveRoleLight;                                  // 0x0579(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, Interp, NoDestructor)
+	bool                                          IsDisableCameraCollision;                          // 0x057A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          IsAutonomousHideMesh;                              // 0x057B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsAutonomousHideEffect;                            // 0x057C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsAutonomousHideNpcMesh;                           // 0x057D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsAutonomousHideNpcEffect;                         // 0x057E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsHideNpcMesh;                                     // 0x057F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	bool                                          IsHideNpcEffect;                                   // 0x0580(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_Cinematics_Tick(int32 EntryPoint);
@@ -128,7 +132,7 @@ public:
 	void RevertLightDirection(class USkeletalMeshComponent* Mesh);
 	void ProcessCombinNPC(class ABP_SeqNPC_C* Mesh, float LightYaw, float FaceLightYaw);
 	void SetActorLight(class AActor* InActor, float LightYaw, float LightPitch, float FaceLightYaw, bool IsRevert);
-	void UpdateMeshAndEffectState(class AActor* InActor, bool IsHideMesh_0, bool IsHideEffect_0, bool isDestroyed);
+	void UpdateMeshAndEffectState(class AActor* InActor, bool IsHideMesh_0, bool IsHideEffect_0, bool isDestroyed, bool IsHideNpcMesh_0, bool IsHideNpcEffect_0);
 	struct FVector EulerToForward(float Pitch, float Yaw);
 	void UpdateCameraCollision(class AActor* InActor, bool IsDisableCameraCollision_0);
 
@@ -143,91 +147,95 @@ public:
 	}
 };
 static_assert(alignof(ABP_Cinematics_Tick_C) == 0x000008, "Wrong alignment on ABP_Cinematics_Tick_C");
-static_assert(sizeof(ABP_Cinematics_Tick_C) == 0x000488, "Wrong size on ABP_Cinematics_Tick_C");
-static_assert(offsetof(ABP_Cinematics_Tick_C, UberGraphFrame) == 0x0002C0, "Member 'ABP_Cinematics_Tick_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, DefaultSceneRoot) == 0x0002C8, "Member 'ABP_Cinematics_Tick_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Is_Tick) == 0x0002D0, "Member 'ABP_Cinematics_Tick_C::Is_Tick' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_Character_1) == 0x0002D8, "Member 'ABP_Cinematics_Tick_C::BP_Character_1' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Character_1_LightYaw) == 0x0002E0, "Member 'ABP_Cinematics_Tick_C::Character_1_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Character_1_FaceLightYaw) == 0x0002E4, "Member 'ABP_Cinematics_Tick_C::Character_1_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_Character_2) == 0x0002E8, "Member 'ABP_Cinematics_Tick_C::BP_Character_2' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Character_2_LightYaw) == 0x0002F0, "Member 'ABP_Cinematics_Tick_C::Character_2_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Character_2_FaceLightYaw) == 0x0002F4, "Member 'ABP_Cinematics_Tick_C::Character_2_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_Character_3) == 0x0002F8, "Member 'ABP_Cinematics_Tick_C::BP_Character_3' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Character_3_LightYaw) == 0x000300, "Member 'ABP_Cinematics_Tick_C::Character_3_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Character_3_FaceLightYaw) == 0x000304, "Member 'ABP_Cinematics_Tick_C::Character_3_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_Character_4) == 0x000308, "Member 'ABP_Cinematics_Tick_C::BP_Character_4' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Character_4_LightYaw) == 0x000310, "Member 'ABP_Cinematics_Tick_C::Character_4_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Character_4_FaceLightYaw) == 0x000314, "Member 'ABP_Cinematics_Tick_C::Character_4_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_1) == 0x000318, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_1' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_1_LightYaw) == 0x000320, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_1_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_1_FaceLightYaw) == 0x000324, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_1_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_2) == 0x000328, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_2' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_2_LightYaw) == 0x000330, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_2_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_2_FaceLightYaw) == 0x000334, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_2_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_3) == 0x000338, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_3' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_3_LightYaw) == 0x000340, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_3_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_3_FaceLightYaw) == 0x000344, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_3_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_4) == 0x000348, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_4' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_4_LightYaw) == 0x000350, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_4_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_4_FaceLightYaw) == 0x000354, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_4_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_5) == 0x000358, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_5' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_5_LightYaw) == 0x000360, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_5_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_5_FaceLightYaw) == 0x000364, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_5_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_6) == 0x000368, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_6' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_6_LightYaw) == 0x000370, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_6_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_6_FaceLightYaw) == 0x000374, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_6_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, UISceneRole) == 0x000378, "Member 'ABP_Cinematics_Tick_C::UISceneRole' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, UISceneRole_2) == 0x000380, "Member 'ABP_Cinematics_Tick_C::UISceneRole_2' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NanzhuSeqV2) == 0x000388, "Member 'ABP_Cinematics_Tick_C::BP_NanzhuSeqV2' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NanzhuSeqV2_LightYaw) == 0x000390, "Member 'ABP_Cinematics_Tick_C::BP_NanzhuSeqV2_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NanzhuSeqV2_LightPitch) == 0x000394, "Member 'ABP_Cinematics_Tick_C::BP_NanzhuSeqV2_LightPitch' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NanzhuSeqV2_FaceLightYaw) == 0x000398, "Member 'ABP_Cinematics_Tick_C::BP_NanzhuSeqV2_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NvzhuSeqV2) == 0x0003A0, "Member 'ABP_Cinematics_Tick_C::BP_NvzhuSeqV2' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NvzhuSeqV2_LightYaw) == 0x0003A8, "Member 'ABP_Cinematics_Tick_C::BP_NvzhuSeqV2_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NvzhuSeqV2_LightPitch) == 0x0003AC, "Member 'ABP_Cinematics_Tick_C::BP_NvzhuSeqV2_LightPitch' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NvzhuSeqV2_FaceLightYaw) == 0x0003B0, "Member 'ABP_Cinematics_Tick_C::BP_NvzhuSeqV2_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_1) == 0x0003B8, "Member 'ABP_Cinematics_Tick_C::Target_1' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_1_LightYaw) == 0x0003C0, "Member 'ABP_Cinematics_Tick_C::Target_1_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_1_LightPitch) == 0x0003C4, "Member 'ABP_Cinematics_Tick_C::Target_1_LightPitch' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_1_FaceLightYaw) == 0x0003C8, "Member 'ABP_Cinematics_Tick_C::Target_1_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_2) == 0x0003D0, "Member 'ABP_Cinematics_Tick_C::Target_2' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_2_LightYaw) == 0x0003D8, "Member 'ABP_Cinematics_Tick_C::Target_2_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_2_LightPitch) == 0x0003DC, "Member 'ABP_Cinematics_Tick_C::Target_2_LightPitch' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_2_FaceLightYaw) == 0x0003E0, "Member 'ABP_Cinematics_Tick_C::Target_2_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_3) == 0x0003E8, "Member 'ABP_Cinematics_Tick_C::Target_3' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_3_LightYaw) == 0x0003F0, "Member 'ABP_Cinematics_Tick_C::Target_3_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_3_LightPitch) == 0x0003F4, "Member 'ABP_Cinematics_Tick_C::Target_3_LightPitch' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_3_FaceLightYaw) == 0x0003F8, "Member 'ABP_Cinematics_Tick_C::Target_3_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_4) == 0x000400, "Member 'ABP_Cinematics_Tick_C::Target_4' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_4_LightYaw) == 0x000408, "Member 'ABP_Cinematics_Tick_C::Target_4_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_4_LightPitch) == 0x00040C, "Member 'ABP_Cinematics_Tick_C::Target_4_LightPitch' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_4_FaceLightYaw) == 0x000410, "Member 'ABP_Cinematics_Tick_C::Target_4_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_5) == 0x000418, "Member 'ABP_Cinematics_Tick_C::Target_5' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_5_LightYaw) == 0x000420, "Member 'ABP_Cinematics_Tick_C::Target_5_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_5_LightPitch) == 0x000424, "Member 'ABP_Cinematics_Tick_C::Target_5_LightPitch' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_5_FaceLightYaw) == 0x000428, "Member 'ABP_Cinematics_Tick_C::Target_5_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_6) == 0x000430, "Member 'ABP_Cinematics_Tick_C::Target_6' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_6_LightYaw) == 0x000438, "Member 'ABP_Cinematics_Tick_C::Target_6_LightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_6_LightPitch) == 0x00043C, "Member 'ABP_Cinematics_Tick_C::Target_6_LightPitch' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, Target_6_FaceLightYaw) == 0x000440, "Member 'ABP_Cinematics_Tick_C::Target_6_FaceLightYaw' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, IsHideMesh) == 0x000444, "Member 'ABP_Cinematics_Tick_C::IsHideMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, IsHideEffect) == 0x000445, "Member 'ABP_Cinematics_Tick_C::IsHideEffect' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakeSpeed_Float) == 0x000448, "Member 'ABP_Cinematics_Tick_C::LightShakeSpeed_Float' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakeSpeed_Float_Default) == 0x00044C, "Member 'ABP_Cinematics_Tick_C::LightShakeSpeed_Float_Default' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakePositionX_Float) == 0x000450, "Member 'ABP_Cinematics_Tick_C::LightShakePositionX_Float' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakePositionX_Float_Default) == 0x000454, "Member 'ABP_Cinematics_Tick_C::LightShakePositionX_Float_Default' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakePositionY_Float) == 0x000458, "Member 'ABP_Cinematics_Tick_C::LightShakePositionY_Float' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakePositionY_Float_Default) == 0x00045C, "Member 'ABP_Cinematics_Tick_C::LightShakePositionY_Float_Default' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakeScale_Float) == 0x000460, "Member 'ABP_Cinematics_Tick_C::LightShakeScale_Float' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakeScale_Float_Default) == 0x000464, "Member 'ABP_Cinematics_Tick_C::LightShakeScale_Float_Default' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, MainTexColorTint_Vector) == 0x000468, "Member 'ABP_Cinematics_Tick_C::MainTexColorTint_Vector' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, MainTexColorTint_Vector_Default) == 0x000474, "Member 'ABP_Cinematics_Tick_C::MainTexColorTint_Vector_Default' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, MaterialControllerToggle) == 0x000480, "Member 'ABP_Cinematics_Tick_C::MaterialControllerToggle' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, ReceiveRoleLight) == 0x000481, "Member 'ABP_Cinematics_Tick_C::ReceiveRoleLight' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, IsDisableCameraCollision) == 0x000482, "Member 'ABP_Cinematics_Tick_C::IsDisableCameraCollision' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, IsAutonomousHideMesh) == 0x000483, "Member 'ABP_Cinematics_Tick_C::IsAutonomousHideMesh' has a wrong offset!");
-static_assert(offsetof(ABP_Cinematics_Tick_C, IsAutonomousHideEffect) == 0x000484, "Member 'ABP_Cinematics_Tick_C::IsAutonomousHideEffect' has a wrong offset!");
+static_assert(sizeof(ABP_Cinematics_Tick_C) == 0x000588, "Wrong size on ABP_Cinematics_Tick_C");
+static_assert(offsetof(ABP_Cinematics_Tick_C, UberGraphFrame) == 0x0003B8, "Member 'ABP_Cinematics_Tick_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, DefaultSceneRoot) == 0x0003C0, "Member 'ABP_Cinematics_Tick_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Is_Tick) == 0x0003C8, "Member 'ABP_Cinematics_Tick_C::Is_Tick' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_Character_1) == 0x0003D0, "Member 'ABP_Cinematics_Tick_C::BP_Character_1' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Character_1_LightYaw) == 0x0003D8, "Member 'ABP_Cinematics_Tick_C::Character_1_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Character_1_FaceLightYaw) == 0x0003DC, "Member 'ABP_Cinematics_Tick_C::Character_1_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_Character_2) == 0x0003E0, "Member 'ABP_Cinematics_Tick_C::BP_Character_2' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Character_2_LightYaw) == 0x0003E8, "Member 'ABP_Cinematics_Tick_C::Character_2_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Character_2_FaceLightYaw) == 0x0003EC, "Member 'ABP_Cinematics_Tick_C::Character_2_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_Character_3) == 0x0003F0, "Member 'ABP_Cinematics_Tick_C::BP_Character_3' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Character_3_LightYaw) == 0x0003F8, "Member 'ABP_Cinematics_Tick_C::Character_3_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Character_3_FaceLightYaw) == 0x0003FC, "Member 'ABP_Cinematics_Tick_C::Character_3_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_Character_4) == 0x000400, "Member 'ABP_Cinematics_Tick_C::BP_Character_4' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Character_4_LightYaw) == 0x000408, "Member 'ABP_Cinematics_Tick_C::Character_4_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Character_4_FaceLightYaw) == 0x00040C, "Member 'ABP_Cinematics_Tick_C::Character_4_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_1) == 0x000410, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_1' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_1_LightYaw) == 0x000418, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_1_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_1_FaceLightYaw) == 0x00041C, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_1_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_2) == 0x000420, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_2' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_2_LightYaw) == 0x000428, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_2_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_2_FaceLightYaw) == 0x00042C, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_2_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_3) == 0x000430, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_3' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_3_LightYaw) == 0x000438, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_3_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_3_FaceLightYaw) == 0x00043C, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_3_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_4) == 0x000440, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_4' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_4_LightYaw) == 0x000448, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_4_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_4_FaceLightYaw) == 0x00044C, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_4_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_5) == 0x000450, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_5' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_5_LightYaw) == 0x000458, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_5_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_5_FaceLightYaw) == 0x00045C, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_5_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_6) == 0x000460, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_6' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_6_LightYaw) == 0x000468, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_6_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, SkeletalMesh_6_FaceLightYaw) == 0x00046C, "Member 'ABP_Cinematics_Tick_C::SkeletalMesh_6_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, UISceneRole) == 0x000470, "Member 'ABP_Cinematics_Tick_C::UISceneRole' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, UISceneRole_2) == 0x000478, "Member 'ABP_Cinematics_Tick_C::UISceneRole_2' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NanzhuSeqV2) == 0x000480, "Member 'ABP_Cinematics_Tick_C::BP_NanzhuSeqV2' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NanzhuSeqV2_LightYaw) == 0x000488, "Member 'ABP_Cinematics_Tick_C::BP_NanzhuSeqV2_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NanzhuSeqV2_LightPitch) == 0x00048C, "Member 'ABP_Cinematics_Tick_C::BP_NanzhuSeqV2_LightPitch' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NanzhuSeqV2_FaceLightYaw) == 0x000490, "Member 'ABP_Cinematics_Tick_C::BP_NanzhuSeqV2_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NvzhuSeqV2) == 0x000498, "Member 'ABP_Cinematics_Tick_C::BP_NvzhuSeqV2' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NvzhuSeqV2_LightYaw) == 0x0004A0, "Member 'ABP_Cinematics_Tick_C::BP_NvzhuSeqV2_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NvzhuSeqV2_LightPitch) == 0x0004A4, "Member 'ABP_Cinematics_Tick_C::BP_NvzhuSeqV2_LightPitch' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, BP_NvzhuSeqV2_FaceLightYaw) == 0x0004A8, "Member 'ABP_Cinematics_Tick_C::BP_NvzhuSeqV2_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_1) == 0x0004B0, "Member 'ABP_Cinematics_Tick_C::Target_1' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_1_LightYaw) == 0x0004B8, "Member 'ABP_Cinematics_Tick_C::Target_1_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_1_LightPitch) == 0x0004BC, "Member 'ABP_Cinematics_Tick_C::Target_1_LightPitch' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_1_FaceLightYaw) == 0x0004C0, "Member 'ABP_Cinematics_Tick_C::Target_1_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_2) == 0x0004C8, "Member 'ABP_Cinematics_Tick_C::Target_2' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_2_LightYaw) == 0x0004D0, "Member 'ABP_Cinematics_Tick_C::Target_2_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_2_LightPitch) == 0x0004D4, "Member 'ABP_Cinematics_Tick_C::Target_2_LightPitch' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_2_FaceLightYaw) == 0x0004D8, "Member 'ABP_Cinematics_Tick_C::Target_2_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_3) == 0x0004E0, "Member 'ABP_Cinematics_Tick_C::Target_3' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_3_LightYaw) == 0x0004E8, "Member 'ABP_Cinematics_Tick_C::Target_3_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_3_LightPitch) == 0x0004EC, "Member 'ABP_Cinematics_Tick_C::Target_3_LightPitch' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_3_FaceLightYaw) == 0x0004F0, "Member 'ABP_Cinematics_Tick_C::Target_3_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_4) == 0x0004F8, "Member 'ABP_Cinematics_Tick_C::Target_4' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_4_LightYaw) == 0x000500, "Member 'ABP_Cinematics_Tick_C::Target_4_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_4_LightPitch) == 0x000504, "Member 'ABP_Cinematics_Tick_C::Target_4_LightPitch' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_4_FaceLightYaw) == 0x000508, "Member 'ABP_Cinematics_Tick_C::Target_4_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_5) == 0x000510, "Member 'ABP_Cinematics_Tick_C::Target_5' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_5_LightYaw) == 0x000518, "Member 'ABP_Cinematics_Tick_C::Target_5_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_5_LightPitch) == 0x00051C, "Member 'ABP_Cinematics_Tick_C::Target_5_LightPitch' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_5_FaceLightYaw) == 0x000520, "Member 'ABP_Cinematics_Tick_C::Target_5_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_6) == 0x000528, "Member 'ABP_Cinematics_Tick_C::Target_6' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_6_LightYaw) == 0x000530, "Member 'ABP_Cinematics_Tick_C::Target_6_LightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_6_LightPitch) == 0x000534, "Member 'ABP_Cinematics_Tick_C::Target_6_LightPitch' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, Target_6_FaceLightYaw) == 0x000538, "Member 'ABP_Cinematics_Tick_C::Target_6_FaceLightYaw' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsHideMesh) == 0x00053C, "Member 'ABP_Cinematics_Tick_C::IsHideMesh' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsHideEffect) == 0x00053D, "Member 'ABP_Cinematics_Tick_C::IsHideEffect' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakeSpeed_Float) == 0x000540, "Member 'ABP_Cinematics_Tick_C::LightShakeSpeed_Float' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakeSpeed_Float_Default) == 0x000544, "Member 'ABP_Cinematics_Tick_C::LightShakeSpeed_Float_Default' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakePositionX_Float) == 0x000548, "Member 'ABP_Cinematics_Tick_C::LightShakePositionX_Float' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakePositionX_Float_Default) == 0x00054C, "Member 'ABP_Cinematics_Tick_C::LightShakePositionX_Float_Default' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakePositionY_Float) == 0x000550, "Member 'ABP_Cinematics_Tick_C::LightShakePositionY_Float' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakePositionY_Float_Default) == 0x000554, "Member 'ABP_Cinematics_Tick_C::LightShakePositionY_Float_Default' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakeScale_Float) == 0x000558, "Member 'ABP_Cinematics_Tick_C::LightShakeScale_Float' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, LightShakeScale_Float_Default) == 0x00055C, "Member 'ABP_Cinematics_Tick_C::LightShakeScale_Float_Default' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, MainTexColorTint_Vector) == 0x000560, "Member 'ABP_Cinematics_Tick_C::MainTexColorTint_Vector' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, MainTexColorTint_Vector_Default) == 0x00056C, "Member 'ABP_Cinematics_Tick_C::MainTexColorTint_Vector_Default' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, MaterialControllerToggle) == 0x000578, "Member 'ABP_Cinematics_Tick_C::MaterialControllerToggle' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, ReceiveRoleLight) == 0x000579, "Member 'ABP_Cinematics_Tick_C::ReceiveRoleLight' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsDisableCameraCollision) == 0x00057A, "Member 'ABP_Cinematics_Tick_C::IsDisableCameraCollision' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsAutonomousHideMesh) == 0x00057B, "Member 'ABP_Cinematics_Tick_C::IsAutonomousHideMesh' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsAutonomousHideEffect) == 0x00057C, "Member 'ABP_Cinematics_Tick_C::IsAutonomousHideEffect' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsAutonomousHideNpcMesh) == 0x00057D, "Member 'ABP_Cinematics_Tick_C::IsAutonomousHideNpcMesh' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsAutonomousHideNpcEffect) == 0x00057E, "Member 'ABP_Cinematics_Tick_C::IsAutonomousHideNpcEffect' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsHideNpcMesh) == 0x00057F, "Member 'ABP_Cinematics_Tick_C::IsHideNpcMesh' has a wrong offset!");
+static_assert(offsetof(ABP_Cinematics_Tick_C, IsHideNpcEffect) == 0x000580, "Member 'ABP_Cinematics_Tick_C::IsHideNpcEffect' has a wrong offset!");
 
 }
 

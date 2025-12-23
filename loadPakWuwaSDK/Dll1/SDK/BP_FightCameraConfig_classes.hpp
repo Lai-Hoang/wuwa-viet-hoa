@@ -10,20 +10,21 @@
 
 #include "Basic.hpp"
 
-#include "EFightCameraAuto_structs.hpp"
-#include "EFightCameraModify_structs.hpp"
 #include "EFightCameraDefault_structs.hpp"
-#include "EFightCameraFocus_structs.hpp"
-#include "SSettlementCamera_structs.hpp"
 #include "SBaseCurve_structs.hpp"
-#include "EFightCameraAdjust_structs.hpp"
-#include "EFightCameraInput_structs.hpp"
+#include "EFightCameraAuto_structs.hpp"
 #include "EFightCameraGuide_structs.hpp"
+#include "EFightCameraInput_structs.hpp"
+#include "EFightCameraAdjust_structs.hpp"
+#include "SSettlementCamera_structs.hpp"
+#include "EFightCameraFocus_structs.hpp"
+#include "EFightCameraModify_structs.hpp"
 #include "EFightCameraExplore_structs.hpp"
 #include "EFightCameraDialogue_structs.hpp"
 #include "EFightCameraClimb_structs.hpp"
 #include "EFightCameraSidestep_structs.hpp"
 #include "EFightCameraHook_structs.hpp"
+#include "EFightCameraVehicle_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -31,7 +32,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_FightCameraConfig.BP_FightCameraConfig_C
-// 0x08F0 (0x0928 - 0x0038)
+// 0x0990 (0x09C8 - 0x0038)
 class UBP_FightCameraConfig_C final : public UPrimaryDataAsset
 {
 public:
@@ -59,7 +60,9 @@ public:
 	TMap<EFightCameraSidestep, struct FSBaseCurve> 移动自动镜头曲线配置;                             // 0x06C8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<EFightCameraHook, float>                 钩锁镜头;                                          // 0x0718(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<EFightCameraHook, struct FSBaseCurve>    钩锁镜头曲线配置;                                  // 0x0768(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FSSettlementCamera                     结算镜头;                                          // 0x07B8(0x0170)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TMap<EFightCameraVehicle, float>              载具镜头;                                          // 0x07B8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<EFightCameraVehicle, struct FSBaseCurve> 载具镜头曲线配置;                                  // 0x0808(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FSSettlementCamera                     结算镜头;                                          // 0x0858(0x0170)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -72,7 +75,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_FightCameraConfig_C) == 0x000008, "Wrong alignment on UBP_FightCameraConfig_C");
-static_assert(sizeof(UBP_FightCameraConfig_C) == 0x000928, "Wrong size on UBP_FightCameraConfig_C");
+static_assert(sizeof(UBP_FightCameraConfig_C) == 0x0009C8, "Wrong size on UBP_FightCameraConfig_C");
 static_assert(offsetof(UBP_FightCameraConfig_C, 基础) == 0x000038, "Member 'UBP_FightCameraConfig_C::基础' has a wrong offset!");
 static_assert(offsetof(UBP_FightCameraConfig_C, 基础曲线配置) == 0x000088, "Member 'UBP_FightCameraConfig_C::基础曲线配置' has a wrong offset!");
 static_assert(offsetof(UBP_FightCameraConfig_C, 技能修正) == 0x0000D8, "Member 'UBP_FightCameraConfig_C::技能修正' has a wrong offset!");
@@ -97,7 +100,9 @@ static_assert(offsetof(UBP_FightCameraConfig_C, 移动自动镜头) == 0x000678,
 static_assert(offsetof(UBP_FightCameraConfig_C, 移动自动镜头曲线配置) == 0x0006C8, "Member 'UBP_FightCameraConfig_C::移动自动镜头曲线配置' has a wrong offset!");
 static_assert(offsetof(UBP_FightCameraConfig_C, 钩锁镜头) == 0x000718, "Member 'UBP_FightCameraConfig_C::钩锁镜头' has a wrong offset!");
 static_assert(offsetof(UBP_FightCameraConfig_C, 钩锁镜头曲线配置) == 0x000768, "Member 'UBP_FightCameraConfig_C::钩锁镜头曲线配置' has a wrong offset!");
-static_assert(offsetof(UBP_FightCameraConfig_C, 结算镜头) == 0x0007B8, "Member 'UBP_FightCameraConfig_C::结算镜头' has a wrong offset!");
+static_assert(offsetof(UBP_FightCameraConfig_C, 载具镜头) == 0x0007B8, "Member 'UBP_FightCameraConfig_C::载具镜头' has a wrong offset!");
+static_assert(offsetof(UBP_FightCameraConfig_C, 载具镜头曲线配置) == 0x000808, "Member 'UBP_FightCameraConfig_C::载具镜头曲线配置' has a wrong offset!");
+static_assert(offsetof(UBP_FightCameraConfig_C, 结算镜头) == 0x000858, "Member 'UBP_FightCameraConfig_C::结算镜头' has a wrong offset!");
 
 }
 

@@ -92,6 +92,48 @@ void UGA_Base_C::获取施法者(class ATsBaseCharacter_C** 施法者)
 }
 
 
+// Function GA_Base.GA_Base_C.获取施法载具
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// class ATsBaseVehicle_C**                施法载具                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Base_C::获取施法载具(class ATsBaseVehicle_C** 施法载具)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Base_C", "获取施法载具");
+
+	Params::GA_Base_C_获取施法载具 Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (施法载具 != nullptr)
+		*施法载具 = Parms.施法载具;
+}
+
+
+// Function GA_Base.GA_Base_C.获取施法单位EntityId
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32*                                  EntityId                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Base_C::获取施法单位EntityId(int32* EntityId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Base_C", "获取施法单位EntityId");
+
+	Params::GA_Base_C_获取施法单位EntityId Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (EntityId != nullptr)
+		*EntityId = Parms.EntityId;
+}
+
+
 // Function GA_Base.GA_Base_C.获取当前技能配置Id
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -2172,6 +2214,32 @@ void UGA_Base_C::获取随机召唤物(int32 召唤者, int32 Index_0, int32* �
 
 	if (实体Id != nullptr)
 		*实体Id = Parms.实体Id;
+}
+
+
+// Function GA_Base.GA_Base_C.异步使用技能
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class ATsBaseCharacter_C*               释放者                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             技能ID                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           技能目标                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Socket                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UGA_Base_C::异步使用技能(class ATsBaseCharacter_C* 释放者, class FName 技能ID, class AActor* 技能目标, class FName Socket)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GA_Base_C", "异步使用技能");
+
+	Params::GA_Base_C_异步使用技能 Parms{};
+
+	Parms.释放者 = 释放者;
+	Parms.技能ID = 技能ID;
+	Parms.技能目标 = 技能目标;
+	Parms.Socket = Socket;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

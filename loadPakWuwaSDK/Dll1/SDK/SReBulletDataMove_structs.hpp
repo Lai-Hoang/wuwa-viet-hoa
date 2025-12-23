@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "EBulletFollowType_structs.hpp"
 #include "EMoveTrajectory_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EInitialVelocityDirection_structs.hpp"
 #include "EBulletBeginVelocityLimit_structs.hpp"
 #include "EBulletTarget_structs.hpp"

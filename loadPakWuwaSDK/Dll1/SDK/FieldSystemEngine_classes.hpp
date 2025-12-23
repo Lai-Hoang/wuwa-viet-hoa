@@ -61,14 +61,14 @@ static_assert(alignof(UFieldSystem) == 0x000008, "Wrong alignment on UFieldSyste
 static_assert(sizeof(UFieldSystem) == 0x000040, "Wrong size on UFieldSystem");
 
 // Class FieldSystemEngine.FieldSystemComponent
-// 0x0040 (0x0550 - 0x0510)
+// 0x0030 (0x0560 - 0x0530)
 class UFieldSystemComponent final : public UPrimitiveComponent
 {
 public:
-	class UFieldSystem*                           FieldSystem;                                       // 0x0510(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_518[0x10];                                     // 0x0518(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<TSoftObjectPtr<class AChaosSolverActor>> SupportedSolvers;                                // 0x0528(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_538[0x18];                                     // 0x0538(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UFieldSystem*                           FieldSystem;                                       // 0x0528(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_530[0x10];                                     // 0x0530(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<TSoftObjectPtr<class AChaosSolverActor>> SupportedSolvers;                                // 0x0540(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_550[0x10];                                     // 0x0550(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddFieldCommand(bool Enabled, EFieldPhysicsType Target, class UFieldSystemMetaData* MetaData, class UFieldNodeBase* Field);
@@ -92,9 +92,9 @@ public:
 	}
 };
 static_assert(alignof(UFieldSystemComponent) == 0x000010, "Wrong alignment on UFieldSystemComponent");
-static_assert(sizeof(UFieldSystemComponent) == 0x000550, "Wrong size on UFieldSystemComponent");
-static_assert(offsetof(UFieldSystemComponent, FieldSystem) == 0x000510, "Member 'UFieldSystemComponent::FieldSystem' has a wrong offset!");
-static_assert(offsetof(UFieldSystemComponent, SupportedSolvers) == 0x000528, "Member 'UFieldSystemComponent::SupportedSolvers' has a wrong offset!");
+static_assert(sizeof(UFieldSystemComponent) == 0x000560, "Wrong size on UFieldSystemComponent");
+static_assert(offsetof(UFieldSystemComponent, FieldSystem) == 0x000528, "Member 'UFieldSystemComponent::FieldSystem' has a wrong offset!");
+static_assert(offsetof(UFieldSystemComponent, SupportedSolvers) == 0x000540, "Member 'UFieldSystemComponent::SupportedSolvers' has a wrong offset!");
 
 // Class FieldSystemEngine.FieldSystemMetaData
 // 0x0000 (0x00C0 - 0x00C0)

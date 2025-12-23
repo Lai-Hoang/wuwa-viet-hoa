@@ -122,7 +122,7 @@ static_assert(alignof(UKuroTraceLibrary) == 0x000008, "Wrong alignment on UKuroT
 static_assert(sizeof(UKuroTraceLibrary) == 0x000030, "Wrong size on UKuroTraceLibrary");
 
 // Class KuroData.TraceBaseElement
-// 0x00B0 (0x00E0 - 0x0030)
+// 0x00B8 (0x00E8 - 0x0030)
 class UTraceBaseElement : public UObject
 {
 public:
@@ -148,9 +148,12 @@ public:
 	bool                                          bTraceComplex;                                     // 0x00CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreSelf;                                       // 0x00CD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsSingle;                                         // 0x00CE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsProfile;                                        // 0x00CF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ProfileName;                                       // 0x00D0(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_DC[0x4];                                       // 0x00DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bIsBoth;                                           // 0x00CF(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsTraceCapsuleAsSphere;                           // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsProfile;                                        // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D2[0x2];                                       // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ProfileName;                                       // 0x00D4(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_E0[0x8];                                       // 0x00E0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddObjectTypeQuery(EObjectTypeQuery ObjectType);
@@ -175,7 +178,7 @@ public:
 	}
 };
 static_assert(alignof(UTraceBaseElement) == 0x000008, "Wrong alignment on UTraceBaseElement");
-static_assert(sizeof(UTraceBaseElement) == 0x0000E0, "Wrong size on UTraceBaseElement");
+static_assert(sizeof(UTraceBaseElement) == 0x0000E8, "Wrong size on UTraceBaseElement");
 static_assert(offsetof(UTraceBaseElement, WorldContextObject) == 0x000030, "Member 'UTraceBaseElement::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(UTraceBaseElement, ActorsToIgnore) == 0x000060, "Member 'UTraceBaseElement::ActorsToIgnore' has a wrong offset!");
 static_assert(offsetof(UTraceBaseElement, HitResult) == 0x000070, "Member 'UTraceBaseElement::HitResult' has a wrong offset!");
@@ -197,11 +200,13 @@ static_assert(offsetof(UTraceBaseElement, DrawTime) == 0x0000C8, "Member 'UTrace
 static_assert(offsetof(UTraceBaseElement, bTraceComplex) == 0x0000CC, "Member 'UTraceBaseElement::bTraceComplex' has a wrong offset!");
 static_assert(offsetof(UTraceBaseElement, bIgnoreSelf) == 0x0000CD, "Member 'UTraceBaseElement::bIgnoreSelf' has a wrong offset!");
 static_assert(offsetof(UTraceBaseElement, bIsSingle) == 0x0000CE, "Member 'UTraceBaseElement::bIsSingle' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, bIsProfile) == 0x0000CF, "Member 'UTraceBaseElement::bIsProfile' has a wrong offset!");
-static_assert(offsetof(UTraceBaseElement, ProfileName) == 0x0000D0, "Member 'UTraceBaseElement::ProfileName' has a wrong offset!");
+static_assert(offsetof(UTraceBaseElement, bIsBoth) == 0x0000CF, "Member 'UTraceBaseElement::bIsBoth' has a wrong offset!");
+static_assert(offsetof(UTraceBaseElement, bIsTraceCapsuleAsSphere) == 0x0000D0, "Member 'UTraceBaseElement::bIsTraceCapsuleAsSphere' has a wrong offset!");
+static_assert(offsetof(UTraceBaseElement, bIsProfile) == 0x0000D1, "Member 'UTraceBaseElement::bIsProfile' has a wrong offset!");
+static_assert(offsetof(UTraceBaseElement, ProfileName) == 0x0000D4, "Member 'UTraceBaseElement::ProfileName' has a wrong offset!");
 
 // Class KuroData.TraceLineElement
-// 0x0000 (0x00E0 - 0x00E0)
+// 0x0000 (0x00E8 - 0x00E8)
 class UTraceLineElement final : public UTraceBaseElement
 {
 public:
@@ -215,19 +220,19 @@ public:
 	}
 };
 static_assert(alignof(UTraceLineElement) == 0x000008, "Wrong alignment on UTraceLineElement");
-static_assert(sizeof(UTraceLineElement) == 0x0000E0, "Wrong size on UTraceLineElement");
+static_assert(sizeof(UTraceLineElement) == 0x0000E8, "Wrong size on UTraceLineElement");
 
 // Class KuroData.TraceBoxElement
-// 0x0018 (0x00F8 - 0x00E0)
+// 0x0018 (0x0100 - 0x00E8)
 class UTraceBoxElement final : public UTraceBaseElement
 {
 public:
-	float                                         HalfSizeX;                                         // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HalfSizeY;                                         // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HalfSizeZ;                                         // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OrientationPitch;                                  // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OrientationYaw;                                    // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OrientationRoll;                                   // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfSizeX;                                         // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfSizeY;                                         // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfSizeZ;                                         // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OrientationPitch;                                  // 0x00F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OrientationYaw;                                    // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OrientationRoll;                                   // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void SetBoxHalfSize(float X, float Y, float Z);
@@ -244,21 +249,21 @@ public:
 	}
 };
 static_assert(alignof(UTraceBoxElement) == 0x000008, "Wrong alignment on UTraceBoxElement");
-static_assert(sizeof(UTraceBoxElement) == 0x0000F8, "Wrong size on UTraceBoxElement");
-static_assert(offsetof(UTraceBoxElement, HalfSizeX) == 0x0000E0, "Member 'UTraceBoxElement::HalfSizeX' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, HalfSizeY) == 0x0000E4, "Member 'UTraceBoxElement::HalfSizeY' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, HalfSizeZ) == 0x0000E8, "Member 'UTraceBoxElement::HalfSizeZ' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, OrientationPitch) == 0x0000EC, "Member 'UTraceBoxElement::OrientationPitch' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, OrientationYaw) == 0x0000F0, "Member 'UTraceBoxElement::OrientationYaw' has a wrong offset!");
-static_assert(offsetof(UTraceBoxElement, OrientationRoll) == 0x0000F4, "Member 'UTraceBoxElement::OrientationRoll' has a wrong offset!");
+static_assert(sizeof(UTraceBoxElement) == 0x000100, "Wrong size on UTraceBoxElement");
+static_assert(offsetof(UTraceBoxElement, HalfSizeX) == 0x0000E8, "Member 'UTraceBoxElement::HalfSizeX' has a wrong offset!");
+static_assert(offsetof(UTraceBoxElement, HalfSizeY) == 0x0000EC, "Member 'UTraceBoxElement::HalfSizeY' has a wrong offset!");
+static_assert(offsetof(UTraceBoxElement, HalfSizeZ) == 0x0000F0, "Member 'UTraceBoxElement::HalfSizeZ' has a wrong offset!");
+static_assert(offsetof(UTraceBoxElement, OrientationPitch) == 0x0000F4, "Member 'UTraceBoxElement::OrientationPitch' has a wrong offset!");
+static_assert(offsetof(UTraceBoxElement, OrientationYaw) == 0x0000F8, "Member 'UTraceBoxElement::OrientationYaw' has a wrong offset!");
+static_assert(offsetof(UTraceBoxElement, OrientationRoll) == 0x0000FC, "Member 'UTraceBoxElement::OrientationRoll' has a wrong offset!");
 
 // Class KuroData.TraceCapsuleElement
-// 0x0008 (0x00E8 - 0x00E0)
+// 0x0008 (0x00F0 - 0x00E8)
 class UTraceCapsuleElement final : public UTraceBaseElement
 {
 public:
-	float                                         Radius;                                            // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         HalfHeight;                                        // 0x00E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Radius;                                            // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HalfHeight;                                        // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -271,17 +276,17 @@ public:
 	}
 };
 static_assert(alignof(UTraceCapsuleElement) == 0x000008, "Wrong alignment on UTraceCapsuleElement");
-static_assert(sizeof(UTraceCapsuleElement) == 0x0000E8, "Wrong size on UTraceCapsuleElement");
-static_assert(offsetof(UTraceCapsuleElement, Radius) == 0x0000E0, "Member 'UTraceCapsuleElement::Radius' has a wrong offset!");
-static_assert(offsetof(UTraceCapsuleElement, HalfHeight) == 0x0000E4, "Member 'UTraceCapsuleElement::HalfHeight' has a wrong offset!");
+static_assert(sizeof(UTraceCapsuleElement) == 0x0000F0, "Wrong size on UTraceCapsuleElement");
+static_assert(offsetof(UTraceCapsuleElement, Radius) == 0x0000E8, "Member 'UTraceCapsuleElement::Radius' has a wrong offset!");
+static_assert(offsetof(UTraceCapsuleElement, HalfHeight) == 0x0000EC, "Member 'UTraceCapsuleElement::HalfHeight' has a wrong offset!");
 
 // Class KuroData.TraceSphereElement
-// 0x0008 (0x00E8 - 0x00E0)
+// 0x0008 (0x00F0 - 0x00E8)
 class UTraceSphereElement final : public UTraceBaseElement
 {
 public:
-	float                                         Radius;                                            // 0x00E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_E4[0x4];                                       // 0x00E4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Radius;                                            // 0x00E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_EC[0x4];                                       // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -294,8 +299,8 @@ public:
 	}
 };
 static_assert(alignof(UTraceSphereElement) == 0x000008, "Wrong alignment on UTraceSphereElement");
-static_assert(sizeof(UTraceSphereElement) == 0x0000E8, "Wrong size on UTraceSphereElement");
-static_assert(offsetof(UTraceSphereElement, Radius) == 0x0000E0, "Member 'UTraceSphereElement::Radius' has a wrong offset!");
+static_assert(sizeof(UTraceSphereElement) == 0x0000F0, "Wrong size on UTraceSphereElement");
+static_assert(offsetof(UTraceSphereElement, Radius) == 0x0000E8, "Member 'UTraceSphereElement::Radius' has a wrong offset!");
 
 }
 

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "ECaughtResultType_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "SHitInformation_structs.hpp"
 #include "ECharacterState_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "ECaughtResultType_structs.hpp"
 #include "BP_ManagerBase_classes.hpp"
 
 
@@ -22,7 +22,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_EventManager.BP_EventManager_C
-// 0x01E0 (0x0228 - 0x0048)
+// 0x0200 (0x0248 - 0x0048)
 class UBP_EventManager_C final : public UBP_ManagerBase_C
 {
 public:
@@ -56,6 +56,8 @@ public:
 	TMulticastInlineDelegate<void(const struct FVectorDouble& ImpactPoint, class UBP_SceneBattleInteract_C* Config, const struct FVectorDouble& OriginPoint, int32 Id)> 子弹撞到水面时; // 0x01F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(class ATsBaseCharacter_C* 角色)> 当有角色复活时;                 // 0x0208(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMulticastInlineDelegate<void(const struct FVectorDouble& OriginPoint, class UBP_SceneBattleInteract_C* Config, int32 Id)> 武器交互场景时; // 0x0218(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(int32 EntityId, const struct FGameplayTag& TargetTag)> 当浮游炮瞄准可以自动开炮时; // 0x0228(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
+	TMulticastInlineDelegate<void(const class FString& MusicEventType)> 音乐节拍事件触发时;          // 0x0238(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
 	static class UClass* StaticClass()
@@ -68,7 +70,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_EventManager_C) == 0x000008, "Wrong alignment on UBP_EventManager_C");
-static_assert(sizeof(UBP_EventManager_C) == 0x000228, "Wrong size on UBP_EventManager_C");
+static_assert(sizeof(UBP_EventManager_C) == 0x000248, "Wrong size on UBP_EventManager_C");
 static_assert(offsetof(UBP_EventManager_C, 界面生命周期改变) == 0x000048, "Member 'UBP_EventManager_C::界面生命周期改变' has a wrong offset!");
 static_assert(offsetof(UBP_EventManager_C, 当有角色受击时) == 0x000058, "Member 'UBP_EventManager_C::当有角色受击时' has a wrong offset!");
 static_assert(offsetof(UBP_EventManager_C, 当解密界面打开时) == 0x000068, "Member 'UBP_EventManager_C::当解密界面打开时' has a wrong offset!");
@@ -99,6 +101,8 @@ static_assert(offsetof(UBP_EventManager_C, 当捕鱼船创建时) == 0x0001E8, "
 static_assert(offsetof(UBP_EventManager_C, 子弹撞到水面时) == 0x0001F8, "Member 'UBP_EventManager_C::子弹撞到水面时' has a wrong offset!");
 static_assert(offsetof(UBP_EventManager_C, 当有角色复活时) == 0x000208, "Member 'UBP_EventManager_C::当有角色复活时' has a wrong offset!");
 static_assert(offsetof(UBP_EventManager_C, 武器交互场景时) == 0x000218, "Member 'UBP_EventManager_C::武器交互场景时' has a wrong offset!");
+static_assert(offsetof(UBP_EventManager_C, 当浮游炮瞄准可以自动开炮时) == 0x000228, "Member 'UBP_EventManager_C::当浮游炮瞄准可以自动开炮时' has a wrong offset!");
+static_assert(offsetof(UBP_EventManager_C, 音乐节拍事件触发时) == 0x000238, "Member 'UBP_EventManager_C::音乐节拍事件触发时' has a wrong offset!");
 
 }
 

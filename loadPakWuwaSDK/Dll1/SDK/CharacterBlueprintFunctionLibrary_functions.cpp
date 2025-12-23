@@ -1036,5 +1036,129 @@ bool UCharacterBlueprintFunctionLibrary_C::IsAnySelfCenteredModeEnabled(class UO
 	return Parms.ReturnValue;
 }
 
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetPlanarReflectionShowPlayers
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UPlanarReflectionComponent*       comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCharacterBlueprintFunctionLibrary_C::SetPlanarReflectionShowPlayers(class UPlanarReflectionComponent* comp, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CharacterBlueprintFunctionLibrary_C", "SetPlanarReflectionShowPlayers");
+
+	Params::CharacterBlueprintFunctionLibrary_C_SetPlanarReflectionShowPlayers Parms{};
+
+	Parms.comp = comp;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCharacterDirectlySightLockEnableState
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   id                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bEnable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCharacterBlueprintFunctionLibrary_C::SetCharacterDirectlySightLockEnableState(int32 id, bool bEnable, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CharacterBlueprintFunctionLibrary_C", "SetCharacterDirectlySightLockEnableState");
+
+	Params::CharacterBlueprintFunctionLibrary_C_SetCharacterDirectlySightLockEnableState Parms{};
+
+	Parms.id = id;
+	Parms.bEnable = bEnable;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.RestoreSightLockBoneLimit
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   id                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCharacterBlueprintFunctionLibrary_C::RestoreSightLockBoneLimit(int32 id, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CharacterBlueprintFunctionLibrary_C", "RestoreSightLockBoneLimit");
+
+	Params::CharacterBlueprintFunctionLibrary_C_RestoreSightLockBoneLimit Parms{};
+
+	Parms.id = id;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharacterBlueprintFunctionLibrary.CharacterBlueprintFunctionLibrary_C.SetCharacterSightLockBoneLimit
+// (Native, Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   id                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   yawMin                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   yawMax                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   pitchMin                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   pitchMax                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   assistLimit                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   sightDirectInSightBone                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const struct FVector&                   upAxisInSightBone                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCharacterBlueprintFunctionLibrary_C::SetCharacterSightLockBoneLimit(int32 id, float yawMin, float yawMax, float pitchMin, float pitchMax, float assistLimit, const struct FVector& sightDirectInSightBone, const struct FVector& upAxisInSightBone, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CharacterBlueprintFunctionLibrary_C", "SetCharacterSightLockBoneLimit");
+
+	Params::CharacterBlueprintFunctionLibrary_C_SetCharacterSightLockBoneLimit Parms{};
+
+	Parms.id = id;
+	Parms.yawMin = yawMin;
+	Parms.yawMax = yawMax;
+	Parms.pitchMin = pitchMin;
+	Parms.pitchMax = pitchMax;
+	Parms.assistLimit = assistLimit;
+	Parms.sightDirectInSightBone = std::move(sightDirectInSightBone);
+	Parms.upAxisInSightBone = std::move(upAxisInSightBone);
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
 }
 

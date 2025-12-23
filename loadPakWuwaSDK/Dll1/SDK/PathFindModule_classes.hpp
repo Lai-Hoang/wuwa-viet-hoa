@@ -12,12 +12,33 @@
 
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "NavigationSystem_classes.hpp"
 
 
 namespace SDK
 {
+
+// Class PathFindModule.NavigationPartitionPath
+// 0x0038 (0x0068 - 0x0030)
+class UNavigationPartitionPath final : public UNavigationPartitionPathBase
+{
+public:
+	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NavigationPartitionPath">();
+	}
+	static class UNavigationPartitionPath* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNavigationPartitionPath>();
+	}
+};
+static_assert(alignof(UNavigationPartitionPath) == 0x000008, "Wrong alignment on UNavigationPartitionPath");
+static_assert(sizeof(UNavigationPartitionPath) == 0x000068, "Wrong size on UNavigationPartitionPath");
 
 // Class PathFindModule.KuroNavigationSetting
 // 0x0030 (0x0060 - 0x0030)
@@ -80,25 +101,76 @@ static_assert(alignof(UNavigationPartitionSystem) == 0x000008, "Wrong alignment 
 static_assert(sizeof(UNavigationPartitionSystem) == 0x000060, "Wrong size on UNavigationPartitionSystem");
 static_assert(offsetof(UNavigationPartitionSystem, OwnerWorld) == 0x000050, "Member 'UNavigationPartitionSystem::OwnerWorld' has a wrong offset!");
 
-// Class PathFindModule.NavigationPartitionPath
-// 0x0038 (0x0068 - 0x0030)
-class UNavigationPartitionPath final : public UNavigationPartitionPathBase
+// Class PathFindModule.NavMeshPartitionDebugActor
+// 0x0078 (0x0328 - 0x02B0)
+class ANavMeshPartitionDebugActor final : public AActor
 {
 public:
-	uint8                                         Pad_30[0x38];                                      // 0x0030(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         bDrawTriangleEdges : 1;                            // 0x02B0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDrawPolyEdges : 1;                                // 0x02B0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDrawFilledPolys : 1;                              // 0x02B0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDrawNavMeshEdges : 1;                             // 0x02B0(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDrawTileBounds : 1;                               // 0x02B0(0x0001)(BitIndex: 0x04, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDrawNavLinks : 1;                                 // 0x02B0(0x0001)(BitIndex: 0x05, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bDrawFailedNavLinks : 1;                           // 0x02B0(0x0001)(BitIndex: 0x06, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bEnableDraw : 1;                                   // 0x02B0(0x0001)(BitIndex: 0x07, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_2B1[0x6F];                                     // 0x02B1(0x006F)(Fixing Size After Last Property [ Dumper-7 ])
+	class UNavMeshPartitionRenderingComponent*    RenderingComp;                                     // 0x0320(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void OnDataLayerStateChanged(const class UDataLayer* DataLayer, EDataLayerState State);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"NavigationPartitionPath">();
+		return StaticClassImpl<"NavMeshPartitionDebugActor">();
 	}
-	static class UNavigationPartitionPath* GetDefaultObj()
+	static class ANavMeshPartitionDebugActor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UNavigationPartitionPath>();
+		return GetDefaultObjImpl<ANavMeshPartitionDebugActor>();
 	}
 };
-static_assert(alignof(UNavigationPartitionPath) == 0x000008, "Wrong alignment on UNavigationPartitionPath");
-static_assert(sizeof(UNavigationPartitionPath) == 0x000068, "Wrong size on UNavigationPartitionPath");
+static_assert(alignof(ANavMeshPartitionDebugActor) == 0x000008, "Wrong alignment on ANavMeshPartitionDebugActor");
+static_assert(sizeof(ANavMeshPartitionDebugActor) == 0x000328, "Wrong size on ANavMeshPartitionDebugActor");
+static_assert(offsetof(ANavMeshPartitionDebugActor, RenderingComp) == 0x000320, "Member 'ANavMeshPartitionDebugActor::RenderingComp' has a wrong offset!");
+
+// Class PathFindModule.KuroNavMeshPartitionDebugInfo
+// 0x0050 (0x0300 - 0x02B0)
+class AKuroNavMeshPartitionDebugInfo final : public AInfo
+{
+public:
+	TMap<class FName, struct FMapNavMeshDataLayerInfo> DataLayerLabel2InfoMap;                       // 0x02B0(0x0050)(NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroNavMeshPartitionDebugInfo">();
+	}
+	static class AKuroNavMeshPartitionDebugInfo* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AKuroNavMeshPartitionDebugInfo>();
+	}
+};
+static_assert(alignof(AKuroNavMeshPartitionDebugInfo) == 0x000008, "Wrong alignment on AKuroNavMeshPartitionDebugInfo");
+static_assert(sizeof(AKuroNavMeshPartitionDebugInfo) == 0x000300, "Wrong size on AKuroNavMeshPartitionDebugInfo");
+static_assert(offsetof(AKuroNavMeshPartitionDebugInfo, DataLayerLabel2InfoMap) == 0x0002B0, "Member 'AKuroNavMeshPartitionDebugInfo::DataLayerLabel2InfoMap' has a wrong offset!");
+
+// Class PathFindModule.NavMeshPartitionRenderingComponent
+// 0x0000 (0x0540 - 0x0540)
+class UNavMeshPartitionRenderingComponent final : public UNavMeshRenderingComponent
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NavMeshPartitionRenderingComponent">();
+	}
+	static class UNavMeshPartitionRenderingComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNavMeshPartitionRenderingComponent>();
+	}
+};
+static_assert(alignof(UNavMeshPartitionRenderingComponent) == 0x000010, "Wrong alignment on UNavMeshPartitionRenderingComponent");
+static_assert(sizeof(UNavMeshPartitionRenderingComponent) == 0x000540, "Wrong size on UNavMeshPartitionRenderingComponent");
 
 }
 

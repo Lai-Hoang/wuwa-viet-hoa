@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "KuroVehicle_classes.hpp"
+#include "ECharacterDitherType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ECharacterRenderingType_structs.hpp"
-#include "ECharacterDitherType_structs.hpp"
+#include "KuroVehicle_classes.hpp"
 
 
 namespace SDK
@@ -22,7 +22,7 @@ namespace SDK
 
 // TypeScriptGeneratedClass TsBaseVehicle.TsBaseVehicle_C
 // 0x0040 (0x06F0 - 0x06B0)
-class ATsBaseVehicle_C final : public AKuroBaseVehicle
+class ATsBaseVehicle_C : public AKuroBaseVehicle
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x06B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)

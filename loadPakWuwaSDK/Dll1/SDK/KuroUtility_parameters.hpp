@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "KuroUtility_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "KuroUtility_structs.hpp"
 #include "JsEnv_structs.hpp"
 
 
@@ -382,6 +382,20 @@ static_assert(alignof(KuroApplicationLibrary_AddEditorPreEndPIEDelegate) == 0x00
 static_assert(sizeof(KuroApplicationLibrary_AddEditorPreEndPIEDelegate) == 0x000030, "Wrong size on KuroApplicationLibrary_AddEditorPreEndPIEDelegate");
 static_assert(offsetof(KuroApplicationLibrary_AddEditorPreEndPIEDelegate, InDelegate) == 0x000000, "Member 'KuroApplicationLibrary_AddEditorPreEndPIEDelegate::InDelegate' has a wrong offset!");
 static_assert(offsetof(KuroApplicationLibrary_AddEditorPreEndPIEDelegate, ReturnValue) == 0x000028, "Member 'KuroApplicationLibrary_AddEditorPreEndPIEDelegate::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroApplicationLibrary.AddWindowActivationDelegate
+// 0x0030 (0x0030 - 0x0000)
+struct KuroApplicationLibrary_AddWindowActivationDelegate final
+{
+public:
+	TDelegate<void(bool Activated)>               InDelegate;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroApplicationLibrary_AddWindowActivationDelegate) == 0x000004, "Wrong alignment on KuroApplicationLibrary_AddWindowActivationDelegate");
+static_assert(sizeof(KuroApplicationLibrary_AddWindowActivationDelegate) == 0x000030, "Wrong size on KuroApplicationLibrary_AddWindowActivationDelegate");
+static_assert(offsetof(KuroApplicationLibrary_AddWindowActivationDelegate, InDelegate) == 0x000000, "Member 'KuroApplicationLibrary_AddWindowActivationDelegate::InDelegate' has a wrong offset!");
+static_assert(offsetof(KuroApplicationLibrary_AddWindowActivationDelegate, ReturnValue) == 0x000028, "Member 'KuroApplicationLibrary_AddWindowActivationDelegate::ReturnValue' has a wrong offset!");
 
 // Function KuroUtility.KuroApplicationLibrary.Test
 // 0x0008 (0x0008 - 0x0000)
@@ -847,6 +861,28 @@ static_assert(alignof(KuroStaticAndroidLibrary_GetDeviceIsRooted) == 0x000001, "
 static_assert(sizeof(KuroStaticAndroidLibrary_GetDeviceIsRooted) == 0x000001, "Wrong size on KuroStaticAndroidLibrary_GetDeviceIsRooted");
 static_assert(offsetof(KuroStaticAndroidLibrary_GetDeviceIsRooted, ReturnValue) == 0x000000, "Member 'KuroStaticAndroidLibrary_GetDeviceIsRooted::ReturnValue' has a wrong offset!");
 
+// Function KuroUtility.KuroStaticAndroidLibrary.GetHarmonyOSVersion
+// 0x0010 (0x0010 - 0x0000)
+struct KuroStaticAndroidLibrary_GetHarmonyOSVersion final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticAndroidLibrary_GetHarmonyOSVersion) == 0x000008, "Wrong alignment on KuroStaticAndroidLibrary_GetHarmonyOSVersion");
+static_assert(sizeof(KuroStaticAndroidLibrary_GetHarmonyOSVersion) == 0x000010, "Wrong size on KuroStaticAndroidLibrary_GetHarmonyOSVersion");
+static_assert(offsetof(KuroStaticAndroidLibrary_GetHarmonyOSVersion, ReturnValue) == 0x000000, "Member 'KuroStaticAndroidLibrary_GetHarmonyOSVersion::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroStaticAndroidLibrary.IsHarmonyOS
+// 0x0001 (0x0001 - 0x0000)
+struct KuroStaticAndroidLibrary_IsHarmonyOS final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticAndroidLibrary_IsHarmonyOS) == 0x000001, "Wrong alignment on KuroStaticAndroidLibrary_IsHarmonyOS");
+static_assert(sizeof(KuroStaticAndroidLibrary_IsHarmonyOS) == 0x000001, "Wrong size on KuroStaticAndroidLibrary_IsHarmonyOS");
+static_assert(offsetof(KuroStaticAndroidLibrary_IsHarmonyOS, ReturnValue) == 0x000000, "Member 'KuroStaticAndroidLibrary_IsHarmonyOS::ReturnValue' has a wrong offset!");
+
 // Function KuroUtility.KuroStaticAndroidLibrary.OpenAppWithUrl
 // 0x0020 (0x0020 - 0x0000)
 struct KuroStaticAndroidLibrary_OpenAppWithUrl final
@@ -1166,6 +1202,17 @@ static_assert(sizeof(KuroStaticLibrary_DoGameViewPortMouseEnter) == 0x000010, "W
 static_assert(offsetof(KuroStaticLibrary_DoGameViewPortMouseEnter, InViewport) == 0x000000, "Member 'KuroStaticLibrary_DoGameViewPortMouseEnter::InViewport' has a wrong offset!");
 static_assert(offsetof(KuroStaticLibrary_DoGameViewPortMouseEnter, x) == 0x000008, "Member 'KuroStaticLibrary_DoGameViewPortMouseEnter::x' has a wrong offset!");
 static_assert(offsetof(KuroStaticLibrary_DoGameViewPortMouseEnter, y) == 0x00000C, "Member 'KuroStaticLibrary_DoGameViewPortMouseEnter::y' has a wrong offset!");
+
+// Function KuroUtility.KuroStaticLibrary.DumpStackTrace
+// 0x0010 (0x0010 - 0x0000)
+struct KuroStaticLibrary_DumpStackTrace final
+{
+public:
+	class FString                                 Str;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticLibrary_DumpStackTrace) == 0x000008, "Wrong alignment on KuroStaticLibrary_DumpStackTrace");
+static_assert(sizeof(KuroStaticLibrary_DumpStackTrace) == 0x000010, "Wrong size on KuroStaticLibrary_DumpStackTrace");
+static_assert(offsetof(KuroStaticLibrary_DumpStackTrace, Str) == 0x000000, "Member 'KuroStaticLibrary_DumpStackTrace::Str' has a wrong offset!");
 
 // Function KuroUtility.KuroStaticLibrary.EncompassesPoint
 // 0x0020 (0x0020 - 0x0000)
@@ -1561,6 +1608,45 @@ static_assert(sizeof(KuroStaticLibrary_GetEnableMobileLowStreaming) == 0x000010,
 static_assert(offsetof(KuroStaticLibrary_GetEnableMobileLowStreaming, Sequence) == 0x000000, "Member 'KuroStaticLibrary_GetEnableMobileLowStreaming::Sequence' has a wrong offset!");
 static_assert(offsetof(KuroStaticLibrary_GetEnableMobileLowStreaming, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetEnableMobileLowStreaming::ReturnValue' has a wrong offset!");
 
+// Function KuroUtility.KuroStaticLibrary.GetFileAccessTime
+// 0x0020 (0x0020 - 0x0000)
+struct KuroStaticLibrary_GetFileAccessTime final
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticLibrary_GetFileAccessTime) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFileAccessTime");
+static_assert(sizeof(KuroStaticLibrary_GetFileAccessTime) == 0x000020, "Wrong size on KuroStaticLibrary_GetFileAccessTime");
+static_assert(offsetof(KuroStaticLibrary_GetFileAccessTime, Path) == 0x000000, "Member 'KuroStaticLibrary_GetFileAccessTime::Path' has a wrong offset!");
+static_assert(offsetof(KuroStaticLibrary_GetFileAccessTime, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetFileAccessTime::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroStaticLibrary.GetFileCreationTime
+// 0x0020 (0x0020 - 0x0000)
+struct KuroStaticLibrary_GetFileCreationTime final
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticLibrary_GetFileCreationTime) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFileCreationTime");
+static_assert(sizeof(KuroStaticLibrary_GetFileCreationTime) == 0x000020, "Wrong size on KuroStaticLibrary_GetFileCreationTime");
+static_assert(offsetof(KuroStaticLibrary_GetFileCreationTime, Path) == 0x000000, "Member 'KuroStaticLibrary_GetFileCreationTime::Path' has a wrong offset!");
+static_assert(offsetof(KuroStaticLibrary_GetFileCreationTime, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetFileCreationTime::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroStaticLibrary.GetFileModificationTime
+// 0x0020 (0x0020 - 0x0000)
+struct KuroStaticLibrary_GetFileModificationTime final
+{
+public:
+	class FString                                 Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticLibrary_GetFileModificationTime) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetFileModificationTime");
+static_assert(sizeof(KuroStaticLibrary_GetFileModificationTime) == 0x000020, "Wrong size on KuroStaticLibrary_GetFileModificationTime");
+static_assert(offsetof(KuroStaticLibrary_GetFileModificationTime, Path) == 0x000000, "Member 'KuroStaticLibrary_GetFileModificationTime::Path' has a wrong offset!");
+static_assert(offsetof(KuroStaticLibrary_GetFileModificationTime, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetFileModificationTime::ReturnValue' has a wrong offset!");
+
 // Function KuroUtility.KuroStaticLibrary.GetFiles
 // 0x0030 (0x0030 - 0x0000)
 struct KuroStaticLibrary_GetFiles final
@@ -1658,6 +1744,20 @@ static_assert(sizeof(KuroStaticLibrary_GetLevelPrefabShowActor) == 0x000010, "Wr
 static_assert(offsetof(KuroStaticLibrary_GetLevelPrefabShowActor, Actor) == 0x000000, "Member 'KuroStaticLibrary_GetLevelPrefabShowActor::Actor' has a wrong offset!");
 static_assert(offsetof(KuroStaticLibrary_GetLevelPrefabShowActor, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetLevelPrefabShowActor::ReturnValue' has a wrong offset!");
 
+// Function KuroUtility.KuroStaticLibrary.GetLocalAdapterAddressesUint32
+// 0x0018 (0x0018 - 0x0000)
+struct KuroStaticLibrary_GetLocalAdapterAddressesUint32 final
+{
+public:
+	TArray<int32>                                 OutAddresses;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11[0x7];                                       // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroStaticLibrary_GetLocalAdapterAddressesUint32) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetLocalAdapterAddressesUint32");
+static_assert(sizeof(KuroStaticLibrary_GetLocalAdapterAddressesUint32) == 0x000018, "Wrong size on KuroStaticLibrary_GetLocalAdapterAddressesUint32");
+static_assert(offsetof(KuroStaticLibrary_GetLocalAdapterAddressesUint32, OutAddresses) == 0x000000, "Member 'KuroStaticLibrary_GetLocalAdapterAddressesUint32::OutAddresses' has a wrong offset!");
+static_assert(offsetof(KuroStaticLibrary_GetLocalAdapterAddressesUint32, ReturnValue) == 0x000010, "Member 'KuroStaticLibrary_GetLocalAdapterAddressesUint32::ReturnValue' has a wrong offset!");
+
 // Function KuroUtility.KuroStaticLibrary.GetLocalHostAddresses
 // 0x0018 (0x0018 - 0x0000)
 struct KuroStaticLibrary_GetLocalHostAddresses final
@@ -1710,6 +1810,17 @@ static_assert(offsetof(KuroStaticLibrary_GetNavPointData, Point) == 0x000020, "M
 static_assert(offsetof(KuroStaticLibrary_GetNavPointData, QueryExtent) == 0x00002C, "Member 'KuroStaticLibrary_GetNavPointData::QueryExtent' has a wrong offset!");
 static_assert(offsetof(KuroStaticLibrary_GetNavPointData, FilterClass) == 0x000038, "Member 'KuroStaticLibrary_GetNavPointData::FilterClass' has a wrong offset!");
 static_assert(offsetof(KuroStaticLibrary_GetNavPointData, ReturnValue) == 0x000040, "Member 'KuroStaticLibrary_GetNavPointData::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroStaticLibrary.GetOSVersion
+// 0x0010 (0x0010 - 0x0000)
+struct KuroStaticLibrary_GetOSVersion final
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticLibrary_GetOSVersion) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetOSVersion");
+static_assert(sizeof(KuroStaticLibrary_GetOSVersion) == 0x000010, "Wrong size on KuroStaticLibrary_GetOSVersion");
+static_assert(offsetof(KuroStaticLibrary_GetOSVersion, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetOSVersion::ReturnValue' has a wrong offset!");
 
 // Function KuroUtility.KuroStaticLibrary.GetPIEStartTimeInSeconds
 // 0x0004 (0x0004 - 0x0000)
@@ -1862,6 +1973,17 @@ static_assert(alignof(KuroStaticLibrary_GetVendorInfo) == 0x000008, "Wrong align
 static_assert(sizeof(KuroStaticLibrary_GetVendorInfo) == 0x000010, "Wrong size on KuroStaticLibrary_GetVendorInfo");
 static_assert(offsetof(KuroStaticLibrary_GetVendorInfo, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetVendorInfo::ReturnValue' has a wrong offset!");
 
+// Function KuroUtility.KuroStaticLibrary.GetVideoMemoryGB
+// 0x0004 (0x0004 - 0x0000)
+struct KuroStaticLibrary_GetVideoMemoryGB final
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticLibrary_GetVideoMemoryGB) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetVideoMemoryGB");
+static_assert(sizeof(KuroStaticLibrary_GetVideoMemoryGB) == 0x000004, "Wrong size on KuroStaticLibrary_GetVideoMemoryGB");
+static_assert(offsetof(KuroStaticLibrary_GetVideoMemoryGB, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetVideoMemoryGB::ReturnValue' has a wrong offset!");
+
 // Function KuroUtility.KuroStaticLibrary.GetViewPortMousePosition
 // 0x0008 (0x0008 - 0x0000)
 struct KuroStaticLibrary_GetViewPortMousePosition final
@@ -1872,6 +1994,34 @@ public:
 static_assert(alignof(KuroStaticLibrary_GetViewPortMousePosition) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetViewPortMousePosition");
 static_assert(sizeof(KuroStaticLibrary_GetViewPortMousePosition) == 0x000008, "Wrong size on KuroStaticLibrary_GetViewPortMousePosition");
 static_assert(offsetof(KuroStaticLibrary_GetViewPortMousePosition, ReturnValue) == 0x000000, "Member 'KuroStaticLibrary_GetViewPortMousePosition::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroStaticLibrary.GetViewPortMousePosition2
+// 0x000C (0x000C - 0x0000)
+struct KuroStaticLibrary_GetViewPortMousePosition2 final
+{
+public:
+	struct FVector2D                              MousePos;                                          // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x3];                                        // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroStaticLibrary_GetViewPortMousePosition2) == 0x000004, "Wrong alignment on KuroStaticLibrary_GetViewPortMousePosition2");
+static_assert(sizeof(KuroStaticLibrary_GetViewPortMousePosition2) == 0x00000C, "Wrong size on KuroStaticLibrary_GetViewPortMousePosition2");
+static_assert(offsetof(KuroStaticLibrary_GetViewPortMousePosition2, MousePos) == 0x000000, "Member 'KuroStaticLibrary_GetViewPortMousePosition2::MousePos' has a wrong offset!");
+static_assert(offsetof(KuroStaticLibrary_GetViewPortMousePosition2, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetViewPortMousePosition2::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroStaticLibrary.GetWholeStatUnitInfo
+// 0x0018 (0x0018 - 0x0000)
+struct KuroStaticLibrary_GetWholeStatUnitInfo final
+{
+public:
+	float                                         Timespan;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroStaticLibrary_GetWholeStatUnitInfo) == 0x000008, "Wrong alignment on KuroStaticLibrary_GetWholeStatUnitInfo");
+static_assert(sizeof(KuroStaticLibrary_GetWholeStatUnitInfo) == 0x000018, "Wrong size on KuroStaticLibrary_GetWholeStatUnitInfo");
+static_assert(offsetof(KuroStaticLibrary_GetWholeStatUnitInfo, Timespan) == 0x000000, "Member 'KuroStaticLibrary_GetWholeStatUnitInfo::Timespan' has a wrong offset!");
+static_assert(offsetof(KuroStaticLibrary_GetWholeStatUnitInfo, ReturnValue) == 0x000008, "Member 'KuroStaticLibrary_GetWholeStatUnitInfo::ReturnValue' has a wrong offset!");
 
 // Function KuroUtility.KuroStaticLibrary.HashStringWithSHA1
 // 0x0020 (0x0020 - 0x0000)
@@ -2612,6 +2762,61 @@ static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, FileName) == 0x00001
 static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, bPublic) == 0x000020, "Member 'KuroStaticLibrary_WriteStringToFile::bPublic' has a wrong offset!");
 static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, bWithBom) == 0x000021, "Member 'KuroStaticLibrary_WriteStringToFile::bWithBom' has a wrong offset!");
 static_assert(offsetof(KuroStaticLibrary_WriteStringToFile, ReturnValue) == 0x000022, "Member 'KuroStaticLibrary_WriteStringToFile::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsDeviceAMD
+// 0x0001 (0x0001 - 0x0000)
+struct KuroFFXFSR3BlueprintLibrary_IsDeviceAMD final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroFFXFSR3BlueprintLibrary_IsDeviceAMD) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_IsDeviceAMD");
+static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_IsDeviceAMD) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_IsDeviceAMD");
+static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_IsDeviceAMD, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_IsDeviceAMD::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsGlobalSwitchOn
+// 0x0001 (0x0001 - 0x0000)
+struct KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn");
+static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn");
+static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsSupported
+// 0x0001 (0x0001 - 0x0000)
+struct KuroFFXFSR3BlueprintLibrary_IsSupported final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroFFXFSR3BlueprintLibrary_IsSupported) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_IsSupported");
+static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_IsSupported) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_IsSupported");
+static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_IsSupported, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_IsSupported::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.SupportFI
+// 0x0001 (0x0001 - 0x0000)
+struct KuroFFXFSR3BlueprintLibrary_SupportFI final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroFFXFSR3BlueprintLibrary_SupportFI) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_SupportFI");
+static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_SupportFI) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_SupportFI");
+static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_SupportFI, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_SupportFI::ReturnValue' has a wrong offset!");
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.SupportFSR3
+// 0x0001 (0x0001 - 0x0000)
+struct KuroFFXFSR3BlueprintLibrary_SupportFSR3 final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroFFXFSR3BlueprintLibrary_SupportFSR3) == 0x000001, "Wrong alignment on KuroFFXFSR3BlueprintLibrary_SupportFSR3");
+static_assert(sizeof(KuroFFXFSR3BlueprintLibrary_SupportFSR3) == 0x000001, "Wrong size on KuroFFXFSR3BlueprintLibrary_SupportFSR3");
+static_assert(offsetof(KuroFFXFSR3BlueprintLibrary_SupportFSR3, ReturnValue) == 0x000000, "Member 'KuroFFXFSR3BlueprintLibrary_SupportFSR3::ReturnValue' has a wrong offset!");
 
 // Function KuroUtility.KuroStaticPS5Library.AbortTrophyHandleAsync
 // 0x0030 (0x0030 - 0x0000)

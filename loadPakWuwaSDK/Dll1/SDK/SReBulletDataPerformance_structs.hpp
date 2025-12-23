@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SBulletEffectOnHitConf_structs.hpp"
 #include "EBulletEffectParam_structs.hpp"
 #include "EBulletSpecificEffect_structs.hpp"
 #include "EBulletHitEffect_structs.hpp"
+#include "SBulletEffectOnHitConf_structs.hpp"
 
 
 namespace SDK

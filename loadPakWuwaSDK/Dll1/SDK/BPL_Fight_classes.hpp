@@ -33,7 +33,7 @@ public:
 	static void 计算向量曲线值(float 已经经过时间, float 总时间, class UCurveVector* 向量曲线, class UObject* __WorldContext, struct FVector* 向量值);
 	static void 获取目标周围坐标点(const struct FRotator& 目标旋转, const struct FVectorDouble& 目标坐标, float 旋转, float 仰角, float 长度, class UObject* __WorldContext, struct FVectorDouble* 坐标点);
 	static void 设置材质效果(class ATsBaseCharacter_C* 设置对象, class UPD_CharacterControllerData_C* 材质配置, class UObject* __WorldContext, int32* Handle);
-	static void 删除材质效果(class ATsBaseCharacter_C* 设置对象_, int32 Handle_, class UObject* __WorldContext);
+	static void 删除材质效果(class ATsBaseCharacter_C* 设置对象_, int32 Handle_, bool PlayWithEnd, class UObject* __WorldContext);
 
 	static void 反应伤害倍率计算(float 角色1反应精通, float 角色2反应精通, class UObject* __WorldContext, float* Result);
 

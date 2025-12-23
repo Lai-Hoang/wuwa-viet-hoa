@@ -37,23 +37,37 @@ void ABP_ControlTodTime_C::ExecuteUbergraph_BP_ControlTodTime(int32 EntryPoint)
 }
 
 
-// Function BP_ControlTodTime.BP_ControlTodTime_C.EditorTick
-// (Event, Public, BlueprintEvent)
+// Function BP_ControlTodTime.BP_ControlTodTime_C.DoUpdate
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   DeltaTime                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_ControlTodTime_C::EditorTick(float DeltaSeconds)
+void ABP_ControlTodTime_C::DoUpdate(float DeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ControlTodTime_C", "EditorTick");
+		Func = Class->GetFunction("BP_ControlTodTime_C", "DoUpdate");
 
-	Params::BP_ControlTodTime_C_EditorTick Parms{};
+	Params::BP_ControlTodTime_C_DoUpdate Parms{};
 
-	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.DeltaTime = DeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_ControlTodTime.BP_ControlTodTime_C.ReceiveDestroyed
+// (Event, Public, BlueprintEvent)
+
+void ABP_ControlTodTime_C::ReceiveDestroyed()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_ControlTodTime_C", "ReceiveDestroyed");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -86,40 +100,6 @@ void ABP_ControlTodTime_C::ReceiveBeginPlay()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("BP_ControlTodTime_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_ControlTodTime.BP_ControlTodTime_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_ControlTodTime_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ControlTodTime_C", "ReceiveTick");
-
-	Params::BP_ControlTodTime_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_ControlTodTime.BP_ControlTodTime_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_ControlTodTime_C::UserConstructionScript()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_ControlTodTime_C", "UserConstructionScript");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

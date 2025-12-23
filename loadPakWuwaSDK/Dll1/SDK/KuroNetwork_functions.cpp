@@ -166,6 +166,72 @@ void UKuroHttp::PostRpt(const class FString& ContentStr, bool IsGlobal, TDelegat
 }
 
 
+// Function KuroNetwork.KuroHttp.PostRpt1
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    ContentStr                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Content1Str                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    IsGlobal                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)>Handle                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// float                                   InTimeoutSecs                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroHttp::PostRpt1(const class FString& ContentStr, const class FString& Content1Str, bool IsGlobal, TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)> Handle, float InTimeoutSecs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroHttp", "PostRpt1");
+
+	Params::KuroHttp_PostRpt1 Parms{};
+
+	Parms.ContentStr = std::move(ContentStr);
+	Parms.Content1Str = std::move(Content1Str);
+	Parms.IsGlobal = IsGlobal;
+	Parms.Handle = Handle;
+	Parms.InTimeoutSecs = InTimeoutSecs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroNetwork.KuroHttp.PostRpt2
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    Url                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    ContentStr                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    Content1Str                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)>Handle                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// float                                   InTimeoutSecs                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroHttp::PostRpt2(const class FString& Url, const class FString& ContentStr, const class FString& Content1Str, TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)> Handle, float InTimeoutSecs)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroHttp", "PostRpt2");
+
+	Params::KuroHttp_PostRpt2 Parms{};
+
+	Parms.Url = std::move(Url);
+	Parms.ContentStr = std::move(ContentStr);
+	Parms.Content1Str = std::move(Content1Str);
+	Parms.Handle = Handle;
+	Parms.InTimeoutSecs = InTimeoutSecs;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroNetwork.KuroHttpServerRequestProxy.GetHeader
 // (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -338,6 +404,91 @@ void UKuroKcpClient::CloseTcpConnect()
 }
 
 
+// Function KuroNetwork.KuroKcpClient.Connect
+// (Final, Native, Public)
+// Parameters:
+// const class FString&                    Addr                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             Port                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              CrcCheckDisable                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroKcpClient::Connect(const class FString& Addr, const int32 Port, const bool CrcCheckDisable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroKcpClient", "Connect");
+
+	Params::KuroKcpClient_Connect Parms{};
+
+	Parms.Addr = std::move(Addr);
+	Parms.Port = Port;
+	Parms.CrcCheckDisable = CrcCheckDisable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroNetwork.KuroKcpClient.Disconnect
+// (Final, Native, Public)
+
+void UKuroKcpClient::Disconnect()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroKcpClient", "Disconnect");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroNetwork.KuroKcpClient.GetDebugString
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// const struct FArrayBuffer&              ArrayBuffer                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const class FString&                    Separator                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int16                                   MsgId                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SeqNo                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroKcpClient::GetDebugString(const struct FArrayBuffer& ArrayBuffer, const class FString& Separator, int16 MsgId, int32 SeqNo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroKcpClient", "GetDebugString");
+
+	Params::KuroKcpClient_GetDebugString Parms{};
+
+	Parms.ArrayBuffer = std::move(ArrayBuffer);
+	Parms.Separator = std::move(Separator);
+	Parms.MsgId = MsgId;
+	Parms.SeqNo = SeqNo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroNetwork.KuroKcpClient.HandleKcpConnect
 // (Final, Native, Public)
 // Parameters:
@@ -400,6 +551,44 @@ void UKuroKcpClient::HandleTcpConnectFailed()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroNetwork.KuroKcpClient.SendM
+// (Final, Native, Public, HasOutParams)
+// Parameters:
+// int8                                    MsgType                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SeqNo                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int16                                   RpcId                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int16                                   MsgId                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FArrayBuffer&              ArrayBuffer                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    UseKcp                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroKcpClient::SendM(int8 MsgType, int32 SeqNo, int16 RpcId, int16 MsgId, const struct FArrayBuffer& ArrayBuffer, bool UseKcp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroKcpClient", "SendM");
+
+	Params::KuroKcpClient_SendM Parms{};
+
+	Parms.MsgType = MsgType;
+	Parms.SeqNo = SeqNo;
+	Parms.RpcId = RpcId;
+	Parms.MsgId = MsgId;
+	Parms.ArrayBuffer = std::move(ArrayBuffer);
+	Parms.UseKcp = UseKcp;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

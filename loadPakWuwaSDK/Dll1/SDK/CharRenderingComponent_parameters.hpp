@@ -10,18 +10,120 @@
 
 #include "Basic.hpp"
 
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ECharacterSlotSpecifiedType_structs.hpp"
-#include "ECharacterDitherType_structs.hpp"
 #include "ECharacterControllerCaseType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ECharacterDitherType_structs.hpp"
 #include "ECharacterBodySpecifiedType_structs.hpp"
+#include "ECharacterSlotSpecifiedType_structs.hpp"
 #include "ECharacterRenderingType_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function CharRenderingComponent.CharRenderingComponent_C.QuickInitAndAddData
+// 0x0018 (0x0018 - 0x0000)
+struct CharRenderingComponent_C_QuickInitAndAddData final
+{
+public:
+	class UObject*                                data;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ASkeletalMeshActor*                     meshActor;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharRenderingComponent_C_QuickInitAndAddData) == 0x000008, "Wrong alignment on CharRenderingComponent_C_QuickInitAndAddData");
+static_assert(sizeof(CharRenderingComponent_C_QuickInitAndAddData) == 0x000018, "Wrong size on CharRenderingComponent_C_QuickInitAndAddData");
+static_assert(offsetof(CharRenderingComponent_C_QuickInitAndAddData, data) == 0x000000, "Member 'CharRenderingComponent_C_QuickInitAndAddData::data' has a wrong offset!");
+static_assert(offsetof(CharRenderingComponent_C_QuickInitAndAddData, meshActor) == 0x000008, "Member 'CharRenderingComponent_C_QuickInitAndAddData::meshActor' has a wrong offset!");
+static_assert(offsetof(CharRenderingComponent_C_QuickInitAndAddData, ReturnValue) == 0x000010, "Member 'CharRenderingComponent_C_QuickInitAndAddData::ReturnValue' has a wrong offset!");
+
+// Function CharRenderingComponent.CharRenderingComponent_C.GetInAudioShr
+// 0x0001 (0x0001 - 0x0000)
+struct CharRenderingComponent_C_GetInAudioShr final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(CharRenderingComponent_C_GetInAudioShr) == 0x000001, "Wrong alignment on CharRenderingComponent_C_GetInAudioShr");
+static_assert(sizeof(CharRenderingComponent_C_GetInAudioShr) == 0x000001, "Wrong size on CharRenderingComponent_C_GetInAudioShr");
+static_assert(offsetof(CharRenderingComponent_C_GetInAudioShr, ReturnValue) == 0x000000, "Member 'CharRenderingComponent_C_GetInAudioShr::ReturnValue' has a wrong offset!");
+
+// Function CharRenderingComponent.CharRenderingComponent_C.SetDitherUseHeadMaskHideEffect
+// 0x0001 (0x0001 - 0x0000)
+struct CharRenderingComponent_C_SetDitherUseHeadMaskHideEffect final
+{
+public:
+	bool                                          enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(CharRenderingComponent_C_SetDitherUseHeadMaskHideEffect) == 0x000001, "Wrong alignment on CharRenderingComponent_C_SetDitherUseHeadMaskHideEffect");
+static_assert(sizeof(CharRenderingComponent_C_SetDitherUseHeadMaskHideEffect) == 0x000001, "Wrong size on CharRenderingComponent_C_SetDitherUseHeadMaskHideEffect");
+static_assert(offsetof(CharRenderingComponent_C_SetDitherUseHeadMaskHideEffect, enable) == 0x000000, "Member 'CharRenderingComponent_C_SetDitherUseHeadMaskHideEffect::enable' has a wrong offset!");
+
+// Function CharRenderingComponent.CharRenderingComponent_C.SetShouldCastShadow
+// 0x0001 (0x0001 - 0x0000)
+struct CharRenderingComponent_C_SetShouldCastShadow final
+{
+public:
+	bool                                          castShadow;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(CharRenderingComponent_C_SetShouldCastShadow) == 0x000001, "Wrong alignment on CharRenderingComponent_C_SetShouldCastShadow");
+static_assert(sizeof(CharRenderingComponent_C_SetShouldCastShadow) == 0x000001, "Wrong size on CharRenderingComponent_C_SetShouldCastShadow");
+static_assert(offsetof(CharRenderingComponent_C_SetShouldCastShadow, castShadow) == 0x000000, "Member 'CharRenderingComponent_C_SetShouldCastShadow::castShadow' has a wrong offset!");
+
+// Function CharRenderingComponent.CharRenderingComponent_C.GetOpacityConsiderVisibility
+// 0x0004 (0x0004 - 0x0000)
+struct CharRenderingComponent_C_GetOpacityConsiderVisibility final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharRenderingComponent_C_GetOpacityConsiderVisibility) == 0x000004, "Wrong alignment on CharRenderingComponent_C_GetOpacityConsiderVisibility");
+static_assert(sizeof(CharRenderingComponent_C_GetOpacityConsiderVisibility) == 0x000004, "Wrong size on CharRenderingComponent_C_GetOpacityConsiderVisibility");
+static_assert(offsetof(CharRenderingComponent_C_GetOpacityConsiderVisibility, ReturnValue) == 0x000000, "Member 'CharRenderingComponent_C_GetOpacityConsiderVisibility::ReturnValue' has a wrong offset!");
+
+// Function CharRenderingComponent.CharRenderingComponent_C.SetEffectGroupProgress
+// 0x0008 (0x0008 - 0x0000)
+struct CharRenderingComponent_C_SetEffectGroupProgress final
+{
+public:
+	float                                         progress;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         groupHandleId;                                     // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharRenderingComponent_C_SetEffectGroupProgress) == 0x000004, "Wrong alignment on CharRenderingComponent_C_SetEffectGroupProgress");
+static_assert(sizeof(CharRenderingComponent_C_SetEffectGroupProgress) == 0x000008, "Wrong size on CharRenderingComponent_C_SetEffectGroupProgress");
+static_assert(offsetof(CharRenderingComponent_C_SetEffectGroupProgress, progress) == 0x000000, "Member 'CharRenderingComponent_C_SetEffectGroupProgress::progress' has a wrong offset!");
+static_assert(offsetof(CharRenderingComponent_C_SetEffectGroupProgress, groupHandleId) == 0x000004, "Member 'CharRenderingComponent_C_SetEffectGroupProgress::groupHandleId' has a wrong offset!");
+
+// Function CharRenderingComponent.CharRenderingComponent_C.AddFloatUpdateParamPermanentByIndexV2
+// 0x0020 (0x0020 - 0x0000)
+struct CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2 final
+{
+public:
+	class FName                                   name;                                              // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         value;                                             // 0x000C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   bodyName;                                          // 0x0010(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         materialIndex;                                     // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2) == 0x000004, "Wrong alignment on CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2");
+static_assert(sizeof(CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2) == 0x000020, "Wrong size on CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2");
+static_assert(offsetof(CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2, name) == 0x000000, "Member 'CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2::name' has a wrong offset!");
+static_assert(offsetof(CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2, value) == 0x00000C, "Member 'CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2::value' has a wrong offset!");
+static_assert(offsetof(CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2, bodyName) == 0x000010, "Member 'CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2::bodyName' has a wrong offset!");
+static_assert(offsetof(CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2, materialIndex) == 0x00001C, "Member 'CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2::materialIndex' has a wrong offset!");
+
+// Function CharRenderingComponent.CharRenderingComponent_C.GetSkeletalMeshComponentBodyName
+// 0x0018 (0x0018 - 0x0000)
+struct CharRenderingComponent_C_GetSkeletalMeshComponentBodyName final
+{
+public:
+	class USkeletalMeshComponent*                 skeletalComp;                                      // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ReturnValue;                                       // 0x0008(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CharRenderingComponent_C_GetSkeletalMeshComponentBodyName) == 0x000008, "Wrong alignment on CharRenderingComponent_C_GetSkeletalMeshComponentBodyName");
+static_assert(sizeof(CharRenderingComponent_C_GetSkeletalMeshComponentBodyName) == 0x000018, "Wrong size on CharRenderingComponent_C_GetSkeletalMeshComponentBodyName");
+static_assert(offsetof(CharRenderingComponent_C_GetSkeletalMeshComponentBodyName, skeletalComp) == 0x000000, "Member 'CharRenderingComponent_C_GetSkeletalMeshComponentBodyName::skeletalComp' has a wrong offset!");
+static_assert(offsetof(CharRenderingComponent_C_GetSkeletalMeshComponentBodyName, ReturnValue) == 0x000008, "Member 'CharRenderingComponent_C_GetSkeletalMeshComponentBodyName::ReturnValue' has a wrong offset!");
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveExternalMaterialReplaceV2
 // 0x0003 (0x0003 - 0x0000)
@@ -147,19 +249,6 @@ static_assert(alignof(CharRenderingComponent_C_SetStarScarEnergy) == 0x000004, "
 static_assert(sizeof(CharRenderingComponent_C_SetStarScarEnergy) == 0x000004, "Wrong size on CharRenderingComponent_C_SetStarScarEnergy");
 static_assert(offsetof(CharRenderingComponent_C_SetStarScarEnergy, value) == 0x000000, "Member 'CharRenderingComponent_C_SetStarScarEnergy::value' has a wrong offset!");
 
-// Function CharRenderingComponent.CharRenderingComponent_C.AddComponentWithEmptyMaterial
-// 0x0018 (0x0018 - 0x0000)
-struct CharRenderingComponent_C_AddComponentWithEmptyMaterial final
-{
-public:
-	class FString                                 skelName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-	class UMeshComponent*                         skeletalComp;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(CharRenderingComponent_C_AddComponentWithEmptyMaterial) == 0x000008, "Wrong alignment on CharRenderingComponent_C_AddComponentWithEmptyMaterial");
-static_assert(sizeof(CharRenderingComponent_C_AddComponentWithEmptyMaterial) == 0x000018, "Wrong size on CharRenderingComponent_C_AddComponentWithEmptyMaterial");
-static_assert(offsetof(CharRenderingComponent_C_AddComponentWithEmptyMaterial, skelName) == 0x000000, "Member 'CharRenderingComponent_C_AddComponentWithEmptyMaterial::skelName' has a wrong offset!");
-static_assert(offsetof(CharRenderingComponent_C_AddComponentWithEmptyMaterial, skeletalComp) == 0x000010, "Member 'CharRenderingComponent_C_AddComponentWithEmptyMaterial::skeletalComp' has a wrong offset!");
-
 // Function CharRenderingComponent.CharRenderingComponent_C.GetSkeletalMeshComponent
 // 0x0018 (0x0018 - 0x0000)
 struct CharRenderingComponent_C_GetSkeletalMeshComponent final
@@ -173,20 +262,18 @@ static_assert(sizeof(CharRenderingComponent_C_GetSkeletalMeshComponent) == 0x000
 static_assert(offsetof(CharRenderingComponent_C_GetSkeletalMeshComponent, skelName) == 0x000000, "Member 'CharRenderingComponent_C_GetSkeletalMeshComponent::skelName' has a wrong offset!");
 static_assert(offsetof(CharRenderingComponent_C_GetSkeletalMeshComponent, ReturnValue) == 0x000010, "Member 'CharRenderingComponent_C_GetSkeletalMeshComponent::ReturnValue' has a wrong offset!");
 
-// Function CharRenderingComponent.CharRenderingComponent_C.QuickInitAndAddData
+// Function CharRenderingComponent.CharRenderingComponent_C.AddComponentWithEmptyMaterial
 // 0x0018 (0x0018 - 0x0000)
-struct CharRenderingComponent_C_QuickInitAndAddData final
+struct CharRenderingComponent_C_AddComponentWithEmptyMaterial final
 {
 public:
-	class UObject*                                data;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ASkeletalMeshActor*                     meshActor;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 skelName;                                          // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UMeshComponent*                         skeletalComp;                                      // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(CharRenderingComponent_C_QuickInitAndAddData) == 0x000008, "Wrong alignment on CharRenderingComponent_C_QuickInitAndAddData");
-static_assert(sizeof(CharRenderingComponent_C_QuickInitAndAddData) == 0x000018, "Wrong size on CharRenderingComponent_C_QuickInitAndAddData");
-static_assert(offsetof(CharRenderingComponent_C_QuickInitAndAddData, data) == 0x000000, "Member 'CharRenderingComponent_C_QuickInitAndAddData::data' has a wrong offset!");
-static_assert(offsetof(CharRenderingComponent_C_QuickInitAndAddData, meshActor) == 0x000008, "Member 'CharRenderingComponent_C_QuickInitAndAddData::meshActor' has a wrong offset!");
-static_assert(offsetof(CharRenderingComponent_C_QuickInitAndAddData, ReturnValue) == 0x000010, "Member 'CharRenderingComponent_C_QuickInitAndAddData::ReturnValue' has a wrong offset!");
+static_assert(alignof(CharRenderingComponent_C_AddComponentWithEmptyMaterial) == 0x000008, "Wrong alignment on CharRenderingComponent_C_AddComponentWithEmptyMaterial");
+static_assert(sizeof(CharRenderingComponent_C_AddComponentWithEmptyMaterial) == 0x000018, "Wrong size on CharRenderingComponent_C_AddComponentWithEmptyMaterial");
+static_assert(offsetof(CharRenderingComponent_C_AddComponentWithEmptyMaterial, skelName) == 0x000000, "Member 'CharRenderingComponent_C_AddComponentWithEmptyMaterial::skelName' has a wrong offset!");
+static_assert(offsetof(CharRenderingComponent_C_AddComponentWithEmptyMaterial, skeletalComp) == 0x000010, "Member 'CharRenderingComponent_C_AddComponentWithEmptyMaterial::skeletalComp' has a wrong offset!");
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetEffectPause
 // 0x0008 (0x0008 - 0x0000)

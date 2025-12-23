@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "SAiLevelVar_structs.hpp"
-#include "SAiConditions_structs.hpp"
-#include "ECharacterState_structs.hpp"
 #include "GameplayTags_structs.hpp"
+#include "ECharacterState_structs.hpp"
+#include "SAiConditions_structs.hpp"
 
 
 namespace SDK::Params

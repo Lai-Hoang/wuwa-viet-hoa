@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "EInputAction_structs.hpp"
+#include "ERelation_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "EInputAction_structs.hpp"
 #include "EInputState_structs.hpp"
-#include "EDetachType_structs.hpp"
-#include "EWuYinQuState_structs.hpp"
-#include "ERelation_structs.hpp"
-#include "EWeatherState_structs.hpp"
 #include "EPawnChannel_structs.hpp"
+#include "EDetachType_structs.hpp"
+#include "EWeatherState_structs.hpp"
+#include "EWuYinQuState_structs.hpp"
 
 
 namespace SDK
@@ -158,16 +158,35 @@ public:
 	static void SetRotatorValuesByEntity(int32 entityId, const class FString& key, TArray<struct FRotator>& values, class UObject* __WorldContext);
 	static TArray<int32> GetEntitiesInRange(int32 distance, ERelation relation, class UObject* __WorldContext);
 	static bool AttachToActor(class UObject* callObject1, class AActor* actor1, class AActor* parentActor1, EDetachType detachType1, const class FString& reason1, class FName socketName1, EAttachmentRule locationRule1, EAttachmentRule rotationRule1, EAttachmentRule scaleRule1, bool bWeldSimulatedBodies1, bool doAttach, class UObject* __WorldContext);
-	static int32 GetPlayerFollower(class UObject* __WorldContext);
 	static bool AttachToComponent(class UObject* callObject, class AActor* actor, class USceneComponent* parentComponent, EDetachType detachType, const class FString& reason, class FName socketName, EAttachmentRule locationRule, EAttachmentRule rotationRule, EAttachmentRule scaleRule, bool bWeldSimulatedBodies, bool doAttach, class UObject* __WorldContext);
 	static bool DetachActor(class UObject* callObject, class AActor* srcActor, bool destroy, const class FString& reason, EDetachmentRule locationRule, EDetachmentRule rotationRule, EDetachmentRule scaleRule, class UObject* __WorldContext);
-	static bool IsPlayerFollowerEnable(class UObject* __WorldContext);
-	static void SetPlayerFollowerEnable(bool enable, class UObject* __WorldContext);
 	static bool IsPlayerFollowerNeedInput(EInputAction action, EInputState state, class UObject* __WorldContext);
 	static void RegisterToBpActorController(class FName groupTag, TScriptInterface<class IBPI_SceneBp_C> sceneBp, class UObject* __WorldContext);
 	static void UnregisterToBpActorController(class FName groupTag, TScriptInterface<class IBPI_SceneBp_C> sceneBp, class UObject* __WorldContext);
 	static void SummonRandomRequest(int32 summonerId, int32 index, const struct FTransformDouble& transform, int32 skillId, bool isVisible, class UObject* __WorldContext);
 	static int32 GetSummonRandomEntity(int32 summonerId, int32 index, class UObject* __WorldContext);
+	static bool GetTrapDefenseUseBpUsing(class UObject* __WorldContext);
+	static void DisableAllRoleWithoutControl(bool needEffect, class UObject* __WorldContext);
+	static TArray<class AActor*> GetFormationActors(class UObject* __WorldContext);
+	static TArray<int32> GetEntityBindGroup(int32 entityId, class UObject* __WorldContext);
+	static TArray<int32> GetVisionEntityIdList(int32 ownerEntityId, class UObject* __WorldContext);
+	static void SetVisionPos(int32 ownerEntityId, int32 pos, class UObject* __WorldContext);
+	static int32 GetVisionPos(int32 ownerEntityId, class UObject* __WorldContext);
+	static int32 PlayerEntityId(class UObject* __WorldContext);
+	static class UBP_FollowShooterConfig_C* GetFollowerShooterConfig(int32 entityId, class UObject* __WorldContext);
+	static class FName GetGameplayTagOriginName(const struct FGameplayTag& gameplayTag, class UObject* __WorldContext);
+	static int32 CurrentFrontRoleEntityId(class UObject* __WorldContext);
+	static int32 GetPlayerFollower(class UObject* __WorldContext);
+	static bool IsPlayerFollowerEnable(class UObject* __WorldContext);
+	static void SetPlayerFollowerEnable(bool enable, class UObject* __WorldContext);
+	static int32 GetPlayerFollowerMotor(class UObject* __WorldContext);
+	static void SetPlayerFollowerMotorEnable(bool enable, class UObject* __WorldContext);
+	static bool IsPlayerFollowerMotorEnable(class UObject* __WorldContext);
+	static void RegisterDayNightBpToBpActorController(TScriptInterface<class IBPI_DayNightEvent_C> dayNightBp, class UObject* __WorldContext);
+	static void UnregisterDayNightBpToBpActorController(TScriptInterface<class IBPI_DayNightEvent_C> dayNightBp, class UObject* __WorldContext);
+	static void SetPlayerFollowerCustomEntityId(const class FString& customKey, int32 entityId, class UObject* __WorldContext);
+	static void RemovePlayerFollowerCustomEntityId(const class FString& customKey, class UObject* __WorldContext);
+	static void ShowTipsByTextId(const class FString& textId, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

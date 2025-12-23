@@ -36,22 +36,24 @@ struct FKuroBuildingGridRaycastResult final
 public:
 	TWeakObjectPtr<class AKuroBuildingGrid>       Grid;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class UObject>                 Target;                                            // 0x0008(0x0008)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DegreeAlongNormal;                                 // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroBuildingGridCellVector            Coords;                                            // 0x0014(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          Location;                                          // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Normal;                                            // 0x0038(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_44[0xC];                                       // 0x0044(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	TWeakObjectPtr<class UObject>                 RaycastTarget;                                     // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DegreeAlongNormal;                                 // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKuroBuildingGridCellVector            Coords;                                            // 0x001C(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          Location;                                          // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Normal;                                            // 0x0040(0x000C)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4C[0x4];                                       // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  Rotation;                                          // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FKuroBuildingGridRaycastResult) == 0x000010, "Wrong alignment on FKuroBuildingGridRaycastResult");
 static_assert(sizeof(FKuroBuildingGridRaycastResult) == 0x000060, "Wrong size on FKuroBuildingGridRaycastResult");
 static_assert(offsetof(FKuroBuildingGridRaycastResult, Grid) == 0x000000, "Member 'FKuroBuildingGridRaycastResult::Grid' has a wrong offset!");
 static_assert(offsetof(FKuroBuildingGridRaycastResult, Target) == 0x000008, "Member 'FKuroBuildingGridRaycastResult::Target' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, DegreeAlongNormal) == 0x000010, "Member 'FKuroBuildingGridRaycastResult::DegreeAlongNormal' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Coords) == 0x000014, "Member 'FKuroBuildingGridRaycastResult::Coords' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Location) == 0x000020, "Member 'FKuroBuildingGridRaycastResult::Location' has a wrong offset!");
-static_assert(offsetof(FKuroBuildingGridRaycastResult, Normal) == 0x000038, "Member 'FKuroBuildingGridRaycastResult::Normal' has a wrong offset!");
+static_assert(offsetof(FKuroBuildingGridRaycastResult, RaycastTarget) == 0x000010, "Member 'FKuroBuildingGridRaycastResult::RaycastTarget' has a wrong offset!");
+static_assert(offsetof(FKuroBuildingGridRaycastResult, DegreeAlongNormal) == 0x000018, "Member 'FKuroBuildingGridRaycastResult::DegreeAlongNormal' has a wrong offset!");
+static_assert(offsetof(FKuroBuildingGridRaycastResult, Coords) == 0x00001C, "Member 'FKuroBuildingGridRaycastResult::Coords' has a wrong offset!");
+static_assert(offsetof(FKuroBuildingGridRaycastResult, Location) == 0x000028, "Member 'FKuroBuildingGridRaycastResult::Location' has a wrong offset!");
+static_assert(offsetof(FKuroBuildingGridRaycastResult, Normal) == 0x000040, "Member 'FKuroBuildingGridRaycastResult::Normal' has a wrong offset!");
 static_assert(offsetof(FKuroBuildingGridRaycastResult, Rotation) == 0x000050, "Member 'FKuroBuildingGridRaycastResult::Rotation' has a wrong offset!");
 
 }

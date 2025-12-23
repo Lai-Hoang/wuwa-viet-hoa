@@ -22,7 +22,6 @@ class UBulletBlueprintFunctionLibrary_C final : public UBlueprintFunctionLibrary
 {
 public:
 	static class AActor* GetBulletActorById(int32 id, class UObject* __WorldContext);
-	static bool DestroyBullet(int32 id, bool isSummonChildBullet, class UObject* __WorldContext);
 	static void FrozenBulletTimeByBulletName(class ATsBaseCharacter_C* character, const class FString& bulletDataName, float time, class UObject* __WorldContext);
 	static void SetEntityIdByCustomKey(int32 attackerId, const class FString& customKey, int32 targetId, class UObject* __WorldContext);
 	static TArray<int32> GetAllBullet(class UObject* __WorldContext);
@@ -53,6 +52,7 @@ public:
 	static class FString GetSpecialBulletToSkillId(const class FString& bulletRowName, const class FString& skillId, class UObject* __WorldContext);
 	static int32 GetSpecifiedBulletCount(int32 ownerId, class FName bulletName, class UObject* __WorldContext);
 	static void DestroySpecifiedBullet(int32 ownerId, class FName bulletName, bool summonChild, int32 includeTeammate, float interval, class UObject* __WorldContext);
+	static bool DestroyBullet(int32 id, bool isSummonChildBullet, bool destroyEffectImmediately, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

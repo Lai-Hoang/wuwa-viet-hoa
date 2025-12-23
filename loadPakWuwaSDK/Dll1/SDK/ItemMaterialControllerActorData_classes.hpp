@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Engine_classes.hpp"
 #include "KuroCurve_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
-#include "Engine_classes.hpp"
 
 
 namespace SDK

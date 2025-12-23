@@ -14,6 +14,17 @@
 namespace SDK::Params
 {
 
+// Function BPI_SceneBp.BPI_SceneBp_C.ShouldStopOnHide
+// 0x0001 (0x0001 - 0x0000)
+struct BPI_SceneBp_C_ShouldStopOnHide final
+{
+public:
+	bool                                          ret;                                               // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BPI_SceneBp_C_ShouldStopOnHide) == 0x000001, "Wrong alignment on BPI_SceneBp_C_ShouldStopOnHide");
+static_assert(sizeof(BPI_SceneBp_C_ShouldStopOnHide) == 0x000001, "Wrong size on BPI_SceneBp_C_ShouldStopOnHide");
+static_assert(offsetof(BPI_SceneBp_C_ShouldStopOnHide, ret) == 0x000000, "Member 'BPI_SceneBp_C_ShouldStopOnHide::ret' has a wrong offset!");
+
 // Function BPI_SceneBp.BPI_SceneBp_C.GetAoiRange
 // 0x0004 (0x0004 - 0x0000)
 struct BPI_SceneBp_C_GetAoiRange final

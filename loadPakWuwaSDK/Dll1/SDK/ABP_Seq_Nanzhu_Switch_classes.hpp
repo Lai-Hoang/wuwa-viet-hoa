@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Seq_Nanzhu_Switch.ABP_Seq_Nanzhu_Switch_C
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x0A50 - 0x0A50)
 class UABP_Seq_Nanzhu_Switch_C final : public UABP_Switch_Seq_V2_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_Seq_Nanzhu_Switch_C) == 0x000010, "Wrong alignment on UABP_Seq_Nanzhu_Switch_C");
-static_assert(sizeof(UABP_Seq_Nanzhu_Switch_C) == 0x000980, "Wrong size on UABP_Seq_Nanzhu_Switch_C");
+static_assert(sizeof(UABP_Seq_Nanzhu_Switch_C) == 0x000A50, "Wrong size on UABP_Seq_Nanzhu_Switch_C");
 
 }
 

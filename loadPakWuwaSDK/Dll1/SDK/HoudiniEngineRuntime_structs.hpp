@@ -476,31 +476,6 @@ enum class EHoudiniRuntimeSettingsSessionType : uint8
 	HRSST_MAX                                = 4,
 };
 
-// ScriptStruct HoudiniEngineRuntime.HoudiniOutputObjectIdentifier
-// 0x0040 (0x0040 - 0x0000)
-struct FHoudiniOutputObjectIdentifier final
-{
-public:
-	int32                                         ObjectId;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GeoId;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PartId;                                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 SplitIdentifier;                                   // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PartName;                                          // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PrimitiveIndex;                                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PointIndex;                                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FHoudiniOutputObjectIdentifier) == 0x000008, "Wrong alignment on FHoudiniOutputObjectIdentifier");
-static_assert(sizeof(FHoudiniOutputObjectIdentifier) == 0x000040, "Wrong size on FHoudiniOutputObjectIdentifier");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, ObjectId) == 0x000000, "Member 'FHoudiniOutputObjectIdentifier::ObjectId' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, GeoId) == 0x000004, "Member 'FHoudiniOutputObjectIdentifier::GeoId' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, PartId) == 0x000008, "Member 'FHoudiniOutputObjectIdentifier::PartId' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, SplitIdentifier) == 0x000010, "Member 'FHoudiniOutputObjectIdentifier::SplitIdentifier' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, PartName) == 0x000020, "Member 'FHoudiniOutputObjectIdentifier::PartName' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, PrimitiveIndex) == 0x000030, "Member 'FHoudiniOutputObjectIdentifier::PrimitiveIndex' has a wrong offset!");
-static_assert(offsetof(FHoudiniOutputObjectIdentifier, PointIndex) == 0x000034, "Member 'FHoudiniOutputObjectIdentifier::PointIndex' has a wrong offset!");
-
 // ScriptStruct HoudiniEngineRuntime.HoudiniCurveOutputProperties
 // 0x000C (0x000C - 0x0000)
 struct FHoudiniCurveOutputProperties final
@@ -570,6 +545,31 @@ static_assert(alignof(FHoudiniAssetBlueprintOutput) == 0x000008, "Wrong alignmen
 static_assert(sizeof(FHoudiniAssetBlueprintOutput) == 0x000100, "Wrong size on FHoudiniAssetBlueprintOutput");
 static_assert(offsetof(FHoudiniAssetBlueprintOutput, OutputIndex) == 0x000000, "Member 'FHoudiniAssetBlueprintOutput::OutputIndex' has a wrong offset!");
 static_assert(offsetof(FHoudiniAssetBlueprintOutput, OutputObject) == 0x000008, "Member 'FHoudiniAssetBlueprintOutput::OutputObject' has a wrong offset!");
+
+// ScriptStruct HoudiniEngineRuntime.HoudiniOutputObjectIdentifier
+// 0x0040 (0x0040 - 0x0000)
+struct FHoudiniOutputObjectIdentifier final
+{
+public:
+	int32                                         ObjectId;                                          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GeoId;                                             // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PartId;                                            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 SplitIdentifier;                                   // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PartName;                                          // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PrimitiveIndex;                                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PointIndex;                                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FHoudiniOutputObjectIdentifier) == 0x000008, "Wrong alignment on FHoudiniOutputObjectIdentifier");
+static_assert(sizeof(FHoudiniOutputObjectIdentifier) == 0x000040, "Wrong size on FHoudiniOutputObjectIdentifier");
+static_assert(offsetof(FHoudiniOutputObjectIdentifier, ObjectId) == 0x000000, "Member 'FHoudiniOutputObjectIdentifier::ObjectId' has a wrong offset!");
+static_assert(offsetof(FHoudiniOutputObjectIdentifier, GeoId) == 0x000004, "Member 'FHoudiniOutputObjectIdentifier::GeoId' has a wrong offset!");
+static_assert(offsetof(FHoudiniOutputObjectIdentifier, PartId) == 0x000008, "Member 'FHoudiniOutputObjectIdentifier::PartId' has a wrong offset!");
+static_assert(offsetof(FHoudiniOutputObjectIdentifier, SplitIdentifier) == 0x000010, "Member 'FHoudiniOutputObjectIdentifier::SplitIdentifier' has a wrong offset!");
+static_assert(offsetof(FHoudiniOutputObjectIdentifier, PartName) == 0x000020, "Member 'FHoudiniOutputObjectIdentifier::PartName' has a wrong offset!");
+static_assert(offsetof(FHoudiniOutputObjectIdentifier, PrimitiveIndex) == 0x000030, "Member 'FHoudiniOutputObjectIdentifier::PrimitiveIndex' has a wrong offset!");
+static_assert(offsetof(FHoudiniOutputObjectIdentifier, PointIndex) == 0x000034, "Member 'FHoudiniOutputObjectIdentifier::PointIndex' has a wrong offset!");
 
 // ScriptStruct HoudiniEngineRuntime.HoudiniAssetBlueprintInstanceData
 // 0x00B8 (0x0120 - 0x0068)

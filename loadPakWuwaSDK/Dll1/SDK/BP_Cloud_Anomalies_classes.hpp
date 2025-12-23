@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Cloud_Anomalies.BP_Cloud_Anomalies_C
-// 0x0010 (0x03F8 - 0x03E8)
+// 0x0010 (0x05A0 - 0x0590)
 class ABP_Cloud_Anomalies_C final : public ABP_CloudPrefab_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Cloud_Anomalies_C;               // 0x03E8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Cloud_Anomalies;                                   // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_Cloud_Anomalies_C;               // 0x0590(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Cloud_Anomalies;                                   // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_Cloud_Anomalies(int32 EntryPoint);
@@ -43,9 +43,9 @@ public:
 	}
 };
 static_assert(alignof(ABP_Cloud_Anomalies_C) == 0x000008, "Wrong alignment on ABP_Cloud_Anomalies_C");
-static_assert(sizeof(ABP_Cloud_Anomalies_C) == 0x0003F8, "Wrong size on ABP_Cloud_Anomalies_C");
-static_assert(offsetof(ABP_Cloud_Anomalies_C, UberGraphFrame_BP_Cloud_Anomalies_C) == 0x0003E8, "Member 'ABP_Cloud_Anomalies_C::UberGraphFrame_BP_Cloud_Anomalies_C' has a wrong offset!");
-static_assert(offsetof(ABP_Cloud_Anomalies_C, Cloud_Anomalies) == 0x0003F0, "Member 'ABP_Cloud_Anomalies_C::Cloud_Anomalies' has a wrong offset!");
+static_assert(sizeof(ABP_Cloud_Anomalies_C) == 0x0005A0, "Wrong size on ABP_Cloud_Anomalies_C");
+static_assert(offsetof(ABP_Cloud_Anomalies_C, UberGraphFrame_BP_Cloud_Anomalies_C) == 0x000590, "Member 'ABP_Cloud_Anomalies_C::UberGraphFrame_BP_Cloud_Anomalies_C' has a wrong offset!");
+static_assert(offsetof(ABP_Cloud_Anomalies_C, Cloud_Anomalies) == 0x000598, "Member 'ABP_Cloud_Anomalies_C::Cloud_Anomalies' has a wrong offset!");
 
 }
 

@@ -22,16 +22,16 @@ namespace SDK
 class UKuroPakKeyLibrary final : public UBlueprintFunctionLibrary
 {
 public:
+	static void BindPakMountedCallback(TDelegate<void(const class FString& Tag)> Callback);
 	static int32 GetUpdateInterval();
 	static bool HasPendingEncryptedPaks();
 	static void LoadKeys(const class FString& RSAPubKey, const class FString& FilePath, const class FString& Tag);
 	static void LoadPakKeysFromFile(const class FString& FilePath);
 	static bool NeedExtPakKeys();
-	static void SetCompleteCallback(TDelegate<void(bool Success)> Callback);
 	static void SetLoadCallback(TDelegate<void(bool Success, const class FString& Tag)> Callback);
 	static void SetRSAPublicKey(const class FString& PublicKey);
-	static void UnbindCallback();
 	static void UnbindLoadCallback();
+	static void UnbindPakMountedCallback();
 
 public:
 	static class UClass* StaticClass()
@@ -47,13 +47,14 @@ static_assert(alignof(UKuroPakKeyLibrary) == 0x000008, "Wrong alignment on UKuro
 static_assert(sizeof(UKuroPakKeyLibrary) == 0x000030, "Wrong size on UKuroPakKeyLibrary");
 
 // Class KuroPakKey.KuroPakKeySetting
-// 0x0008 (0x0038 - 0x0030)
+// 0x0018 (0x0048 - 0x0030)
 class UKuroPakKeySetting final : public UObject
 {
 public:
 	bool                                          bNeedExternalKeys;                                 // 0x0030(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         UpdateCheckInterval;                               // 0x0034(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 PakMountedEvents;                                  // 0x0038(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -66,9 +67,10 @@ public:
 	}
 };
 static_assert(alignof(UKuroPakKeySetting) == 0x000008, "Wrong alignment on UKuroPakKeySetting");
-static_assert(sizeof(UKuroPakKeySetting) == 0x000038, "Wrong size on UKuroPakKeySetting");
+static_assert(sizeof(UKuroPakKeySetting) == 0x000048, "Wrong size on UKuroPakKeySetting");
 static_assert(offsetof(UKuroPakKeySetting, bNeedExternalKeys) == 0x000030, "Member 'UKuroPakKeySetting::bNeedExternalKeys' has a wrong offset!");
 static_assert(offsetof(UKuroPakKeySetting, UpdateCheckInterval) == 0x000034, "Member 'UKuroPakKeySetting::UpdateCheckInterval' has a wrong offset!");
+static_assert(offsetof(UKuroPakKeySetting, PakMountedEvents) == 0x000038, "Member 'UKuroPakKeySetting::PakMountedEvents' has a wrong offset!");
 
 }
 

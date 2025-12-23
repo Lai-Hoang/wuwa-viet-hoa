@@ -17,25 +17,25 @@
 namespace SDK
 {
 
-// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.SetAnimDataVectorByOwner
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.ProcessEye
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TMap<class FName, struct FVector>&      VectorMap                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// const struct FVector&                   EyeLookAt                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   AngleScale                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UABPC_Seq_Body_V2_C::SetAnimDataVectorByOwner(TMap<class FName, struct FVector>& VectorMap)
+void UABPC_Seq_Body_V2_C::ProcessEye(const struct FVector& EyeLookAt, float AngleScale)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABPC_Seq_Body_V2_C", "SetAnimDataVectorByOwner");
+		Func = Class->GetFunction("ABPC_Seq_Body_V2_C", "ProcessEye");
 
-	Params::ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner Parms{};
+	Params::ABPC_Seq_Body_V2_C_ProcessEye Parms{};
 
-	Parms.VectorMap = std::move(VectorMap);
+	Parms.EyeLookAt = std::move(EyeLookAt);
+	Parms.AngleScale = AngleScale;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	VectorMap = std::move(Parms.VectorMap);
 }
 
 
@@ -61,44 +61,41 @@ void UABPC_Seq_Body_V2_C::SetAnimDataFloatByOwner(TArray<struct FNamedCurveValue
 }
 
 
-// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.ProcessEye
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.SetAnimDataVectorByOwner
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// const struct FVector&                   EyeLookAt                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   AngleScale                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TMap<class FName, struct FVector>&      VectorMap                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UABPC_Seq_Body_V2_C::ProcessEye(const struct FVector& EyeLookAt, float AngleScale)
+void UABPC_Seq_Body_V2_C::SetAnimDataVectorByOwner(TMap<class FName, struct FVector>& VectorMap)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABPC_Seq_Body_V2_C", "ProcessEye");
+		Func = Class->GetFunction("ABPC_Seq_Body_V2_C", "SetAnimDataVectorByOwner");
 
-	Params::ABPC_Seq_Body_V2_C_ProcessEye Parms{};
+	Params::ABPC_Seq_Body_V2_C_SetAnimDataVectorByOwner Parms{};
 
-	Parms.EyeLookAt = std::move(EyeLookAt);
-	Parms.AngleScale = AngleScale;
+	Parms.VectorMap = std::move(VectorMap);
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	VectorMap = std::move(Parms.VectorMap);
 }
 
 
-// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetCurveValue
+// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetBindingName
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class FName                             CurveName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-float UABPC_Seq_Body_V2_C::GetCurveValue(class FName CurveName) const
+class FName UABPC_Seq_Body_V2_C::GetBindingName() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABPC_Seq_Body_V2_C", "GetCurveValue");
+		Func = Class->GetFunction("ABPC_Seq_Body_V2_C", "GetBindingName");
 
-	Params::ABPC_Seq_Body_V2_C_GetCurveValue Parms{};
-
-	Parms.CurveName = CurveName;
+	Params::ABPC_Seq_Body_V2_C_GetBindingName Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -127,19 +124,22 @@ void UABPC_Seq_Body_V2_C::GetCurves(TArray<struct FNamedCurveValue>* OutValues) 
 }
 
 
-// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetBindingName
+// Function ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C.GetCurveValue
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
-// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             CurveName                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class FName UABPC_Seq_Body_V2_C::GetBindingName() const
+float UABPC_Seq_Body_V2_C::GetCurveValue(class FName CurveName) const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ABPC_Seq_Body_V2_C", "GetBindingName");
+		Func = Class->GetFunction("ABPC_Seq_Body_V2_C", "GetCurveValue");
 
-	Params::ABPC_Seq_Body_V2_C_GetBindingName Parms{};
+	Params::ABPC_Seq_Body_V2_C_GetCurveValue Parms{};
+
+	Parms.CurveName = CurveName;
 
 	UObject::ProcessEvent(Func, &Parms);
 

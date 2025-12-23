@@ -17,20 +17,6 @@
 namespace SDK
 {
 
-// Function BP_BaseItem.BP_BaseItem_C.ReceiveBeginPlay
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
-
-void ABP_BaseItem_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_BaseItem_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function BP_BaseItem.BP_BaseItem_C.GetEntityId
 // (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -68,6 +54,20 @@ void ABP_BaseItem_C::ApplyEntityId(int32 EntityId_0)
 	Parms.EntityId_0 = EntityId_0;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_BaseItem.BP_BaseItem_C.ReceiveBeginPlay
+// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+
+void ABP_BaseItem_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_BaseItem_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 

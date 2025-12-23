@@ -10,23 +10,29 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class WwiseSimpleExternalSource.WwiseExternalSourceSettings
-// 0x0068 (0x0098 - 0x0030)
+// 0x0098 (0x00C8 - 0x0030)
 class UWwiseExternalSourceSettings final : public UObject
 {
 public:
 	struct FSoftObjectPath                        MediaInfoTable;                                    // 0x0030(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSoftObjectPath                        ExternalSourceDefaultMedia;                        // 0x0050(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDirectoryPath                         ExternalSourceStagingDirectory;                    // 0x0070(0x0010)(Edit, Config, NativeAccessSpecifierPublic)
-	uint8                                         Pad_80[0x18];                                      // 0x0080(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bUseKuroExternalSource;                            // 0x0080(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_81[0x7];                                       // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 KuroExternalSourcePath;                            // 0x0088(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseLanguageTypes;                                 // 0x0098(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         LanguageTypes;                                     // 0x00A0(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, NativeAccessSpecifierPublic)
+	uint8                                         Pad_B0[0x18];                                      // 0x00B0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -39,10 +45,14 @@ public:
 	}
 };
 static_assert(alignof(UWwiseExternalSourceSettings) == 0x000008, "Wrong alignment on UWwiseExternalSourceSettings");
-static_assert(sizeof(UWwiseExternalSourceSettings) == 0x000098, "Wrong size on UWwiseExternalSourceSettings");
+static_assert(sizeof(UWwiseExternalSourceSettings) == 0x0000C8, "Wrong size on UWwiseExternalSourceSettings");
 static_assert(offsetof(UWwiseExternalSourceSettings, MediaInfoTable) == 0x000030, "Member 'UWwiseExternalSourceSettings::MediaInfoTable' has a wrong offset!");
 static_assert(offsetof(UWwiseExternalSourceSettings, ExternalSourceDefaultMedia) == 0x000050, "Member 'UWwiseExternalSourceSettings::ExternalSourceDefaultMedia' has a wrong offset!");
 static_assert(offsetof(UWwiseExternalSourceSettings, ExternalSourceStagingDirectory) == 0x000070, "Member 'UWwiseExternalSourceSettings::ExternalSourceStagingDirectory' has a wrong offset!");
+static_assert(offsetof(UWwiseExternalSourceSettings, bUseKuroExternalSource) == 0x000080, "Member 'UWwiseExternalSourceSettings::bUseKuroExternalSource' has a wrong offset!");
+static_assert(offsetof(UWwiseExternalSourceSettings, KuroExternalSourcePath) == 0x000088, "Member 'UWwiseExternalSourceSettings::KuroExternalSourcePath' has a wrong offset!");
+static_assert(offsetof(UWwiseExternalSourceSettings, bUseLanguageTypes) == 0x000098, "Member 'UWwiseExternalSourceSettings::bUseLanguageTypes' has a wrong offset!");
+static_assert(offsetof(UWwiseExternalSourceSettings, LanguageTypes) == 0x0000A0, "Member 'UWwiseExternalSourceSettings::LanguageTypes' has a wrong offset!");
 
 }
 

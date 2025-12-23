@@ -15,13 +15,14 @@ namespace SDK
 {
 
 // UserDefinedEnum ECaughtDirectionType.ECaughtDirectionType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class ECaughtDirectionType : uint8
 {
 	NewEnumerator0                           = 0,
 	NewEnumerator1                           = 1,
 	NewEnumerator2                           = 2,
-	ECaughtDirectionType_MAX                 = 3,
+	NewEnumerator3                           = 3,
+	ECaughtDirectionType_MAX                 = 4,
 };
 
 }

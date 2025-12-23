@@ -17,6 +17,479 @@
 namespace SDK
 {
 
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.ClearBindings
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::ClearBindings(const int32 InId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "ClearBindings");
+
+	Params::KuroPrepareStatementLib_ClearBindings Parms{};
+
+	Parms.InId = InId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.CloseAllConnection
+// (Final, Native, Static, Public)
+
+void UKuroPrepareStatementLib::CloseAllConnection()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "CloseAllConnection");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.CloseConnection
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroPrepareStatementLib::CloseConnection(const int32 InId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "CloseConnection");
+
+	Params::KuroPrepareStatementLib_CloseConnection Parms{};
+
+	Parms.InId = InId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.CreateStatement
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FName&                      InDbPath                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InCommand                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroPrepareStatementLib::CreateStatement(const class FName& InDbPath, const class FString& InCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "CreateStatement");
+
+	Params::KuroPrepareStatementLib_CreateStatement Parms{};
+
+	Parms.InDbPath = InDbPath;
+	Parms.InCommand = std::move(InCommand);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.DestroyStatement
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroPrepareStatementLib::DestroyStatement(const int32 InId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "DestroyStatement");
+
+	Params::KuroPrepareStatementLib_DestroyStatement Parms{};
+
+	Parms.InId = InId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.GetColumnValueBytes
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InColumnIndex                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FArrayBuffer*                    OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::GetColumnValueBytes(const int32 InId, const int32 InColumnIndex, struct FArrayBuffer* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "GetColumnValueBytes");
+
+	Params::KuroPrepareStatementLib_GetColumnValueBytes Parms{};
+
+	Parms.InId = InId;
+	Parms.InColumnIndex = InColumnIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValue != nullptr)
+		*OutValue = std::move(Parms.OutValue);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.GetColumnValueInt32
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InColumnIndex                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  OutValue                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::GetColumnValueInt32(const int32 InId, const int32 InColumnIndex, int32* OutValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "GetColumnValueInt32");
+
+	Params::KuroPrepareStatementLib_GetColumnValueInt32 Parms{};
+
+	Parms.InId = InId;
+	Parms.InColumnIndex = InColumnIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValue != nullptr)
+		*OutValue = Parms.OutValue;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.GetOrCreateStatement
+// (Final, Native, Static, Public, HasOutParams)
+// Parameters:
+// const class FName&                      InDbPath                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InCommand                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroPrepareStatementLib::GetOrCreateStatement(const class FName& InDbPath, const class FString& InCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "GetOrCreateStatement");
+
+	Params::KuroPrepareStatementLib_GetOrCreateStatement Parms{};
+
+	Parms.InDbPath = InDbPath;
+	Parms.InCommand = std::move(InCommand);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.Reset
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::Reset(const int32 InId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "Reset");
+
+	Params::KuroPrepareStatementLib_Reset Parms{};
+
+	Parms.InId = InId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueBigInt
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InBindingIndex                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int64                             InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::SetBindingValueBigInt(const int32 InId, const int32 InBindingIndex, const int64 InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "SetBindingValueBigInt");
+
+	Params::KuroPrepareStatementLib_SetBindingValueBigInt Parms{};
+
+	Parms.InId = InId;
+	Parms.InBindingIndex = InBindingIndex;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueBool
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InBindingIndex                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::SetBindingValueBool(const int32 InId, const int32 InBindingIndex, const bool InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "SetBindingValueBool");
+
+	Params::KuroPrepareStatementLib_SetBindingValueBool Parms{};
+
+	Parms.InId = InId;
+	Parms.InBindingIndex = InBindingIndex;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueFloat
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InBindingIndex                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::SetBindingValueFloat(const int32 InId, const int32 InBindingIndex, const float InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "SetBindingValueFloat");
+
+	Params::KuroPrepareStatementLib_SetBindingValueFloat Parms{};
+
+	Parms.InId = InId;
+	Parms.InBindingIndex = InBindingIndex;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueFloat64
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InBindingIndex                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const double                            InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::SetBindingValueFloat64(const int32 InId, const int32 InBindingIndex, const double InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "SetBindingValueFloat64");
+
+	Params::KuroPrepareStatementLib_SetBindingValueFloat64 Parms{};
+
+	Parms.InId = InId;
+	Parms.InBindingIndex = InBindingIndex;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueInt
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InBindingIndex                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InValue                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::SetBindingValueInt(const int32 InId, const int32 InBindingIndex, const int32 InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "SetBindingValueInt");
+
+	Params::KuroPrepareStatementLib_SetBindingValueInt Parms{};
+
+	Parms.InId = InId;
+	Parms.InBindingIndex = InBindingIndex;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.SetBindingValueString
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             InBindingIndex                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroPrepareStatementLib::SetBindingValueString(const int32 InId, const int32 InBindingIndex, const class FString& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "SetBindingValueString");
+
+	Params::KuroPrepareStatementLib_SetBindingValueString Parms{};
+
+	Parms.InId = InId;
+	Parms.InBindingIndex = InBindingIndex;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroSqliteBpLib.KuroPrepareStatementLib.Step
+// (Final, Native, Static, Public)
+// Parameters:
+// const int32                             InId                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroPrepareStatementLib::Step(const int32 InId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroPrepareStatementLib", "Step");
+
+	Params::KuroPrepareStatementLib_Step Parms{};
+
+	Parms.InId = InId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroSqliteBpLib.KuroQueryStatLibrary.AppendString
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

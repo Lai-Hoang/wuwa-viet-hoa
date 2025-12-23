@@ -17,6 +17,150 @@
 namespace SDK
 {
 
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.CreatePlayMontageAndWaitProxy
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UGameplayAbility*                 OwningAbility                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             TaskInstanceName                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAnimMontage*                     MontageToPlay_0                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             SkeletalMeshComponentTag_0                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Rate_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             StartSection_0                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bStopWhenAbilityEnds_0                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AnimRootMotionTranslationScale_0                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   StartTimeSeconds_0                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    NeedTick                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait* UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::CreatePlayMontageAndWaitProxy(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, class UAnimMontage* MontageToPlay_0, class FName SkeletalMeshComponentTag_0, float Rate_0, class FName StartSection_0, bool bStopWhenAbilityEnds_0, float AnimRootMotionTranslationScale_0, float StartTimeSeconds_0, bool NeedTick)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AbilityTask_SpecifiedAnimInstancePlayMontageAndWait", "CreatePlayMontageAndWaitProxy");
+
+	Params::AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy Parms{};
+
+	Parms.OwningAbility = OwningAbility;
+	Parms.TaskInstanceName = TaskInstanceName;
+	Parms.MontageToPlay_0 = MontageToPlay_0;
+	Parms.SkeletalMeshComponentTag_0 = SkeletalMeshComponentTag_0;
+	Parms.Rate_0 = Rate_0;
+	Parms.StartSection_0 = StartSection_0;
+	Parms.bStopWhenAbilityEnds_0 = bStopWhenAbilityEnds_0;
+	Parms.AnimRootMotionTranslationScale_0 = AnimRootMotionTranslationScale_0;
+	Parms.StartTimeSeconds_0 = StartTimeSeconds_0;
+	Parms.NeedTick = NeedTick;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.OnMontageBlendingOut
+// (Final, Native, Public)
+// Parameters:
+// class UAnimMontage*                     Montage                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInterrupted                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AbilityTask_SpecifiedAnimInstancePlayMontageAndWait", "OnMontageBlendingOut");
+
+	Params::AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut Parms{};
+
+	Parms.Montage = Montage;
+	Parms.bInterrupted = bInterrupted;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.OnMontageEnded
+// (Final, Native, Public)
+// Parameters:
+// class UAnimMontage*                     Montage                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInterrupted                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnMontageEnded(class UAnimMontage* Montage, bool bInterrupted)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AbilityTask_SpecifiedAnimInstancePlayMontageAndWait", "OnMontageEnded");
+
+	Params::AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded Parms{};
+
+	Parms.Montage = Montage;
+	Parms.bInterrupted = bInterrupted;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.OnMontageInterrupted
+// (Final, Native, Public)
+
+void UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::OnMontageInterrupted()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AbilityTask_SpecifiedAnimInstancePlayMontageAndWait", "OnMontageInterrupted");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.TickTask
+// (Native, Public)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait::TickTask(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AbilityTask_SpecifiedAnimInstancePlayMontageAndWait", "TickTask");
+
+	Params::AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_TickTask Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroGAS.AsyncTaskAnyAttributeChanged.ListenForAnyAttributeChange
 // (Final, Native, Static, Public)
 // Parameters:
@@ -546,6 +690,210 @@ void UAsyncTaskPlayMontageAndWait::StopMontage()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("AsyncTaskPlayMontageAndWait", "StopMontage");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGAS.AsyncTaskRotateSequence.D_StartRotateSequenceByTranslation
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const TScriptInterface<class IGameplayTaskOwnerInterface>TaskOwner                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+// class USceneComponent*                  InAimPivot                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FVectorDouble>&     InTargets                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const float                             AimSpeedDegPerSec_0                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             AimToleranceDeg_0                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEaseIn_0                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEaseOut_0                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bForceShortestRoute_0                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             PostFireDelay_0                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  RotateOffset_0                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const float                             TimeDilation_0                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAsyncTaskRotateSequence*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAsyncTaskRotateSequence* UAsyncTaskRotateSequence::D_StartRotateSequenceByTranslation(const TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, class USceneComponent* InAimPivot, const TArray<struct FVectorDouble>& InTargets, const float AimSpeedDegPerSec_0, const float AimToleranceDeg_0, const bool bEaseIn_0, const bool bEaseOut_0, const bool bForceShortestRoute_0, const float PostFireDelay_0, const struct FRotator& RotateOffset_0, const float TimeDilation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AsyncTaskRotateSequence", "D_StartRotateSequenceByTranslation");
+
+	Params::AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation Parms{};
+
+	Parms.TaskOwner = TaskOwner;
+	Parms.InAimPivot = InAimPivot;
+	Parms.InTargets = std::move(InTargets);
+	Parms.AimSpeedDegPerSec_0 = AimSpeedDegPerSec_0;
+	Parms.AimToleranceDeg_0 = AimToleranceDeg_0;
+	Parms.bEaseIn_0 = bEaseIn_0;
+	Parms.bEaseOut_0 = bEaseOut_0;
+	Parms.bForceShortestRoute_0 = bForceShortestRoute_0;
+	Parms.PostFireDelay_0 = PostFireDelay_0;
+	Parms.RotateOffset_0 = std::move(RotateOffset_0);
+	Parms.TimeDilation_0 = TimeDilation_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroGAS.AsyncTaskRotateSequence.RotateComponentTo
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class USceneComponent*                  Component                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  TargetWorldRotation                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const bool                              bEaseOut_0                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEaseIn_0                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             OverTime                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bForceShortestRotationPath                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             TimeDilation_0                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const ERotateComponentAction            MoveAction                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLatentActionInfo&         LatentInfo                                             (ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UAsyncTaskRotateSequence::RotateComponentTo(class USceneComponent* Component, const struct FRotator& TargetWorldRotation, const bool bEaseOut_0, const bool bEaseIn_0, const float OverTime, const bool bForceShortestRotationPath, const float TimeDilation_0, const ERotateComponentAction MoveAction, const struct FLatentActionInfo& LatentInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AsyncTaskRotateSequence", "RotateComponentTo");
+
+	Params::AsyncTaskRotateSequence_RotateComponentTo Parms{};
+
+	Parms.Component = Component;
+	Parms.TargetWorldRotation = std::move(TargetWorldRotation);
+	Parms.bEaseOut_0 = bEaseOut_0;
+	Parms.bEaseIn_0 = bEaseIn_0;
+	Parms.OverTime = OverTime;
+	Parms.bForceShortestRotationPath = bForceShortestRotationPath;
+	Parms.TimeDilation_0 = TimeDilation_0;
+	Parms.MoveAction = MoveAction;
+	Parms.LatentInfo = std::move(LatentInfo);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroGAS.AsyncTaskRotateSequence.StartRotateSequenceByActor
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const TScriptInterface<class IGameplayTaskOwnerInterface>TaskOwner                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+// class USceneComponent*                  InAimPivot                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            InTargets                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const float                             AimSpeedDegPerSec_0                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             AimToleranceDeg_0                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEaseIn_0                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEaseOut_0                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bForceShortestRoute_0                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             PostFireDelay_0                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  RotateOffset_0                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const float                             TimeDilation_0                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAsyncTaskRotateSequence*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAsyncTaskRotateSequence* UAsyncTaskRotateSequence::StartRotateSequenceByActor(const TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, class USceneComponent* InAimPivot, const TArray<class AActor*>& InTargets, const float AimSpeedDegPerSec_0, const float AimToleranceDeg_0, const bool bEaseIn_0, const bool bEaseOut_0, const bool bForceShortestRoute_0, const float PostFireDelay_0, const struct FRotator& RotateOffset_0, const float TimeDilation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AsyncTaskRotateSequence", "StartRotateSequenceByActor");
+
+	Params::AsyncTaskRotateSequence_StartRotateSequenceByActor Parms{};
+
+	Parms.TaskOwner = TaskOwner;
+	Parms.InAimPivot = InAimPivot;
+	Parms.InTargets = std::move(InTargets);
+	Parms.AimSpeedDegPerSec_0 = AimSpeedDegPerSec_0;
+	Parms.AimToleranceDeg_0 = AimToleranceDeg_0;
+	Parms.bEaseIn_0 = bEaseIn_0;
+	Parms.bEaseOut_0 = bEaseOut_0;
+	Parms.bForceShortestRoute_0 = bForceShortestRoute_0;
+	Parms.PostFireDelay_0 = PostFireDelay_0;
+	Parms.RotateOffset_0 = std::move(RotateOffset_0);
+	Parms.TimeDilation_0 = TimeDilation_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroGAS.AsyncTaskRotateSequence.StartRotateSequenceByTranslation
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const TScriptInterface<class IGameplayTaskOwnerInterface>TaskOwner                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+// class USceneComponent*                  InAimPivot                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FVector>&           InTargets                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const float                             AimSpeedDegPerSec_0                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             AimToleranceDeg_0                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEaseIn_0                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bEaseOut_0                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bForceShortestRoute_0                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             PostFireDelay_0                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  RotateOffset_0                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const float                             TimeDilation_0                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAsyncTaskRotateSequence*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAsyncTaskRotateSequence* UAsyncTaskRotateSequence::StartRotateSequenceByTranslation(const TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner, class USceneComponent* InAimPivot, const TArray<struct FVector>& InTargets, const float AimSpeedDegPerSec_0, const float AimToleranceDeg_0, const bool bEaseIn_0, const bool bEaseOut_0, const bool bForceShortestRoute_0, const float PostFireDelay_0, const struct FRotator& RotateOffset_0, const float TimeDilation_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AsyncTaskRotateSequence", "StartRotateSequenceByTranslation");
+
+	Params::AsyncTaskRotateSequence_StartRotateSequenceByTranslation Parms{};
+
+	Parms.TaskOwner = TaskOwner;
+	Parms.InAimPivot = InAimPivot;
+	Parms.InTargets = std::move(InTargets);
+	Parms.AimSpeedDegPerSec_0 = AimSpeedDegPerSec_0;
+	Parms.AimToleranceDeg_0 = AimToleranceDeg_0;
+	Parms.bEaseIn_0 = bEaseIn_0;
+	Parms.bEaseOut_0 = bEaseOut_0;
+	Parms.bForceShortestRoute_0 = bForceShortestRoute_0;
+	Parms.PostFireDelay_0 = PostFireDelay_0;
+	Parms.RotateOffset_0 = std::move(RotateOffset_0);
+	Parms.TimeDilation_0 = TimeDilation_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroGAS.AsyncTaskRotateSequence.OnAimLatentFinished
+// (Final, Native, Private)
+
+void UAsyncTaskRotateSequence::OnAimLatentFinished()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AsyncTaskRotateSequence", "OnAimLatentFinished");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

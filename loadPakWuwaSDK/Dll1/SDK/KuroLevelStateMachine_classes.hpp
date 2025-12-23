@@ -10,13 +10,93 @@
 
 #include "Basic.hpp"
 
-#include "KuroLevelStateMachine_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "KuroLevelStateMachine_structs.hpp"
 #include "Engine_classes.hpp"
 
 
 namespace SDK
 {
+
+// Class KuroLevelStateMachine.KuroLevelStateAction
+// 0x0010 (0x0040 - 0x0030)
+class UKuroLevelStateAction : public UObject
+{
+public:
+	class UKuroLevelStateMachineComponent*        Owner;                                             // 0x0030(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroLevelStateAction">();
+	}
+	static class UKuroLevelStateAction* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLevelStateAction>();
+	}
+};
+static_assert(alignof(UKuroLevelStateAction) == 0x000008, "Wrong alignment on UKuroLevelStateAction");
+static_assert(sizeof(UKuroLevelStateAction) == 0x000040, "Wrong size on UKuroLevelStateAction");
+static_assert(offsetof(UKuroLevelStateAction, Owner) == 0x000030, "Member 'UKuroLevelStateAction::Owner' has a wrong offset!");
+
+// Class KuroLevelStateMachine.KuroLevelPlayMontage
+// 0x0018 (0x0058 - 0x0040)
+class UKuroLevelPlayMontage final : public UKuroLevelStateAction
+{
+public:
+	class ASkeletalMeshActor*                     TargetActor;                                       // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAnimMontage*                           Montage;                                           // 0x0048(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLooping;                                          // 0x0050(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PlayRate;                                          // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroLevelPlayMontage">();
+	}
+	static class UKuroLevelPlayMontage* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLevelPlayMontage>();
+	}
+};
+static_assert(alignof(UKuroLevelPlayMontage) == 0x000008, "Wrong alignment on UKuroLevelPlayMontage");
+static_assert(sizeof(UKuroLevelPlayMontage) == 0x000058, "Wrong size on UKuroLevelPlayMontage");
+static_assert(offsetof(UKuroLevelPlayMontage, TargetActor) == 0x000040, "Member 'UKuroLevelPlayMontage::TargetActor' has a wrong offset!");
+static_assert(offsetof(UKuroLevelPlayMontage, Montage) == 0x000048, "Member 'UKuroLevelPlayMontage::Montage' has a wrong offset!");
+static_assert(offsetof(UKuroLevelPlayMontage, bLooping) == 0x000050, "Member 'UKuroLevelPlayMontage::bLooping' has a wrong offset!");
+static_assert(offsetof(UKuroLevelPlayMontage, PlayRate) == 0x000054, "Member 'UKuroLevelPlayMontage::PlayRate' has a wrong offset!");
+
+// Class KuroLevelStateMachine.KuroLevelPlaySequence
+// 0x0080 (0x00C0 - 0x0040)
+class UKuroLevelPlaySequence final : public UKuroLevelStateAction
+{
+public:
+	uint8                                         Pad_40[0x10];                                      // 0x0040(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelSequence*                         LevelSequence;                                     // 0x0050(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsLoop;                                           // 0x0058(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x3];                                       // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PlayRate;                                          // 0x005C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FKuroLevelPlaySequenceOverrideData> OverrideData;                                  // 0x0060(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_70[0x50];                                      // 0x0070(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroLevelPlaySequence">();
+	}
+	static class UKuroLevelPlaySequence* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroLevelPlaySequence>();
+	}
+};
+static_assert(alignof(UKuroLevelPlaySequence) == 0x000008, "Wrong alignment on UKuroLevelPlaySequence");
+static_assert(sizeof(UKuroLevelPlaySequence) == 0x0000C0, "Wrong size on UKuroLevelPlaySequence");
+static_assert(offsetof(UKuroLevelPlaySequence, LevelSequence) == 0x000050, "Member 'UKuroLevelPlaySequence::LevelSequence' has a wrong offset!");
+static_assert(offsetof(UKuroLevelPlaySequence, bIsLoop) == 0x000058, "Member 'UKuroLevelPlaySequence::bIsLoop' has a wrong offset!");
+static_assert(offsetof(UKuroLevelPlaySequence, PlayRate) == 0x00005C, "Member 'UKuroLevelPlaySequence::PlayRate' has a wrong offset!");
+static_assert(offsetof(UKuroLevelPlaySequence, OverrideData) == 0x000060, "Member 'UKuroLevelPlaySequence::OverrideData' has a wrong offset!");
 
 // Class KuroLevelStateMachine.KuroLevelStateMachine
 // 0x0008 (0x02B8 - 0x02B0)
@@ -39,99 +119,21 @@ static_assert(alignof(AKuroLevelStateMachine) == 0x000008, "Wrong alignment on A
 static_assert(sizeof(AKuroLevelStateMachine) == 0x0002B8, "Wrong size on AKuroLevelStateMachine");
 static_assert(offsetof(AKuroLevelStateMachine, LevelStateMachineComponent) == 0x0002B0, "Member 'AKuroLevelStateMachine::LevelStateMachineComponent' has a wrong offset!");
 
-// Class KuroLevelStateMachine.KuroLevelStateAction
-// 0x0008 (0x0038 - 0x0030)
-class UKuroLevelStateAction : public UObject
-{
-public:
-	class UKuroLevelStateMachineComponent*        Owner;                                             // 0x0030(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroLevelStateAction">();
-	}
-	static class UKuroLevelStateAction* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroLevelStateAction>();
-	}
-};
-static_assert(alignof(UKuroLevelStateAction) == 0x000008, "Wrong alignment on UKuroLevelStateAction");
-static_assert(sizeof(UKuroLevelStateAction) == 0x000038, "Wrong size on UKuroLevelStateAction");
-static_assert(offsetof(UKuroLevelStateAction, Owner) == 0x000030, "Member 'UKuroLevelStateAction::Owner' has a wrong offset!");
-
-// Class KuroLevelStateMachine.KuroLevelPlayMontage
-// 0x0018 (0x0050 - 0x0038)
-class UKuroLevelPlayMontage final : public UKuroLevelStateAction
-{
-public:
-	class ASkeletalMeshActor*                     TargetActor;                                       // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAnimMontage*                           Montage;                                           // 0x0040(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLooping;                                          // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_49[0x3];                                       // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PlayRate;                                          // 0x004C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroLevelPlayMontage">();
-	}
-	static class UKuroLevelPlayMontage* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroLevelPlayMontage>();
-	}
-};
-static_assert(alignof(UKuroLevelPlayMontage) == 0x000008, "Wrong alignment on UKuroLevelPlayMontage");
-static_assert(sizeof(UKuroLevelPlayMontage) == 0x000050, "Wrong size on UKuroLevelPlayMontage");
-static_assert(offsetof(UKuroLevelPlayMontage, TargetActor) == 0x000038, "Member 'UKuroLevelPlayMontage::TargetActor' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlayMontage, Montage) == 0x000040, "Member 'UKuroLevelPlayMontage::Montage' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlayMontage, bLooping) == 0x000048, "Member 'UKuroLevelPlayMontage::bLooping' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlayMontage, PlayRate) == 0x00004C, "Member 'UKuroLevelPlayMontage::PlayRate' has a wrong offset!");
-
-// Class KuroLevelStateMachine.KuroLevelPlaySequence
-// 0x0080 (0x00B8 - 0x0038)
-class UKuroLevelPlaySequence final : public UKuroLevelStateAction
-{
-public:
-	uint8                                         Pad_38[0x10];                                      // 0x0038(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULevelSequence*                         LevelSequence;                                     // 0x0048(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsLoop;                                           // 0x0050(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PlayRate;                                          // 0x0054(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FKuroLevelPlaySequenceOverrideData> OverrideData;                                  // 0x0058(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_68[0x50];                                      // 0x0068(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroLevelPlaySequence">();
-	}
-	static class UKuroLevelPlaySequence* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroLevelPlaySequence>();
-	}
-};
-static_assert(alignof(UKuroLevelPlaySequence) == 0x000008, "Wrong alignment on UKuroLevelPlaySequence");
-static_assert(sizeof(UKuroLevelPlaySequence) == 0x0000B8, "Wrong size on UKuroLevelPlaySequence");
-static_assert(offsetof(UKuroLevelPlaySequence, LevelSequence) == 0x000048, "Member 'UKuroLevelPlaySequence::LevelSequence' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlaySequence, bIsLoop) == 0x000050, "Member 'UKuroLevelPlaySequence::bIsLoop' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlaySequence, PlayRate) == 0x000054, "Member 'UKuroLevelPlaySequence::PlayRate' has a wrong offset!");
-static_assert(offsetof(UKuroLevelPlaySequence, OverrideData) == 0x000058, "Member 'UKuroLevelPlaySequence::OverrideData' has a wrong offset!");
-
 // Class KuroLevelStateMachine.KuroLevelStateMachineComponent
 // 0x0090 (0x02B0 - 0x0220)
 class UKuroLevelStateMachineComponent final : public USceneComponent
 {
 public:
-	class FName                                   InitialStateName;                                  // 0x0218(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bStartOnBeginPlay : 1;                             // 0x0224(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_225[0x3];                                      // 0x0225(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FKuroLevelState>                States;                                            // 0x0228(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_238[0x78];                                     // 0x0238(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         bStartOnBeginPlay : 1;                             // 0x0218(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_219[0x7];                                      // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKuroLevelStateLayer>           Layers;                                            // 0x0220(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class ULevelSequencePlayer*                   SequencePlayer;                                    // 0x0230(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ALevelSequenceActor*                    SequenceActor;                                     // 0x0238(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_240[0x70];                                     // 0x0240(0x0070)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool HasState(class FName StateName);
-	void SetState(class FName StateName);
+	void SetState(class FName StateName, float PlayRate);
 	void Start();
 	void Stop();
 
@@ -147,16 +149,17 @@ public:
 };
 static_assert(alignof(UKuroLevelStateMachineComponent) == 0x000010, "Wrong alignment on UKuroLevelStateMachineComponent");
 static_assert(sizeof(UKuroLevelStateMachineComponent) == 0x0002B0, "Wrong size on UKuroLevelStateMachineComponent");
-static_assert(offsetof(UKuroLevelStateMachineComponent, InitialStateName) == 0x000218, "Member 'UKuroLevelStateMachineComponent::InitialStateName' has a wrong offset!");
-static_assert(offsetof(UKuroLevelStateMachineComponent, States) == 0x000228, "Member 'UKuroLevelStateMachineComponent::States' has a wrong offset!");
+static_assert(offsetof(UKuroLevelStateMachineComponent, Layers) == 0x000220, "Member 'UKuroLevelStateMachineComponent::Layers' has a wrong offset!");
+static_assert(offsetof(UKuroLevelStateMachineComponent, SequencePlayer) == 0x000230, "Member 'UKuroLevelStateMachineComponent::SequencePlayer' has a wrong offset!");
+static_assert(offsetof(UKuroLevelStateMachineComponent, SequenceActor) == 0x000238, "Member 'UKuroLevelStateMachineComponent::SequenceActor' has a wrong offset!");
 
 // Class KuroLevelStateMachine.KuroLevelSwitchCollision
-// 0x0060 (0x0098 - 0x0038)
+// 0x0060 (0x00A0 - 0x0040)
 class UKuroLevelSwitchCollision final : public UKuroLevelStateAction
 {
 public:
-	TArray<struct FKuroLevelSwitchCollisionData>  Collisions;                                        // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x50];                                      // 0x0048(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FKuroLevelSwitchCollisionData>  Collisions;                                        // 0x0040(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -169,38 +172,16 @@ public:
 	}
 };
 static_assert(alignof(UKuroLevelSwitchCollision) == 0x000008, "Wrong alignment on UKuroLevelSwitchCollision");
-static_assert(sizeof(UKuroLevelSwitchCollision) == 0x000098, "Wrong size on UKuroLevelSwitchCollision");
-static_assert(offsetof(UKuroLevelSwitchCollision, Collisions) == 0x000038, "Member 'UKuroLevelSwitchCollision::Collisions' has a wrong offset!");
-
-// Class KuroLevelStateMachine.KuroLevelSwitchMaterial
-// 0x0060 (0x0098 - 0x0038)
-class UKuroLevelSwitchMaterial final : public UKuroLevelStateAction
-{
-public:
-	TArray<struct FKuroLevelSwitchMaterialData>   Materials;                                         // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x50];                                      // 0x0048(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KuroLevelSwitchMaterial">();
-	}
-	static class UKuroLevelSwitchMaterial* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKuroLevelSwitchMaterial>();
-	}
-};
-static_assert(alignof(UKuroLevelSwitchMaterial) == 0x000008, "Wrong alignment on UKuroLevelSwitchMaterial");
-static_assert(sizeof(UKuroLevelSwitchMaterial) == 0x000098, "Wrong size on UKuroLevelSwitchMaterial");
-static_assert(offsetof(UKuroLevelSwitchMaterial, Materials) == 0x000038, "Member 'UKuroLevelSwitchMaterial::Materials' has a wrong offset!");
+static_assert(sizeof(UKuroLevelSwitchCollision) == 0x0000A0, "Wrong size on UKuroLevelSwitchCollision");
+static_assert(offsetof(UKuroLevelSwitchCollision, Collisions) == 0x000040, "Member 'UKuroLevelSwitchCollision::Collisions' has a wrong offset!");
 
 // Class KuroLevelStateMachine.KuroLevelToggleActive
-// 0x0060 (0x0098 - 0x0038)
+// 0x0060 (0x00A0 - 0x0040)
 class UKuroLevelToggleActive final : public UKuroLevelStateAction
 {
 public:
-	TArray<struct FKuroLevelToggleActiveData>     Actives;                                           // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_48[0x50];                                      // 0x0048(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FKuroLevelToggleActiveData>     Actives;                                           // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_50[0x50];                                      // 0x0050(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -213,8 +194,8 @@ public:
 	}
 };
 static_assert(alignof(UKuroLevelToggleActive) == 0x000008, "Wrong alignment on UKuroLevelToggleActive");
-static_assert(sizeof(UKuroLevelToggleActive) == 0x000098, "Wrong size on UKuroLevelToggleActive");
-static_assert(offsetof(UKuroLevelToggleActive, Actives) == 0x000038, "Member 'UKuroLevelToggleActive::Actives' has a wrong offset!");
+static_assert(sizeof(UKuroLevelToggleActive) == 0x0000A0, "Wrong size on UKuroLevelToggleActive");
+static_assert(offsetof(UKuroLevelToggleActive, Actives) == 0x000040, "Member 'UKuroLevelToggleActive::Actives' has a wrong offset!");
 
 }
 

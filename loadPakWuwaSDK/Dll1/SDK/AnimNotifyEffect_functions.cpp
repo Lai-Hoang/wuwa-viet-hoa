@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function AnimNotifyEffect.AnimNotifyEffect_C.K2_ValidateAssets
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -31,14 +31,19 @@ bool UAnimNotifyEffect_C::K2_ValidateAssets()
 
 	Params::AnimNotifyEffect_C_K2_ValidateAssets Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function AnimNotifyEffect.AnimNotifyEffect_C.K2_Notify
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -56,14 +61,19 @@ bool UAnimNotifyEffect_C::K2_Notify(class USkeletalMeshComponent* MeshComp, clas
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function AnimNotifyEffect.AnimNotifyEffect_C.K2_PostChangeProperty
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FName                       PropertyName                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
@@ -79,14 +89,19 @@ bool UAnimNotifyEffect_C::K2_PostChangeProperty(const class FName PropertyName)
 
 	Parms.PropertyName = PropertyName;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function AnimNotifyEffect.AnimNotifyEffect_C.TraceDetectClimbStep
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ATsBaseCharacter_C*               outer1                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FTransformDouble&          outTrans1                                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
@@ -104,14 +119,19 @@ bool UAnimNotifyEffect_C::TraceDetectClimbStep(class ATsBaseCharacter_C* outer1,
 	Parms.outer1 = outer1;
 	Parms.outTrans1 = std::move(outTrans1);
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function AnimNotifyEffect.AnimNotifyEffect_C.IsDisablePostProcess
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*           meshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
@@ -127,14 +147,19 @@ bool UAnimNotifyEffect_C::IsDisablePostProcess(class USkeletalMeshComponent* mes
 
 	Parms.meshComp = meshComp;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function AnimNotifyEffect.AnimNotifyEffect_C.AttachEffectAndSetupTransform
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           outer                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   effectHandle                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -151,12 +176,17 @@ void UAnimNotifyEffect_C::AttachEffectAndSetupTransform(class AActor* outer, flo
 	Parms.outer = outer;
 	Parms.effectHandle = effectHandle;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function AnimNotifyEffect.AnimNotifyEffect_C.GetNotifyName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
@@ -169,7 +199,12 @@ class FString UAnimNotifyEffect_C::GetNotifyName() const
 
 	Params::AnimNotifyEffect_C_GetNotifyName Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }

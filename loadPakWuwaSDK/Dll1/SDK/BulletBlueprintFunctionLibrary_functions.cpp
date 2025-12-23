@@ -47,38 +47,6 @@ class AActor* UBulletBlueprintFunctionLibrary_C::GetBulletActorById(int32 id, cl
 }
 
 
-// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.DestroyBullet
-// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   id                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
-// bool                                    isSummonChildBullet                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-
-bool UBulletBlueprintFunctionLibrary_C::DestroyBullet(int32 id, bool isSummonChildBullet, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BulletBlueprintFunctionLibrary_C", "DestroyBullet");
-
-	Params::BulletBlueprintFunctionLibrary_C_DestroyBullet Parms{};
-
-	Parms.id = id;
-	Parms.isSummonChildBullet = isSummonChildBullet;
-	Parms.__WorldContext = __WorldContext;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.FrozenBulletTimeByBulletName
 // (Native, Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -1040,6 +1008,40 @@ void UBulletBlueprintFunctionLibrary_C::DestroySpecifiedBullet(int32 ownerId, cl
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function BulletBlueprintFunctionLibrary.BulletBlueprintFunctionLibrary_C.DestroyBullet
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   id                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    isSummonChildBullet                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// bool                                    destroyEffectImmediately                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UBulletBlueprintFunctionLibrary_C::DestroyBullet(int32 id, bool isSummonChildBullet, bool destroyEffectImmediately, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BulletBlueprintFunctionLibrary_C", "DestroyBullet");
+
+	Params::BulletBlueprintFunctionLibrary_C_DestroyBullet Parms{};
+
+	Parms.id = id;
+	Parms.isSummonChildBullet = isSummonChildBullet;
+	Parms.destroyEffectImmediately = destroyEffectImmediately;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 }

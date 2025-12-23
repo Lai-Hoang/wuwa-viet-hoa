@@ -17,29 +17,55 @@
 namespace SDK
 {
 
-// Function BP_CineCamera.BP_CineCamera_C.ResetSeqCineCamSetting
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_CineCamera.BP_CineCamera_C.ExecuteUbergraph_BP_CineCamera
+// (Final, UbergraphFunction, HasDefaults)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CineCamera_C::ResetSeqCineCamSetting()
+void ABP_CineCamera_C::ExecuteUbergraph_BP_CineCamera(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CineCamera_C", "ResetSeqCineCamSetting");
+		Func = Class->GetFunction("BP_CineCamera_C", "ExecuteUbergraph_BP_CineCamera");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_CineCamera.BP_CineCamera_C.ApplyUiCameraSettings
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_CineCamera.BP_CineCamera_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_CineCamera_C::ApplyUiCameraSettings()
+void ABP_CineCamera_C::ReceiveTick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CineCamera_C", "ApplyUiCameraSettings");
+		Func = Class->GetFunction("BP_CineCamera_C", "ReceiveTick");
+
+	Params::BP_CineCamera_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CineCamera.BP_CineCamera_C.EndAutoTransform
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_CineCamera_C::EndAutoTransform()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CineCamera_C", "EndAutoTransform");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -65,57 +91,31 @@ void ABP_CineCamera_C::BeginAutoTransform(float TimeLength)
 }
 
 
-// Function BP_CineCamera.BP_CineCamera_C.EndAutoTransform
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_CineCamera.BP_CineCamera_C.ApplyUiCameraSettings
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_CineCamera_C::EndAutoTransform()
+void ABP_CineCamera_C::ApplyUiCameraSettings()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CineCamera_C", "EndAutoTransform");
+		Func = Class->GetFunction("BP_CineCamera_C", "ApplyUiCameraSettings");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_CineCamera.BP_CineCamera_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_CineCamera.BP_CineCamera_C.ResetSeqCineCamSetting
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void ABP_CineCamera_C::ReceiveTick(float DeltaSeconds)
+void ABP_CineCamera_C::ResetSeqCineCamSetting()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CineCamera_C", "ReceiveTick");
+		Func = Class->GetFunction("BP_CineCamera_C", "ResetSeqCineCamSetting");
 
-	Params::BP_CineCamera_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_CineCamera.BP_CineCamera_C.ExecuteUbergraph_BP_CineCamera
-// (Final, UbergraphFunction, HasDefaults)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ABP_CineCamera_C::ExecuteUbergraph_BP_CineCamera(int32 EntryPoint)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CineCamera_C", "ExecuteUbergraph_BP_CineCamera");
-
-	Params::BP_CineCamera_C_ExecuteUbergraph_BP_CineCamera Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

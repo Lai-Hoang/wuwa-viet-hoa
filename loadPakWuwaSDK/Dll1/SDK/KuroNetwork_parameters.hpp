@@ -101,6 +101,47 @@ static_assert(offsetof(KuroHttp_PostRpt, IsGlobal) == 0x000010, "Member 'KuroHtt
 static_assert(offsetof(KuroHttp_PostRpt, Handle) == 0x000018, "Member 'KuroHttp_PostRpt::Handle' has a wrong offset!");
 static_assert(offsetof(KuroHttp_PostRpt, InTimeoutSecs) == 0x000040, "Member 'KuroHttp_PostRpt::InTimeoutSecs' has a wrong offset!");
 
+// Function KuroNetwork.KuroHttp.PostRpt1
+// 0x0058 (0x0058 - 0x0000)
+struct KuroHttp_PostRpt1 final
+{
+public:
+	class FString                                 ContentStr;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Content1Str;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsGlobal;                                          // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x7];                                       // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)> Handle; // 0x0028(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         InTimeoutSecs;                                     // 0x0050(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_54[0x4];                                       // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroHttp_PostRpt1) == 0x000008, "Wrong alignment on KuroHttp_PostRpt1");
+static_assert(sizeof(KuroHttp_PostRpt1) == 0x000058, "Wrong size on KuroHttp_PostRpt1");
+static_assert(offsetof(KuroHttp_PostRpt1, ContentStr) == 0x000000, "Member 'KuroHttp_PostRpt1::ContentStr' has a wrong offset!");
+static_assert(offsetof(KuroHttp_PostRpt1, Content1Str) == 0x000010, "Member 'KuroHttp_PostRpt1::Content1Str' has a wrong offset!");
+static_assert(offsetof(KuroHttp_PostRpt1, IsGlobal) == 0x000020, "Member 'KuroHttp_PostRpt1::IsGlobal' has a wrong offset!");
+static_assert(offsetof(KuroHttp_PostRpt1, Handle) == 0x000028, "Member 'KuroHttp_PostRpt1::Handle' has a wrong offset!");
+static_assert(offsetof(KuroHttp_PostRpt1, InTimeoutSecs) == 0x000050, "Member 'KuroHttp_PostRpt1::InTimeoutSecs' has a wrong offset!");
+
+// Function KuroNetwork.KuroHttp.PostRpt2
+// 0x0060 (0x0060 - 0x0000)
+struct KuroHttp_PostRpt2 final
+{
+public:
+	class FString                                 Url;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ContentStr;                                        // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Content1Str;                                       // 0x0020(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)> Handle; // 0x0030(0x0028)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         InTimeoutSecs;                                     // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5C[0x4];                                       // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroHttp_PostRpt2) == 0x000008, "Wrong alignment on KuroHttp_PostRpt2");
+static_assert(sizeof(KuroHttp_PostRpt2) == 0x000060, "Wrong size on KuroHttp_PostRpt2");
+static_assert(offsetof(KuroHttp_PostRpt2, Url) == 0x000000, "Member 'KuroHttp_PostRpt2::Url' has a wrong offset!");
+static_assert(offsetof(KuroHttp_PostRpt2, ContentStr) == 0x000010, "Member 'KuroHttp_PostRpt2::ContentStr' has a wrong offset!");
+static_assert(offsetof(KuroHttp_PostRpt2, Content1Str) == 0x000020, "Member 'KuroHttp_PostRpt2::Content1Str' has a wrong offset!");
+static_assert(offsetof(KuroHttp_PostRpt2, Handle) == 0x000030, "Member 'KuroHttp_PostRpt2::Handle' has a wrong offset!");
+static_assert(offsetof(KuroHttp_PostRpt2, InTimeoutSecs) == 0x000058, "Member 'KuroHttp_PostRpt2::InTimeoutSecs' has a wrong offset!");
+
 // Function KuroNetwork.KuroHttpServerRequestProxy.GetHeader
 // 0x0028 (0x0028 - 0x0000)
 struct KuroHttpServerRequestProxy_GetHeader final
@@ -164,6 +205,44 @@ static_assert(alignof(KuroHttpServerRouterProxy_CreateRouter) == 0x000004, "Wron
 static_assert(sizeof(KuroHttpServerRouterProxy_CreateRouter) == 0x000004, "Wrong size on KuroHttpServerRouterProxy_CreateRouter");
 static_assert(offsetof(KuroHttpServerRouterProxy_CreateRouter, Port) == 0x000000, "Member 'KuroHttpServerRouterProxy_CreateRouter::Port' has a wrong offset!");
 
+// Function KuroNetwork.KuroKcpClient.Connect
+// 0x0018 (0x0018 - 0x0000)
+struct KuroKcpClient_Connect final
+{
+public:
+	class FString                                 Addr;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Port;                                              // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          CrcCheckDisable;                                   // 0x0014(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroKcpClient_Connect) == 0x000008, "Wrong alignment on KuroKcpClient_Connect");
+static_assert(sizeof(KuroKcpClient_Connect) == 0x000018, "Wrong size on KuroKcpClient_Connect");
+static_assert(offsetof(KuroKcpClient_Connect, Addr) == 0x000000, "Member 'KuroKcpClient_Connect::Addr' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_Connect, Port) == 0x000010, "Member 'KuroKcpClient_Connect::Port' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_Connect, CrcCheckDisable) == 0x000014, "Member 'KuroKcpClient_Connect::CrcCheckDisable' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_Connect, ReturnValue) == 0x000015, "Member 'KuroKcpClient_Connect::ReturnValue' has a wrong offset!");
+
+// Function KuroNetwork.KuroKcpClient.GetDebugString
+// 0x0038 (0x0038 - 0x0000)
+struct KuroKcpClient_GetDebugString final
+{
+public:
+	struct FArrayBuffer                           ArrayBuffer;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 Separator;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int16                                         MsgId;                                             // 0x0020(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SeqNo;                                             // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroKcpClient_GetDebugString) == 0x000008, "Wrong alignment on KuroKcpClient_GetDebugString");
+static_assert(sizeof(KuroKcpClient_GetDebugString) == 0x000038, "Wrong size on KuroKcpClient_GetDebugString");
+static_assert(offsetof(KuroKcpClient_GetDebugString, ArrayBuffer) == 0x000000, "Member 'KuroKcpClient_GetDebugString::ArrayBuffer' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_GetDebugString, Separator) == 0x000010, "Member 'KuroKcpClient_GetDebugString::Separator' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_GetDebugString, MsgId) == 0x000020, "Member 'KuroKcpClient_GetDebugString::MsgId' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_GetDebugString, SeqNo) == 0x000024, "Member 'KuroKcpClient_GetDebugString::SeqNo' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_GetDebugString, ReturnValue) == 0x000028, "Member 'KuroKcpClient_GetDebugString::ReturnValue' has a wrong offset!");
+
 // Function KuroNetwork.KuroKcpClient.HandleKcpConnect
 // 0x0008 (0x0008 - 0x0000)
 struct KuroKcpClient_HandleKcpConnect final
@@ -176,6 +255,32 @@ static_assert(alignof(KuroKcpClient_HandleKcpConnect) == 0x000004, "Wrong alignm
 static_assert(sizeof(KuroKcpClient_HandleKcpConnect) == 0x000008, "Wrong size on KuroKcpClient_HandleKcpConnect");
 static_assert(offsetof(KuroKcpClient_HandleKcpConnect, NeedCrcCheck) == 0x000000, "Member 'KuroKcpClient_HandleKcpConnect::NeedCrcCheck' has a wrong offset!");
 static_assert(offsetof(KuroKcpClient_HandleKcpConnect, Conv) == 0x000004, "Member 'KuroKcpClient_HandleKcpConnect::Conv' has a wrong offset!");
+
+// Function KuroNetwork.KuroKcpClient.SendM
+// 0x0028 (0x0028 - 0x0000)
+struct KuroKcpClient_SendM final
+{
+public:
+	int8                                          MsgType;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         SeqNo;                                             // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int16                                         RpcId;                                             // 0x0008(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int16                                         MsgId;                                             // 0x000A(0x0002)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FArrayBuffer                           ArrayBuffer;                                       // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          UseKcp;                                            // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroKcpClient_SendM) == 0x000008, "Wrong alignment on KuroKcpClient_SendM");
+static_assert(sizeof(KuroKcpClient_SendM) == 0x000028, "Wrong size on KuroKcpClient_SendM");
+static_assert(offsetof(KuroKcpClient_SendM, MsgType) == 0x000000, "Member 'KuroKcpClient_SendM::MsgType' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_SendM, SeqNo) == 0x000004, "Member 'KuroKcpClient_SendM::SeqNo' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_SendM, RpcId) == 0x000008, "Member 'KuroKcpClient_SendM::RpcId' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_SendM, MsgId) == 0x00000A, "Member 'KuroKcpClient_SendM::MsgId' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_SendM, ArrayBuffer) == 0x000010, "Member 'KuroKcpClient_SendM::ArrayBuffer' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_SendM, UseKcp) == 0x000020, "Member 'KuroKcpClient_SendM::UseKcp' has a wrong offset!");
+static_assert(offsetof(KuroKcpClient_SendM, ReturnValue) == 0x000021, "Member 'KuroKcpClient_SendM::ReturnValue' has a wrong offset!");
 
 // Function KuroNetwork.KuroKcpClient.SendTcpMessage
 // 0x0018 (0x0018 - 0x0000)

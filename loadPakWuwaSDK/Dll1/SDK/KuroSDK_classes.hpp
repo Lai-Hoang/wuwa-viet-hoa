@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "Engine_classes.hpp"
 #include "KuroSDK_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class KuroSDK.KuroSDKManager
-// 0x0208 (0x0238 - 0x0030)
+// 0x0238 (0x0268 - 0x0030)
 class UKuroSDKManager final : public UObject
 {
 public:
@@ -50,23 +50,31 @@ public:
 	TMulticastInlineDelegate<void(int32 code, const class FString& platform, const class FString& msg)> ShareResultDelegate; // 0x01A0(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void(const class FString& log)> LogDelegate;                            // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              WebViewCloseDelegate;                              // 0x01C0(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-	TMulticastInlineDelegate<void(const class FString& Host, const class FString& DeepValue, const class FString& Source)> OnActivatedByApplinksDelegate; // 0x01D0(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0[0x58];                                     // 0x01E0(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMulticastInlineDelegate<void(bool result, const class FString& data)> ExternalLoginCallBack;    // 0x01D0(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool result, const TArray<struct FAchievementStruct>& data)> ExternalQueryAchievementsDelegate; // 0x01E0(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(bool result, const TArray<class FString>& data)> ExternalWriteAchievementsDelegate; // 0x01F0(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	TMulticastInlineDelegate<void(const class FString& Host, const class FString& DeepValue, const class FString& Source)> OnActivatedByApplinksDelegate; // 0x0200(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
+	uint8                                         Pad_210[0x58];                                     // 0x0210(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static void BindAccount();
+	static class FString CallPlugin(const class FString& data);
+	static bool CallPluginAsync(const class FString& data, const TDelegate<void(const class FString& Result)>& callback);
 	static void CheckApplinksActivation();
 	static bool CheckPhotoPermission();
 	static void ClearLoginInfo();
 	static void ClosePostWebView();
 	static void CloseWebView(const class FString& identifier);
+	static void DoEngineExit();
+	static bool DoInitSdkProcedure();
 	static void ExitGame();
+	static void FreePlugin(const class FString& data);
 	static class UKuroSDKManager* Get();
 	static void GetAdsValue(const class FString& income, const class FString& data);
 	static class FString GetAgreementUrl();
 	static class FString GetAppChannelId();
 	static struct FBasicInfo GetBasicInfo();
-	static int32 GetChannelId();
+	static class FString GetChannelId();
 	static class FString GetChannelName();
 	static struct FLoginStruct GetCurrentLoginInfo();
 	static class FString GetDeepLinkStr();
@@ -91,6 +99,7 @@ public:
 	static void OpenSdkQRScan();
 	static void OpenWebView(const class FString& title, const class FString& url, bool isLandscape, bool transparent, bool webAccelerated, const class FString& identifier, const class FString& data);
 	static void PostSplashScreenEndSuccess();
+	static void QueryExternalAchievements();
 	static void QueryProductInfo(const class FString& data);
 	static void RequestPhotoPermission();
 	static void RequestReviewApp(const class FString& data);
@@ -101,8 +110,11 @@ public:
 	static void SetWindowsMode(bool mode);
 	static void Share(const TArray<uint8>& imageData, const class FString& sKuroSDKEventParameter);
 	static void ShowExitGameDialog();
+	static void ShowExternalLogin();
+	static void ShowVirtualKeyboard(bool state);
 	static void Start();
 	static void UpdateChannelEvent(const class FString& data);
+	static void WriteExternalAchievements(const class FString& data);
 
 public:
 	static class UClass* StaticClass()
@@ -115,7 +127,7 @@ public:
 	}
 };
 static_assert(alignof(UKuroSDKManager) == 0x000008, "Wrong alignment on UKuroSDKManager");
-static_assert(sizeof(UKuroSDKManager) == 0x000238, "Wrong size on UKuroSDKManager");
+static_assert(sizeof(UKuroSDKManager) == 0x000268, "Wrong size on UKuroSDKManager");
 static_assert(offsetof(UKuroSDKManager, InitDelegate) == 0x000038, "Member 'UKuroSDKManager::InitDelegate' has a wrong offset!");
 static_assert(offsetof(UKuroSDKManager, LoginSuccessDelegate) == 0x000048, "Member 'UKuroSDKManager::LoginSuccessDelegate' has a wrong offset!");
 static_assert(offsetof(UKuroSDKManager, LoginDelegate) == 0x000058, "Member 'UKuroSDKManager::LoginDelegate' has a wrong offset!");
@@ -141,7 +153,10 @@ static_assert(offsetof(UKuroSDKManager, GetSharePlatformDelegate) == 0x000190, "
 static_assert(offsetof(UKuroSDKManager, ShareResultDelegate) == 0x0001A0, "Member 'UKuroSDKManager::ShareResultDelegate' has a wrong offset!");
 static_assert(offsetof(UKuroSDKManager, LogDelegate) == 0x0001B0, "Member 'UKuroSDKManager::LogDelegate' has a wrong offset!");
 static_assert(offsetof(UKuroSDKManager, WebViewCloseDelegate) == 0x0001C0, "Member 'UKuroSDKManager::WebViewCloseDelegate' has a wrong offset!");
-static_assert(offsetof(UKuroSDKManager, OnActivatedByApplinksDelegate) == 0x0001D0, "Member 'UKuroSDKManager::OnActivatedByApplinksDelegate' has a wrong offset!");
+static_assert(offsetof(UKuroSDKManager, ExternalLoginCallBack) == 0x0001D0, "Member 'UKuroSDKManager::ExternalLoginCallBack' has a wrong offset!");
+static_assert(offsetof(UKuroSDKManager, ExternalQueryAchievementsDelegate) == 0x0001E0, "Member 'UKuroSDKManager::ExternalQueryAchievementsDelegate' has a wrong offset!");
+static_assert(offsetof(UKuroSDKManager, ExternalWriteAchievementsDelegate) == 0x0001F0, "Member 'UKuroSDKManager::ExternalWriteAchievementsDelegate' has a wrong offset!");
+static_assert(offsetof(UKuroSDKManager, OnActivatedByApplinksDelegate) == 0x000200, "Member 'UKuroSDKManager::OnActivatedByApplinksDelegate' has a wrong offset!");
 
 // Class KuroSDK.KuroSDKStaticLibrary
 // 0x0000 (0x0030 - 0x0030)
@@ -155,7 +170,7 @@ public:
 	static class FString GetAndroidGalleryExternalFilePath();
 	static void GetAppChannelId();
 	static void GetBaseDeviceInfo();
-	static void GetChannelId();
+	static class FString GetChannelId();
 	static void GetChannelName();
 	static struct FLoginStruct GetCurrentLoginInfo();
 	static bool GetIsAgreeProtocol();
@@ -176,6 +191,7 @@ public:
 	static void Share(const class FString& imagePath, const class FString& sKuroSDKEventParameter);
 	static void ShareTexture(const class FString& texturePath, const class FString& sKuroSDKEventParameter);
 	static void ShowExitGameDialog();
+	static void ShowVirtualKeyboard(bool state);
 
 public:
 	static class UClass* StaticClass()

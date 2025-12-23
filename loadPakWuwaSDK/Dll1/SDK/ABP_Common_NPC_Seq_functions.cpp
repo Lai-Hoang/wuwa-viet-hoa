@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function ABP_Common_NPC_Seq.ABP_Common_NPC_Seq_C.ExecuteUbergraph_ABP_Common_NPC_Seq
-// (Final, UbergraphFunction)
+// (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -17,62 +17,21 @@
 namespace SDK
 {
 
-// Function SequenceDialogue.MovieSceneDialogueSubsystem.ShowDialogue
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// bool                                    bShow                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FText&                      DialogueID                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// const int32                             GuardTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             AudioDelay                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             AudioTransitionDuration                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const ELanguageAudio                    LanguageType                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             AutoPlayDelay                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMovieSceneDialogueSubsystem::ShowDialogue(bool bShow, const class FText& DialogueID, const int32 GuardTime, const int32 AudioDelay, const int32 AudioTransitionDuration, const ELanguageAudio LanguageType, const int32 AutoPlayDelay)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneDialogueSubsystem", "ShowDialogue");
-
-	Params::MovieSceneDialogueSubsystem_ShowDialogue Parms{};
-
-	Parms.bShow = bShow;
-	Parms.DialogueID = std::move(DialogueID);
-	Parms.GuardTime = GuardTime;
-	Parms.AudioDelay = AudioDelay;
-	Parms.AudioTransitionDuration = AudioTransitionDuration;
-	Parms.LanguageType = LanguageType;
-	Parms.AutoPlayDelay = AutoPlayDelay;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function SequenceDialogue.MovieSceneDialogueSubsystem.ShowDialogueAudio
+// Function SequenceDialogue.MovieSceneQteManager.FinishQte
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// bool                                    bShow                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    AudioKey                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             AudioTransitionDuration                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Id                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UMovieSceneDialogueSubsystem::ShowDialogueAudio(bool bShow, const class FString& AudioKey, const int32 AudioTransitionDuration)
+void UMovieSceneQteManager::FinishQte(int32 Id)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneDialogueSubsystem", "ShowDialogueAudio");
+		Func = Class->GetFunction("MovieSceneQteManager", "FinishQte");
 
-	Params::MovieSceneDialogueSubsystem_ShowDialogueAudio Parms{};
+	Params::MovieSceneQteManager_FinishQte Parms{};
 
-	Parms.bShow = bShow;
-	Parms.AudioKey = std::move(AudioKey);
-	Parms.AudioTransitionDuration = AudioTransitionDuration;
+	Parms.Id = Id;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -83,23 +42,23 @@ void UMovieSceneDialogueSubsystem::ShowDialogueAudio(bool bShow, const class FSt
 }
 
 
-// Function SequenceDialogue.MovieSceneDialogueSubsystem.TryGetAutoTransformByOffsetTime
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Function SequenceDialogue.MovieSceneQteManager.OnMontageBlendingOut
+// (Final, Native, Private)
 // Parameters:
-// struct FTransform*                      OutTrans                                               (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// float                                   OffsetTime                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAnimMontage*                     Montage                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInterrupted                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UMovieSceneDialogueSubsystem::TryGetAutoTransformByOffsetTime(struct FTransform* OutTrans, float OffsetTime)
+void UMovieSceneQteManager::OnMontageBlendingOut(class UAnimMontage* Montage, bool bInterrupted)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MovieSceneDialogueSubsystem", "TryGetAutoTransformByOffsetTime");
+		Func = Class->GetFunction("MovieSceneQteManager", "OnMontageBlendingOut");
 
-	Params::MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime Parms{};
+	Params::MovieSceneQteManager_OnMontageBlendingOut Parms{};
 
-	Parms.OffsetTime = OffsetTime;
+	Parms.Montage = Montage;
+	Parms.bInterrupted = bInterrupted;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -107,11 +66,54 @@ bool UMovieSceneDialogueSubsystem::TryGetAutoTransformByOffsetTime(struct FTrans
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
 
-	if (OutTrans != nullptr)
-		*OutTrans = std::move(Parms.OutTrans);
 
-	return Parms.ReturnValue;
+// Function SequenceDialogue.MovieSceneQteManager.OnSequencePaused
+// (Final, Native, Private)
+
+void UMovieSceneQteManager::OnSequencePaused()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneQteManager", "OnSequencePaused");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequenceDialogue.MovieSceneQteManager.UpdateQte
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   Id                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bProgress                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ProgressPercentage                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneQteManager::UpdateQte(int32 Id, bool bProgress, float ProgressPercentage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneQteManager", "UpdateQte");
+
+	Params::MovieSceneQteManager_UpdateQte Parms{};
+
+	Parms.Id = Id;
+	Parms.bProgress = bProgress;
+	Parms.ProgressPercentage = ProgressPercentage;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
@@ -144,6 +146,35 @@ void UMovieSceneSeqAnimDataSection::AddScalarParameterKey(class FName InParamete
 }
 
 
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddScalarParameterKeyCustom
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FSeqAnimCurveFloatDesc&    InParameterName                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FFrameNumber&              InTime                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneSeqAnimDataSection::AddScalarParameterKeyCustom(const struct FSeqAnimCurveFloatDesc& InParameterName, const struct FFrameNumber& InTime, float InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSeqAnimDataSection", "AddScalarParameterKeyCustom");
+
+	Params::MovieSceneSeqAnimDataSection_AddScalarParameterKeyCustom Parms{};
+
+	Parms.InParameterName = std::move(InParameterName);
+	Parms.InTime = std::move(InTime);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddVectorParameterKey
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -161,6 +192,35 @@ void UMovieSceneSeqAnimDataSection::AddVectorParameterKey(class FName InParamete
 	Params::MovieSceneSeqAnimDataSection_AddVectorParameterKey Parms{};
 
 	Parms.InParameterName = InParameterName;
+	Parms.InTime = std::move(InTime);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequenceDialogue.MovieSceneSeqAnimDataSection.AddVectorParameterKeyCustom
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FSeqAnimCurveVectorDesc&   InParameterName                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FFrameNumber&              InTime                                                 (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneSeqAnimDataSection::AddVectorParameterKeyCustom(const struct FSeqAnimCurveVectorDesc& InParameterName, const struct FFrameNumber& InTime, const struct FVector& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneSeqAnimDataSection", "AddVectorParameterKeyCustom");
+
+	Params::MovieSceneSeqAnimDataSection_AddVectorParameterKeyCustom Parms{};
+
+	Parms.InParameterName = std::move(InParameterName);
 	Parms.InTime = std::move(InTime);
 	Parms.InValue = std::move(InValue);
 
@@ -314,6 +374,131 @@ bool UMovieSceneSeqAnimDataSection::RemoveScalarParameter(class FName InParamete
 }
 
 
+// Function SequenceDialogue.MovieSceneDialogueSubsystem.ShowDialogue
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// bool                                    bShow                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FText&                      DialogueID                                             (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// const int32                             GuardTime                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             AudioDelay                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             AudioTransitionDuration                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const ELanguageAudio                    LanguageType                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             AutoPlayDelay                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneDialogueSubsystem::ShowDialogue(bool bShow, const class FText& DialogueID, const int32 GuardTime, const int32 AudioDelay, const int32 AudioTransitionDuration, const ELanguageAudio LanguageType, const int32 AutoPlayDelay)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneDialogueSubsystem", "ShowDialogue");
+
+	Params::MovieSceneDialogueSubsystem_ShowDialogue Parms{};
+
+	Parms.bShow = bShow;
+	Parms.DialogueID = std::move(DialogueID);
+	Parms.GuardTime = GuardTime;
+	Parms.AudioDelay = AudioDelay;
+	Parms.AudioTransitionDuration = AudioTransitionDuration;
+	Parms.LanguageType = LanguageType;
+	Parms.AutoPlayDelay = AutoPlayDelay;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequenceDialogue.MovieSceneDialogueSubsystem.ShowDialogueAudio
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bShow                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    AudioKey                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             AudioTransitionDuration                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMovieSceneDialogueSubsystem::ShowDialogueAudio(bool bShow, const class FString& AudioKey, const int32 AudioTransitionDuration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneDialogueSubsystem", "ShowDialogueAudio");
+
+	Params::MovieSceneDialogueSubsystem_ShowDialogueAudio Parms{};
+
+	Parms.bShow = bShow;
+	Parms.AudioKey = std::move(AudioKey);
+	Parms.AudioTransitionDuration = AudioTransitionDuration;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequenceDialogue.MovieSceneDialogueSubsystem.TryGetAutoTransformByOffsetTime
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FTransform*                      OutTrans                                               (Parm, OutParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   OffsetTime                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bApplyCameraProperties                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMovieSceneDialogueSubsystem::TryGetAutoTransformByOffsetTime(struct FTransform* OutTrans, float OffsetTime, bool bApplyCameraProperties)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneDialogueSubsystem", "TryGetAutoTransformByOffsetTime");
+
+	Params::MovieSceneDialogueSubsystem_TryGetAutoTransformByOffsetTime Parms{};
+
+	Parms.OffsetTime = OffsetTime;
+	Parms.bApplyCameraProperties = bApplyCameraProperties;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTrans != nullptr)
+		*OutTrans = std::move(Parms.OutTrans);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequenceDialogue.MovieSceneDialogueSubsystem.GetQteManager
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMovieSceneQteManager*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMovieSceneQteManager* UMovieSceneDialogueSubsystem::GetQteManager() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MovieSceneDialogueSubsystem", "GetQteManager");
+
+	Params::MovieSceneDialogueSubsystem_GetQteManager Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function SequenceDialogue.SeqAnimDataInterface.GetAnimDataFloat
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -328,6 +513,35 @@ bool ISeqAnimDataInterface::GetAnimDataFloat(TArray<struct FNamedCurveValue>* Fl
 		Func = AsUObject()->Class->GetFunction("SeqAnimDataInterface", "GetAnimDataFloat");
 
 	Params::SeqAnimDataInterface_GetAnimDataFloat Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (FloatCurveData != nullptr)
+		*FloatCurveData = std::move(Parms.FloatCurveData);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequenceDialogue.SeqAnimDataInterface.GetAnimDataTransform
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TMap<class FName, struct FTransform>*   FloatCurveData                                         (Parm, OutParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISeqAnimDataInterface::GetAnimDataTransform(TMap<class FName, struct FTransform>* FloatCurveData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SeqAnimDataInterface", "GetAnimDataTransform");
+
+	Params::SeqAnimDataInterface_GetAnimDataTransform Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -397,6 +611,31 @@ TArray<class FName> ISeqAnimDataInterface::GetSupportGroupNames()
 }
 
 
+// Function SequenceDialogue.SeqAnimDataInterface.IsCustomSupport
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISeqAnimDataInterface::IsCustomSupport()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SeqAnimDataInterface", "IsCustomSupport");
+
+	Params::SeqAnimDataInterface_IsCustomSupport Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function SequenceDialogue.SeqAnimDataInterface.SetAnimDataFloat
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -411,6 +650,34 @@ bool ISeqAnimDataInterface::SetAnimDataFloat(const TArray<struct FNamedCurveValu
 		Func = AsUObject()->Class->GetFunction("SeqAnimDataInterface", "SetAnimDataFloat");
 
 	Params::SeqAnimDataInterface_SetAnimDataFloat Parms{};
+
+	Parms.FloatCurveData = std::move(FloatCurveData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequenceDialogue.SeqAnimDataInterface.SetAnimDataTransform
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const TMap<class FName, struct FTransform>&FloatCurveData                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ISeqAnimDataInterface::SetAnimDataTransform(const TMap<class FName, struct FTransform>& FloatCurveData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SeqAnimDataInterface", "SetAnimDataTransform");
+
+	Params::SeqAnimDataInterface_SetAnimDataTransform Parms{};
 
 	Parms.FloatCurveData = std::move(FloatCurveData);
 
@@ -492,6 +759,56 @@ void ISeqAutoTransformInterface::EndAutoTransform()
 	Func->FunctionFlags |= 0x400;
 
 	AsUObject()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function SequenceDialogue.SeqQteAnimInterface.GetStateAnimAlpha
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float ISeqQteAnimInterface::GetStateAnimAlpha()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SeqQteAnimInterface", "GetStateAnimAlpha");
+
+	Params::SeqQteAnimInterface_GetStateAnimAlpha Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function SequenceDialogue.SeqQteAnimInterface.SetStateAnimAlpha
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   Alpha                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ISeqQteAnimInterface::SetStateAnimAlpha(float Alpha)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = AsUObject()->Class->GetFunction("SeqQteAnimInterface", "SetStateAnimAlpha");
+
+	Params::SeqQteAnimInterface_SetStateAnimAlpha Parms{};
+
+	Parms.Alpha = Alpha;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	AsUObject()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

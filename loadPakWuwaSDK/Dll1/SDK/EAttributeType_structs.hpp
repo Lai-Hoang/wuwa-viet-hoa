@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // UserDefinedEnum EAttributeType.EAttributeType
-// NumValues: 0x008A
+// NumValues: 0x0090
 enum class EAttributeType : uint8
 {
 	EAttributeType_None                      = 0,
@@ -155,7 +155,13 @@ enum class EAttributeType : uint8
 	NewEnumerator27                          = 134,
 	NewEnumerator28                          = 135,
 	NewEnumerator29                          = 136,
-	EAttributeType_MAX                       = 137,
+	NewEnumerator30                          = 137,
+	NewEnumerator31                          = 138,
+	NewEnumerator32                          = 139,
+	NewEnumerator33                          = 140,
+	NewEnumerator34                          = 141,
+	NewEnumerator35                          = 142,
+	EAttributeType_MAX                       = 143,
 };
 
 }

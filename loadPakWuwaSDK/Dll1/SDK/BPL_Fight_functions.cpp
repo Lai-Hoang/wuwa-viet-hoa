@@ -348,9 +348,10 @@ void UBPL_Fight_C::设置材质效果(class ATsBaseCharacter_C* 设置对象, cl
 // Parameters:
 // class ATsBaseCharacter_C*               设置对象_                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Handle_                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    PlayWithEnd                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBPL_Fight_C::删除材质效果(class ATsBaseCharacter_C* 设置对象_, int32 Handle_, class UObject* __WorldContext)
+void UBPL_Fight_C::删除材质效果(class ATsBaseCharacter_C* 设置对象_, int32 Handle_, bool PlayWithEnd, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
@@ -361,6 +362,7 @@ void UBPL_Fight_C::删除材质效果(class ATsBaseCharacter_C* 设置对象_, i
 
 	Parms.设置对象_ = 设置对象_;
 	Parms.Handle_ = Handle_;
+	Parms.PlayWithEnd = PlayWithEnd;
 	Parms.__WorldContext = __WorldContext;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);

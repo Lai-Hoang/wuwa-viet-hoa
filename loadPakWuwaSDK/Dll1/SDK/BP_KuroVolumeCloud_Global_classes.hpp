@@ -11,59 +11,78 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "SD_KuroTraceCloudData_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_KuroVolumeCloud_Global.BP_KuroVolumeCloud_Global_C
-// 0x01E8 (0x0498 - 0x02B0)
+// 0x0228 (0x05D0 - 0x03A8)
 class ABP_KuroVolumeCloud_Global_C final : public AKuroBPCustomCookActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                   Cube;                                              // 0x02B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CloudRange;                                        // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FSD_KuroTraceCloudData>         Data;                                              // 0x02D0(0x0010)(Edit, BlueprintVisible)
-	struct FSD_KuroTraceCloudData                 LerpData;                                          // 0x02E0(0x0014)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bEditorTick;                                       // 0x02F4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          bDirty;                                            // 0x02F5(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_2F6[0x2];                                      // 0x02F6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           BakeFlowSpeed;                                     // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     LastMaterial;                                      // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          LastPosition;                                      // 0x0310(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          LastScale;                                         // 0x0328(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bLocal;                                            // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_341[0x3];                                      // 0x0341(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           CloudSpeed;                                        // 0x0344(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           LocalSpeed;                                        // 0x0354(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         FadeGroup_0_2_;                                    // 0x0364(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LocalOpacity;                                      // 0x0368(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           ThunderColor;                                      // 0x036C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ThunderSpeed;                                      // 0x037C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ThunderTimeCounter;                                // 0x0380(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_384[0x4];                                      // 0x0384(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCurveFloat*                            ThunderCurve;                                      // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                            ThunderCurve2;                                     // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UCurveFloat*                            ThunderCurve3;                                     // 0x0398(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TMap<class FName, float>                      Scalar_Parameters;                                 // 0x03A0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, struct FLinearColor>        Vector_Parameters;                                 // 0x03F0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	TMap<class FName, class UTexture*>            Texture_Parameters;                                // 0x0440(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
-	bool                                          bUseGlobalSpeed;                                   // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UStaticMeshComponent*                   Cube;                                              // 0x03B0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CloudRange;                                        // 0x03B8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FSD_KuroTraceCloudData>         Data;                                              // 0x03C8(0x0010)(Edit, BlueprintVisible)
+	struct FSD_KuroTraceCloudData                 LerpData;                                          // 0x03D8(0x0014)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bEditorTick;                                       // 0x03EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bDirty;                                            // 0x03ED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3EE[0x2];                                      // 0x03EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           BakeFlowSpeed;                                     // 0x03F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     LastMaterial;                                      // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          LastPosition;                                      // 0x0408(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          LastScale;                                         // 0x0420(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bLocal;                                            // 0x0438(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_439[0x3];                                      // 0x0439(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           CloudSpeed;                                        // 0x043C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           LocalSpeed;                                        // 0x044C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         FadeGroup_0_2_;                                    // 0x045C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LocalOpacity;                                      // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           ThunderColor;                                      // 0x0464(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ThunderSpeed;                                      // 0x0474(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ThunderTimeCounter;                                // 0x0478(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_47C[0x4];                                      // 0x047C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCurveFloat*                            ThunderCurve;                                      // 0x0480(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            ThunderCurve2;                                     // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UCurveFloat*                            ThunderCurve3;                                     // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<class FName, float>                      Scalar_Parameters;                                 // 0x0498(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, struct FLinearColor>        Vector_Parameters;                                 // 0x04E8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	TMap<class FName, class UTexture*>            Texture_Parameters;                                // 0x0538(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          bUseGlobalSpeed;                                   // 0x0588(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bEnableDistanceFade;                               // 0x0589(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_58A[0x6];                                      // 0x058A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DistanceFadeWidth;                                 // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DistanceFade;                                      // 0x0598(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         NowQuality;                                        // 0x05A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5A4[0x4];                                      // 0x05A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AStaticMeshActor*                       LowQualityMesh;                                    // 0x05A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CacheLocalOpacity;                                 // 0x05B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          LastNotAffectedByVRS;                              // 0x05B4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_5B5[0x3];                                      // 0x05B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         LastQualityLevel;                                  // 0x05B8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5BC[0x4];                                      // 0x05BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialParameterCollection*           MPC_GlobalShader;                                  // 0x05C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         VolumeCloudSpeedMulti;                             // 0x05C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShouldTick;                                       // 0x05CC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          bLocalOnlyForVRS;                                  // 0x05CD(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          bVolumeCloudNotAffectedByVRS;                      // 0x05CE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_KuroVolumeCloud_Global(int32 EntryPoint);
-	void ReceiveBeginPlay();
+	void ReceiveEndPlay(EEndPlayReason EndPlayReason);
+	void UpdateQualitySwitch();
 	void BeforeSave();
 	void BeforeCookForPC();
 	void BeforeCookForMobile();
-	void ReceiveTick(float DeltaSeconds);
 	void EditorTick();
+	void ReceiveTick(float DeltaSeconds);
+	void ReceiveBeginPlay();
 	void UserConstructionScript();
 	void UpdateCloudTransform();
 	void UpdateCloudLighting();
@@ -71,6 +90,8 @@ public:
 	void Update();
 	void CheckNeed_Update();
 	void CleanMID();
+	void UpdateCloudShadingRate();
+	void UpdateCloudShadingRateLocal();
 
 public:
 	static class UClass* StaticClass()
@@ -83,34 +104,47 @@ public:
 	}
 };
 static_assert(alignof(ABP_KuroVolumeCloud_Global_C) == 0x000008, "Wrong alignment on ABP_KuroVolumeCloud_Global_C");
-static_assert(sizeof(ABP_KuroVolumeCloud_Global_C) == 0x000498, "Wrong size on ABP_KuroVolumeCloud_Global_C");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, UberGraphFrame) == 0x0002B0, "Member 'ABP_KuroVolumeCloud_Global_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Cube) == 0x0002B8, "Member 'ABP_KuroVolumeCloud_Global_C::Cube' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, CloudRange) == 0x0002C0, "Member 'ABP_KuroVolumeCloud_Global_C::CloudRange' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, DefaultSceneRoot) == 0x0002C8, "Member 'ABP_KuroVolumeCloud_Global_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Data) == 0x0002D0, "Member 'ABP_KuroVolumeCloud_Global_C::Data' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LerpData) == 0x0002E0, "Member 'ABP_KuroVolumeCloud_Global_C::LerpData' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bEditorTick) == 0x0002F4, "Member 'ABP_KuroVolumeCloud_Global_C::bEditorTick' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bDirty) == 0x0002F5, "Member 'ABP_KuroVolumeCloud_Global_C::bDirty' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, BakeFlowSpeed) == 0x0002F8, "Member 'ABP_KuroVolumeCloud_Global_C::BakeFlowSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LastMaterial) == 0x000308, "Member 'ABP_KuroVolumeCloud_Global_C::LastMaterial' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LastPosition) == 0x000310, "Member 'ABP_KuroVolumeCloud_Global_C::LastPosition' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LastScale) == 0x000328, "Member 'ABP_KuroVolumeCloud_Global_C::LastScale' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bLocal) == 0x000340, "Member 'ABP_KuroVolumeCloud_Global_C::bLocal' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, CloudSpeed) == 0x000344, "Member 'ABP_KuroVolumeCloud_Global_C::CloudSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LocalSpeed) == 0x000354, "Member 'ABP_KuroVolumeCloud_Global_C::LocalSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, FadeGroup_0_2_) == 0x000364, "Member 'ABP_KuroVolumeCloud_Global_C::FadeGroup_0_2_' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LocalOpacity) == 0x000368, "Member 'ABP_KuroVolumeCloud_Global_C::LocalOpacity' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderColor) == 0x00036C, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderColor' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderSpeed) == 0x00037C, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderSpeed' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderTimeCounter) == 0x000380, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderTimeCounter' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderCurve) == 0x000388, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderCurve' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderCurve2) == 0x000390, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderCurve2' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderCurve3) == 0x000398, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderCurve3' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Scalar_Parameters) == 0x0003A0, "Member 'ABP_KuroVolumeCloud_Global_C::Scalar_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Vector_Parameters) == 0x0003F0, "Member 'ABP_KuroVolumeCloud_Global_C::Vector_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Texture_Parameters) == 0x000440, "Member 'ABP_KuroVolumeCloud_Global_C::Texture_Parameters' has a wrong offset!");
-static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bUseGlobalSpeed) == 0x000490, "Member 'ABP_KuroVolumeCloud_Global_C::bUseGlobalSpeed' has a wrong offset!");
+static_assert(sizeof(ABP_KuroVolumeCloud_Global_C) == 0x0005D0, "Wrong size on ABP_KuroVolumeCloud_Global_C");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, UberGraphFrame) == 0x0003A8, "Member 'ABP_KuroVolumeCloud_Global_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Cube) == 0x0003B0, "Member 'ABP_KuroVolumeCloud_Global_C::Cube' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, CloudRange) == 0x0003B8, "Member 'ABP_KuroVolumeCloud_Global_C::CloudRange' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, DefaultSceneRoot) == 0x0003C0, "Member 'ABP_KuroVolumeCloud_Global_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Data) == 0x0003C8, "Member 'ABP_KuroVolumeCloud_Global_C::Data' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LerpData) == 0x0003D8, "Member 'ABP_KuroVolumeCloud_Global_C::LerpData' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bEditorTick) == 0x0003EC, "Member 'ABP_KuroVolumeCloud_Global_C::bEditorTick' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bDirty) == 0x0003ED, "Member 'ABP_KuroVolumeCloud_Global_C::bDirty' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, BakeFlowSpeed) == 0x0003F0, "Member 'ABP_KuroVolumeCloud_Global_C::BakeFlowSpeed' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LastMaterial) == 0x000400, "Member 'ABP_KuroVolumeCloud_Global_C::LastMaterial' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LastPosition) == 0x000408, "Member 'ABP_KuroVolumeCloud_Global_C::LastPosition' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LastScale) == 0x000420, "Member 'ABP_KuroVolumeCloud_Global_C::LastScale' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bLocal) == 0x000438, "Member 'ABP_KuroVolumeCloud_Global_C::bLocal' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, CloudSpeed) == 0x00043C, "Member 'ABP_KuroVolumeCloud_Global_C::CloudSpeed' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LocalSpeed) == 0x00044C, "Member 'ABP_KuroVolumeCloud_Global_C::LocalSpeed' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, FadeGroup_0_2_) == 0x00045C, "Member 'ABP_KuroVolumeCloud_Global_C::FadeGroup_0_2_' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LocalOpacity) == 0x000460, "Member 'ABP_KuroVolumeCloud_Global_C::LocalOpacity' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderColor) == 0x000464, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderColor' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderSpeed) == 0x000474, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderSpeed' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderTimeCounter) == 0x000478, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderTimeCounter' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderCurve) == 0x000480, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderCurve' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderCurve2) == 0x000488, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderCurve2' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, ThunderCurve3) == 0x000490, "Member 'ABP_KuroVolumeCloud_Global_C::ThunderCurve3' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Scalar_Parameters) == 0x000498, "Member 'ABP_KuroVolumeCloud_Global_C::Scalar_Parameters' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Vector_Parameters) == 0x0004E8, "Member 'ABP_KuroVolumeCloud_Global_C::Vector_Parameters' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, Texture_Parameters) == 0x000538, "Member 'ABP_KuroVolumeCloud_Global_C::Texture_Parameters' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bUseGlobalSpeed) == 0x000588, "Member 'ABP_KuroVolumeCloud_Global_C::bUseGlobalSpeed' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bEnableDistanceFade) == 0x000589, "Member 'ABP_KuroVolumeCloud_Global_C::bEnableDistanceFade' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, DistanceFadeWidth) == 0x000590, "Member 'ABP_KuroVolumeCloud_Global_C::DistanceFadeWidth' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, DistanceFade) == 0x000598, "Member 'ABP_KuroVolumeCloud_Global_C::DistanceFade' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, NowQuality) == 0x0005A0, "Member 'ABP_KuroVolumeCloud_Global_C::NowQuality' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LowQualityMesh) == 0x0005A8, "Member 'ABP_KuroVolumeCloud_Global_C::LowQualityMesh' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, CacheLocalOpacity) == 0x0005B0, "Member 'ABP_KuroVolumeCloud_Global_C::CacheLocalOpacity' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LastNotAffectedByVRS) == 0x0005B4, "Member 'ABP_KuroVolumeCloud_Global_C::LastNotAffectedByVRS' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, LastQualityLevel) == 0x0005B8, "Member 'ABP_KuroVolumeCloud_Global_C::LastQualityLevel' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, MPC_GlobalShader) == 0x0005C0, "Member 'ABP_KuroVolumeCloud_Global_C::MPC_GlobalShader' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, VolumeCloudSpeedMulti) == 0x0005C8, "Member 'ABP_KuroVolumeCloud_Global_C::VolumeCloudSpeedMulti' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bShouldTick) == 0x0005CC, "Member 'ABP_KuroVolumeCloud_Global_C::bShouldTick' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bLocalOnlyForVRS) == 0x0005CD, "Member 'ABP_KuroVolumeCloud_Global_C::bLocalOnlyForVRS' has a wrong offset!");
+static_assert(offsetof(ABP_KuroVolumeCloud_Global_C, bVolumeCloudNotAffectedByVRS) == 0x0005CE, "Member 'ABP_KuroVolumeCloud_Global_C::bVolumeCloudNotAffectedByVRS' has a wrong offset!");
 
 }
 

@@ -859,6 +859,34 @@ bool UKuroApplicationLibrary::AddEditorPreEndPIEDelegate(const TDelegate<void(bo
 }
 
 
+// Function KuroUtility.KuroApplicationLibrary.AddWindowActivationDelegate
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TDelegate<void(bool Activated)>&  InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroApplicationLibrary::AddWindowActivationDelegate(const TDelegate<void(bool Activated)>& InDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroApplicationLibrary", "AddWindowActivationDelegate");
+
+	Params::KuroApplicationLibrary_AddWindowActivationDelegate Parms{};
+
+	Parms.InDelegate = InDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroUtility.KuroApplicationLibrary.Test
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1793,6 +1821,56 @@ bool UKuroStaticAndroidLibrary::GetDeviceIsRooted()
 }
 
 
+// Function KuroUtility.KuroStaticAndroidLibrary.GetHarmonyOSVersion
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroStaticAndroidLibrary::GetHarmonyOSVersion()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticAndroidLibrary", "GetHarmonyOSVersion");
+
+	Params::KuroStaticAndroidLibrary_GetHarmonyOSVersion Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroStaticAndroidLibrary.IsHarmonyOS
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroStaticAndroidLibrary::IsHarmonyOS()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticAndroidLibrary", "IsHarmonyOS");
+
+	Params::KuroStaticAndroidLibrary_IsHarmonyOS Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroUtility.KuroStaticAndroidLibrary.OpenAppWithUrl
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -2470,6 +2548,31 @@ void UKuroStaticLibrary::DoGameViewPortMouseEnter(class UGameViewportClient* InV
 	Parms.InViewport = InViewport;
 	Parms.x = x;
 	Parms.y = y;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.DumpStackTrace
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    Str                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroStaticLibrary::DumpStackTrace(const class FString& Str)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "DumpStackTrace");
+
+	Params::KuroStaticLibrary_DumpStackTrace Parms{};
+
+	Parms.Str = std::move(Str);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3311,6 +3414,90 @@ bool UKuroStaticLibrary::GetEnableMobileLowStreaming(class ULevelSequence* Seque
 }
 
 
+// Function KuroUtility.KuroStaticLibrary.GetFileAccessTime
+// (Final, Native, Static, Private, BlueprintCallable)
+// Parameters:
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroStaticLibrary::GetFileAccessTime(const class FString& Path)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetFileAccessTime");
+
+	Params::KuroStaticLibrary_GetFileAccessTime Parms{};
+
+	Parms.Path = std::move(Path);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.GetFileCreationTime
+// (Final, Native, Static, Private, BlueprintCallable)
+// Parameters:
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroStaticLibrary::GetFileCreationTime(const class FString& Path)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetFileCreationTime");
+
+	Params::KuroStaticLibrary_GetFileCreationTime Parms{};
+
+	Parms.Path = std::move(Path);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.GetFileModificationTime
+// (Final, Native, Static, Private, BlueprintCallable)
+// Parameters:
+// const class FString&                    Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroStaticLibrary::GetFileModificationTime(const class FString& Path)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetFileModificationTime");
+
+	Params::KuroStaticLibrary_GetFileModificationTime Parms{};
+
+	Parms.Path = std::move(Path);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroUtility.KuroStaticLibrary.GetFiles
 // (Final, Native, Static, Private, BlueprintCallable)
 // Parameters:
@@ -3509,6 +3696,35 @@ class AActor* UKuroStaticLibrary::GetLevelPrefabShowActor(class AActor* Actor)
 }
 
 
+// Function KuroUtility.KuroStaticLibrary.GetLocalAdapterAddressesUint32
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<int32>*                          OutAddresses                                           (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroStaticLibrary::GetLocalAdapterAddressesUint32(TArray<int32>* OutAddresses)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetLocalAdapterAddressesUint32");
+
+	Params::KuroStaticLibrary_GetLocalAdapterAddressesUint32 Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutAddresses != nullptr)
+		*OutAddresses = std::move(Parms.OutAddresses);
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroUtility.KuroStaticLibrary.GetLocalHostAddresses
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -3593,6 +3809,31 @@ TArray<struct FVector> UKuroStaticLibrary::GetNavPointData(class UObject* WorldC
 	Parms.Point = std::move(Point);
 	Parms.QueryExtent = std::move(QueryExtent);
 	Parms.FilterClass = FilterClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.GetOSVersion
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroStaticLibrary::GetOSVersion()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetOSVersion");
+
+	Params::KuroStaticLibrary_GetOSVersion Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3926,6 +4167,31 @@ class FString UKuroStaticLibrary::GetVendorInfo()
 }
 
 
+// Function KuroUtility.KuroStaticLibrary.GetVideoMemoryGB
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroStaticLibrary::GetVideoMemoryGB()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetVideoMemoryGB");
+
+	Params::KuroStaticLibrary_GetVideoMemoryGB Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroUtility.KuroStaticLibrary.GetViewPortMousePosition
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -3939,6 +4205,63 @@ struct FVector2D UKuroStaticLibrary::GetViewPortMousePosition()
 		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetViewPortMousePosition");
 
 	Params::KuroStaticLibrary_GetViewPortMousePosition Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.GetViewPortMousePosition2
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector2D*                       MousePos                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroStaticLibrary::GetViewPortMousePosition2(struct FVector2D* MousePos)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetViewPortMousePosition2");
+
+	Params::KuroStaticLibrary_GetViewPortMousePosition2 Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (MousePos != nullptr)
+		*MousePos = std::move(Parms.MousePos);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.GetWholeStatUnitInfo
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// float                                   Timespan                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroStaticLibrary::GetWholeStatUnitInfo(float Timespan)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "GetWholeStatUnitInfo");
+
+	Params::KuroStaticLibrary_GetWholeStatUnitInfo Parms{};
+
+	Parms.Timespan = Timespan;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4623,6 +4946,25 @@ void UKuroStaticLibrary::RemoveFromRoot(class UObject* InObject)
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroStaticLibrary.ResetHttpMaxFlushTimeSeconds
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UKuroStaticLibrary::ResetHttpMaxFlushTimeSeconds()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroStaticLibrary", "ResetHttpMaxFlushTimeSeconds");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -5442,6 +5784,150 @@ bool UKuroStaticLibrary::WriteStringToFile(const class FString& SaveText, const 
 	Parms.FileName = std::move(FileName);
 	Parms.bPublic = bPublic;
 	Parms.bWithBom = bWithBom;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.DumpAMDGPUInfos
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+
+void UKuroFFXFSR3BlueprintLibrary::DumpAMDGPUInfos()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroFFXFSR3BlueprintLibrary", "DumpAMDGPUInfos");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsDeviceAMD
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroFFXFSR3BlueprintLibrary::IsDeviceAMD()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroFFXFSR3BlueprintLibrary", "IsDeviceAMD");
+
+	Params::KuroFFXFSR3BlueprintLibrary_IsDeviceAMD Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsGlobalSwitchOn
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroFFXFSR3BlueprintLibrary::IsGlobalSwitchOn()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroFFXFSR3BlueprintLibrary", "IsGlobalSwitchOn");
+
+	Params::KuroFFXFSR3BlueprintLibrary_IsGlobalSwitchOn Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.IsSupported
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroFFXFSR3BlueprintLibrary::IsSupported()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroFFXFSR3BlueprintLibrary", "IsSupported");
+
+	Params::KuroFFXFSR3BlueprintLibrary_IsSupported Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.SupportFI
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroFFXFSR3BlueprintLibrary::SupportFI()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroFFXFSR3BlueprintLibrary", "SupportFI");
+
+	Params::KuroFFXFSR3BlueprintLibrary_SupportFI Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroUtility.KuroFFXFSR3BlueprintLibrary.SupportFSR3
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroFFXFSR3BlueprintLibrary::SupportFSR3()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroFFXFSR3BlueprintLibrary", "SupportFSR3");
+
+	Params::KuroFFXFSR3BlueprintLibrary_SupportFSR3 Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

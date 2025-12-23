@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SMSystem_classes.hpp"
 #include "GameplayTags_structs.hpp"
+#include "SMSystem_classes.hpp"
 
 
 namespace SDK

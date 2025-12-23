@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "Engine_structs.hpp"
 #include "KuroAnim_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -506,6 +506,17 @@ static_assert(alignof(KuroAnimInstance_RegisterActor) == 0x000008, "Wrong alignm
 static_assert(sizeof(KuroAnimInstance_RegisterActor) == 0x000008, "Wrong size on KuroAnimInstance_RegisterActor");
 static_assert(offsetof(KuroAnimInstance_RegisterActor, Character) == 0x000000, "Member 'KuroAnimInstance_RegisterActor::Character' has a wrong offset!");
 
+// Function KuroAnim.KuroAnimInstance.RegisterExtraFollowOwnerAnimInstance
+// 0x0008 (0x0008 - 0x0000)
+struct KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance final
+{
+public:
+	class UAnimInstance*                          AnimInstance;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance) == 0x000008, "Wrong alignment on KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance");
+static_assert(sizeof(KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance) == 0x000008, "Wrong size on KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance");
+static_assert(offsetof(KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance, AnimInstance) == 0x000000, "Member 'KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance::AnimInstance' has a wrong offset!");
+
 // Function KuroAnim.KuroAnimInstance.ResigterExtraRibbenOwnerAnimInstance
 // 0x0008 (0x0008 - 0x0000)
 struct KuroAnimInstance_ResigterExtraRibbenOwnerAnimInstance final
@@ -608,7 +619,7 @@ static_assert(sizeof(KuroAnimInstance_UpdateABP) == 0x000004, "Wrong size on Kur
 static_assert(offsetof(KuroAnimInstance_UpdateABP, DeltaSeconds) == 0x000000, "Member 'KuroAnimInstance_UpdateABP::DeltaSeconds' has a wrong offset!");
 
 // Function KuroAnim.KuroAnimInstance.UpdateAdditiveBlendInfo
-// 0x0058 (0x0058 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct KuroAnimInstance_UpdateAdditiveBlendInfo final
 {
 public:
@@ -617,25 +628,29 @@ public:
 	bool                                          bUsingWholeBodyBlend;                              // 0x0009(0x0001)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_A[0x2];                                        // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         AdditiveBlendAlpha;                                // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FAdditiveBlendAlpha                    Plevis;                                            // 0x0010(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAdditiveBlendAlpha                    Pelvis;                                            // 0x0010(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAdditiveBlendAlpha                    Spine;                                             // 0x001C(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FAdditiveBlendAlpha                    Head;                                              // 0x0028(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FAdditiveBlendAlpha                    ArmL;                                              // 0x0034(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FAdditiveBlendAlpha                    ArmR;                                              // 0x0040(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FAdditiveBlendAlpha                    Leg;                                               // 0x004C(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAdditiveBlendAlpha                    Spine1;                                            // 0x0028(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAdditiveBlendAlpha                    Spine2;                                            // 0x0034(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAdditiveBlendAlpha                    Head;                                              // 0x0040(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAdditiveBlendAlpha                    ArmL;                                              // 0x004C(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAdditiveBlendAlpha                    ArmR;                                              // 0x0058(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FAdditiveBlendAlpha                    Leg;                                               // 0x0064(0x000C)(Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(KuroAnimInstance_UpdateAdditiveBlendInfo) == 0x000008, "Wrong alignment on KuroAnimInstance_UpdateAdditiveBlendInfo");
-static_assert(sizeof(KuroAnimInstance_UpdateAdditiveBlendInfo) == 0x000058, "Wrong size on KuroAnimInstance_UpdateAdditiveBlendInfo");
+static_assert(sizeof(KuroAnimInstance_UpdateAdditiveBlendInfo) == 0x000070, "Wrong size on KuroAnimInstance_UpdateAdditiveBlendInfo");
 static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, AnimInstance) == 0x000000, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::AnimInstance' has a wrong offset!");
 static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, bUsingAdditiveBlend) == 0x000008, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::bUsingAdditiveBlend' has a wrong offset!");
 static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, bUsingWholeBodyBlend) == 0x000009, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::bUsingWholeBodyBlend' has a wrong offset!");
 static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, AdditiveBlendAlpha) == 0x00000C, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::AdditiveBlendAlpha' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Plevis) == 0x000010, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Plevis' has a wrong offset!");
+static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Pelvis) == 0x000010, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Pelvis' has a wrong offset!");
 static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Spine) == 0x00001C, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Spine' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Head) == 0x000028, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Head' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, ArmL) == 0x000034, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::ArmL' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, ArmR) == 0x000040, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::ArmR' has a wrong offset!");
-static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Leg) == 0x00004C, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Leg' has a wrong offset!");
+static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Spine1) == 0x000028, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Spine1' has a wrong offset!");
+static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Spine2) == 0x000034, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Spine2' has a wrong offset!");
+static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Head) == 0x000040, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Head' has a wrong offset!");
+static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, ArmL) == 0x00004C, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::ArmL' has a wrong offset!");
+static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, ArmR) == 0x000058, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::ArmR' has a wrong offset!");
+static_assert(offsetof(KuroAnimInstance_UpdateAdditiveBlendInfo, Leg) == 0x000064, "Member 'KuroAnimInstance_UpdateAdditiveBlendInfo::Leg' has a wrong offset!");
 
 // Function KuroAnim.KuroAnimInstance.UpdateBattleIdle
 // 0x0008 (0x0008 - 0x0000)
@@ -999,6 +1014,101 @@ static_assert(alignof(KuroAnimLibrary_EndAnimNotifyStates) == 0x000008, "Wrong a
 static_assert(sizeof(KuroAnimLibrary_EndAnimNotifyStates) == 0x000008, "Wrong size on KuroAnimLibrary_EndAnimNotifyStates");
 static_assert(offsetof(KuroAnimLibrary_EndAnimNotifyStates, AnimInstance) == 0x000000, "Member 'KuroAnimLibrary_EndAnimNotifyStates::AnimInstance' has a wrong offset!");
 
+// Function KuroAnim.KuroAnimLibrary.GetDefaultBoneComponentPoseByName
+// 0x0050 (0x0050 - 0x0000)
+struct KuroAnimLibrary_GetDefaultBoneComponentPoseByName final
+{
+public:
+	const class USkeletalMeshComponent*           SkelMeshComp;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0xC];                                       // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0020(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName) == 0x000010, "Wrong alignment on KuroAnimLibrary_GetDefaultBoneComponentPoseByName");
+static_assert(sizeof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName) == 0x000050, "Wrong size on KuroAnimLibrary_GetDefaultBoneComponentPoseByName");
+static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName, SkelMeshComp) == 0x000000, "Member 'KuroAnimLibrary_GetDefaultBoneComponentPoseByName::SkelMeshComp' has a wrong offset!");
+static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName, BoneName) == 0x000008, "Member 'KuroAnimLibrary_GetDefaultBoneComponentPoseByName::BoneName' has a wrong offset!");
+static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneComponentPoseByName, ReturnValue) == 0x000020, "Member 'KuroAnimLibrary_GetDefaultBoneComponentPoseByName::ReturnValue' has a wrong offset!");
+
+// Function KuroAnim.KuroAnimLibrary.GetDefaultBoneLocalPoseByName
+// 0x0050 (0x0050 - 0x0000)
+struct KuroAnimLibrary_GetDefaultBoneLocalPoseByName final
+{
+public:
+	const class USkeletalMeshComponent*           SkelMeshComp;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0xC];                                       // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0020(0x0030)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName) == 0x000010, "Wrong alignment on KuroAnimLibrary_GetDefaultBoneLocalPoseByName");
+static_assert(sizeof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName) == 0x000050, "Wrong size on KuroAnimLibrary_GetDefaultBoneLocalPoseByName");
+static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName, SkelMeshComp) == 0x000000, "Member 'KuroAnimLibrary_GetDefaultBoneLocalPoseByName::SkelMeshComp' has a wrong offset!");
+static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName, BoneName) == 0x000008, "Member 'KuroAnimLibrary_GetDefaultBoneLocalPoseByName::BoneName' has a wrong offset!");
+static_assert(offsetof(KuroAnimLibrary_GetDefaultBoneLocalPoseByName, ReturnValue) == 0x000020, "Member 'KuroAnimLibrary_GetDefaultBoneLocalPoseByName::ReturnValue' has a wrong offset!");
+
+// Function KuroAnim.KuroAnimLibrary.GetGameplayAbpPath
+// 0x0028 (0x0028 - 0x0000)
+struct KuroAnimLibrary_GetGameplayAbpPath final
+{
+public:
+	class UObject*                                BaseAbp;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 GameplayTypeName;                                  // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAnimLibrary_GetGameplayAbpPath) == 0x000008, "Wrong alignment on KuroAnimLibrary_GetGameplayAbpPath");
+static_assert(sizeof(KuroAnimLibrary_GetGameplayAbpPath) == 0x000028, "Wrong size on KuroAnimLibrary_GetGameplayAbpPath");
+static_assert(offsetof(KuroAnimLibrary_GetGameplayAbpPath, BaseAbp) == 0x000000, "Member 'KuroAnimLibrary_GetGameplayAbpPath::BaseAbp' has a wrong offset!");
+static_assert(offsetof(KuroAnimLibrary_GetGameplayAbpPath, GameplayTypeName) == 0x000008, "Member 'KuroAnimLibrary_GetGameplayAbpPath::GameplayTypeName' has a wrong offset!");
+static_assert(offsetof(KuroAnimLibrary_GetGameplayAbpPath, ReturnValue) == 0x000018, "Member 'KuroAnimLibrary_GetGameplayAbpPath::ReturnValue' has a wrong offset!");
+
+// Function KuroAnim.KuroAnimMathLibrary.FindBetween
+// 0x0030 (0x0030 - 0x0000)
+struct KuroAnimMathLibrary_FindBetween final
+{
+public:
+	struct FVector                                V1;                                                // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                V2;                                                // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAnimMathLibrary_FindBetween) == 0x000010, "Wrong alignment on KuroAnimMathLibrary_FindBetween");
+static_assert(sizeof(KuroAnimMathLibrary_FindBetween) == 0x000030, "Wrong size on KuroAnimMathLibrary_FindBetween");
+static_assert(offsetof(KuroAnimMathLibrary_FindBetween, V1) == 0x000000, "Member 'KuroAnimMathLibrary_FindBetween::V1' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_FindBetween, V2) == 0x00000C, "Member 'KuroAnimMathLibrary_FindBetween::V2' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_FindBetween, ReturnValue) == 0x000020, "Member 'KuroAnimMathLibrary_FindBetween::ReturnValue' has a wrong offset!");
+
+// Function KuroAnim.KuroAnimMathLibrary.LookQuat_ForwardFirst
+// 0x0030 (0x0030 - 0x0000)
+struct KuroAnimMathLibrary_LookQuat_ForwardFirst final
+{
+public:
+	struct FVector                                Forward;                                           // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Up;                                                // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAnimMathLibrary_LookQuat_ForwardFirst) == 0x000010, "Wrong alignment on KuroAnimMathLibrary_LookQuat_ForwardFirst");
+static_assert(sizeof(KuroAnimMathLibrary_LookQuat_ForwardFirst) == 0x000030, "Wrong size on KuroAnimMathLibrary_LookQuat_ForwardFirst");
+static_assert(offsetof(KuroAnimMathLibrary_LookQuat_ForwardFirst, Forward) == 0x000000, "Member 'KuroAnimMathLibrary_LookQuat_ForwardFirst::Forward' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_LookQuat_ForwardFirst, Up) == 0x00000C, "Member 'KuroAnimMathLibrary_LookQuat_ForwardFirst::Up' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_LookQuat_ForwardFirst, ReturnValue) == 0x000020, "Member 'KuroAnimMathLibrary_LookQuat_ForwardFirst::ReturnValue' has a wrong offset!");
+
+// Function KuroAnim.KuroAnimMathLibrary.LookQuat_UpFirst
+// 0x0030 (0x0030 - 0x0000)
+struct KuroAnimMathLibrary_LookQuat_UpFirst final
+{
+public:
+	struct FVector                                Forward;                                           // 0x0000(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Up;                                                // 0x000C(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18[0x8];                                       // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAnimMathLibrary_LookQuat_UpFirst) == 0x000010, "Wrong alignment on KuroAnimMathLibrary_LookQuat_UpFirst");
+static_assert(sizeof(KuroAnimMathLibrary_LookQuat_UpFirst) == 0x000030, "Wrong size on KuroAnimMathLibrary_LookQuat_UpFirst");
+static_assert(offsetof(KuroAnimMathLibrary_LookQuat_UpFirst, Forward) == 0x000000, "Member 'KuroAnimMathLibrary_LookQuat_UpFirst::Forward' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_LookQuat_UpFirst, Up) == 0x00000C, "Member 'KuroAnimMathLibrary_LookQuat_UpFirst::Up' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_LookQuat_UpFirst, ReturnValue) == 0x000020, "Member 'KuroAnimMathLibrary_LookQuat_UpFirst::ReturnValue' has a wrong offset!");
+
 // Function KuroAnim.KuroAnimMathLibrary.LookRotation_ForwardFirst
 // 0x0024 (0x0024 - 0x0000)
 struct KuroAnimMathLibrary_LookRotation_ForwardFirst final
@@ -1044,6 +1154,24 @@ static_assert(offsetof(KuroAnimMathLibrary_Quat_FindBetween, V1) == 0x000000, "M
 static_assert(offsetof(KuroAnimMathLibrary_Quat_FindBetween, V2) == 0x00000C, "Member 'KuroAnimMathLibrary_Quat_FindBetween::V2' has a wrong offset!");
 static_assert(offsetof(KuroAnimMathLibrary_Quat_FindBetween, ReturnValue) == 0x000018, "Member 'KuroAnimMathLibrary_Quat_FindBetween::ReturnValue' has a wrong offset!");
 
+// Function KuroAnim.KuroAnimMathLibrary.Slerp
+// 0x0040 (0x0040 - 0x0000)
+struct KuroAnimMathLibrary_Slerp final
+{
+public:
+	struct FQuat                                  From;                                              // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FQuat                                  To;                                                // 0x0010(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Slerp_0;                                           // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  ReturnValue;                                       // 0x0030(0x0010)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(KuroAnimMathLibrary_Slerp) == 0x000010, "Wrong alignment on KuroAnimMathLibrary_Slerp");
+static_assert(sizeof(KuroAnimMathLibrary_Slerp) == 0x000040, "Wrong size on KuroAnimMathLibrary_Slerp");
+static_assert(offsetof(KuroAnimMathLibrary_Slerp, From) == 0x000000, "Member 'KuroAnimMathLibrary_Slerp::From' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_Slerp, To) == 0x000010, "Member 'KuroAnimMathLibrary_Slerp::To' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_Slerp, Slerp_0) == 0x000020, "Member 'KuroAnimMathLibrary_Slerp::Slerp_0' has a wrong offset!");
+static_assert(offsetof(KuroAnimMathLibrary_Slerp, ReturnValue) == 0x000030, "Member 'KuroAnimMathLibrary_Slerp::ReturnValue' has a wrong offset!");
+
 // Function KuroAnim.KuroTrackRecorder.GetMainGuid
 // 0x0010 (0x0010 - 0x0000)
 struct KuroTrackRecorder_GetMainGuid final
@@ -1065,6 +1193,24 @@ public:
 static_assert(alignof(KuroTrackRecorder_GetShadow) == 0x000008, "Wrong alignment on KuroTrackRecorder_GetShadow");
 static_assert(sizeof(KuroTrackRecorder_GetShadow) == 0x000008, "Wrong size on KuroTrackRecorder_GetShadow");
 static_assert(offsetof(KuroTrackRecorder_GetShadow, ReturnValue) == 0x000000, "Member 'KuroTrackRecorder_GetShadow::ReturnValue' has a wrong offset!");
+
+// Function KuroAnim.KuroRecorderLibrary.ChangeAttachTrack
+// 0x0030 (0x0030 - 0x0000)
+struct KuroRecorderLibrary_ChangeAttachTrack final
+{
+public:
+	class ULevelSequence*                         TargetSequence;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  From;                                              // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  To;                                                // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Time;                                              // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroRecorderLibrary_ChangeAttachTrack) == 0x000008, "Wrong alignment on KuroRecorderLibrary_ChangeAttachTrack");
+static_assert(sizeof(KuroRecorderLibrary_ChangeAttachTrack) == 0x000030, "Wrong size on KuroRecorderLibrary_ChangeAttachTrack");
+static_assert(offsetof(KuroRecorderLibrary_ChangeAttachTrack, TargetSequence) == 0x000000, "Member 'KuroRecorderLibrary_ChangeAttachTrack::TargetSequence' has a wrong offset!");
+static_assert(offsetof(KuroRecorderLibrary_ChangeAttachTrack, From) == 0x000008, "Member 'KuroRecorderLibrary_ChangeAttachTrack::From' has a wrong offset!");
+static_assert(offsetof(KuroRecorderLibrary_ChangeAttachTrack, To) == 0x000018, "Member 'KuroRecorderLibrary_ChangeAttachTrack::To' has a wrong offset!");
+static_assert(offsetof(KuroRecorderLibrary_ChangeAttachTrack, Time) == 0x000028, "Member 'KuroRecorderLibrary_ChangeAttachTrack::Time' has a wrong offset!");
 
 // Function KuroAnim.KuroRecorderLibrary.CopyLevelSequence
 // 0x0100 (0x0100 - 0x0000)

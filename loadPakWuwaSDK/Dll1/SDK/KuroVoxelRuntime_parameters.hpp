@@ -43,8 +43,8 @@ public:
 	int32                                         ErrorCode;                                         // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SearchStep;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroVoxelInfo                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34[0x4];                                       // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FKuroVoxelInfo                         ReturnValue;                                       // 0x0030(0x0002)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_32[0x6];                                       // 0x0032(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KuroVoxelSystem_D_GetVoxelInfoAtPos) == 0x000008, "Wrong alignment on KuroVoxelSystem_D_GetVoxelInfoAtPos");
 static_assert(sizeof(KuroVoxelSystem_D_GetVoxelInfoAtPos) == 0x000038, "Wrong size on KuroVoxelSystem_D_GetVoxelInfoAtPos");
@@ -77,7 +77,8 @@ struct KuroVoxelSystem_D_TryGetVoxelInfoAtPos final
 public:
 	class UWorld*                                 World;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVectorDouble                          UEPos;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroVoxelInfo                         OutVoxelInfo;                                      // 0x0020(0x0004)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKuroVoxelInfo                         OutVoxelInfo;                                      // 0x0020(0x0002)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x2];                                       // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ErrorCode;                                         // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        SearchStep;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -131,7 +132,8 @@ public:
 	struct FVector                                UEPos;                                             // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SearchStep;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroVoxelInfo                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKuroVoxelInfo                         ReturnValue;                                       // 0x001C(0x0002)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E[0x2];                                       // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(KuroVoxelSystem_GetVoxelInfoAtPos) == 0x000008, "Wrong alignment on KuroVoxelSystem_GetVoxelInfoAtPos");
 static_assert(sizeof(KuroVoxelSystem_GetVoxelInfoAtPos) == 0x000020, "Wrong size on KuroVoxelSystem_GetVoxelInfoAtPos");
@@ -178,7 +180,8 @@ struct KuroVoxelSystem_TryGetVoxelInfoAtPos final
 public:
 	class UWorld*                                 World;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                UEPos;                                             // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKuroVoxelInfo                         OutVoxelInfo;                                      // 0x0014(0x0004)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FKuroVoxelInfo                         OutVoxelInfo;                                      // 0x0014(0x0002)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ErrorCode;                                         // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SearchStep;                                        // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -192,6 +195,24 @@ static_assert(offsetof(KuroVoxelSystem_TryGetVoxelInfoAtPos, OutVoxelInfo) == 0x
 static_assert(offsetof(KuroVoxelSystem_TryGetVoxelInfoAtPos, ErrorCode) == 0x000018, "Member 'KuroVoxelSystem_TryGetVoxelInfoAtPos::ErrorCode' has a wrong offset!");
 static_assert(offsetof(KuroVoxelSystem_TryGetVoxelInfoAtPos, SearchStep) == 0x00001C, "Member 'KuroVoxelSystem_TryGetVoxelInfoAtPos::SearchStep' has a wrong offset!");
 static_assert(offsetof(KuroVoxelSystem_TryGetVoxelInfoAtPos, ReturnValue) == 0x000020, "Member 'KuroVoxelSystem_TryGetVoxelInfoAtPos::ReturnValue' has a wrong offset!");
+
+// Function KuroVoxelRuntime.KuroCaveVolumeSubsystem.D_QueryVoxelCaveType
+// 0x0028 (0x0028 - 0x0000)
+struct KuroCaveVolumeSubsystem_D_QueryVoxelCaveType final
+{
+public:
+	class UObject*                                WorldContext;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVectorDouble                          UELocation;                                        // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTraceDown;                                        // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         ReturnValue;                                       // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_22[0x6];                                       // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroCaveVolumeSubsystem_D_QueryVoxelCaveType) == 0x000008, "Wrong alignment on KuroCaveVolumeSubsystem_D_QueryVoxelCaveType");
+static_assert(sizeof(KuroCaveVolumeSubsystem_D_QueryVoxelCaveType) == 0x000028, "Wrong size on KuroCaveVolumeSubsystem_D_QueryVoxelCaveType");
+static_assert(offsetof(KuroCaveVolumeSubsystem_D_QueryVoxelCaveType, WorldContext) == 0x000000, "Member 'KuroCaveVolumeSubsystem_D_QueryVoxelCaveType::WorldContext' has a wrong offset!");
+static_assert(offsetof(KuroCaveVolumeSubsystem_D_QueryVoxelCaveType, UELocation) == 0x000008, "Member 'KuroCaveVolumeSubsystem_D_QueryVoxelCaveType::UELocation' has a wrong offset!");
+static_assert(offsetof(KuroCaveVolumeSubsystem_D_QueryVoxelCaveType, bTraceDown) == 0x000020, "Member 'KuroCaveVolumeSubsystem_D_QueryVoxelCaveType::bTraceDown' has a wrong offset!");
+static_assert(offsetof(KuroCaveVolumeSubsystem_D_QueryVoxelCaveType, ReturnValue) == 0x000021, "Member 'KuroCaveVolumeSubsystem_D_QueryVoxelCaveType::ReturnValue' has a wrong offset!");
 
 }
 

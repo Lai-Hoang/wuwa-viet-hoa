@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function TsUiBlur.TsUiBlur_C.SetEnableUiBlur
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
@@ -33,7 +33,12 @@ void UTsUiBlur_C::SetEnableUiBlur(bool value)
 
 	Parms.value = value;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

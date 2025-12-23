@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -150,6 +150,43 @@ static_assert(alignof(BP_SeqNPC_C_GetAnimDataFloat) == 0x000008, "Wrong alignmen
 static_assert(sizeof(BP_SeqNPC_C_GetAnimDataFloat) == 0x000018, "Wrong size on BP_SeqNPC_C_GetAnimDataFloat");
 static_assert(offsetof(BP_SeqNPC_C_GetAnimDataFloat, FloatCurveData) == 0x000000, "Member 'BP_SeqNPC_C_GetAnimDataFloat::FloatCurveData' has a wrong offset!");
 static_assert(offsetof(BP_SeqNPC_C_GetAnimDataFloat, ReturnValue) == 0x000010, "Member 'BP_SeqNPC_C_GetAnimDataFloat::ReturnValue' has a wrong offset!");
+
+// Function BP_SeqNPC.BP_SeqNPC_C.SetAnimDataTransform
+// 0x0058 (0x0058 - 0x0000)
+struct BP_SeqNPC_C_SetAnimDataTransform final
+{
+public:
+	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_SeqNPC_C_SetAnimDataTransform) == 0x000008, "Wrong alignment on BP_SeqNPC_C_SetAnimDataTransform");
+static_assert(sizeof(BP_SeqNPC_C_SetAnimDataTransform) == 0x000058, "Wrong size on BP_SeqNPC_C_SetAnimDataTransform");
+static_assert(offsetof(BP_SeqNPC_C_SetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_SeqNPC_C_SetAnimDataTransform::FloatCurveData' has a wrong offset!");
+static_assert(offsetof(BP_SeqNPC_C_SetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_SeqNPC_C_SetAnimDataTransform::ReturnValue' has a wrong offset!");
+
+// Function BP_SeqNPC.BP_SeqNPC_C.IsCustomSupport
+// 0x0001 (0x0001 - 0x0000)
+struct BP_SeqNPC_C_IsCustomSupport final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_SeqNPC_C_IsCustomSupport) == 0x000001, "Wrong alignment on BP_SeqNPC_C_IsCustomSupport");
+static_assert(sizeof(BP_SeqNPC_C_IsCustomSupport) == 0x000001, "Wrong size on BP_SeqNPC_C_IsCustomSupport");
+static_assert(offsetof(BP_SeqNPC_C_IsCustomSupport, ReturnValue) == 0x000000, "Member 'BP_SeqNPC_C_IsCustomSupport::ReturnValue' has a wrong offset!");
+
+// Function BP_SeqNPC.BP_SeqNPC_C.GetAnimDataTransform
+// 0x0058 (0x0058 - 0x0000)
+struct BP_SeqNPC_C_GetAnimDataTransform final
+{
+public:
+	TMap<class FName, struct FTransform>          FloatCurveData;                                    // 0x0000(0x0050)(Parm, OutParm)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_SeqNPC_C_GetAnimDataTransform) == 0x000008, "Wrong alignment on BP_SeqNPC_C_GetAnimDataTransform");
+static_assert(sizeof(BP_SeqNPC_C_GetAnimDataTransform) == 0x000058, "Wrong size on BP_SeqNPC_C_GetAnimDataTransform");
+static_assert(offsetof(BP_SeqNPC_C_GetAnimDataTransform, FloatCurveData) == 0x000000, "Member 'BP_SeqNPC_C_GetAnimDataTransform::FloatCurveData' has a wrong offset!");
+static_assert(offsetof(BP_SeqNPC_C_GetAnimDataTransform, ReturnValue) == 0x000050, "Member 'BP_SeqNPC_C_GetAnimDataTransform::ReturnValue' has a wrong offset!");
 
 // Function BP_SeqNPC.BP_SeqNPC_C.GetABPC_Body_V2
 // 0x0008 (0x0008 - 0x0000)

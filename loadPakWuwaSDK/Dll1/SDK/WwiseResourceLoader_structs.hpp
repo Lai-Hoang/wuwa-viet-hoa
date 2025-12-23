@@ -246,6 +246,16 @@ static_assert(offsetof(FWwiseLocalizedAuxBusCookedData, AuxBusLanguageMap) == 0x
 static_assert(offsetof(FWwiseLocalizedAuxBusCookedData, DebugName) == 0x000050, "Member 'FWwiseLocalizedAuxBusCookedData::DebugName' has a wrong offset!");
 static_assert(offsetof(FWwiseLocalizedAuxBusCookedData, AuxBusId) == 0x00005C, "Member 'FWwiseLocalizedAuxBusCookedData::AuxBusId' has a wrong offset!");
 
+// ScriptStruct WwiseResourceLoader.WwiseSharedPlatformId
+// 0x0010 (0x0010 - 0x0000)
+struct alignas(0x08) FWwiseSharedPlatformId final
+{
+public:
+	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FWwiseSharedPlatformId) == 0x000008, "Wrong alignment on FWwiseSharedPlatformId");
+static_assert(sizeof(FWwiseSharedPlatformId) == 0x000010, "Wrong size on FWwiseSharedPlatformId");
+
 // ScriptStruct WwiseResourceLoader.WwiseLocalizedEventCookedData
 // 0x0060 (0x0060 - 0x0000)
 struct FWwiseLocalizedEventCookedData final
@@ -345,16 +355,6 @@ public:
 static_assert(alignof(FWwiseSharedLanguageId) == 0x000008, "Wrong alignment on FWwiseSharedLanguageId");
 static_assert(sizeof(FWwiseSharedLanguageId) == 0x000018, "Wrong size on FWwiseSharedLanguageId");
 static_assert(offsetof(FWwiseSharedLanguageId, LanguageRequirement) == 0x000010, "Member 'FWwiseSharedLanguageId::LanguageRequirement' has a wrong offset!");
-
-// ScriptStruct WwiseResourceLoader.WwiseSharedPlatformId
-// 0x0010 (0x0010 - 0x0000)
-struct alignas(0x08) FWwiseSharedPlatformId final
-{
-public:
-	uint8                                         Pad_0[0x10];                                       // 0x0000(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FWwiseSharedPlatformId) == 0x000008, "Wrong alignment on FWwiseSharedPlatformId");
-static_assert(sizeof(FWwiseSharedPlatformId) == 0x000010, "Wrong size on FWwiseSharedPlatformId");
 
 // ScriptStruct WwiseResourceLoader.WwiseTriggerCookedData
 // 0x0010 (0x0010 - 0x0000)

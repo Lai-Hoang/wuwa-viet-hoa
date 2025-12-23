@@ -10,27 +10,29 @@
 
 #include "Basic.hpp"
 
+#include "TsBaseCharacter_classes.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "TsBaseCharacter_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_BaseVision.BP_BaseVision_C
-// 0x0020 (0x0770 - 0x0750)
+// 0x0020 (0x0780 - 0x0760)
 class ABP_BaseVision_C final : public ATsBaseCharacter_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_BP_BaseVision_C;                    // 0x0750(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FVector                                显像放大比例;                                      // 0x0758(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                显像缩小比例;                                      // 0x0764(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_BP_BaseVision_C;                    // 0x0758(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FVector                                显像放大比例;                                      // 0x0760(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                显像缩小比例;                                      // 0x076C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          显像时是否需要打开可视化;                          // 0x0778(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          显像时是否需要特殊pose;                            // 0x0779(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_BaseVision(int32 EntryPoint);
-	void 显像缩小();
-	void 显像放大();
+	void 显像结束();
+	void 显像初始化();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void 获取幻象数据(struct FSVisionData* 幻象数据);
@@ -47,10 +49,12 @@ public:
 	}
 };
 static_assert(alignof(ABP_BaseVision_C) == 0x000010, "Wrong alignment on ABP_BaseVision_C");
-static_assert(sizeof(ABP_BaseVision_C) == 0x000770, "Wrong size on ABP_BaseVision_C");
-static_assert(offsetof(ABP_BaseVision_C, UberGraphFrame_BP_BaseVision_C) == 0x000750, "Member 'ABP_BaseVision_C::UberGraphFrame_BP_BaseVision_C' has a wrong offset!");
-static_assert(offsetof(ABP_BaseVision_C, 显像放大比例) == 0x000758, "Member 'ABP_BaseVision_C::显像放大比例' has a wrong offset!");
-static_assert(offsetof(ABP_BaseVision_C, 显像缩小比例) == 0x000764, "Member 'ABP_BaseVision_C::显像缩小比例' has a wrong offset!");
+static_assert(sizeof(ABP_BaseVision_C) == 0x000780, "Wrong size on ABP_BaseVision_C");
+static_assert(offsetof(ABP_BaseVision_C, UberGraphFrame_BP_BaseVision_C) == 0x000758, "Member 'ABP_BaseVision_C::UberGraphFrame_BP_BaseVision_C' has a wrong offset!");
+static_assert(offsetof(ABP_BaseVision_C, 显像放大比例) == 0x000760, "Member 'ABP_BaseVision_C::显像放大比例' has a wrong offset!");
+static_assert(offsetof(ABP_BaseVision_C, 显像缩小比例) == 0x00076C, "Member 'ABP_BaseVision_C::显像缩小比例' has a wrong offset!");
+static_assert(offsetof(ABP_BaseVision_C, 显像时是否需要打开可视化) == 0x000778, "Member 'ABP_BaseVision_C::显像时是否需要打开可视化' has a wrong offset!");
+static_assert(offsetof(ABP_BaseVision_C, 显像时是否需要特殊pose) == 0x000779, "Member 'ABP_BaseVision_C::显像时是否需要特殊pose' has a wrong offset!");
 
 }
 

@@ -42,7 +42,7 @@ static_assert(sizeof(BP_LevelSequenceHalo_C_ReceiveTick) == 0x000004, "Wrong siz
 static_assert(offsetof(BP_LevelSequenceHalo_C_ReceiveTick, DeltaSeconds) == 0x000000, "Member 'BP_LevelSequenceHalo_C_ReceiveTick::DeltaSeconds' has a wrong offset!");
 
 // Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.UpdateHaloParameter
-// 0x00CC (0x00CC - 0x0000)
+// 0x00FC (0x00FC - 0x0000)
 struct BP_LevelSequenceHalo_C_UpdateHaloParameter final
 {
 public:
@@ -50,58 +50,66 @@ public:
 	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   ___name_Variable;                                  // 0x0004(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   ___name_Variable_1;                                // 0x0010(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	E_BillboardMode                               ___byte_Variable;                                  // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ___float_Variable;                                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ___float_Variable_1;                               // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         ___float_Variable_2;                               // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ___name_Variable_2;                                // 0x002C(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ___name_Variable_3;                                // 0x0038(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ___name_Variable_4;                                // 0x0044(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_51[0x3];                                       // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   ___name_Variable_5;                                // 0x0054(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_Select_Default;                             // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x006C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_3;        // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           CallFunc_Multiply_LinearColorFloat_ReturnValue;    // 0x0084(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   ___name_Variable_6;                                // 0x0094(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_4;        // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_5;        // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_MakeStruct_LinearColor_1;                   // 0x00A8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_6;        // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           K2Node_MakeStruct_LinearColor_2;                   // 0x00BC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_2;                                // 0x001C(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_3;                                // 0x0028(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_4;                                // 0x0034(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	E_BillboardMode                               ___byte_Variable;                                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_41[0x3];                                       // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ___float_Variable;                                 // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ___float_Variable_1;                               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         ___float_Variable_2;                               // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_5;                                // 0x0050(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_6;                                // 0x005C(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_7;                                // 0x0068(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_8;                                // 0x0074(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_81[0x3];                                       // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   ___name_Variable_9;                                // 0x0084(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Select_Default;                             // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_1;        // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_MakeStruct_LinearColor;                     // 0x009C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_2;        // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_3;        // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           CallFunc_Multiply_LinearColorFloat_ReturnValue;    // 0x00B4(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ___name_Variable_10;                               // 0x00C4(0x000C)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_4;        // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_5;        // 0x00D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue_6;        // 0x00D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_MakeStruct_LinearColor_1;                   // 0x00DC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           K2Node_MakeStruct_LinearColor_2;                   // 0x00EC(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_LevelSequenceHalo_C_UpdateHaloParameter) == 0x000004, "Wrong alignment on BP_LevelSequenceHalo_C_UpdateHaloParameter");
-static_assert(sizeof(BP_LevelSequenceHalo_C_UpdateHaloParameter) == 0x0000CC, "Wrong size on BP_LevelSequenceHalo_C_UpdateHaloParameter");
+static_assert(sizeof(BP_LevelSequenceHalo_C_UpdateHaloParameter) == 0x0000FC, "Wrong size on BP_LevelSequenceHalo_C_UpdateHaloParameter");
 static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, UpdateComponent) == 0x000000, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::UpdateComponent' has a wrong offset!");
 static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable) == 0x000004, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable' has a wrong offset!");
 static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_1) == 0x000010, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___byte_Variable) == 0x00001C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable) == 0x000020, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable_1) == 0x000024, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable_2) == 0x000028, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_2) == 0x00002C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_3) == 0x000038, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_4) == 0x000044, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_5) == 0x000054, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_Select_Default) == 0x000060, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000064, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000068, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor) == 0x00006C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x00007C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x000080, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x000084, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_6) == 0x000094, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x0000A0, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_5) == 0x0000A4, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_1) == 0x0000A8, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_6) == 0x0000B8, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_2) == 0x0000BC, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_2' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_2) == 0x00001C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_3) == 0x000028, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_4) == 0x000034, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_4' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___byte_Variable) == 0x000040, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable) == 0x000044, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable_1) == 0x000048, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___float_Variable_2) == 0x00004C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___float_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_5) == 0x000050, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_5' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_6) == 0x00005C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_6' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_7) == 0x000068, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_7' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_8) == 0x000074, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_8' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_IsValid_ReturnValue) == 0x000080, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_9) == 0x000084, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_9' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_Select_Default) == 0x000090, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000094, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_1) == 0x000098, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor) == 0x00009C, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_2) == 0x0000AC, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_3) == 0x0000B0, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_LinearColorFloat_ReturnValue) == 0x0000B4, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_LinearColorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, ___name_Variable_10) == 0x0000C4, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::___name_Variable_10' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_4) == 0x0000D0, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_5) == 0x0000D4, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, CallFunc_Multiply_FloatFloat_ReturnValue_6) == 0x0000D8, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::CallFunc_Multiply_FloatFloat_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_1) == 0x0000DC, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_1' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_UpdateHaloParameter, K2Node_MakeStruct_LinearColor_2) == 0x0000EC, "Member 'BP_LevelSequenceHalo_C_UpdateHaloParameter::K2Node_MakeStruct_LinearColor_2' has a wrong offset!");
 
 // Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.GetHaloDrawParameters
 // 0x0010 (0x0010 - 0x0000)
@@ -121,7 +129,7 @@ static_assert(offsetof(BP_LevelSequenceHalo_C_GetHaloDrawParameters, MinDrawRang
 static_assert(offsetof(BP_LevelSequenceHalo_C_GetHaloDrawParameters, MaxDrawRange_0) == 0x00000C, "Member 'BP_LevelSequenceHalo_C_GetHaloDrawParameters::MaxDrawRange_0' has a wrong offset!");
 
 // Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.Update
-// 0x0028 (0x0028 - 0x0000)
+// 0x000C (0x000C - 0x0000)
 struct BP_LevelSequenceHalo_C_Update final
 {
 public:
@@ -129,20 +137,42 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInterface*                     CallFunc_GetMaterial_ReturnValue;                  // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_SetStaticMesh_ReturnValue;                // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
-static_assert(alignof(BP_LevelSequenceHalo_C_Update) == 0x000008, "Wrong alignment on BP_LevelSequenceHalo_C_Update");
-static_assert(sizeof(BP_LevelSequenceHalo_C_Update) == 0x000028, "Wrong size on BP_LevelSequenceHalo_C_Update");
+static_assert(alignof(BP_LevelSequenceHalo_C_Update) == 0x000004, "Wrong alignment on BP_LevelSequenceHalo_C_Update");
+static_assert(sizeof(BP_LevelSequenceHalo_C_Update) == 0x00000C, "Wrong size on BP_LevelSequenceHalo_C_Update");
 static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_IsValid_ReturnValue_1) == 0x000001, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000004, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000008, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_GetMaterial_ReturnValue) == 0x000010, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_GetMaterial_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000018, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_SetStaticMesh_ReturnValue) == 0x000020, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_Update, CallFunc_SetStaticMesh_ReturnValue) == 0x000008, "Member 'BP_LevelSequenceHalo_C_Update::CallFunc_SetStaticMesh_ReturnValue' has a wrong offset!");
+
+// Function BP_LevelSequenceHalo.BP_LevelSequenceHalo_C.SetLightQualityMaterial
+// 0x0040 (0x0040 - 0x0000)
+struct BP_LevelSequenceHalo_C_SetLightQualityMaterial final
+{
+public:
+	class UPrimitiveComponent*                    HaloComponent_0;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          UseTranslucentMaterial_0;                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          Use_DOF_Material_0;                                // 0x0009(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A[0x6];                                        // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInterface*                     M_PointLightHalo_Translucent_DOF;                  // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     M_PointLightHalo_Translucent;                      // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInterface*                     M_PointLightHalo;                                  // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue; // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_1; // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstanceDynamic*               CallFunc_CreateDynamicMaterialInstance_ReturnValue_2; // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_LevelSequenceHalo_C_SetLightQualityMaterial) == 0x000008, "Wrong alignment on BP_LevelSequenceHalo_C_SetLightQualityMaterial");
+static_assert(sizeof(BP_LevelSequenceHalo_C_SetLightQualityMaterial) == 0x000040, "Wrong size on BP_LevelSequenceHalo_C_SetLightQualityMaterial");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, HaloComponent_0) == 0x000000, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::HaloComponent_0' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, UseTranslucentMaterial_0) == 0x000008, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::UseTranslucentMaterial_0' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, Use_DOF_Material_0) == 0x000009, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::Use_DOF_Material_0' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, M_PointLightHalo_Translucent_DOF) == 0x000010, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::M_PointLightHalo_Translucent_DOF' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, M_PointLightHalo_Translucent) == 0x000018, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::M_PointLightHalo_Translucent' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, M_PointLightHalo) == 0x000020, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::M_PointLightHalo' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue) == 0x000028, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue_1) == 0x000030, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_LevelSequenceHalo_C_SetLightQualityMaterial, CallFunc_CreateDynamicMaterialInstance_ReturnValue_2) == 0x000038, "Member 'BP_LevelSequenceHalo_C_SetLightQualityMaterial::CallFunc_CreateDynamicMaterialInstance_ReturnValue_2' has a wrong offset!");
 
 }
 

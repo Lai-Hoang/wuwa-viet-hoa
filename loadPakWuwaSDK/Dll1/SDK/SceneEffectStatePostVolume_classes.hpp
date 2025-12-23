@@ -31,10 +31,10 @@ public:
 	void SetToxicFog_Debug();
 	void SetWall_Debug();
 	void SetEffect(float Value);
-	void SetToxicFog(float Value);
-	void SetAirWall(float value_0);
 	void DisableVolume();
 	void EnableVolume();
+	void SetToxicFog(float Value);
+	void SetAirWall(float value_0);
 
 public:
 	static class UClass* StaticClass()

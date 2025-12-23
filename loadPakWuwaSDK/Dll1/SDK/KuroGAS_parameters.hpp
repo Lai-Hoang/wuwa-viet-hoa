@@ -10,15 +10,88 @@
 
 #include "Basic.hpp"
 
+#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
-#include "GameplayTags_structs.hpp"
 #include "KuroGAS_structs.hpp"
-#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.CreatePlayMontageAndWaitProxy
+// 0x0058 (0x0058 - 0x0000)
+struct AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy final
+{
+public:
+	class UGameplayAbility*                       OwningAbility;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   TaskInstanceName;                                  // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAnimMontage*                           MontageToPlay_0;                                   // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SkeletalMeshComponentTag_0;                        // 0x0020(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Rate_0;                                            // 0x002C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   StartSection_0;                                    // 0x0030(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStopWhenAbilityEnds_0;                            // 0x003C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AnimRootMotionTranslationScale_0;                  // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StartTimeSeconds_0;                                // 0x0044(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          NeedTick;                                          // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_49[0x7];                                       // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAbilityTask_SpecifiedAnimInstancePlayMontageAndWait* ReturnValue;                         // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy) == 0x000008, "Wrong alignment on AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy");
+static_assert(sizeof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy) == 0x000058, "Wrong size on AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, OwningAbility) == 0x000000, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::OwningAbility' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, TaskInstanceName) == 0x000008, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::TaskInstanceName' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, MontageToPlay_0) == 0x000018, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::MontageToPlay_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, SkeletalMeshComponentTag_0) == 0x000020, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::SkeletalMeshComponentTag_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, Rate_0) == 0x00002C, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::Rate_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, StartSection_0) == 0x000030, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::StartSection_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, bStopWhenAbilityEnds_0) == 0x00003C, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::bStopWhenAbilityEnds_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, AnimRootMotionTranslationScale_0) == 0x000040, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::AnimRootMotionTranslationScale_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, StartTimeSeconds_0) == 0x000044, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::StartTimeSeconds_0' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, NeedTick) == 0x000048, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::NeedTick' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy, ReturnValue) == 0x000050, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_CreatePlayMontageAndWaitProxy::ReturnValue' has a wrong offset!");
+
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.OnMontageBlendingOut
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut) == 0x000008, "Wrong alignment on AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut");
+static_assert(sizeof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut) == 0x000010, "Wrong size on AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut, Montage) == 0x000000, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut::Montage' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut, bInterrupted) == 0x000008, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageBlendingOut::bInterrupted' has a wrong offset!");
+
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.OnMontageEnded
+// 0x0010 (0x0010 - 0x0000)
+struct AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded final
+{
+public:
+	class UAnimMontage*                           Montage;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInterrupted;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded) == 0x000008, "Wrong alignment on AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded");
+static_assert(sizeof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded) == 0x000010, "Wrong size on AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded, Montage) == 0x000000, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded::Montage' has a wrong offset!");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded, bInterrupted) == 0x000008, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_OnMontageEnded::bInterrupted' has a wrong offset!");
+
+// Function KuroGAS.AbilityTask_SpecifiedAnimInstancePlayMontageAndWait.TickTask
+// 0x0004 (0x0004 - 0x0000)
+struct AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_TickTask final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_TickTask) == 0x000004, "Wrong alignment on AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_TickTask");
+static_assert(sizeof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_TickTask) == 0x000004, "Wrong size on AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_TickTask");
+static_assert(offsetof(AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_TickTask, DeltaTime) == 0x000000, "Member 'AbilityTask_SpecifiedAnimInstancePlayMontageAndWait_TickTask::DeltaTime' has a wrong offset!");
 
 // Function KuroGAS.AsyncTaskAnyAttributeChanged.ListenForAnyAttributeChange
 // 0x0010 (0x0010 - 0x0000)
@@ -185,6 +258,138 @@ static_assert(offsetof(AsyncTaskPlayMontageAndWait_ListenRemainForPlayMontage, S
 static_assert(offsetof(AsyncTaskPlayMontageAndWait_ListenRemainForPlayMontage, StartingSection) == 0x000018, "Member 'AsyncTaskPlayMontageAndWait_ListenRemainForPlayMontage::StartingSection' has a wrong offset!");
 static_assert(offsetof(AsyncTaskPlayMontageAndWait_ListenRemainForPlayMontage, RemainedTrigger) == 0x000024, "Member 'AsyncTaskPlayMontageAndWait_ListenRemainForPlayMontage::RemainedTrigger' has a wrong offset!");
 static_assert(offsetof(AsyncTaskPlayMontageAndWait_ListenRemainForPlayMontage, ReturnValue) == 0x000028, "Member 'AsyncTaskPlayMontageAndWait_ListenRemainForPlayMontage::ReturnValue' has a wrong offset!");
+
+// Function KuroGAS.AsyncTaskRotateSequence.D_StartRotateSequenceByTranslation
+// 0x0050 (0x0050 - 0x0000)
+struct AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation final
+{
+public:
+	TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner;                                   // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	class USceneComponent*                        InAimPivot;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVectorDouble>                  InTargets;                                         // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         AimSpeedDegPerSec_0;                               // 0x0028(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AimToleranceDeg_0;                                 // 0x002C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEaseIn_0;                                         // 0x0030(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEaseOut_0;                                        // 0x0031(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceShortestRoute_0;                             // 0x0032(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PostFireDelay_0;                                   // 0x0034(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RotateOffset_0;                                    // 0x0038(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TimeDilation_0;                                    // 0x0044(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAsyncTaskRotateSequence*               ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation) == 0x000008, "Wrong alignment on AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation");
+static_assert(sizeof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation) == 0x000050, "Wrong size on AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, TaskOwner) == 0x000000, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::TaskOwner' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, InAimPivot) == 0x000010, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::InAimPivot' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, InTargets) == 0x000018, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::InTargets' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, AimSpeedDegPerSec_0) == 0x000028, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::AimSpeedDegPerSec_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, AimToleranceDeg_0) == 0x00002C, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::AimToleranceDeg_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, bEaseIn_0) == 0x000030, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::bEaseIn_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, bEaseOut_0) == 0x000031, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::bEaseOut_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, bForceShortestRoute_0) == 0x000032, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::bForceShortestRoute_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, PostFireDelay_0) == 0x000034, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::PostFireDelay_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, RotateOffset_0) == 0x000038, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::RotateOffset_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, TimeDilation_0) == 0x000044, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::TimeDilation_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation, ReturnValue) == 0x000048, "Member 'AsyncTaskRotateSequence_D_StartRotateSequenceByTranslation::ReturnValue' has a wrong offset!");
+
+// Function KuroGAS.AsyncTaskRotateSequence.RotateComponentTo
+// 0x0048 (0x0048 - 0x0000)
+struct AsyncTaskRotateSequence_RotateComponentTo final
+{
+public:
+	class USceneComponent*                        Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               TargetWorldRotation;                               // 0x0008(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bEaseOut_0;                                        // 0x0014(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEaseIn_0;                                         // 0x0015(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_16[0x2];                                       // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         OverTime;                                          // 0x0018(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceShortestRotationPath;                        // 0x001C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TimeDilation_0;                                    // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERotateComponentAction                        MoveAction;                                        // 0x0024(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLatentActionInfo                      LatentInfo;                                        // 0x0028(0x0020)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AsyncTaskRotateSequence_RotateComponentTo) == 0x000008, "Wrong alignment on AsyncTaskRotateSequence_RotateComponentTo");
+static_assert(sizeof(AsyncTaskRotateSequence_RotateComponentTo) == 0x000048, "Wrong size on AsyncTaskRotateSequence_RotateComponentTo");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, Component) == 0x000000, "Member 'AsyncTaskRotateSequence_RotateComponentTo::Component' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, TargetWorldRotation) == 0x000008, "Member 'AsyncTaskRotateSequence_RotateComponentTo::TargetWorldRotation' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, bEaseOut_0) == 0x000014, "Member 'AsyncTaskRotateSequence_RotateComponentTo::bEaseOut_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, bEaseIn_0) == 0x000015, "Member 'AsyncTaskRotateSequence_RotateComponentTo::bEaseIn_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, OverTime) == 0x000018, "Member 'AsyncTaskRotateSequence_RotateComponentTo::OverTime' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, bForceShortestRotationPath) == 0x00001C, "Member 'AsyncTaskRotateSequence_RotateComponentTo::bForceShortestRotationPath' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, TimeDilation_0) == 0x000020, "Member 'AsyncTaskRotateSequence_RotateComponentTo::TimeDilation_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, MoveAction) == 0x000024, "Member 'AsyncTaskRotateSequence_RotateComponentTo::MoveAction' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_RotateComponentTo, LatentInfo) == 0x000028, "Member 'AsyncTaskRotateSequence_RotateComponentTo::LatentInfo' has a wrong offset!");
+
+// Function KuroGAS.AsyncTaskRotateSequence.StartRotateSequenceByActor
+// 0x0050 (0x0050 - 0x0000)
+struct AsyncTaskRotateSequence_StartRotateSequenceByActor final
+{
+public:
+	TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner;                                   // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	class USceneComponent*                        InAimPivot;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         InTargets;                                         // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         AimSpeedDegPerSec_0;                               // 0x0028(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AimToleranceDeg_0;                                 // 0x002C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEaseIn_0;                                         // 0x0030(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEaseOut_0;                                        // 0x0031(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceShortestRoute_0;                             // 0x0032(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PostFireDelay_0;                                   // 0x0034(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RotateOffset_0;                                    // 0x0038(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TimeDilation_0;                                    // 0x0044(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAsyncTaskRotateSequence*               ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AsyncTaskRotateSequence_StartRotateSequenceByActor) == 0x000008, "Wrong alignment on AsyncTaskRotateSequence_StartRotateSequenceByActor");
+static_assert(sizeof(AsyncTaskRotateSequence_StartRotateSequenceByActor) == 0x000050, "Wrong size on AsyncTaskRotateSequence_StartRotateSequenceByActor");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, TaskOwner) == 0x000000, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::TaskOwner' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, InAimPivot) == 0x000010, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::InAimPivot' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, InTargets) == 0x000018, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::InTargets' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, AimSpeedDegPerSec_0) == 0x000028, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::AimSpeedDegPerSec_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, AimToleranceDeg_0) == 0x00002C, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::AimToleranceDeg_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, bEaseIn_0) == 0x000030, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::bEaseIn_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, bEaseOut_0) == 0x000031, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::bEaseOut_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, bForceShortestRoute_0) == 0x000032, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::bForceShortestRoute_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, PostFireDelay_0) == 0x000034, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::PostFireDelay_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, RotateOffset_0) == 0x000038, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::RotateOffset_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, TimeDilation_0) == 0x000044, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::TimeDilation_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByActor, ReturnValue) == 0x000048, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByActor::ReturnValue' has a wrong offset!");
+
+// Function KuroGAS.AsyncTaskRotateSequence.StartRotateSequenceByTranslation
+// 0x0050 (0x0050 - 0x0000)
+struct AsyncTaskRotateSequence_StartRotateSequenceByTranslation final
+{
+public:
+	TScriptInterface<class IGameplayTaskOwnerInterface> TaskOwner;                                   // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	class USceneComponent*                        InAimPivot;                                        // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        InTargets;                                         // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	float                                         AimSpeedDegPerSec_0;                               // 0x0028(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AimToleranceDeg_0;                                 // 0x002C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEaseIn_0;                                         // 0x0030(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEaseOut_0;                                        // 0x0031(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForceShortestRoute_0;                             // 0x0032(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PostFireDelay_0;                                   // 0x0034(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               RotateOffset_0;                                    // 0x0038(0x000C)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TimeDilation_0;                                    // 0x0044(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAsyncTaskRotateSequence*               ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation) == 0x000008, "Wrong alignment on AsyncTaskRotateSequence_StartRotateSequenceByTranslation");
+static_assert(sizeof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation) == 0x000050, "Wrong size on AsyncTaskRotateSequence_StartRotateSequenceByTranslation");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, TaskOwner) == 0x000000, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::TaskOwner' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, InAimPivot) == 0x000010, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::InAimPivot' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, InTargets) == 0x000018, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::InTargets' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, AimSpeedDegPerSec_0) == 0x000028, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::AimSpeedDegPerSec_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, AimToleranceDeg_0) == 0x00002C, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::AimToleranceDeg_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, bEaseIn_0) == 0x000030, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::bEaseIn_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, bEaseOut_0) == 0x000031, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::bEaseOut_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, bForceShortestRoute_0) == 0x000032, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::bForceShortestRoute_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, PostFireDelay_0) == 0x000034, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::PostFireDelay_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, RotateOffset_0) == 0x000038, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::RotateOffset_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, TimeDilation_0) == 0x000044, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::TimeDilation_0' has a wrong offset!");
+static_assert(offsetof(AsyncTaskRotateSequence_StartRotateSequenceByTranslation, ReturnValue) == 0x000048, "Member 'AsyncTaskRotateSequence_StartRotateSequenceByTranslation::ReturnValue' has a wrong offset!");
 
 // Function KuroGAS.AsyncTaskTagCountChanged.ListenForTagCountChanged
 // 0x0020 (0x0020 - 0x0000)

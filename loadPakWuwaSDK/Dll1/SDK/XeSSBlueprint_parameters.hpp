@@ -92,16 +92,5 @@ static_assert(alignof(XeSSBlueprintLibrary_SetXeSSQualityMode) == 0x000001, "Wro
 static_assert(sizeof(XeSSBlueprintLibrary_SetXeSSQualityMode) == 0x000001, "Wrong size on XeSSBlueprintLibrary_SetXeSSQualityMode");
 static_assert(offsetof(XeSSBlueprintLibrary_SetXeSSQualityMode, QualityMode) == 0x000000, "Member 'XeSSBlueprintLibrary_SetXeSSQualityMode::QualityMode' has a wrong offset!");
 
-// Function XeSSBlueprint.XeSSBlueprintLibrary.ShouldXeSSWarningOldDriver
-// 0x0001 (0x0001 - 0x0000)
-struct XeSSBlueprintLibrary_ShouldXeSSWarningOldDriver final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(XeSSBlueprintLibrary_ShouldXeSSWarningOldDriver) == 0x000001, "Wrong alignment on XeSSBlueprintLibrary_ShouldXeSSWarningOldDriver");
-static_assert(sizeof(XeSSBlueprintLibrary_ShouldXeSSWarningOldDriver) == 0x000001, "Wrong size on XeSSBlueprintLibrary_ShouldXeSSWarningOldDriver");
-static_assert(offsetof(XeSSBlueprintLibrary_ShouldXeSSWarningOldDriver, ReturnValue) == 0x000000, "Member 'XeSSBlueprintLibrary_ShouldXeSSWarningOldDriver::ReturnValue' has a wrong offset!");
-
 }
 

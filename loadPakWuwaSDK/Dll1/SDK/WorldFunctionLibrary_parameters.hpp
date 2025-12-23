@@ -11,13 +11,14 @@
 #include "Basic.hpp"
 
 #include "ERelation_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "EDetachType_structs.hpp"
+#include "EPawnChannel_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EInputAction_structs.hpp"
 #include "EInputState_structs.hpp"
-#include "EDetachType_structs.hpp"
 #include "EWeatherState_structs.hpp"
-#include "EPawnChannel_structs.hpp"
 #include "EWuYinQuState_structs.hpp"
 
 
@@ -2140,19 +2141,6 @@ static_assert(offsetof(WorldFunctionLibrary_C_AttachToActor, doAttach) == 0x0000
 static_assert(offsetof(WorldFunctionLibrary_C_AttachToActor, __WorldContext) == 0x000048, "Member 'WorldFunctionLibrary_C_AttachToActor::__WorldContext' has a wrong offset!");
 static_assert(offsetof(WorldFunctionLibrary_C_AttachToActor, ReturnValue) == 0x000050, "Member 'WorldFunctionLibrary_C_AttachToActor::ReturnValue' has a wrong offset!");
 
-// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetPlayerFollower
-// 0x0010 (0x0010 - 0x0000)
-struct WorldFunctionLibrary_C_GetPlayerFollower final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WorldFunctionLibrary_C_GetPlayerFollower) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetPlayerFollower");
-static_assert(sizeof(WorldFunctionLibrary_C_GetPlayerFollower) == 0x000010, "Wrong size on WorldFunctionLibrary_C_GetPlayerFollower");
-static_assert(offsetof(WorldFunctionLibrary_C_GetPlayerFollower, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_GetPlayerFollower::__WorldContext' has a wrong offset!");
-static_assert(offsetof(WorldFunctionLibrary_C_GetPlayerFollower, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_GetPlayerFollower::ReturnValue' has a wrong offset!");
-
 // Function WorldFunctionLibrary.WorldFunctionLibrary_C.AttachToComponent
 // 0x0058 (0x0058 - 0x0000)
 struct WorldFunctionLibrary_C_AttachToComponent final
@@ -2218,33 +2206,6 @@ static_assert(offsetof(WorldFunctionLibrary_C_DetachActor, rotationRule) == 0x00
 static_assert(offsetof(WorldFunctionLibrary_C_DetachActor, scaleRule) == 0x00002A, "Member 'WorldFunctionLibrary_C_DetachActor::scaleRule' has a wrong offset!");
 static_assert(offsetof(WorldFunctionLibrary_C_DetachActor, __WorldContext) == 0x000030, "Member 'WorldFunctionLibrary_C_DetachActor::__WorldContext' has a wrong offset!");
 static_assert(offsetof(WorldFunctionLibrary_C_DetachActor, ReturnValue) == 0x000038, "Member 'WorldFunctionLibrary_C_DetachActor::ReturnValue' has a wrong offset!");
-
-// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsPlayerFollowerEnable
-// 0x0010 (0x0010 - 0x0000)
-struct WorldFunctionLibrary_C_IsPlayerFollowerEnable final
-{
-public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(WorldFunctionLibrary_C_IsPlayerFollowerEnable) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_IsPlayerFollowerEnable");
-static_assert(sizeof(WorldFunctionLibrary_C_IsPlayerFollowerEnable) == 0x000010, "Wrong size on WorldFunctionLibrary_C_IsPlayerFollowerEnable");
-static_assert(offsetof(WorldFunctionLibrary_C_IsPlayerFollowerEnable, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_IsPlayerFollowerEnable::__WorldContext' has a wrong offset!");
-static_assert(offsetof(WorldFunctionLibrary_C_IsPlayerFollowerEnable, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_IsPlayerFollowerEnable::ReturnValue' has a wrong offset!");
-
-// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerEnable
-// 0x0010 (0x0010 - 0x0000)
-struct WorldFunctionLibrary_C_SetPlayerFollowerEnable final
-{
-public:
-	bool                                          enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WorldFunctionLibrary_C_SetPlayerFollowerEnable) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_SetPlayerFollowerEnable");
-static_assert(sizeof(WorldFunctionLibrary_C_SetPlayerFollowerEnable) == 0x000010, "Wrong size on WorldFunctionLibrary_C_SetPlayerFollowerEnable");
-static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerEnable, enable) == 0x000000, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerEnable::enable' has a wrong offset!");
-static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerEnable, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerEnable::__WorldContext' has a wrong offset!");
 
 // Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsPlayerFollowerNeedInput
 // 0x0018 (0x0018 - 0x0000)
@@ -2335,6 +2296,315 @@ static_assert(offsetof(WorldFunctionLibrary_C_GetSummonRandomEntity, summonerId)
 static_assert(offsetof(WorldFunctionLibrary_C_GetSummonRandomEntity, index) == 0x000004, "Member 'WorldFunctionLibrary_C_GetSummonRandomEntity::index' has a wrong offset!");
 static_assert(offsetof(WorldFunctionLibrary_C_GetSummonRandomEntity, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_GetSummonRandomEntity::__WorldContext' has a wrong offset!");
 static_assert(offsetof(WorldFunctionLibrary_C_GetSummonRandomEntity, ReturnValue) == 0x000010, "Member 'WorldFunctionLibrary_C_GetSummonRandomEntity::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetTrapDefenseUseBpUsing
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing");
+static_assert(sizeof(WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing) == 0x000010, "Wrong size on WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing");
+static_assert(offsetof(WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_GetTrapDefenseUseBpUsing::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.DisableAllRoleWithoutControl
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_DisableAllRoleWithoutControl final
+{
+public:
+	bool                                          needEffect;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_DisableAllRoleWithoutControl) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_DisableAllRoleWithoutControl");
+static_assert(sizeof(WorldFunctionLibrary_C_DisableAllRoleWithoutControl) == 0x000010, "Wrong size on WorldFunctionLibrary_C_DisableAllRoleWithoutControl");
+static_assert(offsetof(WorldFunctionLibrary_C_DisableAllRoleWithoutControl, needEffect) == 0x000000, "Member 'WorldFunctionLibrary_C_DisableAllRoleWithoutControl::needEffect' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_DisableAllRoleWithoutControl, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_DisableAllRoleWithoutControl::__WorldContext' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetFormationActors
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_GetFormationActors final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ReturnParm)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetFormationActors) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetFormationActors");
+static_assert(sizeof(WorldFunctionLibrary_C_GetFormationActors) == 0x000018, "Wrong size on WorldFunctionLibrary_C_GetFormationActors");
+static_assert(offsetof(WorldFunctionLibrary_C_GetFormationActors, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_GetFormationActors::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetFormationActors, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_GetFormationActors::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetEntityBindGroup
+// 0x0020 (0x0020 - 0x0000)
+struct WorldFunctionLibrary_C_GetEntityBindGroup final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetEntityBindGroup) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetEntityBindGroup");
+static_assert(sizeof(WorldFunctionLibrary_C_GetEntityBindGroup) == 0x000020, "Wrong size on WorldFunctionLibrary_C_GetEntityBindGroup");
+static_assert(offsetof(WorldFunctionLibrary_C_GetEntityBindGroup, entityId) == 0x000000, "Member 'WorldFunctionLibrary_C_GetEntityBindGroup::entityId' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetEntityBindGroup, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_GetEntityBindGroup::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetEntityBindGroup, ReturnValue) == 0x000010, "Member 'WorldFunctionLibrary_C_GetEntityBindGroup::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetVisionEntityIdList
+// 0x0020 (0x0020 - 0x0000)
+struct WorldFunctionLibrary_C_GetVisionEntityIdList final
+{
+public:
+	int32                                         ownerEntityId;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<int32>                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetVisionEntityIdList) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetVisionEntityIdList");
+static_assert(sizeof(WorldFunctionLibrary_C_GetVisionEntityIdList) == 0x000020, "Wrong size on WorldFunctionLibrary_C_GetVisionEntityIdList");
+static_assert(offsetof(WorldFunctionLibrary_C_GetVisionEntityIdList, ownerEntityId) == 0x000000, "Member 'WorldFunctionLibrary_C_GetVisionEntityIdList::ownerEntityId' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetVisionEntityIdList, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_GetVisionEntityIdList::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetVisionEntityIdList, ReturnValue) == 0x000010, "Member 'WorldFunctionLibrary_C_GetVisionEntityIdList::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetVisionPos
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_SetVisionPos final
+{
+public:
+	int32                                         ownerEntityId;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         pos;                                               // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_SetVisionPos) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_SetVisionPos");
+static_assert(sizeof(WorldFunctionLibrary_C_SetVisionPos) == 0x000010, "Wrong size on WorldFunctionLibrary_C_SetVisionPos");
+static_assert(offsetof(WorldFunctionLibrary_C_SetVisionPos, ownerEntityId) == 0x000000, "Member 'WorldFunctionLibrary_C_SetVisionPos::ownerEntityId' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_SetVisionPos, pos) == 0x000004, "Member 'WorldFunctionLibrary_C_SetVisionPos::pos' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_SetVisionPos, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_SetVisionPos::__WorldContext' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetVisionPos
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_GetVisionPos final
+{
+public:
+	int32                                         ownerEntityId;                                     // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetVisionPos) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetVisionPos");
+static_assert(sizeof(WorldFunctionLibrary_C_GetVisionPos) == 0x000018, "Wrong size on WorldFunctionLibrary_C_GetVisionPos");
+static_assert(offsetof(WorldFunctionLibrary_C_GetVisionPos, ownerEntityId) == 0x000000, "Member 'WorldFunctionLibrary_C_GetVisionPos::ownerEntityId' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetVisionPos, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_GetVisionPos::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetVisionPos, ReturnValue) == 0x000010, "Member 'WorldFunctionLibrary_C_GetVisionPos::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.PlayerEntityId
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_PlayerEntityId final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_PlayerEntityId) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_PlayerEntityId");
+static_assert(sizeof(WorldFunctionLibrary_C_PlayerEntityId) == 0x000010, "Wrong size on WorldFunctionLibrary_C_PlayerEntityId");
+static_assert(offsetof(WorldFunctionLibrary_C_PlayerEntityId, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_PlayerEntityId::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_PlayerEntityId, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_PlayerEntityId::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetFollowerShooterConfig
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_GetFollowerShooterConfig final
+{
+public:
+	int32                                         entityId;                                          // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UBP_FollowShooterConfig_C*              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetFollowerShooterConfig) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetFollowerShooterConfig");
+static_assert(sizeof(WorldFunctionLibrary_C_GetFollowerShooterConfig) == 0x000018, "Wrong size on WorldFunctionLibrary_C_GetFollowerShooterConfig");
+static_assert(offsetof(WorldFunctionLibrary_C_GetFollowerShooterConfig, entityId) == 0x000000, "Member 'WorldFunctionLibrary_C_GetFollowerShooterConfig::entityId' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetFollowerShooterConfig, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_GetFollowerShooterConfig::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetFollowerShooterConfig, ReturnValue) == 0x000010, "Member 'WorldFunctionLibrary_C_GetFollowerShooterConfig::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetGameplayTagOriginName
+// 0x0028 (0x0028 - 0x0000)
+struct WorldFunctionLibrary_C_GetGameplayTagOriginName final
+{
+public:
+	struct FGameplayTag                           gameplayTag;                                       // 0x0000(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetGameplayTagOriginName) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetGameplayTagOriginName");
+static_assert(sizeof(WorldFunctionLibrary_C_GetGameplayTagOriginName) == 0x000028, "Wrong size on WorldFunctionLibrary_C_GetGameplayTagOriginName");
+static_assert(offsetof(WorldFunctionLibrary_C_GetGameplayTagOriginName, gameplayTag) == 0x000000, "Member 'WorldFunctionLibrary_C_GetGameplayTagOriginName::gameplayTag' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetGameplayTagOriginName, __WorldContext) == 0x000010, "Member 'WorldFunctionLibrary_C_GetGameplayTagOriginName::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetGameplayTagOriginName, ReturnValue) == 0x000018, "Member 'WorldFunctionLibrary_C_GetGameplayTagOriginName::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.CurrentFrontRoleEntityId
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_CurrentFrontRoleEntityId final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_CurrentFrontRoleEntityId) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_CurrentFrontRoleEntityId");
+static_assert(sizeof(WorldFunctionLibrary_C_CurrentFrontRoleEntityId) == 0x000010, "Wrong size on WorldFunctionLibrary_C_CurrentFrontRoleEntityId");
+static_assert(offsetof(WorldFunctionLibrary_C_CurrentFrontRoleEntityId, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_CurrentFrontRoleEntityId::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_CurrentFrontRoleEntityId, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_CurrentFrontRoleEntityId::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetPlayerFollower
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_GetPlayerFollower final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetPlayerFollower) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetPlayerFollower");
+static_assert(sizeof(WorldFunctionLibrary_C_GetPlayerFollower) == 0x000010, "Wrong size on WorldFunctionLibrary_C_GetPlayerFollower");
+static_assert(offsetof(WorldFunctionLibrary_C_GetPlayerFollower, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_GetPlayerFollower::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetPlayerFollower, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_GetPlayerFollower::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsPlayerFollowerEnable
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_IsPlayerFollowerEnable final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WorldFunctionLibrary_C_IsPlayerFollowerEnable) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_IsPlayerFollowerEnable");
+static_assert(sizeof(WorldFunctionLibrary_C_IsPlayerFollowerEnable) == 0x000010, "Wrong size on WorldFunctionLibrary_C_IsPlayerFollowerEnable");
+static_assert(offsetof(WorldFunctionLibrary_C_IsPlayerFollowerEnable, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_IsPlayerFollowerEnable::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_IsPlayerFollowerEnable, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_IsPlayerFollowerEnable::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerEnable
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_SetPlayerFollowerEnable final
+{
+public:
+	bool                                          enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_SetPlayerFollowerEnable) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_SetPlayerFollowerEnable");
+static_assert(sizeof(WorldFunctionLibrary_C_SetPlayerFollowerEnable) == 0x000010, "Wrong size on WorldFunctionLibrary_C_SetPlayerFollowerEnable");
+static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerEnable, enable) == 0x000000, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerEnable::enable' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerEnable, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerEnable::__WorldContext' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.GetPlayerFollowerMotor
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_GetPlayerFollowerMotor final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_GetPlayerFollowerMotor) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_GetPlayerFollowerMotor");
+static_assert(sizeof(WorldFunctionLibrary_C_GetPlayerFollowerMotor) == 0x000010, "Wrong size on WorldFunctionLibrary_C_GetPlayerFollowerMotor");
+static_assert(offsetof(WorldFunctionLibrary_C_GetPlayerFollowerMotor, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_GetPlayerFollowerMotor::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_GetPlayerFollowerMotor, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_GetPlayerFollowerMotor::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerMotorEnable
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable final
+{
+public:
+	bool                                          enable;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1[0x7];                                        // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable");
+static_assert(sizeof(WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable) == 0x000010, "Wrong size on WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable");
+static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable, enable) == 0x000000, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable::enable' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable, __WorldContext) == 0x000008, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerMotorEnable::__WorldContext' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.IsPlayerFollowerMotorEnable
+// 0x0010 (0x0010 - 0x0000)
+struct WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable final
+{
+public:
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable");
+static_assert(sizeof(WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable) == 0x000010, "Wrong size on WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable");
+static_assert(offsetof(WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable, __WorldContext) == 0x000000, "Member 'WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable::__WorldContext' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable, ReturnValue) == 0x000008, "Member 'WorldFunctionLibrary_C_IsPlayerFollowerMotorEnable::ReturnValue' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.RegisterDayNightBpToBpActorController
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController final
+{
+public:
+	TScriptInterface<class IBPI_DayNightEvent_C>  dayNightBp;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController");
+static_assert(sizeof(WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController) == 0x000018, "Wrong size on WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController");
+static_assert(offsetof(WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController, dayNightBp) == 0x000000, "Member 'WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController::dayNightBp' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController, __WorldContext) == 0x000010, "Member 'WorldFunctionLibrary_C_RegisterDayNightBpToBpActorController::__WorldContext' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.UnregisterDayNightBpToBpActorController
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController final
+{
+public:
+	TScriptInterface<class IBPI_DayNightEvent_C>  dayNightBp;                                        // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController");
+static_assert(sizeof(WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController) == 0x000018, "Wrong size on WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController");
+static_assert(offsetof(WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController, dayNightBp) == 0x000000, "Member 'WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController::dayNightBp' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController, __WorldContext) == 0x000010, "Member 'WorldFunctionLibrary_C_UnregisterDayNightBpToBpActorController::__WorldContext' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.SetPlayerFollowerCustomEntityId
+// 0x0020 (0x0020 - 0x0000)
+struct WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId final
+{
+public:
+	class FString                                 customKey;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	int32                                         entityId;                                          // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId");
+static_assert(sizeof(WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId) == 0x000020, "Wrong size on WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId");
+static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId, customKey) == 0x000000, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId::customKey' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId, entityId) == 0x000010, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId::entityId' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId, __WorldContext) == 0x000018, "Member 'WorldFunctionLibrary_C_SetPlayerFollowerCustomEntityId::__WorldContext' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.RemovePlayerFollowerCustomEntityId
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId final
+{
+public:
+	class FString                                 customKey;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId");
+static_assert(sizeof(WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId) == 0x000018, "Wrong size on WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId");
+static_assert(offsetof(WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId, customKey) == 0x000000, "Member 'WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId::customKey' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId, __WorldContext) == 0x000010, "Member 'WorldFunctionLibrary_C_RemovePlayerFollowerCustomEntityId::__WorldContext' has a wrong offset!");
+
+// Function WorldFunctionLibrary.WorldFunctionLibrary_C.ShowTipsByTextId
+// 0x0018 (0x0018 - 0x0000)
+struct WorldFunctionLibrary_C_ShowTipsByTextId final
+{
+public:
+	class FString                                 textId;                                            // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WorldFunctionLibrary_C_ShowTipsByTextId) == 0x000008, "Wrong alignment on WorldFunctionLibrary_C_ShowTipsByTextId");
+static_assert(sizeof(WorldFunctionLibrary_C_ShowTipsByTextId) == 0x000018, "Wrong size on WorldFunctionLibrary_C_ShowTipsByTextId");
+static_assert(offsetof(WorldFunctionLibrary_C_ShowTipsByTextId, textId) == 0x000000, "Member 'WorldFunctionLibrary_C_ShowTipsByTextId::textId' has a wrong offset!");
+static_assert(offsetof(WorldFunctionLibrary_C_ShowTipsByTextId, __WorldContext) == 0x000010, "Member 'WorldFunctionLibrary_C_ShowTipsByTextId::__WorldContext' has a wrong offset!");
 
 }
 

@@ -10,13 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "ECharParentMoveState_structs.hpp"
+#include "ECharState_structs.hpp"
 #include "EHitAnim_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "ECharState_structs.hpp"
-#include "ECharViewDirectionState_structs.hpp"
+#include "KuroAnim_structs.hpp"
 #include "SClimbState_structs.hpp"
-#include "ECharParentMoveState_structs.hpp"
+#include "ECharViewDirectionState_structs.hpp"
 #include "SClimbInfo_structs.hpp"
 
 
@@ -24,7 +25,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_ABPLogicParams.BP_ABPLogicParams_C
-// 0x00C0 (0x00F0 - 0x0030)
+// 0x0130 (0x0160 - 0x0030)
 class UBP_ABPLogicParams_C final : public UObject
 {
 public:
@@ -70,6 +71,19 @@ public:
 	struct FVector2D                              LookAtRef;                                         // 0x00E4(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnableBlendSpaceLookAtRef;                         // 0x00EC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          IsOnVehicle;                                       // 0x00ED(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_EE[0x2];                                       // 0x00EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIKTarget                              LeftHandIKTargetCS;                                // 0x00F0(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	struct FIKTarget                              RightHandIKTargetCS;                               // 0x0120(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
+	bool                                          StateLowerBlend;                                   // 0x0150(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          StateLeftArmBlend;                                 // 0x0151(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          StateRightArmBlend;                                // 0x0152(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsHoldingHands;                                    // 0x0153(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsBeHoldingHands;                                  // 0x0154(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsHoldingHandsReachable;                           // 0x0155(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsAcceptingInvitation;                             // 0x0156(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          DisableBlinkRef;                                   // 0x0157(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	int32                                         VehicleType;                                       // 0x0158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsRegionMoveModeRef;                               // 0x015C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -81,8 +95,8 @@ public:
 		return GetDefaultObjImpl<UBP_ABPLogicParams_C>();
 	}
 };
-static_assert(alignof(UBP_ABPLogicParams_C) == 0x000008, "Wrong alignment on UBP_ABPLogicParams_C");
-static_assert(sizeof(UBP_ABPLogicParams_C) == 0x0000F0, "Wrong size on UBP_ABPLogicParams_C");
+static_assert(alignof(UBP_ABPLogicParams_C) == 0x000010, "Wrong alignment on UBP_ABPLogicParams_C");
+static_assert(sizeof(UBP_ABPLogicParams_C) == 0x000160, "Wrong size on UBP_ABPLogicParams_C");
 static_assert(offsetof(UBP_ABPLogicParams_C, AcceptedNewBeHitRef) == 0x000030, "Member 'UBP_ABPLogicParams_C::AcceptedNewBeHitRef' has a wrong offset!");
 static_assert(offsetof(UBP_ABPLogicParams_C, BeHitAnimRef) == 0x000031, "Member 'UBP_ABPLogicParams_C::BeHitAnimRef' has a wrong offset!");
 static_assert(offsetof(UBP_ABPLogicParams_C, EnterFkRef) == 0x000032, "Member 'UBP_ABPLogicParams_C::EnterFkRef' has a wrong offset!");
@@ -118,6 +132,18 @@ static_assert(offsetof(UBP_ABPLogicParams_C, JumpUpRateRef) == 0x0000E0, "Member
 static_assert(offsetof(UBP_ABPLogicParams_C, LookAtRef) == 0x0000E4, "Member 'UBP_ABPLogicParams_C::LookAtRef' has a wrong offset!");
 static_assert(offsetof(UBP_ABPLogicParams_C, EnableBlendSpaceLookAtRef) == 0x0000EC, "Member 'UBP_ABPLogicParams_C::EnableBlendSpaceLookAtRef' has a wrong offset!");
 static_assert(offsetof(UBP_ABPLogicParams_C, IsOnVehicle) == 0x0000ED, "Member 'UBP_ABPLogicParams_C::IsOnVehicle' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, LeftHandIKTargetCS) == 0x0000F0, "Member 'UBP_ABPLogicParams_C::LeftHandIKTargetCS' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, RightHandIKTargetCS) == 0x000120, "Member 'UBP_ABPLogicParams_C::RightHandIKTargetCS' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, StateLowerBlend) == 0x000150, "Member 'UBP_ABPLogicParams_C::StateLowerBlend' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, StateLeftArmBlend) == 0x000151, "Member 'UBP_ABPLogicParams_C::StateLeftArmBlend' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, StateRightArmBlend) == 0x000152, "Member 'UBP_ABPLogicParams_C::StateRightArmBlend' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, IsHoldingHands) == 0x000153, "Member 'UBP_ABPLogicParams_C::IsHoldingHands' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, IsBeHoldingHands) == 0x000154, "Member 'UBP_ABPLogicParams_C::IsBeHoldingHands' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, IsHoldingHandsReachable) == 0x000155, "Member 'UBP_ABPLogicParams_C::IsHoldingHandsReachable' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, IsAcceptingInvitation) == 0x000156, "Member 'UBP_ABPLogicParams_C::IsAcceptingInvitation' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, DisableBlinkRef) == 0x000157, "Member 'UBP_ABPLogicParams_C::DisableBlinkRef' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, VehicleType) == 0x000158, "Member 'UBP_ABPLogicParams_C::VehicleType' has a wrong offset!");
+static_assert(offsetof(UBP_ABPLogicParams_C, IsRegionMoveModeRef) == 0x00015C, "Member 'UBP_ABPLogicParams_C::IsRegionMoveModeRef' has a wrong offset!");
 
 }
 

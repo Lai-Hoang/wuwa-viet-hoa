@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "AIModule_classes.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -39,11 +40,14 @@ static_assert(sizeof(UBTComposite_ParallelNode) == 0x0000A0, "Wrong size on UBTC
 static_assert(offsetof(UBTComposite_ParallelNode, Test) == 0x000098, "Member 'UBTComposite_ParallelNode::Test' has a wrong offset!");
 
 // Class KuroAI.BTComposite_Random
-// 0x0010 (0x00A8 - 0x0098)
+// 0x0030 (0x00C8 - 0x0098)
 class UBTComposite_Random final : public UBTCompositeNode
 {
 public:
 	TArray<int32>                                 Weights;                                           // 0x0098(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, NativeAccessSpecifierPublic)
+	TArray<int32>                                 WeightIncrements;                                  // 0x00A8(0x0010)(Edit, ZeroConstructor, DisableEditOnTemplate, NativeAccessSpecifierPublic)
+	float                                         ResetTime;                                         // 0x00B8(0x0004)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Key;                                               // 0x00BC(0x000C)(Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -56,8 +60,11 @@ public:
 	}
 };
 static_assert(alignof(UBTComposite_Random) == 0x000008, "Wrong alignment on UBTComposite_Random");
-static_assert(sizeof(UBTComposite_Random) == 0x0000A8, "Wrong size on UBTComposite_Random");
+static_assert(sizeof(UBTComposite_Random) == 0x0000C8, "Wrong size on UBTComposite_Random");
 static_assert(offsetof(UBTComposite_Random, Weights) == 0x000098, "Member 'UBTComposite_Random::Weights' has a wrong offset!");
+static_assert(offsetof(UBTComposite_Random, WeightIncrements) == 0x0000A8, "Member 'UBTComposite_Random::WeightIncrements' has a wrong offset!");
+static_assert(offsetof(UBTComposite_Random, ResetTime) == 0x0000B8, "Member 'UBTComposite_Random::ResetTime' has a wrong offset!");
+static_assert(offsetof(UBTComposite_Random, Key) == 0x0000BC, "Member 'UBTComposite_Random::Key' has a wrong offset!");
 
 // Class KuroAI.BTDecorator_ForceFailure
 // 0x0000 (0x0070 - 0x0070)
@@ -75,6 +82,27 @@ public:
 };
 static_assert(alignof(UBTDecorator_ForceFailure) == 0x000008, "Wrong alignment on UBTDecorator_ForceFailure");
 static_assert(sizeof(UBTDecorator_ForceFailure) == 0x000070, "Wrong size on UBTDecorator_ForceFailure");
+
+// Class KuroAI.KuroAILibrary
+// 0x0000 (0x0030 - 0x0030)
+class UKuroAILibrary final : public UBlueprintFunctionLibrary
+{
+public:
+	static class UBTNode* GetCurrentRootNode(class UBehaviorTreeComponent* BTComp);
+	static void ResetRandomNode(class UBehaviorTreeComponent* BTComp, class UBTNode* Node, const TArray<int32>& WeightsOverride);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KuroAILibrary">();
+	}
+	static class UKuroAILibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKuroAILibrary>();
+	}
+};
+static_assert(alignof(UKuroAILibrary) == 0x000008, "Wrong alignment on UKuroAILibrary");
+static_assert(sizeof(UKuroAILibrary) == 0x000030, "Wrong size on UKuroAILibrary");
 
 }
 

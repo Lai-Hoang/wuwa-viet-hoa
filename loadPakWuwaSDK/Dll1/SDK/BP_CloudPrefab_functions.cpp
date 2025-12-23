@@ -332,5 +332,68 @@ void ABP_CloudPrefab_C::OverrideBigShapeMaterial(class UMaterialInstance* Materi
 	UObject::ProcessEvent(Func, &Parms);
 }
 
+
+// Function BP_CloudPrefab.BP_CloudPrefab_C.OverrideCloudTopMaterial
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstance*                MaterialInstance                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CloudPrefab_C::OverrideCloudTopMaterial(class UMaterialInstance* MaterialInstance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CloudPrefab_C", "OverrideCloudTopMaterial");
+
+	Params::BP_CloudPrefab_C_OverrideCloudTopMaterial Parms{};
+
+	Parms.MaterialInstance = MaterialInstance;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_CloudPrefab.BP_CloudPrefab_C.CurveProgress
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool*                                   stop                                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void ABP_CloudPrefab_C::CurveProgress(bool* stop)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CloudPrefab_C", "CurveProgress");
+
+	Params::BP_CloudPrefab_C_CurveProgress Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (stop != nullptr)
+		*stop = Parms.stop;
+}
+
+
+// Function BP_CloudPrefab.BP_CloudPrefab_C.OverrideMountainMeshAndMaterial
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UMaterialInstance*                MaterialInstance                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UStaticMesh*                      Mesh                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ABP_CloudPrefab_C::OverrideMountainMeshAndMaterial(class UMaterialInstance* MaterialInstance, class UStaticMesh* Mesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CloudPrefab_C", "OverrideMountainMeshAndMaterial");
+
+	Params::BP_CloudPrefab_C_OverrideMountainMeshAndMaterial Parms{};
+
+	Parms.MaterialInstance = MaterialInstance;
+	Parms.Mesh = Mesh;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
 }
 

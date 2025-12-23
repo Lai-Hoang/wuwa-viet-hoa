@@ -29,6 +29,8 @@ public:
 	static void Post(const class FString& URL, const TMap<class FString, class FString>& HeaderParam, const class FString& Content, TDelegate<void(bool bConnectedSuccessfully, int32 HttpResponseCode, const class FString& Data)> Handle, float InTimeoutSecs);
 	static void PostAli(const TMap<class FString, class FString>& QueryParameter, TDelegate<void(bool bConnectedSuccessfully, int32 HttpResponseCode, const class FString& Data)> Handle, float InTimeoutSecs);
 	static void PostRpt(const class FString& ContentStr, bool IsGlobal, TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)> Handle, float InTimeoutSecs);
+	static void PostRpt1(const class FString& ContentStr, const class FString& Content1Str, bool IsGlobal, TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)> Handle, float InTimeoutSecs);
+	static void PostRpt2(const class FString& Url, const class FString& ContentStr, const class FString& Content1Str, TDelegate<void(const class FString& Data, int32 LocalErrorCode, int32 RemoteErrorCode, int32 HttpResponseCode, bool bConnectedSuccessfully)> Handle, float InTimeoutSecs);
 
 public:
 	static class UClass* StaticClass()
@@ -44,11 +46,11 @@ static_assert(alignof(UKuroHttp) == 0x000008, "Wrong alignment on UKuroHttp");
 static_assert(sizeof(UKuroHttp) == 0x000030, "Wrong size on UKuroHttp");
 
 // Class KuroNetwork.KuroHttpServerRequestProxy
-// 0x0080 (0x00B0 - 0x0030)
+// 0x00C0 (0x00F0 - 0x0030)
 class UKuroHttpServerRequestProxy final : public UObject
 {
 public:
-	uint8                                         Pad_30[0x80];                                      // 0x0030(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0xC0];                                      // 0x0030(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool GetHeader(const class FString& Key, TArray<class FString>* OutHeader);
@@ -66,7 +68,7 @@ public:
 	}
 };
 static_assert(alignof(UKuroHttpServerRequestProxy) == 0x000008, "Wrong alignment on UKuroHttpServerRequestProxy");
-static_assert(sizeof(UKuroHttpServerRequestProxy) == 0x0000B0, "Wrong size on UKuroHttpServerRequestProxy");
+static_assert(sizeof(UKuroHttpServerRequestProxy) == 0x0000F0, "Wrong size on UKuroHttpServerRequestProxy");
 
 // Class KuroNetwork.KuroHttpServerRouterProxy
 // 0x0088 (0x00B8 - 0x0030)
@@ -96,7 +98,7 @@ static_assert(sizeof(UKuroHttpServerRouterProxy) == 0x0000B8, "Wrong size on UKu
 static_assert(offsetof(UKuroHttpServerRouterProxy, HttpRequestDelegate) == 0x000030, "Member 'UKuroHttpServerRouterProxy::HttpRequestDelegate' has a wrong offset!");
 
 // Class KuroNetwork.KuroKcpClient
-// 0x0368 (0x0398 - 0x0030)
+// 0x03A0 (0x03D0 - 0x0030)
 class UKuroKcpClient final : public UObject
 {
 public:
@@ -115,13 +117,17 @@ public:
 	TMulticastInlineDelegate<void()>              OnTcpConnected;                                    // 0x0118(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	TMulticastInlineDelegate<void()>              OnTcpConnectFailed;                                // 0x0128(0x0010)(ZeroConstructor, InstancedReference, NativeAccessSpecifierPublic)
 	class UKuroTcpClient*                         TcpClient;                                         // 0x0138(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_140[0x258];                                    // 0x0140(0x0258)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_140[0x290];                                    // 0x0140(0x0290)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void CloseTcpConnect();
+	bool Connect(const class FString& Addr, const int32 Port, const bool CrcCheckDisable);
+	void Disconnect();
+	class FString GetDebugString(const struct FArrayBuffer& ArrayBuffer, const class FString& Separator, int16 MsgId, int32 SeqNo);
 	void HandleKcpConnect(const uint32 NeedCrcCheck, const uint32 Conv);
 	void HandleTcpConnected();
 	void HandleTcpConnectFailed();
+	bool SendM(int8 MsgType, int32 SeqNo, int16 RpcId, int16 MsgId, const struct FArrayBuffer& ArrayBuffer, bool UseKcp);
 	void SendTcpMessage(int16 RpcId, int16 MsgId, const struct FArrayBuffer& ArrayBuffer);
 	void SetEnType(uint8 Type, int16 MsgId);
 	bool SetK(uint8 Type, const struct FArrayBuffer& KeyBuffer);
@@ -146,7 +152,7 @@ public:
 	}
 };
 static_assert(alignof(UKuroKcpClient) == 0x000008, "Wrong alignment on UKuroKcpClient");
-static_assert(sizeof(UKuroKcpClient) == 0x000398, "Wrong size on UKuroKcpClient");
+static_assert(sizeof(UKuroKcpClient) == 0x0003D0, "Wrong size on UKuroKcpClient");
 static_assert(offsetof(UKuroKcpClient, OnConnectSuccess) == 0x000038, "Member 'UKuroKcpClient::OnConnectSuccess' has a wrong offset!");
 static_assert(offsetof(UKuroKcpClient, OnRecResp) == 0x000048, "Member 'UKuroKcpClient::OnRecResp' has a wrong offset!");
 static_assert(offsetof(UKuroKcpClient, OnRecException) == 0x000070, "Member 'UKuroKcpClient::OnRecException' has a wrong offset!");
@@ -163,11 +169,11 @@ static_assert(offsetof(UKuroKcpClient, OnTcpConnectFailed) == 0x000128, "Member 
 static_assert(offsetof(UKuroKcpClient, TcpClient) == 0x000138, "Member 'UKuroKcpClient::TcpClient' has a wrong offset!");
 
 // Class KuroNetwork.KuroKcpTestWorker
-// 0x0250 (0x0280 - 0x0030)
+// 0x0260 (0x0290 - 0x0030)
 class UKuroKcpTestWorker final : public UObject
 {
 public:
-	uint8                                         Pad_30[0x250];                                     // 0x0030(0x0250)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30[0x260];                                     // 0x0030(0x0260)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnConnectSuccess();
@@ -186,7 +192,7 @@ public:
 	}
 };
 static_assert(alignof(UKuroKcpTestWorker) == 0x000008, "Wrong alignment on UKuroKcpTestWorker");
-static_assert(sizeof(UKuroKcpTestWorker) == 0x000280, "Wrong size on UKuroKcpTestWorker");
+static_assert(sizeof(UKuroKcpTestWorker) == 0x000290, "Wrong size on UKuroKcpTestWorker");
 
 // Class KuroNetwork.KuroNetworkChange
 // 0x0020 (0x0050 - 0x0030)

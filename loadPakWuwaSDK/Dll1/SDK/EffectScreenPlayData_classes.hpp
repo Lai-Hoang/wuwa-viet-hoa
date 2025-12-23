@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "E_SE_PlayOrder_structs.hpp"
-#include "Engine_classes.hpp"
 #include "E_SE_RootType_structs.hpp"
-#include "KuroCurve_structs.hpp"
 #include "SScreenEffectExtraState_structs.hpp"
+#include "Engine_classes.hpp"
+#include "KuroCurve_structs.hpp"
 
 
 namespace SDK

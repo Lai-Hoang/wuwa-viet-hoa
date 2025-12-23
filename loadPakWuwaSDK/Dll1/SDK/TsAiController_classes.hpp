@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "ECharacterState_structs.hpp"
 #include "Engine_structs.hpp"
 #include "KuroGameplay_classes.hpp"
-#include "ECharacterState_structs.hpp"
 
 
 namespace SDK

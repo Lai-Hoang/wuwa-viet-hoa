@@ -10,19 +10,20 @@
 
 #include "Basic.hpp"
 
-#include "ESceneInteractionEffect_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
-#include "SNiagaraParam_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "EBodyType_structs.hpp"
+#include "SNiagaraParam_structs.hpp"
+#include "ESceneInteractionEffect_structs.hpp"
+#include "SModelDecorationConfig_structs.hpp"
 
 
 namespace SDK
 {
 
 // UserDefinedStruct SModelConfig.SModelConfig
-// 0x0448 (0x0448 - 0x0000)
+// 0x0458 (0x0458 - 0x0000)
 struct FSModelConfig final
 {
 public:
@@ -57,9 +58,11 @@ public:
 	TSoftObjectPtr<class UDataTable>              蒙太奇替换表_207_9CC9815B4071F7C6F225B0ABCAB34DE9; // 0x03E0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class USkeletalMesh>           声骸掉落替换模型_210_C07454AB4CE78EE2B04E7D8DD3993DE5; // 0x0410(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	bool                                          隐藏葫芦_212_EBF381B54DCE7B33C345A9B8188CE99E;     // 0x0440(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_441[0x7];                                      // 0x0441(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSModelDecorationConfig>        UiModelDecorationArray_219_69CDBE4941E99643335E1B894A99EA66; // 0x0448(0x0010)(Edit, BlueprintVisible)
 };
 static_assert(alignof(FSModelConfig) == 0x000008, "Wrong alignment on FSModelConfig");
-static_assert(sizeof(FSModelConfig) == 0x000448, "Wrong size on FSModelConfig");
+static_assert(sizeof(FSModelConfig) == 0x000458, "Wrong size on FSModelConfig");
 static_assert(offsetof(FSModelConfig, ID_3_6A014D4F486091DDAF9D4D9D32B8C4FF) == 0x000000, "Member 'FSModelConfig::ID_3_6A014D4F486091DDAF9D4D9D32B8C4FF' has a wrong offset!");
 static_assert(offsetof(FSModelConfig, 蓝图_164_769F290B4EFC164B65A1599B535666B6) == 0x000008, "Member 'FSModelConfig::蓝图_164_769F290B4EFC164B65A1599B535666B6' has a wrong offset!");
 static_assert(offsetof(FSModelConfig, 网格体_168_BEB7464046E518BA05D4C799C3CC4633) == 0x000038, "Member 'FSModelConfig::网格体_168_BEB7464046E518BA05D4C799C3CC4633' has a wrong offset!");
@@ -88,6 +91,7 @@ static_assert(offsetof(FSModelConfig, 特效替换表_204_A2EA47D943B31ED94A4BA0
 static_assert(offsetof(FSModelConfig, 蒙太奇替换表_207_9CC9815B4071F7C6F225B0ABCAB34DE9) == 0x0003E0, "Member 'FSModelConfig::蒙太奇替换表_207_9CC9815B4071F7C6F225B0ABCAB34DE9' has a wrong offset!");
 static_assert(offsetof(FSModelConfig, 声骸掉落替换模型_210_C07454AB4CE78EE2B04E7D8DD3993DE5) == 0x000410, "Member 'FSModelConfig::声骸掉落替换模型_210_C07454AB4CE78EE2B04E7D8DD3993DE5' has a wrong offset!");
 static_assert(offsetof(FSModelConfig, 隐藏葫芦_212_EBF381B54DCE7B33C345A9B8188CE99E) == 0x000440, "Member 'FSModelConfig::隐藏葫芦_212_EBF381B54DCE7B33C345A9B8188CE99E' has a wrong offset!");
+static_assert(offsetof(FSModelConfig, UiModelDecorationArray_219_69CDBE4941E99643335E1B894A99EA66) == 0x000448, "Member 'FSModelConfig::UiModelDecorationArray_219_69CDBE4941E99643335E1B894A99EA66' has a wrong offset!");
 
 }
 

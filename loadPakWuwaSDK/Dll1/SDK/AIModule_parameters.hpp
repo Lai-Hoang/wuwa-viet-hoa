@@ -11,28 +11,121 @@
 #include "Basic.hpp"
 
 #include "GameplayTasks_structs.hpp"
-#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "AIModule_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
-// 0x0008 (0x0008 - 0x0000)
-struct AIAsyncTaskBlueprintProxy_OnMoveCompleted final
+// Function AIModule.AIPerceptionComponent.GetActorsPerception
+// 0x0030 (0x0030 - 0x0000)
+struct AIPerceptionComponent_GetActorsPerception final
 {
 public:
-	struct FAIRequestID                           RequestID;                                         // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPathFollowingResult                          MovementResult;                                    // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FActorPerceptionBlueprintInfo          Info;                                              // 0x0008(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(AIAsyncTaskBlueprintProxy_OnMoveCompleted) == 0x000004, "Wrong alignment on AIAsyncTaskBlueprintProxy_OnMoveCompleted");
-static_assert(sizeof(AIAsyncTaskBlueprintProxy_OnMoveCompleted) == 0x000008, "Wrong size on AIAsyncTaskBlueprintProxy_OnMoveCompleted");
-static_assert(offsetof(AIAsyncTaskBlueprintProxy_OnMoveCompleted, RequestID) == 0x000000, "Member 'AIAsyncTaskBlueprintProxy_OnMoveCompleted::RequestID' has a wrong offset!");
-static_assert(offsetof(AIAsyncTaskBlueprintProxy_OnMoveCompleted, MovementResult) == 0x000004, "Member 'AIAsyncTaskBlueprintProxy_OnMoveCompleted::MovementResult' has a wrong offset!");
+static_assert(alignof(AIPerceptionComponent_GetActorsPerception) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetActorsPerception");
+static_assert(sizeof(AIPerceptionComponent_GetActorsPerception) == 0x000030, "Wrong size on AIPerceptionComponent_GetActorsPerception");
+static_assert(offsetof(AIPerceptionComponent_GetActorsPerception, Actor) == 0x000000, "Member 'AIPerceptionComponent_GetActorsPerception::Actor' has a wrong offset!");
+static_assert(offsetof(AIPerceptionComponent_GetActorsPerception, Info) == 0x000008, "Member 'AIPerceptionComponent_GetActorsPerception::Info' has a wrong offset!");
+static_assert(offsetof(AIPerceptionComponent_GetActorsPerception, ReturnValue) == 0x000028, "Member 'AIPerceptionComponent_GetActorsPerception::ReturnValue' has a wrong offset!");
+
+// Function AIModule.AIPerceptionComponent.OnOwnerEndPlay
+// 0x0010 (0x0010 - 0x0000)
+struct AIPerceptionComponent_OnOwnerEndPlay final
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEndPlayReason                                EndPlayReason;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AIPerceptionComponent_OnOwnerEndPlay) == 0x000008, "Wrong alignment on AIPerceptionComponent_OnOwnerEndPlay");
+static_assert(sizeof(AIPerceptionComponent_OnOwnerEndPlay) == 0x000010, "Wrong size on AIPerceptionComponent_OnOwnerEndPlay");
+static_assert(offsetof(AIPerceptionComponent_OnOwnerEndPlay, Actor) == 0x000000, "Member 'AIPerceptionComponent_OnOwnerEndPlay::Actor' has a wrong offset!");
+static_assert(offsetof(AIPerceptionComponent_OnOwnerEndPlay, EndPlayReason) == 0x000008, "Member 'AIPerceptionComponent_OnOwnerEndPlay::EndPlayReason' has a wrong offset!");
+
+// Function AIModule.AIPerceptionComponent.SetSenseEnabled
+// 0x0010 (0x0010 - 0x0000)
+struct AIPerceptionComponent_SetSenseEnabled final
+{
+public:
+	TSubclassOf<class UAISense>                   SenseClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnable;                                           // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(AIPerceptionComponent_SetSenseEnabled) == 0x000008, "Wrong alignment on AIPerceptionComponent_SetSenseEnabled");
+static_assert(sizeof(AIPerceptionComponent_SetSenseEnabled) == 0x000010, "Wrong size on AIPerceptionComponent_SetSenseEnabled");
+static_assert(offsetof(AIPerceptionComponent_SetSenseEnabled, SenseClass) == 0x000000, "Member 'AIPerceptionComponent_SetSenseEnabled::SenseClass' has a wrong offset!");
+static_assert(offsetof(AIPerceptionComponent_SetSenseEnabled, bEnable) == 0x000008, "Member 'AIPerceptionComponent_SetSenseEnabled::bEnable' has a wrong offset!");
+
+// Function AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors
+// 0x0018 (0x0018 - 0x0000)
+struct AIPerceptionComponent_GetCurrentlyPerceivedActors final
+{
+public:
+	TSubclassOf<class UAISense>                   SenseToUse;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         OutActors;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AIPerceptionComponent_GetCurrentlyPerceivedActors) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetCurrentlyPerceivedActors");
+static_assert(sizeof(AIPerceptionComponent_GetCurrentlyPerceivedActors) == 0x000018, "Wrong size on AIPerceptionComponent_GetCurrentlyPerceivedActors");
+static_assert(offsetof(AIPerceptionComponent_GetCurrentlyPerceivedActors, SenseToUse) == 0x000000, "Member 'AIPerceptionComponent_GetCurrentlyPerceivedActors::SenseToUse' has a wrong offset!");
+static_assert(offsetof(AIPerceptionComponent_GetCurrentlyPerceivedActors, OutActors) == 0x000008, "Member 'AIPerceptionComponent_GetCurrentlyPerceivedActors::OutActors' has a wrong offset!");
+
+// Function AIModule.AIPerceptionComponent.GetKnownPerceivedActors
+// 0x0018 (0x0018 - 0x0000)
+struct AIPerceptionComponent_GetKnownPerceivedActors final
+{
+public:
+	TSubclassOf<class UAISense>                   SenseToUse;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         OutActors;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AIPerceptionComponent_GetKnownPerceivedActors) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetKnownPerceivedActors");
+static_assert(sizeof(AIPerceptionComponent_GetKnownPerceivedActors) == 0x000018, "Wrong size on AIPerceptionComponent_GetKnownPerceivedActors");
+static_assert(offsetof(AIPerceptionComponent_GetKnownPerceivedActors, SenseToUse) == 0x000000, "Member 'AIPerceptionComponent_GetKnownPerceivedActors::SenseToUse' has a wrong offset!");
+static_assert(offsetof(AIPerceptionComponent_GetKnownPerceivedActors, OutActors) == 0x000008, "Member 'AIPerceptionComponent_GetKnownPerceivedActors::OutActors' has a wrong offset!");
+
+// Function AIModule.AIPerceptionComponent.GetPerceivedActors
+// 0x0018 (0x0018 - 0x0000)
+struct AIPerceptionComponent_GetPerceivedActors final
+{
+public:
+	TSubclassOf<class UAISense>                   SenseToUse;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         OutActors;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AIPerceptionComponent_GetPerceivedActors) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetPerceivedActors");
+static_assert(sizeof(AIPerceptionComponent_GetPerceivedActors) == 0x000018, "Wrong size on AIPerceptionComponent_GetPerceivedActors");
+static_assert(offsetof(AIPerceptionComponent_GetPerceivedActors, SenseToUse) == 0x000000, "Member 'AIPerceptionComponent_GetPerceivedActors::SenseToUse' has a wrong offset!");
+static_assert(offsetof(AIPerceptionComponent_GetPerceivedActors, OutActors) == 0x000008, "Member 'AIPerceptionComponent_GetPerceivedActors::OutActors' has a wrong offset!");
+
+// Function AIModule.AIPerceptionComponent.GetPerceivedHostileActors
+// 0x0010 (0x0010 - 0x0000)
+struct AIPerceptionComponent_GetPerceivedHostileActors final
+{
+public:
+	TArray<class AActor*>                         OutActors;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AIPerceptionComponent_GetPerceivedHostileActors) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetPerceivedHostileActors");
+static_assert(sizeof(AIPerceptionComponent_GetPerceivedHostileActors) == 0x000010, "Wrong size on AIPerceptionComponent_GetPerceivedHostileActors");
+static_assert(offsetof(AIPerceptionComponent_GetPerceivedHostileActors, OutActors) == 0x000000, "Member 'AIPerceptionComponent_GetPerceivedHostileActors::OutActors' has a wrong offset!");
+
+// Function AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense
+// 0x0018 (0x0018 - 0x0000)
+struct AIPerceptionComponent_GetPerceivedHostileActorsBySense final
+{
+public:
+	TSubclassOf<class UAISense>                   SenseToUse;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class AActor*>                         OutActors;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AIPerceptionComponent_GetPerceivedHostileActorsBySense) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetPerceivedHostileActorsBySense");
+static_assert(sizeof(AIPerceptionComponent_GetPerceivedHostileActorsBySense) == 0x000018, "Wrong size on AIPerceptionComponent_GetPerceivedHostileActorsBySense");
+static_assert(offsetof(AIPerceptionComponent_GetPerceivedHostileActorsBySense, SenseToUse) == 0x000000, "Member 'AIPerceptionComponent_GetPerceivedHostileActorsBySense::SenseToUse' has a wrong offset!");
+static_assert(offsetof(AIPerceptionComponent_GetPerceivedHostileActorsBySense, OutActors) == 0x000008, "Member 'AIPerceptionComponent_GetPerceivedHostileActorsBySense::OutActors' has a wrong offset!");
 
 // Function AIModule.AIController.ClaimTaskResource
 // 0x0008 (0x0008 - 0x0000)
@@ -303,28 +396,6 @@ static_assert(alignof(AIController_HasPartialPath) == 0x000001, "Wrong alignment
 static_assert(sizeof(AIController_HasPartialPath) == 0x000001, "Wrong size on AIController_HasPartialPath");
 static_assert(offsetof(AIController_HasPartialPath, ReturnValue) == 0x000000, "Member 'AIController_HasPartialPath::ReturnValue' has a wrong offset!");
 
-// Function AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense
-// 0x0008 (0x0008 - 0x0000)
-struct AIPerceptionStimuliSourceComponent_RegisterForSense final
-{
-public:
-	TSubclassOf<class UAISense>                   SenseClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AIPerceptionStimuliSourceComponent_RegisterForSense) == 0x000008, "Wrong alignment on AIPerceptionStimuliSourceComponent_RegisterForSense");
-static_assert(sizeof(AIPerceptionStimuliSourceComponent_RegisterForSense) == 0x000008, "Wrong size on AIPerceptionStimuliSourceComponent_RegisterForSense");
-static_assert(offsetof(AIPerceptionStimuliSourceComponent_RegisterForSense, SenseClass) == 0x000000, "Member 'AIPerceptionStimuliSourceComponent_RegisterForSense::SenseClass' has a wrong offset!");
-
-// Function AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense
-// 0x0008 (0x0008 - 0x0000)
-struct AIPerceptionStimuliSourceComponent_UnregisterFromSense final
-{
-public:
-	TSubclassOf<class UAISense>                   SenseClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AIPerceptionStimuliSourceComponent_UnregisterFromSense) == 0x000008, "Wrong alignment on AIPerceptionStimuliSourceComponent_UnregisterFromSense");
-static_assert(sizeof(AIPerceptionStimuliSourceComponent_UnregisterFromSense) == 0x000008, "Wrong size on AIPerceptionStimuliSourceComponent_UnregisterFromSense");
-static_assert(offsetof(AIPerceptionStimuliSourceComponent_UnregisterFromSense, SenseClass) == 0x000000, "Member 'AIPerceptionStimuliSourceComponent_UnregisterFromSense::SenseClass' has a wrong offset!");
-
 // Function AIModule.AIBlueprintHelperLibrary.CreateMoveToProxyObject
 // 0x0038 (0x0038 - 0x0000)
 struct AIBlueprintHelperLibrary_CreateMoveToProxyObject final
@@ -589,162 +660,62 @@ static_assert(offsetof(AIBlueprintHelperLibrary_UnlockAIResourcesWithAnimation, 
 static_assert(offsetof(AIBlueprintHelperLibrary_UnlockAIResourcesWithAnimation, bUnlockMovement) == 0x000008, "Member 'AIBlueprintHelperLibrary_UnlockAIResourcesWithAnimation::bUnlockMovement' has a wrong offset!");
 static_assert(offsetof(AIBlueprintHelperLibrary_UnlockAIResourcesWithAnimation, UnlockAILogic) == 0x000009, "Member 'AIBlueprintHelperLibrary_UnlockAIResourcesWithAnimation::UnlockAILogic' has a wrong offset!");
 
-// Function AIModule.AIPerceptionComponent.GetActorsPerception
+// Function AIModule.AISense_Hearing.ReportNoiseEvent
 // 0x0030 (0x0030 - 0x0000)
-struct AIPerceptionComponent_GetActorsPerception final
+struct AISense_Hearing_ReportNoiseEvent final
 {
 public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FActorPerceptionBlueprintInfo          Info;                                              // 0x0008(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                NoiseLocation;                                     // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Loudness;                                          // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 Instigator;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxRange;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   Tag;                                               // 0x0024(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(AIPerceptionComponent_GetActorsPerception) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetActorsPerception");
-static_assert(sizeof(AIPerceptionComponent_GetActorsPerception) == 0x000030, "Wrong size on AIPerceptionComponent_GetActorsPerception");
-static_assert(offsetof(AIPerceptionComponent_GetActorsPerception, Actor) == 0x000000, "Member 'AIPerceptionComponent_GetActorsPerception::Actor' has a wrong offset!");
-static_assert(offsetof(AIPerceptionComponent_GetActorsPerception, Info) == 0x000008, "Member 'AIPerceptionComponent_GetActorsPerception::Info' has a wrong offset!");
-static_assert(offsetof(AIPerceptionComponent_GetActorsPerception, ReturnValue) == 0x000028, "Member 'AIPerceptionComponent_GetActorsPerception::ReturnValue' has a wrong offset!");
+static_assert(alignof(AISense_Hearing_ReportNoiseEvent) == 0x000008, "Wrong alignment on AISense_Hearing_ReportNoiseEvent");
+static_assert(sizeof(AISense_Hearing_ReportNoiseEvent) == 0x000030, "Wrong size on AISense_Hearing_ReportNoiseEvent");
+static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, WorldContextObject) == 0x000000, "Member 'AISense_Hearing_ReportNoiseEvent::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, NoiseLocation) == 0x000008, "Member 'AISense_Hearing_ReportNoiseEvent::NoiseLocation' has a wrong offset!");
+static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, Loudness) == 0x000014, "Member 'AISense_Hearing_ReportNoiseEvent::Loudness' has a wrong offset!");
+static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, Instigator) == 0x000018, "Member 'AISense_Hearing_ReportNoiseEvent::Instigator' has a wrong offset!");
+static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, MaxRange) == 0x000020, "Member 'AISense_Hearing_ReportNoiseEvent::MaxRange' has a wrong offset!");
+static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, Tag) == 0x000024, "Member 'AISense_Hearing_ReportNoiseEvent::Tag' has a wrong offset!");
 
-// Function AIModule.AIPerceptionComponent.OnOwnerEndPlay
-// 0x0010 (0x0010 - 0x0000)
-struct AIPerceptionComponent_OnOwnerEndPlay final
+// Function AIModule.AIAsyncTaskBlueprintProxy.OnMoveCompleted
+// 0x0008 (0x0008 - 0x0000)
+struct AIAsyncTaskBlueprintProxy_OnMoveCompleted final
 {
 public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEndPlayReason                                EndPlayReason;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FAIRequestID                           RequestID;                                         // 0x0000(0x0004)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPathFollowingResult                          MovementResult;                                    // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_5[0x3];                                        // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(AIPerceptionComponent_OnOwnerEndPlay) == 0x000008, "Wrong alignment on AIPerceptionComponent_OnOwnerEndPlay");
-static_assert(sizeof(AIPerceptionComponent_OnOwnerEndPlay) == 0x000010, "Wrong size on AIPerceptionComponent_OnOwnerEndPlay");
-static_assert(offsetof(AIPerceptionComponent_OnOwnerEndPlay, Actor) == 0x000000, "Member 'AIPerceptionComponent_OnOwnerEndPlay::Actor' has a wrong offset!");
-static_assert(offsetof(AIPerceptionComponent_OnOwnerEndPlay, EndPlayReason) == 0x000008, "Member 'AIPerceptionComponent_OnOwnerEndPlay::EndPlayReason' has a wrong offset!");
+static_assert(alignof(AIAsyncTaskBlueprintProxy_OnMoveCompleted) == 0x000004, "Wrong alignment on AIAsyncTaskBlueprintProxy_OnMoveCompleted");
+static_assert(sizeof(AIAsyncTaskBlueprintProxy_OnMoveCompleted) == 0x000008, "Wrong size on AIAsyncTaskBlueprintProxy_OnMoveCompleted");
+static_assert(offsetof(AIAsyncTaskBlueprintProxy_OnMoveCompleted, RequestID) == 0x000000, "Member 'AIAsyncTaskBlueprintProxy_OnMoveCompleted::RequestID' has a wrong offset!");
+static_assert(offsetof(AIAsyncTaskBlueprintProxy_OnMoveCompleted, MovementResult) == 0x000004, "Member 'AIAsyncTaskBlueprintProxy_OnMoveCompleted::MovementResult' has a wrong offset!");
 
-// Function AIModule.AIPerceptionComponent.SetSenseEnabled
-// 0x0010 (0x0010 - 0x0000)
-struct AIPerceptionComponent_SetSenseEnabled final
+// Function AIModule.AIPerceptionStimuliSourceComponent.RegisterForSense
+// 0x0008 (0x0008 - 0x0000)
+struct AIPerceptionStimuliSourceComponent_RegisterForSense final
 {
 public:
 	TSubclassOf<class UAISense>                   SenseClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnable;                                           // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(AIPerceptionComponent_SetSenseEnabled) == 0x000008, "Wrong alignment on AIPerceptionComponent_SetSenseEnabled");
-static_assert(sizeof(AIPerceptionComponent_SetSenseEnabled) == 0x000010, "Wrong size on AIPerceptionComponent_SetSenseEnabled");
-static_assert(offsetof(AIPerceptionComponent_SetSenseEnabled, SenseClass) == 0x000000, "Member 'AIPerceptionComponent_SetSenseEnabled::SenseClass' has a wrong offset!");
-static_assert(offsetof(AIPerceptionComponent_SetSenseEnabled, bEnable) == 0x000008, "Member 'AIPerceptionComponent_SetSenseEnabled::bEnable' has a wrong offset!");
+static_assert(alignof(AIPerceptionStimuliSourceComponent_RegisterForSense) == 0x000008, "Wrong alignment on AIPerceptionStimuliSourceComponent_RegisterForSense");
+static_assert(sizeof(AIPerceptionStimuliSourceComponent_RegisterForSense) == 0x000008, "Wrong size on AIPerceptionStimuliSourceComponent_RegisterForSense");
+static_assert(offsetof(AIPerceptionStimuliSourceComponent_RegisterForSense, SenseClass) == 0x000000, "Member 'AIPerceptionStimuliSourceComponent_RegisterForSense::SenseClass' has a wrong offset!");
 
-// Function AIModule.AIPerceptionComponent.GetCurrentlyPerceivedActors
-// 0x0018 (0x0018 - 0x0000)
-struct AIPerceptionComponent_GetCurrentlyPerceivedActors final
-{
-public:
-	TSubclassOf<class UAISense>                   SenseToUse;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         OutActors;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AIPerceptionComponent_GetCurrentlyPerceivedActors) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetCurrentlyPerceivedActors");
-static_assert(sizeof(AIPerceptionComponent_GetCurrentlyPerceivedActors) == 0x000018, "Wrong size on AIPerceptionComponent_GetCurrentlyPerceivedActors");
-static_assert(offsetof(AIPerceptionComponent_GetCurrentlyPerceivedActors, SenseToUse) == 0x000000, "Member 'AIPerceptionComponent_GetCurrentlyPerceivedActors::SenseToUse' has a wrong offset!");
-static_assert(offsetof(AIPerceptionComponent_GetCurrentlyPerceivedActors, OutActors) == 0x000008, "Member 'AIPerceptionComponent_GetCurrentlyPerceivedActors::OutActors' has a wrong offset!");
-
-// Function AIModule.AIPerceptionComponent.GetKnownPerceivedActors
-// 0x0018 (0x0018 - 0x0000)
-struct AIPerceptionComponent_GetKnownPerceivedActors final
-{
-public:
-	TSubclassOf<class UAISense>                   SenseToUse;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         OutActors;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AIPerceptionComponent_GetKnownPerceivedActors) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetKnownPerceivedActors");
-static_assert(sizeof(AIPerceptionComponent_GetKnownPerceivedActors) == 0x000018, "Wrong size on AIPerceptionComponent_GetKnownPerceivedActors");
-static_assert(offsetof(AIPerceptionComponent_GetKnownPerceivedActors, SenseToUse) == 0x000000, "Member 'AIPerceptionComponent_GetKnownPerceivedActors::SenseToUse' has a wrong offset!");
-static_assert(offsetof(AIPerceptionComponent_GetKnownPerceivedActors, OutActors) == 0x000008, "Member 'AIPerceptionComponent_GetKnownPerceivedActors::OutActors' has a wrong offset!");
-
-// Function AIModule.AIPerceptionComponent.GetPerceivedActors
-// 0x0018 (0x0018 - 0x0000)
-struct AIPerceptionComponent_GetPerceivedActors final
-{
-public:
-	TSubclassOf<class UAISense>                   SenseToUse;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         OutActors;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AIPerceptionComponent_GetPerceivedActors) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetPerceivedActors");
-static_assert(sizeof(AIPerceptionComponent_GetPerceivedActors) == 0x000018, "Wrong size on AIPerceptionComponent_GetPerceivedActors");
-static_assert(offsetof(AIPerceptionComponent_GetPerceivedActors, SenseToUse) == 0x000000, "Member 'AIPerceptionComponent_GetPerceivedActors::SenseToUse' has a wrong offset!");
-static_assert(offsetof(AIPerceptionComponent_GetPerceivedActors, OutActors) == 0x000008, "Member 'AIPerceptionComponent_GetPerceivedActors::OutActors' has a wrong offset!");
-
-// Function AIModule.AIPerceptionComponent.GetPerceivedHostileActors
-// 0x0010 (0x0010 - 0x0000)
-struct AIPerceptionComponent_GetPerceivedHostileActors final
-{
-public:
-	TArray<class AActor*>                         OutActors;                                         // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AIPerceptionComponent_GetPerceivedHostileActors) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetPerceivedHostileActors");
-static_assert(sizeof(AIPerceptionComponent_GetPerceivedHostileActors) == 0x000010, "Wrong size on AIPerceptionComponent_GetPerceivedHostileActors");
-static_assert(offsetof(AIPerceptionComponent_GetPerceivedHostileActors, OutActors) == 0x000000, "Member 'AIPerceptionComponent_GetPerceivedHostileActors::OutActors' has a wrong offset!");
-
-// Function AIModule.AIPerceptionComponent.GetPerceivedHostileActorsBySense
-// 0x0018 (0x0018 - 0x0000)
-struct AIPerceptionComponent_GetPerceivedHostileActorsBySense final
-{
-public:
-	TSubclassOf<class UAISense>                   SenseToUse;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class AActor*>                         OutActors;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AIPerceptionComponent_GetPerceivedHostileActorsBySense) == 0x000008, "Wrong alignment on AIPerceptionComponent_GetPerceivedHostileActorsBySense");
-static_assert(sizeof(AIPerceptionComponent_GetPerceivedHostileActorsBySense) == 0x000018, "Wrong size on AIPerceptionComponent_GetPerceivedHostileActorsBySense");
-static_assert(offsetof(AIPerceptionComponent_GetPerceivedHostileActorsBySense, SenseToUse) == 0x000000, "Member 'AIPerceptionComponent_GetPerceivedHostileActorsBySense::SenseToUse' has a wrong offset!");
-static_assert(offsetof(AIPerceptionComponent_GetPerceivedHostileActorsBySense, OutActors) == 0x000008, "Member 'AIPerceptionComponent_GetPerceivedHostileActorsBySense::OutActors' has a wrong offset!");
-
-// Function AIModule.PathFollowingComponent.OnActorBump
-// 0x00B0 (0x00B0 - 0x0000)
-struct PathFollowingComponent_OnActorBump final
-{
-public:
-	class AActor*                                 SelfActor;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                NormalImpulse;                                     // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FHitResult                             Hit;                                               // 0x001C(0x0094)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PathFollowingComponent_OnActorBump) == 0x000008, "Wrong alignment on PathFollowingComponent_OnActorBump");
-static_assert(sizeof(PathFollowingComponent_OnActorBump) == 0x0000B0, "Wrong size on PathFollowingComponent_OnActorBump");
-static_assert(offsetof(PathFollowingComponent_OnActorBump, SelfActor) == 0x000000, "Member 'PathFollowingComponent_OnActorBump::SelfActor' has a wrong offset!");
-static_assert(offsetof(PathFollowingComponent_OnActorBump, OtherActor) == 0x000008, "Member 'PathFollowingComponent_OnActorBump::OtherActor' has a wrong offset!");
-static_assert(offsetof(PathFollowingComponent_OnActorBump, NormalImpulse) == 0x000010, "Member 'PathFollowingComponent_OnActorBump::NormalImpulse' has a wrong offset!");
-static_assert(offsetof(PathFollowingComponent_OnActorBump, Hit) == 0x00001C, "Member 'PathFollowingComponent_OnActorBump::Hit' has a wrong offset!");
-
-// Function AIModule.PathFollowingComponent.OnNavDataRegistered
+// Function AIModule.AIPerceptionStimuliSourceComponent.UnregisterFromSense
 // 0x0008 (0x0008 - 0x0000)
-struct PathFollowingComponent_OnNavDataRegistered final
+struct AIPerceptionStimuliSourceComponent_UnregisterFromSense final
 {
 public:
-	class ANavigationData*                        NavData;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UAISense>                   SenseClass;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(PathFollowingComponent_OnNavDataRegistered) == 0x000008, "Wrong alignment on PathFollowingComponent_OnNavDataRegistered");
-static_assert(sizeof(PathFollowingComponent_OnNavDataRegistered) == 0x000008, "Wrong size on PathFollowingComponent_OnNavDataRegistered");
-static_assert(offsetof(PathFollowingComponent_OnNavDataRegistered, NavData) == 0x000000, "Member 'PathFollowingComponent_OnNavDataRegistered::NavData' has a wrong offset!");
-
-// Function AIModule.PathFollowingComponent.GetPathActionType
-// 0x0001 (0x0001 - 0x0000)
-struct PathFollowingComponent_GetPathActionType final
-{
-public:
-	EPathFollowingAction                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PathFollowingComponent_GetPathActionType) == 0x000001, "Wrong alignment on PathFollowingComponent_GetPathActionType");
-static_assert(sizeof(PathFollowingComponent_GetPathActionType) == 0x000001, "Wrong size on PathFollowingComponent_GetPathActionType");
-static_assert(offsetof(PathFollowingComponent_GetPathActionType, ReturnValue) == 0x000000, "Member 'PathFollowingComponent_GetPathActionType::ReturnValue' has a wrong offset!");
-
-// Function AIModule.PathFollowingComponent.GetPathDestination
-// 0x000C (0x000C - 0x0000)
-struct PathFollowingComponent_GetPathDestination final
-{
-public:
-	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PathFollowingComponent_GetPathDestination) == 0x000004, "Wrong alignment on PathFollowingComponent_GetPathDestination");
-static_assert(sizeof(PathFollowingComponent_GetPathDestination) == 0x00000C, "Wrong size on PathFollowingComponent_GetPathDestination");
-static_assert(offsetof(PathFollowingComponent_GetPathDestination, ReturnValue) == 0x000000, "Member 'PathFollowingComponent_GetPathDestination::ReturnValue' has a wrong offset!");
+static_assert(alignof(AIPerceptionStimuliSourceComponent_UnregisterFromSense) == 0x000008, "Wrong alignment on AIPerceptionStimuliSourceComponent_UnregisterFromSense");
+static_assert(sizeof(AIPerceptionStimuliSourceComponent_UnregisterFromSense) == 0x000008, "Wrong size on AIPerceptionStimuliSourceComponent_UnregisterFromSense");
+static_assert(offsetof(AIPerceptionStimuliSourceComponent_UnregisterFromSense, SenseClass) == 0x000000, "Member 'AIPerceptionStimuliSourceComponent_UnregisterFromSense::SenseClass' has a wrong offset!");
 
 // Function AIModule.AIPerceptionSystem.GetSenseClassForStimulus
 // 0x0058 (0x0058 - 0x0000)
@@ -817,6 +788,28 @@ public:
 static_assert(alignof(AIPerceptionSystem_ReportEvent) == 0x000008, "Wrong alignment on AIPerceptionSystem_ReportEvent");
 static_assert(sizeof(AIPerceptionSystem_ReportEvent) == 0x000008, "Wrong size on AIPerceptionSystem_ReportEvent");
 static_assert(offsetof(AIPerceptionSystem_ReportEvent, PerceptionEvent) == 0x000000, "Member 'AIPerceptionSystem_ReportEvent::PerceptionEvent' has a wrong offset!");
+
+// Function AIModule.EnvQueryManager.RunEQSQuery
+// 0x0030 (0x0030 - 0x0000)
+struct EnvQueryManager_RunEQSQuery final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEnvQuery*                              QueryTemplate;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                Querier;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEnvQueryRunMode                              RunMode;                                           // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UEnvQueryInstanceBlueprintWrapper> WrapperClass;                               // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEnvQueryInstanceBlueprintWrapper*      ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnvQueryManager_RunEQSQuery) == 0x000008, "Wrong alignment on EnvQueryManager_RunEQSQuery");
+static_assert(sizeof(EnvQueryManager_RunEQSQuery) == 0x000030, "Wrong size on EnvQueryManager_RunEQSQuery");
+static_assert(offsetof(EnvQueryManager_RunEQSQuery, WorldContextObject) == 0x000000, "Member 'EnvQueryManager_RunEQSQuery::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(EnvQueryManager_RunEQSQuery, QueryTemplate) == 0x000008, "Member 'EnvQueryManager_RunEQSQuery::QueryTemplate' has a wrong offset!");
+static_assert(offsetof(EnvQueryManager_RunEQSQuery, Querier) == 0x000010, "Member 'EnvQueryManager_RunEQSQuery::Querier' has a wrong offset!");
+static_assert(offsetof(EnvQueryManager_RunEQSQuery, RunMode) == 0x000018, "Member 'EnvQueryManager_RunEQSQuery::RunMode' has a wrong offset!");
+static_assert(offsetof(EnvQueryManager_RunEQSQuery, WrapperClass) == 0x000020, "Member 'EnvQueryManager_RunEQSQuery::WrapperClass' has a wrong offset!");
+static_assert(offsetof(EnvQueryManager_RunEQSQuery, ReturnValue) == 0x000028, "Member 'EnvQueryManager_RunEQSQuery::ReturnValue' has a wrong offset!");
 
 // Function AIModule.AISense_Blueprint.K2_OnNewPawn
 // 0x0008 (0x0008 - 0x0000)
@@ -926,27 +919,6 @@ static_assert(offsetof(AISense_Damage_ReportDamageEvent, DamageAmount) == 0x0000
 static_assert(offsetof(AISense_Damage_ReportDamageEvent, EventLocation) == 0x00001C, "Member 'AISense_Damage_ReportDamageEvent::EventLocation' has a wrong offset!");
 static_assert(offsetof(AISense_Damage_ReportDamageEvent, HitLocation) == 0x000028, "Member 'AISense_Damage_ReportDamageEvent::HitLocation' has a wrong offset!");
 
-// Function AIModule.AISense_Hearing.ReportNoiseEvent
-// 0x0030 (0x0030 - 0x0000)
-struct AISense_Hearing_ReportNoiseEvent final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                NoiseLocation;                                     // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Loudness;                                          // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class AActor*                                 Instigator;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxRange;                                          // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   Tag;                                               // 0x0024(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AISense_Hearing_ReportNoiseEvent) == 0x000008, "Wrong alignment on AISense_Hearing_ReportNoiseEvent");
-static_assert(sizeof(AISense_Hearing_ReportNoiseEvent) == 0x000030, "Wrong size on AISense_Hearing_ReportNoiseEvent");
-static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, WorldContextObject) == 0x000000, "Member 'AISense_Hearing_ReportNoiseEvent::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, NoiseLocation) == 0x000008, "Member 'AISense_Hearing_ReportNoiseEvent::NoiseLocation' has a wrong offset!");
-static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, Loudness) == 0x000014, "Member 'AISense_Hearing_ReportNoiseEvent::Loudness' has a wrong offset!");
-static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, Instigator) == 0x000018, "Member 'AISense_Hearing_ReportNoiseEvent::Instigator' has a wrong offset!");
-static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, MaxRange) == 0x000020, "Member 'AISense_Hearing_ReportNoiseEvent::MaxRange' has a wrong offset!");
-static_assert(offsetof(AISense_Hearing_ReportNoiseEvent, Tag) == 0x000024, "Member 'AISense_Hearing_ReportNoiseEvent::Tag' has a wrong offset!");
-
 // Function AIModule.AISense_Prediction.RequestControllerPredictionEvent
 // 0x0018 (0x0018 - 0x0000)
 struct AISense_Prediction_RequestControllerPredictionEvent final
@@ -978,152 +950,6 @@ static_assert(sizeof(AISense_Prediction_RequestPawnPredictionEvent) == 0x000018,
 static_assert(offsetof(AISense_Prediction_RequestPawnPredictionEvent, Requestor) == 0x000000, "Member 'AISense_Prediction_RequestPawnPredictionEvent::Requestor' has a wrong offset!");
 static_assert(offsetof(AISense_Prediction_RequestPawnPredictionEvent, PredictedActor) == 0x000008, "Member 'AISense_Prediction_RequestPawnPredictionEvent::PredictedActor' has a wrong offset!");
 static_assert(offsetof(AISense_Prediction_RequestPawnPredictionEvent, PredictionTime) == 0x000010, "Member 'AISense_Prediction_RequestPawnPredictionEvent::PredictionTime' has a wrong offset!");
-
-// Function AIModule.PawnAction.CreateActionInstance
-// 0x0018 (0x0018 - 0x0000)
-struct PawnAction_CreateActionInstance final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UPawnAction>                ActionClass;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UPawnAction*                            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PawnAction_CreateActionInstance) == 0x000008, "Wrong alignment on PawnAction_CreateActionInstance");
-static_assert(sizeof(PawnAction_CreateActionInstance) == 0x000018, "Wrong size on PawnAction_CreateActionInstance");
-static_assert(offsetof(PawnAction_CreateActionInstance, WorldContextObject) == 0x000000, "Member 'PawnAction_CreateActionInstance::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(PawnAction_CreateActionInstance, ActionClass) == 0x000008, "Member 'PawnAction_CreateActionInstance::ActionClass' has a wrong offset!");
-static_assert(offsetof(PawnAction_CreateActionInstance, ReturnValue) == 0x000010, "Member 'PawnAction_CreateActionInstance::ReturnValue' has a wrong offset!");
-
-// Function AIModule.PawnAction.Finish
-// 0x0001 (0x0001 - 0x0000)
-struct PawnAction_Finish final
-{
-public:
-	EPawnActionResult                             WithResult;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PawnAction_Finish) == 0x000001, "Wrong alignment on PawnAction_Finish");
-static_assert(sizeof(PawnAction_Finish) == 0x000001, "Wrong size on PawnAction_Finish");
-static_assert(offsetof(PawnAction_Finish, WithResult) == 0x000000, "Member 'PawnAction_Finish::WithResult' has a wrong offset!");
-
-// Function AIModule.PawnAction.GetActionPriority
-// 0x0001 (0x0001 - 0x0000)
-struct PawnAction_GetActionPriority final
-{
-public:
-	EAIRequestPriority                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PawnAction_GetActionPriority) == 0x000001, "Wrong alignment on PawnAction_GetActionPriority");
-static_assert(sizeof(PawnAction_GetActionPriority) == 0x000001, "Wrong size on PawnAction_GetActionPriority");
-static_assert(offsetof(PawnAction_GetActionPriority, ReturnValue) == 0x000000, "Member 'PawnAction_GetActionPriority::ReturnValue' has a wrong offset!");
-
-// Function AIModule.PawnAction_BlueprintBase.ActionFinished
-// 0x0010 (0x0010 - 0x0000)
-struct PawnAction_BlueprintBase_ActionFinished final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EPawnActionResult                             WithResult;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PawnAction_BlueprintBase_ActionFinished) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionFinished");
-static_assert(sizeof(PawnAction_BlueprintBase_ActionFinished) == 0x000010, "Wrong size on PawnAction_BlueprintBase_ActionFinished");
-static_assert(offsetof(PawnAction_BlueprintBase_ActionFinished, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionFinished::ControlledPawn' has a wrong offset!");
-static_assert(offsetof(PawnAction_BlueprintBase_ActionFinished, WithResult) == 0x000008, "Member 'PawnAction_BlueprintBase_ActionFinished::WithResult' has a wrong offset!");
-
-// Function AIModule.PawnAction_BlueprintBase.ActionPause
-// 0x0008 (0x0008 - 0x0000)
-struct PawnAction_BlueprintBase_ActionPause final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PawnAction_BlueprintBase_ActionPause) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionPause");
-static_assert(sizeof(PawnAction_BlueprintBase_ActionPause) == 0x000008, "Wrong size on PawnAction_BlueprintBase_ActionPause");
-static_assert(offsetof(PawnAction_BlueprintBase_ActionPause, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionPause::ControlledPawn' has a wrong offset!");
-
-// Function AIModule.PawnAction_BlueprintBase.ActionResume
-// 0x0008 (0x0008 - 0x0000)
-struct PawnAction_BlueprintBase_ActionResume final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PawnAction_BlueprintBase_ActionResume) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionResume");
-static_assert(sizeof(PawnAction_BlueprintBase_ActionResume) == 0x000008, "Wrong size on PawnAction_BlueprintBase_ActionResume");
-static_assert(offsetof(PawnAction_BlueprintBase_ActionResume, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionResume::ControlledPawn' has a wrong offset!");
-
-// Function AIModule.PawnAction_BlueprintBase.ActionStart
-// 0x0008 (0x0008 - 0x0000)
-struct PawnAction_BlueprintBase_ActionStart final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(PawnAction_BlueprintBase_ActionStart) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionStart");
-static_assert(sizeof(PawnAction_BlueprintBase_ActionStart) == 0x000008, "Wrong size on PawnAction_BlueprintBase_ActionStart");
-static_assert(offsetof(PawnAction_BlueprintBase_ActionStart, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionStart::ControlledPawn' has a wrong offset!");
-
-// Function AIModule.PawnAction_BlueprintBase.ActionTick
-// 0x0010 (0x0010 - 0x0000)
-struct PawnAction_BlueprintBase_ActionTick final
-{
-public:
-	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DeltaSeconds;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(PawnAction_BlueprintBase_ActionTick) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionTick");
-static_assert(sizeof(PawnAction_BlueprintBase_ActionTick) == 0x000010, "Wrong size on PawnAction_BlueprintBase_ActionTick");
-static_assert(offsetof(PawnAction_BlueprintBase_ActionTick, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionTick::ControlledPawn' has a wrong offset!");
-static_assert(offsetof(PawnAction_BlueprintBase_ActionTick, DeltaSeconds) == 0x000008, "Member 'PawnAction_BlueprintBase_ActionTick::DeltaSeconds' has a wrong offset!");
-
-// Function AIModule.AITask_MoveTo.AIMoveTo
-// 0x0038 (0x0038 - 0x0000)
-struct AITask_MoveTo_AIMoveTo final
-{
-public:
-	class AAIController*                          Controller;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                GoalLocation;                                      // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 GoalActor;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AcceptanceRadius;                                  // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAIOptionFlag                                 StopOnOverlap;                                     // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAIOptionFlag                                 AcceptPartialPath;                                 // 0x0025(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUsePathfinding;                                   // 0x0026(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLockAILogic;                                      // 0x0027(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseContinuosGoalTracking;                         // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAIOptionFlag                                 ProjectGoalOnNavigation;                           // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAITask_MoveTo*                         ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AITask_MoveTo_AIMoveTo) == 0x000008, "Wrong alignment on AITask_MoveTo_AIMoveTo");
-static_assert(sizeof(AITask_MoveTo_AIMoveTo) == 0x000038, "Wrong size on AITask_MoveTo_AIMoveTo");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, Controller) == 0x000000, "Member 'AITask_MoveTo_AIMoveTo::Controller' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, GoalLocation) == 0x000008, "Member 'AITask_MoveTo_AIMoveTo::GoalLocation' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, GoalActor) == 0x000018, "Member 'AITask_MoveTo_AIMoveTo::GoalActor' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, AcceptanceRadius) == 0x000020, "Member 'AITask_MoveTo_AIMoveTo::AcceptanceRadius' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, StopOnOverlap) == 0x000024, "Member 'AITask_MoveTo_AIMoveTo::StopOnOverlap' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, AcceptPartialPath) == 0x000025, "Member 'AITask_MoveTo_AIMoveTo::AcceptPartialPath' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, bUsePathfinding) == 0x000026, "Member 'AITask_MoveTo_AIMoveTo::bUsePathfinding' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, bLockAILogic) == 0x000027, "Member 'AITask_MoveTo_AIMoveTo::bLockAILogic' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, bUseContinuosGoalTracking) == 0x000028, "Member 'AITask_MoveTo_AIMoveTo::bUseContinuosGoalTracking' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, ProjectGoalOnNavigation) == 0x000029, "Member 'AITask_MoveTo_AIMoveTo::ProjectGoalOnNavigation' has a wrong offset!");
-static_assert(offsetof(AITask_MoveTo_AIMoveTo, ReturnValue) == 0x000030, "Member 'AITask_MoveTo_AIMoveTo::ReturnValue' has a wrong offset!");
-
-// Function AIModule.AITask_RunEQS.RunEQS
-// 0x0018 (0x0018 - 0x0000)
-struct AITask_RunEQS_RunEQS final
-{
-public:
-	class AAIController*                          Controller;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UEnvQuery*                              QueryTemplate;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAITask_RunEQS*                         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AITask_RunEQS_RunEQS) == 0x000008, "Wrong alignment on AITask_RunEQS_RunEQS");
-static_assert(sizeof(AITask_RunEQS_RunEQS) == 0x000018, "Wrong size on AITask_RunEQS_RunEQS");
-static_assert(offsetof(AITask_RunEQS_RunEQS, Controller) == 0x000000, "Member 'AITask_RunEQS_RunEQS::Controller' has a wrong offset!");
-static_assert(offsetof(AITask_RunEQS_RunEQS, QueryTemplate) == 0x000008, "Member 'AITask_RunEQS_RunEQS::QueryTemplate' has a wrong offset!");
-static_assert(offsetof(AITask_RunEQS_RunEQS, ReturnValue) == 0x000010, "Member 'AITask_RunEQS_RunEQS::ReturnValue' has a wrong offset!");
 
 // Function AIModule.BrainComponent.StopLogic
 // 0x0010 (0x0010 - 0x0000)
@@ -1157,6 +983,205 @@ public:
 static_assert(alignof(BrainComponent_IsRunning) == 0x000001, "Wrong alignment on BrainComponent_IsRunning");
 static_assert(sizeof(BrainComponent_IsRunning) == 0x000001, "Wrong size on BrainComponent_IsRunning");
 static_assert(offsetof(BrainComponent_IsRunning, ReturnValue) == 0x000000, "Member 'BrainComponent_IsRunning::ReturnValue' has a wrong offset!");
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
+// 0x0040 (0x0040 - 0x0000)
+struct NavLocalGridManager_AddLocalNavigationGridForBox final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Extent;                                            // 0x0014(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRotator                               Rotation;                                          // 0x0020(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         Radius2D;                                          // 0x002C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x0030(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRebuildGrids;                                     // 0x0034(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavLocalGridManager_AddLocalNavigationGridForBox) == 0x000008, "Wrong alignment on NavLocalGridManager_AddLocalNavigationGridForBox");
+static_assert(sizeof(NavLocalGridManager_AddLocalNavigationGridForBox) == 0x000040, "Wrong size on NavLocalGridManager_AddLocalNavigationGridForBox");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Location) == 0x000008, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Location' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Extent) == 0x000014, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Extent' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Rotation) == 0x000020, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Rotation' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Radius2D) == 0x00002C, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Radius2D' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Height) == 0x000030, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Height' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, bRebuildGrids) == 0x000034, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::bRebuildGrids' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, ReturnValue) == 0x000038, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::ReturnValue' has a wrong offset!");
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
+// 0x0030 (0x0030 - 0x0000)
+struct NavLocalGridManager_AddLocalNavigationGridForCapsule final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleRadius;                                     // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CapsuleHalfHeight;                                 // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Radius2D;                                          // 0x001C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRebuildGrids;                                     // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavLocalGridManager_AddLocalNavigationGridForCapsule) == 0x000008, "Wrong alignment on NavLocalGridManager_AddLocalNavigationGridForCapsule");
+static_assert(sizeof(NavLocalGridManager_AddLocalNavigationGridForCapsule) == 0x000030, "Wrong size on NavLocalGridManager_AddLocalNavigationGridForCapsule");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, Location) == 0x000008, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::Location' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, CapsuleRadius) == 0x000014, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::CapsuleRadius' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, CapsuleHalfHeight) == 0x000018, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::CapsuleHalfHeight' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, Radius2D) == 0x00001C, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::Radius2D' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, Height) == 0x000020, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::Height' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, bRebuildGrids) == 0x000024, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::bRebuildGrids' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, ReturnValue) == 0x000028, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::ReturnValue' has a wrong offset!");
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
+// 0x0028 (0x0028 - 0x0000)
+struct NavLocalGridManager_AddLocalNavigationGridForPoint final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Location;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Radius2D;                                          // 0x0014(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x0018(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRebuildGrids;                                     // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavLocalGridManager_AddLocalNavigationGridForPoint) == 0x000008, "Wrong alignment on NavLocalGridManager_AddLocalNavigationGridForPoint");
+static_assert(sizeof(NavLocalGridManager_AddLocalNavigationGridForPoint) == 0x000028, "Wrong size on NavLocalGridManager_AddLocalNavigationGridForPoint");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, Location) == 0x000008, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::Location' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, Radius2D) == 0x000014, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::Radius2D' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, Height) == 0x000018, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::Height' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, bRebuildGrids) == 0x00001C, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::bRebuildGrids' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, ReturnValue) == 0x000020, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::ReturnValue' has a wrong offset!");
+
+// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
+// 0x0028 (0x0028 - 0x0000)
+struct NavLocalGridManager_AddLocalNavigationGridForPoints final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        Locations;                                         // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         Radius2D;                                          // 0x0018(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x001C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRebuildGrids;                                     // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavLocalGridManager_AddLocalNavigationGridForPoints) == 0x000008, "Wrong alignment on NavLocalGridManager_AddLocalNavigationGridForPoints");
+static_assert(sizeof(NavLocalGridManager_AddLocalNavigationGridForPoints) == 0x000028, "Wrong size on NavLocalGridManager_AddLocalNavigationGridForPoints");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, Locations) == 0x000008, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::Locations' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, Radius2D) == 0x000018, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::Radius2D' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, Height) == 0x00001C, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::Height' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, bRebuildGrids) == 0x000020, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::bRebuildGrids' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, ReturnValue) == 0x000024, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::ReturnValue' has a wrong offset!");
+
+// Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath
+// 0x0038 (0x0038 - 0x0000)
+struct NavLocalGridManager_FindLocalNavigationGridPath final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Start;                                             // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                End;                                               // 0x0014(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        PathPoints;                                        // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavLocalGridManager_FindLocalNavigationGridPath) == 0x000008, "Wrong alignment on NavLocalGridManager_FindLocalNavigationGridPath");
+static_assert(sizeof(NavLocalGridManager_FindLocalNavigationGridPath) == 0x000038, "Wrong size on NavLocalGridManager_FindLocalNavigationGridPath");
+static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, Start) == 0x000008, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::Start' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, End) == 0x000014, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::End' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, PathPoints) == 0x000020, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::PathPoints' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, ReturnValue) == 0x000030, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::ReturnValue' has a wrong offset!");
+
+// Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
+// 0x0010 (0x0010 - 0x0000)
+struct NavLocalGridManager_RemoveLocalNavigationGrid final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         GridId;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRebuildGrids;                                     // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavLocalGridManager_RemoveLocalNavigationGrid) == 0x000008, "Wrong alignment on NavLocalGridManager_RemoveLocalNavigationGrid");
+static_assert(sizeof(NavLocalGridManager_RemoveLocalNavigationGrid) == 0x000010, "Wrong size on NavLocalGridManager_RemoveLocalNavigationGrid");
+static_assert(offsetof(NavLocalGridManager_RemoveLocalNavigationGrid, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_RemoveLocalNavigationGrid::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_RemoveLocalNavigationGrid, GridId) == 0x000008, "Member 'NavLocalGridManager_RemoveLocalNavigationGrid::GridId' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_RemoveLocalNavigationGrid, bRebuildGrids) == 0x00000C, "Member 'NavLocalGridManager_RemoveLocalNavigationGrid::bRebuildGrids' has a wrong offset!");
+
+// Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
+// 0x0010 (0x0010 - 0x0000)
+struct NavLocalGridManager_SetLocalNavigationGridDensity final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CellSize;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavLocalGridManager_SetLocalNavigationGridDensity) == 0x000008, "Wrong alignment on NavLocalGridManager_SetLocalNavigationGridDensity");
+static_assert(sizeof(NavLocalGridManager_SetLocalNavigationGridDensity) == 0x000010, "Wrong size on NavLocalGridManager_SetLocalNavigationGridDensity");
+static_assert(offsetof(NavLocalGridManager_SetLocalNavigationGridDensity, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_SetLocalNavigationGridDensity::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_SetLocalNavigationGridDensity, CellSize) == 0x000008, "Member 'NavLocalGridManager_SetLocalNavigationGridDensity::CellSize' has a wrong offset!");
+static_assert(offsetof(NavLocalGridManager_SetLocalNavigationGridDensity, ReturnValue) == 0x00000C, "Member 'NavLocalGridManager_SetLocalNavigationGridDensity::ReturnValue' has a wrong offset!");
+
+// Function AIModule.AITask_RunEQS.RunEQS
+// 0x0018 (0x0018 - 0x0000)
+struct AITask_RunEQS_RunEQS final
+{
+public:
+	class AAIController*                          Controller;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEnvQuery*                              QueryTemplate;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAITask_RunEQS*                         ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AITask_RunEQS_RunEQS) == 0x000008, "Wrong alignment on AITask_RunEQS_RunEQS");
+static_assert(sizeof(AITask_RunEQS_RunEQS) == 0x000018, "Wrong size on AITask_RunEQS_RunEQS");
+static_assert(offsetof(AITask_RunEQS_RunEQS, Controller) == 0x000000, "Member 'AITask_RunEQS_RunEQS::Controller' has a wrong offset!");
+static_assert(offsetof(AITask_RunEQS_RunEQS, QueryTemplate) == 0x000008, "Member 'AITask_RunEQS_RunEQS::QueryTemplate' has a wrong offset!");
+static_assert(offsetof(AITask_RunEQS_RunEQS, ReturnValue) == 0x000010, "Member 'AITask_RunEQS_RunEQS::ReturnValue' has a wrong offset!");
+
+// Function AIModule.AITask_MoveTo.AIMoveTo
+// 0x0038 (0x0038 - 0x0000)
+struct AITask_MoveTo_AIMoveTo final
+{
+public:
+	class AAIController*                          Controller;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                GoalLocation;                                      // 0x0008(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 GoalActor;                                         // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AcceptanceRadius;                                  // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAIOptionFlag                                 StopOnOverlap;                                     // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAIOptionFlag                                 AcceptPartialPath;                                 // 0x0025(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUsePathfinding;                                   // 0x0026(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLockAILogic;                                      // 0x0027(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseContinuosGoalTracking;                         // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAIOptionFlag                                 ProjectGoalOnNavigation;                           // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2A[0x6];                                       // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAITask_MoveTo*                         ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AITask_MoveTo_AIMoveTo) == 0x000008, "Wrong alignment on AITask_MoveTo_AIMoveTo");
+static_assert(sizeof(AITask_MoveTo_AIMoveTo) == 0x000038, "Wrong size on AITask_MoveTo_AIMoveTo");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, Controller) == 0x000000, "Member 'AITask_MoveTo_AIMoveTo::Controller' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, GoalLocation) == 0x000008, "Member 'AITask_MoveTo_AIMoveTo::GoalLocation' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, GoalActor) == 0x000018, "Member 'AITask_MoveTo_AIMoveTo::GoalActor' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, AcceptanceRadius) == 0x000020, "Member 'AITask_MoveTo_AIMoveTo::AcceptanceRadius' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, StopOnOverlap) == 0x000024, "Member 'AITask_MoveTo_AIMoveTo::StopOnOverlap' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, AcceptPartialPath) == 0x000025, "Member 'AITask_MoveTo_AIMoveTo::AcceptPartialPath' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, bUsePathfinding) == 0x000026, "Member 'AITask_MoveTo_AIMoveTo::bUsePathfinding' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, bLockAILogic) == 0x000027, "Member 'AITask_MoveTo_AIMoveTo::bLockAILogic' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, bUseContinuosGoalTracking) == 0x000028, "Member 'AITask_MoveTo_AIMoveTo::bUseContinuosGoalTracking' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, ProjectGoalOnNavigation) == 0x000029, "Member 'AITask_MoveTo_AIMoveTo::ProjectGoalOnNavigation' has a wrong offset!");
+static_assert(offsetof(AITask_MoveTo_AIMoveTo, ReturnValue) == 0x000030, "Member 'AITask_MoveTo_AIMoveTo::ReturnValue' has a wrong offset!");
 
 // Function AIModule.BehaviorTreeComponent.AddCooldownTagDuration
 // 0x0014 (0x0014 - 0x0000)
@@ -2376,63 +2401,55 @@ static_assert(alignof(BTTask_BlueprintBase_IsTaskExecuting) == 0x000001, "Wrong 
 static_assert(sizeof(BTTask_BlueprintBase_IsTaskExecuting) == 0x000001, "Wrong size on BTTask_BlueprintBase_IsTaskExecuting");
 static_assert(offsetof(BTTask_BlueprintBase_IsTaskExecuting, ReturnValue) == 0x000000, "Member 'BTTask_BlueprintBase_IsTaskExecuting::ReturnValue' has a wrong offset!");
 
-// Function AIModule.NavLinkProxy.ReceiveSmartLinkReached
-// 0x0018 (0x0018 - 0x0000)
-struct NavLinkProxy_ReceiveSmartLinkReached final
+// Function AIModule.PathFollowingComponent.OnActorBump
+// 0x00B0 (0x00B0 - 0x0000)
+struct PathFollowingComponent_OnActorBump final
 {
 public:
-	class AActor*                                 Agent;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Destination;                                       // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class AActor*                                 SelfActor;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                NormalImpulse;                                     // 0x0010(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FHitResult                             Hit;                                               // 0x001C(0x0094)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(NavLinkProxy_ReceiveSmartLinkReached) == 0x000008, "Wrong alignment on NavLinkProxy_ReceiveSmartLinkReached");
-static_assert(sizeof(NavLinkProxy_ReceiveSmartLinkReached) == 0x000018, "Wrong size on NavLinkProxy_ReceiveSmartLinkReached");
-static_assert(offsetof(NavLinkProxy_ReceiveSmartLinkReached, Agent) == 0x000000, "Member 'NavLinkProxy_ReceiveSmartLinkReached::Agent' has a wrong offset!");
-static_assert(offsetof(NavLinkProxy_ReceiveSmartLinkReached, Destination) == 0x000008, "Member 'NavLinkProxy_ReceiveSmartLinkReached::Destination' has a wrong offset!");
+static_assert(alignof(PathFollowingComponent_OnActorBump) == 0x000008, "Wrong alignment on PathFollowingComponent_OnActorBump");
+static_assert(sizeof(PathFollowingComponent_OnActorBump) == 0x0000B0, "Wrong size on PathFollowingComponent_OnActorBump");
+static_assert(offsetof(PathFollowingComponent_OnActorBump, SelfActor) == 0x000000, "Member 'PathFollowingComponent_OnActorBump::SelfActor' has a wrong offset!");
+static_assert(offsetof(PathFollowingComponent_OnActorBump, OtherActor) == 0x000008, "Member 'PathFollowingComponent_OnActorBump::OtherActor' has a wrong offset!");
+static_assert(offsetof(PathFollowingComponent_OnActorBump, NormalImpulse) == 0x000010, "Member 'PathFollowingComponent_OnActorBump::NormalImpulse' has a wrong offset!");
+static_assert(offsetof(PathFollowingComponent_OnActorBump, Hit) == 0x00001C, "Member 'PathFollowingComponent_OnActorBump::Hit' has a wrong offset!");
 
-// Function AIModule.NavLinkProxy.ResumePathFollowing
+// Function AIModule.PathFollowingComponent.OnNavDataRegistered
 // 0x0008 (0x0008 - 0x0000)
-struct NavLinkProxy_ResumePathFollowing final
+struct PathFollowingComponent_OnNavDataRegistered final
 {
 public:
-	class AActor*                                 Agent;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ANavigationData*                        NavData;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(NavLinkProxy_ResumePathFollowing) == 0x000008, "Wrong alignment on NavLinkProxy_ResumePathFollowing");
-static_assert(sizeof(NavLinkProxy_ResumePathFollowing) == 0x000008, "Wrong size on NavLinkProxy_ResumePathFollowing");
-static_assert(offsetof(NavLinkProxy_ResumePathFollowing, Agent) == 0x000000, "Member 'NavLinkProxy_ResumePathFollowing::Agent' has a wrong offset!");
+static_assert(alignof(PathFollowingComponent_OnNavDataRegistered) == 0x000008, "Wrong alignment on PathFollowingComponent_OnNavDataRegistered");
+static_assert(sizeof(PathFollowingComponent_OnNavDataRegistered) == 0x000008, "Wrong size on PathFollowingComponent_OnNavDataRegistered");
+static_assert(offsetof(PathFollowingComponent_OnNavDataRegistered, NavData) == 0x000000, "Member 'PathFollowingComponent_OnNavDataRegistered::NavData' has a wrong offset!");
 
-// Function AIModule.NavLinkProxy.SetSmartLinkEnabled
+// Function AIModule.PathFollowingComponent.GetPathActionType
 // 0x0001 (0x0001 - 0x0000)
-struct NavLinkProxy_SetSmartLinkEnabled final
+struct PathFollowingComponent_GetPathActionType final
 {
 public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPathFollowingAction                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(NavLinkProxy_SetSmartLinkEnabled) == 0x000001, "Wrong alignment on NavLinkProxy_SetSmartLinkEnabled");
-static_assert(sizeof(NavLinkProxy_SetSmartLinkEnabled) == 0x000001, "Wrong size on NavLinkProxy_SetSmartLinkEnabled");
-static_assert(offsetof(NavLinkProxy_SetSmartLinkEnabled, bEnabled) == 0x000000, "Member 'NavLinkProxy_SetSmartLinkEnabled::bEnabled' has a wrong offset!");
+static_assert(alignof(PathFollowingComponent_GetPathActionType) == 0x000001, "Wrong alignment on PathFollowingComponent_GetPathActionType");
+static_assert(sizeof(PathFollowingComponent_GetPathActionType) == 0x000001, "Wrong size on PathFollowingComponent_GetPathActionType");
+static_assert(offsetof(PathFollowingComponent_GetPathActionType, ReturnValue) == 0x000000, "Member 'PathFollowingComponent_GetPathActionType::ReturnValue' has a wrong offset!");
 
-// Function AIModule.NavLinkProxy.HasMovingAgents
-// 0x0001 (0x0001 - 0x0000)
-struct NavLinkProxy_HasMovingAgents final
+// Function AIModule.PathFollowingComponent.GetPathDestination
+// 0x000C (0x000C - 0x0000)
+struct PathFollowingComponent_GetPathDestination final
 {
 public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0000(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(NavLinkProxy_HasMovingAgents) == 0x000001, "Wrong alignment on NavLinkProxy_HasMovingAgents");
-static_assert(sizeof(NavLinkProxy_HasMovingAgents) == 0x000001, "Wrong size on NavLinkProxy_HasMovingAgents");
-static_assert(offsetof(NavLinkProxy_HasMovingAgents, ReturnValue) == 0x000000, "Member 'NavLinkProxy_HasMovingAgents::ReturnValue' has a wrong offset!");
-
-// Function AIModule.NavLinkProxy.IsSmartLinkEnabled
-// 0x0001 (0x0001 - 0x0000)
-struct NavLinkProxy_IsSmartLinkEnabled final
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(NavLinkProxy_IsSmartLinkEnabled) == 0x000001, "Wrong alignment on NavLinkProxy_IsSmartLinkEnabled");
-static_assert(sizeof(NavLinkProxy_IsSmartLinkEnabled) == 0x000001, "Wrong size on NavLinkProxy_IsSmartLinkEnabled");
-static_assert(offsetof(NavLinkProxy_IsSmartLinkEnabled, ReturnValue) == 0x000000, "Member 'NavLinkProxy_IsSmartLinkEnabled::ReturnValue' has a wrong offset!");
+static_assert(alignof(PathFollowingComponent_GetPathDestination) == 0x000004, "Wrong alignment on PathFollowingComponent_GetPathDestination");
+static_assert(sizeof(PathFollowingComponent_GetPathDestination) == 0x00000C, "Wrong size on PathFollowingComponent_GetPathDestination");
+static_assert(offsetof(PathFollowingComponent_GetPathDestination, ReturnValue) == 0x000000, "Member 'PathFollowingComponent_GetPathDestination::ReturnValue' has a wrong offset!");
 
 // Function AIModule.CrowdFollowingComponent.SuspendCrowdSteering
 // 0x0001 (0x0001 - 0x0000)
@@ -2626,178 +2643,161 @@ static_assert(alignof(EnvQueryInstanceBlueprintWrapper_GetResultsAsLocations) ==
 static_assert(sizeof(EnvQueryInstanceBlueprintWrapper_GetResultsAsLocations) == 0x000010, "Wrong size on EnvQueryInstanceBlueprintWrapper_GetResultsAsLocations");
 static_assert(offsetof(EnvQueryInstanceBlueprintWrapper_GetResultsAsLocations, ReturnValue) == 0x000000, "Member 'EnvQueryInstanceBlueprintWrapper_GetResultsAsLocations::ReturnValue' has a wrong offset!");
 
-// Function AIModule.EnvQueryManager.RunEQSQuery
-// 0x0030 (0x0030 - 0x0000)
-struct EnvQueryManager_RunEQSQuery final
+// Function AIModule.NavLinkProxy.ReceiveSmartLinkReached
+// 0x0018 (0x0018 - 0x0000)
+struct NavLinkProxy_ReceiveSmartLinkReached final
+{
+public:
+	class AActor*                                 Agent;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Destination;                                       // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavLinkProxy_ReceiveSmartLinkReached) == 0x000008, "Wrong alignment on NavLinkProxy_ReceiveSmartLinkReached");
+static_assert(sizeof(NavLinkProxy_ReceiveSmartLinkReached) == 0x000018, "Wrong size on NavLinkProxy_ReceiveSmartLinkReached");
+static_assert(offsetof(NavLinkProxy_ReceiveSmartLinkReached, Agent) == 0x000000, "Member 'NavLinkProxy_ReceiveSmartLinkReached::Agent' has a wrong offset!");
+static_assert(offsetof(NavLinkProxy_ReceiveSmartLinkReached, Destination) == 0x000008, "Member 'NavLinkProxy_ReceiveSmartLinkReached::Destination' has a wrong offset!");
+
+// Function AIModule.NavLinkProxy.ResumePathFollowing
+// 0x0008 (0x0008 - 0x0000)
+struct NavLinkProxy_ResumePathFollowing final
+{
+public:
+	class AActor*                                 Agent;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavLinkProxy_ResumePathFollowing) == 0x000008, "Wrong alignment on NavLinkProxy_ResumePathFollowing");
+static_assert(sizeof(NavLinkProxy_ResumePathFollowing) == 0x000008, "Wrong size on NavLinkProxy_ResumePathFollowing");
+static_assert(offsetof(NavLinkProxy_ResumePathFollowing, Agent) == 0x000000, "Member 'NavLinkProxy_ResumePathFollowing::Agent' has a wrong offset!");
+
+// Function AIModule.NavLinkProxy.SetSmartLinkEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct NavLinkProxy_SetSmartLinkEnabled final
+{
+public:
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavLinkProxy_SetSmartLinkEnabled) == 0x000001, "Wrong alignment on NavLinkProxy_SetSmartLinkEnabled");
+static_assert(sizeof(NavLinkProxy_SetSmartLinkEnabled) == 0x000001, "Wrong size on NavLinkProxy_SetSmartLinkEnabled");
+static_assert(offsetof(NavLinkProxy_SetSmartLinkEnabled, bEnabled) == 0x000000, "Member 'NavLinkProxy_SetSmartLinkEnabled::bEnabled' has a wrong offset!");
+
+// Function AIModule.NavLinkProxy.HasMovingAgents
+// 0x0001 (0x0001 - 0x0000)
+struct NavLinkProxy_HasMovingAgents final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavLinkProxy_HasMovingAgents) == 0x000001, "Wrong alignment on NavLinkProxy_HasMovingAgents");
+static_assert(sizeof(NavLinkProxy_HasMovingAgents) == 0x000001, "Wrong size on NavLinkProxy_HasMovingAgents");
+static_assert(offsetof(NavLinkProxy_HasMovingAgents, ReturnValue) == 0x000000, "Member 'NavLinkProxy_HasMovingAgents::ReturnValue' has a wrong offset!");
+
+// Function AIModule.NavLinkProxy.IsSmartLinkEnabled
+// 0x0001 (0x0001 - 0x0000)
+struct NavLinkProxy_IsSmartLinkEnabled final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavLinkProxy_IsSmartLinkEnabled) == 0x000001, "Wrong alignment on NavLinkProxy_IsSmartLinkEnabled");
+static_assert(sizeof(NavLinkProxy_IsSmartLinkEnabled) == 0x000001, "Wrong size on NavLinkProxy_IsSmartLinkEnabled");
+static_assert(offsetof(NavLinkProxy_IsSmartLinkEnabled, ReturnValue) == 0x000000, "Member 'NavLinkProxy_IsSmartLinkEnabled::ReturnValue' has a wrong offset!");
+
+// Function AIModule.PawnAction.CreateActionInstance
+// 0x0018 (0x0018 - 0x0000)
+struct PawnAction_CreateActionInstance final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UEnvQuery*                              QueryTemplate;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                Querier;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EEnvQueryRunMode                              RunMode;                                           // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19[0x7];                                       // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSubclassOf<class UEnvQueryInstanceBlueprintWrapper> WrapperClass;                               // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UEnvQueryInstanceBlueprintWrapper*      ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UPawnAction>                ActionClass;                                       // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPawnAction*                            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(EnvQueryManager_RunEQSQuery) == 0x000008, "Wrong alignment on EnvQueryManager_RunEQSQuery");
-static_assert(sizeof(EnvQueryManager_RunEQSQuery) == 0x000030, "Wrong size on EnvQueryManager_RunEQSQuery");
-static_assert(offsetof(EnvQueryManager_RunEQSQuery, WorldContextObject) == 0x000000, "Member 'EnvQueryManager_RunEQSQuery::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(EnvQueryManager_RunEQSQuery, QueryTemplate) == 0x000008, "Member 'EnvQueryManager_RunEQSQuery::QueryTemplate' has a wrong offset!");
-static_assert(offsetof(EnvQueryManager_RunEQSQuery, Querier) == 0x000010, "Member 'EnvQueryManager_RunEQSQuery::Querier' has a wrong offset!");
-static_assert(offsetof(EnvQueryManager_RunEQSQuery, RunMode) == 0x000018, "Member 'EnvQueryManager_RunEQSQuery::RunMode' has a wrong offset!");
-static_assert(offsetof(EnvQueryManager_RunEQSQuery, WrapperClass) == 0x000020, "Member 'EnvQueryManager_RunEQSQuery::WrapperClass' has a wrong offset!");
-static_assert(offsetof(EnvQueryManager_RunEQSQuery, ReturnValue) == 0x000028, "Member 'EnvQueryManager_RunEQSQuery::ReturnValue' has a wrong offset!");
+static_assert(alignof(PawnAction_CreateActionInstance) == 0x000008, "Wrong alignment on PawnAction_CreateActionInstance");
+static_assert(sizeof(PawnAction_CreateActionInstance) == 0x000018, "Wrong size on PawnAction_CreateActionInstance");
+static_assert(offsetof(PawnAction_CreateActionInstance, WorldContextObject) == 0x000000, "Member 'PawnAction_CreateActionInstance::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(PawnAction_CreateActionInstance, ActionClass) == 0x000008, "Member 'PawnAction_CreateActionInstance::ActionClass' has a wrong offset!");
+static_assert(offsetof(PawnAction_CreateActionInstance, ReturnValue) == 0x000010, "Member 'PawnAction_CreateActionInstance::ReturnValue' has a wrong offset!");
 
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForBox
-// 0x0040 (0x0040 - 0x0000)
-struct NavLocalGridManager_AddLocalNavigationGridForBox final
+// Function AIModule.PawnAction.Finish
+// 0x0001 (0x0001 - 0x0000)
+struct PawnAction_Finish final
 {
 public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Extent;                                            // 0x0014(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRotator                               Rotation;                                          // 0x0020(0x000C)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         Radius2D;                                          // 0x002C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Height;                                            // 0x0030(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRebuildGrids;                                     // 0x0034(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_35[0x3];                                       // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EPawnActionResult                             WithResult;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(NavLocalGridManager_AddLocalNavigationGridForBox) == 0x000008, "Wrong alignment on NavLocalGridManager_AddLocalNavigationGridForBox");
-static_assert(sizeof(NavLocalGridManager_AddLocalNavigationGridForBox) == 0x000040, "Wrong size on NavLocalGridManager_AddLocalNavigationGridForBox");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Location) == 0x000008, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Location' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Extent) == 0x000014, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Extent' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Rotation) == 0x000020, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Rotation' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Radius2D) == 0x00002C, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Radius2D' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, Height) == 0x000030, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::Height' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, bRebuildGrids) == 0x000034, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::bRebuildGrids' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForBox, ReturnValue) == 0x000038, "Member 'NavLocalGridManager_AddLocalNavigationGridForBox::ReturnValue' has a wrong offset!");
+static_assert(alignof(PawnAction_Finish) == 0x000001, "Wrong alignment on PawnAction_Finish");
+static_assert(sizeof(PawnAction_Finish) == 0x000001, "Wrong size on PawnAction_Finish");
+static_assert(offsetof(PawnAction_Finish, WithResult) == 0x000000, "Member 'PawnAction_Finish::WithResult' has a wrong offset!");
 
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForCapsule
-// 0x0030 (0x0030 - 0x0000)
-struct NavLocalGridManager_AddLocalNavigationGridForCapsule final
+// Function AIModule.PawnAction.GetActionPriority
+// 0x0001 (0x0001 - 0x0000)
+struct PawnAction_GetActionPriority final
 {
 public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CapsuleRadius;                                     // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CapsuleHalfHeight;                                 // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Radius2D;                                          // 0x001C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Height;                                            // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRebuildGrids;                                     // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EAIRequestPriority                            ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(NavLocalGridManager_AddLocalNavigationGridForCapsule) == 0x000008, "Wrong alignment on NavLocalGridManager_AddLocalNavigationGridForCapsule");
-static_assert(sizeof(NavLocalGridManager_AddLocalNavigationGridForCapsule) == 0x000030, "Wrong size on NavLocalGridManager_AddLocalNavigationGridForCapsule");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, Location) == 0x000008, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::Location' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, CapsuleRadius) == 0x000014, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::CapsuleRadius' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, CapsuleHalfHeight) == 0x000018, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::CapsuleHalfHeight' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, Radius2D) == 0x00001C, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::Radius2D' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, Height) == 0x000020, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::Height' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, bRebuildGrids) == 0x000024, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::bRebuildGrids' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForCapsule, ReturnValue) == 0x000028, "Member 'NavLocalGridManager_AddLocalNavigationGridForCapsule::ReturnValue' has a wrong offset!");
+static_assert(alignof(PawnAction_GetActionPriority) == 0x000001, "Wrong alignment on PawnAction_GetActionPriority");
+static_assert(sizeof(PawnAction_GetActionPriority) == 0x000001, "Wrong size on PawnAction_GetActionPriority");
+static_assert(offsetof(PawnAction_GetActionPriority, ReturnValue) == 0x000000, "Member 'PawnAction_GetActionPriority::ReturnValue' has a wrong offset!");
 
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoint
-// 0x0028 (0x0028 - 0x0000)
-struct NavLocalGridManager_AddLocalNavigationGridForPoint final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Location;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Radius2D;                                          // 0x0014(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Height;                                            // 0x0018(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRebuildGrids;                                     // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D[0x3];                                       // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(NavLocalGridManager_AddLocalNavigationGridForPoint) == 0x000008, "Wrong alignment on NavLocalGridManager_AddLocalNavigationGridForPoint");
-static_assert(sizeof(NavLocalGridManager_AddLocalNavigationGridForPoint) == 0x000028, "Wrong size on NavLocalGridManager_AddLocalNavigationGridForPoint");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, Location) == 0x000008, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::Location' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, Radius2D) == 0x000014, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::Radius2D' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, Height) == 0x000018, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::Height' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, bRebuildGrids) == 0x00001C, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::bRebuildGrids' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoint, ReturnValue) == 0x000020, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoint::ReturnValue' has a wrong offset!");
-
-// Function AIModule.NavLocalGridManager.AddLocalNavigationGridForPoints
-// 0x0028 (0x0028 - 0x0000)
-struct NavLocalGridManager_AddLocalNavigationGridForPoints final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        Locations;                                         // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         Radius2D;                                          // 0x0018(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Height;                                            // 0x001C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRebuildGrids;                                     // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(NavLocalGridManager_AddLocalNavigationGridForPoints) == 0x000008, "Wrong alignment on NavLocalGridManager_AddLocalNavigationGridForPoints");
-static_assert(sizeof(NavLocalGridManager_AddLocalNavigationGridForPoints) == 0x000028, "Wrong size on NavLocalGridManager_AddLocalNavigationGridForPoints");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, Locations) == 0x000008, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::Locations' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, Radius2D) == 0x000018, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::Radius2D' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, Height) == 0x00001C, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::Height' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, bRebuildGrids) == 0x000020, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::bRebuildGrids' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_AddLocalNavigationGridForPoints, ReturnValue) == 0x000024, "Member 'NavLocalGridManager_AddLocalNavigationGridForPoints::ReturnValue' has a wrong offset!");
-
-// Function AIModule.NavLocalGridManager.FindLocalNavigationGridPath
-// 0x0038 (0x0038 - 0x0000)
-struct NavLocalGridManager_FindLocalNavigationGridPath final
-{
-public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                Start;                                             // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                End;                                               // 0x0014(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        PathPoints;                                        // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(NavLocalGridManager_FindLocalNavigationGridPath) == 0x000008, "Wrong alignment on NavLocalGridManager_FindLocalNavigationGridPath");
-static_assert(sizeof(NavLocalGridManager_FindLocalNavigationGridPath) == 0x000038, "Wrong size on NavLocalGridManager_FindLocalNavigationGridPath");
-static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, Start) == 0x000008, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::Start' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, End) == 0x000014, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::End' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, PathPoints) == 0x000020, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::PathPoints' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_FindLocalNavigationGridPath, ReturnValue) == 0x000030, "Member 'NavLocalGridManager_FindLocalNavigationGridPath::ReturnValue' has a wrong offset!");
-
-// Function AIModule.NavLocalGridManager.RemoveLocalNavigationGrid
+// Function AIModule.PawnAction_BlueprintBase.ActionFinished
 // 0x0010 (0x0010 - 0x0000)
-struct NavLocalGridManager_RemoveLocalNavigationGrid final
+struct PawnAction_BlueprintBase_ActionFinished final
 {
 public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         GridId;                                            // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRebuildGrids;                                     // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EPawnActionResult                             WithResult;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(NavLocalGridManager_RemoveLocalNavigationGrid) == 0x000008, "Wrong alignment on NavLocalGridManager_RemoveLocalNavigationGrid");
-static_assert(sizeof(NavLocalGridManager_RemoveLocalNavigationGrid) == 0x000010, "Wrong size on NavLocalGridManager_RemoveLocalNavigationGrid");
-static_assert(offsetof(NavLocalGridManager_RemoveLocalNavigationGrid, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_RemoveLocalNavigationGrid::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_RemoveLocalNavigationGrid, GridId) == 0x000008, "Member 'NavLocalGridManager_RemoveLocalNavigationGrid::GridId' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_RemoveLocalNavigationGrid, bRebuildGrids) == 0x00000C, "Member 'NavLocalGridManager_RemoveLocalNavigationGrid::bRebuildGrids' has a wrong offset!");
+static_assert(alignof(PawnAction_BlueprintBase_ActionFinished) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionFinished");
+static_assert(sizeof(PawnAction_BlueprintBase_ActionFinished) == 0x000010, "Wrong size on PawnAction_BlueprintBase_ActionFinished");
+static_assert(offsetof(PawnAction_BlueprintBase_ActionFinished, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionFinished::ControlledPawn' has a wrong offset!");
+static_assert(offsetof(PawnAction_BlueprintBase_ActionFinished, WithResult) == 0x000008, "Member 'PawnAction_BlueprintBase_ActionFinished::WithResult' has a wrong offset!");
 
-// Function AIModule.NavLocalGridManager.SetLocalNavigationGridDensity
-// 0x0010 (0x0010 - 0x0000)
-struct NavLocalGridManager_SetLocalNavigationGridDensity final
+// Function AIModule.PawnAction_BlueprintBase.ActionPause
+// 0x0008 (0x0008 - 0x0000)
+struct PawnAction_BlueprintBase_ActionPause final
 {
 public:
-	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CellSize;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(NavLocalGridManager_SetLocalNavigationGridDensity) == 0x000008, "Wrong alignment on NavLocalGridManager_SetLocalNavigationGridDensity");
-static_assert(sizeof(NavLocalGridManager_SetLocalNavigationGridDensity) == 0x000010, "Wrong size on NavLocalGridManager_SetLocalNavigationGridDensity");
-static_assert(offsetof(NavLocalGridManager_SetLocalNavigationGridDensity, WorldContextObject) == 0x000000, "Member 'NavLocalGridManager_SetLocalNavigationGridDensity::WorldContextObject' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_SetLocalNavigationGridDensity, CellSize) == 0x000008, "Member 'NavLocalGridManager_SetLocalNavigationGridDensity::CellSize' has a wrong offset!");
-static_assert(offsetof(NavLocalGridManager_SetLocalNavigationGridDensity, ReturnValue) == 0x00000C, "Member 'NavLocalGridManager_SetLocalNavigationGridDensity::ReturnValue' has a wrong offset!");
+static_assert(alignof(PawnAction_BlueprintBase_ActionPause) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionPause");
+static_assert(sizeof(PawnAction_BlueprintBase_ActionPause) == 0x000008, "Wrong size on PawnAction_BlueprintBase_ActionPause");
+static_assert(offsetof(PawnAction_BlueprintBase_ActionPause, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionPause::ControlledPawn' has a wrong offset!");
+
+// Function AIModule.PawnAction_BlueprintBase.ActionResume
+// 0x0008 (0x0008 - 0x0000)
+struct PawnAction_BlueprintBase_ActionResume final
+{
+public:
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PawnAction_BlueprintBase_ActionResume) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionResume");
+static_assert(sizeof(PawnAction_BlueprintBase_ActionResume) == 0x000008, "Wrong size on PawnAction_BlueprintBase_ActionResume");
+static_assert(offsetof(PawnAction_BlueprintBase_ActionResume, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionResume::ControlledPawn' has a wrong offset!");
+
+// Function AIModule.PawnAction_BlueprintBase.ActionStart
+// 0x0008 (0x0008 - 0x0000)
+struct PawnAction_BlueprintBase_ActionStart final
+{
+public:
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(PawnAction_BlueprintBase_ActionStart) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionStart");
+static_assert(sizeof(PawnAction_BlueprintBase_ActionStart) == 0x000008, "Wrong size on PawnAction_BlueprintBase_ActionStart");
+static_assert(offsetof(PawnAction_BlueprintBase_ActionStart, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionStart::ControlledPawn' has a wrong offset!");
+
+// Function AIModule.PawnAction_BlueprintBase.ActionTick
+// 0x0010 (0x0010 - 0x0000)
+struct PawnAction_BlueprintBase_ActionTick final
+{
+public:
+	class APawn*                                  ControlledPawn;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DeltaSeconds;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(PawnAction_BlueprintBase_ActionTick) == 0x000008, "Wrong alignment on PawnAction_BlueprintBase_ActionTick");
+static_assert(sizeof(PawnAction_BlueprintBase_ActionTick) == 0x000010, "Wrong size on PawnAction_BlueprintBase_ActionTick");
+static_assert(offsetof(PawnAction_BlueprintBase_ActionTick, ControlledPawn) == 0x000000, "Member 'PawnAction_BlueprintBase_ActionTick::ControlledPawn' has a wrong offset!");
+static_assert(offsetof(PawnAction_BlueprintBase_ActionTick, DeltaSeconds) == 0x000008, "Member 'PawnAction_BlueprintBase_ActionTick::DeltaSeconds' has a wrong offset!");
 
 // Function AIModule.PawnActionsComponent.K2_PerformAction
 // 0x0018 (0x0018 - 0x0000)

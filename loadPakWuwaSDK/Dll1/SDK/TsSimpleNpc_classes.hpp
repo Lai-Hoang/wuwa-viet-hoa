@@ -11,32 +11,31 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // TypeScriptGeneratedClass TsSimpleNpc.TsSimpleNpc_C
-// 0x0058 (0x0310 - 0x02B8)
+// 0x0050 (0x0308 - 0x02B8)
 class ATsSimpleNpc_C final : public AKuroEffectActor
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UCharRenderingComponent_C*              CharRenderingComponent;                            // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Mesh;                                              // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      CapsuleCollision;                                  // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UCapsuleComponent*                      CapsuleCollision_0;                                // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	struct FSoftObjectPath                        DA;                                                // 0x02E0(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
-	bool                                          DisappearOnSunny;                                  // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          DisappearOnCloudy;                                 // 0x0301(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          DisappearOnRainy;                                  // 0x0302(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          DisappearOnThunderRain;                            // 0x0303(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          DisappearOnSnowy;                                  // 0x0304(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_305[0x3];                                      // 0x0305(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DebugDitherValue;                                  // 0x0308(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         LodLevel;                                          // 0x030C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Mesh;                                              // 0x02C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCapsuleComponent*                      CapsuleCollision;                                  // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UCharRenderingComponent_C*              CharRenderingComponent;                            // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	struct FSoftObjectPath                        DA;                                                // 0x02D8(0x0020)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          DisappearOnSunny;                                  // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          DisappearOnCloudy;                                 // 0x02F9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          DisappearOnRainy;                                  // 0x02FA(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          DisappearOnThunderRain;                            // 0x02FB(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          DisappearOnSnowy;                                  // 0x02FC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_2FD[0x3];                                      // 0x02FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DebugDitherValue;                                  // 0x0300(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LodLevel;                                          // 0x0304(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DebugSetNpcDitherValue(float value);
@@ -66,20 +65,19 @@ public:
 	}
 };
 static_assert(alignof(ATsSimpleNpc_C) == 0x000008, "Wrong alignment on ATsSimpleNpc_C");
-static_assert(sizeof(ATsSimpleNpc_C) == 0x000310, "Wrong size on ATsSimpleNpc_C");
+static_assert(sizeof(ATsSimpleNpc_C) == 0x000308, "Wrong size on ATsSimpleNpc_C");
 static_assert(offsetof(ATsSimpleNpc_C, UberGraphFrame) == 0x0002B8, "Member 'ATsSimpleNpc_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, CharRenderingComponent) == 0x0002C0, "Member 'ATsSimpleNpc_C::CharRenderingComponent' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, Mesh) == 0x0002C8, "Member 'ATsSimpleNpc_C::Mesh' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, CapsuleCollision) == 0x0002D0, "Member 'ATsSimpleNpc_C::CapsuleCollision' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, CapsuleCollision_0) == 0x0002D8, "Member 'ATsSimpleNpc_C::CapsuleCollision_0' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DA) == 0x0002E0, "Member 'ATsSimpleNpc_C::DA' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnSunny) == 0x000300, "Member 'ATsSimpleNpc_C::DisappearOnSunny' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnCloudy) == 0x000301, "Member 'ATsSimpleNpc_C::DisappearOnCloudy' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnRainy) == 0x000302, "Member 'ATsSimpleNpc_C::DisappearOnRainy' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnThunderRain) == 0x000303, "Member 'ATsSimpleNpc_C::DisappearOnThunderRain' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DisappearOnSnowy) == 0x000304, "Member 'ATsSimpleNpc_C::DisappearOnSnowy' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, DebugDitherValue) == 0x000308, "Member 'ATsSimpleNpc_C::DebugDitherValue' has a wrong offset!");
-static_assert(offsetof(ATsSimpleNpc_C, LodLevel) == 0x00030C, "Member 'ATsSimpleNpc_C::LodLevel' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, Mesh) == 0x0002C0, "Member 'ATsSimpleNpc_C::Mesh' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, CapsuleCollision) == 0x0002C8, "Member 'ATsSimpleNpc_C::CapsuleCollision' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, CharRenderingComponent) == 0x0002D0, "Member 'ATsSimpleNpc_C::CharRenderingComponent' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, DA) == 0x0002D8, "Member 'ATsSimpleNpc_C::DA' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, DisappearOnSunny) == 0x0002F8, "Member 'ATsSimpleNpc_C::DisappearOnSunny' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, DisappearOnCloudy) == 0x0002F9, "Member 'ATsSimpleNpc_C::DisappearOnCloudy' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, DisappearOnRainy) == 0x0002FA, "Member 'ATsSimpleNpc_C::DisappearOnRainy' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, DisappearOnThunderRain) == 0x0002FB, "Member 'ATsSimpleNpc_C::DisappearOnThunderRain' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, DisappearOnSnowy) == 0x0002FC, "Member 'ATsSimpleNpc_C::DisappearOnSnowy' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, DebugDitherValue) == 0x000300, "Member 'ATsSimpleNpc_C::DebugDitherValue' has a wrong offset!");
+static_assert(offsetof(ATsSimpleNpc_C, LodLevel) == 0x000304, "Member 'ATsSimpleNpc_C::LodLevel' has a wrong offset!");
 
 }
 

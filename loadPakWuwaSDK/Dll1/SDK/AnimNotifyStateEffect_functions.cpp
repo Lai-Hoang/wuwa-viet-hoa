@@ -212,6 +212,57 @@ void UAnimNotifyStateEffect_C::Init()
 }
 
 
+// Function AnimNotifyStateEffect.AnimNotifyStateEffect_C.CheckRealAttach
+// (Native, Public, BlueprintCallable, BlueprintEvent)
+
+void UAnimNotifyStateEffect_C::CheckRealAttach()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AnimNotifyStateEffect_C", "CheckRealAttach");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AnimNotifyStateEffect.AnimNotifyStateEffect_C.StopEffectInternal
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           meshComp1                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAnimSequenceBase*                animation1                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// const class FString&                    reason                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UAnimNotifyStateEffect_C::StopEffectInternal(class USkeletalMeshComponent* meshComp1, class UAnimSequenceBase* animation1, const class FString& reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AnimNotifyStateEffect_C", "StopEffectInternal");
+
+	Params::AnimNotifyStateEffect_C_StopEffectInternal Parms{};
+
+	Parms.meshComp1 = meshComp1;
+	Parms.animation1 = animation1;
+	Parms.reason = std::move(reason);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AnimNotifyStateEffect.AnimNotifyStateEffect_C.GetNotifyName
 // (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:

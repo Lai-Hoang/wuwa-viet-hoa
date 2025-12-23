@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "SDangoPerformEffectData_structs.hpp"
 #include "EDangoActionPerformType_structs.hpp"
 #include "EDangoActionTargetType_structs.hpp"
+#include "SDangoPerformEffectData_structs.hpp"
 
 
 namespace SDK

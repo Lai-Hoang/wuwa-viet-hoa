@@ -10,27 +10,29 @@
 
 #include "Basic.hpp"
 
-#include "EFightCameraDefault_structs.hpp"
-#include "EFightCameraType_structs.hpp"
-#include "EFightCameraAuto_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "EFightCameraFocus_structs.hpp"
-#include "SBaseCurve_structs.hpp"
-#include "EFightCameraAdjust_structs.hpp"
 #include "EFightCameraInput_structs.hpp"
+#include "GameplayTags_structs.hpp"
+#include "EFightCameraAdjust_structs.hpp"
+#include "EFightCameraType_structs.hpp"
+#include "SBaseCurve_structs.hpp"
+#include "EFightCameraAuto_structs.hpp"
+#include "EFightCameraDefault_structs.hpp"
+#include "EFightCameraFocus_structs.hpp"
 #include "EFightCameraModify_structs.hpp"
 #include "EFightCameraGuide_structs.hpp"
 #include "EFightCameraExplore_structs.hpp"
 #include "EFightCameraDialogue_structs.hpp"
 #include "EFightCameraClimb_structs.hpp"
 #include "EFightCameraSidestep_structs.hpp"
+#include "EFightCameraVehicle_structs.hpp"
+#include "EFightCameraSocketOverrideType_structs.hpp"
 
 
 namespace SDK
 {
 
 // UserDefinedStruct SCameraConfig.SCameraConfig
-// 0x0740 (0x0740 - 0x0000)
+// 0x07E8 (0x07E8 - 0x0000)
 struct FSCameraConfig final
 {
 public:
@@ -65,25 +67,28 @@ public:
 	TMap<EFightCameraDialogue, float>             对话镜头_44_2C5A146A427660A2583575B504E0C93C;      // 0x02C8(0x0050)(Edit, BlueprintVisible)
 	TMap<EFightCameraClimb, float>                攀爬镜头_45_2909B8D44EF3644EA4C26088A8A46306;      // 0x0318(0x0050)(Edit, BlueprintVisible)
 	TMap<EFightCameraSidestep, float>             移动自动镜头_46_7FF98AFE46049674E443A5A3466CC3AB;  // 0x0368(0x0050)(Edit, BlueprintVisible)
-	bool                                          是否开启主镜头缓入缓出_75_6096DE6E42E79C20AAAD81B5ACFACC74; // 0x03B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3B9[0x7];                                      // 0x03B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<EFightCameraDefault, struct FSBaseCurve> 基础曲线配置_99_36EB4DFA4C24A67C4FC39C9D39456B9E; // 0x03C0(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraAdjust, struct FSBaseCurve>  技能修正曲线配置_113_F5C59F9242A05862FD5A28AAB3B75B90; // 0x0410(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraAuto, struct FSBaseCurve>    自动镜头曲线配置_114_C56F26FC42B97E290F759F850B68151B; // 0x0460(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraFocus, struct FSBaseCurve>   锁定镜头曲线配置_116_D0A0E74148A1035933F5878490F9D560; // 0x04B0(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraInput, struct FSBaseCurve>   镜头输入曲线配置_117_E62C61AD4D5087C5EB53649046D21EE7; // 0x0500(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraModify, struct FSBaseCurve>  Modify镜头曲线配置_118_3C2C639E4657175A880B3FAEDFCCEE94; // 0x0550(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraGuide, struct FSBaseCurve>   引导镜头曲线配置_119_02D1A7C341E65DD5384ED0B23E38ADF7; // 0x05A0(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraExplore, struct FSBaseCurve> 跑图镜头曲线配置_120_FC92B2F5433C98047B67C3BD760C708E; // 0x05F0(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraDialogue, struct FSBaseCurve> 对话镜头曲线配置_121_8AA29B474996541AAE669DA9D5A4E6C4; // 0x0640(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraClimb, struct FSBaseCurve>   攀爬镜头曲线配置_123_64F737F942CA102C623BC99740D63F8D; // 0x0690(0x0050)(Edit, BlueprintVisible)
-	TMap<EFightCameraSidestep, struct FSBaseCurve> 移动自动镜头曲线配置_122_40A42B7449669907AD70F39732633586; // 0x06E0(0x0050)(Edit, BlueprintVisible)
-	bool                                          是否独立过渡时间_162_9036B54548D28D49D5CF929ABFB47B7E; // 0x0730(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_731[0x3];                                      // 0x0731(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   主控角色骨骼_165_F5972B99434EEA9C4461D19A897188B4; // 0x0734(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TMap<EFightCameraVehicle, float>              载具镜头_170_ECBAB0C34CDDF63CE9D25CBA92549A70;     // 0x03B8(0x0050)(Edit, BlueprintVisible)
+	bool                                          是否开启主镜头缓入缓出_75_6096DE6E42E79C20AAAD81B5ACFACC74; // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_409[0x7];                                      // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<EFightCameraDefault, struct FSBaseCurve> 基础曲线配置_99_36EB4DFA4C24A67C4FC39C9D39456B9E; // 0x0410(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraAdjust, struct FSBaseCurve>  技能修正曲线配置_113_F5C59F9242A05862FD5A28AAB3B75B90; // 0x0460(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraAuto, struct FSBaseCurve>    自动镜头曲线配置_114_C56F26FC42B97E290F759F850B68151B; // 0x04B0(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraFocus, struct FSBaseCurve>   锁定镜头曲线配置_116_D0A0E74148A1035933F5878490F9D560; // 0x0500(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraInput, struct FSBaseCurve>   镜头输入曲线配置_117_E62C61AD4D5087C5EB53649046D21EE7; // 0x0550(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraModify, struct FSBaseCurve>  Modify镜头曲线配置_118_3C2C639E4657175A880B3FAEDFCCEE94; // 0x05A0(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraGuide, struct FSBaseCurve>   引导镜头曲线配置_119_02D1A7C341E65DD5384ED0B23E38ADF7; // 0x05F0(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraExplore, struct FSBaseCurve> 跑图镜头曲线配置_120_FC92B2F5433C98047B67C3BD760C708E; // 0x0640(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraDialogue, struct FSBaseCurve> 对话镜头曲线配置_121_8AA29B474996541AAE669DA9D5A4E6C4; // 0x0690(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraClimb, struct FSBaseCurve>   攀爬镜头曲线配置_123_64F737F942CA102C623BC99740D63F8D; // 0x06E0(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraSidestep, struct FSBaseCurve> 移动自动镜头曲线配置_122_40A42B7449669907AD70F39732633586; // 0x0730(0x0050)(Edit, BlueprintVisible)
+	TMap<EFightCameraVehicle, struct FSBaseCurve> 载具镜头曲线配置_174_7DC937524C10B19E6DC2EF874FB3517E; // 0x0780(0x0050)(Edit, BlueprintVisible)
+	bool                                          是否独立过渡时间_162_9036B54548D28D49D5CF929ABFB47B7E; // 0x07D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7D1[0x3];                                      // 0x07D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   主控角色骨骼_165_F5972B99434EEA9C4461D19A897188B4; // 0x07D4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFightCameraSocketOverrideType                主控角色骨骼覆盖方式_178_3D6E47FA4BC753FCC7BFECA6BC0A39CF; // 0x07E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FSCameraConfig) == 0x000008, "Wrong alignment on FSCameraConfig");
-static_assert(sizeof(FSCameraConfig) == 0x000740, "Wrong size on FSCameraConfig");
+static_assert(sizeof(FSCameraConfig) == 0x0007E8, "Wrong size on FSCameraConfig");
 static_assert(offsetof(FSCameraConfig, Type_49_64F042F744CF2C4652C8C48399F51487) == 0x000000, "Member 'FSCameraConfig::Type_49_64F042F744CF2C4652C8C48399F51487' has a wrong offset!");
 static_assert(offsetof(FSCameraConfig, 是否重置默认配置_157_93EECDE7479C64736DE2E6AF7FB31440) == 0x000001, "Member 'FSCameraConfig::是否重置默认配置_157_93EECDE7479C64736DE2E6AF7FB31440' has a wrong offset!");
 static_assert(offsetof(FSCameraConfig, Tag_52_1250E0A24D6B5FC23E12D1B35A2EEC19) == 0x000004, "Member 'FSCameraConfig::Tag_52_1250E0A24D6B5FC23E12D1B35A2EEC19' has a wrong offset!");
@@ -112,20 +117,23 @@ static_assert(offsetof(FSCameraConfig, 跑图镜头_43_0D9AB6CB4942EB3737F176A3F
 static_assert(offsetof(FSCameraConfig, 对话镜头_44_2C5A146A427660A2583575B504E0C93C) == 0x0002C8, "Member 'FSCameraConfig::对话镜头_44_2C5A146A427660A2583575B504E0C93C' has a wrong offset!");
 static_assert(offsetof(FSCameraConfig, 攀爬镜头_45_2909B8D44EF3644EA4C26088A8A46306) == 0x000318, "Member 'FSCameraConfig::攀爬镜头_45_2909B8D44EF3644EA4C26088A8A46306' has a wrong offset!");
 static_assert(offsetof(FSCameraConfig, 移动自动镜头_46_7FF98AFE46049674E443A5A3466CC3AB) == 0x000368, "Member 'FSCameraConfig::移动自动镜头_46_7FF98AFE46049674E443A5A3466CC3AB' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 是否开启主镜头缓入缓出_75_6096DE6E42E79C20AAAD81B5ACFACC74) == 0x0003B8, "Member 'FSCameraConfig::是否开启主镜头缓入缓出_75_6096DE6E42E79C20AAAD81B5ACFACC74' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 基础曲线配置_99_36EB4DFA4C24A67C4FC39C9D39456B9E) == 0x0003C0, "Member 'FSCameraConfig::基础曲线配置_99_36EB4DFA4C24A67C4FC39C9D39456B9E' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 技能修正曲线配置_113_F5C59F9242A05862FD5A28AAB3B75B90) == 0x000410, "Member 'FSCameraConfig::技能修正曲线配置_113_F5C59F9242A05862FD5A28AAB3B75B90' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 自动镜头曲线配置_114_C56F26FC42B97E290F759F850B68151B) == 0x000460, "Member 'FSCameraConfig::自动镜头曲线配置_114_C56F26FC42B97E290F759F850B68151B' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 锁定镜头曲线配置_116_D0A0E74148A1035933F5878490F9D560) == 0x0004B0, "Member 'FSCameraConfig::锁定镜头曲线配置_116_D0A0E74148A1035933F5878490F9D560' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 镜头输入曲线配置_117_E62C61AD4D5087C5EB53649046D21EE7) == 0x000500, "Member 'FSCameraConfig::镜头输入曲线配置_117_E62C61AD4D5087C5EB53649046D21EE7' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, Modify镜头曲线配置_118_3C2C639E4657175A880B3FAEDFCCEE94) == 0x000550, "Member 'FSCameraConfig::Modify镜头曲线配置_118_3C2C639E4657175A880B3FAEDFCCEE94' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 引导镜头曲线配置_119_02D1A7C341E65DD5384ED0B23E38ADF7) == 0x0005A0, "Member 'FSCameraConfig::引导镜头曲线配置_119_02D1A7C341E65DD5384ED0B23E38ADF7' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 跑图镜头曲线配置_120_FC92B2F5433C98047B67C3BD760C708E) == 0x0005F0, "Member 'FSCameraConfig::跑图镜头曲线配置_120_FC92B2F5433C98047B67C3BD760C708E' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 对话镜头曲线配置_121_8AA29B474996541AAE669DA9D5A4E6C4) == 0x000640, "Member 'FSCameraConfig::对话镜头曲线配置_121_8AA29B474996541AAE669DA9D5A4E6C4' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 攀爬镜头曲线配置_123_64F737F942CA102C623BC99740D63F8D) == 0x000690, "Member 'FSCameraConfig::攀爬镜头曲线配置_123_64F737F942CA102C623BC99740D63F8D' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 移动自动镜头曲线配置_122_40A42B7449669907AD70F39732633586) == 0x0006E0, "Member 'FSCameraConfig::移动自动镜头曲线配置_122_40A42B7449669907AD70F39732633586' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 是否独立过渡时间_162_9036B54548D28D49D5CF929ABFB47B7E) == 0x000730, "Member 'FSCameraConfig::是否独立过渡时间_162_9036B54548D28D49D5CF929ABFB47B7E' has a wrong offset!");
-static_assert(offsetof(FSCameraConfig, 主控角色骨骼_165_F5972B99434EEA9C4461D19A897188B4) == 0x000734, "Member 'FSCameraConfig::主控角色骨骼_165_F5972B99434EEA9C4461D19A897188B4' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 载具镜头_170_ECBAB0C34CDDF63CE9D25CBA92549A70) == 0x0003B8, "Member 'FSCameraConfig::载具镜头_170_ECBAB0C34CDDF63CE9D25CBA92549A70' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 是否开启主镜头缓入缓出_75_6096DE6E42E79C20AAAD81B5ACFACC74) == 0x000408, "Member 'FSCameraConfig::是否开启主镜头缓入缓出_75_6096DE6E42E79C20AAAD81B5ACFACC74' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 基础曲线配置_99_36EB4DFA4C24A67C4FC39C9D39456B9E) == 0x000410, "Member 'FSCameraConfig::基础曲线配置_99_36EB4DFA4C24A67C4FC39C9D39456B9E' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 技能修正曲线配置_113_F5C59F9242A05862FD5A28AAB3B75B90) == 0x000460, "Member 'FSCameraConfig::技能修正曲线配置_113_F5C59F9242A05862FD5A28AAB3B75B90' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 自动镜头曲线配置_114_C56F26FC42B97E290F759F850B68151B) == 0x0004B0, "Member 'FSCameraConfig::自动镜头曲线配置_114_C56F26FC42B97E290F759F850B68151B' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 锁定镜头曲线配置_116_D0A0E74148A1035933F5878490F9D560) == 0x000500, "Member 'FSCameraConfig::锁定镜头曲线配置_116_D0A0E74148A1035933F5878490F9D560' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 镜头输入曲线配置_117_E62C61AD4D5087C5EB53649046D21EE7) == 0x000550, "Member 'FSCameraConfig::镜头输入曲线配置_117_E62C61AD4D5087C5EB53649046D21EE7' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, Modify镜头曲线配置_118_3C2C639E4657175A880B3FAEDFCCEE94) == 0x0005A0, "Member 'FSCameraConfig::Modify镜头曲线配置_118_3C2C639E4657175A880B3FAEDFCCEE94' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 引导镜头曲线配置_119_02D1A7C341E65DD5384ED0B23E38ADF7) == 0x0005F0, "Member 'FSCameraConfig::引导镜头曲线配置_119_02D1A7C341E65DD5384ED0B23E38ADF7' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 跑图镜头曲线配置_120_FC92B2F5433C98047B67C3BD760C708E) == 0x000640, "Member 'FSCameraConfig::跑图镜头曲线配置_120_FC92B2F5433C98047B67C3BD760C708E' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 对话镜头曲线配置_121_8AA29B474996541AAE669DA9D5A4E6C4) == 0x000690, "Member 'FSCameraConfig::对话镜头曲线配置_121_8AA29B474996541AAE669DA9D5A4E6C4' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 攀爬镜头曲线配置_123_64F737F942CA102C623BC99740D63F8D) == 0x0006E0, "Member 'FSCameraConfig::攀爬镜头曲线配置_123_64F737F942CA102C623BC99740D63F8D' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 移动自动镜头曲线配置_122_40A42B7449669907AD70F39732633586) == 0x000730, "Member 'FSCameraConfig::移动自动镜头曲线配置_122_40A42B7449669907AD70F39732633586' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 载具镜头曲线配置_174_7DC937524C10B19E6DC2EF874FB3517E) == 0x000780, "Member 'FSCameraConfig::载具镜头曲线配置_174_7DC937524C10B19E6DC2EF874FB3517E' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 是否独立过渡时间_162_9036B54548D28D49D5CF929ABFB47B7E) == 0x0007D0, "Member 'FSCameraConfig::是否独立过渡时间_162_9036B54548D28D49D5CF929ABFB47B7E' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 主控角色骨骼_165_F5972B99434EEA9C4461D19A897188B4) == 0x0007D4, "Member 'FSCameraConfig::主控角色骨骼_165_F5972B99434EEA9C4461D19A897188B4' has a wrong offset!");
+static_assert(offsetof(FSCameraConfig, 主控角色骨骼覆盖方式_178_3D6E47FA4BC753FCC7BFECA6BC0A39CF) == 0x0007E0, "Member 'FSCameraConfig::主控角色骨骼覆盖方式_178_3D6E47FA4BC753FCC7BFECA6BC0A39CF' has a wrong offset!");
 
 }
 

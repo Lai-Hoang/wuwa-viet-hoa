@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_Nvzhu_Seq_V2.BP_Nvzhu_Seq_V2_C
-// 0x0000 (0x0388 - 0x0388)
+// 0x0000 (0x03D8 - 0x03D8)
 class ABP_Nvzhu_Seq_V2_C final : public ABP_BaseRole_Seq_V2_C
 {
 public:
@@ -35,7 +35,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_Nvzhu_Seq_V2_C) == 0x000008, "Wrong alignment on ABP_Nvzhu_Seq_V2_C");
-static_assert(sizeof(ABP_Nvzhu_Seq_V2_C) == 0x000388, "Wrong size on ABP_Nvzhu_Seq_V2_C");
+static_assert(sizeof(ABP_Nvzhu_Seq_V2_C) == 0x0003D8, "Wrong size on ABP_Nvzhu_Seq_V2_C");
 
 }
 

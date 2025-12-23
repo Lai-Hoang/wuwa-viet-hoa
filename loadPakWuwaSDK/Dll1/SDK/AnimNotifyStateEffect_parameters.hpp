@@ -102,6 +102,23 @@ static_assert(offsetof(AnimNotifyStateEffect_C_AttachEffectToWeapon, meshComp) =
 static_assert(offsetof(AnimNotifyStateEffect_C_AttachEffectToWeapon, outer) == 0x000008, "Member 'AnimNotifyStateEffect_C_AttachEffectToWeapon::outer' has a wrong offset!");
 static_assert(offsetof(AnimNotifyStateEffect_C_AttachEffectToWeapon, effectHandle) == 0x000010, "Member 'AnimNotifyStateEffect_C_AttachEffectToWeapon::effectHandle' has a wrong offset!");
 
+// Function AnimNotifyStateEffect.AnimNotifyStateEffect_C.StopEffectInternal
+// 0x0028 (0x0028 - 0x0000)
+struct AnimNotifyStateEffect_C_StopEffectInternal final
+{
+public:
+	class USkeletalMeshComponent*                 meshComp1;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAnimSequenceBase*                      animation1;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 reason;                                            // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(AnimNotifyStateEffect_C_StopEffectInternal) == 0x000008, "Wrong alignment on AnimNotifyStateEffect_C_StopEffectInternal");
+static_assert(sizeof(AnimNotifyStateEffect_C_StopEffectInternal) == 0x000028, "Wrong size on AnimNotifyStateEffect_C_StopEffectInternal");
+static_assert(offsetof(AnimNotifyStateEffect_C_StopEffectInternal, meshComp1) == 0x000000, "Member 'AnimNotifyStateEffect_C_StopEffectInternal::meshComp1' has a wrong offset!");
+static_assert(offsetof(AnimNotifyStateEffect_C_StopEffectInternal, animation1) == 0x000008, "Member 'AnimNotifyStateEffect_C_StopEffectInternal::animation1' has a wrong offset!");
+static_assert(offsetof(AnimNotifyStateEffect_C_StopEffectInternal, reason) == 0x000010, "Member 'AnimNotifyStateEffect_C_StopEffectInternal::reason' has a wrong offset!");
+static_assert(offsetof(AnimNotifyStateEffect_C_StopEffectInternal, ReturnValue) == 0x000020, "Member 'AnimNotifyStateEffect_C_StopEffectInternal::ReturnValue' has a wrong offset!");
+
 // Function AnimNotifyStateEffect.AnimNotifyStateEffect_C.GetNotifyName
 // 0x0010 (0x0010 - 0x0000)
 struct AnimNotifyStateEffect_C_GetNotifyName final

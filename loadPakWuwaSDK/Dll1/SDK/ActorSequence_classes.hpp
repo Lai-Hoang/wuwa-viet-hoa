@@ -69,7 +69,7 @@ static_assert(offsetof(UActorSequenceComponent, Sequence) == 0x0000D8, "Member '
 static_assert(offsetof(UActorSequenceComponent, SequencePlayer) == 0x0000E0, "Member 'UActorSequenceComponent::SequencePlayer' has a wrong offset!");
 
 // Class ActorSequence.ActorSequencePlayer
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x06F8 - 0x06F8)
 class UActorSequencePlayer final : public UMovieSceneSequencePlayer
 {
 public:
@@ -83,7 +83,7 @@ public:
 	}
 };
 static_assert(alignof(UActorSequencePlayer) == 0x000008, "Wrong alignment on UActorSequencePlayer");
-static_assert(sizeof(UActorSequencePlayer) == 0x0006F0, "Wrong size on UActorSequencePlayer");
+static_assert(sizeof(UActorSequencePlayer) == 0x0006F8, "Wrong size on UActorSequencePlayer");
 
 }
 

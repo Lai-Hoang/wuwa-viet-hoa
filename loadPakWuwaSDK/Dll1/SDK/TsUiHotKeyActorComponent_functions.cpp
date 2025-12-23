@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.OnDestroyBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiHotKeyActorComponent_C::OnDestroyBP()
 {
@@ -27,12 +27,17 @@ void UTsUiHotKeyActorComponent_C::OnDestroyBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiHotKeyActorComponent_C", "OnDestroyBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.StartBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiHotKeyActorComponent_C::StartBP()
 {
@@ -41,12 +46,17 @@ void UTsUiHotKeyActorComponent_C::StartBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiHotKeyActorComponent_C", "StartBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.AwakeBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiHotKeyActorComponent_C::AwakeBP()
 {
@@ -55,12 +65,17 @@ void UTsUiHotKeyActorComponent_C::AwakeBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiHotKeyActorComponent_C", "AwakeBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.OnEnableBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiHotKeyActorComponent_C::OnEnableBP()
 {
@@ -69,12 +84,17 @@ void UTsUiHotKeyActorComponent_C::OnEnableBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiHotKeyActorComponent_C", "OnEnableBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.OnDisableBP
-// (Event, Public, Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void UTsUiHotKeyActorComponent_C::OnDisableBP()
 {
@@ -83,12 +103,17 @@ void UTsUiHotKeyActorComponent_C::OnDisableBP()
 	if (Func == nullptr)
 		Func = Class->GetFunction("TsUiHotKeyActorComponent_C", "OnDisableBP");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function TsUiHotKeyActorComponent.TsUiHotKeyActorComponent_C.ExecuteUbergraph_TsUiHotKeyActorComponent
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -103,7 +128,12 @@ void UTsUiHotKeyActorComponent_C::ExecuteUbergraph_TsUiHotKeyActorComponent(int3
 
 	Parms.EntryPoint = EntryPoint;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

@@ -22,33 +22,33 @@ namespace SDK
 class UDataTableUtil_C final : public UBlueprintFunctionLibrary
 {
 public:
-	static void LoadServerInfo(class UObject* __WorldContext, TArray<struct FSServerInfo>* NewParam);
-	static void LoadModelConfig(const class FString& Row, class UObject* __WorldContext, bool* bSucc, struct FSModelConfig* result);
-	static void GetDataTableOnEditor(const class FString& path, class UObject* __WorldContext, class UDataTable** Return);
-	static void LoadAiWeaponSocketConfigs(class FName RowName, const int32& Key, class UObject* __WorldContext, struct FSWeaponSocketItem* Weapon);
-	static void LoadAiWeaponSocket(class FName RowName, class UObject* __WorldContext, struct FSAiWeaponSocket* Out_Row);
-	static void LoadAllAiWeaponSockets(class UObject* __WorldContext, TMap<int32, struct FSAiWeaponSocket>* Sockets);
-	static struct FSSceneUITagConfig LoadSceneUITagConfig(const class FString& RowName, class UObject* __WorldContext, bool* bFound);
-	static struct FSSceneDecorationConfig LoadSceneDecorationConfig(const class FString& RowName, class UObject* __WorldContext, bool* bFound);
-	static void LoadManipulateItemConfig(const class FString& inRow, class UObject* __WorldContext, struct FSManipulateConfig* outConfig, bool* outFound);
-	static void LoadManipulatePrecastConfig(const class FString& inRow, class UObject* __WorldContext, struct FSManipulateConfig* outConfig, bool* outFound);
-	static void LoadCharacterFightInfo(class UDataTable* CharacterFightInfo, const class FString& CharacterResourcePath, class UObject* __WorldContext, struct FSCharacterFightInfo* outInfo, bool* outIsFound);
-	static TArray<struct FSSkillMontage> LoadAllSkillMontages(class UObject* __WorldContext);
-	static void LoadParkourConfig(class FName RowName, class UObject* __WorldContext, struct FSParkourConfig* 输出行, bool* found);
-	static TArray<struct FSCamp> LoadAllCampConfigs(class UObject* __WorldContext);
-	static void GetCampNum(int32 Camp, class UObject* __WorldContext, ECamp* Num);
-	static void LoadHitMapConfig(int32 MapId, class UObject* __WorldContext, struct FSHitMapping* result, bool* found);
-	static void LoadCampConfig(int32 CampNum, class UObject* __WorldContext, struct FSCamp* CampInfo, bool* Found);
-	static void LoadAIConfig(const class FString& inConfigId, class UObject* __WorldContext, struct FSAIConfig* Out_Row, bool* outFound);
-	static struct FSUiCameraAnimationBlendSettings LoadUiCameraAnimationBlendSettings(const class FString& RowName, class UObject* __WorldContext, bool* bFound);
-	static struct FSUiCameraAnimationSettings LoadUiCameraAnimationSettings(const class FString& RowName, class UObject* __WorldContext, bool* bFound);
-	static void LoadInteractionConfig(const class FString& inRow, class UObject* __WorldContext, struct FSInteractionConfig* ouConfig, bool* outFound);
-	static void LoadCipherInfo(const class FString& inRow, class UObject* __WorldContext, struct FSCipherGameplay* outConfig, bool* outFound);
-	static void LoadConditionGroupInfo(const class FString& inRow, class UObject* __WorldContext, struct FSConditionGroup* outConfig, bool* outFound);
-	static void LoadGmOrderInfo(class UObject* __WorldContext, TArray<struct FSGMOrderInfo>* gmInfoList1);
-	static void LoadSeqNetworksInfo(class UDataTable* inSeqNetwork, const class FString& inRow, class UObject* __WorldContext, struct FSSequencesNetwork* outInfo, bool* outIsFound);
-	static void LoadVisionInfo(const class FString& phantomId, class UObject* __WorldContext, struct FSVisionData* visionConfig, bool* found);
 	static void LoadRoleQualityInfo(const class FString& Row, class UObject* __WorldContext, bool* bSucc, struct FSRoleQualityInfo* result);
+	static void LoadModelConfig(const class FString& Row, class UObject* __WorldContext, bool* bSucc, struct FSModelConfig* result);
+	static void LoadServerInfo(class UObject* __WorldContext, TArray<struct FSServerInfo>* NewParam);
+	static void LoadVisionInfo(const class FString& phantomId, class UObject* __WorldContext, struct FSVisionData* visionConfig, bool* found);
+	static void LoadSeqNetworksInfo(class UDataTable* inSeqNetwork, const class FString& inRow, class UObject* __WorldContext, struct FSSequencesNetwork* outInfo, bool* outIsFound);
+	static void LoadGmOrderInfo(class UObject* __WorldContext, TArray<struct FSGMOrderInfo>* gmInfoList1);
+	static void LoadConditionGroupInfo(const class FString& inRow, class UObject* __WorldContext, struct FSConditionGroup* outConfig, bool* outFound);
+	static void LoadCipherInfo(const class FString& inRow, class UObject* __WorldContext, struct FSCipherGameplay* outConfig, bool* outFound);
+	static void LoadInteractionConfig(const class FString& inRow, class UObject* __WorldContext, struct FSInteractionConfig* ouConfig, bool* outFound);
+	static struct FSUiCameraAnimationSettings LoadUiCameraAnimationSettings(const class FString& RowName, class UObject* __WorldContext, bool* bFound);
+	static struct FSUiCameraAnimationBlendSettings LoadUiCameraAnimationBlendSettings(const class FString& RowName, class UObject* __WorldContext, bool* bFound);
+	static void LoadAIConfig(const class FString& inConfigId, class UObject* __WorldContext, struct FSAIConfig* Out_Row, bool* outFound);
+	static void LoadCampConfig(int32 CampNum, class UObject* __WorldContext, struct FSCamp* CampInfo, bool* Found);
+	static void LoadHitMapConfig(int32 MapId, class UObject* __WorldContext, struct FSHitMapping* result, bool* found);
+	static void GetCampNum(int32 Camp, class UObject* __WorldContext, ECamp* Num);
+	static TArray<struct FSCamp> LoadAllCampConfigs(class UObject* __WorldContext);
+	static void LoadParkourConfig(class FName RowName, class UObject* __WorldContext, struct FSParkourConfig* 输出行, bool* found);
+	static TArray<struct FSSkillMontage> LoadAllSkillMontages(class UObject* __WorldContext);
+	static void LoadCharacterFightInfo(class UDataTable* CharacterFightInfo, const class FString& CharacterResourcePath, class UObject* __WorldContext, struct FSCharacterFightInfo* outInfo, bool* outIsFound);
+	static void LoadManipulatePrecastConfig(const class FString& inRow, class UObject* __WorldContext, struct FSManipulateConfig* outConfig, bool* outFound);
+	static void LoadManipulateItemConfig(const class FString& inRow, class UObject* __WorldContext, struct FSManipulateConfig* outConfig, bool* outFound);
+	static struct FSSceneDecorationConfig LoadSceneDecorationConfig(const class FString& RowName, class UObject* __WorldContext, bool* bFound);
+	static struct FSSceneUITagConfig LoadSceneUITagConfig(const class FString& RowName, class UObject* __WorldContext, bool* bFound);
+	static void LoadAllAiWeaponSockets(class UObject* __WorldContext, TMap<int32, struct FSAiWeaponSocket>* Sockets);
+	static void LoadAiWeaponSocket(class FName RowName, class UObject* __WorldContext, struct FSAiWeaponSocket* Out_Row);
+	static void LoadAiWeaponSocketConfigs(class FName RowName, const int32& Key, class UObject* __WorldContext, struct FSWeaponSocketItem* Weapon);
+	static void GetDataTableOnEditor(const class FString& path, class UObject* __WorldContext, class UDataTable** Return);
 
 public:
 	static class UClass* StaticClass()

@@ -10,13 +10,13 @@
 
 #include "Basic.hpp"
 
-#include "ECharacterBodySpecifiedType_structs.hpp"
+#include "ECharacterDitherType_structs.hpp"
 #include "Engine_structs.hpp"
+#include "ECharacterControllerCaseType_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "ECharacterBodySpecifiedType_structs.hpp"
 #include "ECharacterSlotSpecifiedType_structs.hpp"
-#include "ECharacterDitherType_structs.hpp"
-#include "ECharacterControllerCaseType_structs.hpp"
 #include "ECharacterRenderingType_structs.hpp"
 
 
@@ -24,7 +24,7 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass CharRenderingComponent.CharRenderingComponent_C
-// 0x0020 (0x00F8 - 0x00D8)
+// 0x0038 (0x0110 - 0x00D8)
 class UCharRenderingComponent_C final : public UKuroCharRenderingComponent
 {
 public:
@@ -32,8 +32,25 @@ public:
 	class UPDA_InteractionPlayerConfig_C*         InteractionConfig;                                 // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPDA_DecalShadowConfig_C*               DecalShadowConfig;                                 // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          MonsterUseBodyEffect;                              // 0x00F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          UseProxy;                                          // 0x00F1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_F2[0x2];                                       // 0x00F2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DitherRemap;                                       // 0x00F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UMaterialInterface*>             ProxyMaterialsOverride;                            // 0x00F8(0x0010)(Edit, BlueprintVisible)
+	bool                                          ProxyRenderInMainPass;                             // 0x0108(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ProxyRenderShadow;                                 // 0x0109(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          ProxyRenderTrail;                                  // 0x010A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
+	float QuickInitAndAddData(class UObject* data, class ASkeletalMeshActor* meshActor);
+	bool GetInAudioShr();
+	void TempRecoverDither();
+	void TempRemoveDither();
+	void SetDitherUseHeadMaskHideEffect(bool enable);
+	void SetShouldCastShadow(bool castShadow);
+	float GetOpacityConsiderVisibility();
+	void SetEffectGroupProgress(float progress, int32 groupHandleId);
+	void AddFloatUpdateParamPermanentByIndexV2(class FName name, float value, class FName bodyName, float materialIndex);
+	class FName GetSkeletalMeshComponentBodyName(class USkeletalMeshComponent* skeletalComp);
 	void RemoveExternalMaterialReplaceV2(EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
 	void SetMaterialReplaceV2(class UMaterialInterface* material, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
 	void SetMaterialPropertyColorV2(class FName name, const struct FLinearColor& value, EKuroCharBodySpecifiedType bodyType, EKuroCharSlotSpecifiedType slotType, EKuroCharMeshPart meshPart);
@@ -45,9 +62,8 @@ public:
 	float AddMaterialControllerDataGroupWithAnimObject(class UObject* data1, class USkeletalMeshComponent* animObject);
 	float AddMaterialControllerDataWithAnimObject(class UObject* data1, class USkeletalMeshComponent* animObject, class UObject* userData);
 	void SetStarScarEnergy(float value);
-	void AddComponentWithEmptyMaterial(const class FString& skelName, class UMeshComponent* skeletalComp);
 	class USkeletalMeshComponent* GetSkeletalMeshComponent(const class FString& skelName);
-	float QuickInitAndAddData(class UObject* data, class ASkeletalMeshActor* meshActor);
+	void AddComponentWithEmptyMaterial(const class FString& skelName, class UMeshComponent* skeletalComp);
 	void SetEffectPause(int32 handle, bool paused);
 	void RemoveComponentInnerV2(const class FString& skelName);
 	void AddComponentInnerV2(const class FString& skelName1, class UMeshComponent* skeletalComp1, bool useEmptyMaterial);
@@ -61,6 +77,7 @@ public:
 	void ReceiveSeqTick(float deltaSeconds);
 	void RemoveComponentFromDecalShadow(const class FString& name);
 	void AddComponentForDecalShadow(const class FString& name, class UPrimitiveComponent* comp);
+	void DisableAllShadowByDecalShadowComponent();
 	void SetDecalShadowEnabled(bool enable);
 	float QuickInitAndAddDataGroupWithMeshComponent(class UObject* data, class UMeshComponent* meshComponent);
 	void SetBodyEffectOpacity(float opacity);
@@ -75,7 +92,6 @@ public:
 	void SetCapsuleDither(float value);
 	void SetMaterialPropertyColor(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, const class FString& propertyName, const struct FLinearColor& value);
 	void SetMaterialPropertyFloat(ECharacterBodySpecifiedType bodyType, float sectionIndex, ECharacterSlotSpecifiedType slotType, const class FString& propertyName, float value);
-	void DisableAllShadowByDecalShadowComponent();
 	void RemoveComponent(const class FString& skelName);
 	void AddComponent(const class FString& skelName, class UMeshComponent* skeletalComp);
 	class UPD_MaterialDebug_C* GetDebugInfo();
@@ -105,11 +121,17 @@ public:
 	}
 };
 static_assert(alignof(UCharRenderingComponent_C) == 0x000008, "Wrong alignment on UCharRenderingComponent_C");
-static_assert(sizeof(UCharRenderingComponent_C) == 0x0000F8, "Wrong size on UCharRenderingComponent_C");
+static_assert(sizeof(UCharRenderingComponent_C) == 0x000110, "Wrong size on UCharRenderingComponent_C");
 static_assert(offsetof(UCharRenderingComponent_C, UberGraphFrame) == 0x0000D8, "Member 'UCharRenderingComponent_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UCharRenderingComponent_C, InteractionConfig) == 0x0000E0, "Member 'UCharRenderingComponent_C::InteractionConfig' has a wrong offset!");
 static_assert(offsetof(UCharRenderingComponent_C, DecalShadowConfig) == 0x0000E8, "Member 'UCharRenderingComponent_C::DecalShadowConfig' has a wrong offset!");
 static_assert(offsetof(UCharRenderingComponent_C, MonsterUseBodyEffect) == 0x0000F0, "Member 'UCharRenderingComponent_C::MonsterUseBodyEffect' has a wrong offset!");
+static_assert(offsetof(UCharRenderingComponent_C, UseProxy) == 0x0000F1, "Member 'UCharRenderingComponent_C::UseProxy' has a wrong offset!");
+static_assert(offsetof(UCharRenderingComponent_C, DitherRemap) == 0x0000F4, "Member 'UCharRenderingComponent_C::DitherRemap' has a wrong offset!");
+static_assert(offsetof(UCharRenderingComponent_C, ProxyMaterialsOverride) == 0x0000F8, "Member 'UCharRenderingComponent_C::ProxyMaterialsOverride' has a wrong offset!");
+static_assert(offsetof(UCharRenderingComponent_C, ProxyRenderInMainPass) == 0x000108, "Member 'UCharRenderingComponent_C::ProxyRenderInMainPass' has a wrong offset!");
+static_assert(offsetof(UCharRenderingComponent_C, ProxyRenderShadow) == 0x000109, "Member 'UCharRenderingComponent_C::ProxyRenderShadow' has a wrong offset!");
+static_assert(offsetof(UCharRenderingComponent_C, ProxyRenderTrail) == 0x00010A, "Member 'UCharRenderingComponent_C::ProxyRenderTrail' has a wrong offset!");
 
 }
 

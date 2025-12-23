@@ -1257,15 +1257,421 @@ void ABP_Clouds_C::One8_失亡彼岸()
 }
 
 
-// Function BP_Clouds.BP_Clouds_C.19 总督日月同辉
+// Function BP_Clouds.BP_Clouds_C.19 黑潮风暴
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_Clouds_C::One9_总督日月同辉()
+void ABP_Clouds_C::One9_黑潮风暴()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_Clouds_C", "19 总督日月同辉");
+		Func = Class->GetFunction("BP_Clouds_C", "19 黑潮风暴");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.20 黑潮风暴加强
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two0_黑潮风暴加强()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "20 黑潮风暴加强");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.21 烈阳天气
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two1_烈阳天气()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "21 烈阳天气");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.21 总督日月同辉
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two1_总督日月同辉()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "21 总督日月同辉");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.20 穗波白天
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two0_穗波白天()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "20 穗波白天");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.21 穗波夜晚
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two1_穗波夜晚()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "21 穗波夜晚");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.22 穗波枯山水
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two2_穗波枯山水()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "22 穗波枯山水");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.23 穗波阴天
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two3_穗波阴天()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "23 穗波阴天");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.22 安全点白天
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two2_安全点白天()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "22 安全点白天");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.23 安全点夜晚
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two3_安全点夜晚()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "23 安全点夜晚");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.01 拉海落白天
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero1_拉海落白天()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "01 拉海落白天");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.02 拉海洛夜晚
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero2_拉海洛夜晚()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "02 拉海洛夜晚");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.03 磁暴前置
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero3_磁暴前置()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "03 磁暴前置");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.04 磁暴后置
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero4_磁暴后置()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "04 磁暴后置");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.05 星门Boss
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero5_星门Boss()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "05 星门Boss");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.06 坠落炉芯
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero6_坠落炉芯()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "06 坠落炉芯");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.07 炉芯内部
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero7_炉芯内部()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "07 炉芯内部");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.08 炉芯领主
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero8_炉芯领主()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "08 炉芯领主");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.09 浮光林白天
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Zero9_浮光林白天()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "09 浮光林白天");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.10 浮光林夜晚
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One0_浮光林夜晚()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "10 浮光林夜晚");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.11 拉海洛阴天
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One1_拉海洛阴天()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "11 拉海洛阴天");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.12 梵高
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One2_梵高()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "12 梵高");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.24 不渲染BP_Cloud控制的云
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::Two4_不渲染BP_Cloud控制的云()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "24 不渲染BP_Cloud控制的云");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.13 罗伊白天
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One3_罗伊白天()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "13 罗伊白天");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.14 罗伊夜晚
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One4_罗伊夜晚()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "14 罗伊夜晚");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.15 罗伊极光
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One5_罗伊极光()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "15 罗伊极光");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.16 罗伊初见
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One6_罗伊初见()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "16 罗伊初见");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.17 星海BOSS一阶
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One7_星海BOSS一阶()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "17 星海BOSS一阶");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.18 星海BOSS三阶
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One8_星海BOSS三阶()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "18 星海BOSS三阶");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_Clouds.BP_Clouds_C.19 拉海洛初见
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_Clouds_C::One9_拉海洛初见()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_Clouds_C", "19 拉海洛初见");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

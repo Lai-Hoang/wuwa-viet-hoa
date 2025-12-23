@@ -12,6 +12,7 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "NavigationSystem_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,6 +28,20 @@ public:
 static_assert(alignof(NavModifierVolume_SetAreaClass) == 0x000008, "Wrong alignment on NavModifierVolume_SetAreaClass");
 static_assert(sizeof(NavModifierVolume_SetAreaClass) == 0x000008, "Wrong size on NavModifierVolume_SetAreaClass");
 static_assert(offsetof(NavModifierVolume_SetAreaClass, NewAreaClass) == 0x000000, "Member 'NavModifierVolume_SetAreaClass::NewAreaClass' has a wrong offset!");
+
+// Function NavigationSystem.NavigationDataChunkTileVariantsActor.OnDataLayerStateChanged
+// 0x0010 (0x0010 - 0x0000)
+struct NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged final
+{
+public:
+	const class UDataLayer*                       DataLayer;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EDataLayerState                               State;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_9[0x7];                                        // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged) == 0x000008, "Wrong alignment on NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged");
+static_assert(sizeof(NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged) == 0x000010, "Wrong size on NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged");
+static_assert(offsetof(NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged, DataLayer) == 0x000000, "Member 'NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged::DataLayer' has a wrong offset!");
+static_assert(offsetof(NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged, State) == 0x000008, "Member 'NavigationDataChunkTileVariantsActor_OnDataLayerStateChanged::State' has a wrong offset!");
 
 // Function NavigationSystem.NavigationPath.EnableDebugDrawing
 // 0x0014 (0x0014 - 0x0000)
@@ -161,6 +176,33 @@ static_assert(offsetof(NavigationSystemV1_D_FindPathToLocationSynchronously, Fil
 static_assert(offsetof(NavigationSystemV1_D_FindPathToLocationSynchronously, bReturnPartial) == 0x000048, "Member 'NavigationSystemV1_D_FindPathToLocationSynchronously::bReturnPartial' has a wrong offset!");
 static_assert(offsetof(NavigationSystemV1_D_FindPathToLocationSynchronously, ReturnValue) == 0x000050, "Member 'NavigationSystemV1_D_FindPathToLocationSynchronously::ReturnValue' has a wrong offset!");
 
+// Function NavigationSystem.NavigationSystemV1.D_GetNearestPolyAreaID
+// 0x0060 (0x0060 - 0x0000)
+struct NavigationSystemV1_D_GetNearestPolyAreaID final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVectorDouble                          Point;                                             // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVectorDouble                          QueryExtent;                                       // 0x0020(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AreaID;                                            // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0040(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ANavigationData*                        NavData;                                           // 0x0048(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	const class UObject*                          Querier;                                           // 0x0050(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavigationSystemV1_D_GetNearestPolyAreaID) == 0x000008, "Wrong alignment on NavigationSystemV1_D_GetNearestPolyAreaID");
+static_assert(sizeof(NavigationSystemV1_D_GetNearestPolyAreaID) == 0x000060, "Wrong size on NavigationSystemV1_D_GetNearestPolyAreaID");
+static_assert(offsetof(NavigationSystemV1_D_GetNearestPolyAreaID, WorldContextObject) == 0x000000, "Member 'NavigationSystemV1_D_GetNearestPolyAreaID::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_GetNearestPolyAreaID, Point) == 0x000008, "Member 'NavigationSystemV1_D_GetNearestPolyAreaID::Point' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_GetNearestPolyAreaID, QueryExtent) == 0x000020, "Member 'NavigationSystemV1_D_GetNearestPolyAreaID::QueryExtent' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_GetNearestPolyAreaID, AreaID) == 0x000038, "Member 'NavigationSystemV1_D_GetNearestPolyAreaID::AreaID' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_GetNearestPolyAreaID, FilterClass) == 0x000040, "Member 'NavigationSystemV1_D_GetNearestPolyAreaID::FilterClass' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_GetNearestPolyAreaID, NavData) == 0x000048, "Member 'NavigationSystemV1_D_GetNearestPolyAreaID::NavData' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_GetNearestPolyAreaID, Querier) == 0x000050, "Member 'NavigationSystemV1_D_GetNearestPolyAreaID::Querier' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_GetNearestPolyAreaID, ReturnValue) == 0x000058, "Member 'NavigationSystemV1_D_GetNearestPolyAreaID::ReturnValue' has a wrong offset!");
+
 // Function NavigationSystem.NavigationSystemV1.D_IsStraightReachable
 // 0x0068 (0x0068 - 0x0000)
 struct NavigationSystemV1_D_IsStraightReachable final
@@ -184,6 +226,32 @@ static_assert(offsetof(NavigationSystemV1_D_IsStraightReachable, PathfindingCont
 static_assert(offsetof(NavigationSystemV1_D_IsStraightReachable, FilterClass) == 0x000040, "Member 'NavigationSystemV1_D_IsStraightReachable::FilterClass' has a wrong offset!");
 static_assert(offsetof(NavigationSystemV1_D_IsStraightReachable, FinderHalfExtent) == 0x000048, "Member 'NavigationSystemV1_D_IsStraightReachable::FinderHalfExtent' has a wrong offset!");
 static_assert(offsetof(NavigationSystemV1_D_IsStraightReachable, ReturnValue) == 0x000060, "Member 'NavigationSystemV1_D_IsStraightReachable::ReturnValue' has a wrong offset!");
+
+// Function NavigationSystem.NavigationSystemV1.D_K2_BatchProjectPointToNavigation
+// 0x0060 (0x0060 - 0x0000)
+struct NavigationSystemV1_D_K2_BatchProjectPointToNavigation final
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVectorDouble>                  Points;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FNavBatchProjectionResult>      ProjectedLocationsResults;                         // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class ANavigationData*                        NavData;                                           // 0x0028(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UNavigationQueryFilter>     FilterClass;                                       // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVectorDouble                          QueryExtent;                                       // 0x0038(0x0018)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        MaxError;                                          // 0x0050(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation) == 0x000008, "Wrong alignment on NavigationSystemV1_D_K2_BatchProjectPointToNavigation");
+static_assert(sizeof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation) == 0x000060, "Wrong size on NavigationSystemV1_D_K2_BatchProjectPointToNavigation");
+static_assert(offsetof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation, WorldContextObject) == 0x000000, "Member 'NavigationSystemV1_D_K2_BatchProjectPointToNavigation::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation, Points) == 0x000008, "Member 'NavigationSystemV1_D_K2_BatchProjectPointToNavigation::Points' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation, ProjectedLocationsResults) == 0x000018, "Member 'NavigationSystemV1_D_K2_BatchProjectPointToNavigation::ProjectedLocationsResults' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation, NavData) == 0x000028, "Member 'NavigationSystemV1_D_K2_BatchProjectPointToNavigation::NavData' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation, FilterClass) == 0x000030, "Member 'NavigationSystemV1_D_K2_BatchProjectPointToNavigation::FilterClass' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation, QueryExtent) == 0x000038, "Member 'NavigationSystemV1_D_K2_BatchProjectPointToNavigation::QueryExtent' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation, MaxError) == 0x000050, "Member 'NavigationSystemV1_D_K2_BatchProjectPointToNavigation::MaxError' has a wrong offset!");
+static_assert(offsetof(NavigationSystemV1_D_K2_BatchProjectPointToNavigation, ReturnValue) == 0x000058, "Member 'NavigationSystemV1_D_K2_BatchProjectPointToNavigation::ReturnValue' has a wrong offset!");
 
 // Function NavigationSystem.NavigationSystemV1.D_K2_GetRandomLocationInNavigableRadius
 // 0x0058 (0x0058 - 0x0000)
@@ -920,6 +988,17 @@ public:
 static_assert(alignof(NavRelevantComponent_SetNavigationRelevancy) == 0x000001, "Wrong alignment on NavRelevantComponent_SetNavigationRelevancy");
 static_assert(sizeof(NavRelevantComponent_SetNavigationRelevancy) == 0x000001, "Wrong size on NavRelevantComponent_SetNavigationRelevancy");
 static_assert(offsetof(NavRelevantComponent_SetNavigationRelevancy, bRelevant) == 0x000000, "Member 'NavRelevantComponent_SetNavigationRelevancy::bRelevant' has a wrong offset!");
+
+// Function NavigationSystem.NavMeshTileVariantFileSubsystem.IsStreamingCompleted
+// 0x0001 (0x0001 - 0x0000)
+struct NavMeshTileVariantFileSubsystem_IsStreamingCompleted final
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(NavMeshTileVariantFileSubsystem_IsStreamingCompleted) == 0x000001, "Wrong alignment on NavMeshTileVariantFileSubsystem_IsStreamingCompleted");
+static_assert(sizeof(NavMeshTileVariantFileSubsystem_IsStreamingCompleted) == 0x000001, "Wrong size on NavMeshTileVariantFileSubsystem_IsStreamingCompleted");
+static_assert(offsetof(NavMeshTileVariantFileSubsystem_IsStreamingCompleted, ReturnValue) == 0x000000, "Member 'NavMeshTileVariantFileSubsystem_IsStreamingCompleted::ReturnValue' has a wrong offset!");
 
 // Function NavigationSystem.NavModifierComponent.SetAreaClass
 // 0x0008 (0x0008 - 0x0000)

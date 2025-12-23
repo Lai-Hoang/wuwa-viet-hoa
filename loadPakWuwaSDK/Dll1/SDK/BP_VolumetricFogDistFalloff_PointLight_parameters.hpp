@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 
 
@@ -65,49 +65,58 @@ static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_UserConstruction
 static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000001, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_UserConstructionScript::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 // Function BP_VolumetricFogDistFalloff_PointLight.BP_VolumetricFogDistFalloff_PointLight_C.PointFunction
-// 0x0098 (0x0098 - 0x0000)
+// 0x00A8 (0x00A8 - 0x0000)
 struct BP_VolumetricFogDistFalloff_PointLight_C_PointFunction final
 {
 public:
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x0010(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_D_Vector_Distance_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue;           // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_39[0x3];                                       // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetLevelEditorCameraLocationAndForward_Position; // 0x0040(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_GetLevelEditorCameraLocationAndForward_Rotation; // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue; // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_Conv_VectorToVectorDouble_ReturnValue;    // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVectorDouble                          CallFunc_D_GetCameraLocation_ReturnValue;          // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_GetConsoleVariableFloatValue_ReturnValue; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWorld*                                 CallFunc_GetWorld_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue;           // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsGame_ReturnValue;                       // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_12[0x2];                                       // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue;          // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Subtract_FloatFloat_ReturnValue_1;        // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Divide_FloatFloat_ReturnValue;            // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_FloatFloat_ReturnValue_1;         // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_25[0x3];                                       // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_D_K2_GetComponentLocation_ReturnValue;    // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_D_Vector_Distance_ReturnValue;            // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Conv_DoubleToFloat_ReturnValue;           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_FloatFloat_ReturnValue;              // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_IsEditor_ReturnValue;                     // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_4E[0x2];                                       // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetLevelEditorCameraLocationAndForward_Position; // 0x0050(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_GetLevelEditorCameraLocationAndForward_Rotation; // 0x005C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue; // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_69[0x7];                                       // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVectorDouble                          CallFunc_Conv_VectorToVectorDouble_ReturnValue;    // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0088(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVectorDouble                          CallFunc_D_GetCameraLocation_ReturnValue;          // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction) == 0x000008, "Wrong alignment on BP_VolumetricFogDistFalloff_PointLight_C_PointFunction");
-static_assert(sizeof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction) == 0x000098, "Wrong size on BP_VolumetricFogDistFalloff_PointLight_C_PointFunction");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000000, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x000004, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000008, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Greater_FloatFloat_ReturnValue) == 0x00000C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x000010, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_Vector_Distance_ReturnValue) == 0x000028, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Less_FloatFloat_ReturnValue) == 0x000030, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000034, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_IsEditor_ReturnValue) == 0x000038, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x00003C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_Position) == 0x000040, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_Position' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_Rotation) == 0x00004C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_Rotation' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue) == 0x000058, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetPlayerController_ReturnValue) == 0x000060, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x000068, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_GetCameraLocation_ReturnValue) == 0x000080, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_GetCameraLocation_ReturnValue' has a wrong offset!");
+static_assert(sizeof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction) == 0x0000A8, "Wrong size on BP_VolumetricFogDistFalloff_PointLight_C_PointFunction");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetConsoleVariableFloatValue_ReturnValue) == 0x000000, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetConsoleVariableFloatValue_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetWorld_ReturnValue) == 0x000008, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetWorld_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Greater_FloatFloat_ReturnValue) == 0x000010, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Greater_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_IsGame_ReturnValue) == 0x000011, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_IsGame_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000014, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Subtract_FloatFloat_ReturnValue) == 0x000018, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Subtract_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Subtract_FloatFloat_ReturnValue_1) == 0x00001C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Subtract_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Divide_FloatFloat_ReturnValue) == 0x000020, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Divide_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Greater_FloatFloat_ReturnValue_1) == 0x000024, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Greater_FloatFloat_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_K2_GetComponentLocation_ReturnValue) == 0x000028, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_Vector_Distance_ReturnValue) == 0x000040, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_Vector_Distance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Conv_DoubleToFloat_ReturnValue) == 0x000048, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Conv_DoubleToFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Less_FloatFloat_ReturnValue) == 0x00004C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Less_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_IsEditor_ReturnValue) == 0x00004D, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_IsEditor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_Position) == 0x000050, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_Position' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_Rotation) == 0x00005C, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_Rotation' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue) == 0x000068, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetLevelEditorCameraLocationAndForward_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_Conv_VectorToVectorDouble_ReturnValue) == 0x000070, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_Conv_VectorToVectorDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_GetPlayerController_ReturnValue) == 0x000088, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_VolumetricFogDistFalloff_PointLight_C_PointFunction, CallFunc_D_GetCameraLocation_ReturnValue) == 0x000090, "Member 'BP_VolumetricFogDistFalloff_PointLight_C_PointFunction::CallFunc_D_GetCameraLocation_ReturnValue' has a wrong offset!");
 
 }
 

@@ -80,21 +80,25 @@ static_assert(offsetof(UKuroEnviInteractionComponent, SPModelColorMap) == 0x0001
 static_assert(offsetof(UKuroEnviInteractionComponent, RainOcclusionTraceElement) == 0x0001B0, "Member 'UKuroEnviInteractionComponent::RainOcclusionTraceElement' has a wrong offset!");
 
 // Class KuroInteractionEffect.KuroInteractionEffectSystem
-// 0x0228 (0x0260 - 0x0038)
+// 0x02D8 (0x0310 - 0x0038)
 class alignas(0x10) UKuroInteractionEffectSystem final : public UWorldSubsystem
 {
 public:
 	uint8                                         Pad_38[0x8];                                       // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<TWeakObjectPtr<class UKuroEnviInteractionComponent>, struct FKuroEnviInteractionData> EnviInteractionCollections; // 0x0040(0x0050)(NativeAccessSpecifierPublic)
+	TMap<TWeakObjectPtr<class UKuroEnviInteractionComponent>, struct FKuroEnviInteractionData> EnviInteractionCollections; // 0x0040(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPublic)
 	TMap<TWeakObjectPtr<class UNiagaraComponent>, TWeakObjectPtr<class UKuroEnviInteractionComponent>> SPModelEICompCollections; // 0x0090(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	TMap<TWeakObjectPtr<class UNiagaraComponent>, TWeakObjectPtr<class UKuroEnviInteractionComponent>> NDIKuroRenderingCollections; // 0x00E0(0x0050)(ExportObject, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_130[0x130];                                    // 0x0130(0x0130)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_130[0x150];                                    // 0x0130(0x0150)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialParameterCollection*           WaterSimMPC;                                       // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_288[0x88];                                     // 0x0288(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UKuroInteractionEffectSystem* GetKuroInteractionEffectSystem(class UWorld* World);
 
 	void RegisterNDIKuroRenderingEIComp(class UNiagaraComponent* InNiagaraComp, class UKuroEnviInteractionComponent* SourceEIComp);
 	void RegisterSPModelCharacterEIComp(class UNiagaraComponent* InNiagaraComp, class UKuroEnviInteractionComponent* SourceEIComp);
+	int32 SearchInteractionFoliage(const class FString& FoliageTypeName);
+	struct FSoftObjectPath SearchInteractionPlacementTriggerActor(class UStaticMesh* PlacementMesh);
 
 public:
 	static class UClass* StaticClass()
@@ -107,10 +111,11 @@ public:
 	}
 };
 static_assert(alignof(UKuroInteractionEffectSystem) == 0x000010, "Wrong alignment on UKuroInteractionEffectSystem");
-static_assert(sizeof(UKuroInteractionEffectSystem) == 0x000260, "Wrong size on UKuroInteractionEffectSystem");
+static_assert(sizeof(UKuroInteractionEffectSystem) == 0x000310, "Wrong size on UKuroInteractionEffectSystem");
 static_assert(offsetof(UKuroInteractionEffectSystem, EnviInteractionCollections) == 0x000040, "Member 'UKuroInteractionEffectSystem::EnviInteractionCollections' has a wrong offset!");
 static_assert(offsetof(UKuroInteractionEffectSystem, SPModelEICompCollections) == 0x000090, "Member 'UKuroInteractionEffectSystem::SPModelEICompCollections' has a wrong offset!");
 static_assert(offsetof(UKuroInteractionEffectSystem, NDIKuroRenderingCollections) == 0x0000E0, "Member 'UKuroInteractionEffectSystem::NDIKuroRenderingCollections' has a wrong offset!");
+static_assert(offsetof(UKuroInteractionEffectSystem, WaterSimMPC) == 0x000280, "Member 'UKuroInteractionEffectSystem::WaterSimMPC' has a wrong offset!");
 
 }
 

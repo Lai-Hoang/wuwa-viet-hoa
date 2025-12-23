@@ -22,6 +22,24 @@ namespace SDK
 class UKuroPrepareStatementLib final : public UBlueprintFunctionLibrary
 {
 public:
+	static bool ClearBindings(const int32 InId);
+	static void CloseAllConnection();
+	static void CloseConnection(const int32 InId);
+	static int32 CreateStatement(const class FName& InDbPath, const class FString& InCommand);
+	static void DestroyStatement(const int32 InId);
+	static bool GetColumnValueBytes(const int32 InId, const int32 InColumnIndex, struct FArrayBuffer* OutValue);
+	static bool GetColumnValueInt32(const int32 InId, const int32 InColumnIndex, int32* OutValue);
+	static int32 GetOrCreateStatement(const class FName& InDbPath, const class FString& InCommand);
+	static bool Reset(const int32 InId);
+	static bool SetBindingValueBigInt(const int32 InId, const int32 InBindingIndex, const int64 InValue);
+	static bool SetBindingValueBool(const int32 InId, const int32 InBindingIndex, const bool InValue);
+	static bool SetBindingValueFloat(const int32 InId, const int32 InBindingIndex, const float InValue);
+	static bool SetBindingValueFloat64(const int32 InId, const int32 InBindingIndex, const double InValue);
+	static bool SetBindingValueInt(const int32 InId, const int32 InBindingIndex, const int32 InValue);
+	static bool SetBindingValueString(const int32 InId, const int32 InBindingIndex, const class FString& InValue);
+	static int32 Step(const int32 InId);
+
+public:
 	static class UClass* StaticClass()
 	{
 		return StaticClassImpl<"KuroPrepareStatementLib">();

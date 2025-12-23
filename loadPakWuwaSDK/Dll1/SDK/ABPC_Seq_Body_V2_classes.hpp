@@ -19,7 +19,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ABPC_Seq_Body_V2.ABPC_Seq_Body_V2_C
-// 0x00C0 (0x0180 - 0x00C0)
+// 0x0108 (0x01C8 - 0x00C0)
 class UABPC_Seq_Body_V2_C final : public UActorComponent
 {
 public:
@@ -42,15 +42,21 @@ public:
 	struct FRotator                               Add_Bip001RHand;                                   // 0x0168(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	float                                         SeqLHandWeight;                                    // 0x0174(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
 	float                                         SeqRHandWeight;                                    // 0x0178(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               Add_Bip001LThigh;                                  // 0x017C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Add_Bip001LCalf;                                   // 0x0188(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Add_Bip001LFoot;                                   // 0x0194(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Add_Bip001RThigh;                                  // 0x01A0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Add_Bip001RCalf;                                   // 0x01AC(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	struct FRotator                               Add_Bip001RFoot;                                   // 0x01B8(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
-	void SetAnimDataVectorByOwner(TMap<class FName, struct FVector>& VectorMap);
-	void SetAnimDataFloatByOwner(TArray<struct FNamedCurveValue>& InCurves);
 	void ProcessEye(const struct FVector& EyeLookAt, float AngleScale);
+	void SetAnimDataFloatByOwner(TArray<struct FNamedCurveValue>& InCurves);
+	void SetAnimDataVectorByOwner(TMap<class FName, struct FVector>& VectorMap);
 
-	float GetCurveValue(class FName CurveName) const;
-	void GetCurves(TArray<struct FNamedCurveValue>* OutValues) const;
 	class FName GetBindingName() const;
+	void GetCurves(TArray<struct FNamedCurveValue>* OutValues) const;
+	float GetCurveValue(class FName CurveName) const;
 
 public:
 	static class UClass* StaticClass()
@@ -63,7 +69,7 @@ public:
 	}
 };
 static_assert(alignof(UABPC_Seq_Body_V2_C) == 0x000008, "Wrong alignment on UABPC_Seq_Body_V2_C");
-static_assert(sizeof(UABPC_Seq_Body_V2_C) == 0x000180, "Wrong size on UABPC_Seq_Body_V2_C");
+static_assert(sizeof(UABPC_Seq_Body_V2_C) == 0x0001C8, "Wrong size on UABPC_Seq_Body_V2_C");
 static_assert(offsetof(UABPC_Seq_Body_V2_C, 启用物理模拟) == 0x0000C0, "Member 'UABPC_Seq_Body_V2_C::启用物理模拟' has a wrong offset!");
 static_assert(offsetof(UABPC_Seq_Body_V2_C, 物理模拟权重) == 0x0000C4, "Member 'UABPC_Seq_Body_V2_C::物理模拟权重' has a wrong offset!");
 static_assert(offsetof(UABPC_Seq_Body_V2_C, NamedCurves) == 0x0000C8, "Member 'UABPC_Seq_Body_V2_C::NamedCurves' has a wrong offset!");
@@ -82,6 +88,12 @@ static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LHand) == 0x00015C, "Membe
 static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RHand) == 0x000168, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RHand' has a wrong offset!");
 static_assert(offsetof(UABPC_Seq_Body_V2_C, SeqLHandWeight) == 0x000174, "Member 'UABPC_Seq_Body_V2_C::SeqLHandWeight' has a wrong offset!");
 static_assert(offsetof(UABPC_Seq_Body_V2_C, SeqRHandWeight) == 0x000178, "Member 'UABPC_Seq_Body_V2_C::SeqRHandWeight' has a wrong offset!");
+static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LThigh) == 0x00017C, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LThigh' has a wrong offset!");
+static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LCalf) == 0x000188, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LCalf' has a wrong offset!");
+static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001LFoot) == 0x000194, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001LFoot' has a wrong offset!");
+static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RThigh) == 0x0001A0, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RThigh' has a wrong offset!");
+static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RCalf) == 0x0001AC, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RCalf' has a wrong offset!");
+static_assert(offsetof(UABPC_Seq_Body_V2_C, Add_Bip001RFoot) == 0x0001B8, "Member 'UABPC_Seq_Body_V2_C::Add_Bip001RFoot' has a wrong offset!");
 
 }
 

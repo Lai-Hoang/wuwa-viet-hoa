@@ -65,6 +65,34 @@ void ASceneEffectStatePostVolume_C::SetEffect(float Value)
 }
 
 
+// Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.DisableVolume
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ASceneEffectStatePostVolume_C::DisableVolume()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SceneEffectStatePostVolume_C", "DisableVolume");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.EnableVolume
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void ASceneEffectStatePostVolume_C::EnableVolume()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SceneEffectStatePostVolume_C", "EnableVolume");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.SetToxicFog
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -102,34 +130,6 @@ void ASceneEffectStatePostVolume_C::SetAirWall(float value_0)
 	Parms.value_0 = value_0;
 
 	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.DisableVolume
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ASceneEffectStatePostVolume_C::DisableVolume()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SceneEffectStatePostVolume_C", "DisableVolume");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function SceneEffectStatePostVolume.SceneEffectStatePostVolume_C.EnableVolume
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void ASceneEffectStatePostVolume_C::EnableVolume()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SceneEffectStatePostVolume_C", "EnableVolume");
-
-	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

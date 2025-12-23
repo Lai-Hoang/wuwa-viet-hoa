@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "ECharacterLoadType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EMorphType_structs.hpp"
 #include "SCharacterMorphInfo_structs.hpp"
 
@@ -19,7 +20,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SCharacterFightInfo.SCharacterFightInfo
-// 0x0260 (0x0260 - 0x0000)
+// 0x02B0 (0x02B0 - 0x0000)
 struct FSCharacterFightInfo final
 {
 public:
@@ -30,12 +31,13 @@ public:
 	TMap<ECharacterLoadType, TSoftObjectPtr<class UDataTable>> SkillDataTableMap_31_C353E1CA4DD9A971C0086299955AA477; // 0x00C0(0x0050)(Edit, BlueprintVisible)
 	TMap<ECharacterLoadType, TSoftObjectPtr<class UDataTable>> BulletDataTableMap_32_993E48644937B84BFABE88ADF93218A6; // 0x0110(0x0050)(Edit, BlueprintVisible)
 	TMap<ECharacterLoadType, TSoftObjectPtr<class UDataTable>> HitEffectTableMap_41_D98FA35148C90BA224A7C3AAF6887855; // 0x0160(0x0050)(Edit, BlueprintVisible)
-	TSoftClassPtr<class UClass>                   LinkCharacter_48_3C1740A14D0A9ECA793A05BD082D88BF; // 0x01B0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TSoftObjectPtr<class UDataTable>              CustomParamTable_51_71C3276D47A3B1A7725BB5A208E1F73F; // 0x01E0(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
-	TMap<EMorphType, struct FSCharacterMorphInfo> MorphModelInfoMap_61_CD000ED74BCA2E80EAB97F8F0515E51F; // 0x0210(0x0050)(Edit, BlueprintVisible)
+	TMap<ECharacterLoadType, struct FSoftClassPath> BpInputMap_72_85C0B54E4061DB93B03344A4CBFA1B8A;  // 0x01B0(0x0050)(Edit, BlueprintVisible)
+	TSoftClassPtr<class UClass>                   LinkCharacter_48_3C1740A14D0A9ECA793A05BD082D88BF; // 0x0200(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TSoftObjectPtr<class UDataTable>              CustomParamTable_51_71C3276D47A3B1A7725BB5A208E1F73F; // 0x0230(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	TMap<EMorphType, struct FSCharacterMorphInfo> MorphModelInfoMap_61_CD000ED74BCA2E80EAB97F8F0515E51F; // 0x0260(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
 };
 static_assert(alignof(FSCharacterFightInfo) == 0x000008, "Wrong alignment on FSCharacterFightInfo");
-static_assert(sizeof(FSCharacterFightInfo) == 0x000260, "Wrong size on FSCharacterFightInfo");
+static_assert(sizeof(FSCharacterFightInfo) == 0x0002B0, "Wrong size on FSCharacterFightInfo");
 static_assert(offsetof(FSCharacterFightInfo, SkillDataTable_2_5738D0894D6627807A9BD6A84D2ACCE8) == 0x000000, "Member 'FSCharacterFightInfo::SkillDataTable_2_5738D0894D6627807A9BD6A84D2ACCE8' has a wrong offset!");
 static_assert(offsetof(FSCharacterFightInfo, BulletDataTable_4_ADE2A2EE46C27E8E76BA4E8EC23BF3B6) == 0x000030, "Member 'FSCharacterFightInfo::BulletDataTable_4_ADE2A2EE46C27E8E76BA4E8EC23BF3B6' has a wrong offset!");
 static_assert(offsetof(FSCharacterFightInfo, PartHitEffect_10_5B10341B4A72D9A56420A3BFEDED352F) == 0x000060, "Member 'FSCharacterFightInfo::PartHitEffect_10_5B10341B4A72D9A56420A3BFEDED352F' has a wrong offset!");
@@ -43,9 +45,10 @@ static_assert(offsetof(FSCharacterFightInfo, HitEffectTable_38_C0CF41B14FE20AD7B
 static_assert(offsetof(FSCharacterFightInfo, SkillDataTableMap_31_C353E1CA4DD9A971C0086299955AA477) == 0x0000C0, "Member 'FSCharacterFightInfo::SkillDataTableMap_31_C353E1CA4DD9A971C0086299955AA477' has a wrong offset!");
 static_assert(offsetof(FSCharacterFightInfo, BulletDataTableMap_32_993E48644937B84BFABE88ADF93218A6) == 0x000110, "Member 'FSCharacterFightInfo::BulletDataTableMap_32_993E48644937B84BFABE88ADF93218A6' has a wrong offset!");
 static_assert(offsetof(FSCharacterFightInfo, HitEffectTableMap_41_D98FA35148C90BA224A7C3AAF6887855) == 0x000160, "Member 'FSCharacterFightInfo::HitEffectTableMap_41_D98FA35148C90BA224A7C3AAF6887855' has a wrong offset!");
-static_assert(offsetof(FSCharacterFightInfo, LinkCharacter_48_3C1740A14D0A9ECA793A05BD082D88BF) == 0x0001B0, "Member 'FSCharacterFightInfo::LinkCharacter_48_3C1740A14D0A9ECA793A05BD082D88BF' has a wrong offset!");
-static_assert(offsetof(FSCharacterFightInfo, CustomParamTable_51_71C3276D47A3B1A7725BB5A208E1F73F) == 0x0001E0, "Member 'FSCharacterFightInfo::CustomParamTable_51_71C3276D47A3B1A7725BB5A208E1F73F' has a wrong offset!");
-static_assert(offsetof(FSCharacterFightInfo, MorphModelInfoMap_61_CD000ED74BCA2E80EAB97F8F0515E51F) == 0x000210, "Member 'FSCharacterFightInfo::MorphModelInfoMap_61_CD000ED74BCA2E80EAB97F8F0515E51F' has a wrong offset!");
+static_assert(offsetof(FSCharacterFightInfo, BpInputMap_72_85C0B54E4061DB93B03344A4CBFA1B8A) == 0x0001B0, "Member 'FSCharacterFightInfo::BpInputMap_72_85C0B54E4061DB93B03344A4CBFA1B8A' has a wrong offset!");
+static_assert(offsetof(FSCharacterFightInfo, LinkCharacter_48_3C1740A14D0A9ECA793A05BD082D88BF) == 0x000200, "Member 'FSCharacterFightInfo::LinkCharacter_48_3C1740A14D0A9ECA793A05BD082D88BF' has a wrong offset!");
+static_assert(offsetof(FSCharacterFightInfo, CustomParamTable_51_71C3276D47A3B1A7725BB5A208E1F73F) == 0x000230, "Member 'FSCharacterFightInfo::CustomParamTable_51_71C3276D47A3B1A7725BB5A208E1F73F' has a wrong offset!");
+static_assert(offsetof(FSCharacterFightInfo, MorphModelInfoMap_61_CD000ED74BCA2E80EAB97F8F0515E51F) == 0x000260, "Member 'FSCharacterFightInfo::MorphModelInfoMap_61_CD000ED74BCA2E80EAB97F8F0515E51F' has a wrong offset!");
 
 }
 

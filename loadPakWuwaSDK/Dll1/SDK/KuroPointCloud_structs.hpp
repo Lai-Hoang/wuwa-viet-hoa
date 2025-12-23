@@ -16,6 +16,31 @@
 namespace SDK
 {
 
+// Enum KuroPointCloud.EKPCWorldComponentDynamicPointMode
+// NumValues: 0x0004
+enum class EKPCWorldComponentDynamicPointMode : uint8
+{
+	None                                     = 0,
+	SkeletalMeshSockets                      = 1,
+	Max                                      = 2,
+	EKPCWorldComponentDynamicPointMode_MAX   = 3,
+};
+
+// ScriptStruct KuroPointCloud.KuroPointCloudCacheCustomFloat
+// 0x0020 (0x0020 - 0x0000)
+struct FKuroPointCloudCacheCustomFloat final
+{
+public:
+	class FName                                   Name;                                              // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Channel;                                           // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<float>                                 Data;                                              // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FKuroPointCloudCacheCustomFloat) == 0x000008, "Wrong alignment on FKuroPointCloudCacheCustomFloat");
+static_assert(sizeof(FKuroPointCloudCacheCustomFloat) == 0x000020, "Wrong size on FKuroPointCloudCacheCustomFloat");
+static_assert(offsetof(FKuroPointCloudCacheCustomFloat, Name) == 0x000000, "Member 'FKuroPointCloudCacheCustomFloat::Name' has a wrong offset!");
+static_assert(offsetof(FKuroPointCloudCacheCustomFloat, Channel) == 0x00000C, "Member 'FKuroPointCloudCacheCustomFloat::Channel' has a wrong offset!");
+static_assert(offsetof(FKuroPointCloudCacheCustomFloat, Data) == 0x000010, "Member 'FKuroPointCloudCacheCustomFloat::Data' has a wrong offset!");
+
 // ScriptStruct KuroPointCloud.KuroPointCloudInstanceQueryResult
 // 0x0020 (0x0020 - 0x0000)
 struct alignas(0x08) FKuroPointCloudInstanceQueryResult final
@@ -119,6 +144,20 @@ static_assert(sizeof(FKuroPointCloudStreamingCell) == 0x000018, "Wrong size on F
 static_assert(offsetof(FKuroPointCloudStreamingCell, CellX) == 0x000000, "Member 'FKuroPointCloudStreamingCell::CellX' has a wrong offset!");
 static_assert(offsetof(FKuroPointCloudStreamingCell, CellY) == 0x000004, "Member 'FKuroPointCloudStreamingCell::CellY' has a wrong offset!");
 static_assert(offsetof(FKuroPointCloudStreamingCell, InstanceData) == 0x000008, "Member 'FKuroPointCloudStreamingCell::InstanceData' has a wrong offset!");
+
+// ScriptStruct KuroPointCloud.KPCWDynamicPointSocketInfo
+// 0x0040 (0x0040 - 0x0000)
+struct FKPCWDynamicPointSocketInfo final
+{
+public:
+	class FName                                   SocketName;                                        // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             SocketSpaceTransform;                              // 0x0010(0x0030)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FKPCWDynamicPointSocketInfo) == 0x000010, "Wrong alignment on FKPCWDynamicPointSocketInfo");
+static_assert(sizeof(FKPCWDynamicPointSocketInfo) == 0x000040, "Wrong size on FKPCWDynamicPointSocketInfo");
+static_assert(offsetof(FKPCWDynamicPointSocketInfo, SocketName) == 0x000000, "Member 'FKPCWDynamicPointSocketInfo::SocketName' has a wrong offset!");
+static_assert(offsetof(FKPCWDynamicPointSocketInfo, SocketSpaceTransform) == 0x000010, "Member 'FKPCWDynamicPointSocketInfo::SocketSpaceTransform' has a wrong offset!");
 
 // ScriptStruct KuroPointCloud.KuroPointCloudWorldCollection
 // 0x0010 (0x0010 - 0x0000)

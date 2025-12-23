@@ -17,17 +17,23 @@
 namespace SDK
 {
 
-// Function BP_EffectPreview.BP_EffectPreview_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Function BP_EffectPreview.BP_EffectPreview_C.ExecuteUbergraph_BP_EffectPreview
+// (Final, UbergraphFunction)
+// Parameters:
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ABP_EffectPreview_C::UserConstructionScript()
+void ABP_EffectPreview_C::ExecuteUbergraph_BP_EffectPreview(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EffectPreview_C", "UserConstructionScript");
+		Func = Class->GetFunction("BP_EffectPreview_C", "ExecuteUbergraph_BP_EffectPreview");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::BP_EffectPreview_C_ExecuteUbergraph_BP_EffectPreview Parms{};
+
+	Parms.EntryPoint = EntryPoint;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -51,23 +57,17 @@ void ABP_EffectPreview_C::EditorTick(float DeltaSeconds)
 }
 
 
-// Function BP_EffectPreview.BP_EffectPreview_C.ExecuteUbergraph_BP_EffectPreview
-// (Final, UbergraphFunction)
-// Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_EffectPreview.BP_EffectPreview_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
-void ABP_EffectPreview_C::ExecuteUbergraph_BP_EffectPreview(int32 EntryPoint)
+void ABP_EffectPreview_C::UserConstructionScript()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_EffectPreview_C", "ExecuteUbergraph_BP_EffectPreview");
+		Func = Class->GetFunction("BP_EffectPreview_C", "UserConstructionScript");
 
-	Params::BP_EffectPreview_C_ExecuteUbergraph_BP_EffectPreview Parms{};
-
-	Parms.EntryPoint = EntryPoint;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 }

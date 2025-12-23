@@ -10,17 +10,17 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "Engine_classes.hpp"
 #include "SNpcSetupPartInfo_structs.hpp"
 #include "EBodyPartName_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_NpcCombinedMesh.BP_NpcCombinedMesh_C
-// 0x0120 (0x03D0 - 0x02B0)
+// 0x0128 (0x03D8 - 0x02B0)
 class ABP_NpcCombinedMesh_C : public AActor
 {
 public:
@@ -39,13 +39,14 @@ public:
 	uint8                                         Pad_3AC[0x4];                                      // 0x03AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USkeletalMeshComponent*>         SkelMeshArray;                                     // 0x03B0(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
 	TArray<class UMaterialInstance*>              MINPCs;                                            // 0x03C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                          AdaptMaterialController;                           // 0x03D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
 
 public:
 	void SetupNpcMesh(class UPD_NpcSetupData_C* Data, bool bIgnoreSockets, bool* IsSuc, TArray<class USkeletalMeshComponent*>* SkleMain);
 	void ResetNpcMesh();
 	void SetupSkeletalMeshComponents(bool* Suc);
 	void SetupSockets();
-	void SetupSocket(class FName SocketName, const struct FTransform& Transform, class USkeletalMesh* SkeletalMesh, bool* Suc, class USkeletalMeshComponent** SkeletalComp);
+	void Setup_Socket(class FName SocketName, const struct FTransform& Transform, class USkeletalMesh* SkeletalMesh, TArray<struct FMorphTargetPreviewItem>& MorphTargets, TArray<struct FSNpcHookPartMaterial>& Materials, int32 index, bool* Suc, class USkeletalMeshComponent** SkeletalComp);
 	void GetArmTransform(const struct FTransform& InTransform, int32 Index_0, struct FTransform* OutTransform);
 	void GetWeaponTransform(const struct FTransform& InTransform, int32 Index_0, struct FTransform* OutTransform);
 	void GetLegTransform(const struct FTransform& InTransform, int32 Index_0, struct FTransform* OutTransform);
@@ -70,7 +71,7 @@ public:
 	}
 };
 static_assert(alignof(ABP_NpcCombinedMesh_C) == 0x000008, "Wrong alignment on ABP_NpcCombinedMesh_C");
-static_assert(sizeof(ABP_NpcCombinedMesh_C) == 0x0003D0, "Wrong size on ABP_NpcCombinedMesh_C");
+static_assert(sizeof(ABP_NpcCombinedMesh_C) == 0x0003D8, "Wrong size on ABP_NpcCombinedMesh_C");
 static_assert(offsetof(ABP_NpcCombinedMesh_C, Skel_Main) == 0x0002B0, "Member 'ABP_NpcCombinedMesh_C::Skel_Main' has a wrong offset!");
 static_assert(offsetof(ABP_NpcCombinedMesh_C, DefaultSceneRoot) == 0x0002B8, "Member 'ABP_NpcCombinedMesh_C::DefaultSceneRoot' has a wrong offset!");
 static_assert(offsetof(ABP_NpcCombinedMesh_C, NpcData) == 0x0002C0, "Member 'ABP_NpcCombinedMesh_C::NpcData' has a wrong offset!");
@@ -84,6 +85,7 @@ static_assert(offsetof(ABP_NpcCombinedMesh_C, Forced_LOD) == 0x000398, "Member '
 static_assert(offsetof(ABP_NpcCombinedMesh_C, SkinColor) == 0x00039C, "Member 'ABP_NpcCombinedMesh_C::SkinColor' has a wrong offset!");
 static_assert(offsetof(ABP_NpcCombinedMesh_C, SkelMeshArray) == 0x0003B0, "Member 'ABP_NpcCombinedMesh_C::SkelMeshArray' has a wrong offset!");
 static_assert(offsetof(ABP_NpcCombinedMesh_C, MINPCs) == 0x0003C0, "Member 'ABP_NpcCombinedMesh_C::MINPCs' has a wrong offset!");
+static_assert(offsetof(ABP_NpcCombinedMesh_C, AdaptMaterialController) == 0x0003D0, "Member 'ABP_NpcCombinedMesh_C::AdaptMaterialController' has a wrong offset!");
 
 }
 

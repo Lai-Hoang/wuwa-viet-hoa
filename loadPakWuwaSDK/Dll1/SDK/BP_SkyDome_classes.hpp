@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "TimeOfDayData_structs.hpp"
-#include "WeatherData_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "PresetChangeInfo_structs.hpp"
+#include "WeatherData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "TimeOfDayCurves_structs.hpp"
 #include "PresetSelection_structs.hpp"
+#include "TimeOfDayData_structs.hpp"
 
 
 namespace SDK

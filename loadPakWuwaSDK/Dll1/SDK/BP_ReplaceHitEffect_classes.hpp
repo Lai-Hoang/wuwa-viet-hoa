@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "STimeScale_structs.hpp"
 #include "Engine_classes.hpp"
+#include "STimeScale_structs.hpp"
 
 
 namespace SDK

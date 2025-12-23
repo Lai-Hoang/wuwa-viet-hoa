@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function TsAnimNotifyStateAddBuff.TsAnimNotifyStateAddBuff_C.K2_NotifyBegin
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -38,14 +38,19 @@ bool UTsAnimNotifyStateAddBuff_C::K2_NotifyBegin(class USkeletalMeshComponent* M
 	Parms.Animation = Animation;
 	Parms.TotalDuration = TotalDuration;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function TsAnimNotifyStateAddBuff.TsAnimNotifyStateAddBuff_C.K2_NotifyEnd
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*           MeshComp                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -63,14 +68,19 @@ bool UTsAnimNotifyStateAddBuff_C::K2_NotifyEnd(class USkeletalMeshComponent* Mes
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function TsAnimNotifyStateAddBuff.TsAnimNotifyStateAddBuff_C.GetNotifyName
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash)
 
@@ -83,7 +93,12 @@ class FString UTsAnimNotifyStateAddBuff_C::GetNotifyName() const
 
 	Params::TsAnimNotifyStateAddBuff_C_GetNotifyName Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }

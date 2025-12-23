@@ -1920,5 +1920,37 @@ int32 UCameraBlueprintFunctionLibrary_C::GetCameraSpecificLockEntityId(class UOb
 	return Parms.ReturnValue;
 }
 
+
+// Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.EnableCameraSpecificLockLocation
+// (Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const struct FVectorDouble&             location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   priority                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 UCameraBlueprintFunctionLibrary_C::EnableCameraSpecificLockLocation(const struct FVectorDouble& location, float priority, class UObject* __WorldContext)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("CameraBlueprintFunctionLibrary_C", "EnableCameraSpecificLockLocation");
+
+	Params::CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation Parms{};
+
+	Parms.location = std::move(location);
+	Parms.priority = priority;
+	Parms.__WorldContext = __WorldContext;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
 }
 

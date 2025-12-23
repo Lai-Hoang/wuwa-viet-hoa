@@ -17,141 +17,91 @@
 namespace SDK
 {
 
-// Function BP_FightManager.BP_FightManager_C.查询受击类型覆盖
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_FightManager.BP_FightManager_C.ExecuteUbergraph_BP_FightManager
+// (Final, UbergraphFunction)
 // Parameters:
-// int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FSHitMapping*                    受击覆盖                                               (Parm, OutParm, HasGetValueTypeHash)
-// bool*                                   是否找到                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_FightManager_C::查询受击类型覆盖(int32 ID, struct FSHitMapping* 受击覆盖, bool* 是否找到)
+void UBP_FightManager_C::ExecuteUbergraph_BP_FightManager(int32 EntryPoint)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "查询受击类型覆盖");
+		Func = Class->GetFunction("BP_FightManager_C", "ExecuteUbergraph_BP_FightManager");
 
-	Params::BP_FightManager_C_查询受击类型覆盖 Parms{};
+	Params::BP_FightManager_C_ExecuteUbergraph_BP_FightManager Parms{};
 
-	Parms.ID = ID;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (受击覆盖 != nullptr)
-		*受击覆盖 = std::move(Parms.受击覆盖);
-
-	if (是否找到 != nullptr)
-		*是否找到 = Parms.是否找到;
-}
-
-
-// Function BP_FightManager.BP_FightManager_C.站位控制
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<class UObject*>&                 怪物数组                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-
-void UBP_FightManager_C::站位控制(TArray<class UObject*>& 怪物数组)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "站位控制");
-
-	Params::BP_FightManager_C_站位控制 Parms{};
-
-	Parms.怪物数组 = std::move(怪物数组);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	怪物数组 = std::move(Parms.怪物数组);
-}
-
-
-// Function BP_FightManager.BP_FightManager_C.删除Debug的对象
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class ATsBaseCharacter_C*&        baseChar                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FightManager_C::删除Debug的对象(const class ATsBaseCharacter_C*& baseChar)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "删除Debug的对象");
-
-	Params::BP_FightManager_C_删除Debug的对象 Parms{};
-
-	Parms.baseChar = baseChar;
+	Parms.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function BP_FightManager.BP_FightManager_C.添加Debug的对象
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class ATsBaseCharacter_C*&        baseChar                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_FightManager.BP_FightManager_C.当阵容加载完成时
+// (BlueprintCallable, BlueprintEvent)
 
-void UBP_FightManager_C::添加Debug的对象(const class ATsBaseCharacter_C*& baseChar)
+void UBP_FightManager_C::当阵容加载完成时()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "添加Debug的对象");
-
-	Params::BP_FightManager_C_添加Debug的对象 Parms{};
-
-	Parms.baseChar = baseChar;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FightManager.BP_FightManager_C.注册BPai
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          BPAI对象                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FightManager_C::注册BPai(class UObject* BPAI对象)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "注册BPai");
-
-	Params::BP_FightManager_C_注册BPai Parms{};
-
-	Parms.BPAI对象 = BPAI对象;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FightManager.BP_FightManager_C.烈度获取所有Actor
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_FightManager_C::烈度获取所有Actor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "烈度获取所有Actor");
+		Func = Class->GetFunction("BP_FightManager_C", "当阵容加载完成时");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_FightManager.BP_FightManager_C.烈度返回NPC
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_FightManager.BP_FightManager_C.Tick
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_FightManager_C::烈度返回NPC()
+void UBP_FightManager_C::Tick(float DeltaSeconds)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "烈度返回NPC");
+		Func = Class->GetFunction("BP_FightManager_C", "Tick");
+
+	Params::BP_FightManager_C_Tick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FightManager.BP_FightManager_C.战斗初始化
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UBP_FightManager_C::战斗初始化()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FightManager_C", "战斗初始化");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FightManager.BP_FightManager_C.初始化
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UBP_MainGameInstance_C*           游戏实例_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FightManager_C::初始化(class UBP_MainGameInstance_C* 游戏实例_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FightManager_C", "初始化");
+
+	Params::BP_FightManager_C_初始化 Parms{};
+
+	Parms.游戏实例_0 = 游戏实例_0;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -185,91 +135,141 @@ void UBP_FightManager_C::阵营判断(ECamp 自身阵营, ECamp 目标阵营, ER
 }
 
 
-// Function BP_FightManager.BP_FightManager_C.初始化
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UBP_MainGameInstance_C*           游戏实例_0                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function BP_FightManager.BP_FightManager_C.烈度返回NPC
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 
-void UBP_FightManager_C::初始化(class UBP_MainGameInstance_C* 游戏实例_0)
+void UBP_FightManager_C::烈度返回NPC()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "初始化");
-
-	Params::BP_FightManager_C_初始化 Parms{};
-
-	Parms.游戏实例_0 = 游戏实例_0;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FightManager.BP_FightManager_C.战斗初始化
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_FightManager_C::战斗初始化()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "战斗初始化");
+		Func = Class->GetFunction("BP_FightManager_C", "烈度返回NPC");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_FightManager.BP_FightManager_C.Tick
+// Function BP_FightManager.BP_FightManager_C.烈度获取所有Actor
 // (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_FightManager_C::Tick(float DeltaSeconds)
+void UBP_FightManager_C::烈度获取所有Actor()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "Tick");
-
-	Params::BP_FightManager_C_Tick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FightManager.BP_FightManager_C.当阵容加载完成时
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_FightManager_C::当阵容加载完成时()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "当阵容加载完成时");
+		Func = Class->GetFunction("BP_FightManager_C", "烈度获取所有Actor");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function BP_FightManager.BP_FightManager_C.ExecuteUbergraph_BP_FightManager
-// (Final, UbergraphFunction)
+// Function BP_FightManager.BP_FightManager_C.注册BPai
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          BPAI对象                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UBP_FightManager_C::ExecuteUbergraph_BP_FightManager(int32 EntryPoint)
+void UBP_FightManager_C::注册BPai(class UObject* BPAI对象)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FightManager_C", "ExecuteUbergraph_BP_FightManager");
+		Func = Class->GetFunction("BP_FightManager_C", "注册BPai");
 
-	Params::BP_FightManager_C_ExecuteUbergraph_BP_FightManager Parms{};
+	Params::BP_FightManager_C_注册BPai Parms{};
 
-	Parms.EntryPoint = EntryPoint;
+	Parms.BPAI对象 = BPAI对象;
 
 	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FightManager.BP_FightManager_C.添加Debug的对象
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class ATsBaseCharacter_C*&        baseChar                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FightManager_C::添加Debug的对象(const class ATsBaseCharacter_C*& baseChar)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FightManager_C", "添加Debug的对象");
+
+	Params::BP_FightManager_C_添加Debug的对象 Parms{};
+
+	Parms.baseChar = baseChar;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FightManager.BP_FightManager_C.删除Debug的对象
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class ATsBaseCharacter_C*&        baseChar                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FightManager_C::删除Debug的对象(const class ATsBaseCharacter_C*& baseChar)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FightManager_C", "删除Debug的对象");
+
+	Params::BP_FightManager_C_删除Debug的对象 Parms{};
+
+	Parms.baseChar = baseChar;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FightManager.BP_FightManager_C.站位控制
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<class UObject*>&                 怪物数组                                               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+
+void UBP_FightManager_C::站位控制(TArray<class UObject*>& 怪物数组)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FightManager_C", "站位控制");
+
+	Params::BP_FightManager_C_站位控制 Parms{};
+
+	Parms.怪物数组 = std::move(怪物数组);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	怪物数组 = std::move(Parms.怪物数组);
+}
+
+
+// Function BP_FightManager.BP_FightManager_C.查询受击类型覆盖
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// int32                                   ID                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FSHitMapping*                    受击覆盖                                               (Parm, OutParm, HasGetValueTypeHash)
+// bool*                                   是否找到                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UBP_FightManager_C::查询受击类型覆盖(int32 ID, struct FSHitMapping* 受击覆盖, bool* 是否找到)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FightManager_C", "查询受击类型覆盖");
+
+	Params::BP_FightManager_C_查询受击类型覆盖 Parms{};
+
+	Parms.ID = ID;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (受击覆盖 != nullptr)
+		*受击覆盖 = std::move(Parms.受击覆盖);
+
+	if (是否找到 != nullptr)
+		*是否找到 = Parms.是否找到;
 }
 
 }

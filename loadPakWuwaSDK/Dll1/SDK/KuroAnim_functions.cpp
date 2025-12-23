@@ -867,6 +867,31 @@ void UKuroAnimInstance::RegisterActor(class ACharacter* Character)
 }
 
 
+// Function KuroAnim.KuroAnimInstance.RegisterExtraFollowOwnerAnimInstance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAnimInstance*                    AnimInstance                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroAnimInstance::RegisterExtraFollowOwnerAnimInstance(class UAnimInstance* AnimInstance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimInstance", "RegisterExtraFollowOwnerAnimInstance");
+
+	Params::KuroAnimInstance_RegisterExtraFollowOwnerAnimInstance Parms{};
+
+	Parms.AnimInstance = AnimInstance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroAnim.KuroAnimInstance.ResigterExtraRibbenOwnerAnimInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1160,14 +1185,16 @@ void UKuroAnimInstance::UpdateABP(float DeltaSeconds)
 // const bool&                             bUsingAdditiveBlend                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // const bool&                             bUsingWholeBodyBlend                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float&                                  AdditiveBlendAlpha                                     (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FAdditiveBlendAlpha&             Plevis                                                 (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FAdditiveBlendAlpha&             Pelvis                                                 (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FAdditiveBlendAlpha&             Spine                                                  (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FAdditiveBlendAlpha&             Spine1                                                 (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FAdditiveBlendAlpha&             Spine2                                                 (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FAdditiveBlendAlpha&             Head                                                   (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FAdditiveBlendAlpha&             ArmL                                                   (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FAdditiveBlendAlpha&             ArmR                                                   (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FAdditiveBlendAlpha&             Leg                                                    (Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void UKuroAnimInstance::UpdateAdditiveBlendInfo(class UAnimInstance* AnimInstance, const bool& bUsingAdditiveBlend, const bool& bUsingWholeBodyBlend, float& AdditiveBlendAlpha, struct FAdditiveBlendAlpha& Plevis, struct FAdditiveBlendAlpha& Spine, struct FAdditiveBlendAlpha& Head, struct FAdditiveBlendAlpha& ArmL, struct FAdditiveBlendAlpha& ArmR, struct FAdditiveBlendAlpha& Leg)
+void UKuroAnimInstance::UpdateAdditiveBlendInfo(class UAnimInstance* AnimInstance, const bool& bUsingAdditiveBlend, const bool& bUsingWholeBodyBlend, float& AdditiveBlendAlpha, struct FAdditiveBlendAlpha& Pelvis, struct FAdditiveBlendAlpha& Spine, struct FAdditiveBlendAlpha& Spine1, struct FAdditiveBlendAlpha& Spine2, struct FAdditiveBlendAlpha& Head, struct FAdditiveBlendAlpha& ArmL, struct FAdditiveBlendAlpha& ArmR, struct FAdditiveBlendAlpha& Leg)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1180,8 +1207,10 @@ void UKuroAnimInstance::UpdateAdditiveBlendInfo(class UAnimInstance* AnimInstanc
 	Parms.bUsingAdditiveBlend = bUsingAdditiveBlend;
 	Parms.bUsingWholeBodyBlend = bUsingWholeBodyBlend;
 	Parms.AdditiveBlendAlpha = AdditiveBlendAlpha;
-	Parms.Plevis = std::move(Plevis);
+	Parms.Pelvis = std::move(Pelvis);
 	Parms.Spine = std::move(Spine);
+	Parms.Spine1 = std::move(Spine1);
+	Parms.Spine2 = std::move(Spine2);
 	Parms.Head = std::move(Head);
 	Parms.ArmL = std::move(ArmL);
 	Parms.ArmR = std::move(ArmR);
@@ -1195,8 +1224,10 @@ void UKuroAnimInstance::UpdateAdditiveBlendInfo(class UAnimInstance* AnimInstanc
 	Func->FunctionFlags = Flgs;
 
 	AdditiveBlendAlpha = Parms.AdditiveBlendAlpha;
-	Plevis = std::move(Parms.Plevis);
+	Pelvis = std::move(Parms.Pelvis);
 	Spine = std::move(Parms.Spine);
+	Spine1 = std::move(Parms.Spine1);
+	Spine2 = std::move(Parms.Spine2);
 	Head = std::move(Parms.Head);
 	ArmL = std::move(Parms.ArmL);
 	ArmR = std::move(Parms.ArmR);
@@ -1842,6 +1873,186 @@ void UKuroAnimLibrary::EndAnimNotifyStates(class UAnimInstance* AnimInstance)
 }
 
 
+// Function KuroAnim.KuroAnimLibrary.GetDefaultBoneComponentPoseByName
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class USkeletalMeshComponent*     SkelMeshComp                                           (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      BoneName                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FTransform UKuroAnimLibrary::GetDefaultBoneComponentPoseByName(const class USkeletalMeshComponent* SkelMeshComp, const class FName& BoneName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimLibrary", "GetDefaultBoneComponentPoseByName");
+
+	Params::KuroAnimLibrary_GetDefaultBoneComponentPoseByName Parms{};
+
+	Parms.SkelMeshComp = SkelMeshComp;
+	Parms.BoneName = BoneName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAnim.KuroAnimLibrary.GetDefaultBoneLocalPoseByName
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class USkeletalMeshComponent*     SkelMeshComp                                           (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FName&                      BoneName                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FTransform UKuroAnimLibrary::GetDefaultBoneLocalPoseByName(const class USkeletalMeshComponent* SkelMeshComp, const class FName& BoneName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimLibrary", "GetDefaultBoneLocalPoseByName");
+
+	Params::KuroAnimLibrary_GetDefaultBoneLocalPoseByName Parms{};
+
+	Parms.SkelMeshComp = SkelMeshComp;
+	Parms.BoneName = BoneName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAnim.KuroAnimLibrary.GetGameplayAbpPath
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          BaseAbp                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    GameplayTypeName                                       (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroAnimLibrary::GetGameplayAbpPath(class UObject* BaseAbp, const class FString& GameplayTypeName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimLibrary", "GetGameplayAbpPath");
+
+	Params::KuroAnimLibrary_GetGameplayAbpPath Parms{};
+
+	Parms.BaseAbp = BaseAbp;
+	Parms.GameplayTypeName = std::move(GameplayTypeName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAnim.KuroAnimMathLibrary.FindBetween
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector&                   V1                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   V2                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FQuat UKuroAnimMathLibrary::FindBetween(const struct FVector& V1, const struct FVector& V2)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimMathLibrary", "FindBetween");
+
+	Params::KuroAnimMathLibrary_FindBetween Parms{};
+
+	Parms.V1 = std::move(V1);
+	Parms.V2 = std::move(V2);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAnim.KuroAnimMathLibrary.LookQuat_ForwardFirst
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector&                   Forward                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Up                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FQuat UKuroAnimMathLibrary::LookQuat_ForwardFirst(const struct FVector& Forward, const struct FVector& Up)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimMathLibrary", "LookQuat_ForwardFirst");
+
+	Params::KuroAnimMathLibrary_LookQuat_ForwardFirst Parms{};
+
+	Parms.Forward = std::move(Forward);
+	Parms.Up = std::move(Up);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAnim.KuroAnimMathLibrary.LookQuat_UpFirst
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector&                   Forward                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Up                                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FQuat UKuroAnimMathLibrary::LookQuat_UpFirst(const struct FVector& Forward, const struct FVector& Up)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimMathLibrary", "LookQuat_UpFirst");
+
+	Params::KuroAnimMathLibrary_LookQuat_UpFirst Parms{};
+
+	Parms.Forward = std::move(Forward);
+	Parms.Up = std::move(Up);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroAnim.KuroAnimMathLibrary.LookRotation_ForwardFirst
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -1920,6 +2131,38 @@ struct FRotator UKuroAnimMathLibrary::Quat_FindBetween(const struct FVector& V1,
 
 	Parms.V1 = std::move(V1);
 	Parms.V2 = std::move(V2);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAnim.KuroAnimMathLibrary.Slerp
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FQuat&                     From                                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FQuat&                     To                                                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   Slerp_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FQuat UKuroAnimMathLibrary::Slerp(const struct FQuat& From, const struct FQuat& To, float Slerp_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAnimMathLibrary", "Slerp");
+
+	Params::KuroAnimMathLibrary_Slerp Parms{};
+
+	Parms.From = std::move(From);
+	Parms.To = std::move(To);
+	Parms.Slerp_0 = Slerp_0;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2043,6 +2286,37 @@ void AKuroRecordEffect::Stop()
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAnim.KuroRecorderLibrary.ChangeAttachTrack
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class ULevelSequence*                   TargetSequence                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGuid&                     From                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FGuid&                     To                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRecorderLibrary::ChangeAttachTrack(class ULevelSequence* TargetSequence, const struct FGuid& From, const struct FGuid& To, float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRecorderLibrary", "ChangeAttachTrack");
+
+	Params::KuroRecorderLibrary_ChangeAttachTrack Parms{};
+
+	Parms.TargetSequence = TargetSequence;
+	Parms.From = std::move(From);
+	Parms.To = std::move(To);
+	Parms.Time = Time;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

@@ -10,12 +10,15 @@
 
 #include "Basic.hpp"
 
+#include "SLockOnFollowShooterAutoAim_structs.hpp"
+#include "GameplayTags_structs.hpp"
+
 
 namespace SDK
 {
 
 // UserDefinedStruct SLockOnFollowShooter.SLockOnFollowShooter
-// 0x0020 (0x0020 - 0x0000)
+// 0x0108 (0x0108 - 0x0000)
 struct FSLockOnFollowShooter final
 {
 public:
@@ -28,9 +31,18 @@ public:
 	float                                         ScreenDistanceWeight_17_409CDB9C479D51F398BDD9867800D7BC; // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CharacterExtraWeight_22_D8917D864BE7864B16432A9F15CE20F1; // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         SceneItemExtraWeight_24_8FB7BE874B222FBF1491BDAFA3EE53D0; // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FSLockOnFollowShooterAutoAim>   ArrayAutoAimConfig_42_AAF7A9FB48348673A631C18993AFAF43; // 0x0020(0x0010)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  LockOnGameplayTagContainer_54_2B559D0C49F7B578BDB5B0AE7D289421; // 0x0030(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  IgnoreLockOnGameplayTagContainer_56_58662DD5404BE69C96CDAA8443001136; // 0x0050(0x0020)(Edit, BlueprintVisible)
+	struct FGameplayTagContainer                  AutoShootGameplayTagContainer_61_61C9E5EF4B8B7A620B6044A39F9C087A; // 0x0070(0x0020)(Edit, BlueprintVisible)
+	float                                         CameraForwardDistance_64_E32927B14165C01168C7B1B15A5CD3FB; // 0x0090(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_94[0x4];                                       // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CustomEntityKey_74_EF185C2749C443B11AB246949D7BBF1D; // 0x0098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CustomBulletTargetKey_76_9055F36E4A0C60F07D2818B76BFBA454; // 0x00A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
+	TSet<class FString>                           CustomBulletTargetRowNameSet_80_801091514981A161AC838B84F84F206E; // 0x00B8(0x0050)(Edit, BlueprintVisible)
 };
-static_assert(alignof(FSLockOnFollowShooter) == 0x000004, "Wrong alignment on FSLockOnFollowShooter");
-static_assert(sizeof(FSLockOnFollowShooter) == 0x000020, "Wrong size on FSLockOnFollowShooter");
+static_assert(alignof(FSLockOnFollowShooter) == 0x000008, "Wrong alignment on FSLockOnFollowShooter");
+static_assert(sizeof(FSLockOnFollowShooter) == 0x000108, "Wrong size on FSLockOnFollowShooter");
 static_assert(offsetof(FSLockOnFollowShooter, Enable_10_0A4B539E4EB9F18771BCECB4296FA033) == 0x000000, "Member 'FSLockOnFollowShooter::Enable_10_0A4B539E4EB9F18771BCECB4296FA033' has a wrong offset!");
 static_assert(offsetof(FSLockOnFollowShooter, GapTime_4_2C6A17E4438FDFC72F07FAAE4C1DA353) == 0x000004, "Member 'FSLockOnFollowShooter::GapTime_4_2C6A17E4438FDFC72F07FAAE4C1DA353' has a wrong offset!");
 static_assert(offsetof(FSLockOnFollowShooter, Distance_12_CDE2B3DD48D8E5ABE7CEEE8B56EDDEDB) == 0x000008, "Member 'FSLockOnFollowShooter::Distance_12_CDE2B3DD48D8E5ABE7CEEE8B56EDDEDB' has a wrong offset!");
@@ -39,6 +51,14 @@ static_assert(offsetof(FSLockOnFollowShooter, WorldDistanceWeight_15_BC4E0C73497
 static_assert(offsetof(FSLockOnFollowShooter, ScreenDistanceWeight_17_409CDB9C479D51F398BDD9867800D7BC) == 0x000014, "Member 'FSLockOnFollowShooter::ScreenDistanceWeight_17_409CDB9C479D51F398BDD9867800D7BC' has a wrong offset!");
 static_assert(offsetof(FSLockOnFollowShooter, CharacterExtraWeight_22_D8917D864BE7864B16432A9F15CE20F1) == 0x000018, "Member 'FSLockOnFollowShooter::CharacterExtraWeight_22_D8917D864BE7864B16432A9F15CE20F1' has a wrong offset!");
 static_assert(offsetof(FSLockOnFollowShooter, SceneItemExtraWeight_24_8FB7BE874B222FBF1491BDAFA3EE53D0) == 0x00001C, "Member 'FSLockOnFollowShooter::SceneItemExtraWeight_24_8FB7BE874B222FBF1491BDAFA3EE53D0' has a wrong offset!");
+static_assert(offsetof(FSLockOnFollowShooter, ArrayAutoAimConfig_42_AAF7A9FB48348673A631C18993AFAF43) == 0x000020, "Member 'FSLockOnFollowShooter::ArrayAutoAimConfig_42_AAF7A9FB48348673A631C18993AFAF43' has a wrong offset!");
+static_assert(offsetof(FSLockOnFollowShooter, LockOnGameplayTagContainer_54_2B559D0C49F7B578BDB5B0AE7D289421) == 0x000030, "Member 'FSLockOnFollowShooter::LockOnGameplayTagContainer_54_2B559D0C49F7B578BDB5B0AE7D289421' has a wrong offset!");
+static_assert(offsetof(FSLockOnFollowShooter, IgnoreLockOnGameplayTagContainer_56_58662DD5404BE69C96CDAA8443001136) == 0x000050, "Member 'FSLockOnFollowShooter::IgnoreLockOnGameplayTagContainer_56_58662DD5404BE69C96CDAA8443001136' has a wrong offset!");
+static_assert(offsetof(FSLockOnFollowShooter, AutoShootGameplayTagContainer_61_61C9E5EF4B8B7A620B6044A39F9C087A) == 0x000070, "Member 'FSLockOnFollowShooter::AutoShootGameplayTagContainer_61_61C9E5EF4B8B7A620B6044A39F9C087A' has a wrong offset!");
+static_assert(offsetof(FSLockOnFollowShooter, CameraForwardDistance_64_E32927B14165C01168C7B1B15A5CD3FB) == 0x000090, "Member 'FSLockOnFollowShooter::CameraForwardDistance_64_E32927B14165C01168C7B1B15A5CD3FB' has a wrong offset!");
+static_assert(offsetof(FSLockOnFollowShooter, CustomEntityKey_74_EF185C2749C443B11AB246949D7BBF1D) == 0x000098, "Member 'FSLockOnFollowShooter::CustomEntityKey_74_EF185C2749C443B11AB246949D7BBF1D' has a wrong offset!");
+static_assert(offsetof(FSLockOnFollowShooter, CustomBulletTargetKey_76_9055F36E4A0C60F07D2818B76BFBA454) == 0x0000A8, "Member 'FSLockOnFollowShooter::CustomBulletTargetKey_76_9055F36E4A0C60F07D2818B76BFBA454' has a wrong offset!");
+static_assert(offsetof(FSLockOnFollowShooter, CustomBulletTargetRowNameSet_80_801091514981A161AC838B84F84F206E) == 0x0000B8, "Member 'FSLockOnFollowShooter::CustomBulletTargetRowNameSet_80_801091514981A161AC838B84F84F206E' has a wrong offset!");
 
 }
 

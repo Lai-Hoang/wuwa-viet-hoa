@@ -17,8 +17,262 @@
 namespace SDK
 {
 
+// Function CharRenderingComponent.CharRenderingComponent_C.QuickInitAndAddData
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UObject*                          data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class ASkeletalMeshActor*               meshActor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+float UCharRenderingComponent_C::QuickInitAndAddData(class UObject* data, class ASkeletalMeshActor* meshActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "QuickInitAndAddData");
+
+	Params::CharRenderingComponent_C_QuickInitAndAddData Parms{};
+
+	Parms.data = data;
+	Parms.meshActor = meshActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.GetInAudioShr
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+
+bool UCharRenderingComponent_C::GetInAudioShr()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "GetInAudioShr");
+
+	Params::CharRenderingComponent_C_GetInAudioShr Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.TempRecoverDither
+// (Native, Public, BlueprintCallable, BlueprintEvent)
+
+void UCharRenderingComponent_C::TempRecoverDither()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "TempRecoverDither");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.TempRemoveDither
+// (Native, Public, BlueprintCallable, BlueprintEvent)
+
+void UCharRenderingComponent_C::TempRemoveDither()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "TempRemoveDither");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.SetDitherUseHeadMaskHideEffect
+// (Native, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UCharRenderingComponent_C::SetDitherUseHeadMaskHideEffect(bool enable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "SetDitherUseHeadMaskHideEffect");
+
+	Params::CharRenderingComponent_C_SetDitherUseHeadMaskHideEffect Parms{};
+
+	Parms.enable = enable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.SetShouldCastShadow
+// (Native, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    castShadow                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+
+void UCharRenderingComponent_C::SetShouldCastShadow(bool castShadow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "SetShouldCastShadow");
+
+	Params::CharRenderingComponent_C_SetShouldCastShadow Parms{};
+
+	Parms.castShadow = castShadow;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.GetOpacityConsiderVisibility
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+float UCharRenderingComponent_C::GetOpacityConsiderVisibility()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "GetOpacityConsiderVisibility");
+
+	Params::CharRenderingComponent_C_GetOpacityConsiderVisibility Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.SetEffectGroupProgress
+// (Native, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   groupHandleId                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCharRenderingComponent_C::SetEffectGroupProgress(float progress, int32 groupHandleId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "SetEffectGroupProgress");
+
+	Params::CharRenderingComponent_C_SetEffectGroupProgress Parms{};
+
+	Parms.progress = progress;
+	Parms.groupHandleId = groupHandleId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.AddFloatUpdateParamPermanentByIndexV2
+// (Native, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FName                             name                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             bodyName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   materialIndex                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UCharRenderingComponent_C::AddFloatUpdateParamPermanentByIndexV2(class FName name, float value, class FName bodyName, float materialIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "AddFloatUpdateParamPermanentByIndexV2");
+
+	Params::CharRenderingComponent_C_AddFloatUpdateParamPermanentByIndexV2 Parms{};
+
+	Parms.name = name;
+	Parms.value = value;
+	Parms.bodyName = bodyName;
+	Parms.materialIndex = materialIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.GetSkeletalMeshComponentBodyName
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           skeletalComp                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class FName UCharRenderingComponent_C::GetSkeletalMeshComponentBodyName(class USkeletalMeshComponent* skeletalComp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "GetSkeletalMeshComponentBodyName");
+
+	Params::CharRenderingComponent_C_GetSkeletalMeshComponentBodyName Parms{};
+
+	Parms.skeletalComp = skeletalComp;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveExternalMaterialReplaceV2
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EKuroCharBodySpecifiedType              bodyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EKuroCharSlotSpecifiedType              slotType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -37,12 +291,17 @@ void UCharRenderingComponent_C::RemoveExternalMaterialReplaceV2(EKuroCharBodySpe
 	Parms.slotType = slotType;
 	Parms.meshPart = meshPart;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetMaterialReplaceV2
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UMaterialInterface*               material                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // EKuroCharBodySpecifiedType              bodyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -63,12 +322,17 @@ void UCharRenderingComponent_C::SetMaterialReplaceV2(class UMaterialInterface* m
 	Parms.slotType = slotType;
 	Parms.meshPart = meshPart;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetMaterialPropertyColorV2
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             name                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // const struct FLinearColor&              value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -91,12 +355,17 @@ void UCharRenderingComponent_C::SetMaterialPropertyColorV2(class FName name, con
 	Parms.slotType = slotType;
 	Parms.meshPart = meshPart;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetMaterialPropertyFloatV2
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class FName                             name                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -119,12 +388,17 @@ void UCharRenderingComponent_C::SetMaterialPropertyFloatV2(class FName name, flo
 	Parms.slotType = slotType;
 	Parms.meshPart = meshPart;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.ShouldTickAfterGoDown
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -137,14 +411,19 @@ bool UCharRenderingComponent_C::ShouldTickAfterGoDown()
 
 	Params::CharRenderingComponent_C_ShouldTickAfterGoDown Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RefreshMaterialController
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 
 void UCharRenderingComponent_C::RefreshMaterialController()
 {
@@ -153,12 +432,17 @@ void UCharRenderingComponent_C::RefreshMaterialController()
 	if (Func == nullptr)
 		Func = Class->GetFunction("CharRenderingComponent_C", "RefreshMaterialController");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetDitherApplyHeadsOnly
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 
 void UCharRenderingComponent_C::SetDitherApplyHeadsOnly()
 {
@@ -167,12 +451,17 @@ void UCharRenderingComponent_C::SetDitherApplyHeadsOnly()
 	if (Func == nullptr)
 		Func = Class->GetFunction("CharRenderingComponent_C", "SetDitherApplyHeadsOnly");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetDitherApplyAll
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 
 void UCharRenderingComponent_C::SetDitherApplyAll()
 {
@@ -181,12 +470,17 @@ void UCharRenderingComponent_C::SetDitherApplyAll()
 	if (Func == nullptr)
 		Func = Class->GetFunction("CharRenderingComponent_C", "SetDitherApplyAll");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddMaterialControllerDataGroupWithAnimObject
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          data1                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class USkeletalMeshComponent*           animObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -204,14 +498,19 @@ float UCharRenderingComponent_C::AddMaterialControllerDataGroupWithAnimObject(cl
 	Parms.data1 = data1;
 	Parms.animObject = animObject;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddMaterialControllerDataWithAnimObject
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          data1                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class USkeletalMeshComponent*           animObject                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -231,14 +530,19 @@ float UCharRenderingComponent_C::AddMaterialControllerDataWithAnimObject(class U
 	Parms.animObject = animObject;
 	Parms.userData = userData;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetStarScarEnergy
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -253,12 +557,45 @@ void UCharRenderingComponent_C::SetStarScarEnergy(float value)
 
 	Parms.value = value;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.GetSkeletalMeshComponent
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// const class FString&                    skelName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
+// class USkeletalMeshComponent*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+class USkeletalMeshComponent* UCharRenderingComponent_C::GetSkeletalMeshComponent(const class FString& skelName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "GetSkeletalMeshComponent");
+
+	Params::CharRenderingComponent_C_GetSkeletalMeshComponent Parms{};
+
+	Parms.skelName = std::move(skelName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddComponentWithEmptyMaterial
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    skelName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UMeshComponent*                   skeletalComp                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -275,60 +612,17 @@ void UCharRenderingComponent_C::AddComponentWithEmptyMaterial(const class FStrin
 	Parms.skelName = std::move(skelName);
 	Parms.skeletalComp = skeletalComp;
 
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function CharRenderingComponent.CharRenderingComponent_C.GetSkeletalMeshComponent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// const class FString&                    skelName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
-// class USkeletalMeshComponent*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-class USkeletalMeshComponent* UCharRenderingComponent_C::GetSkeletalMeshComponent(const class FString& skelName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CharRenderingComponent_C", "GetSkeletalMeshComponent");
-
-	Params::CharRenderingComponent_C_GetSkeletalMeshComponent Parms{};
-
-	Parms.skelName = std::move(skelName);
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
-}
-
-
-// Function CharRenderingComponent.CharRenderingComponent_C.QuickInitAndAddData
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UObject*                          data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class ASkeletalMeshActor*               meshActor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-float UCharRenderingComponent_C::QuickInitAndAddData(class UObject* data, class ASkeletalMeshActor* meshActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CharRenderingComponent_C", "QuickInitAndAddData");
-
-	Params::CharRenderingComponent_C_QuickInitAndAddData Parms{};
-
-	Parms.data = data;
-	Parms.meshActor = meshActor;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetEffectPause
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   handle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    paused                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -345,12 +639,17 @@ void UCharRenderingComponent_C::SetEffectPause(int32 handle, bool paused)
 	Parms.handle = handle;
 	Parms.paused = paused;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveComponentInnerV2
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    skelName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
@@ -365,12 +664,17 @@ void UCharRenderingComponent_C::RemoveComponentInnerV2(const class FString& skel
 
 	Parms.skelName = std::move(skelName);
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddComponentInnerV2
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    skelName1                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UMeshComponent*                   skeletalComp1                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -389,12 +693,17 @@ void UCharRenderingComponent_C::AddComponentInnerV2(const class FString& skelNam
 	Parms.skeletalComp1 = skeletalComp1;
 	Parms.useEmptyMaterial = useEmptyMaterial;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetDisableFightDither
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    disable                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
@@ -409,12 +718,17 @@ void UCharRenderingComponent_C::SetDisableFightDither(bool disable)
 
 	Parms.disable = disable;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.Destroy
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 
 void UCharRenderingComponent_C::Destroy()
 {
@@ -423,12 +737,17 @@ void UCharRenderingComponent_C::Destroy()
 	if (Func == nullptr)
 		Func = Class->GetFunction("CharRenderingComponent_C", "Destroy");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetRealtimeShadowOpacity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   opacity                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -443,12 +762,17 @@ void UCharRenderingComponent_C::SetRealtimeShadowOpacity(float opacity)
 
 	Parms.opacity = opacity;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetDecalShadowOpacity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   opacity                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -463,12 +787,17 @@ void UCharRenderingComponent_C::SetDecalShadowOpacity(float opacity)
 
 	Parms.opacity = opacity;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetRealtimeShadowEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
@@ -483,12 +812,17 @@ void UCharRenderingComponent_C::SetRealtimeShadowEnabled(bool enable)
 
 	Parms.enable = enable;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.GetTimeDilation
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -501,14 +835,19 @@ float UCharRenderingComponent_C::GetTimeDilation()
 
 	Params::CharRenderingComponent_C_GetTimeDilation Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetLogicOwner
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                           owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -523,12 +862,17 @@ void UCharRenderingComponent_C::SetLogicOwner(class AActor* owner)
 
 	Parms.owner = owner;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.ReceiveSeqTick
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   deltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -543,12 +887,17 @@ void UCharRenderingComponent_C::ReceiveSeqTick(float deltaSeconds)
 
 	Parms.deltaSeconds = deltaSeconds;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveComponentFromDecalShadow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    name                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
@@ -563,12 +912,17 @@ void UCharRenderingComponent_C::RemoveComponentFromDecalShadow(const class FStri
 
 	Parms.name = std::move(name);
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddComponentForDecalShadow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    name                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UPrimitiveComponent*              comp                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -585,12 +939,36 @@ void UCharRenderingComponent_C::AddComponentForDecalShadow(const class FString& 
 	Parms.name = std::move(name);
 	Parms.comp = comp;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function CharRenderingComponent.CharRenderingComponent_C.DisableAllShadowByDecalShadowComponent
+// (Native, Public, BlueprintCallable, BlueprintEvent)
+
+void UCharRenderingComponent_C::DisableAllShadowByDecalShadowComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CharRenderingComponent_C", "DisableAllShadowByDecalShadowComponent");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetDecalShadowEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    enable                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
@@ -605,12 +983,17 @@ void UCharRenderingComponent_C::SetDecalShadowEnabled(bool enable)
 
 	Parms.enable = enable;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.QuickInitAndAddDataGroupWithMeshComponent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UMeshComponent*                   meshComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -628,14 +1011,19 @@ float UCharRenderingComponent_C::QuickInitAndAddDataGroupWithMeshComponent(class
 	Parms.data = data;
 	Parms.meshComponent = meshComponent;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetBodyEffectOpacity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   opacity                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -650,12 +1038,17 @@ void UCharRenderingComponent_C::SetBodyEffectOpacity(float opacity)
 
 	Parms.opacity = opacity;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveComponentByCase
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ECharacterControllerCaseType            caseType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -670,12 +1063,17 @@ void UCharRenderingComponent_C::RemoveComponentByCase(ECharacterControllerCaseTy
 
 	Parms.caseType = caseType;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetEffectProgress
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   progress                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   handleId                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
@@ -692,12 +1090,17 @@ void UCharRenderingComponent_C::SetEffectProgress(float progress, int32 handleId
 	Parms.progress = progress;
 	Parms.handleId = handleId;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.GetInWater
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   depthThreshold                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper)
@@ -713,14 +1116,19 @@ bool UCharRenderingComponent_C::GetInWater(float depthThreshold)
 
 	Parms.depthThreshold = depthThreshold;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.QuickInitAndAddDataWithMeshComponent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 // class UMeshComponent*                   meshComponent                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
@@ -738,14 +1146,19 @@ float UCharRenderingComponent_C::QuickInitAndAddDataWithMeshComponent(class UObj
 	Parms.data = data;
 	Parms.meshComponent = meshComponent;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddComponentByCase
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ECharacterControllerCaseType            caseType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UMeshComponent*                   skeletalComp                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -762,12 +1175,17 @@ void UCharRenderingComponent_C::AddComponentByCase(ECharacterControllerCaseType 
 	Parms.caseType = caseType;
 	Parms.skeletalComp = skeletalComp;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.QuickInitAndAddDataGroup
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 // class ASkeletalMeshActor*               meshActor                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -785,14 +1203,19 @@ float UCharRenderingComponent_C::QuickInitAndAddDataGroup(class UObject* data, c
 	Parms.data = data;
 	Parms.meshActor = meshActor;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveMaterialControllerDataGroupWithEnding
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   handle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -807,12 +1230,17 @@ void UCharRenderingComponent_C::RemoveMaterialControllerDataGroupWithEnding(int3
 
 	Parms.handle = handle;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetDitherEffect
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   ditherRate                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 // ECharacterDitherType                    ditherType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -829,12 +1257,17 @@ void UCharRenderingComponent_C::SetDitherEffect(float ditherRate, ECharacterDith
 	Parms.ditherRate = ditherRate;
 	Parms.ditherType = ditherType;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetCapsuleDither
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
@@ -849,12 +1282,17 @@ void UCharRenderingComponent_C::SetCapsuleDither(float value)
 
 	Parms.value = value;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetMaterialPropertyColor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ECharacterBodySpecifiedType             bodyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 // float                                   sectionIndex                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
@@ -877,12 +1315,17 @@ void UCharRenderingComponent_C::SetMaterialPropertyColor(ECharacterBodySpecified
 	Parms.propertyName = std::move(propertyName);
 	Parms.value = std::move(value);
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetMaterialPropertyFloat
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ECharacterBodySpecifiedType             bodyType                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 // float                                   sectionIndex                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
@@ -905,26 +1348,17 @@ void UCharRenderingComponent_C::SetMaterialPropertyFloat(ECharacterBodySpecified
 	Parms.propertyName = std::move(propertyName);
 	Parms.value = value;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
-}
 
-
-// Function CharRenderingComponent.CharRenderingComponent_C.DisableAllShadowByDecalShadowComponent
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UCharRenderingComponent_C::DisableAllShadowByDecalShadowComponent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CharRenderingComponent_C", "DisableAllShadowByDecalShadowComponent");
-
-	UObject::ProcessEvent(Func, nullptr);
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveComponent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    skelName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 
@@ -939,12 +1373,17 @@ void UCharRenderingComponent_C::RemoveComponent(const class FString& skelName)
 
 	Parms.skelName = std::move(skelName);
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddComponent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // const class FString&                    skelName                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 // class UMeshComponent*                   skeletalComp                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -961,12 +1400,17 @@ void UCharRenderingComponent_C::AddComponent(const class FString& skelName, clas
 	Parms.skelName = std::move(skelName);
 	Parms.skeletalComp = skeletalComp;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.GetDebugInfo
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPD_MaterialDebug_C*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -979,14 +1423,19 @@ class UPD_MaterialDebug_C* UCharRenderingComponent_C::GetDebugInfo()
 
 	Params::CharRenderingComponent_C_GetDebugInfo Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.SetDebug
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 
@@ -1001,12 +1450,17 @@ void UCharRenderingComponent_C::SetDebug(bool value)
 
 	Parms.value = value;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.CheckInit
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
 
@@ -1019,14 +1473,19 @@ bool UCharRenderingComponent_C::CheckInit()
 
 	Params::CharRenderingComponent_C_CheckInit Parms{};
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveMaterialControllerDataGroup
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   handle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -1041,12 +1500,17 @@ void UCharRenderingComponent_C::RemoveMaterialControllerDataGroup(int32 handle)
 
 	Parms.handle = handle;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddMaterialControllerDataGroup
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1062,14 +1526,19 @@ int32 UCharRenderingComponent_C::AddMaterialControllerDataGroup(class UObject* d
 
 	Parms.data = data;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveMaterialControllerDataWithEnding
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   handle                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -1084,12 +1553,17 @@ void UCharRenderingComponent_C::RemoveMaterialControllerDataWithEnding(int32 han
 
 	Parms.handle = handle;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.ResetAllRenderingState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 
 void UCharRenderingComponent_C::ResetAllRenderingState()
 {
@@ -1098,12 +1572,17 @@ void UCharRenderingComponent_C::ResetAllRenderingState()
 	if (Func == nullptr)
 		Func = Class->GetFunction("CharRenderingComponent_C", "ResetAllRenderingState");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.AddMaterialControllerData
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// (Native, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                          data                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1119,14 +1598,19 @@ int32 UCharRenderingComponent_C::AddMaterialControllerData(class UObject* data)
 
 	Parms.data = data;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.RemoveMaterialControllerData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   handle1                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
@@ -1141,12 +1625,17 @@ void UCharRenderingComponent_C::RemoveMaterialControllerData(int32 handle1)
 
 	Parms.handle1 = handle1;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.Init
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ECharacterRenderingType                 renderType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 
@@ -1161,12 +1650,17 @@ void UCharRenderingComponent_C::Init(ECharacterRenderingType renderType)
 
 	Parms.renderType = renderType;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -1181,12 +1675,17 @@ void UCharRenderingComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
 
 	Parms.EndPlayReason = EndPlayReason;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UCharRenderingComponent_C::ReceiveBeginPlay()
 {
@@ -1195,12 +1694,17 @@ void UCharRenderingComponent_C::ReceiveBeginPlay()
 	if (Func == nullptr)
 		Func = Class->GetFunction("CharRenderingComponent_C", "ReceiveBeginPlay");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.ReceiveTick
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -1215,12 +1719,17 @@ void UCharRenderingComponent_C::ReceiveTick(float DeltaSeconds)
 
 	Parms.DeltaSeconds = DeltaSeconds;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.ExecuteUbergraph_CharRenderingComponent
-// (Final, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
+// (Final, Native, UbergraphFunction, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
@@ -1235,12 +1744,17 @@ void UCharRenderingComponent_C::ExecuteUbergraph_CharRenderingComponent(int32 En
 
 	Parms.EntryPoint = EntryPoint;
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 }
 
 
 // Function CharRenderingComponent.CharRenderingComponent_C.OnFinalizedLevelSequence
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable, BlueprintEvent)
 
 void UCharRenderingComponent_C::OnFinalizedLevelSequence()
 {
@@ -1249,7 +1763,12 @@ void UCharRenderingComponent_C::OnFinalizedLevelSequence()
 	if (Func == nullptr)
 		Func = Class->GetFunction("CharRenderingComponent_C", "OnFinalizedLevelSequence");
 
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
 	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
 }
 
 }

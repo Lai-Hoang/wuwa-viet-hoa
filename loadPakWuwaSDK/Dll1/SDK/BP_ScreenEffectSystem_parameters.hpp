@@ -16,37 +16,6 @@
 namespace SDK::Params
 {
 
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetNiagaraFrameDeltaTime
-// 0x0048 (0x0048 - 0x0000)
-struct BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime final
-{
-public:
-	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Array_Index_Variable;                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ___int_Loop_Counter_Variable;                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UEffectScreenPlayData_C*>        CallFunc_Map_Keys_Keys;                            // 0x0010(0x0010)(ReferenceParm)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEffectScreenPlayData_C*                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_ScreenEffectPlayer_C*               CallFunc_Map_Find_Value;                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime) == 0x000008, "Wrong alignment on BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime");
-static_assert(sizeof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime) == 0x000048, "Wrong size on BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, DeltaTime) == 0x000000, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::DeltaTime' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, ___int_Array_Index_Variable) == 0x000004, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::___int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, ___int_Loop_Counter_Variable) == 0x000008, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::___int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Map_Keys_Keys) == 0x000010, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Map_Keys_Keys' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Map_Find_Value) == 0x000038, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Map_Find_ReturnValue) == 0x000040, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-
 // Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetEffectExtraState
 // 0x0020 (0x0020 - 0x0000)
 struct BP_ScreenEffectSystem_C_SetEffectExtraState final
@@ -66,26 +35,6 @@ static_assert(offsetof(BP_ScreenEffectSystem_C_SetEffectExtraState, ExtraState) 
 static_assert(offsetof(BP_ScreenEffectSystem_C_SetEffectExtraState, CallFunc_IsValid_ReturnValue) == 0x00000C, "Member 'BP_ScreenEffectSystem_C_SetEffectExtraState::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_ScreenEffectSystem_C_SetEffectExtraState, CallFunc_Map_Find_Value) == 0x000010, "Member 'BP_ScreenEffectSystem_C_SetEffectExtraState::CallFunc_Map_Find_Value' has a wrong offset!");
 static_assert(offsetof(BP_ScreenEffectSystem_C_SetEffectExtraState, CallFunc_Map_Find_ReturnValue) == 0x000018, "Member 'BP_ScreenEffectSystem_C_SetEffectExtraState::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
-
-// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.TweenEffectParameter
-// 0x0020 (0x0020 - 0x0000)
-struct BP_ScreenEffectSystem_C_TweenEffectParameter final
-{
-public:
-	class UEffectScreenPlayData_C*                EffectScreenPlayData;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         targetProgress;                                    // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class ABP_ScreenEffectPlayer_C*               CallFunc_Map_Find_Value;                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-};
-static_assert(alignof(BP_ScreenEffectSystem_C_TweenEffectParameter) == 0x000008, "Wrong alignment on BP_ScreenEffectSystem_C_TweenEffectParameter");
-static_assert(sizeof(BP_ScreenEffectSystem_C_TweenEffectParameter) == 0x000020, "Wrong size on BP_ScreenEffectSystem_C_TweenEffectParameter");
-static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, EffectScreenPlayData) == 0x000000, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::EffectScreenPlayData' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, targetProgress) == 0x000008, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::targetProgress' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, CallFunc_IsValid_ReturnValue) == 0x00000C, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, CallFunc_Map_Find_Value) == 0x000010, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::CallFunc_Map_Find_Value' has a wrong offset!");
-static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, CallFunc_Map_Find_ReturnValue) == 0x000018, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 // Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.UpdateSEEnvironmentFactor
 // 0x0020 (0x0020 - 0x0000)
@@ -494,6 +443,57 @@ static_assert(alignof(BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSy
 static_assert(sizeof(BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem) == 0x000008, "Wrong size on BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem");
 static_assert(offsetof(BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem, EntryPoint) == 0x000000, "Member 'BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem::EntryPoint' has a wrong offset!");
 static_assert(offsetof(BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem, K2Node_Event_DeltaSeconds) == 0x000004, "Member 'BP_ScreenEffectSystem_C_ExecuteUbergraph_BP_ScreenEffectSystem::K2Node_Event_DeltaSeconds' has a wrong offset!");
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.TweenEffectParameter
+// 0x0020 (0x0020 - 0x0000)
+struct BP_ScreenEffectSystem_C_TweenEffectParameter final
+{
+public:
+	class UEffectScreenPlayData_C*                EffectScreenPlayData;                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         targetProgress;                                    // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_ScreenEffectPlayer_C*               CallFunc_Map_Find_Value;                           // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_ScreenEffectSystem_C_TweenEffectParameter) == 0x000008, "Wrong alignment on BP_ScreenEffectSystem_C_TweenEffectParameter");
+static_assert(sizeof(BP_ScreenEffectSystem_C_TweenEffectParameter) == 0x000020, "Wrong size on BP_ScreenEffectSystem_C_TweenEffectParameter");
+static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, EffectScreenPlayData) == 0x000000, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::EffectScreenPlayData' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, targetProgress) == 0x000008, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::targetProgress' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, CallFunc_IsValid_ReturnValue) == 0x00000C, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, CallFunc_Map_Find_Value) == 0x000010, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_TweenEffectParameter, CallFunc_Map_Find_ReturnValue) == 0x000018, "Member 'BP_ScreenEffectSystem_C_TweenEffectParameter::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
+
+// Function BP_ScreenEffectSystem.BP_ScreenEffectSystem_C.SetNiagaraFrameDeltaTime
+// 0x0048 (0x0048 - 0x0000)
+struct BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime final
+{
+public:
+	float                                         DeltaTime;                                         // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Array_Index_Variable;                       // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ___int_Loop_Counter_Variable;                      // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UEffectScreenPlayData_C*>        CallFunc_Map_Keys_Keys;                            // 0x0010(0x0010)(ReferenceParm)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEffectScreenPlayData_C*                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class ABP_ScreenEffectPlayer_C*               CallFunc_Map_Find_Value;                           // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime) == 0x000008, "Wrong alignment on BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime");
+static_assert(sizeof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime) == 0x000048, "Wrong size on BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, DeltaTime) == 0x000000, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::DeltaTime' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, ___int_Array_Index_Variable) == 0x000004, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::___int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, ___int_Loop_Counter_Variable) == 0x000008, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::___int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Add_IntInt_ReturnValue) == 0x00000C, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Map_Keys_Keys) == 0x000010, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Map_Keys_Keys' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Array_Get_Item) == 0x000028, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Map_Find_Value) == 0x000038, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Map_Find_Value' has a wrong offset!");
+static_assert(offsetof(BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime, CallFunc_Map_Find_ReturnValue) == 0x000040, "Member 'BP_ScreenEffectSystem_C_SetNiagaraFrameDeltaTime::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 
 }
 

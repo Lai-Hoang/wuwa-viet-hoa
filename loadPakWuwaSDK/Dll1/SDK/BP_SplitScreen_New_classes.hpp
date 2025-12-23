@@ -11,74 +11,74 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SplitScreen_New.BP_SplitScreen_New_C
-// 0x01D8 (0x0498 - 0x02C0)
+// 0x01D8 (0x0590 - 0x03B8)
 class ABP_SplitScreen_New_C final : public AKuroEditorTickActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UChildActorComponent*                   CharacterActor_3;                                  // 0x02C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Character3;                                        // 0x02D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   CharacterActor_2;                                  // 0x02D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Character2;                                        // 0x02E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UChildActorComponent*                   CharacterActor_1;                                  // 0x02E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Character1;                                        // 0x02F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight3;                                       // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight2;                                       // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPointLightComponent*                   PointLight1;                                       // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UMaterialParameterCollection*           MPC;                                               // 0x0318(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Angle_LinePosition__LineDistance;                  // 0x0320(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         E_LinkPos_1;                                       // 0x032C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         E_LinkPos_2;                                       // 0x0330(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         E_LinkPos_3;                                       // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LightYaw1;                                         // 0x0338(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LightYaw2;                                         // 0x033C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         LightYaw3;                                         // 0x0340(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FaceLightYaw1;                                     // 0x0344(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FaceLightYaw2;                                     // 0x0348(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         FaceLightYaw3;                                     // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PointLight1_Location;                              // 0x0350(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PointLight2_Location;                              // 0x035C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                PointLight3_Location;                              // 0x0368(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           PointLight1_ToonLightColor;                        // 0x0374(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           PointLight2_ToonLightColor;                        // 0x0384(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           PointLight3_ToonLightColor;                        // 0x0394(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_TongKong1;                      // 0x03A4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_TongKong2;                      // 0x03B4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_TongKong3;                      // 0x03C4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_YanBai1;                        // 0x03D4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_YanBai2;                        // 0x03E4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_YanBai3;                        // 0x03F4(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_Color1;                         // 0x0404(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_Color2;                         // 0x0414(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           EyeLightSimulation_Color3;                         // 0x0424(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         MeshPart;                                          // 0x0434(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435[0x3];                                      // 0x0435(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Handle1;                                           // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Handle2;                                           // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Handle3;                                           // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_444[0x4];                                      // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UKuroMaterialControllerComponent*       KuroMaterialControllerComponent1;                  // 0x0448(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UKuroMaterialControllerComponent*       KuroMaterialControllerComponent2;                  // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UKuroMaterialControllerComponent*       KuroMaterialControllerComponent3;                  // 0x0458(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         textX;                                             // 0x0460(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         textY;                                             // 0x0464(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         Width;                                             // 0x0468(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LinkCameraLocation;                                // 0x046C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                LinkCameraRelativeLocation;                        // 0x0478(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsThree;                                           // 0x0484(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
-	uint8                                         Pad_485[0x3];                                      // 0x0485(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         RoleId1;                                           // 0x0488(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         RoleId2;                                           // 0x048C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         RoleId3;                                           // 0x0490(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03B8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UChildActorComponent*                   CharacterActor_3;                                  // 0x03C0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Character3;                                        // 0x03C8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   CharacterActor_2;                                  // 0x03D0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Character2;                                        // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UChildActorComponent*                   CharacterActor_1;                                  // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Character1;                                        // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight3;                                       // 0x03F0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight2;                                       // 0x03F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPointLightComponent*                   PointLight1;                                       // 0x0400(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0408(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UMaterialParameterCollection*           MPC;                                               // 0x0410(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Angle_LinePosition__LineDistance;                  // 0x0418(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         E_LinkPos_1;                                       // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         E_LinkPos_2;                                       // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         E_LinkPos_3;                                       // 0x042C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightYaw1;                                         // 0x0430(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightYaw2;                                         // 0x0434(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         LightYaw3;                                         // 0x0438(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FaceLightYaw1;                                     // 0x043C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FaceLightYaw2;                                     // 0x0440(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         FaceLightYaw3;                                     // 0x0444(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PointLight1_Location;                              // 0x0448(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PointLight2_Location;                              // 0x0454(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                PointLight3_Location;                              // 0x0460(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           PointLight1_ToonLightColor;                        // 0x046C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           PointLight2_ToonLightColor;                        // 0x047C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           PointLight3_ToonLightColor;                        // 0x048C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_TongKong1;                      // 0x049C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_TongKong2;                      // 0x04AC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_TongKong3;                      // 0x04BC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_YanBai1;                        // 0x04CC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_YanBai2;                        // 0x04DC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_YanBai3;                        // 0x04EC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_Color1;                         // 0x04FC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_Color2;                         // 0x050C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           EyeLightSimulation_Color3;                         // 0x051C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         MeshPart;                                          // 0x052C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_52D[0x3];                                      // 0x052D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Handle1;                                           // 0x0530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Handle2;                                           // 0x0534(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Handle3;                                           // 0x0538(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_53C[0x4];                                      // 0x053C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UKuroMaterialControllerComponent*       KuroMaterialControllerComponent1;                  // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UKuroMaterialControllerComponent*       KuroMaterialControllerComponent2;                  // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UKuroMaterialControllerComponent*       KuroMaterialControllerComponent3;                  // 0x0550(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         textX;                                             // 0x0558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         textY;                                             // 0x055C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         Width;                                             // 0x0560(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LinkCameraLocation;                                // 0x0564(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                LinkCameraRelativeLocation;                        // 0x0570(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsThree;                                           // 0x057C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor)
+	uint8                                         Pad_57D[0x3];                                      // 0x057D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         RoleId1;                                           // 0x0580(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RoleId2;                                           // 0x0584(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         RoleId3;                                           // 0x0588(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_BP_SplitScreen_New(int32 EntryPoint);
@@ -104,60 +104,60 @@ public:
 	}
 };
 static_assert(alignof(ABP_SplitScreen_New_C) == 0x000008, "Wrong alignment on ABP_SplitScreen_New_C");
-static_assert(sizeof(ABP_SplitScreen_New_C) == 0x000498, "Wrong size on ABP_SplitScreen_New_C");
-static_assert(offsetof(ABP_SplitScreen_New_C, UberGraphFrame) == 0x0002C0, "Member 'ABP_SplitScreen_New_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, CharacterActor_3) == 0x0002C8, "Member 'ABP_SplitScreen_New_C::CharacterActor_3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, Character3) == 0x0002D0, "Member 'ABP_SplitScreen_New_C::Character3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, CharacterActor_2) == 0x0002D8, "Member 'ABP_SplitScreen_New_C::CharacterActor_2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, Character2) == 0x0002E0, "Member 'ABP_SplitScreen_New_C::Character2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, CharacterActor_1) == 0x0002E8, "Member 'ABP_SplitScreen_New_C::CharacterActor_1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, Character1) == 0x0002F0, "Member 'ABP_SplitScreen_New_C::Character1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight3) == 0x0002F8, "Member 'ABP_SplitScreen_New_C::PointLight3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight2) == 0x000300, "Member 'ABP_SplitScreen_New_C::PointLight2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight1) == 0x000308, "Member 'ABP_SplitScreen_New_C::PointLight1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, DefaultSceneRoot) == 0x000310, "Member 'ABP_SplitScreen_New_C::DefaultSceneRoot' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, MPC) == 0x000318, "Member 'ABP_SplitScreen_New_C::MPC' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, Angle_LinePosition__LineDistance) == 0x000320, "Member 'ABP_SplitScreen_New_C::Angle_LinePosition__LineDistance' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, E_LinkPos_1) == 0x00032C, "Member 'ABP_SplitScreen_New_C::E_LinkPos_1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, E_LinkPos_2) == 0x000330, "Member 'ABP_SplitScreen_New_C::E_LinkPos_2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, E_LinkPos_3) == 0x000334, "Member 'ABP_SplitScreen_New_C::E_LinkPos_3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, LightYaw1) == 0x000338, "Member 'ABP_SplitScreen_New_C::LightYaw1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, LightYaw2) == 0x00033C, "Member 'ABP_SplitScreen_New_C::LightYaw2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, LightYaw3) == 0x000340, "Member 'ABP_SplitScreen_New_C::LightYaw3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, FaceLightYaw1) == 0x000344, "Member 'ABP_SplitScreen_New_C::FaceLightYaw1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, FaceLightYaw2) == 0x000348, "Member 'ABP_SplitScreen_New_C::FaceLightYaw2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, FaceLightYaw3) == 0x00034C, "Member 'ABP_SplitScreen_New_C::FaceLightYaw3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight1_Location) == 0x000350, "Member 'ABP_SplitScreen_New_C::PointLight1_Location' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight2_Location) == 0x00035C, "Member 'ABP_SplitScreen_New_C::PointLight2_Location' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight3_Location) == 0x000368, "Member 'ABP_SplitScreen_New_C::PointLight3_Location' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight1_ToonLightColor) == 0x000374, "Member 'ABP_SplitScreen_New_C::PointLight1_ToonLightColor' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight2_ToonLightColor) == 0x000384, "Member 'ABP_SplitScreen_New_C::PointLight2_ToonLightColor' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, PointLight3_ToonLightColor) == 0x000394, "Member 'ABP_SplitScreen_New_C::PointLight3_ToonLightColor' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_TongKong1) == 0x0003A4, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_TongKong1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_TongKong2) == 0x0003B4, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_TongKong2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_TongKong3) == 0x0003C4, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_TongKong3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_YanBai1) == 0x0003D4, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_YanBai1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_YanBai2) == 0x0003E4, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_YanBai2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_YanBai3) == 0x0003F4, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_YanBai3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_Color1) == 0x000404, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_Color1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_Color2) == 0x000414, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_Color2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_Color3) == 0x000424, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_Color3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, MeshPart) == 0x000434, "Member 'ABP_SplitScreen_New_C::MeshPart' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, Handle1) == 0x000438, "Member 'ABP_SplitScreen_New_C::Handle1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, Handle2) == 0x00043C, "Member 'ABP_SplitScreen_New_C::Handle2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, Handle3) == 0x000440, "Member 'ABP_SplitScreen_New_C::Handle3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, KuroMaterialControllerComponent1) == 0x000448, "Member 'ABP_SplitScreen_New_C::KuroMaterialControllerComponent1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, KuroMaterialControllerComponent2) == 0x000450, "Member 'ABP_SplitScreen_New_C::KuroMaterialControllerComponent2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, KuroMaterialControllerComponent3) == 0x000458, "Member 'ABP_SplitScreen_New_C::KuroMaterialControllerComponent3' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, textX) == 0x000460, "Member 'ABP_SplitScreen_New_C::textX' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, textY) == 0x000464, "Member 'ABP_SplitScreen_New_C::textY' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, Width) == 0x000468, "Member 'ABP_SplitScreen_New_C::Width' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, LinkCameraLocation) == 0x00046C, "Member 'ABP_SplitScreen_New_C::LinkCameraLocation' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, LinkCameraRelativeLocation) == 0x000478, "Member 'ABP_SplitScreen_New_C::LinkCameraRelativeLocation' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, IsThree) == 0x000484, "Member 'ABP_SplitScreen_New_C::IsThree' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, RoleId1) == 0x000488, "Member 'ABP_SplitScreen_New_C::RoleId1' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, RoleId2) == 0x00048C, "Member 'ABP_SplitScreen_New_C::RoleId2' has a wrong offset!");
-static_assert(offsetof(ABP_SplitScreen_New_C, RoleId3) == 0x000490, "Member 'ABP_SplitScreen_New_C::RoleId3' has a wrong offset!");
+static_assert(sizeof(ABP_SplitScreen_New_C) == 0x000590, "Wrong size on ABP_SplitScreen_New_C");
+static_assert(offsetof(ABP_SplitScreen_New_C, UberGraphFrame) == 0x0003B8, "Member 'ABP_SplitScreen_New_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, CharacterActor_3) == 0x0003C0, "Member 'ABP_SplitScreen_New_C::CharacterActor_3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, Character3) == 0x0003C8, "Member 'ABP_SplitScreen_New_C::Character3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, CharacterActor_2) == 0x0003D0, "Member 'ABP_SplitScreen_New_C::CharacterActor_2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, Character2) == 0x0003D8, "Member 'ABP_SplitScreen_New_C::Character2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, CharacterActor_1) == 0x0003E0, "Member 'ABP_SplitScreen_New_C::CharacterActor_1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, Character1) == 0x0003E8, "Member 'ABP_SplitScreen_New_C::Character1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight3) == 0x0003F0, "Member 'ABP_SplitScreen_New_C::PointLight3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight2) == 0x0003F8, "Member 'ABP_SplitScreen_New_C::PointLight2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight1) == 0x000400, "Member 'ABP_SplitScreen_New_C::PointLight1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, DefaultSceneRoot) == 0x000408, "Member 'ABP_SplitScreen_New_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, MPC) == 0x000410, "Member 'ABP_SplitScreen_New_C::MPC' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, Angle_LinePosition__LineDistance) == 0x000418, "Member 'ABP_SplitScreen_New_C::Angle_LinePosition__LineDistance' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, E_LinkPos_1) == 0x000424, "Member 'ABP_SplitScreen_New_C::E_LinkPos_1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, E_LinkPos_2) == 0x000428, "Member 'ABP_SplitScreen_New_C::E_LinkPos_2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, E_LinkPos_3) == 0x00042C, "Member 'ABP_SplitScreen_New_C::E_LinkPos_3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, LightYaw1) == 0x000430, "Member 'ABP_SplitScreen_New_C::LightYaw1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, LightYaw2) == 0x000434, "Member 'ABP_SplitScreen_New_C::LightYaw2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, LightYaw3) == 0x000438, "Member 'ABP_SplitScreen_New_C::LightYaw3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, FaceLightYaw1) == 0x00043C, "Member 'ABP_SplitScreen_New_C::FaceLightYaw1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, FaceLightYaw2) == 0x000440, "Member 'ABP_SplitScreen_New_C::FaceLightYaw2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, FaceLightYaw3) == 0x000444, "Member 'ABP_SplitScreen_New_C::FaceLightYaw3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight1_Location) == 0x000448, "Member 'ABP_SplitScreen_New_C::PointLight1_Location' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight2_Location) == 0x000454, "Member 'ABP_SplitScreen_New_C::PointLight2_Location' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight3_Location) == 0x000460, "Member 'ABP_SplitScreen_New_C::PointLight3_Location' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight1_ToonLightColor) == 0x00046C, "Member 'ABP_SplitScreen_New_C::PointLight1_ToonLightColor' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight2_ToonLightColor) == 0x00047C, "Member 'ABP_SplitScreen_New_C::PointLight2_ToonLightColor' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, PointLight3_ToonLightColor) == 0x00048C, "Member 'ABP_SplitScreen_New_C::PointLight3_ToonLightColor' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_TongKong1) == 0x00049C, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_TongKong1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_TongKong2) == 0x0004AC, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_TongKong2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_TongKong3) == 0x0004BC, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_TongKong3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_YanBai1) == 0x0004CC, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_YanBai1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_YanBai2) == 0x0004DC, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_YanBai2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_YanBai3) == 0x0004EC, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_YanBai3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_Color1) == 0x0004FC, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_Color1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_Color2) == 0x00050C, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_Color2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, EyeLightSimulation_Color3) == 0x00051C, "Member 'ABP_SplitScreen_New_C::EyeLightSimulation_Color3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, MeshPart) == 0x00052C, "Member 'ABP_SplitScreen_New_C::MeshPart' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, Handle1) == 0x000530, "Member 'ABP_SplitScreen_New_C::Handle1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, Handle2) == 0x000534, "Member 'ABP_SplitScreen_New_C::Handle2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, Handle3) == 0x000538, "Member 'ABP_SplitScreen_New_C::Handle3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, KuroMaterialControllerComponent1) == 0x000540, "Member 'ABP_SplitScreen_New_C::KuroMaterialControllerComponent1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, KuroMaterialControllerComponent2) == 0x000548, "Member 'ABP_SplitScreen_New_C::KuroMaterialControllerComponent2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, KuroMaterialControllerComponent3) == 0x000550, "Member 'ABP_SplitScreen_New_C::KuroMaterialControllerComponent3' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, textX) == 0x000558, "Member 'ABP_SplitScreen_New_C::textX' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, textY) == 0x00055C, "Member 'ABP_SplitScreen_New_C::textY' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, Width) == 0x000560, "Member 'ABP_SplitScreen_New_C::Width' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, LinkCameraLocation) == 0x000564, "Member 'ABP_SplitScreen_New_C::LinkCameraLocation' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, LinkCameraRelativeLocation) == 0x000570, "Member 'ABP_SplitScreen_New_C::LinkCameraRelativeLocation' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, IsThree) == 0x00057C, "Member 'ABP_SplitScreen_New_C::IsThree' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, RoleId1) == 0x000580, "Member 'ABP_SplitScreen_New_C::RoleId1' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, RoleId2) == 0x000584, "Member 'ABP_SplitScreen_New_C::RoleId2' has a wrong offset!");
+static_assert(offsetof(ABP_SplitScreen_New_C, RoleId3) == 0x000588, "Member 'ABP_SplitScreen_New_C::RoleId3' has a wrong offset!");
 
 }
 

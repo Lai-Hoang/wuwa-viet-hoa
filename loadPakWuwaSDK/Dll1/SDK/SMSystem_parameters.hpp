@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "SMSystem_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "SMSystem_structs.hpp"
 
 
 namespace SDK::Params

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "SDangoPerformData_structs.hpp"
 #include "SBaseCurve_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "EDangoPerformType_structs.hpp"
 #include "Engine_classes.hpp"
+#include "SDangoPerformData_structs.hpp"
 
 
 namespace SDK

@@ -18,7 +18,7 @@ namespace SDK::Params
 {
 
 // Function BPL_CameraUtility.BPL_CameraUtility_C.DtGetCameraConfigList
-// 0x07A8 (0x07A8 - 0x0000)
+// 0x0850 (0x0850 - 0x0000)
 struct BPL_CameraUtility_C_DtGetCameraConfigList final
 {
 public:
@@ -36,13 +36,13 @@ public:
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x004C(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_59[0x7];                                       // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSCameraConfig                         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0060(0x0740)(HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x07A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_7A1[0x3];                                      // 0x07A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x07A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FSCameraConfig                         CallFunc_GetDataTableRowFromName_OutRow;           // 0x0060(0x07E8)(HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0848(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_849[0x3];                                      // 0x0849(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x084C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPL_CameraUtility_C_DtGetCameraConfigList) == 0x000008, "Wrong alignment on BPL_CameraUtility_C_DtGetCameraConfigList");
-static_assert(sizeof(BPL_CameraUtility_C_DtGetCameraConfigList) == 0x0007A8, "Wrong size on BPL_CameraUtility_C_DtGetCameraConfigList");
+static_assert(sizeof(BPL_CameraUtility_C_DtGetCameraConfigList) == 0x000850, "Wrong size on BPL_CameraUtility_C_DtGetCameraConfigList");
 static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CameraSettings) == 0x000000, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::CameraSettings' has a wrong offset!");
 static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, DataTable) == 0x000010, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::DataTable' has a wrong offset!");
 static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, __WorldContext) == 0x000018, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::__WorldContext' has a wrong offset!");
@@ -56,8 +56,8 @@ static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CallFunc_Array
 static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CallFunc_Array_Get_Item) == 0x00004C, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CallFunc_Less_IntInt_ReturnValue) == 0x000058, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CallFunc_GetDataTableRowFromName_OutRow) == 0x000060, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0007A0, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CallFunc_Array_Add_ReturnValue) == 0x0007A4, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000848, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_CameraUtility_C_DtGetCameraConfigList, CallFunc_Array_Add_ReturnValue) == 0x00084C, "Member 'BPL_CameraUtility_C_DtGetCameraConfigList::CallFunc_Array_Add_ReturnValue' has a wrong offset!");
 
 // Function BPL_CameraUtility.BPL_CameraUtility_C.DtGetCameraConfigs
 // 0x0110 (0x0110 - 0x0000)

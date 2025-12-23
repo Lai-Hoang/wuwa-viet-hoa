@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "ERelation_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_ManagerBase_classes.hpp"
 #include "ECamp_structs.hpp"
-#include "ERelation_structs.hpp"
 
 
 namespace SDK
@@ -46,19 +46,19 @@ public:
 	int32                                         攻击位数量;                                        // 0x01E8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void 查询受击类型覆盖(int32 ID, struct FSHitMapping* 受击覆盖, bool* 是否找到);
-	void 站位控制(TArray<class UObject*>& 怪物数组);
-	void 删除Debug的对象(const class ATsBaseCharacter_C*& baseChar);
-	void 添加Debug的对象(const class ATsBaseCharacter_C*& baseChar);
-	void 注册BPai(class UObject* BPAI对象);
-	void 烈度获取所有Actor();
-	void 烈度返回NPC();
-	void 阵营判断(ECamp 自身阵营, ECamp 目标阵营, ERelation* 关系, int32* 关系整数);
-	void 初始化(class UBP_MainGameInstance_C* 游戏实例_0);
-	void 战斗初始化();
-	void Tick(float DeltaSeconds);
-	void 当阵容加载完成时();
 	void ExecuteUbergraph_BP_FightManager(int32 EntryPoint);
+	void 当阵容加载完成时();
+	void Tick(float DeltaSeconds);
+	void 战斗初始化();
+	void 初始化(class UBP_MainGameInstance_C* 游戏实例_0);
+	void 阵营判断(ECamp 自身阵营, ECamp 目标阵营, ERelation* 关系, int32* 关系整数);
+	void 烈度返回NPC();
+	void 烈度获取所有Actor();
+	void 注册BPai(class UObject* BPAI对象);
+	void 添加Debug的对象(const class ATsBaseCharacter_C*& baseChar);
+	void 删除Debug的对象(const class ATsBaseCharacter_C*& baseChar);
+	void 站位控制(TArray<class UObject*>& 怪物数组);
+	void 查询受击类型覆盖(int32 ID, struct FSHitMapping* 受击覆盖, bool* 是否找到);
 
 public:
 	static class UClass* StaticClass()

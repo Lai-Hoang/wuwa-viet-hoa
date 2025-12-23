@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass PD_CloudPreset.PD_CloudPreset_C
-// 0x0C90 (0x0CC8 - 0x0038)
+// 0x1200 (0x1238 - 0x0038)
 class UPD_CloudPreset_C final : public UPrimaryDataAsset
 {
 public:
@@ -87,7 +87,36 @@ public:
 	TSoftObjectPtr<class UPD_CloudPrefab_C>       巡游天国;                                          // 0x0C08(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TSoftObjectPtr<class UPD_CloudPrefab_C>       隐海试验场;                                        // 0x0C38(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TSoftObjectPtr<class UPD_CloudPrefab_C>       失亡彼岸;                                          // 0x0C68(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
-	TSoftObjectPtr<class UPD_CloudPrefab_C>       总督日月同辉;                                      // 0x0C98(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       黑潮风暴;                                          // 0x0C98(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       黑潮风暴加强;                                      // 0x0CC8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       烈阳天气;                                          // 0x0CF8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       总督日月同辉;                                      // 0x0D28(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       穗波白天;                                          // 0x0D58(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       穗波夜晚;                                          // 0x0D88(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       穗波枯山水;                                        // 0x0DB8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       穗波阴天;                                          // 0x0DE8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       安全点白天;                                        // 0x0E18(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       安全点夜晚;                                        // 0x0E48(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       拉海落白天;                                        // 0x0E78(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       拉海洛夜晚;                                        // 0x0EA8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       磁暴前置;                                          // 0x0ED8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       磁暴后置;                                          // 0x0F08(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       星门Boss;                                          // 0x0F38(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       坠落炉芯;                                          // 0x0F68(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       炉芯内部;                                          // 0x0F98(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       炉芯领主;                                          // 0x0FC8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       浮光林白天;                                        // 0x0FF8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       浮光林夜晚;                                        // 0x1028(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       拉海洛阴天;                                        // 0x1058(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       梵高;                                              // 0x1088(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       不渲染BP_Cloud控制的云;                            // 0x10B8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       罗伊白天;                                          // 0x10E8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       罗伊夜晚;                                          // 0x1118(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       罗伊极光;                                          // 0x1148(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       罗伊初见;                                          // 0x1178(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       星海BOSS一阶;                                      // 0x11A8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       星海BOSS二阶;                                      // 0x11D8(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
+	TSoftObjectPtr<class UPD_CloudPrefab_C>       拉海洛初见;                                        // 0x1208(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -100,7 +129,7 @@ public:
 	}
 };
 static_assert(alignof(UPD_CloudPreset_C) == 0x000008, "Wrong alignment on UPD_CloudPreset_C");
-static_assert(sizeof(UPD_CloudPreset_C) == 0x000CC8, "Wrong size on UPD_CloudPreset_C");
+static_assert(sizeof(UPD_CloudPreset_C) == 0x001238, "Wrong size on UPD_CloudPreset_C");
 static_assert(offsetof(UPD_CloudPreset_C, 天城) == 0x000038, "Member 'UPD_CloudPreset_C::天城' has a wrong offset!");
 static_assert(offsetof(UPD_CloudPreset_C, 遗落原乡) == 0x000068, "Member 'UPD_CloudPreset_C::遗落原乡' has a wrong offset!");
 static_assert(offsetof(UPD_CloudPreset_C, 无光之森) == 0x000098, "Member 'UPD_CloudPreset_C::无光之森' has a wrong offset!");
@@ -167,7 +196,36 @@ static_assert(offsetof(UPD_CloudPreset_C, 光路幻境) == 0x000BD8, "Member 'UP
 static_assert(offsetof(UPD_CloudPreset_C, 巡游天国) == 0x000C08, "Member 'UPD_CloudPreset_C::巡游天国' has a wrong offset!");
 static_assert(offsetof(UPD_CloudPreset_C, 隐海试验场) == 0x000C38, "Member 'UPD_CloudPreset_C::隐海试验场' has a wrong offset!");
 static_assert(offsetof(UPD_CloudPreset_C, 失亡彼岸) == 0x000C68, "Member 'UPD_CloudPreset_C::失亡彼岸' has a wrong offset!");
-static_assert(offsetof(UPD_CloudPreset_C, 总督日月同辉) == 0x000C98, "Member 'UPD_CloudPreset_C::总督日月同辉' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 黑潮风暴) == 0x000C98, "Member 'UPD_CloudPreset_C::黑潮风暴' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 黑潮风暴加强) == 0x000CC8, "Member 'UPD_CloudPreset_C::黑潮风暴加强' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 烈阳天气) == 0x000CF8, "Member 'UPD_CloudPreset_C::烈阳天气' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 总督日月同辉) == 0x000D28, "Member 'UPD_CloudPreset_C::总督日月同辉' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 穗波白天) == 0x000D58, "Member 'UPD_CloudPreset_C::穗波白天' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 穗波夜晚) == 0x000D88, "Member 'UPD_CloudPreset_C::穗波夜晚' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 穗波枯山水) == 0x000DB8, "Member 'UPD_CloudPreset_C::穗波枯山水' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 穗波阴天) == 0x000DE8, "Member 'UPD_CloudPreset_C::穗波阴天' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 安全点白天) == 0x000E18, "Member 'UPD_CloudPreset_C::安全点白天' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 安全点夜晚) == 0x000E48, "Member 'UPD_CloudPreset_C::安全点夜晚' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 拉海落白天) == 0x000E78, "Member 'UPD_CloudPreset_C::拉海落白天' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 拉海洛夜晚) == 0x000EA8, "Member 'UPD_CloudPreset_C::拉海洛夜晚' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 磁暴前置) == 0x000ED8, "Member 'UPD_CloudPreset_C::磁暴前置' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 磁暴后置) == 0x000F08, "Member 'UPD_CloudPreset_C::磁暴后置' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 星门Boss) == 0x000F38, "Member 'UPD_CloudPreset_C::星门Boss' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 坠落炉芯) == 0x000F68, "Member 'UPD_CloudPreset_C::坠落炉芯' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 炉芯内部) == 0x000F98, "Member 'UPD_CloudPreset_C::炉芯内部' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 炉芯领主) == 0x000FC8, "Member 'UPD_CloudPreset_C::炉芯领主' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 浮光林白天) == 0x000FF8, "Member 'UPD_CloudPreset_C::浮光林白天' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 浮光林夜晚) == 0x001028, "Member 'UPD_CloudPreset_C::浮光林夜晚' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 拉海洛阴天) == 0x001058, "Member 'UPD_CloudPreset_C::拉海洛阴天' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 梵高) == 0x001088, "Member 'UPD_CloudPreset_C::梵高' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 不渲染BP_Cloud控制的云) == 0x0010B8, "Member 'UPD_CloudPreset_C::不渲染BP_Cloud控制的云' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 罗伊白天) == 0x0010E8, "Member 'UPD_CloudPreset_C::罗伊白天' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 罗伊夜晚) == 0x001118, "Member 'UPD_CloudPreset_C::罗伊夜晚' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 罗伊极光) == 0x001148, "Member 'UPD_CloudPreset_C::罗伊极光' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 罗伊初见) == 0x001178, "Member 'UPD_CloudPreset_C::罗伊初见' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 星海BOSS一阶) == 0x0011A8, "Member 'UPD_CloudPreset_C::星海BOSS一阶' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 星海BOSS二阶) == 0x0011D8, "Member 'UPD_CloudPreset_C::星海BOSS二阶' has a wrong offset!");
+static_assert(offsetof(UPD_CloudPreset_C, 拉海洛初见) == 0x001208, "Member 'UPD_CloudPreset_C::拉海洛初见' has a wrong offset!");
 
 }
 

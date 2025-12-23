@@ -14,9 +14,9 @@
 namespace SDK
 {
 
-// Enum StreamlineBlueprint.UStreamlineFeatureRequirementsFlags
+// Enum StreamlineBlueprint.EStreamlineFeatureRequirementsFlags
 // NumValues: 0x0007
-enum class EUStreamlineFeatureRequirementsFlags : uint8
+enum class EStreamlineFeatureRequirementsFlags : uint8
 {
 	None                                     = 0,
 	D3D11Supported                           = 1,
@@ -24,12 +24,12 @@ enum class EUStreamlineFeatureRequirementsFlags : uint8
 	VulkanSupported                          = 4,
 	VSyncOffRequired                         = 8,
 	HardwareSchedulingRequired               = 16,
-	UStreamlineFeatureRequirementsFlags_MAX  = 17,
+	EStreamlineFeatureRequirementsFlags_MAX  = 17,
 };
 
-// Enum StreamlineBlueprint.UStreamlineFeatureSupport
+// Enum StreamlineBlueprint.EStreamlineFeatureSupport
 // NumValues: 0x000A
-enum class EUStreamlineFeatureSupport : uint8
+enum class EStreamlineFeatureSupport : uint8
 {
 	Supported                                = 0,
 	NotSupported                             = 1,
@@ -40,38 +40,19 @@ enum class EUStreamlineFeatureSupport : uint8
 	NotSupportedByRHI                        = 6,
 	NotSupportedByPlatformAtBuildTime        = 7,
 	NotSupportedIncompatibleAPICaptureToolActive = 8,
-	UStreamlineFeatureSupport_MAX            = 9,
+	EStreamlineFeatureSupport_MAX            = 9,
 };
 
-// Enum StreamlineBlueprint.UStreamlineFeature
-// NumValues: 0x0005
-enum class EUStreamlineFeature : uint8
+// Enum StreamlineBlueprint.EStreamlineFeature
+// NumValues: 0x0006
+enum class EStreamlineFeature : uint8
 {
 	DLSSG                                    = 0,
-	Reflex                                   = 1,
-	DeepDVC                                  = 2,
-	Count                                    = 3,
-	UStreamlineFeature_MAX                   = 4,
-};
-
-// Enum StreamlineBlueprint.UStreamlineDLSSGMode
-// NumValues: 0x0004
-enum class EUStreamlineDLSSGMode : uint8
-{
-	Off                                      = 0,
-	On                                       = 1,
-	Auto                                     = 2,
-	UStreamlineDLSSGMode_MAX                 = 3,
-};
-
-// Enum StreamlineBlueprint.UStreamlineReflexMode
-// NumValues: 0x0004
-enum class EUStreamlineReflexMode : uint8
-{
-	Disabled                                 = 0,
-	Enabled                                  = 1,
-	EnabledPlusBoost                         = 3,
-	UStreamlineReflexMode_MAX                = 4,
+	Latewarp                                 = 1,
+	Reflex                                   = 2,
+	DeepDVC                                  = 3,
+	Count                                    = 4,
+	EStreamlineFeature_MAX                   = 5,
 };
 
 // ScriptStruct StreamlineBlueprint.StreamlineVersion
@@ -94,8 +75,8 @@ static_assert(offsetof(FStreamlineVersion, Build) == 0x000008, "Member 'FStreaml
 struct FStreamlineFeatureRequirements final
 {
 public:
-	EUStreamlineFeatureSupport                    Support;                                           // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EUStreamlineFeatureRequirementsFlags          Requirements;                                      // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EStreamlineFeatureSupport                     Support;                                           // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EStreamlineFeatureRequirementsFlags           Requirements;                                      // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_2[0x2];                                        // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStreamlineVersion                     RequiredOperatingSystemVersion;                    // 0x0004(0x000C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FStreamlineVersion                     DetectedOperatingSystemVersion;                    // 0x0010(0x000C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)

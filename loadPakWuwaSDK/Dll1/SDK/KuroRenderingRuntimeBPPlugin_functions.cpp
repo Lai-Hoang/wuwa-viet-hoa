@@ -17,920 +17,6 @@
 namespace SDK
 {
 
-// Function KuroRenderingRuntimeBPPlugin.KuroWorldInfo.BP_GetInstance
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    AutoCreate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AKuroWorldInfo*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class AKuroWorldInfo* AKuroWorldInfo::BP_GetInstance(const class UObject* WorldContextObject, bool AutoCreate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroWorldInfo", "BP_GetInstance");
-
-	Params::KuroWorldInfo_BP_GetInstance Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.AutoCreate = AutoCreate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroWorldInfo.GetSLInfo
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class FName&                      PackageName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKuroStreamingLevelInfo*         LandscapeInfo                                          (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 AKuroWorldInfo::GetSLInfo(const class FName& PackageName, struct FKuroStreamingLevelInfo* LandscapeInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroWorldInfo", "GetSLInfo");
-
-	Params::KuroWorldInfo_GetSLInfo Parms{};
-
-	Parms.PackageName = PackageName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (LandscapeInfo != nullptr)
-		*LandscapeInfo = std::move(Parms.LandscapeInfo);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroWorldInfo.GetLandscapeInfo
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FKuroLandscapeInfo*              LandscapeInfo                                          (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void AKuroWorldInfo::GetLandscapeInfo(struct FKuroLandscapeInfo* LandscapeInfo) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroWorldInfo", "GetLandscapeInfo");
-
-	Params::KuroWorldInfo_GetLandscapeInfo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (LandscapeInfo != nullptr)
-		*LandscapeInfo = std::move(Parms.LandscapeInfo);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroBillboardComponent.Initialize
-// (Final, Native, Public, BlueprintCallable)
-
-void UKuroBillboardComponent::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroBillboardComponent", "Initialize");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroBillboardComponent.Update
-// (Final, Native, Public, BlueprintCallable, Const)
-
-void UKuroBillboardComponent::Update() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroBillboardComponent", "Update");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroInteractionPlacement.SetTriggerTransform
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroInteractionPlacement::SetTriggerTransform()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroInteractionPlacement", "SetTriggerTransform");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSuperFarFog.Update
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroSuperFarFog::Update(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSuperFarFog", "Update");
-
-	Params::KuroSuperFarFog_Update Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSuperFarFog.UpdateFog
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroSuperFarFog::UpdateFog()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSuperFarFog", "UpdateFog");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.GetViewportSize
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D UKuroLensFlare::GetViewportSize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroLensFlare", "GetViewportSize");
-
-	Params::KuroLensFlare_GetViewportSize Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.Init
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UProceduralMeshComponent*         InputMeshComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroLensFlare::Init(class UProceduralMeshComponent* InputMeshComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroLensFlare", "Init");
-
-	Params::KuroLensFlare_Init Parms{};
-
-	Parms.InputMeshComponent = InputMeshComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.InitVecticesData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   LensImageLengths                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroLensFlare::InitVecticesData(int32 LensImageLengths)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroLensFlare", "InitVecticesData");
-
-	Params::KuroLensFlare_InitVecticesData Parms{};
-
-	Parms.LensImageLengths = LensImageLengths;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.IsInit
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroLensFlare::IsInit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroLensFlare", "IsInit");
-
-	Params::KuroLensFlare_IsInit Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.IsViewportEnable
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroLensFlare::IsViewportEnable()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroLensFlare", "IsViewportEnable");
-
-	Params::KuroLensFlare_IsViewportEnable Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.SetVertsProperties
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVector2D&                 ViewportScale                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             PrimityIndex                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 UVCenter                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 UVSize                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 LensFlareScale                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             LensFlareOffset                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             LensFlareRotation                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FLinearColor&              LensFlareTint                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 LensFlareScreenPosition                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector2D&                 LensFlareDirection                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroLensFlare::SetVertsProperties(const struct FVector2D& ViewportScale, const int32 PrimityIndex, const struct FVector2D& UVCenter, const struct FVector2D& UVSize, const struct FVector2D& LensFlareScale, const float LensFlareOffset, const float LensFlareRotation, const struct FLinearColor& LensFlareTint, const struct FVector2D& LensFlareScreenPosition, const struct FVector2D& LensFlareDirection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroLensFlare", "SetVertsProperties");
-
-	Params::KuroLensFlare_SetVertsProperties Parms{};
-
-	Parms.ViewportScale = std::move(ViewportScale);
-	Parms.PrimityIndex = PrimityIndex;
-	Parms.UVCenter = std::move(UVCenter);
-	Parms.UVSize = std::move(UVSize);
-	Parms.LensFlareScale = std::move(LensFlareScale);
-	Parms.LensFlareOffset = LensFlareOffset;
-	Parms.LensFlareRotation = LensFlareRotation;
-	Parms.LensFlareTint = std::move(LensFlareTint);
-	Parms.LensFlareScreenPosition = std::move(LensFlareScreenPosition);
-	Parms.LensFlareDirection = std::move(LensFlareDirection);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSequencePoseComponent.AddSkeletalMeshComponent
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USkeletalMeshComponent*           InSkeletalMeshComponent                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroSequencePoseComponent::AddSkeletalMeshComponent(class USkeletalMeshComponent* InSkeletalMeshComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSequencePoseComponent", "AddSkeletalMeshComponent");
-
-	Params::KuroSequencePoseComponent_AddSkeletalMeshComponent Parms{};
-
-	Parms.InSkeletalMeshComponent = InSkeletalMeshComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSequencePoseComponent.GetCurrentPoseNum
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UKuroSequencePoseComponent::GetCurrentPoseNum() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSequencePoseComponent", "GetCurrentPoseNum");
-
-	Params::KuroSequencePoseComponent_GetCurrentPoseNum Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotify.K2_Notify
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAnimSequenceBase*                Animation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAnimNotify::K2_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAnimNotify", "K2_Notify");
-
-	Params::KuroAnimNotify_K2_Notify Parms{};
-
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotify.K2_PostChangeProperty
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAnimNotify::K2_PostChangeProperty(const class FName PropertyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAnimNotify", "K2_PostChangeProperty");
-
-	Params::KuroAnimNotify_K2_PostChangeProperty Parms{};
-
-	Parms.PropertyName = PropertyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotify.K2_ValidateAssets
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAnimNotify::K2_ValidateAssets()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAnimNotify", "K2_ValidateAssets");
-
-	Params::KuroAnimNotify_K2_ValidateAssets Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetKuroUiSceneSystem
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UKuroUiSceneSystem*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UKuroUiSceneSystem* UKuroUiSceneSystem::GetKuroUiSceneSystem(class UWorld* InWorld)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroUiSceneSystem", "GetKuroUiSceneSystem");
-
-	Params::KuroUiSceneSystem_GetKuroUiSceneSystem Parms{};
-
-	Parms.InWorld = InWorld;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.D_PreloadUiScene
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVectorDouble&             WorldPositionOffset                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroUiSceneSystem::D_PreloadUiScene(const class FString& ScenePath, const struct FVectorDouble& WorldPositionOffset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "D_PreloadUiScene");
-
-	Params::KuroUiSceneSystem_D_PreloadUiScene Parms{};
-
-	Parms.ScenePath = std::move(ScenePath);
-	Parms.WorldPositionOffset = std::move(WorldPositionOffset);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.EndUiSceneRendering
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroUiSceneSystem::EndUiSceneRendering()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "EndUiSceneRendering");
-
-	Params::KuroUiSceneSystem_EndUiSceneRendering Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetCurrentUiSceneRenderingSceneName
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UKuroUiSceneSystem::GetCurrentUiSceneRenderingSceneName()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "GetCurrentUiSceneRenderingSceneName");
-
-	Params::KuroUiSceneSystem_GetCurrentUiSceneRenderingSceneName Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetUiSceneLoadingState
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EKuroUiSceneLoadingState                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EKuroUiSceneLoadingState UKuroUiSceneSystem::GetUiSceneLoadingState(const class FString& ScenePath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "GetUiSceneLoadingState");
-
-	Params::KuroUiSceneSystem_GetUiSceneLoadingState Parms{};
-
-	Parms.ScenePath = std::move(ScenePath);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetUiSceneRootActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AKuroUiSceneRootActor*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class AKuroUiSceneRootActor* UKuroUiSceneSystem::GetUiSceneRootActor(const class FString& ScenePath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "GetUiSceneRootActor");
-
-	Params::KuroUiSceneSystem_GetUiSceneRootActor Parms{};
-
-	Parms.ScenePath = std::move(ScenePath);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetUiSceneStates
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TMap<class FString, EKuroUiSceneLoadingState>ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-TMap<class FString, EKuroUiSceneLoadingState> UKuroUiSceneSystem::GetUiSceneStates()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "GetUiSceneStates");
-
-	Params::KuroUiSceneSystem_GetUiSceneStates Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetUiSceneWorldPositionOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UKuroUiSceneSystem::GetUiSceneWorldPositionOffset(const class FString& ScenePath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "GetUiSceneWorldPositionOffset");
-
-	Params::KuroUiSceneSystem_GetUiSceneWorldPositionOffset Parms{};
-
-	Parms.ScenePath = std::move(ScenePath);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.InvokeSceneVisible
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroUiSceneSystem::InvokeSceneVisible(const class FString& ScenePath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "InvokeSceneVisible");
-
-	Params::KuroUiSceneSystem_InvokeSceneVisible Parms{};
-
-	Parms.ScenePath = std::move(ScenePath);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.PreloadUiScene
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   WorldPositionOffset                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroUiSceneSystem::PreloadUiScene(const class FString& ScenePath, const struct FVector& WorldPositionOffset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "PreloadUiScene");
-
-	Params::KuroUiSceneSystem_PreloadUiScene Parms{};
-
-	Parms.ScenePath = std::move(ScenePath);
-	Parms.WorldPositionOffset = std::move(WorldPositionOffset);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.StartUiSceneRendering
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroUiSceneSystem::StartUiSceneRendering(const class FString& ScenePath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "StartUiSceneRendering");
-
-	Params::KuroUiSceneSystem_StartUiSceneRendering Parms{};
-
-	Parms.ScenePath = std::move(ScenePath);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.UnloadUiScene
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroUiSceneSystem::UnloadUiScene(const class FString& ScenePath)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroUiSceneSystem", "UnloadUiScene");
-
-	Params::KuroUiSceneSystem_UnloadUiScene Parms{};
-
-	Parms.ScenePath = std::move(ScenePath);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_NotifyBegin
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAnimSequenceBase*                Animation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   TotalDuration                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAnimNotifyState::K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAnimNotifyState", "K2_NotifyBegin");
-
-	Params::KuroAnimNotifyState_K2_NotifyBegin Parms{};
-
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-	Parms.TotalDuration = TotalDuration;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_NotifyEnd
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAnimSequenceBase*                Animation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAnimNotifyState::K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAnimNotifyState", "K2_NotifyEnd");
-
-	Params::KuroAnimNotifyState_K2_NotifyEnd Parms{};
-
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_NotifyTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class USkeletalMeshComponent*           MeshComp                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UAnimSequenceBase*                Animation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   FrameDeltaTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAnimNotifyState::K2_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAnimNotifyState", "K2_NotifyTick");
-
-	Params::KuroAnimNotifyState_K2_NotifyTick Parms{};
-
-	Parms.MeshComp = MeshComp;
-	Parms.Animation = Animation;
-	Parms.FrameDeltaTime = FrameDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_PostChangeProperty
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAnimNotifyState::K2_PostChangeProperty(const class FName PropertyName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAnimNotifyState", "K2_PostChangeProperty");
-
-	Params::KuroAnimNotifyState_K2_PostChangeProperty Parms{};
-
-	Parms.PropertyName = PropertyName;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_ValidateAssets
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAnimNotifyState::K2_ValidateAssets()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAnimNotifyState", "K2_ValidateAssets");
-
-	Params::KuroAnimNotifyState_K2_ValidateAssets Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
 // Function KuroRenderingRuntimeBPPlugin.KuroBezierMeshComponent.AddLayer
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1233,6 +319,762 @@ void UKuroBezierMeshComponent::UpdateMesh(int32 Section)
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionInfo.OnLevelShown
+// (Final, Native, Private)
+
+void UKuroSceneInteractionInfo::OnLevelShown()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneInteractionInfo", "OnLevelShown");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotify.K2_Notify
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           MeshComp                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAnimSequenceBase*                Animation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAnimNotify::K2_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimNotify", "K2_Notify");
+
+	Params::KuroAnimNotify_K2_Notify Parms{};
+
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotify.K2_PostChangeProperty
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAnimNotify::K2_PostChangeProperty(const class FName PropertyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimNotify", "K2_PostChangeProperty");
+
+	Params::KuroAnimNotify_K2_PostChangeProperty Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotify.K2_ValidateAssets
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAnimNotify::K2_ValidateAssets()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimNotify", "K2_ValidateAssets");
+
+	Params::KuroAnimNotify_K2_ValidateAssets Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_NotifyBegin
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           MeshComp                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAnimSequenceBase*                Animation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TotalDuration                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAnimNotifyState::K2_NotifyBegin(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float TotalDuration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimNotifyState", "K2_NotifyBegin");
+
+	Params::KuroAnimNotifyState_K2_NotifyBegin Parms{};
+
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.TotalDuration = TotalDuration;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_NotifyEnd
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           MeshComp                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAnimSequenceBase*                Animation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAnimNotifyState::K2_NotifyEnd(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimNotifyState", "K2_NotifyEnd");
+
+	Params::KuroAnimNotifyState_K2_NotifyEnd Parms{};
+
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_NotifyTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class USkeletalMeshComponent*           MeshComp                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAnimSequenceBase*                Animation                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   FrameDeltaTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAnimNotifyState::K2_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimNotifyState", "K2_NotifyTick");
+
+	Params::KuroAnimNotifyState_K2_NotifyTick Parms{};
+
+	Parms.MeshComp = MeshComp;
+	Parms.Animation = Animation;
+	Parms.FrameDeltaTime = FrameDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_PostChangeProperty
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FName                       PropertyName                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAnimNotifyState::K2_PostChangeProperty(const class FName PropertyName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimNotifyState", "K2_PostChangeProperty");
+
+	Params::KuroAnimNotifyState_K2_PostChangeProperty Parms{};
+
+	Parms.PropertyName = PropertyName;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroAnimNotifyState.K2_ValidateAssets
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAnimNotifyState::K2_ValidateAssets()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAnimNotifyState", "K2_ValidateAssets");
+
+	Params::KuroAnimNotifyState_K2_ValidateAssets Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.ApplyEyeProtectionBrightness
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Brightness                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EnvironmentID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGISystem::ApplyEyeProtectionBrightness(class UWorld* InWorld, float Brightness, float EnvironmentID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGISystem", "ApplyEyeProtectionBrightness");
+
+	Params::KuroGISystem_ApplyEyeProtectionBrightness Parms{};
+
+	Parms.InWorld = InWorld;
+	Parms.Brightness = Brightness;
+	Parms.EnvironmentID = EnvironmentID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.ApplyEyeProtectionEnvironment
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EnvironmentID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGISystem::ApplyEyeProtectionEnvironment(class UWorld* InWorld, float EnvironmentID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGISystem", "ApplyEyeProtectionEnvironment");
+
+	Params::KuroGISystem_ApplyEyeProtectionEnvironment Parms{};
+
+	Parms.InWorld = InWorld;
+	Parms.EnvironmentID = EnvironmentID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.ApplyEyeProtectionStrength
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EyeProtectIntensity                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EnvironmentID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGISystem::ApplyEyeProtectionStrength(class UWorld* InWorld, float EyeProtectIntensity, float EnvironmentID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGISystem", "ApplyEyeProtectionStrength");
+
+	Params::KuroGISystem_ApplyEyeProtectionStrength Parms{};
+
+	Parms.InWorld = InWorld;
+	Parms.EyeProtectIntensity = EyeProtectIntensity;
+	Parms.EnvironmentID = EnvironmentID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.ApplyEyeProtectionTemperature
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Temperature                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EnvironmentID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGISystem::ApplyEyeProtectionTemperature(class UWorld* InWorld, float Temperature, float EnvironmentID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGISystem", "ApplyEyeProtectionTemperature");
+
+	Params::KuroGISystem_ApplyEyeProtectionTemperature Parms{};
+
+	Parms.InWorld = InWorld;
+	Parms.Temperature = Temperature;
+	Parms.EnvironmentID = EnvironmentID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.ApplyEyeProtectionTexture
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TextureIntensityID                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EnvironmentID                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGISystem::ApplyEyeProtectionTexture(class UWorld* InWorld, float TextureIntensityID, float EnvironmentID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGISystem", "ApplyEyeProtectionTexture");
+
+	Params::KuroGISystem_ApplyEyeProtectionTexture Parms{};
+
+	Parms.InWorld = InWorld;
+	Parms.TextureIntensityID = TextureIntensityID;
+	Parms.EnvironmentID = EnvironmentID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.GetKuroGISystem
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKuroGISystem*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UKuroGISystem* UKuroGISystem::GetKuroGISystem(class UWorld* InWorld)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGISystem", "GetKuroGISystem");
+
+	Params::KuroGISystem_GetKuroGISystem Parms{};
+
+	Parms.InWorld = InWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.SetKuroAdvancedModeScreenFilter
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             ScreenFilterIndex                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   X                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Y                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Intensity                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   KuroSharpenIntensity                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeBrightness                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeScreenFilterContrast                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeScreenFilteColorTemperature                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeScreenFilterSaturation                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeBloom                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeNoiseIntensity                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeShadowIntensity                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeGamma                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdModeHalation                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGISystem::SetKuroAdvancedModeScreenFilter(class UWorld* InWorld, const int32 ScreenFilterIndex, float X, float Y, float Intensity, float KuroSharpenIntensity, float AdModeBrightness, float AdModeScreenFilterContrast, float AdModeScreenFilteColorTemperature, float AdModeScreenFilterSaturation, float AdModeBloom, float AdModeNoiseIntensity, float AdModeShadowIntensity, float AdModeGamma, float AdModeHalation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGISystem", "SetKuroAdvancedModeScreenFilter");
+
+	Params::KuroGISystem_SetKuroAdvancedModeScreenFilter Parms{};
+
+	Parms.InWorld = InWorld;
+	Parms.ScreenFilterIndex = ScreenFilterIndex;
+	Parms.X = X;
+	Parms.Y = Y;
+	Parms.Intensity = Intensity;
+	Parms.KuroSharpenIntensity = KuroSharpenIntensity;
+	Parms.AdModeBrightness = AdModeBrightness;
+	Parms.AdModeScreenFilterContrast = AdModeScreenFilterContrast;
+	Parms.AdModeScreenFilteColorTemperature = AdModeScreenFilteColorTemperature;
+	Parms.AdModeScreenFilterSaturation = AdModeScreenFilterSaturation;
+	Parms.AdModeBloom = AdModeBloom;
+	Parms.AdModeNoiseIntensity = AdModeNoiseIntensity;
+	Parms.AdModeShadowIntensity = AdModeShadowIntensity;
+	Parms.AdModeGamma = AdModeGamma;
+	Parms.AdModeHalation = AdModeHalation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.SetKuroScreenFilterInterpolation
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             ScreenFilterIndex                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   X                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Y                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Intensity                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGISystem::SetKuroScreenFilterInterpolation(class UWorld* InWorld, const int32 ScreenFilterIndex, float X, float Y, float Intensity)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGISystem", "SetKuroScreenFilterInterpolation");
+
+	Params::KuroGISystem_SetKuroScreenFilterInterpolation Parms{};
+
+	Parms.InWorld = InWorld;
+	Parms.ScreenFilterIndex = ScreenFilterIndex;
+	Parms.X = X;
+	Parms.Y = Y;
+	Parms.Intensity = Intensity;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.DoTransition
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             CollectionName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TransitionState                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TransitionTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroGISystem::DoTransition(class FName CollectionName, int32 TransitionState, float TransitionTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGISystem", "DoTransition");
+
+	Params::KuroGISystem_DoTransition Parms{};
+
+	Parms.CollectionName = CollectionName;
+	Parms.TransitionState = TransitionState;
+	Parms.TransitionTime = TransitionTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.End3DUISceneRendering
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroGISystem::End3DUISceneRendering()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGISystem", "End3DUISceneRendering");
+
+	Params::KuroGISystem_End3DUISceneRendering Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.GetKuroGlobalGIActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AKuroGlobalGI*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AKuroGlobalGI* UKuroGISystem::GetKuroGlobalGIActor()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGISystem", "GetKuroGlobalGIActor");
+
+	Params::KuroGISystem_GetKuroGlobalGIActor Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.IsLastTickGIActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AKuroGlobalGI*                    Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroGISystem::IsLastTickGIActor(class AKuroGlobalGI* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGISystem", "IsLastTickGIActor");
+
+	Params::KuroGISystem_IsLastTickGIActor Parms{};
+
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.IsUISceneRendering
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroGISystem::IsUISceneRendering()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGISystem", "IsUISceneRendering");
+
+	Params::KuroGISystem_IsUISceneRendering Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.Start3DUISceneRendering
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    InLevelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroGISystem::Start3DUISceneRendering(const class FString& InLevelName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGISystem", "Start3DUISceneRendering");
+
+	Params::KuroGISystem_Start3DUISceneRendering Parms{};
+
+	Parms.InLevelName = std::move(InLevelName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.GetUISceneRenderingState
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EKuroUI3DState                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EKuroUI3DState UKuroGISystem::GetUISceneRenderingState() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGISystem", "GetUISceneRenderingState");
+
+	Params::KuroGISystem_GetUISceneRenderingState Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSuperFarFog.Update
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroSuperFarFog::Update(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSuperFarFog", "Update");
+
+	Params::KuroSuperFarFog_Update Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSuperFarFog.UpdateFog
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroSuperFarFog::UpdateFog()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSuperFarFog", "UpdateFog");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroBillboardComponent.Initialize
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroBillboardComponent::Initialize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroBillboardComponent", "Initialize");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroBillboardComponent.Update
+// (Final, Native, Public, BlueprintCallable, Const)
+
+void UKuroBillboardComponent::Update() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroBillboardComponent", "Update");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGPUParticleSubsystem.GetKuroGPUParticleSystem
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKuroGPUParticleSubsystem*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UKuroGPUParticleSubsystem* UKuroGPUParticleSubsystem::GetKuroGPUParticleSystem(class UWorld* InWorld)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGPUParticleSubsystem", "GetKuroGPUParticleSystem");
+
+	Params::KuroGPUParticleSubsystem_GetKuroGPUParticleSystem Parms{};
+
+	Parms.InWorld = InWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.UKuroCustomCookActor.BeforeCookForMobile
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 
@@ -1372,15 +1214,142 @@ void AKuroEditorTickActor::EditorSetActorComponentsTickEnabled(bool bValue) cons
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.ThunderTrigger.TriggerThunderAttack
-// (Final, Native, Public, BlueprintCallable)
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.BindEventForbidWeatherStateChanged
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TDelegate<void(bool InForbidWeather)>   InDelegate                                             (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 
-void AThunderTrigger::TriggerThunderAttack()
+void AKuroGlobalGI::BindEventForbidWeatherStateChanged(TDelegate<void(bool InForbidWeather)> InDelegate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ThunderTrigger", "TriggerThunderAttack");
+		Func = StaticClass()->GetFunction("KuroGlobalGI", "BindEventForbidWeatherStateChanged");
+
+	Params::KuroGlobalGI_BindEventForbidWeatherStateChanged Parms{};
+
+	Parms.InDelegate = InDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.BindEventGlobalFootstepMaterialUpdate
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TDelegate<void(class UPhysicalMaterial* Material)>InDelegate                                             (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::BindEventGlobalFootstepMaterialUpdate(TDelegate<void(class UPhysicalMaterial* Material)> InDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroGlobalGI", "BindEventGlobalFootstepMaterialUpdate");
+
+	Params::KuroGlobalGI_BindEventGlobalFootstepMaterialUpdate Parms{};
+
+	Parms.InDelegate = InDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplayShadowTintRampOffset
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkyLightComponent*               SkyLight                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplayShadowTintRampOffset(class USkyLightComponent* SkyLight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplayShadowTintRampOffset");
+
+	Params::KuroGlobalGI_ApplayShadowTintRampOffset Parms{};
+
+	Parms.SkyLight = SkyLight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.Apply3DUISceneSkyLight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkyLightComponent*               SkyLight                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::Apply3DUISceneSkyLight(class USkyLightComponent* SkyLight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "Apply3DUISceneSkyLight");
+
+	Params::KuroGlobalGI_Apply3DUISceneSkyLight Parms{};
+
+	Parms.SkyLight = SkyLight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyAndUpdateDayNightDataLayer
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   TimeOfDay                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TODLightLoadingWait                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyAndUpdateDayNightDataLayer(float TimeOfDay, float TODLightLoadingWait)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyAndUpdateDayNightDataLayer");
+
+	Params::KuroGlobalGI_ApplyAndUpdateDayNightDataLayer Parms{};
+
+	Parms.TimeOfDay = TimeOfDay;
+	Parms.TODLightLoadingWait = TODLightLoadingWait;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyClusteredStuff
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroGlobalGI::ApplyClusteredStuff()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyClusteredStuff");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1391,143 +1360,1373 @@ void AThunderTrigger::TriggerThunderAttack()
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.ApplyDynamicMaterialGhost
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UMaterialInstanceDynamic*         DynMaterial                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyEffectMisc
+// (Final, Native, Public, BlueprintCallable)
 
-void ALensflareSamplerActor::ApplyDynamicMaterialGhost(class UMaterialInstanceDynamic* DynMaterial)
+void AKuroGlobalGI::ApplyEffectMisc()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LensflareSamplerActor", "ApplyDynamicMaterialGhost");
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyEffectMisc");
 
-	Params::LensflareSamplerActor_ApplyDynamicMaterialGhost Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.DynMaterial = DynMaterial;
+	UObject::ProcessEvent(Func, nullptr);
 
-	UObject::ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.ApplyDynamicMaterialGlare
-// (Event, Public, BlueprintEvent)
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyFog
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// class UMaterialInstanceDynamic*         DynMaterial                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UExponentialHeightFogComponent*   HeightFog                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   WorldZOffset                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMeshComponent*             CloudOcean                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool*                                   bVolumeCloudNotAffectedByVRS                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMeshComponent*             VolumeCloudMesh                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USceneComponent*                  VolumeCloud                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USceneComponent*                  VolumeCloudRange                                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ALensflareSamplerActor::ApplyDynamicMaterialGlare(class UMaterialInstanceDynamic* DynMaterial)
+void AKuroGlobalGI::ApplyFog(const class UObject* WorldContextObject, class UExponentialHeightFogComponent* HeightFog, class UMaterialParameterCollection* Collection, float WorldZOffset, class UStaticMeshComponent* CloudOcean, bool* bVolumeCloudNotAffectedByVRS, class UStaticMeshComponent* VolumeCloudMesh, class USceneComponent* VolumeCloud, class USceneComponent* VolumeCloudRange)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LensflareSamplerActor", "ApplyDynamicMaterialGlare");
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyFog");
 
-	Params::LensflareSamplerActor_ApplyDynamicMaterialGlare Parms{};
+	Params::KuroGlobalGI_ApplyFog Parms{};
 
-	Parms.DynMaterial = DynMaterial;
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.HeightFog = HeightFog;
+	Parms.Collection = Collection;
+	Parms.WorldZOffset = WorldZOffset;
+	Parms.CloudOcean = CloudOcean;
+	Parms.VolumeCloudMesh = VolumeCloudMesh;
+	Parms.VolumeCloud = VolumeCloud;
+	Parms.VolumeCloudRange = VolumeCloudRange;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (bVolumeCloudNotAffectedByVRS != nullptr)
+		*bVolumeCloudNotAffectedByVRS = Parms.bVolumeCloudNotAffectedByVRS;
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.ApplyDynamicMaterialHalo
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UMaterialInstanceDynamic*         DynMaterial                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyGIMPC
+// (Final, Native, Public, BlueprintCallable)
 
-void ALensflareSamplerActor::ApplyDynamicMaterialHalo(class UMaterialInstanceDynamic* DynMaterial)
+void AKuroGlobalGI::ApplyGIMPC()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LensflareSamplerActor", "ApplyDynamicMaterialHalo");
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyGIMPC");
 
-	Params::LensflareSamplerActor_ApplyDynamicMaterialHalo Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	Parms.DynMaterial = DynMaterial;
+	UObject::ProcessEvent(Func, nullptr);
 
-	UObject::ProcessEvent(Func, &Parms);
+	Func->FunctionFlags = Flgs;
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.GetCustomGhostParameter
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// struct FLensflareSamplerActorGhostParameterReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyGlobalGIRenderQuality
+// (Final, Native, Public, BlueprintCallable)
 
-struct FLensflareSamplerActorGhostParameter ALensflareSamplerActor::GetCustomGhostParameter()
+void AKuroGlobalGI::ApplyGlobalGIRenderQuality()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LensflareSamplerActor", "GetCustomGhostParameter");
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyGlobalGIRenderQuality");
 
-	Params::LensflareSamplerActor_GetCustomGhostParameter Parms{};
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyKuroSkyLight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkyLightComponent*               SkyLight                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TimeOfDay                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultShadowSupplement                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DefaultReflectionAddIntensity                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyKuroSkyLight(class USkyLightComponent* SkyLight, float TimeOfDay, float DefaultShadowSupplement, float DefaultReflectionAddIntensity, bool bEnableLumen)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyKuroSkyLight");
+
+	Params::KuroGlobalGI_ApplyKuroSkyLight Parms{};
+
+	Parms.SkyLight = SkyLight;
+	Parms.TimeOfDay = TimeOfDay;
+	Parms.DefaultShadowSupplement = DefaultShadowSupplement;
+	Parms.DefaultReflectionAddIntensity = DefaultReflectionAddIntensity;
+	Parms.bEnableLumen = bEnableLumen;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLensflare
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   SunForward                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyLensflare(float DeltaTime, const struct FVector& SunForward, class UMaterialParameterCollection* Collection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyLensflare");
+
+	Params::KuroGlobalGI_ApplyLensflare Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+	Parms.SunForward = std::move(SunForward);
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLightFunctionSetting
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTexture*                         DefaultLightFucntionTexture                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInstance*                LightFunctionMaterial                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInstance*                LightFunctionPerShadowMaterial                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInstance*                VolumetricLightFunctionMaterial                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyLightFunctionSetting(class UTexture* DefaultLightFucntionTexture, class UDirectionalLightComponent* SceneLight, class UMaterialInstance* LightFunctionMaterial, class UMaterialInstance* LightFunctionPerShadowMaterial, class UMaterialInstance* VolumetricLightFunctionMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyLightFunctionSetting");
+
+	Params::KuroGlobalGI_ApplyLightFunctionSetting Parms{};
+
+	Parms.DefaultLightFucntionTexture = DefaultLightFucntionTexture;
+	Parms.SceneLight = SceneLight;
+	Parms.LightFunctionMaterial = LightFunctionMaterial;
+	Parms.LightFunctionPerShadowMaterial = LightFunctionPerShadowMaterial;
+	Parms.VolumetricLightFunctionMaterial = VolumetricLightFunctionMaterial;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLightParameters_Conch
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator*                        SceneLightRotation                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyLightParameters_Conch(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class UDirectionalLightComponent* SceneLight, bool bEnableLumen, struct FRotator* SceneLightRotation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyLightParameters_Conch");
+
+	Params::KuroGlobalGI_ApplyLightParameters_Conch Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.SceneLight = SceneLight;
+	Parms.bEnableLumen = bEnableLumen;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SceneLightRotation != nullptr)
+		*SceneLightRotation = std::move(Parms.SceneLightRotation);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyMilkyWayParameters
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInstance*                MilkyWayMaterial                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMeshComponent*             MilkyWayMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyMilkyWayParameters(class UMaterialInstance* MilkyWayMaterial, class UStaticMeshComponent* MilkyWayMeshComponent, float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyMilkyWayParameters");
+
+	Params::KuroGlobalGI_ApplyMilkyWayParameters Parms{};
+
+	Parms.MilkyWayMaterial = MilkyWayMaterial;
+	Parms.MilkyWayMeshComponent = MilkyWayMeshComponent;
+	Parms.Time = Time;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyOriginSkyAtmosphere
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class USkyAtmosphereComponent*          SkyAtm                                                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UExponentialHeightFogComponent*   HeightFog                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  SkyAtmosAffectSkyBox                                   (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyOriginSkyAtmosphere(class USkyAtmosphereComponent* SkyAtm, class UExponentialHeightFogComponent* HeightFog, float* SkyAtmosAffectSkyBox)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyOriginSkyAtmosphere");
+
+	Params::KuroGlobalGI_ApplyOriginSkyAtmosphere Parms{};
+
+	Parms.SkyAtm = SkyAtm;
+	Parms.HeightFog = HeightFog;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SkyAtmosAffectSkyBox != nullptr)
+		*SkyAtmosAffectSkyBox = Parms.SkyAtmosAffectSkyBox;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyRainOverrider
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AKuroWorldRainGlobalOverrider*    Overrider                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyRainOverrider(class AKuroWorldRainGlobalOverrider* Overrider)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyRainOverrider");
+
+	Params::KuroGlobalGI_ApplyRainOverrider Parms{};
+
+	Parms.Overrider = Overrider;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplySkyBoxSetting
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInstance*                SkyBoxMaterial                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMeshComponent*             SkyBoxMeshComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplySkyBoxSetting(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class UMaterialInstance* SkyBoxMaterial, class UStaticMeshComponent* SkyBoxMeshComponent, float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplySkyBoxSetting");
+
+	Params::KuroGlobalGI_ApplySkyBoxSetting Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.SkyBoxMaterial = SkyBoxMaterial;
+	Parms.SkyBoxMeshComponent = SkyBoxMeshComponent;
+	Parms.Time = Time;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyStarsParameters
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMaterialInstance*                StarMaterial                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMeshComponent*             StarMeshComponent                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInstance*                StarMaterial_V2                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyStarsParameters(class UMaterialInstance* StarMaterial, class UStaticMeshComponent* StarMeshComponent, float Time, class UMaterialInstance* StarMaterial_V2)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyStarsParameters");
+
+	Params::KuroGlobalGI_ApplyStarsParameters Parms{};
+
+	Parms.StarMaterial = StarMaterial;
+	Parms.StarMeshComponent = StarMeshComponent;
+	Parms.Time = Time;
+	Parms.StarMaterial_V2 = StarMaterial_V2;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.CalLightDirectionWithLimit
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   LightAngleLimit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator*                        LightRotation                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::CalLightDirectionWithLimit(float Time, float LightAngleLimit, struct FRotator* LightRotation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "CalLightDirectionWithLimit");
+
+	Params::KuroGlobalGI_CalLightDirectionWithLimit Parms{};
+
+	Parms.Time = Time;
+	Parms.LightAngleLimit = LightAngleLimit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LightRotation != nullptr)
+		*LightRotation = std::move(Parms.LightRotation);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ClearLensflare
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroGlobalGI::ClearLensflare()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ClearLensflare");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.GetCachedGISystem
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UKuroGISystem*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UKuroGISystem* AKuroGlobalGI::GetCachedGISystem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "GetCachedGISystem");
+
+	Params::KuroGlobalGI_GetCachedGISystem Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.GetCustomGlareParameter
-// (Event, Public, BlueprintEvent)
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.GetGITime
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FLensflareSamplerActorGlareParameterReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FLensflareSamplerActorGlareParameter ALensflareSamplerActor::GetCustomGlareParameter()
+float AKuroGlobalGI::GetGITime()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LensflareSamplerActor", "GetCustomGlareParameter");
+		Func = Class->GetFunction("KuroGlobalGI", "GetGITime");
 
-	Params::LensflareSamplerActor_GetCustomGlareParameter Parms{};
+	Params::KuroGlobalGI_GetGITime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.GetCustomHaloParameter
-// (Event, Public, BlueprintEvent)
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.GetPostProcessVolumeWeight
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// struct FLensflareSamplerActorHaloParameterReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// class AKuroPostProcessVolume*           InPostProcessVolume                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FLensflareSamplerActorHaloParameter ALensflareSamplerActor::GetCustomHaloParameter()
+float AKuroGlobalGI::GetPostProcessVolumeWeight(class AKuroPostProcessVolume* InPostProcessVolume)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LensflareSamplerActor", "GetCustomHaloParameter");
+		Func = Class->GetFunction("KuroGlobalGI", "GetPostProcessVolumeWeight");
 
-	Params::LensflareSamplerActor_GetCustomHaloParameter Parms{};
+	Params::KuroGlobalGI_GetPostProcessVolumeWeight Parms{};
+
+	Parms.InPostProcessVolume = InPostProcessVolume;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.GetLensflareParameter
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroEndUI
 // (Event, Public, BlueprintEvent)
-// Parameters:
-// struct FLensflareSamplerActorParameter  ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
-struct FLensflareSamplerActorParameter ALensflareSamplerActor::GetLensflareParameter()
+void AKuroGlobalGI::OnKuroEndUI()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("LensflareSamplerActor", "GetLensflareParameter");
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroEndUI");
 
-	Params::LensflareSamplerActor_GetLensflareParameter Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroEndUiScene
+// (Event, Public, BlueprintEvent)
+
+void AKuroGlobalGI::OnKuroEndUiScene()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroEndUiScene");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroInit
+// (Event, Public, BlueprintEvent)
+
+void AKuroGlobalGI::OnKuroInit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroInit");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroRuntimeDestroy
+// (Event, Public, BlueprintEvent)
+
+void AKuroGlobalGI::OnKuroRuntimeDestroy()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroRuntimeDestroy");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroSetRuntimeTime
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   CurrentTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::OnKuroSetRuntimeTime(float CurrentTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroSetRuntimeTime");
+
+	Params::KuroGlobalGI_OnKuroSetRuntimeTime Parms{};
+
+	Parms.CurrentTime = CurrentTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroStartUI
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FString&                    InName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULevel*                           InUILevel                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::OnKuroStartUI(const class FString& InName, class ULevel* InUILevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroStartUI");
+
+	Params::KuroGlobalGI_OnKuroStartUI Parms{};
+
+	Parms.InName = std::move(InName);
+	Parms.InUILevel = InUILevel;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroStartUiScene
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// const class FString&                    InName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULevel*                           InUILevel                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::OnKuroStartUiScene(const class FString& InName, class ULevel* InUILevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroStartUiScene");
+
+	Params::KuroGlobalGI_OnKuroStartUiScene Parms{};
+
+	Parms.InName = std::move(InName);
+	Parms.InUILevel = InUILevel;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::OnKuroTick(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroTick");
+
+	Params::KuroGlobalGI_OnKuroTick Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroTickEditor
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::OnKuroTickEditor(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnKuroTickEditor");
+
+	Params::KuroGlobalGI_OnKuroTickEditor Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnPostProcessCustomTagsUpdated
+// (Event, Protected, BlueprintEvent)
+
+void AKuroGlobalGI::OnPostProcessCustomTagsUpdated()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "OnPostProcessCustomTagsUpdated");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.SetGITime
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::SetGITime(float Time)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "SetGITime");
+
+	Params::KuroGlobalGI_SetGITime Parms{};
+
+	Parms.Time = Time;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
 
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.SetGlobalTimeDilation
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   TimeDilation                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::SetGlobalTimeDilation(float TimeDilation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "SetGlobalTimeDilation");
+
+	Params::KuroGlobalGI_SetGlobalTimeDilation Parms{};
+
+	Parms.TimeDilation = TimeDilation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.SetSunLensflareEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::SetSunLensflareEnabled(bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "SetSunLensflareEnabled");
+
+	Params::KuroGlobalGI_SetSunLensflareEnabled Parms{};
+
+	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.TickWeatherTransitionData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::TickWeatherTransitionData(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "TickWeatherTransitionData");
+
+	Params::KuroGlobalGI_TickWeatherTransitionData Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateAndApplyWeather
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroGlobalGI::UpdateAndApplyWeather()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "UpdateAndApplyWeather");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateAndApplyWind
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::UpdateAndApplyWind(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "UpdateAndApplyWind");
+
+	Params::KuroGlobalGI_UpdateAndApplyWind Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateCharLightHorizontal
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  SceneLightRot                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDebugCharLightHorizontal                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DebugCharLightHorizontal                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DebugCharLightVertical                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::UpdateCharLightHorizontal(const class UObject* WorldContextObject, const struct FRotator& SceneLightRot, class UMaterialParameterCollection* Collection, bool bDebugCharLightHorizontal, float DebugCharLightHorizontal, float DebugCharLightVertical)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "UpdateCharLightHorizontal");
+
+	Params::KuroGlobalGI_UpdateCharLightHorizontal Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.SceneLightRot = std::move(SceneLightRot);
+	Parms.Collection = Collection;
+	Parms.bDebugCharLightHorizontal = bDebugCharLightHorizontal;
+	Parms.DebugCharLightHorizontal = DebugCharLightHorizontal;
+	Parms.DebugCharLightVertical = DebugCharLightVertical;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateKuroTrailSystem
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::UpdateKuroTrailSystem(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "UpdateKuroTrailSystem");
+
+	Params::KuroGlobalGI_UpdateKuroTrailSystem Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateLightDirection
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDirectionalLightComponent*       AtmoSunLight                                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDirectionalLightComponent*       AtmoMoonLight                                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::UpdateLightDirection(const class UObject* WorldContextObject, class UDirectionalLightComponent* AtmoSunLight, class UDirectionalLightComponent* AtmoMoonLight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "UpdateLightDirection");
+
+	Params::KuroGlobalGI_UpdateLightDirection Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.AtmoSunLight = AtmoSunLight;
+	Parms.AtmoMoonLight = AtmoMoonLight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateLightEnableCastShadow
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::UpdateLightEnableCastShadow(const class UObject* WorldContextObject, class UDirectionalLightComponent* SceneLight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "UpdateLightEnableCastShadow");
+
+	Params::KuroGlobalGI_UpdateLightEnableCastShadow Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.SceneLight = SceneLight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdatePostProcessSettingData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CurTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSkipLerpData                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::UpdatePostProcessSettingData(const class UObject* WorldContextObject, float CurTime, bool bSkipLerpData, bool bEnableLumen)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "UpdatePostProcessSettingData");
+
+	Params::KuroGlobalGI_UpdatePostProcessSettingData Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.CurTime = CurTime;
+	Parms.bSkipLerpData = bSkipLerpData;
+	Parms.bEnableLumen = bEnableLumen;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateTODData
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   WorldPosition                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TimeSecnod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::UpdateTODData(const class UObject* WorldContextObject, const struct FVector& WorldPosition, float TimeSecnod)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "UpdateTODData");
+
+	Params::KuroGlobalGI_UpdateTODData Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.WorldPosition = std::move(WorldPosition);
+	Parms.TimeSecnod = TimeSecnod;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyCloudCardSetting
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyCloudCardSetting(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, bool bEnableLumen) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyCloudCardSetting");
+
+	Params::KuroGlobalGI_ApplyCloudCardSetting Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.bEnableLumen = bEnableLumen;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyGlobalShaderParameters
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyGlobalShaderParameters(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyGlobalShaderParameters");
+
+	Params::KuroGlobalGI_ApplyGlobalShaderParameters Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyGodRay
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// class UPostProcessComponent*            PostProcessVolume                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyGodRay(class UPostProcessComponent* PostProcessVolume, class UMaterialParameterCollection* Collection) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyGodRay");
+
+	Params::KuroGlobalGI_ApplyGodRay Parms{};
+
+	Parms.PostProcessVolume = PostProcessVolume;
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyKuroOceanMPC
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyKuroOceanMPC(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyKuroOceanMPC");
+
+	Params::KuroGlobalGI_ApplyKuroOceanMPC Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLightParameters
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyLightParameters(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class UDirectionalLightComponent* SceneLight, bool bEnableLumen) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyLightParameters");
+
+	Params::KuroGlobalGI_ApplyLightParameters Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.SceneLight = SceneLight;
+	Parms.bEnableLumen = bEnableLumen;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLightShaft
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyLightShaft(class UDirectionalLightComponent* SceneLight) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyLightShaft");
+
+	Params::KuroGlobalGI_ApplyLightShaft Parms{};
+
+	Parms.SceneLight = SceneLight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyMultipleLayerSkySetting
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplyMultipleLayerSkySetting(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplyMultipleLayerSkySetting");
+
+	Params::KuroGlobalGI_ApplyMultipleLayerSkySetting Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplySkyEffectsParameters
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroGlobalGI::ApplySkyEffectsParameters(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "ApplySkyEffectsParameters");
+
+	Params::KuroGlobalGI_ApplySkyEffectsParameters Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.CalcTODTimeFactor
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   StartTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EndTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   CurrTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float AKuroGlobalGI::CalcTODTimeFactor(float StartTime, float EndTime, float CurrTime) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "CalcTODTimeFactor");
+
+	Params::KuroGlobalGI_CalcTODTimeFactor Parms{};
+
+	Parms.StartTime = StartTime;
+	Parms.EndTime = EndTime;
+	Parms.CurrTime = CurrTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
 	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.K2_IsInPersistentLevel
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroGlobalGI::K2_IsInPersistentLevel() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroGlobalGI", "K2_IsInPersistentLevel");
+
+	Params::KuroGlobalGI_K2_IsInPersistentLevel Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroWorldInfo.BP_GetInstance
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    AutoCreate                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AKuroWorldInfo*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AKuroWorldInfo* AKuroWorldInfo::BP_GetInstance(const class UObject* WorldContextObject, bool AutoCreate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroWorldInfo", "BP_GetInstance");
+
+	Params::KuroWorldInfo_BP_GetInstance Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.AutoCreate = AutoCreate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroWorldInfo.GetSLInfo
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class FName&                      PackageName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FKuroStreamingLevelInfo*         LandscapeInfo                                          (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 AKuroWorldInfo::GetSLInfo(const class FName& PackageName, struct FKuroStreamingLevelInfo* LandscapeInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroWorldInfo", "GetSLInfo");
+
+	Params::KuroWorldInfo_GetSLInfo Parms{};
+
+	Parms.PackageName = PackageName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LandscapeInfo != nullptr)
+		*LandscapeInfo = std::move(Parms.LandscapeInfo);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroWorldInfo.GetLandscapeInfo
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FKuroLandscapeInfo*              LandscapeInfo                                          (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void AKuroWorldInfo::GetLandscapeInfo(struct FKuroLandscapeInfo* LandscapeInfo) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroWorldInfo", "GetLandscapeInfo");
+
+	Params::KuroWorldInfo_GetLandscapeInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LandscapeInfo != nullptr)
+		*LandscapeInfo = std::move(Parms.LandscapeInfo);
 }
 
 
@@ -3514,6 +4713,25 @@ class UKuroMaterialControllerComponent* UKuroCharRenderingComponent::GetSureMate
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroCharRenderingComponent.PostComponentsVisibilityChanged
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroCharRenderingComponent::PostComponentsVisibilityChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCharRenderingComponent", "PostComponentsVisibilityChanged");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroCharRenderingComponent.UpdateHitMesh
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -3807,6 +5025,873 @@ void AKuroCloudsActor::GetGIParams(const bool bCounting, class UChildActorCompon
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroControlTodTime.DoUpdate
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroControlTodTime::DoUpdate(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroControlTodTime", "DoUpdate");
+
+	Params::KuroControlTodTime_DoUpdate Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalComponent.AppendPoint
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   Position                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Direction                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   UpVector                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFixFront                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUseAutoDirection                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroCurveTrailDecalComponent::AppendPoint(const struct FVector& Position, const struct FVector& Direction, const struct FVector& UpVector, bool bFixFront, bool bUseAutoDirection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalComponent", "AppendPoint");
+
+	Params::KuroCurveTrailDecalComponent_AppendPoint Parms{};
+
+	Parms.Position = std::move(Position);
+	Parms.Direction = std::move(Direction);
+	Parms.UpVector = std::move(UpVector);
+	Parms.bFixFront = bFixFront;
+	Parms.bUseAutoDirection = bUseAutoDirection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalComponent.ClearPoints
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroCurveTrailDecalComponent::ClearPoints()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalComponent", "ClearPoints");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalComponent.ManualUpdate
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroCurveTrailDecalComponent::ManualUpdate(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalComponent", "ManualUpdate");
+
+	Params::KuroCurveTrailDecalComponent_ManualUpdate Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalComponent.RemoveFront
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroCurveTrailDecalComponent::RemoveFront()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalComponent", "RemoveFront");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalComponent.RequireNewGroup
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroCurveTrailDecalComponent::RequireNewGroup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalComponent", "RequireNewGroup");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalComponent.GetIsEmpty
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroCurveTrailDecalComponent::GetIsEmpty() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalComponent", "GetIsEmpty");
+
+	Params::KuroCurveTrailDecalComponent_GetIsEmpty Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalComponent.GetNumPointsInActiveGroup
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroCurveTrailDecalComponent::GetNumPointsInActiveGroup() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalComponent", "GetNumPointsInActiveGroup");
+
+	Params::KuroCurveTrailDecalComponent_GetNumPointsInActiveGroup Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.ApplyDynamicMaterialGhost
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMaterialInstanceDynamic*         DynMaterial                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALensflareSamplerActor::ApplyDynamicMaterialGhost(class UMaterialInstanceDynamic* DynMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LensflareSamplerActor", "ApplyDynamicMaterialGhost");
+
+	Params::LensflareSamplerActor_ApplyDynamicMaterialGhost Parms{};
+
+	Parms.DynMaterial = DynMaterial;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.ApplyDynamicMaterialGlare
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMaterialInstanceDynamic*         DynMaterial                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALensflareSamplerActor::ApplyDynamicMaterialGlare(class UMaterialInstanceDynamic* DynMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LensflareSamplerActor", "ApplyDynamicMaterialGlare");
+
+	Params::LensflareSamplerActor_ApplyDynamicMaterialGlare Parms{};
+
+	Parms.DynMaterial = DynMaterial;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.ApplyDynamicMaterialHalo
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class UMaterialInstanceDynamic*         DynMaterial                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALensflareSamplerActor::ApplyDynamicMaterialHalo(class UMaterialInstanceDynamic* DynMaterial)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LensflareSamplerActor", "ApplyDynamicMaterialHalo");
+
+	Params::LensflareSamplerActor_ApplyDynamicMaterialHalo Parms{};
+
+	Parms.DynMaterial = DynMaterial;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.GetCustomGhostParameter
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// struct FLensflareSamplerActorGhostParameterReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FLensflareSamplerActorGhostParameter ALensflareSamplerActor::GetCustomGhostParameter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LensflareSamplerActor", "GetCustomGhostParameter");
+
+	Params::LensflareSamplerActor_GetCustomGhostParameter Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.GetCustomGlareParameter
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// struct FLensflareSamplerActorGlareParameterReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FLensflareSamplerActorGlareParameter ALensflareSamplerActor::GetCustomGlareParameter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LensflareSamplerActor", "GetCustomGlareParameter");
+
+	Params::LensflareSamplerActor_GetCustomGlareParameter Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.GetCustomHaloParameter
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// struct FLensflareSamplerActorHaloParameterReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FLensflareSamplerActorHaloParameter ALensflareSamplerActor::GetCustomHaloParameter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LensflareSamplerActor", "GetCustomHaloParameter");
+
+	Params::LensflareSamplerActor_GetCustomHaloParameter Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.LensflareSamplerActor.GetLensflareParameter
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// struct FLensflareSamplerActorParameter  ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FLensflareSamplerActorParameter ALensflareSamplerActor::GetLensflareParameter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LensflareSamplerActor", "GetLensflareParameter");
+
+	Params::LensflareSamplerActor_GetLensflareParameter Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawnerComponent.HasAnyTrail
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroCurveTrailDecalSpawnerComponent::HasAnyTrail()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalSpawnerComponent", "HasAnyTrail");
+
+	Params::KuroCurveTrailDecalSpawnerComponent_HasAnyTrail Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawnerComponent.ManualUpdate
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroCurveTrailDecalSpawnerComponent::ManualUpdate(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalSpawnerComponent", "ManualUpdate");
+
+	Params::KuroCurveTrailDecalSpawnerComponent_ManualUpdate Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawnerComponent.ReceiveAsyncTrace
+// (Final, Native, Private, BlueprintCallable)
+// Parameters:
+// bool                                    Result                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTraceBaseElement*                Element                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Frame                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroCurveTrailDecalSpawnerComponent::ReceiveAsyncTrace(bool Result, class UTraceBaseElement* Element, double Frame, double Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalSpawnerComponent", "ReceiveAsyncTrace");
+
+	Params::KuroCurveTrailDecalSpawnerComponent_ReceiveAsyncTrace Parms{};
+
+	Parms.Result = Result;
+	Parms.Element = Element;
+	Parms.Frame = Frame;
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawnerComponent.RequireNewGroup
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroCurveTrailDecalSpawnerComponent::RequireNewGroup()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalSpawnerComponent", "RequireNewGroup");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawnerComponent.SpawnByTrace
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroCurveTrailDecalSpawnerComponent::SpawnByTrace()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalSpawnerComponent", "SpawnByTrace");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawner.BeginSpawner
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class USceneComponent*                  AttachmentComp                                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKuroCurveTrailDecalConfig*       Config                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             AttachSocketName                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                AttachTransform                                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// class AKuroCurveTrailDecalSpawner*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AKuroCurveTrailDecalSpawner* AKuroCurveTrailDecalSpawner::BeginSpawner(class USceneComponent* AttachmentComp, class UKuroCurveTrailDecalConfig* Config, class FName AttachSocketName, const struct FTransform& AttachTransform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroCurveTrailDecalSpawner", "BeginSpawner");
+
+	Params::KuroCurveTrailDecalSpawner_BeginSpawner Parms{};
+
+	Parms.AttachmentComp = AttachmentComp;
+	Parms.Config = Config;
+	Parms.AttachSocketName = AttachSocketName;
+	Parms.AttachTransform = std::move(AttachTransform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawner.EndSpawner
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class USceneComponent*                  AttachmentComp                                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKuroCurveTrailDecalConfig*       Config                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             AttachSocketName                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroCurveTrailDecalSpawner::EndSpawner(class USceneComponent* AttachmentComp, class UKuroCurveTrailDecalConfig* Config, class FName AttachSocketName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroCurveTrailDecalSpawner", "EndSpawner");
+
+	Params::KuroCurveTrailDecalSpawner_EndSpawner Parms{};
+
+	Parms.AttachmentComp = AttachmentComp;
+	Parms.Config = Config;
+	Parms.AttachSocketName = AttachSocketName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawner.StartTrail
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCurveTrailDecalSpawner::StartTrail()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalSpawner", "StartTrail");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroCurveTrailDecalSpawner.StopTrail
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroCurveTrailDecalSpawner::StopTrail()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroCurveTrailDecalSpawner", "StopTrail");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetKuroUiSceneSystem
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKuroUiSceneSystem*               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UKuroUiSceneSystem* UKuroUiSceneSystem::GetKuroUiSceneSystem(class UWorld* InWorld)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroUiSceneSystem", "GetKuroUiSceneSystem");
+
+	Params::KuroUiSceneSystem_GetKuroUiSceneSystem Parms{};
+
+	Parms.InWorld = InWorld;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.D_PreloadUiScene
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVectorDouble&             WorldPositionOffset                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroUiSceneSystem::D_PreloadUiScene(const class FString& ScenePath, const struct FVectorDouble& WorldPositionOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "D_PreloadUiScene");
+
+	Params::KuroUiSceneSystem_D_PreloadUiScene Parms{};
+
+	Parms.ScenePath = std::move(ScenePath);
+	Parms.WorldPositionOffset = std::move(WorldPositionOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.EndUiSceneRendering
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroUiSceneSystem::EndUiSceneRendering()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "EndUiSceneRendering");
+
+	Params::KuroUiSceneSystem_EndUiSceneRendering Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetCurrentUiSceneRenderingSceneName
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroUiSceneSystem::GetCurrentUiSceneRenderingSceneName()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "GetCurrentUiSceneRenderingSceneName");
+
+	Params::KuroUiSceneSystem_GetCurrentUiSceneRenderingSceneName Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetUiSceneLoadingState
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EKuroUiSceneLoadingState                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EKuroUiSceneLoadingState UKuroUiSceneSystem::GetUiSceneLoadingState(const class FString& ScenePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "GetUiSceneLoadingState");
+
+	Params::KuroUiSceneSystem_GetUiSceneLoadingState Parms{};
+
+	Parms.ScenePath = std::move(ScenePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetUiSceneRootActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AKuroUiSceneRootActor*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class AKuroUiSceneRootActor* UKuroUiSceneSystem::GetUiSceneRootActor(const class FString& ScenePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "GetUiSceneRootActor");
+
+	Params::KuroUiSceneSystem_GetUiSceneRootActor Parms{};
+
+	Parms.ScenePath = std::move(ScenePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetUiSceneStates
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TMap<class FString, EKuroUiSceneLoadingState>ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+TMap<class FString, EKuroUiSceneLoadingState> UKuroUiSceneSystem::GetUiSceneStates()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "GetUiSceneStates");
+
+	Params::KuroUiSceneSystem_GetUiSceneStates Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.GetUiSceneWorldPositionOffset
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UKuroUiSceneSystem::GetUiSceneWorldPositionOffset(const class FString& ScenePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "GetUiSceneWorldPositionOffset");
+
+	Params::KuroUiSceneSystem_GetUiSceneWorldPositionOffset Parms{};
+
+	Parms.ScenePath = std::move(ScenePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.InvokeSceneVisible
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroUiSceneSystem::InvokeSceneVisible(const class FString& ScenePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "InvokeSceneVisible");
+
+	Params::KuroUiSceneSystem_InvokeSceneVisible Parms{};
+
+	Parms.ScenePath = std::move(ScenePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.PreloadUiScene
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   WorldPositionOffset                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroUiSceneSystem::PreloadUiScene(const class FString& ScenePath, const struct FVector& WorldPositionOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "PreloadUiScene");
+
+	Params::KuroUiSceneSystem_PreloadUiScene Parms{};
+
+	Parms.ScenePath = std::move(ScenePath);
+	Parms.WorldPositionOffset = std::move(WorldPositionOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.StartUiSceneRendering
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroUiSceneSystem::StartUiSceneRendering(const class FString& ScenePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "StartUiSceneRendering");
+
+	Params::KuroUiSceneSystem_StartUiSceneRendering Parms{};
+
+	Parms.ScenePath = std::move(ScenePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroUiSceneSystem.UnloadUiScene
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class FString&                    ScenePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroUiSceneSystem::UnloadUiScene(const class FString& ScenePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroUiSceneSystem", "UnloadUiScene");
+
+	Params::KuroUiSceneSystem_UnloadUiScene Parms{};
+
+	Parms.ScenePath = std::move(ScenePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroRenderingDataDistortionProxyManageSystem.SetWaveConfig
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -3840,13 +5925,46 @@ void UKuroRenderingDataDistortionProxyManageSystem::SetWaveConfig(class UObject*
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ApplyDamage
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.D_ApplyDamageForActorsInRange
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// const struct FVector&                   HurtOrigin                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   HurtDirection                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVectorDouble&             HurtOrigin                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const double                            QuerySphereRadius                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EGamePartitionCellSizeType        GamePartitionCellSize                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AKuroDestructibleActor::ApplyDamage(const struct FVector& HurtOrigin, const struct FVector& HurtDirection)
+void AKuroDestructibleActor::D_ApplyDamageForActorsInRange(const class UObject* WorldContextObject, const struct FVectorDouble& HurtOrigin, const double QuerySphereRadius, const EGamePartitionCellSizeType GamePartitionCellSize)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroDestructibleActor", "D_ApplyDamageForActorsInRange");
+
+	Params::KuroDestructibleActor_D_ApplyDamageForActorsInRange Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.HurtOrigin = std::move(HurtOrigin);
+	Parms.QuerySphereRadius = QuerySphereRadius;
+	Parms.GamePartitionCellSize = GamePartitionCellSize;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ApplyDamage
+// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   DamageAmount                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   HitLocation                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   ImpulseDir                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ImpulseStrength                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroDestructibleActor::ApplyDamage(float DamageAmount, const struct FVector& HitLocation, const struct FVector& ImpulseDir, float ImpulseStrength)
 {
 	static class UFunction* Func = nullptr;
 
@@ -3855,8 +5973,43 @@ void AKuroDestructibleActor::ApplyDamage(const struct FVector& HurtOrigin, const
 
 	Params::KuroDestructibleActor_ApplyDamage Parms{};
 
+	Parms.DamageAmount = DamageAmount;
+	Parms.HitLocation = std::move(HitLocation);
+	Parms.ImpulseDir = std::move(ImpulseDir);
+	Parms.ImpulseStrength = ImpulseStrength;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ApplyRadiusDamage
+// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   BaseDamage                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   HurtOrigin                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DamageRadius                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ImpulseStrength                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFullDamage                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroDestructibleActor::ApplyRadiusDamage(float BaseDamage, const struct FVector& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDestructibleActor", "ApplyRadiusDamage");
+
+	Params::KuroDestructibleActor_ApplyRadiusDamage Parms{};
+
+	Parms.BaseDamage = BaseDamage;
 	Parms.HurtOrigin = std::move(HurtOrigin);
-	Parms.HurtDirection = std::move(HurtDirection);
+	Parms.DamageRadius = DamageRadius;
+	Parms.ImpulseStrength = ImpulseStrength;
+	Parms.bFullDamage = bFullDamage;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3867,21 +6020,164 @@ void AKuroDestructibleActor::ApplyDamage(const struct FVector& HurtOrigin, const
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ApplyTransformToPoseableMeshComponent
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.D_ApplyDamage
+// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   DamageAmount                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVectorDouble&             HitLocation                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVectorDouble&             ImpulseDir                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ImpulseStrength                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroDestructibleActor::D_ApplyDamage(float DamageAmount, const struct FVectorDouble& HitLocation, const struct FVectorDouble& ImpulseDir, float ImpulseStrength)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDestructibleActor", "D_ApplyDamage");
+
+	Params::KuroDestructibleActor_D_ApplyDamage Parms{};
+
+	Parms.DamageAmount = DamageAmount;
+	Parms.HitLocation = std::move(HitLocation);
+	Parms.ImpulseDir = std::move(ImpulseDir);
+	Parms.ImpulseStrength = ImpulseStrength;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.D_ApplyRadiusDamage
+// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// float                                   BaseDamage                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVectorDouble&             HurtOrigin                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DamageRadius                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ImpulseStrength                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFullDamage                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroDestructibleActor::D_ApplyRadiusDamage(float BaseDamage, const struct FVectorDouble& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDestructibleActor", "D_ApplyRadiusDamage");
+
+	Params::KuroDestructibleActor_D_ApplyRadiusDamage Parms{};
+
+	Parms.BaseDamage = BaseDamage;
+	Parms.HurtOrigin = std::move(HurtOrigin);
+	Parms.DamageRadius = DamageRadius;
+	Parms.ImpulseStrength = ImpulseStrength;
+	Parms.bFullDamage = bFullDamage;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.GetGamePartitionObjectID
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 AKuroDestructibleActor::GetGamePartitionObjectID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDestructibleActor", "GetGamePartitionObjectID");
+
+	Params::KuroDestructibleActor_GetGamePartitionObjectID Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.GetTrunks
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const EBoneSpaces                       BoneSpace                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UStaticMeshComponent*>     ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
-void AKuroDestructibleActor::ApplyTransformToPoseableMeshComponent(const EBoneSpaces BoneSpace)
+TArray<class UStaticMeshComponent*> AKuroDestructibleActor::GetTrunks()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "ApplyTransformToPoseableMeshComponent");
+		Func = Class->GetFunction("KuroDestructibleActor", "GetTrunks");
 
-	Params::KuroDestructibleActor_ApplyTransformToPoseableMeshComponent Parms{};
+	Params::KuroDestructibleActor_GetTrunks Parms{};
 
-	Parms.BoneSpace = BoneSpace;
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.InsertToGamePartition
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroDestructibleActor::InsertToGamePartition()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDestructibleActor", "InsertToGamePartition");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.OnProxyMeshBeginOverlap
+// (Final, Native, Private, HasOutParams)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           OtherActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPrimitiveComponent*              OtherComp                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OtherBodyIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFromSweep                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FHitResult&                SweepResult                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void AKuroDestructibleActor::OnProxyMeshBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDestructibleActor", "OnProxyMeshBeginOverlap");
+
+	Params::KuroDestructibleActor_OnProxyMeshBeginOverlap Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.bFromSweep = bFromSweep;
+	Parms.SweepResult = std::move(SweepResult);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3892,59 +6188,54 @@ void AKuroDestructibleActor::ApplyTransformToPoseableMeshComponent(const EBoneSp
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.HideStaticMeshChunkList
-// (Final, Native, Public)
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.OnProxyMeshHit
+// (Final, Native, Private, HasOutParams, HasDefaults)
+// Parameters:
+// class UPrimitiveComponent*              HitComponent                                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           OtherActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPrimitiveComponent*              OtherComp                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   NormalImpulse                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FHitResult&                HitResult                                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
-void AKuroDestructibleActor::HideStaticMeshChunkList()
+void AKuroDestructibleActor::OnProxyMeshHit(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& HitResult)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "HideStaticMeshChunkList");
+		Func = Class->GetFunction("KuroDestructibleActor", "OnProxyMeshHit");
+
+	Params::KuroDestructibleActor_OnProxyMeshHit Parms{};
+
+	Parms.HitComponent = HitComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.NormalImpulse = std::move(NormalImpulse);
+	Parms.HitResult = std::move(HitResult);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.OnDestructibleInit
-// (Native, Event, Public, BlueprintEvent)
-
-void AKuroDestructibleActor::OnDestructibleInit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "OnDestructibleInit");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.SetStaticMeshChunkListPhysicsSimulation
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.PreviewDestruction
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const bool                              bSimulate                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bShowTrunks                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AKuroDestructibleActor::SetStaticMeshChunkListPhysicsSimulation(const bool bSimulate)
+void AKuroDestructibleActor::PreviewDestruction(const bool bShowTrunks)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "SetStaticMeshChunkListPhysicsSimulation");
+		Func = Class->GetFunction("KuroDestructibleActor", "PreviewDestruction");
 
-	Params::KuroDestructibleActor_SetStaticMeshChunkListPhysicsSimulation Parms{};
+	Params::KuroDestructibleActor_PreviewDestruction Parms{};
 
-	Parms.bSimulate = bSimulate;
+	Parms.bShowTrunks = bShowTrunks;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -3955,78 +6246,19 @@ void AKuroDestructibleActor::SetStaticMeshChunkListPhysicsSimulation(const bool 
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ShowStaticMeshChunkList
-// (Final, Native, Public)
-
-void AKuroDestructibleActor::ShowStaticMeshChunkList()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "ShowStaticMeshChunkList");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.HidePoseableMeshComponent
-// (Final, Native, Public, Const)
-
-void AKuroDestructibleActor::HidePoseableMeshComponent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "HidePoseableMeshComponent");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ShowPoseableMeshComponent
-// (Final, Native, Public, Const)
-
-void AKuroDestructibleActor::ShowPoseableMeshComponent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "ShowPoseableMeshComponent");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ToggleMeshComponent
-// (Final, Native, Public, BlueprintCallable, Const)
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.GetProxyMeshComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// const bool                              bShowPoseableMeshComponent                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMeshComponent*             ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AKuroDestructibleActor::ToggleMeshComponent(const bool bShowPoseableMeshComponent) const
+class UStaticMeshComponent* AKuroDestructibleActor::GetProxyMeshComponent() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "ToggleMeshComponent");
+		Func = Class->GetFunction("KuroDestructibleActor", "GetProxyMeshComponent");
 
-	Params::KuroDestructibleActor_ToggleMeshComponent Parms{};
-
-	Parms.bShowPoseableMeshComponent = bShowPoseableMeshComponent;
+	Params::KuroDestructibleActor_GetProxyMeshComponent Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4034,43 +6266,20 @@ void AKuroDestructibleActor::ToggleMeshComponent(const bool bShowPoseableMeshCom
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.UpdatePoseableMeshComponent
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.TogglePoseableMesh
 // (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// const bool                              bSnapToProxyMeshComponent                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void AKuroDestructibleActor::UpdatePoseableMeshComponent(const bool bSnapToProxyMeshComponent) const
+void AKuroDestructibleActor::TogglePoseableMesh() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "UpdatePoseableMeshComponent");
-
-	Params::KuroDestructibleActor_UpdatePoseableMeshComponent Parms{};
-
-	Parms.bSnapToProxyMeshComponent = bSnapToProxyMeshComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.UpdateProxyMeshComponent
-// (Final, Native, Public, BlueprintCallable, Const)
-
-void AKuroDestructibleActor::UpdateProxyMeshComponent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroDestructibleActor", "UpdateProxyMeshComponent");
+		Func = Class->GetFunction("KuroDestructibleActor", "TogglePoseableMesh");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -4078,6 +6287,106 @@ void AKuroDestructibleActor::UpdateProxyMeshComponent() const
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ToggleProxyMesh
+// (Final, Native, Public, BlueprintCallable, Const)
+
+void AKuroDestructibleActor::ToggleProxyMesh() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDestructibleActor", "ToggleProxyMesh");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroDestructibleActor.ToggleTrunks
+// (Final, Native, Public, BlueprintCallable, Const)
+
+void AKuroDestructibleActor::ToggleTrunks() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroDestructibleActor", "ToggleTrunks");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroFloatingBillboardCloudPrefabActor.CreateDMI
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMeshComponent*             Mesh                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInstanceDynamic*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInstanceDynamic* AKuroFloatingBillboardCloudPrefabActor::CreateDMI(class UStaticMeshComponent* Mesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroFloatingBillboardCloudPrefabActor", "CreateDMI");
+
+	Params::KuroFloatingBillboardCloudPrefabActor_CreateDMI Parms{};
+
+	Parms.Mesh = Mesh;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroFloatingBillboardCloudPrefabActor.SingleCloudParametersInitial
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UStaticMeshComponent*             Mesh                                                   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FFloatingBillboardCloudParameters&CloudStructParameter                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const int32                             TransSortNumber                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     GloablShadingParameters                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInstanceDynamic*         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMaterialInstanceDynamic* AKuroFloatingBillboardCloudPrefabActor::SingleCloudParametersInitial(class UStaticMeshComponent* Mesh, const struct FFloatingBillboardCloudParameters& CloudStructParameter, const int32 TransSortNumber, class UMaterialParameterCollection* GloablShadingParameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroFloatingBillboardCloudPrefabActor", "SingleCloudParametersInitial");
+
+	Params::KuroFloatingBillboardCloudPrefabActor_SingleCloudParametersInitial Parms{};
+
+	Parms.Mesh = Mesh;
+	Parms.CloudStructParameter = std::move(CloudStructParameter);
+	Parms.TransSortNumber = TransSortNumber;
+	Parms.GloablShadingParameters = GloablShadingParameters;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -4202,6 +6511,56 @@ void AKuroEffectActor::EditorSetActorComponentsTickEnabled(bool bValue) const
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroEffectActor.GetStreamingBoundsEditor
+// (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
+// Parameters:
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBox AKuroEffectActor::GetStreamingBoundsEditor() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroEffectActor", "GetStreamingBoundsEditor");
+
+	Params::KuroEffectActor_GetStreamingBoundsEditor Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroEffectActor.GetStreamingBoundsEx
+// (Native, Event, Public, HasDefaults, BlueprintEvent, Const)
+// Parameters:
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBox AKuroEffectActor::GetStreamingBoundsEx() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroEffectActor", "GetStreamingBoundsEx");
+
+	Params::KuroEffectActor_GetStreamingBoundsEx Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroFlickerLightActor.CalculateIntensity
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:
@@ -4268,6 +6627,63 @@ void AKuroFlickerLightActor::UpdateLight()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroFloatingBillboardCloudActor.FastPoissonDiscSampling
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 Range                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   thresold                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 center                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector2D>                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FVector2D> AKuroFloatingBillboardCloudActor::FastPoissonDiscSampling(const struct FVector2D& Range, int32 thresold, const struct FVector2D& center)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroFloatingBillboardCloudActor", "FastPoissonDiscSampling");
+
+	Params::KuroFloatingBillboardCloudActor_FastPoissonDiscSampling Parms{};
+
+	Parms.Range = std::move(Range);
+	Parms.thresold = thresold;
+	Parms.center = std::move(center);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroFloatingStaticMesh.GetLogicallyShow
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool AKuroFloatingStaticMesh::GetLogicallyShow()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroFloatingStaticMesh", "GetLogicallyShow");
+
+	Params::KuroFloatingStaticMesh_GetLogicallyShow Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -4391,223 +6807,6 @@ void AKuroFoliageRemoverActor::Update()
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.GetKuroGISystem
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UKuroGISystem*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UKuroGISystem* UKuroGISystem::GetKuroGISystem(class UWorld* InWorld)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroGISystem", "GetKuroGISystem");
-
-	Params::KuroGISystem_GetKuroGISystem Parms{};
-
-	Parms.InWorld = InWorld;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.SetKuroScreenFilterInterpolation
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const int32                             ScreenFilterIndex                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   X                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Y                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Intensity                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroGISystem::SetKuroScreenFilterInterpolation(class UWorld* InWorld, const int32 ScreenFilterIndex, float X, float Y, float Intensity)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroGISystem", "SetKuroScreenFilterInterpolation");
-
-	Params::KuroGISystem_SetKuroScreenFilterInterpolation Parms{};
-
-	Parms.InWorld = InWorld;
-	Parms.ScreenFilterIndex = ScreenFilterIndex;
-	Parms.X = X;
-	Parms.Y = Y;
-	Parms.Intensity = Intensity;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.End3DUISceneRendering
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroGISystem::End3DUISceneRendering()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGISystem", "End3DUISceneRendering");
-
-	Params::KuroGISystem_End3DUISceneRendering Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.GetKuroGlobalGIActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AKuroGlobalGI*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class AKuroGlobalGI* UKuroGISystem::GetKuroGlobalGIActor()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGISystem", "GetKuroGlobalGIActor");
-
-	Params::KuroGISystem_GetKuroGlobalGIActor Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.IsLastTickGIActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AKuroGlobalGI*                    Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroGISystem::IsLastTickGIActor(class AKuroGlobalGI* Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGISystem", "IsLastTickGIActor");
-
-	Params::KuroGISystem_IsLastTickGIActor Parms{};
-
-	Parms.Actor = Actor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.IsUISceneRendering
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroGISystem::IsUISceneRendering()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGISystem", "IsUISceneRendering");
-
-	Params::KuroGISystem_IsUISceneRendering Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.Start3DUISceneRendering
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class FString&                    InLevelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroGISystem::Start3DUISceneRendering(const class FString& InLevelName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGISystem", "Start3DUISceneRendering");
-
-	Params::KuroGISystem_Start3DUISceneRendering Parms{};
-
-	Parms.InLevelName = std::move(InLevelName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGISystem.GetUISceneRenderingState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EKuroUI3DState                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EKuroUI3DState UKuroGISystem::GetUISceneRenderingState() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGISystem", "GetUISceneRenderingState");
-
-	Params::KuroGISystem_GetUISceneRenderingState Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function KuroRenderingRuntimeBPPlugin.KuroGlobalColorMapComponent.UpdateColorMap
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -4632,1538 +6831,6 @@ void UKuroGlobalColorMapComponent::UpdateColorMap(const class UObject* WorldCont
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.BindActorToLevelSequenceActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           ActorToBind                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ALevelSequenceActor*              LevelSequenceActor                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const class FString&                    BindingName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroSceneInteractionActorSystem::BindActorToLevelSequenceActor(class AActor* ActorToBind, class ALevelSequenceActor* LevelSequenceActor, const class FString& BindingName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "BindActorToLevelSequenceActor");
-
-	Params::KuroSceneInteractionActorSystem_BindActorToLevelSequenceActor Parms{};
-
-	Parms.ActorToBind = ActorToBind;
-	Parms.LevelSequenceActor = LevelSequenceActor;
-	Parms.BindingName = std::move(BindingName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.CreateSceneInteractionLevel
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class FString&                    InLevelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EKuroSceneInteractionState        InitState                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   Location                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  Rotation                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UKuroSceneInteractionActorSystem::CreateSceneInteractionLevel(const class FString& InLevelName, const EKuroSceneInteractionState InitState, const struct FVector& Location, const struct FRotator& Rotation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "CreateSceneInteractionLevel");
-
-	Params::KuroSceneInteractionActorSystem_CreateSceneInteractionLevel Parms{};
-
-	Parms.InLevelName = std::move(InLevelName);
-	Parms.InitState = InitState;
-	Parms.Location = std::move(Location);
-	Parms.Rotation = std::move(Rotation);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.DestroySceneInteractionLevel
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const int32                             HandleId                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroSceneInteractionActorSystem::DestroySceneInteractionLevel(const int32 HandleId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "DestroySceneInteractionLevel");
-
-	Params::KuroSceneInteractionActorSystem_DestroySceneInteractionLevel Parms{};
-
-	Parms.HandleId = HandleId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.GetCurrentState
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const int32                             HandleId                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EKuroSceneInteractionState              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-EKuroSceneInteractionState UKuroSceneInteractionActorSystem::GetCurrentState(const int32 HandleId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "GetCurrentState");
-
-	Params::KuroSceneInteractionActorSystem_GetCurrentState Parms{};
-
-	Parms.HandleId = HandleId;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.SetSequenceWithTargetLevelActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class ALevelSequenceActor*              LevelSequenceActor                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULevelSequence*                   InSequence                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           TargetLevelActor                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroSceneInteractionActorSystem::SetSequenceWithTargetLevelActor(class ALevelSequenceActor* LevelSequenceActor, class ULevelSequence* InSequence, class AActor* TargetLevelActor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "SetSequenceWithTargetLevelActor");
-
-	Params::KuroSceneInteractionActorSystem_SetSequenceWithTargetLevelActor Parms{};
-
-	Parms.LevelSequenceActor = LevelSequenceActor;
-	Parms.InSequence = InSequence;
-	Parms.TargetLevelActor = TargetLevelActor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.SwitchToState
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const int32                             HandleId                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const EKuroSceneInteractionState        TargetState                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              NeedTransition                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroSceneInteractionActorSystem::SwitchToState(const int32 HandleId, const EKuroSceneInteractionState TargetState, const bool NeedTransition)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "SwitchToState");
-
-	Params::KuroSceneInteractionActorSystem_SwitchToState Parms{};
-
-	Parms.HandleId = HandleId;
-	Parms.TargetState = TargetState;
-	Parms.NeedTransition = NeedTransition;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.BindEventForbidWeatherStateChanged
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// TDelegate<void(bool InForbidWeather)>   InDelegate                                             (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::BindEventForbidWeatherStateChanged(TDelegate<void(bool InForbidWeather)> InDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroGlobalGI", "BindEventForbidWeatherStateChanged");
-
-	Params::KuroGlobalGI_BindEventForbidWeatherStateChanged Parms{};
-
-	Parms.InDelegate = InDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.BindEventGlobalFootstepMaterialUpdate
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// TDelegate<void(class UPhysicalMaterial* Material)>InDelegate                                             (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::BindEventGlobalFootstepMaterialUpdate(TDelegate<void(class UPhysicalMaterial* Material)> InDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroGlobalGI", "BindEventGlobalFootstepMaterialUpdate");
-
-	Params::KuroGlobalGI_BindEventGlobalFootstepMaterialUpdate Parms{};
-
-	Parms.InDelegate = InDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplayShadowTintRampOffset
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USkyLightComponent*               SkyLight                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplayShadowTintRampOffset(class USkyLightComponent* SkyLight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplayShadowTintRampOffset");
-
-	Params::KuroGlobalGI_ApplayShadowTintRampOffset Parms{};
-
-	Parms.SkyLight = SkyLight;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.Apply3DUISceneSkyLight
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USkyLightComponent*               SkyLight                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::Apply3DUISceneSkyLight(class USkyLightComponent* SkyLight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "Apply3DUISceneSkyLight");
-
-	Params::KuroGlobalGI_Apply3DUISceneSkyLight Parms{};
-
-	Parms.SkyLight = SkyLight;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyAndUpdateDayNightDataLayer
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   TimeOfDay                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   TODLightLoadingWait                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyAndUpdateDayNightDataLayer(float TimeOfDay, float TODLightLoadingWait)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyAndUpdateDayNightDataLayer");
-
-	Params::KuroGlobalGI_ApplyAndUpdateDayNightDataLayer Parms{};
-
-	Parms.TimeOfDay = TimeOfDay;
-	Parms.TODLightLoadingWait = TODLightLoadingWait;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyClusteredStuff
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGlobalGI::ApplyClusteredStuff()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyClusteredStuff");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyEffectMisc
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGlobalGI::ApplyEffectMisc()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyEffectMisc");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyGIMPC
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGlobalGI::ApplyGIMPC()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyGIMPC");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyGlobalGIRenderQuality
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGlobalGI::ApplyGlobalGIRenderQuality()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyGlobalGIRenderQuality");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyKuroSkyLight
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USkyLightComponent*               SkyLight                                               (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   TimeOfDay                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DefaultShadowSupplement                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DefaultReflectionAddIntensity                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyKuroSkyLight(class USkyLightComponent* SkyLight, float TimeOfDay, float DefaultShadowSupplement, float DefaultReflectionAddIntensity, bool bEnableLumen)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyKuroSkyLight");
-
-	Params::KuroGlobalGI_ApplyKuroSkyLight Parms{};
-
-	Parms.SkyLight = SkyLight;
-	Parms.TimeOfDay = TimeOfDay;
-	Parms.DefaultShadowSupplement = DefaultShadowSupplement;
-	Parms.DefaultReflectionAddIntensity = DefaultReflectionAddIntensity;
-	Parms.bEnableLumen = bEnableLumen;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLensflare
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   SunForward                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyLensflare(float DeltaTime, const struct FVector& SunForward, class UMaterialParameterCollection* Collection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyLensflare");
-
-	Params::KuroGlobalGI_ApplyLensflare Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-	Parms.SunForward = std::move(SunForward);
-	Parms.Collection = Collection;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLightFunctionSetting
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTexture*                         DefaultLightFucntionTexture                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialInstance*                LightFunctionMaterial                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialInstance*                LightFunctionPerShadowMaterial                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialInstance*                VolumetricLightFunctionMaterial                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyLightFunctionSetting(class UTexture* DefaultLightFucntionTexture, class UDirectionalLightComponent* SceneLight, class UMaterialInstance* LightFunctionMaterial, class UMaterialInstance* LightFunctionPerShadowMaterial, class UMaterialInstance* VolumetricLightFunctionMaterial)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyLightFunctionSetting");
-
-	Params::KuroGlobalGI_ApplyLightFunctionSetting Parms{};
-
-	Parms.DefaultLightFucntionTexture = DefaultLightFucntionTexture;
-	Parms.SceneLight = SceneLight;
-	Parms.LightFunctionMaterial = LightFunctionMaterial;
-	Parms.LightFunctionPerShadowMaterial = LightFunctionPerShadowMaterial;
-	Parms.VolumetricLightFunctionMaterial = VolumetricLightFunctionMaterial;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLightParameters_Conch
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator*                        SceneLightRotation                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyLightParameters_Conch(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class UDirectionalLightComponent* SceneLight, bool bEnableLumen, struct FRotator* SceneLightRotation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyLightParameters_Conch");
-
-	Params::KuroGlobalGI_ApplyLightParameters_Conch Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-	Parms.SceneLight = SceneLight;
-	Parms.bEnableLumen = bEnableLumen;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SceneLightRotation != nullptr)
-		*SceneLightRotation = std::move(Parms.SceneLightRotation);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyMilkyWayParameters
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMaterialInstance*                MilkyWayMaterial                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStaticMeshComponent*             MilkyWayMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyMilkyWayParameters(class UMaterialInstance* MilkyWayMaterial, class UStaticMeshComponent* MilkyWayMeshComponent, float Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyMilkyWayParameters");
-
-	Params::KuroGlobalGI_ApplyMilkyWayParameters Parms{};
-
-	Parms.MilkyWayMaterial = MilkyWayMaterial;
-	Parms.MilkyWayMeshComponent = MilkyWayMeshComponent;
-	Parms.Time = Time;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyRainOverrider
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AKuroWorldRainGlobalOverrider*    Overrider                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyRainOverrider(class AKuroWorldRainGlobalOverrider* Overrider)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyRainOverrider");
-
-	Params::KuroGlobalGI_ApplyRainOverrider Parms{};
-
-	Parms.Overrider = Overrider;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplySkyBoxSetting
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialInstance*                SkyBoxMaterial                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStaticMeshComponent*             SkyBoxMeshComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplySkyBoxSetting(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class UMaterialInstance* SkyBoxMaterial, class UStaticMeshComponent* SkyBoxMeshComponent, float Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplySkyBoxSetting");
-
-	Params::KuroGlobalGI_ApplySkyBoxSetting Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-	Parms.SkyBoxMaterial = SkyBoxMaterial;
-	Parms.SkyBoxMeshComponent = SkyBoxMeshComponent;
-	Parms.Time = Time;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyStarsParameters
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMaterialInstance*                StarMaterial                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStaticMeshComponent*             StarMeshComponent                                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialInstance*                StarMaterial_V2                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyStarsParameters(class UMaterialInstance* StarMaterial, class UStaticMeshComponent* StarMeshComponent, float Time, class UMaterialInstance* StarMaterial_V2)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyStarsParameters");
-
-	Params::KuroGlobalGI_ApplyStarsParameters Parms{};
-
-	Parms.StarMaterial = StarMaterial;
-	Parms.StarMeshComponent = StarMeshComponent;
-	Parms.Time = Time;
-	Parms.StarMaterial_V2 = StarMaterial_V2;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.CalLightDirectionWithLimit
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   LightAngleLimit                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator*                        LightRotation                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::CalLightDirectionWithLimit(float Time, float LightAngleLimit, struct FRotator* LightRotation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "CalLightDirectionWithLimit");
-
-	Params::KuroGlobalGI_CalLightDirectionWithLimit Parms{};
-
-	Parms.Time = Time;
-	Parms.LightAngleLimit = LightAngleLimit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (LightRotation != nullptr)
-		*LightRotation = std::move(Parms.LightRotation);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ClearLensflare
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGlobalGI::ClearLensflare()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ClearLensflare");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.GetCachedGISystem
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UKuroGISystem*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UKuroGISystem* AKuroGlobalGI::GetCachedGISystem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "GetCachedGISystem");
-
-	Params::KuroGlobalGI_GetCachedGISystem Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.GetGITime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float AKuroGlobalGI::GetGITime()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "GetGITime");
-
-	Params::KuroGlobalGI_GetGITime Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.GetPostProcessVolumeWeight
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AKuroPostProcessVolume*           InPostProcessVolume                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float AKuroGlobalGI::GetPostProcessVolumeWeight(class AKuroPostProcessVolume* InPostProcessVolume)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "GetPostProcessVolumeWeight");
-
-	Params::KuroGlobalGI_GetPostProcessVolumeWeight Parms{};
-
-	Parms.InPostProcessVolume = InPostProcessVolume;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroEndUI
-// (Event, Public, BlueprintEvent)
-
-void AKuroGlobalGI::OnKuroEndUI()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroEndUI");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroEndUiScene
-// (Event, Public, BlueprintEvent)
-
-void AKuroGlobalGI::OnKuroEndUiScene()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroEndUiScene");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroInit
-// (Event, Public, BlueprintEvent)
-
-void AKuroGlobalGI::OnKuroInit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroInit");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroRuntimeDestroy
-// (Event, Public, BlueprintEvent)
-
-void AKuroGlobalGI::OnKuroRuntimeDestroy()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroRuntimeDestroy");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroSetRuntimeTime
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   CurrentTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::OnKuroSetRuntimeTime(float CurrentTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroSetRuntimeTime");
-
-	Params::KuroGlobalGI_OnKuroSetRuntimeTime Parms{};
-
-	Parms.CurrentTime = CurrentTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroStartUI
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FString&                    InName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULevel*                           InUILevel                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::OnKuroStartUI(const class FString& InName, class ULevel* InUILevel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroStartUI");
-
-	Params::KuroGlobalGI_OnKuroStartUI Parms{};
-
-	Parms.InName = std::move(InName);
-	Parms.InUILevel = InUILevel;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroStartUiScene
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// const class FString&                    InName                                                 (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class ULevel*                           InUILevel                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::OnKuroStartUiScene(const class FString& InName, class ULevel* InUILevel)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroStartUiScene");
-
-	Params::KuroGlobalGI_OnKuroStartUiScene Parms{};
-
-	Parms.InName = std::move(InName);
-	Parms.InUILevel = InUILevel;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::OnKuroTick(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroTick");
-
-	Params::KuroGlobalGI_OnKuroTick Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.OnKuroTickEditor
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::OnKuroTickEditor(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "OnKuroTickEditor");
-
-	Params::KuroGlobalGI_OnKuroTickEditor Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.SetGITime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::SetGITime(float Time)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "SetGITime");
-
-	Params::KuroGlobalGI_SetGITime Parms{};
-
-	Parms.Time = Time;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.SetGlobalTimeDilation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   TimeDilation                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::SetGlobalTimeDilation(float TimeDilation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "SetGlobalTimeDilation");
-
-	Params::KuroGlobalGI_SetGlobalTimeDilation Parms{};
-
-	Parms.TimeDilation = TimeDilation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.SetSunLensflareEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::SetSunLensflareEnabled(bool bEnable)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "SetSunLensflareEnabled");
-
-	Params::KuroGlobalGI_SetSunLensflareEnabled Parms{};
-
-	Parms.bEnable = bEnable;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.TickWeatherTransitionData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::TickWeatherTransitionData(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "TickWeatherTransitionData");
-
-	Params::KuroGlobalGI_TickWeatherTransitionData Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateAndApplyWeather
-// (Final, Native, Public, BlueprintCallable)
-
-void AKuroGlobalGI::UpdateAndApplyWeather()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "UpdateAndApplyWeather");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateAndApplyWind
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::UpdateAndApplyWind(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "UpdateAndApplyWind");
-
-	Params::KuroGlobalGI_UpdateAndApplyWind Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateCharLightHorizontal
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FRotator&                  SceneLightRot                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bDebugCharLightHorizontal                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DebugCharLightHorizontal                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   DebugCharLightVertical                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::UpdateCharLightHorizontal(const class UObject* WorldContextObject, const struct FRotator& SceneLightRot, class UMaterialParameterCollection* Collection, bool bDebugCharLightHorizontal, float DebugCharLightHorizontal, float DebugCharLightVertical)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "UpdateCharLightHorizontal");
-
-	Params::KuroGlobalGI_UpdateCharLightHorizontal Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.SceneLightRot = std::move(SceneLightRot);
-	Parms.Collection = Collection;
-	Parms.bDebugCharLightHorizontal = bDebugCharLightHorizontal;
-	Parms.DebugCharLightHorizontal = DebugCharLightHorizontal;
-	Parms.DebugCharLightVertical = DebugCharLightVertical;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateKuroTrailSystem
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::UpdateKuroTrailSystem(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "UpdateKuroTrailSystem");
-
-	Params::KuroGlobalGI_UpdateKuroTrailSystem Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateLightDirection
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDirectionalLightComponent*       AtmoSunLight                                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDirectionalLightComponent*       AtmoMoonLight                                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::UpdateLightDirection(const class UObject* WorldContextObject, class UDirectionalLightComponent* AtmoSunLight, class UDirectionalLightComponent* AtmoMoonLight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "UpdateLightDirection");
-
-	Params::KuroGlobalGI_UpdateLightDirection Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.AtmoSunLight = AtmoSunLight;
-	Parms.AtmoMoonLight = AtmoMoonLight;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateLightEnableCastShadow
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::UpdateLightEnableCastShadow(const class UObject* WorldContextObject, class UDirectionalLightComponent* SceneLight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "UpdateLightEnableCastShadow");
-
-	Params::KuroGlobalGI_UpdateLightEnableCastShadow Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.SceneLight = SceneLight;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdatePostProcessSettingData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   CurTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSkipLerpData                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::UpdatePostProcessSettingData(const class UObject* WorldContextObject, float CurTime, bool bSkipLerpData, bool bEnableLumen)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "UpdatePostProcessSettingData");
-
-	Params::KuroGlobalGI_UpdatePostProcessSettingData Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.CurTime = CurTime;
-	Parms.bSkipLerpData = bSkipLerpData;
-	Parms.bEnableLumen = bEnableLumen;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.UpdateTODData
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FVector&                   WorldPosition                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   TimeSecnod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::UpdateTODData(const class UObject* WorldContextObject, const struct FVector& WorldPosition, float TimeSecnod)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "UpdateTODData");
-
-	Params::KuroGlobalGI_UpdateTODData Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.WorldPosition = std::move(WorldPosition);
-	Parms.TimeSecnod = TimeSecnod;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyCloudCardSetting
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyCloudCardSetting(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, bool bEnableLumen) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyCloudCardSetting");
-
-	Params::KuroGlobalGI_ApplyCloudCardSetting Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-	Parms.bEnableLumen = bEnableLumen;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyFog
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UExponentialHeightFogComponent*   HeightFog                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   WorldZOffset                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStaticMeshComponent*             CloudOcean                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStaticMeshComponent*             VolumeCloudMesh                                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USceneComponent*                  VolumeCloud                                            (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USceneComponent*                  VolumeCloudRange                                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyFog(const class UObject* WorldContextObject, class UExponentialHeightFogComponent* HeightFog, class UMaterialParameterCollection* Collection, float WorldZOffset, class UStaticMeshComponent* CloudOcean, class UStaticMeshComponent* VolumeCloudMesh, class USceneComponent* VolumeCloud, class USceneComponent* VolumeCloudRange) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyFog");
-
-	Params::KuroGlobalGI_ApplyFog Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.HeightFog = HeightFog;
-	Parms.Collection = Collection;
-	Parms.WorldZOffset = WorldZOffset;
-	Parms.CloudOcean = CloudOcean;
-	Parms.VolumeCloudMesh = VolumeCloudMesh;
-	Parms.VolumeCloud = VolumeCloud;
-	Parms.VolumeCloudRange = VolumeCloudRange;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyGlobalShaderParameters
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyGlobalShaderParameters(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyGlobalShaderParameters");
-
-	Params::KuroGlobalGI_ApplyGlobalShaderParameters Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyKuroOceanMPC
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyKuroOceanMPC(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyKuroOceanMPC");
-
-	Params::KuroGlobalGI_ApplyKuroOceanMPC Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLightParameters
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bEnableLumen                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyLightParameters(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class UDirectionalLightComponent* SceneLight, bool bEnableLumen) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyLightParameters");
-
-	Params::KuroGlobalGI_ApplyLightParameters Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-	Parms.SceneLight = SceneLight;
-	Parms.bEnableLumen = bEnableLumen;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyLightShaft
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// class UDirectionalLightComponent*       SceneLight                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyLightShaft(class UDirectionalLightComponent* SceneLight) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyLightShaft");
-
-	Params::KuroGlobalGI_ApplyLightShaft Parms{};
-
-	Parms.SceneLight = SceneLight;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplyMultipleLayerSkySetting
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplyMultipleLayerSkySetting(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplyMultipleLayerSkySetting");
-
-	Params::KuroGlobalGI_ApplyMultipleLayerSkySetting Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.ApplySkyEffectsParameters
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void AKuroGlobalGI::ApplySkyEffectsParameters(const class UObject* WorldContextObject, class UMaterialParameterCollection* Collection) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "ApplySkyEffectsParameters");
-
-	Params::KuroGlobalGI_ApplySkyEffectsParameters Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.CalcTODTimeFactor
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   StartTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   EndTime                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   CurrTime                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float AKuroGlobalGI::CalcTODTimeFactor(float StartTime, float EndTime, float CurrTime) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "CalcTODTimeFactor");
-
-	Params::KuroGlobalGI_CalcTODTimeFactor Parms{};
-
-	Parms.StartTime = StartTime;
-	Parms.EndTime = EndTime;
-	Parms.CurrTime = CurrTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGlobalGI.K2_IsInPersistentLevel
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool AKuroGlobalGI::K2_IsInPersistentLevel() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroGlobalGI", "K2_IsInPersistentLevel");
-
-	Params::KuroGlobalGI_K2_IsInPersistentLevel Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -6277,111 +6944,6 @@ void UKuroGPUParticleComponent::SetupParticle(float DeltaTime)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionMatConManager.RemoveMatConData
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// int32                                   Uid                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroSceneInteractionMatConManager::RemoveMatConData(int32 Uid)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroSceneInteractionMatConManager", "RemoveMatConData");
-
-	Params::KuroSceneInteractionMatConManager_RemoveMatConData Parms{};
-
-	Parms.Uid = Uid;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionMatConManager.RemoveMatConDataWithStaticMesh
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UStaticMeshComponent*             StaticMeshComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroSceneInteractionMatConManager::RemoveMatConDataWithStaticMesh(class UStaticMeshComponent* StaticMeshComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroSceneInteractionMatConManager", "RemoveMatConDataWithStaticMesh");
-
-	Params::KuroSceneInteractionMatConManager_RemoveMatConDataWithStaticMesh Parms{};
-
-	Parms.StaticMeshComponent = StaticMeshComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionMatConManager.SetMatConData
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UKuroSceneInteractionMatConDataCache*DataCache                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroSceneInteractionMatConManager::SetMatConData(class AActor* Actor, class UKuroSceneInteractionMatConDataCache* DataCache)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroSceneInteractionMatConManager", "SetMatConData");
-
-	Params::KuroSceneInteractionMatConManager_SetMatConData Parms{};
-
-	Parms.Actor = Actor;
-	Parms.DataCache = DataCache;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroGPUParticleSubsystem.GetKuroGPUParticleSystem
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UWorld*                           InWorld                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UKuroGPUParticleSubsystem*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UKuroGPUParticleSubsystem* UKuroGPUParticleSubsystem::GetKuroGPUParticleSystem(class UWorld* InWorld)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroGPUParticleSubsystem", "GetKuroGPUParticleSystem");
-
-	Params::KuroGPUParticleSubsystem_GetKuroGPUParticleSystem Parms{};
-
-	Parms.InWorld = InWorld;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -6626,6 +7188,1283 @@ void AKuroHighResLandscapeActor::UpdateLandscapeStatus(const TArray<class ALands
 
 	Parms.LowLandProxies = std::move(LowLandProxies);
 	Parms.HighLandProxies = std::move(HighLandProxies);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.CheckWeaponHit
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   WeaponPosition                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   MeshPosition                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionComponent::CheckWeaponHit(const struct FVector& WeaponPosition, const struct FVector& MeshPosition, float* OutDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "CheckWeaponHit");
+
+	Params::KuroInteractionComponent_CheckWeaponHit Parms{};
+
+	Parms.WeaponPosition = std::move(WeaponPosition);
+	Parms.MeshPosition = std::move(MeshPosition);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.CheckWeaponHitSimple
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   WeaponPosition                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionComponent::CheckWeaponHitSimple(const struct FVector& WeaponPosition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "CheckWeaponHitSimple");
+
+	Params::KuroInteractionComponent_CheckWeaponHitSimple Parms{};
+
+	Parms.WeaponPosition = std::move(WeaponPosition);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.ResetID
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroInteractionComponent::ResetID()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "ResetID");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.ResetInitialTransform
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroInteractionComponent::ResetInitialTransform()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "ResetInitialTransform");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.SetCurrentID
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   NewID                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroInteractionComponent::SetCurrentID(int32 NewID)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "SetCurrentID");
+
+	Params::KuroInteractionComponent_SetCurrentID Parms{};
+
+	Parms.NewID = NewID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.TriggerHit
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroInteractionComponent::TriggerHit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "TriggerHit");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.UpdateMPCParameter
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroInteractionComponent::UpdateMPCParameter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "UpdateMPCParameter");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.GetColorForID
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ID                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FLinearColor UKuroInteractionComponent::GetColorForID(int32 ID) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "GetColorForID");
+
+	Params::KuroInteractionComponent_GetColorForID Parms{};
+
+	Parms.ID = ID;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.GetCurrentIDFloat
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionComponent::GetCurrentIDFloat() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "GetCurrentIDFloat");
+
+	Params::KuroInteractionComponent_GetCurrentIDFloat Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.GetCurrentIDInt
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroInteractionComponent::GetCurrentIDInt() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "GetCurrentIDInt");
+
+	Params::KuroInteractionComponent_GetCurrentIDInt Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.GetLastHitDistance
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionComponent::GetLastHitDistance() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "GetLastHitDistance");
+
+	Params::KuroInteractionComponent_GetLastHitDistance Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionComponent.IsInCooldown
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionComponent::IsInCooldown() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionComponent", "IsInCooldown");
+
+	Params::KuroInteractionComponent_IsInCooldown Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.AreLocationsWithinDistance
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector&                   LocationA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   LocationB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionDistanceLib::AreLocationsWithinDistance(const struct FVector& LocationA, const struct FVector& LocationB, float Distance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "AreLocationsWithinDistance");
+
+	Params::KuroInteractionDistanceLib_AreLocationsWithinDistance Parms{};
+
+	Parms.LocationA = std::move(LocationA);
+	Parms.LocationB = std::move(LocationB);
+	Parms.Distance = Distance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.AreLocationsWithinDistance2D
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector&                   LocationA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   LocationB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionDistanceLib::AreLocationsWithinDistance2D(const struct FVector& LocationA, const struct FVector& LocationB, float Distance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "AreLocationsWithinDistance2D");
+
+	Params::KuroInteractionDistanceLib_AreLocationsWithinDistance2D Parms{};
+
+	Parms.LocationA = std::move(LocationA);
+	Parms.LocationB = std::move(LocationB);
+	Parms.Distance = Distance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.CalculateExponentialFalloff
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxDistance                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Exponent                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::CalculateExponentialFalloff(float Distance, float MaxDistance, float Exponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "CalculateExponentialFalloff");
+
+	Params::KuroInteractionDistanceLib_CalculateExponentialFalloff Parms{};
+
+	Parms.Distance = Distance;
+	Parms.MaxDistance = MaxDistance;
+	Parms.Exponent = Exponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.CalculateLinearFalloff
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxDistance                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::CalculateLinearFalloff(float Distance, float MaxDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "CalculateLinearFalloff");
+
+	Params::KuroInteractionDistanceLib_CalculateLinearFalloff Parms{};
+
+	Parms.Distance = Distance;
+	Parms.MaxDistance = MaxDistance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.CalculateSquaredFalloff
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxDistance                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::CalculateSquaredFalloff(float Distance, float MaxDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "CalculateSquaredFalloff");
+
+	Params::KuroInteractionDistanceLib_CalculateSquaredFalloff Parms{};
+
+	Parms.Distance = Distance;
+	Parms.MaxDistance = MaxDistance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.FindClosestActor
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           SourceActor                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            Actors                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class AActor**                          OutClosestActor                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUse2D                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionDistanceLib::FindClosestActor(class AActor* SourceActor, const TArray<class AActor*>& Actors, class AActor** OutClosestActor, float* OutDistance, bool bUse2D)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "FindClosestActor");
+
+	Params::KuroInteractionDistanceLib_FindClosestActor Parms{};
+
+	Parms.SourceActor = SourceActor;
+	Parms.Actors = std::move(Actors);
+	Parms.bUse2D = bUse2D;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutClosestActor != nullptr)
+		*OutClosestActor = Parms.OutClosestActor;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.GetActorsWithinDistance
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           SourceActor                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            Actors                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// float                                   MaxDistance                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUse2D                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class AActor*> UKuroInteractionDistanceLib::GetActorsWithinDistance(class AActor* SourceActor, const TArray<class AActor*>& Actors, float MaxDistance, bool bUse2D)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "GetActorsWithinDistance");
+
+	Params::KuroInteractionDistanceLib_GetActorsWithinDistance Parms{};
+
+	Parms.SourceActor = SourceActor;
+	Parms.Actors = std::move(Actors);
+	Parms.MaxDistance = MaxDistance;
+	Parms.bUse2D = bUse2D;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.GetDistanceActorToLocation
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::GetDistanceActorToLocation(class AActor* Actor, const struct FVector& Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "GetDistanceActorToLocation");
+
+	Params::KuroInteractionDistanceLib_GetDistanceActorToLocation Parms{};
+
+	Parms.Actor = Actor;
+	Parms.Location = std::move(Location);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.GetDistanceActorToLocation2D
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::GetDistanceActorToLocation2D(class AActor* Actor, const struct FVector& Location)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "GetDistanceActorToLocation2D");
+
+	Params::KuroInteractionDistanceLib_GetDistanceActorToLocation2D Parms{};
+
+	Parms.Actor = Actor;
+	Parms.Location = std::move(Location);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.GetDistanceBetweenActors
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           ActorA                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           ActorB                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::GetDistanceBetweenActors(class AActor* ActorA, class AActor* ActorB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "GetDistanceBetweenActors");
+
+	Params::KuroInteractionDistanceLib_GetDistanceBetweenActors Parms{};
+
+	Parms.ActorA = ActorA;
+	Parms.ActorB = ActorB;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.GetDistanceBetweenActors2D
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           ActorA                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           ActorB                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::GetDistanceBetweenActors2D(class AActor* ActorA, class AActor* ActorB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "GetDistanceBetweenActors2D");
+
+	Params::KuroInteractionDistanceLib_GetDistanceBetweenActors2D Parms{};
+
+	Parms.ActorA = ActorA;
+	Parms.ActorB = ActorB;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.GetDistanceBetweenLocations
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector&                   LocationA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   LocationB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::GetDistanceBetweenLocations(const struct FVector& LocationA, const struct FVector& LocationB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "GetDistanceBetweenLocations");
+
+	Params::KuroInteractionDistanceLib_GetDistanceBetweenLocations Parms{};
+
+	Parms.LocationA = std::move(LocationA);
+	Parms.LocationB = std::move(LocationB);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.GetDistanceBetweenLocations2D
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector&                   LocationA                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   LocationB                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::GetDistanceBetweenLocations2D(const struct FVector& LocationA, const struct FVector& LocationB)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "GetDistanceBetweenLocations2D");
+
+	Params::KuroInteractionDistanceLib_GetDistanceBetweenLocations2D Parms{};
+
+	Parms.LocationA = std::move(LocationA);
+	Parms.LocationB = std::move(LocationB);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.GetMPCScalarParameter
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::GetMPCScalarParameter(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class FName ParameterName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "GetMPCScalarParameter");
+
+	Params::KuroInteractionDistanceLib_GetMPCScalarParameter Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.ParameterName = ParameterName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.IsActorWithinDistance
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           ActorA                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           ActorB                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionDistanceLib::IsActorWithinDistance(class AActor* ActorA, class AActor* ActorB, float Distance, float* OutDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "IsActorWithinDistance");
+
+	Params::KuroInteractionDistanceLib_IsActorWithinDistance Parms{};
+
+	Parms.ActorA = ActorA;
+	Parms.ActorB = ActorB;
+	Parms.Distance = Distance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.IsActorWithinDistance2D
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           ActorA                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           ActorB                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionDistanceLib::IsActorWithinDistance2D(class AActor* ActorA, class AActor* ActorB, float Distance, float* OutDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "IsActorWithinDistance2D");
+
+	Params::KuroInteractionDistanceLib_IsActorWithinDistance2D Parms{};
+
+	Parms.ActorA = ActorA;
+	Parms.ActorB = ActorB;
+	Parms.Distance = Distance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.IsActorWithinLocationDistance
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionDistanceLib::IsActorWithinLocationDistance(class AActor* Actor, const struct FVector& Location, float Distance, float* OutDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "IsActorWithinLocationDistance");
+
+	Params::KuroInteractionDistanceLib_IsActorWithinLocationDistance Parms{};
+
+	Parms.Actor = Actor;
+	Parms.Location = std::move(Location);
+	Parms.Distance = Distance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.IsActorWithinLocationDistance2D
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroInteractionDistanceLib::IsActorWithinLocationDistance2D(class AActor* Actor, const struct FVector& Location, float Distance, float* OutDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "IsActorWithinLocationDistance2D");
+
+	Params::KuroInteractionDistanceLib_IsActorWithinLocationDistance2D Parms{};
+
+	Parms.Actor = Actor;
+	Parms.Location = std::move(Location);
+	Parms.Distance = Distance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.NormalizeDistance
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                                   Distance                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MinDistance                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxDistance                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bClamp                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::NormalizeDistance(float Distance, float MinDistance, float MaxDistance, bool bClamp)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "NormalizeDistance");
+
+	Params::KuroInteractionDistanceLib_NormalizeDistance Parms{};
+
+	Parms.Distance = Distance;
+	Parms.MinDistance = MinDistance;
+	Parms.MaxDistance = MaxDistance;
+	Parms.bClamp = bClamp;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.SetMPCScalarParameter
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bForceUpdate                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroInteractionDistanceLib::SetMPCScalarParameter(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class FName ParameterName, float Value, bool bForceUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "SetMPCScalarParameter");
+
+	Params::KuroInteractionDistanceLib_SetMPCScalarParameter Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.ParameterName = ParameterName;
+	Parms.Value = Value;
+	Parms.bForceUpdate = bForceUpdate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.SetMPCVectorParameter
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ParameterName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroInteractionDistanceLib::SetMPCVectorParameter(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class FName ParameterName, const struct FLinearColor& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "SetMPCVectorParameter");
+
+	Params::KuroInteractionDistanceLib_SetMPCVectorParameter Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.ParameterName = ParameterName;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.SmoothInterpTo
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// float                                   Current                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Target                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InterpSpeed                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Tolerance                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroInteractionDistanceLib::SmoothInterpTo(float Current, float Target, float DeltaTime, float InterpSpeed, float Tolerance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "SmoothInterpTo");
+
+	Params::KuroInteractionDistanceLib_SmoothInterpTo Parms{};
+
+	Parms.Current = Current;
+	Parms.Target = Target;
+	Parms.DeltaTime = DeltaTime;
+	Parms.InterpSpeed = InterpSpeed;
+	Parms.Tolerance = Tolerance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionDistanceLib.SortActorsByDistance
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class AActor*                           SourceActor                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            Actors                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bUse2D                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class AActor*> UKuroInteractionDistanceLib::SortActorsByDistance(class AActor* SourceActor, const TArray<class AActor*>& Actors, bool bUse2D)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroInteractionDistanceLib", "SortActorsByDistance");
+
+	Params::KuroInteractionDistanceLib_SortActorsByDistance Parms{};
+
+	Parms.SourceActor = SourceActor;
+	Parms.Actors = std::move(Actors);
+	Parms.bUse2D = bUse2D;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionPlacement.BeginOverlap
+// (Final, Native, Protected, HasOutParams)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComp                                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           Other                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPrimitiveComponent*              OtherComp                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OtherBodyIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFromSweep                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FHitResult&                OverlapInfo                                            (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void AKuroInteractionPlacement::BeginOverlap(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionPlacement", "BeginOverlap");
+
+	Params::KuroInteractionPlacement_BeginOverlap Parms{};
+
+	Parms.OverlappedComp = OverlappedComp;
+	Parms.Other = Other;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+	Parms.bFromSweep = bFromSweep;
+	Parms.OverlapInfo = std::move(OverlapInfo);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroInteractionPlacement.EndOverlap
+// (Final, Native, Protected)
+// Parameters:
+// class UPrimitiveComponent*              OverlappedComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           OtherActor                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPrimitiveComponent*              OtherComp                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   OtherBodyIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroInteractionPlacement::EndOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroInteractionPlacement", "EndOverlap");
+
+	Params::KuroInteractionPlacement_EndOverlap Parms{};
+
+	Parms.OverlappedComponent = OverlappedComponent;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.OtherBodyIndex = OtherBodyIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.GetViewportSize
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UKuroLensFlare::GetViewportSize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroLensFlare", "GetViewportSize");
+
+	Params::KuroLensFlare_GetViewportSize Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.Init
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UProceduralMeshComponent*         InputMeshComponent                                     (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroLensFlare::Init(class UProceduralMeshComponent* InputMeshComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroLensFlare", "Init");
+
+	Params::KuroLensFlare_Init Parms{};
+
+	Parms.InputMeshComponent = InputMeshComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.InitVecticesData
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   LensImageLengths                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroLensFlare::InitVecticesData(int32 LensImageLengths)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroLensFlare", "InitVecticesData");
+
+	Params::KuroLensFlare_InitVecticesData Parms{};
+
+	Parms.LensImageLengths = LensImageLengths;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.IsInit
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroLensFlare::IsInit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroLensFlare", "IsInit");
+
+	Params::KuroLensFlare_IsInit Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.IsViewportEnable
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroLensFlare::IsViewportEnable()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroLensFlare", "IsViewportEnable");
+
+	Params::KuroLensFlare_IsViewportEnable Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroLensFlare.SetVertsProperties
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 ViewportScale                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             PrimityIndex                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 UVCenter                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 UVSize                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 LensFlareScale                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             LensFlareOffset                                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             LensFlareRotation                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FLinearColor&              LensFlareTint                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 LensFlareScreenPosition                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 LensFlareDirection                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroLensFlare::SetVertsProperties(const struct FVector2D& ViewportScale, const int32 PrimityIndex, const struct FVector2D& UVCenter, const struct FVector2D& UVSize, const struct FVector2D& LensFlareScale, const float LensFlareOffset, const float LensFlareRotation, const struct FLinearColor& LensFlareTint, const struct FVector2D& LensFlareScreenPosition, const struct FVector2D& LensFlareDirection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroLensFlare", "SetVertsProperties");
+
+	Params::KuroLensFlare_SetVertsProperties Parms{};
+
+	Parms.ViewportScale = std::move(ViewportScale);
+	Parms.PrimityIndex = PrimityIndex;
+	Parms.UVCenter = std::move(UVCenter);
+	Parms.UVSize = std::move(UVSize);
+	Parms.LensFlareScale = std::move(LensFlareScale);
+	Parms.LensFlareOffset = LensFlareOffset;
+	Parms.LensFlareRotation = LensFlareRotation;
+	Parms.LensFlareTint = std::move(LensFlareTint);
+	Parms.LensFlareScreenPosition = std::move(LensFlareScreenPosition);
+	Parms.LensFlareDirection = std::move(LensFlareDirection);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -6921,9 +8760,11 @@ void UKuroMaterialControllerComponent::AddColorUpdateParamPermanentCustom(class 
 // bool                                    bLoop                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bPause                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USkeletalMeshComponent*           AnimObject                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bHiddenOnRemove                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UKuroMaterialControllerComponent::AddEffect(class UKuroMaterialControllerDataAsset* DataAsset, bool bLoop, bool bPause, class USkeletalMeshComponent* AnimObject)
+int32 UKuroMaterialControllerComponent::AddEffect(class UKuroMaterialControllerDataAsset* DataAsset, bool bLoop, bool bPause, class USkeletalMeshComponent* AnimObject, bool bHiddenOnRemove, int32 InstanceIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6936,6 +8777,8 @@ int32 UKuroMaterialControllerComponent::AddEffect(class UKuroMaterialControllerD
 	Parms.bLoop = bLoop;
 	Parms.bPause = bPause;
 	Parms.AnimObject = AnimObject;
+	Parms.bHiddenOnRemove = bHiddenOnRemove;
+	Parms.InstanceIndex = InstanceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -6956,9 +8799,10 @@ int32 UKuroMaterialControllerComponent::AddEffect(class UKuroMaterialControllerD
 // bool                                    bPause                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USkeletalMeshComponent*           AnimObject                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bHiddenOnRemove                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UKuroMaterialControllerComponent::AddEffect_Ex(class UKuroMaterialControllerDataAsset* DataAsset, bool bLoop, bool bPause, class USkeletalMeshComponent* AnimObject, bool bHiddenOnRemove)
+int32 UKuroMaterialControllerComponent::AddEffect_Ex(class UKuroMaterialControllerDataAsset* DataAsset, bool bLoop, bool bPause, class USkeletalMeshComponent* AnimObject, bool bHiddenOnRemove, int32 InstanceIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -6972,6 +8816,7 @@ int32 UKuroMaterialControllerComponent::AddEffect_Ex(class UKuroMaterialControll
 	Parms.bPause = bPause;
 	Parms.AnimObject = AnimObject;
 	Parms.bHiddenOnRemove = bHiddenOnRemove;
+	Parms.InstanceIndex = InstanceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -6992,9 +8837,10 @@ int32 UKuroMaterialControllerComponent::AddEffect_Ex(class UKuroMaterialControll
 // bool                                    bPause                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USkeletalMeshComponent*           AnimObject                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bHiddenOnRemove                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-int32 UKuroMaterialControllerComponent::AddEffectRaw(class UKuroMaterialContainerDataCache* DataCache, bool bLoop, bool bPause, class USkeletalMeshComponent* AnimObject, bool bHiddenOnRemove)
+int32 UKuroMaterialControllerComponent::AddEffectRaw(class UKuroMaterialContainerDataCache* DataCache, bool bLoop, bool bPause, class USkeletalMeshComponent* AnimObject, bool bHiddenOnRemove, int32 InstanceIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7008,6 +8854,7 @@ int32 UKuroMaterialControllerComponent::AddEffectRaw(class UKuroMaterialContaine
 	Parms.bPause = bPause;
 	Parms.AnimObject = AnimObject;
 	Parms.bHiddenOnRemove = bHiddenOnRemove;
+	Parms.InstanceIndex = InstanceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7405,6 +9252,59 @@ void UKuroMaterialControllerComponent::AddTextureUpdateParamPermanentCustom(clas
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.GetAllHandles
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UKuroMaterialControllerComponent::GetAllHandles(int32 InstanceIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMaterialControllerComponent", "GetAllHandles");
+
+	Params::KuroMaterialControllerComponent_GetAllHandles Parms{};
+
+	Parms.InstanceIndex = InstanceIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.GetAllInstanceUpdateParamIndices
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UKuroMaterialControllerComponent::GetAllInstanceUpdateParamIndices()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMaterialControllerComponent", "GetAllInstanceUpdateParamIndices");
+
+	Params::KuroMaterialControllerComponent_GetAllInstanceUpdateParamIndices Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.GetEffectKey
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -7421,6 +9321,36 @@ int32 UKuroMaterialControllerComponent::GetEffectKey(class FName KeyName)
 	Params::KuroMaterialControllerComponent_GetEffectKey Parms{};
 
 	Parms.KeyName = KeyName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.GetHandleLoop
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   HandleId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroMaterialControllerComponent::GetHandleLoop(int32 HandleId, int32 InstanceIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMaterialControllerComponent", "GetHandleLoop");
+
+	Params::KuroMaterialControllerComponent_GetHandleLoop Parms{};
+
+	Parms.HandleId = HandleId;
+	Parms.InstanceIndex = InstanceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7500,6 +9430,25 @@ void UKuroMaterialControllerComponent::MarkForceUpdateAllOnce()
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.PostComponentsVisibilityChanged
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroMaterialControllerComponent::PostComponentsVisibilityChanged()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMaterialControllerComponent", "PostComponentsVisibilityChanged");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.RefreshFilter
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -7554,20 +9503,51 @@ void UKuroMaterialControllerComponent::RegisterEffectKey(class FName KeyName, in
 
 // Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.RemoveAllEffects
 // (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroMaterialControllerComponent::RemoveAllEffects()
+void UKuroMaterialControllerComponent::RemoveAllEffects(int32 InstanceIndex)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("KuroMaterialControllerComponent", "RemoveAllEffects");
 
+	Params::KuroMaterialControllerComponent_RemoveAllEffects Parms{};
+
+	Parms.InstanceIndex = InstanceIndex;
+
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.RemoveAllUnloopedEffects
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UKuroMaterialControllerComponent::RemoveAllUnloopedEffects()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMaterialControllerComponent", "RemoveAllUnloopedEffects");
+
+	Params::KuroMaterialControllerComponent_RemoveAllUnloopedEffects Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -7720,8 +9700,9 @@ TArray<int32> UKuroMaterialControllerComponent::RemoveDeadEffects()
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   HandleId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroMaterialControllerComponent::RemoveEffect(int32 HandleId)
+void UKuroMaterialControllerComponent::RemoveEffect(int32 HandleId, int32 InstanceIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7731,6 +9712,7 @@ void UKuroMaterialControllerComponent::RemoveEffect(int32 HandleId)
 	Params::KuroMaterialControllerComponent_RemoveEffect Parms{};
 
 	Parms.HandleId = HandleId;
+	Parms.InstanceIndex = InstanceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -8473,8 +10455,9 @@ void UKuroMaterialControllerComponent::SetHandleEnabled(int32 HandleId, bool bEn
 // int32                                   HandleId                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bLoop                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSeekToEnd                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroMaterialControllerComponent::SetHandleLoop(int32 HandleId, bool bLoop, bool bSeekToEnd)
+void UKuroMaterialControllerComponent::SetHandleLoop(int32 HandleId, bool bLoop, bool bSeekToEnd, int32 InstanceIndex)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8486,6 +10469,7 @@ void UKuroMaterialControllerComponent::SetHandleLoop(int32 HandleId, bool bLoop,
 	Parms.HandleId = HandleId;
 	Parms.bLoop = bLoop;
 	Parms.bSeekToEnd = bSeekToEnd;
+	Parms.InstanceIndex = InstanceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -8732,6 +10716,34 @@ float UKuroMaterialControllerComponent::GetBodyOpacity() const
 		Func = Class->GetFunction("KuroMaterialControllerComponent", "GetBodyOpacity");
 
 	Params::KuroMaterialControllerComponent_GetBodyOpacity Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMaterialControllerComponent.GetInstanceUpdateParams
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   InstanceIndex                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<float> UKuroMaterialControllerComponent::GetInstanceUpdateParams(int32 InstanceIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMaterialControllerComponent", "GetInstanceUpdateParams");
+
+	Params::KuroMaterialControllerComponent_GetInstanceUpdateParams Parms{};
+
+	Parms.InstanceIndex = InstanceIndex;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -9722,6 +11734,244 @@ void UKuroMaterialVariationComponent::SetMaterialTextureAll(class FName Property
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.ApplyIntensityForIndex
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroMoveLightActor::ApplyIntensityForIndex(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "ApplyIntensityForIndex");
+
+	Params::KuroMoveLightActor_ApplyIntensityForIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.CalculateIntensity
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroMoveLightActor::CalculateIntensity(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "CalculateIntensity");
+
+	Params::KuroMoveLightActor_CalculateIntensity Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.CalculateIntensityForIndex
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroMoveLightActor::CalculateIntensityForIndex(int32 Index_0, float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "CalculateIntensityForIndex");
+
+	Params::KuroMoveLightActor_CalculateIntensityForIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.CalculateTickIntervalForIndex
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   CameraLocation                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroMoveLightActor::CalculateTickIntervalForIndex(int32 Index_0, const struct FVector& CameraLocation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "CalculateTickIntervalForIndex");
+
+	Params::KuroMoveLightActor_CalculateTickIntervalForIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.CameraLocation = std::move(CameraLocation);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.CreateOrUpdatePointComponents
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroMoveLightActor::CreateOrUpdatePointComponents()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "CreateOrUpdatePointComponents");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.ForeachPointLight
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UPointLightComponent*             PointLightComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroMoveLightActor::ForeachPointLight(class UPointLightComponent* PointLightComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "ForeachPointLight");
+
+	Params::KuroMoveLightActor_ForeachPointLight Parms{};
+
+	Parms.PointLightComponent = PointLightComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.InitSplineByCurve
+// (Native, Event, Public, BlueprintEvent)
+
+void AKuroMoveLightActor::InitSplineByCurve()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "InitSplineByCurve");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.InitSplineByCurveForIndex
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroMoveLightActor::InitSplineByCurveForIndex(int32 Index_0)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "InitSplineByCurveForIndex");
+
+	Params::KuroMoveLightActor_InitSplineByCurveForIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.SampleSpline2PointPositionForIndex
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AKuroMoveLightActor::SampleSpline2PointPositionForIndex(int32 Index_0, float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "SampleSpline2PointPositionForIndex");
+
+	Params::KuroMoveLightActor_SampleSpline2PointPositionForIndex Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroMoveLightActor.UpdateLight
+// (Final, Native, Public, BlueprintCallable)
+
+void AKuroMoveLightActor::UpdateLight()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroMoveLightActor", "UpdateLight");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -11818,6 +14068,42 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::AddKuroCellLayer(const class UObjec
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.AddNamedComponent
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class UActorComponent>      Class_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             Name_0                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bManualAttachment                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                Transform                                              (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// class UActorComponent*                  ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UActorComponent* UKuroRenderingRuntimeBPPluginBPLibrary::AddNamedComponent(class AActor* Actor, TSubclassOf<class UActorComponent> Class_0, class FName Name_0, bool bManualAttachment, const struct FTransform& Transform)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "AddNamedComponent");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_AddNamedComponent Parms{};
+
+	Parms.Actor = Actor;
+	Parms.Class_0 = Class_0;
+	Parms.Name_0 = Name_0;
+	Parms.bManualAttachment = bManualAttachment;
+	Parms.Transform = std::move(Transform);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.AddPostprocessMaterial
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -12462,6 +14748,31 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::DestroyGITransientActor(class UObje
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.DoesDeviceSupportVariableRateShading
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::DoesDeviceSupportVariableRateShading()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "DoesDeviceSupportVariableRateShading");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_DoesDeviceSupportVariableRateShading Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FreezeWorldLevelStreaming
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -12484,6 +14795,777 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::FreezeWorldLevelStreaming(const cla
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_AppendCandidateAngles
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector2D&                 Origin                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FFS_Circle2D>&      InCircles                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FFS_Segment2D>&     InSegments                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<float>*                          Angles                                                 (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// float                                   AngleOffset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::FS_AppendCandidateAngles(const struct FVector2D& Origin, const TArray<struct FFS_Circle2D>& InCircles, const TArray<struct FFS_Segment2D>& InSegments, TArray<float>* Angles, float AngleOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_AppendCandidateAngles");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_AppendCandidateAngles Parms{};
+
+	Parms.Origin = std::move(Origin);
+	Parms.InCircles = std::move(InCircles);
+	Parms.InSegments = std::move(InSegments);
+	Parms.AngleOffset = AngleOffset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Angles != nullptr)
+		*Angles = std::move(Parms.Angles);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_CheckFrontObstacle
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const float                             RayCastingDetectDis                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const ETraceTypeQuery                   TraceChannel                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Rotator                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FVectorDouble&             WorldPosition                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>&                 Dir                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector>&                 EndPos                                                 (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class FName>&                    ParamNames                                             (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UMaterialInstanceDynamic*         MID                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              debugLine                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             CountIndex                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::FS_CheckFrontObstacle(const float RayCastingDetectDis, const class UObject* WorldContextObject, const ETraceTypeQuery TraceChannel, const struct FRotator& Rotator, const struct FVectorDouble& WorldPosition, float* OutDistance, TArray<struct FVector>& Dir, TArray<struct FVector>& EndPos, TArray<class FName>& ParamNames, class UMaterialInstanceDynamic* MID, const bool debugLine, const int32 CountIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_CheckFrontObstacle");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_CheckFrontObstacle Parms{};
+
+	Parms.RayCastingDetectDis = RayCastingDetectDis;
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.TraceChannel = TraceChannel;
+	Parms.Rotator = std::move(Rotator);
+	Parms.WorldPosition = std::move(WorldPosition);
+	Parms.Dir = std::move(Dir);
+	Parms.EndPos = std::move(EndPos);
+	Parms.ParamNames = std::move(ParamNames);
+	Parms.MID = MID;
+	Parms.debugLine = debugLine;
+	Parms.CountIndex = CountIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Dir = std::move(Parms.Dir);
+	EndPos = std::move(Parms.EndPos);
+	ParamNames = std::move(Parms.ParamNames);
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_CheckFrontObstacle2
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const float                             RayCastingDetectDis                                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ETraceTypeQuery                         TraceChannel                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Rotator                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// const struct FVectorDouble&             WorldPosition                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>&                 Dir                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector>&                 EndPos                                                 (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<float>&                          Dis                                                    (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class FName>&                    ParamNames                                             (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UMaterialInstanceDynamic*         MID                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              debugLine                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             CountIndex                                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             BatchSize                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             ParticleCount                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32*                                  OutNewCountIndex                                       (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            ActorsToIgnore                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::FS_CheckFrontObstacle2(const float RayCastingDetectDis, const class UObject* WorldContextObject, ETraceTypeQuery TraceChannel, const struct FRotator& Rotator, const struct FVectorDouble& WorldPosition, float* OutDistance, TArray<struct FVector>& Dir, TArray<struct FVector>& EndPos, TArray<float>& Dis, TArray<class FName>& ParamNames, class UMaterialInstanceDynamic* MID, const bool debugLine, const int32 CountIndex, const int32 BatchSize, const int32 ParticleCount, int32* OutNewCountIndex, const TArray<class AActor*>& ActorsToIgnore)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_CheckFrontObstacle2");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_CheckFrontObstacle2 Parms{};
+
+	Parms.RayCastingDetectDis = RayCastingDetectDis;
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.TraceChannel = TraceChannel;
+	Parms.Rotator = std::move(Rotator);
+	Parms.WorldPosition = std::move(WorldPosition);
+	Parms.Dir = std::move(Dir);
+	Parms.EndPos = std::move(EndPos);
+	Parms.Dis = std::move(Dis);
+	Parms.ParamNames = std::move(ParamNames);
+	Parms.MID = MID;
+	Parms.debugLine = debugLine;
+	Parms.CountIndex = CountIndex;
+	Parms.BatchSize = BatchSize;
+	Parms.ParticleCount = ParticleCount;
+	Parms.ActorsToIgnore = std::move(ActorsToIgnore);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Dir = std::move(Parms.Dir);
+	EndPos = std::move(Parms.EndPos);
+	Dis = std::move(Parms.Dis);
+	ParamNames = std::move(Parms.ParamNames);
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	if (OutNewCountIndex != nullptr)
+		*OutNewCountIndex = Parms.OutNewCountIndex;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_ComputeTilt_ByHeightH
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FTransform&                PlaneTransform                                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   Radius                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   PersonWorld                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  H                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  MaxDegreeAngle                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  MinActiveRadius                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  MaxActiveRadius                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPlayerColliding                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  FollowSpeedDegPerSec                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ReturnSpeedDegPerSec                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNeedReturnOrNot                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FRotator UKuroRenderingRuntimeBPPluginBPLibrary::FS_ComputeTilt_ByHeightH(const struct FTransform& PlaneTransform, float Radius, const struct FVector& PersonWorld, double H, double MaxDegreeAngle, double MinActiveRadius, double MaxActiveRadius, bool bPlayerColliding, double FollowSpeedDegPerSec, double ReturnSpeedDegPerSec, float DeltaSeconds, bool bNeedReturnOrNot)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_ComputeTilt_ByHeightH");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_ComputeTilt_ByHeightH Parms{};
+
+	Parms.PlaneTransform = std::move(PlaneTransform);
+	Parms.Radius = Radius;
+	Parms.PersonWorld = std::move(PersonWorld);
+	Parms.H = H;
+	Parms.MaxDegreeAngle = MaxDegreeAngle;
+	Parms.MinActiveRadius = MinActiveRadius;
+	Parms.MaxActiveRadius = MaxActiveRadius;
+	Parms.bPlayerColliding = bPlayerColliding;
+	Parms.FollowSpeedDegPerSec = FollowSpeedDegPerSec;
+	Parms.ReturnSpeedDegPerSec = ReturnSpeedDegPerSec;
+	Parms.DeltaSeconds = DeltaSeconds;
+	Parms.bNeedReturnOrNot = bNeedReturnOrNot;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_ComputeTilt_ByHeightH2
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVectorDouble*                   LastFrameNormal                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FTransform&                PlaneTransform                                         (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   RayCastingDetectRange                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   PlayerPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  MaxDegreeAngle                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MinActiveRadius                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxActiveRadius                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  FollowSpeedRate                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ReturnSpeedRate                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPlayerColliding                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNeedReturnOrNot                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bLinear                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FRotator UKuroRenderingRuntimeBPPluginBPLibrary::FS_ComputeTilt_ByHeightH2(struct FVectorDouble* LastFrameNormal, const struct FTransform& PlaneTransform, float RayCastingDetectRange, const struct FVector& PlayerPos, double MaxDegreeAngle, float MinActiveRadius, float MaxActiveRadius, double FollowSpeedRate, double ReturnSpeedRate, bool bPlayerColliding, bool bNeedReturnOrNot, bool bLinear)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_ComputeTilt_ByHeightH2");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_ComputeTilt_ByHeightH2 Parms{};
+
+	Parms.PlaneTransform = std::move(PlaneTransform);
+	Parms.RayCastingDetectRange = RayCastingDetectRange;
+	Parms.PlayerPos = std::move(PlayerPos);
+	Parms.MaxDegreeAngle = MaxDegreeAngle;
+	Parms.MinActiveRadius = MinActiveRadius;
+	Parms.MaxActiveRadius = MaxActiveRadius;
+	Parms.FollowSpeedRate = FollowSpeedRate;
+	Parms.ReturnSpeedRate = ReturnSpeedRate;
+	Parms.bPlayerColliding = bPlayerColliding;
+	Parms.bNeedReturnOrNot = bNeedReturnOrNot;
+	Parms.bLinear = bLinear;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LastFrameNormal != nullptr)
+		*LastFrameNormal = std::move(Parms.LastFrameNormal);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_ComputeVisibilityDebugPoints
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 Origin                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 PlayerPos                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FFS_Circle2D>&      Circles                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FFS_Segment2D>&     Segments                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector2D>*               OutHits                                                (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// float                                   RayLength                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AngleOffset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUseInputCircles                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUseInputSegments                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDoParallel                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_ComputeVisibilityDebugPoints(const struct FVector2D& Origin, const struct FVector2D& PlayerPos, const TArray<struct FFS_Circle2D>& Circles, const TArray<struct FFS_Segment2D>& Segments, TArray<struct FVector2D>* OutHits, float RayLength, float AngleOffset, bool bUseInputCircles, bool bUseInputSegments, bool bDoParallel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_ComputeVisibilityDebugPoints");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_ComputeVisibilityDebugPoints Parms{};
+
+	Parms.Origin = std::move(Origin);
+	Parms.PlayerPos = std::move(PlayerPos);
+	Parms.Circles = std::move(Circles);
+	Parms.Segments = std::move(Segments);
+	Parms.RayLength = RayLength;
+	Parms.AngleOffset = AngleOffset;
+	Parms.bUseInputCircles = bUseInputCircles;
+	Parms.bUseInputSegments = bUseInputSegments;
+	Parms.bDoParallel = bDoParallel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutHits != nullptr)
+		*OutHits = std::move(Parms.OutHits);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_ComputeVisibilityDebugPoints_Batch
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 Origin                                                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 PlayerPos                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FFS_Circle2D>&      FS_Circles                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FFS_Segment2D>&     FS_Segments                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FFS_AngleHit>&            OutHits                                                (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector2D>&               OutHitsReal                                            (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// float                                   RayLength                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AngleOffset                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AngleOffset2                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUseInputCircles                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUseInputSegments                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bDoParallel                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   StartIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   UpdateCount                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_ComputeVisibilityDebugPoints_Batch(const struct FVector2D& Origin, const struct FVector2D& PlayerPos, const TArray<struct FFS_Circle2D>& FS_Circles, const TArray<struct FFS_Segment2D>& FS_Segments, TArray<struct FFS_AngleHit>& OutHits, TArray<struct FVector2D>& OutHitsReal, float RayLength, float AngleOffset, float AngleOffset2, bool bUseInputCircles, bool bUseInputSegments, bool bDoParallel, int32 StartIndex, int32 UpdateCount)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_ComputeVisibilityDebugPoints_Batch");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_ComputeVisibilityDebugPoints_Batch Parms{};
+
+	Parms.Origin = std::move(Origin);
+	Parms.PlayerPos = std::move(PlayerPos);
+	Parms.FS_Circles = std::move(FS_Circles);
+	Parms.FS_Segments = std::move(FS_Segments);
+	Parms.OutHits = std::move(OutHits);
+	Parms.OutHitsReal = std::move(OutHitsReal);
+	Parms.RayLength = RayLength;
+	Parms.AngleOffset = AngleOffset;
+	Parms.AngleOffset2 = AngleOffset2;
+	Parms.bUseInputCircles = bUseInputCircles;
+	Parms.bUseInputSegments = bUseInputSegments;
+	Parms.bDoParallel = bDoParallel;
+	Parms.StartIndex = StartIndex;
+	Parms.UpdateCount = UpdateCount;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	OutHits = std::move(Parms.OutHits);
+	OutHitsReal = std::move(Parms.OutHitsReal);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_DetectPlayer
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const int32                             Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             ParticleCount                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<struct FVector>&           EndPos                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FVector&                   PlayerPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   WorldPos                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_DetectPlayer(const int32 Index_0, const int32 ParticleCount, const TArray<struct FVector>& EndPos, const struct FVector& PlayerPos, const struct FVector& WorldPos, float* OutDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_DetectPlayer");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_DetectPlayer Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.ParticleCount = ParticleCount;
+	Parms.EndPos = std::move(EndPos);
+	Parms.PlayerPos = std::move(PlayerPos);
+	Parms.WorldPos = std::move(WorldPos);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_DetectPlayer_Two
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const double                            Index_0                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const int32                             ParticleCount                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<float>&                    Dis                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<struct FVector>&           Dirs                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const struct FVector&                   PlayerPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   WorldPos                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Rotator                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_DetectPlayer_Two(const double Index_0, const int32 ParticleCount, const TArray<float>& Dis, const TArray<struct FVector>& Dirs, const struct FVector& PlayerPos, const struct FVector& WorldPos, const struct FRotator& Rotator, float* OutDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_DetectPlayer_Two");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_DetectPlayer_Two Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.ParticleCount = ParticleCount;
+	Parms.Dis = std::move(Dis);
+	Parms.Dirs = std::move(Dirs);
+	Parms.PlayerPos = std::move(PlayerPos);
+	Parms.WorldPos = std::move(WorldPos);
+	Parms.Rotator = std::move(Rotator);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_GetCircleIntersection
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 RayStart                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 RayEnd                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FFS_Circle2D&              Circle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector2D*                       OutPoint                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutParamT                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_GetCircleIntersection(const struct FVector2D& RayStart, const struct FVector2D& RayEnd, const struct FFS_Circle2D& Circle, struct FVector2D* OutPoint, float* OutParamT)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_GetCircleIntersection");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_GetCircleIntersection Parms{};
+
+	Parms.RayStart = std::move(RayStart);
+	Parms.RayEnd = std::move(RayEnd);
+	Parms.Circle = std::move(Circle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutPoint != nullptr)
+		*OutPoint = std::move(Parms.OutPoint);
+
+	if (OutParamT != nullptr)
+		*OutParamT = Parms.OutParamT;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_GetCircleTangentPoints
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 P                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FFS_Circle2D&              Circle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector2D*                       OutTangent1                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D*                       OutTangent2                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_GetCircleTangentPoints(const struct FVector2D& P, const struct FFS_Circle2D& Circle, struct FVector2D* OutTangent1, struct FVector2D* OutTangent2)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_GetCircleTangentPoints");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_GetCircleTangentPoints Parms{};
+
+	Parms.P = std::move(P);
+	Parms.Circle = std::move(Circle);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTangent1 != nullptr)
+		*OutTangent1 = std::move(Parms.OutTangent1);
+
+	if (OutTangent2 != nullptr)
+		*OutTangent2 = std::move(Parms.OutTangent2);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_GetCircleTangentPoints2
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 P                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FFS_Circle2D&              Circle                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector2D*                       OutTangent1                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D*                       OutTangent2                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Epsilon                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_GetCircleTangentPoints2(const struct FVector2D& P, const struct FFS_Circle2D& Circle, struct FVector2D* OutTangent1, struct FVector2D* OutTangent2, float Epsilon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_GetCircleTangentPoints2");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_GetCircleTangentPoints2 Parms{};
+
+	Parms.P = std::move(P);
+	Parms.Circle = std::move(Circle);
+	Parms.Epsilon = Epsilon;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutTangent1 != nullptr)
+		*OutTangent1 = std::move(Parms.OutTangent1);
+
+	if (OutTangent2 != nullptr)
+		*OutTangent2 = std::move(Parms.OutTangent2);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_GetSegmentIntersection
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector2D&                 RayStart                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 RayEnd                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FFS_Segment2D&             Seg                                                    (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector2D*                       OutPoint                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutParamT                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_GetSegmentIntersection(const struct FVector2D& RayStart, const struct FVector2D& RayEnd, const struct FFS_Segment2D& Seg, struct FVector2D* OutPoint, float* OutParamT)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_GetSegmentIntersection");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_GetSegmentIntersection Parms{};
+
+	Parms.RayStart = std::move(RayStart);
+	Parms.RayEnd = std::move(RayEnd);
+	Parms.Seg = std::move(Seg);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutPoint != nullptr)
+		*OutPoint = std::move(Parms.OutPoint);
+
+	if (OutParamT != nullptr)
+		*OutParamT = Parms.OutParamT;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_IndexToAngle
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int32                                   Index_0                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   N                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroRenderingRuntimeBPPluginBPLibrary::FS_IndexToAngle(int32 Index_0, int32 N)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_IndexToAngle");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_IndexToAngle Parms{};
+
+	Parms.Index_0 = Index_0;
+	Parms.N = N;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_IsPointInTriangle
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// const struct FVector2D&                 P                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 A                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 B                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector2D&                 C                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_IsPointInTriangle(const struct FVector2D& P, const struct FVector2D& A, const struct FVector2D& B, const struct FVector2D& C)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_IsPointInTriangle");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_IsPointInTriangle Parms{};
+
+	Parms.P = std::move(P);
+	Parms.A = std::move(A);
+	Parms.B = std::move(B);
+	Parms.C = std::move(C);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_IsPointInTriangle_ZProjection
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   P                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   A                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   B                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   C                                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float*                                  OutDistance                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Epsilon                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroRenderingRuntimeBPPluginBPLibrary::FS_IsPointInTriangle_ZProjection(const struct FVector& P, const struct FVector& A, const struct FVector& B, const struct FVector& C, float* OutDistance, float Epsilon)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_IsPointInTriangle_ZProjection");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_IsPointInTriangle_ZProjection Parms{};
+
+	Parms.P = std::move(P);
+	Parms.A = std::move(A);
+	Parms.B = std::move(B);
+	Parms.C = std::move(C);
+	Parms.Epsilon = Epsilon;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutDistance != nullptr)
+		*OutDistance = Parms.OutDistance;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_PointToIndex_Local
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   OriginLocal                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   PointLocal                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   N                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroRenderingRuntimeBPPluginBPLibrary::FS_PointToIndex_Local(const struct FVector& OriginLocal, const struct FVector& PointLocal, int32 N)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_PointToIndex_Local");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_PointToIndex_Local Parms{};
+
+	Parms.OriginLocal = std::move(OriginLocal);
+	Parms.PointLocal = std::move(PointLocal);
+	Parms.N = N;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.FS_PointToIndex_Local_Double
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   OriginLocal                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   PointLocal                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   N                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UKuroRenderingRuntimeBPPluginBPLibrary::FS_PointToIndex_Local_Double(const struct FVector& OriginLocal, const struct FVector& PointLocal, int32 N)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "FS_PointToIndex_Local_Double");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_FS_PointToIndex_Local_Double Parms{};
+
+	Parms.OriginLocal = std::move(OriginLocal);
+	Parms.PointLocal = std::move(PointLocal);
+	Parms.N = N;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -12550,6 +15632,34 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::GetActorForwardVectorRefXYZ(class A
 
 	if (Z != nullptr)
 		*Z = Parms.Z;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetActorLocationNoWorldOffset
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UKuroRenderingRuntimeBPPluginBPLibrary::GetActorLocationNoWorldOffset(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetActorLocationNoWorldOffset");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetActorLocationNoWorldOffset Parms{};
+
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -12677,6 +15787,34 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::GetActorsInLevel(const class ULevel
 
 	if (OutActors != nullptr)
 		*OutActors = std::move(Parms.OutActors);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetActorTransformNoWorldOffset
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FTransform UKuroRenderingRuntimeBPPluginBPLibrary::GetActorTransformNoWorldOffset(class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetActorTransformNoWorldOffset");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetActorTransformNoWorldOffset Parms{};
+
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -13025,6 +16163,34 @@ struct FLinearColor UKuroRenderingRuntimeBPPluginBPLibrary::GetColorFromGroup(st
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetComponentLocationNoWorldOffset
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class USceneComponent*                  Component                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UKuroRenderingRuntimeBPPluginBPLibrary::GetComponentLocationNoWorldOffset(class USceneComponent* Component)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetComponentLocationNoWorldOffset");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetComponentLocationNoWorldOffset Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetComponentPhysicalMaterial
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -13039,6 +16205,34 @@ class UPhysicalMaterial* UKuroRenderingRuntimeBPPluginBPLibrary::GetComponentPhy
 		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetComponentPhysicalMaterial");
 
 	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetComponentPhysicalMaterial Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetComponentToWorldNoWorldOffset
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class USceneComponent*                  Component                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FTransform UKuroRenderingRuntimeBPPluginBPLibrary::GetComponentToWorldNoWorldOffset(class USceneComponent* Component)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetComponentToWorldNoWorldOffset");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetComponentToWorldNoWorldOffset Parms{};
 
 	Parms.Component = Component;
 
@@ -13450,6 +16644,34 @@ bool UKuroRenderingRuntimeBPPluginBPLibrary::GetDriverValid()
 		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetDriverValid");
 
 	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetDriverValid Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetEngineSubsystem
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UEngineSubsystem>     EngineSubsystem                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UEngineSubsystem*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UEngineSubsystem* UKuroRenderingRuntimeBPPluginBPLibrary::GetEngineSubsystem(TSubclassOf<class UEngineSubsystem> EngineSubsystem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetEngineSubsystem");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetEngineSubsystem Parms{};
+
+	Parms.EngineSubsystem = EngineSubsystem;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -14540,6 +17762,31 @@ float UKuroRenderingRuntimeBPPluginBPLibrary::GetRenderThreadTime()
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetRHIAPIVersion
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UKuroRenderingRuntimeBPPluginBPLibrary::GetRHIAPIVersion()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetRHIAPIVersion");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetRHIAPIVersion Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetRHIDeviceName
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -14906,40 +18153,6 @@ bool UKuroRenderingRuntimeBPPluginBPLibrary::GetSpaceStateByPosition(const class
 
 	if (OutEnCloseSubDataLayer != nullptr)
 		*OutEnCloseSubDataLayer = std::move(Parms.OutEnCloseSubDataLayer);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetStreamingCells
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FWorldPartitionStreamingQuerySource&QuerySource                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<struct FWorldPartitionRuntimeSpatialHashCell>*OutCells                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroRenderingRuntimeBPPluginBPLibrary::GetStreamingCells(const class UObject* WorldContextObject, const struct FWorldPartitionStreamingQuerySource& QuerySource, TArray<struct FWorldPartitionRuntimeSpatialHashCell>* OutCells)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetStreamingCells");
-
-	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetStreamingCells Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.QuerySource = std::move(QuerySource);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutCells != nullptr)
-		*OutCells = std::move(Parms.OutCells);
 
 	return Parms.ReturnValue;
 }
@@ -16363,6 +19576,65 @@ struct FVector2D UKuroRenderingRuntimeBPPluginBPLibrary::PackLinearColorRGBToVec
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.PBDBridge_RealModel
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<struct FVector>&                 posArr                                                 (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector>&                 volArr                                                 (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector>&                 posArrFoe                                              (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<float>&                    foeDisList                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// const TArray<float>&                    nxtDisList                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// float                                   linkDisScale                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   startPinPos                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   endPinPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   accel_ext                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   collisionR                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    isFirstFrame                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   volDamping                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   dt                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   playerPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   bridgeDir                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   pushStrength                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::PBDBridge_RealModel(TArray<struct FVector>& posArr, TArray<struct FVector>& volArr, TArray<struct FVector>& posArrFoe, const TArray<float>& foeDisList, const TArray<float>& nxtDisList, float linkDisScale, const struct FVector& startPinPos, const struct FVector& endPinPos, const struct FVector& accel_ext, float collisionR, bool isFirstFrame, float volDamping, float dt, const struct FVector& playerPos, const struct FVector& bridgeDir, float pushStrength)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "PBDBridge_RealModel");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_PBDBridge_RealModel Parms{};
+
+	Parms.posArr = std::move(posArr);
+	Parms.volArr = std::move(volArr);
+	Parms.posArrFoe = std::move(posArrFoe);
+	Parms.foeDisList = std::move(foeDisList);
+	Parms.nxtDisList = std::move(nxtDisList);
+	Parms.linkDisScale = linkDisScale;
+	Parms.startPinPos = std::move(startPinPos);
+	Parms.endPinPos = std::move(endPinPos);
+	Parms.accel_ext = std::move(accel_ext);
+	Parms.collisionR = collisionR;
+	Parms.isFirstFrame = isFirstFrame;
+	Parms.volDamping = volDamping;
+	Parms.dt = dt;
+	Parms.playerPos = std::move(playerPos);
+	Parms.bridgeDir = std::move(bridgeDir);
+	Parms.pushStrength = pushStrength;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	posArr = std::move(Parms.posArr);
+	volArr = std::move(Parms.volArr);
+	posArrFoe = std::move(Parms.posArrFoe);
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.PBDChain_MY
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -16460,6 +19732,126 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::PBDChainParallel_MY(TArray<struct F
 	posArr = std::move(Parms.posArr);
 	volArr = std::move(Parms.volArr);
 	posArrFoe = std::move(Parms.posArrFoe);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.PBDQiuQian_Broken
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<struct FParticle_QiuQian>&       particleArr                                            (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// float                                   linkDis                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   startPos                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   endPos                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   accel_ext                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   collisionR                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   groundHeight                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   volDamping                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   dt                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   playerPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             pushStrength                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    isStandOnPlank                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector&                         leftPos                                                (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector&                         rightPos                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector&                         leftNorm                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector&                         rightNorm                                              (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::PBDQiuQian_Broken(TArray<struct FParticle_QiuQian>& particleArr, float linkDis, const struct FVector& startPos, const struct FVector& endPos, const struct FVector& accel_ext, float collisionR, float groundHeight, float volDamping, float dt, const struct FVector& playerPos, const float pushStrength, bool isStandOnPlank, struct FVector& leftPos, struct FVector& rightPos, struct FVector& leftNorm, struct FVector& rightNorm)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "PBDQiuQian_Broken");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_PBDQiuQian_Broken Parms{};
+
+	Parms.particleArr = std::move(particleArr);
+	Parms.linkDis = linkDis;
+	Parms.startPos = std::move(startPos);
+	Parms.endPos = std::move(endPos);
+	Parms.accel_ext = std::move(accel_ext);
+	Parms.collisionR = collisionR;
+	Parms.groundHeight = groundHeight;
+	Parms.volDamping = volDamping;
+	Parms.dt = dt;
+	Parms.playerPos = std::move(playerPos);
+	Parms.pushStrength = pushStrength;
+	Parms.isStandOnPlank = isStandOnPlank;
+	Parms.leftPos = std::move(leftPos);
+	Parms.rightPos = std::move(rightPos);
+	Parms.leftNorm = std::move(leftNorm);
+	Parms.rightNorm = std::move(rightNorm);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	particleArr = std::move(Parms.particleArr);
+	leftPos = std::move(Parms.leftPos);
+	rightPos = std::move(Parms.rightPos);
+	leftNorm = std::move(Parms.leftNorm);
+	rightNorm = std::move(Parms.rightNorm);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.PBDQiuQian_MY
+// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// TArray<struct FParticle_QiuQian>&       particleArr                                            (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// float                                   linkDis                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   startPos                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   endPos                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   accel_ext                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   collisionR                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   volDamping                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   dt                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   playerPos                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             pushStrength                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    isStandOnPlank                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector&                         leftPos                                                (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector&                         rightPos                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector&                         leftNorm                                               (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector&                         rightNorm                                              (Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::PBDQiuQian_MY(TArray<struct FParticle_QiuQian>& particleArr, float linkDis, const struct FVector& startPos, const struct FVector& endPos, const struct FVector& accel_ext, float collisionR, float volDamping, float dt, const struct FVector& playerPos, const float pushStrength, bool isStandOnPlank, struct FVector& leftPos, struct FVector& rightPos, struct FVector& leftNorm, struct FVector& rightNorm)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "PBDQiuQian_MY");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_PBDQiuQian_MY Parms{};
+
+	Parms.particleArr = std::move(particleArr);
+	Parms.linkDis = linkDis;
+	Parms.startPos = std::move(startPos);
+	Parms.endPos = std::move(endPos);
+	Parms.accel_ext = std::move(accel_ext);
+	Parms.collisionR = collisionR;
+	Parms.volDamping = volDamping;
+	Parms.dt = dt;
+	Parms.playerPos = std::move(playerPos);
+	Parms.pushStrength = pushStrength;
+	Parms.isStandOnPlank = isStandOnPlank;
+	Parms.leftPos = std::move(leftPos);
+	Parms.rightPos = std::move(rightPos);
+	Parms.leftNorm = std::move(leftNorm);
+	Parms.rightNorm = std::move(rightNorm);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	particleArr = std::move(Parms.particleArr);
+	leftPos = std::move(Parms.leftPos);
+	rightPos = std::move(Parms.rightPos);
+	leftNorm = std::move(Parms.leftNorm);
+	rightNorm = std::move(Parms.rightNorm);
 }
 
 
@@ -16768,6 +20160,38 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::SetActorUISceneRendering(class AAct
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.SetCharacterFootWP
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USceneComponent*                  CharacterMesh                                          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UKuroRenderingRuntimeBPPluginBPLibrary::SetCharacterFootWP(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, class USceneComponent* CharacterMesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "SetCharacterFootWP");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_SetCharacterFootWP Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.CharacterMesh = CharacterMesh;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -17205,6 +20629,37 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::SetObjectFlags(class UObject* Objec
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.SetOtherCharacterFootWP
+// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialParameterCollection*     Collection                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TArray<class AActor*>&            OtherCharacter                                         (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// const struct FVector&                   CharacterPos                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::SetOtherCharacterFootWP(class UObject* WorldContextObject, class UMaterialParameterCollection* Collection, const TArray<class AActor*>& OtherCharacter, const struct FVector& CharacterPos)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "SetOtherCharacterFootWP");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_SetOtherCharacterFootWP Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+	Parms.OtherCharacter = std::move(OtherCharacter);
+	Parms.CharacterPos = std::move(CharacterPos);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.SetRayTracingEnable
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -17570,6 +21025,35 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::SetWorldPartitionDataLayerState(con
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.SetWorldPartitionDataLayerState2
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             DataLayerName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EDataLayerState                         NewState                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::SetWorldPartitionDataLayerState2(const class UObject* WorldContextObject, class FName DataLayerName, EDataLayerState NewState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "SetWorldPartitionDataLayerState2");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_SetWorldPartitionDataLayerState2 Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.DataLayerName = DataLayerName;
+	Parms.NewState = NewState;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.SetWorldPartitionStreamingEnable
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -17630,6 +21114,37 @@ struct FVector UKuroRenderingRuntimeBPPluginBPLibrary::solve(const struct FVecto
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.SortStaticMeshComponentsByName
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class UStaticMeshComponent*>&    Components                                             (Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// TArray<class UStaticMeshComponent*>*    SortedComponents                                       (Parm, OutParm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::SortStaticMeshComponentsByName(TArray<class UStaticMeshComponent*>& Components, TArray<class UStaticMeshComponent*>* SortedComponents)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "SortStaticMeshComponentsByName");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_SortStaticMeshComponentsByName Parms{};
+
+	Parms.Components = std::move(Components);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Components = std::move(Parms.Components);
+
+	if (SortedComponents != nullptr)
+		*SortedComponents = std::move(Parms.SortedComponents);
 }
 
 
@@ -17731,6 +21246,43 @@ class AActor* UKuroRenderingRuntimeBPPluginBPLibrary::SpawnTransientActor(class 
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.SplineMover
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FMoveData_splineMover>&   MoveStates                                             (Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// class USplineComponent*                 splineComp                                             (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   totalSplineLength                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   moveSpeed                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   deltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Tolerance                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::SplineMover(TArray<struct FMoveData_splineMover>& MoveStates, class USplineComponent* splineComp, float totalSplineLength, float moveSpeed, float deltaSeconds, float Tolerance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "SplineMover");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_SplineMover Parms{};
+
+	Parms.MoveStates = std::move(MoveStates);
+	Parms.splineComp = splineComp;
+	Parms.totalSplineLength = totalSplineLength;
+	Parms.moveSpeed = moveSpeed;
+	Parms.deltaSeconds = deltaSeconds;
+	Parms.Tolerance = Tolerance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	MoveStates = std::move(Parms.MoveStates);
 }
 
 
@@ -17886,6 +21438,39 @@ struct FLinearColor UKuroRenderingRuntimeBPPluginBPLibrary::UnpackVector2DToLine
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.UpdataPlaneList_PBD
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class UStaticMeshComponent*>&    Components                                             (Parm, OutParm, ZeroConstructor, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// TArray<struct FVector>&                 posArr                                                 (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<struct FVector>&                 posArrR                                                (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UKuroRenderingRuntimeBPPluginBPLibrary::UpdataPlaneList_PBD(TArray<class UStaticMeshComponent*>& Components, TArray<struct FVector>& posArr, TArray<struct FVector>& posArrR)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "UpdataPlaneList_PBD");
+
+	Params::KuroRenderingRuntimeBPPluginBPLibrary_UpdataPlaneList_PBD Parms{};
+
+	Parms.Components = std::move(Components);
+	Parms.posArr = std::move(posArr);
+	Parms.posArrR = std::move(posArrR);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	Components = std::move(Parms.Components);
+	posArr = std::move(Parms.posArr);
+	posArrR = std::move(Parms.posArrR);
 }
 
 
@@ -18279,27 +21864,24 @@ void UKuroRenderingRuntimeBPPluginBPLibrary::WpPEnterCaveOrRoom(const class UObj
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetActorLocationNoWorldOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderQualityVolumeManager.IsKuroRenderQualityVolumeEnable
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UKuroRenderingRuntimeBPPluginBPLibrary::GetActorLocationNoWorldOffset(class AActor* Actor)
+bool UKuroRenderQualityVolumeManager::IsKuroRenderQualityVolumeEnable()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetActorLocationNoWorldOffset");
+		Func = StaticClass()->GetFunction("KuroRenderQualityVolumeManager", "IsKuroRenderQualityVolumeEnable");
 
-	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetActorLocationNoWorldOffset Parms{};
-
-	Parms.Actor = Actor;
+	Params::KuroRenderQualityVolumeManager_IsKuroRenderQualityVolumeEnable Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -18307,27 +21889,24 @@ struct FVector UKuroRenderingRuntimeBPPluginBPLibrary::GetActorLocationNoWorldOf
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetActorTransformNoWorldOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderQualityVolumeManager.IsLowMemoryDesktop
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FTransform UKuroRenderingRuntimeBPPluginBPLibrary::GetActorTransformNoWorldOffset(class AActor* Actor)
+bool UKuroRenderQualityVolumeManager::IsLowMemoryDesktop()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetActorTransformNoWorldOffset");
+		Func = StaticClass()->GetFunction("KuroRenderQualityVolumeManager", "IsLowMemoryDesktop");
 
-	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetActorTransformNoWorldOffset Parms{};
-
-	Parms.Actor = Actor;
+	Params::KuroRenderQualityVolumeManager_IsLowMemoryDesktop Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -18335,55 +21914,24 @@ struct FTransform UKuroRenderingRuntimeBPPluginBPLibrary::GetActorTransformNoWor
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetComponentLocationNoWorldOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Function KuroRenderingRuntimeBPPlugin.KuroRenderQualityVolumeManager.IsLowMemoryMobile
+// (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class USceneComponent*                  Component                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UKuroRenderingRuntimeBPPluginBPLibrary::GetComponentLocationNoWorldOffset(class USceneComponent* Component)
+bool UKuroRenderQualityVolumeManager::IsLowMemoryMobile()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetComponentLocationNoWorldOffset");
+		Func = StaticClass()->GetFunction("KuroRenderQualityVolumeManager", "IsLowMemoryMobile");
 
-	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetComponentLocationNoWorldOffset Parms{};
-
-	Parms.Component = Component;
+	Params::KuroRenderQualityVolumeManager_IsLowMemoryMobile Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroRenderingRuntimeBPPlugin.KuroRenderingRuntimeBPPluginBPLibrary.GetComponentToWorldNoWorldOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class USceneComponent*                  Component                                              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FTransform UKuroRenderingRuntimeBPPluginBPLibrary::GetComponentToWorldNoWorldOffset(class USceneComponent* Component)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroRenderingRuntimeBPPluginBPLibrary", "GetComponentToWorldNoWorldOffset");
-
-	Params::KuroRenderingRuntimeBPPluginBPLibrary_GetComponentToWorldNoWorldOffset Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 
@@ -18466,22 +22014,260 @@ void AKuroSceneInteractionActor::OnSetState(EKuroSceneInteractionState TargetSta
 }
 
 
-// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionInfo.OnLevelShown
-// (Final, Native, Private)
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionMatConManager.RemoveMatConData
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int32                                   Uid                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UKuroSceneInteractionInfo::OnLevelShown()
+void UKuroSceneInteractionMatConManager::RemoveMatConData(int32 Uid)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("KuroSceneInteractionInfo", "OnLevelShown");
+		Func = StaticClass()->GetFunction("KuroSceneInteractionMatConManager", "RemoveMatConData");
+
+	Params::KuroSceneInteractionMatConManager_RemoveMatConData Parms{};
+
+	Parms.Uid = Uid;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionMatConManager.RemoveMatConDataWithStaticMesh
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UStaticMeshComponent*             StaticMeshComponent                                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneInteractionMatConManager::RemoveMatConDataWithStaticMesh(class UStaticMeshComponent* StaticMeshComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSceneInteractionMatConManager", "RemoveMatConDataWithStaticMesh");
+
+	Params::KuroSceneInteractionMatConManager_RemoveMatConDataWithStaticMesh Parms{};
+
+	Parms.StaticMeshComponent = StaticMeshComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionMatConManager.SetMatConData
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UKuroSceneInteractionMatConDataCache*DataCache                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneInteractionMatConManager::SetMatConData(class AActor* Actor, class UKuroSceneInteractionMatConDataCache* DataCache)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSceneInteractionMatConManager", "SetMatConData");
+
+	Params::KuroSceneInteractionMatConManager_SetMatConData Parms{};
+
+	Parms.Actor = Actor;
+	Parms.DataCache = DataCache;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.BindActorToLevelSequenceActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                           ActorToBind                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ALevelSequenceActor*              LevelSequenceActor                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    BindingName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneInteractionActorSystem::BindActorToLevelSequenceActor(class AActor* ActorToBind, class ALevelSequenceActor* LevelSequenceActor, const class FString& BindingName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "BindActorToLevelSequenceActor");
+
+	Params::KuroSceneInteractionActorSystem_BindActorToLevelSequenceActor Parms{};
+
+	Parms.ActorToBind = ActorToBind;
+	Parms.LevelSequenceActor = LevelSequenceActor;
+	Parms.BindingName = std::move(BindingName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.CreateSceneInteractionLevel
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// const class FString&                    InLevelName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EKuroSceneInteractionState        InitState                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FVector&                   Location                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FRotator&                  Rotation                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroSceneInteractionActorSystem::CreateSceneInteractionLevel(const class FString& InLevelName, const EKuroSceneInteractionState InitState, const struct FVector& Location, const struct FRotator& Rotation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "CreateSceneInteractionLevel");
+
+	Params::KuroSceneInteractionActorSystem_CreateSceneInteractionLevel Parms{};
+
+	Parms.InLevelName = std::move(InLevelName);
+	Parms.InitState = InitState;
+	Parms.Location = std::move(Location);
+	Parms.Rotation = std::move(Rotation);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.DestroySceneInteractionLevel
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const int32                             HandleId                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroSceneInteractionActorSystem::DestroySceneInteractionLevel(const int32 HandleId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "DestroySceneInteractionLevel");
+
+	Params::KuroSceneInteractionActorSystem_DestroySceneInteractionLevel Parms{};
+
+	Parms.HandleId = HandleId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.GetCurrentState
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const int32                             HandleId                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EKuroSceneInteractionState              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EKuroSceneInteractionState UKuroSceneInteractionActorSystem::GetCurrentState(const int32 HandleId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "GetCurrentState");
+
+	Params::KuroSceneInteractionActorSystem_GetCurrentState Parms{};
+
+	Parms.HandleId = HandleId;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.SetSequenceWithTargetLevelActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class ALevelSequenceActor*              LevelSequenceActor                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class ULevelSequence*                   InSequence                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           TargetLevelActor                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneInteractionActorSystem::SetSequenceWithTargetLevelActor(class ALevelSequenceActor* LevelSequenceActor, class ULevelSequence* InSequence, class AActor* TargetLevelActor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "SetSequenceWithTargetLevelActor");
+
+	Params::KuroSceneInteractionActorSystem_SetSequenceWithTargetLevelActor Parms{};
+
+	Parms.LevelSequenceActor = LevelSequenceActor;
+	Parms.InSequence = InSequence;
+	Parms.TargetLevelActor = TargetLevelActor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneInteractionActorSystem.SwitchToState
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const int32                             HandleId                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EKuroSceneInteractionState        TargetState                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              NeedTransition                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroSceneInteractionActorSystem::SwitchToState(const int32 HandleId, const EKuroSceneInteractionState TargetState, const bool NeedTransition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneInteractionActorSystem", "SwitchToState");
+
+	Params::KuroSceneInteractionActorSystem_SwitchToState Parms{};
+
+	Parms.HandleId = HandleId;
+	Parms.TargetState = TargetState;
+	Parms.NeedTransition = NeedTransition;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -18549,6 +22335,91 @@ void AKuroSceneRainActor::StopRain()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneTransitionComponent.OnSceneTransitionEnd
+// (Event, Public, BlueprintEvent)
+
+void UKuroSceneTransitionComponent::OnSceneTransitionEnd()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneTransitionComponent", "OnSceneTransitionEnd");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneTransitionComponent.OnSceneTransitionRegistered
+// (Event, Public, BlueprintEvent)
+
+void UKuroSceneTransitionComponent::OnSceneTransitionRegistered()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneTransitionComponent", "OnSceneTransitionRegistered");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneTransitionComponent.OnSceneTransitionStart
+// (Event, Public, BlueprintEvent)
+
+void UKuroSceneTransitionComponent::OnSceneTransitionStart()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneTransitionComponent", "OnSceneTransitionStart");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneTransitionComponent.ReregisterSceneTransitionComponent
+// (Final, Native, Public, BlueprintCallable)
+
+void UKuroSceneTransitionComponent::ReregisterSceneTransitionComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneTransitionComponent", "ReregisterSceneTransitionComponent");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSceneTransitionComponent.TickSceneTransition
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TransitionAge                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TransitionNormalizedProgress                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSceneTransitionComponent::TickSceneTransition(float DeltaTime, float TransitionAge, float TransitionNormalizedProgress)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSceneTransitionComponent", "TickSceneTransition");
+
+	Params::KuroSceneTransitionComponent_TickSceneTransition Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+	Parms.TransitionAge = TransitionAge;
+	Parms.TransitionNormalizedProgress = TransitionNormalizedProgress;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -18667,6 +22538,31 @@ void UKuroSequencePerformanceManager::ExecuteCommandInPerformance(const class FS
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.KuroSequencePerformanceManager.GetCurrentFrameTime
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroSequencePerformanceManager::GetCurrentFrameTime()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSequencePerformanceManager", "GetCurrentFrameTime");
+
+	Params::KuroSequencePerformanceManager_GetCurrentFrameTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.KuroSequencePerformanceManager.GetPerformanceMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -18680,6 +22576,31 @@ EKuroPerformanceMode UKuroSequencePerformanceManager::GetPerformanceMode()
 		Func = StaticClass()->GetFunction("KuroSequencePerformanceManager", "GetPerformanceMode");
 
 	Params::KuroSequencePerformanceManager_GetPerformanceMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSequencePerformanceManager.GetShadowUpdateCVar
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroSequencePerformanceManager::GetShadowUpdateCVar()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroSequencePerformanceManager", "GetShadowUpdateCVar");
+
+	Params::KuroSequencePerformanceManager_GetShadowUpdateCVar Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -18877,6 +22798,56 @@ void UKuroSequencePerformanceManager::OpenKuroPerformanceModeInEditor()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSequencePoseComponent.AddSkeletalMeshComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMeshComponent*           InSkeletalMeshComponent                                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroSequencePoseComponent::AddSkeletalMeshComponent(class USkeletalMeshComponent* InSkeletalMeshComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSequencePoseComponent", "AddSkeletalMeshComponent");
+
+	Params::KuroSequencePoseComponent_AddSkeletalMeshComponent Parms{};
+
+	Parms.InSkeletalMeshComponent = InSkeletalMeshComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.KuroSequencePoseComponent.GetCurrentPoseNum
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroSequencePoseComponent::GetCurrentPoseNum() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroSequencePoseComponent", "GetCurrentPoseNum");
+
+	Params::KuroSequencePoseComponent_GetCurrentPoseNum Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -19777,6 +23748,50 @@ void UNiagaraKuroParameterSystem::SetParameterVector(class FName Collection, cla
 }
 
 
+// Function KuroRenderingRuntimeBPPlugin.ThunderGenerator.CalculateThunderPositionAdvanced
+// (Final, Native, Static, Protected, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FTransform&                CameraTransform                                        (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   MinRadius                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxRadius                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   EdgeThickness                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MinVerticalAngle                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   MaxVerticalAngle                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   HorizontalFocusAngle                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   HorizontalFocusStrength                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   RandomSeed                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector AThunderGenerator::CalculateThunderPositionAdvanced(const struct FTransform& CameraTransform, float MinRadius, float MaxRadius, float EdgeThickness, float MinVerticalAngle, float MaxVerticalAngle, float HorizontalFocusAngle, float HorizontalFocusStrength, int32 RandomSeed)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ThunderGenerator", "CalculateThunderPositionAdvanced");
+
+	Params::ThunderGenerator_CalculateThunderPositionAdvanced Parms{};
+
+	Parms.CameraTransform = std::move(CameraTransform);
+	Parms.MinRadius = MinRadius;
+	Parms.MaxRadius = MaxRadius;
+	Parms.EdgeThickness = EdgeThickness;
+	Parms.MinVerticalAngle = MinVerticalAngle;
+	Parms.MaxVerticalAngle = MaxVerticalAngle;
+	Parms.HorizontalFocusAngle = HorizontalFocusAngle;
+	Parms.HorizontalFocusStrength = HorizontalFocusStrength;
+	Parms.RandomSeed = RandomSeed;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroRenderingRuntimeBPPlugin.ThunderGenerator.SpawnThunderInWorld
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -19968,6 +23983,25 @@ void AThunderGenerator::SpawnThunder(const struct FVector& HitLocation, bool bAt
 	Func->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroRenderingRuntimeBPPlugin.ThunderTrigger.TriggerThunderAttack
+// (Final, Native, Public, BlueprintCallable)
+
+void AThunderTrigger::TriggerThunderAttack()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ThunderTrigger", "TriggerThunderAttack");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }

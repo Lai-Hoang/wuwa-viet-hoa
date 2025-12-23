@@ -27,7 +27,8 @@ public:
 	bool                                          击飞;                                              // 0x003B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          击倒;                                              // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          被弹反;                                            // 0x003D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3E[0x2];                                       // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          被破弱;                                            // 0x003E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_3F[0x1];                                       // 0x003F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         策略技Id;                                          // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
@@ -48,6 +49,7 @@ static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 重击) == 0x00003A, "Memb
 static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 击飞) == 0x00003B, "Member 'UBP_SM_ConditionListenBeHit_C::击飞' has a wrong offset!");
 static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 击倒) == 0x00003C, "Member 'UBP_SM_ConditionListenBeHit_C::击倒' has a wrong offset!");
 static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 被弹反) == 0x00003D, "Member 'UBP_SM_ConditionListenBeHit_C::被弹反' has a wrong offset!");
+static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 被破弱) == 0x00003E, "Member 'UBP_SM_ConditionListenBeHit_C::被破弱' has a wrong offset!");
 static_assert(offsetof(UBP_SM_ConditionListenBeHit_C, 策略技Id) == 0x000040, "Member 'UBP_SM_ConditionListenBeHit_C::策略技Id' has a wrong offset!");
 
 }

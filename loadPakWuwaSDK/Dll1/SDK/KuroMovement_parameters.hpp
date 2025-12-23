@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "KuroGameplay_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "KuroMovement_structs.hpp"
 #include "Engine_structs.hpp"
@@ -556,6 +557,53 @@ static_assert(offsetof(KuroMoveTrigger_OnEnterOverlap, OtherComp) == 0x000010, "
 static_assert(offsetof(KuroMoveTrigger_OnEnterOverlap, OtherBodyIndex) == 0x000018, "Member 'KuroMoveTrigger_OnEnterOverlap::OtherBodyIndex' has a wrong offset!");
 static_assert(offsetof(KuroMoveTrigger_OnEnterOverlap, bFromSweep) == 0x00001C, "Member 'KuroMoveTrigger_OnEnterOverlap::bFromSweep' has a wrong offset!");
 static_assert(offsetof(KuroMoveTrigger_OnEnterOverlap, SweepResult) == 0x000020, "Member 'KuroMoveTrigger_OnEnterOverlap::SweepResult' has a wrong offset!");
+
+// Function KuroMovement.KuroMovementBPLibrary.KuroBinarySearchCurve
+// 0x0020 (0x0020 - 0x0000)
+struct KuroMovementBPLibrary_KuroBinarySearchCurve final
+{
+public:
+	class UCurveFloat*                            Curve;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Y;                                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         From;                                              // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         To;                                                // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         tolerance;                                         // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroMovementBPLibrary_KuroBinarySearchCurve) == 0x000008, "Wrong alignment on KuroMovementBPLibrary_KuroBinarySearchCurve");
+static_assert(sizeof(KuroMovementBPLibrary_KuroBinarySearchCurve) == 0x000020, "Wrong size on KuroMovementBPLibrary_KuroBinarySearchCurve");
+static_assert(offsetof(KuroMovementBPLibrary_KuroBinarySearchCurve, Curve) == 0x000000, "Member 'KuroMovementBPLibrary_KuroBinarySearchCurve::Curve' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroBinarySearchCurve, Y) == 0x000008, "Member 'KuroMovementBPLibrary_KuroBinarySearchCurve::Y' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroBinarySearchCurve, From) == 0x00000C, "Member 'KuroMovementBPLibrary_KuroBinarySearchCurve::From' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroBinarySearchCurve, To) == 0x000010, "Member 'KuroMovementBPLibrary_KuroBinarySearchCurve::To' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroBinarySearchCurve, tolerance) == 0x000014, "Member 'KuroMovementBPLibrary_KuroBinarySearchCurve::tolerance' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroBinarySearchCurve, ReturnValue) == 0x000018, "Member 'KuroMovementBPLibrary_KuroBinarySearchCurve::ReturnValue' has a wrong offset!");
+
+// Function KuroMovement.KuroMovementBPLibrary.KuroEaseSpeedTo
+// 0x0030 (0x0030 - 0x0000)
+struct KuroMovementBPLibrary_KuroEaseSpeedTo final
+{
+public:
+	class UPawnMovementComponent*                 PawnMoveComp;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TargetSpeed;                                       // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EKuroEasingFuncType                           EaseType;                                          // 0x000C(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         TransitionTime;                                    // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Exponent;                                          // 0x0014(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 CurvePath;                                         // 0x0018(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C[0x4];                                       // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(KuroMovementBPLibrary_KuroEaseSpeedTo) == 0x000008, "Wrong alignment on KuroMovementBPLibrary_KuroEaseSpeedTo");
+static_assert(sizeof(KuroMovementBPLibrary_KuroEaseSpeedTo) == 0x000030, "Wrong size on KuroMovementBPLibrary_KuroEaseSpeedTo");
+static_assert(offsetof(KuroMovementBPLibrary_KuroEaseSpeedTo, PawnMoveComp) == 0x000000, "Member 'KuroMovementBPLibrary_KuroEaseSpeedTo::PawnMoveComp' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroEaseSpeedTo, TargetSpeed) == 0x000008, "Member 'KuroMovementBPLibrary_KuroEaseSpeedTo::TargetSpeed' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroEaseSpeedTo, EaseType) == 0x00000C, "Member 'KuroMovementBPLibrary_KuroEaseSpeedTo::EaseType' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroEaseSpeedTo, TransitionTime) == 0x000010, "Member 'KuroMovementBPLibrary_KuroEaseSpeedTo::TransitionTime' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroEaseSpeedTo, Exponent) == 0x000014, "Member 'KuroMovementBPLibrary_KuroEaseSpeedTo::Exponent' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroEaseSpeedTo, CurvePath) == 0x000018, "Member 'KuroMovementBPLibrary_KuroEaseSpeedTo::CurvePath' has a wrong offset!");
+static_assert(offsetof(KuroMovementBPLibrary_KuroEaseSpeedTo, ReturnValue) == 0x000028, "Member 'KuroMovementBPLibrary_KuroEaseSpeedTo::ReturnValue' has a wrong offset!");
 
 // Function KuroMovement.KuroMovementBPLibrary.KuroKite
 // 0x0058 (0x0058 - 0x0000)

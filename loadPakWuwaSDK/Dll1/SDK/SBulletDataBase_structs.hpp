@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "EBulletHitDirectionType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EBulletShape_structs.hpp"
-#include "EBulletRelativeDir_structs.hpp"
 #include "EBulletType_structs.hpp"
+#include "EBulletRelativeDir_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK

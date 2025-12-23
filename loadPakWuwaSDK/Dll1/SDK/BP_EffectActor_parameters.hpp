@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
+#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "SEffectFloatParameter_structs.hpp"
 #include "Engine_structs.hpp"
-#include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 
 
 namespace SDK::Params
@@ -219,8 +219,9 @@ public:
 	class FString                                 CallFunc_BreakSoftObjectPath_PathString;           // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsEmpty_ReturnValue;                      // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_99[0x3];                                       // 0x0099(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_SpawnEffect_ReturnValue;                  // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_SpawnEffectWithActor_ReturnValue;         // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SpawnEffectUI_ReturnValue;                // 0x009C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SpawnEffect_ReturnValue;                  // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_SpawnEffectWithActor_ReturnValue;         // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_EffectActor_C_Play) == 0x000010, "Wrong alignment on BP_EffectActor_C_Play");
 static_assert(sizeof(BP_EffectActor_C_Play) == 0x0000B0, "Wrong size on BP_EffectActor_C_Play");
@@ -241,8 +242,9 @@ static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_EffectHandleIsValid_Retur
 static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_GetOuterObject_ReturnValue_1) == 0x000080, "Member 'BP_EffectActor_C_Play::CallFunc_GetOuterObject_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_BreakSoftObjectPath_PathString) == 0x000088, "Member 'BP_EffectActor_C_Play::CallFunc_BreakSoftObjectPath_PathString' has a wrong offset!");
 static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_IsEmpty_ReturnValue) == 0x000098, "Member 'BP_EffectActor_C_Play::CallFunc_IsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_SpawnEffect_ReturnValue) == 0x00009C, "Member 'BP_EffectActor_C_Play::CallFunc_SpawnEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_SpawnEffectWithActor_ReturnValue) == 0x0000A0, "Member 'BP_EffectActor_C_Play::CallFunc_SpawnEffectWithActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_SpawnEffectUI_ReturnValue) == 0x00009C, "Member 'BP_EffectActor_C_Play::CallFunc_SpawnEffectUI_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_SpawnEffect_ReturnValue) == 0x0000A0, "Member 'BP_EffectActor_C_Play::CallFunc_SpawnEffect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EffectActor_C_Play, CallFunc_SpawnEffectWithActor_ReturnValue) == 0x0000A4, "Member 'BP_EffectActor_C_Play::CallFunc_SpawnEffectWithActor_ReturnValue' has a wrong offset!");
 
 // Function BP_EffectActor.BP_EffectActor_C.PlayEffect
 // 0x0018 (0x0018 - 0x0000)
@@ -271,6 +273,17 @@ static_assert(alignof(BP_EffectActor_C_StopEffect) == 0x000001, "Wrong alignment
 static_assert(sizeof(BP_EffectActor_C_StopEffect) == 0x000001, "Wrong size on BP_EffectActor_C_StopEffect");
 static_assert(offsetof(BP_EffectActor_C_StopEffect, CallFunc_Stop_ReturnValue) == 0x000000, "Member 'BP_EffectActor_C_StopEffect::CallFunc_Stop_ReturnValue' has a wrong offset!");
 
+// Function BP_EffectActor.BP_EffectActor_C.AfterSpawnEffect
+// 0x0004 (0x0004 - 0x0000)
+struct BP_EffectActor_C_AfterSpawnEffect final
+{
+public:
+	int32                                         EffectHandle;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_EffectActor_C_AfterSpawnEffect) == 0x000004, "Wrong alignment on BP_EffectActor_C_AfterSpawnEffect");
+static_assert(sizeof(BP_EffectActor_C_AfterSpawnEffect) == 0x000004, "Wrong size on BP_EffectActor_C_AfterSpawnEffect");
+static_assert(offsetof(BP_EffectActor_C_AfterSpawnEffect, EffectHandle) == 0x000000, "Member 'BP_EffectActor_C_AfterSpawnEffect::EffectHandle' has a wrong offset!");
+
 // Function BP_EffectActor.BP_EffectActor_C.GetHandle
 // 0x0008 (0x0008 - 0x0000)
 struct BP_EffectActor_C_GetHandle final
@@ -283,6 +296,26 @@ static_assert(alignof(BP_EffectActor_C_GetHandle) == 0x000004, "Wrong alignment 
 static_assert(sizeof(BP_EffectActor_C_GetHandle) == 0x000008, "Wrong size on BP_EffectActor_C_GetHandle");
 static_assert(offsetof(BP_EffectActor_C_GetHandle, Handle) == 0x000000, "Member 'BP_EffectActor_C_GetHandle::Handle' has a wrong offset!");
 static_assert(offsetof(BP_EffectActor_C_GetHandle, CallFunc_EffectHandleIsValid_ReturnValue) == 0x000004, "Member 'BP_EffectActor_C_GetHandle::CallFunc_EffectHandleIsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_EffectActor.BP_EffectActor_C.GetStreamingBoundsEx
+// 0x00C0 (0x00C0 - 0x0000)
+struct BP_EffectActor_C_GetStreamingBoundsEx final
+{
+public:
+	struct FBox                                   ReturnValue;                                       // 0x0000(0x001C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransformDouble                       CallFunc_D_GetTransform_ReturnValue;               // 0x0020(0x0040)(IsPlainOldData, NoDestructor)
+	class FString                                 CallFunc_BreakSoftObjectPath_PathString;           // 0x0060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FTransform                             CallFunc_Conv_TransformDoubleToTransform_ReturnValue; // 0x0070(0x0030)(IsPlainOldData, NoDestructor)
+	struct FBox                                   CallFunc_CalcEffectModelBounds_ReturnValue;        // 0x00A0(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor)
+};
+static_assert(alignof(BP_EffectActor_C_GetStreamingBoundsEx) == 0x000010, "Wrong alignment on BP_EffectActor_C_GetStreamingBoundsEx");
+static_assert(sizeof(BP_EffectActor_C_GetStreamingBoundsEx) == 0x0000C0, "Wrong size on BP_EffectActor_C_GetStreamingBoundsEx");
+static_assert(offsetof(BP_EffectActor_C_GetStreamingBoundsEx, ReturnValue) == 0x000000, "Member 'BP_EffectActor_C_GetStreamingBoundsEx::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EffectActor_C_GetStreamingBoundsEx, CallFunc_D_GetTransform_ReturnValue) == 0x000020, "Member 'BP_EffectActor_C_GetStreamingBoundsEx::CallFunc_D_GetTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EffectActor_C_GetStreamingBoundsEx, CallFunc_BreakSoftObjectPath_PathString) == 0x000060, "Member 'BP_EffectActor_C_GetStreamingBoundsEx::CallFunc_BreakSoftObjectPath_PathString' has a wrong offset!");
+static_assert(offsetof(BP_EffectActor_C_GetStreamingBoundsEx, CallFunc_Conv_TransformDoubleToTransform_ReturnValue) == 0x000070, "Member 'BP_EffectActor_C_GetStreamingBoundsEx::CallFunc_Conv_TransformDoubleToTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_EffectActor_C_GetStreamingBoundsEx, CallFunc_CalcEffectModelBounds_ReturnValue) == 0x0000A0, "Member 'BP_EffectActor_C_GetStreamingBoundsEx::CallFunc_CalcEffectModelBounds_ReturnValue' has a wrong offset!");
 
 }
 

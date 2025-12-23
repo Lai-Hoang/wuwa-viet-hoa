@@ -18,51 +18,6 @@
 namespace SDK
 {
 
-// Class LiveLinkInterface.LiveLinkSourceSettings
-// 0x0078 (0x00A8 - 0x0030)
-class ULiveLinkSourceSettings : public UObject
-{
-public:
-	ELiveLinkSourceMode                           Mode;                                              // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLiveLinkSourceBufferManagementSettings BufferSettings;                                   // 0x0038(0x0058)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class FString                                 ConnectionString;                                  // 0x0090(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class ULiveLinkSourceFactory>     Factory;                                           // 0x00A0(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LiveLinkSourceSettings">();
-	}
-	static class ULiveLinkSourceSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkSourceSettings>();
-	}
-};
-static_assert(alignof(ULiveLinkSourceSettings) == 0x000008, "Wrong alignment on ULiveLinkSourceSettings");
-static_assert(sizeof(ULiveLinkSourceSettings) == 0x0000A8, "Wrong size on ULiveLinkSourceSettings");
-static_assert(offsetof(ULiveLinkSourceSettings, Mode) == 0x000030, "Member 'ULiveLinkSourceSettings::Mode' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, BufferSettings) == 0x000038, "Member 'ULiveLinkSourceSettings::BufferSettings' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, ConnectionString) == 0x000090, "Member 'ULiveLinkSourceSettings::ConnectionString' has a wrong offset!");
-static_assert(offsetof(ULiveLinkSourceSettings, Factory) == 0x0000A0, "Member 'ULiveLinkSourceSettings::Factory' has a wrong offset!");
-
-// Class LiveLinkInterface.LiveLinkSourceFactory
-// 0x0000 (0x0030 - 0x0030)
-class ULiveLinkSourceFactory : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LiveLinkSourceFactory">();
-	}
-	static class ULiveLinkSourceFactory* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULiveLinkSourceFactory>();
-	}
-};
-static_assert(alignof(ULiveLinkSourceFactory) == 0x000008, "Wrong alignment on ULiveLinkSourceFactory");
-static_assert(sizeof(ULiveLinkSourceFactory) == 0x000030, "Wrong size on ULiveLinkSourceFactory");
-
 // Class LiveLinkInterface.LiveLinkRole
 // 0x0000 (0x0030 - 0x0030)
 class ULiveLinkRole : public UObject
@@ -164,6 +119,34 @@ public:
 };
 static_assert(alignof(ULiveLinkController) == 0x000008, "Wrong alignment on ULiveLinkController");
 static_assert(sizeof(ULiveLinkController) == 0x000030, "Wrong size on ULiveLinkController");
+
+// Class LiveLinkInterface.LiveLinkSourceSettings
+// 0x0078 (0x00A8 - 0x0030)
+class ULiveLinkSourceSettings : public UObject
+{
+public:
+	ELiveLinkSourceMode                           Mode;                                              // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x7];                                       // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLiveLinkSourceBufferManagementSettings BufferSettings;                                   // 0x0038(0x0058)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class FString                                 ConnectionString;                                  // 0x0090(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class ULiveLinkSourceFactory>     Factory;                                           // 0x00A0(0x0008)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AdvancedDisplay, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkSourceSettings">();
+	}
+	static class ULiveLinkSourceSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkSourceSettings>();
+	}
+};
+static_assert(alignof(ULiveLinkSourceSettings) == 0x000008, "Wrong alignment on ULiveLinkSourceSettings");
+static_assert(sizeof(ULiveLinkSourceSettings) == 0x0000A8, "Wrong size on ULiveLinkSourceSettings");
+static_assert(offsetof(ULiveLinkSourceSettings, Mode) == 0x000030, "Member 'ULiveLinkSourceSettings::Mode' has a wrong offset!");
+static_assert(offsetof(ULiveLinkSourceSettings, BufferSettings) == 0x000038, "Member 'ULiveLinkSourceSettings::BufferSettings' has a wrong offset!");
+static_assert(offsetof(ULiveLinkSourceSettings, ConnectionString) == 0x000090, "Member 'ULiveLinkSourceSettings::ConnectionString' has a wrong offset!");
+static_assert(offsetof(ULiveLinkSourceSettings, Factory) == 0x0000A0, "Member 'ULiveLinkSourceSettings::Factory' has a wrong offset!");
 
 // Class LiveLinkInterface.LiveLinkCurveRemapSettings
 // 0x0050 (0x00F8 - 0x00A8)
@@ -270,6 +253,23 @@ public:
 };
 static_assert(alignof(ULiveLinkMeshRole) == 0x000008, "Wrong alignment on ULiveLinkMeshRole");
 static_assert(sizeof(ULiveLinkMeshRole) == 0x000030, "Wrong size on ULiveLinkMeshRole");
+
+// Class LiveLinkInterface.LiveLinkSourceFactory
+// 0x0000 (0x0030 - 0x0030)
+class ULiveLinkSourceFactory final : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LiveLinkSourceFactory">();
+	}
+	static class ULiveLinkSourceFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULiveLinkSourceFactory>();
+	}
+};
+static_assert(alignof(ULiveLinkSourceFactory) == 0x000008, "Wrong alignment on ULiveLinkSourceFactory");
+static_assert(sizeof(ULiveLinkSourceFactory) == 0x000030, "Wrong size on ULiveLinkSourceFactory");
 
 // Class LiveLinkInterface.LiveLinkSubjectSettings
 // 0x0040 (0x0070 - 0x0030)

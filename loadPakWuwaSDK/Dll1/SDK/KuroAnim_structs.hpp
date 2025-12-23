@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 
 
 namespace SDK
@@ -68,6 +68,18 @@ enum class EAdjustCapsuleType : uint8
 	ThreeDimension                           = 1,
 	AlwaysVertical                           = 2,
 	EAdjustCapsuleType_MAX                   = 3,
+};
+
+// Enum KuroAnim.EIKPartType
+// NumValues: 0x0006
+enum class EIKPartType : uint8
+{
+	None                                     = 0,
+	LeftLeg                                  = 1,
+	RightLeg                                 = 2,
+	LeftArm                                  = 3,
+	RightArm                                 = 4,
+	EIKPartType_MAX                          = 5,
 };
 
 // Enum KuroAnim.EStandTurnType
@@ -161,14 +173,28 @@ enum class EClimbStateType : uint8
 	EClimbStateType_MAX                      = 4,
 };
 
+// Enum KuroAnim.ESwingStateType
+// NumValues: 0x0006
+enum class ESwingStateType : uint8
+{
+	None                                     = 0,
+	EnterSwing                               = 1,
+	LoopSwing                                = 2,
+	LeftLoopSwing                            = 3,
+	ExitSwing                                = 4,
+	ESwingStateType_MAX                      = 5,
+};
+
 // Enum KuroAnim.ECharViewDirectionStateType
-// NumValues: 0x0004
+// NumValues: 0x0006
 enum class ECharViewDirectionStateType : uint8
 {
 	LockDirection                            = 0,
 	AimDirection                             = 1,
 	FaceDirection                            = 2,
-	ECharViewDirectionStateType_MAX          = 3,
+	LookAtDirection                          = 3,
+	CameraDirection                          = 4,
+	ECharViewDirectionStateType_MAX          = 5,
 };
 
 // Enum KuroAnim.ECharMoveStateType
@@ -276,14 +302,15 @@ enum class EKuroAnimIKMode : uint8
 };
 
 // Enum KuroAnim.KuroHumanIKMode
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class EKuroHumanIKMode : uint8
 {
 	None                                     = 0,
 	GroundMode                               = 1,
 	ClimbMode                                = 2,
 	SlideMode                                = 3,
-	KuroHumanIKMode_MAX                      = 4,
+	RideMode                                 = 4,
+	KuroHumanIKMode_MAX                      = 5,
 };
 
 // ScriptStruct KuroAnim.BoneBlock
@@ -497,14 +524,20 @@ static_assert(offsetof(FAnimNode_CombineCurves, CleanAlphaCurveName) == 0x000038
 static_assert(offsetof(FAnimNode_CombineCurves, CleanCurves) == 0x000048, "Member 'FAnimNode_CombineCurves::CleanCurves' has a wrong offset!");
 
 // ScriptStruct KuroAnim.AnimNode_ExtraFollowAnims
-// 0x0A40 (0x0A50 - 0x0010)
+// 0x0D50 (0x0D60 - 0x0010)
 struct alignas(0x10) FAnimNode_ExtraFollowAnims final : public FAnimNode_Base
 {
 public:
-	uint8                                         Pad_10[0xA40];                                     // 0x0010(0x0A40)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FName                                   DefaultSequenceName;                               // 0x0010(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InternalTimeAccumulator;                           // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseAllAnims;                                      // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_21[0xD3F];                                     // 0x0021(0x0D3F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimNode_ExtraFollowAnims) == 0x000010, "Wrong alignment on FAnimNode_ExtraFollowAnims");
-static_assert(sizeof(FAnimNode_ExtraFollowAnims) == 0x000A50, "Wrong size on FAnimNode_ExtraFollowAnims");
+static_assert(sizeof(FAnimNode_ExtraFollowAnims) == 0x000D60, "Wrong size on FAnimNode_ExtraFollowAnims");
+static_assert(offsetof(FAnimNode_ExtraFollowAnims, DefaultSequenceName) == 0x000010, "Member 'FAnimNode_ExtraFollowAnims::DefaultSequenceName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ExtraFollowAnims, InternalTimeAccumulator) == 0x00001C, "Member 'FAnimNode_ExtraFollowAnims::InternalTimeAccumulator' has a wrong offset!");
+static_assert(offsetof(FAnimNode_ExtraFollowAnims, bUseAllAnims) == 0x000020, "Member 'FAnimNode_ExtraFollowAnims::bUseAllAnims' has a wrong offset!");
 
 // ScriptStruct KuroAnim.AnimNode_FeedbackRotate
 // 0x0238 (0x0320 - 0x00E8)
@@ -603,58 +636,79 @@ static_assert(offsetof(FAnimNode_HumanTwoBoneIK, EndBoneTargetRotation) == 0x000
 static_assert(offsetof(FAnimNode_HumanTwoBoneIK, EndBoneLimit) == 0x000170, "Member 'FAnimNode_HumanTwoBoneIK::EndBoneLimit' has a wrong offset!");
 
 // ScriptStruct KuroAnim.AnimNode_KuroCacheBones
-// 0x0068 (0x0150 - 0x00E8)
+// 0x0060 (0x0148 - 0x00E8)
 struct FAnimNode_KuroCacheBones final : public FAnimNode_SkeletalControlBase
 {
 public:
 	TArray<class FName>                           BoneNames;                                         // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bCacheBones;                                       // 0x00F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_F9[0x57];                                      // 0x00F9(0x0057)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_F8[0x50];                                      // 0x00F8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimNode_KuroCacheBones) == 0x000008, "Wrong alignment on FAnimNode_KuroCacheBones");
-static_assert(sizeof(FAnimNode_KuroCacheBones) == 0x000150, "Wrong size on FAnimNode_KuroCacheBones");
+static_assert(sizeof(FAnimNode_KuroCacheBones) == 0x000148, "Wrong size on FAnimNode_KuroCacheBones");
 static_assert(offsetof(FAnimNode_KuroCacheBones, BoneNames) == 0x0000E8, "Member 'FAnimNode_KuroCacheBones::BoneNames' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroCacheBones, bCacheBones) == 0x0000F8, "Member 'FAnimNode_KuroCacheBones::bCacheBones' has a wrong offset!");
 
 // ScriptStruct KuroAnim.KuroHumanIKPart
-// 0x0080 (0x0080 - 0x0000)
+// 0x0098 (0x0098 - 0x0000)
 struct FKuroHumanIKPart final
 {
 public:
-	struct FBoneReference                         IKBone;                                            // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bUseCurve;                                         // 0x0014(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15[0x3];                                       // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   BaseAngleCurveName;                                // 0x0018(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24[0x4];                                       // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 LocationCurveName;                                 // 0x0028(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   AlphaCurveName;                                    // 0x0038(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   LandingTimeCurveName;                              // 0x0044(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CenterOffset;                                      // 0x0050(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxIkDist;                                         // 0x0054(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LowerLimits[0x2];                                  // 0x0058(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EndBoneLimits[0x6];                                // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EndBoneIKMode                                 EndBoneIKMode;                                     // 0x0078(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDebugPrint;                                       // 0x0079(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_7A[0x6];                                       // 0x007A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	EIKPartType                                   PartType;                                          // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1[0x3];                                        // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBoneReference                         IKBone;                                            // 0x0004(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBoneReference                         TipBone;                                           // 0x0018(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         TipEndOffset;                                      // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCurve;                                         // 0x0030(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31[0x3];                                       // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   BaseAngleCurveName;                                // 0x0034(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 LocationCurveName;                                 // 0x0040(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   AlphaCurveName;                                    // 0x0050(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   LandingTimeCurveName;                              // 0x005C(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxIkDist;                                         // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LowerLimits[0x2];                                  // 0x006C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EndBoneLimits[0x6];                                // 0x0074(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TipAngleLimit[0x2];                                // 0x008C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EndBoneIKMode                                 EndBoneIKMode;                                     // 0x0094(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugPrint;                                       // 0x0095(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_96[0x2];                                       // 0x0096(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FKuroHumanIKPart) == 0x000008, "Wrong alignment on FKuroHumanIKPart");
-static_assert(sizeof(FKuroHumanIKPart) == 0x000080, "Wrong size on FKuroHumanIKPart");
-static_assert(offsetof(FKuroHumanIKPart, IKBone) == 0x000000, "Member 'FKuroHumanIKPart::IKBone' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, bUseCurve) == 0x000014, "Member 'FKuroHumanIKPart::bUseCurve' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, BaseAngleCurveName) == 0x000018, "Member 'FKuroHumanIKPart::BaseAngleCurveName' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, LocationCurveName) == 0x000028, "Member 'FKuroHumanIKPart::LocationCurveName' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, AlphaCurveName) == 0x000038, "Member 'FKuroHumanIKPart::AlphaCurveName' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, LandingTimeCurveName) == 0x000044, "Member 'FKuroHumanIKPart::LandingTimeCurveName' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, CenterOffset) == 0x000050, "Member 'FKuroHumanIKPart::CenterOffset' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, MaxIkDist) == 0x000054, "Member 'FKuroHumanIKPart::MaxIkDist' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, LowerLimits) == 0x000058, "Member 'FKuroHumanIKPart::LowerLimits' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, EndBoneLimits) == 0x000060, "Member 'FKuroHumanIKPart::EndBoneLimits' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, EndBoneIKMode) == 0x000078, "Member 'FKuroHumanIKPart::EndBoneIKMode' has a wrong offset!");
-static_assert(offsetof(FKuroHumanIKPart, bDebugPrint) == 0x000079, "Member 'FKuroHumanIKPart::bDebugPrint' has a wrong offset!");
+static_assert(sizeof(FKuroHumanIKPart) == 0x000098, "Wrong size on FKuroHumanIKPart");
+static_assert(offsetof(FKuroHumanIKPart, PartType) == 0x000000, "Member 'FKuroHumanIKPart::PartType' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, IKBone) == 0x000004, "Member 'FKuroHumanIKPart::IKBone' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, TipBone) == 0x000018, "Member 'FKuroHumanIKPart::TipBone' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, TipEndOffset) == 0x00002C, "Member 'FKuroHumanIKPart::TipEndOffset' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, bUseCurve) == 0x000030, "Member 'FKuroHumanIKPart::bUseCurve' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, BaseAngleCurveName) == 0x000034, "Member 'FKuroHumanIKPart::BaseAngleCurveName' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, LocationCurveName) == 0x000040, "Member 'FKuroHumanIKPart::LocationCurveName' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, AlphaCurveName) == 0x000050, "Member 'FKuroHumanIKPart::AlphaCurveName' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, LandingTimeCurveName) == 0x00005C, "Member 'FKuroHumanIKPart::LandingTimeCurveName' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, MaxIkDist) == 0x000068, "Member 'FKuroHumanIKPart::MaxIkDist' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, LowerLimits) == 0x00006C, "Member 'FKuroHumanIKPart::LowerLimits' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, EndBoneLimits) == 0x000074, "Member 'FKuroHumanIKPart::EndBoneLimits' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, TipAngleLimit) == 0x00008C, "Member 'FKuroHumanIKPart::TipAngleLimit' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, EndBoneIKMode) == 0x000094, "Member 'FKuroHumanIKPart::EndBoneIKMode' has a wrong offset!");
+static_assert(offsetof(FKuroHumanIKPart, bDebugPrint) == 0x000095, "Member 'FKuroHumanIKPart::bDebugPrint' has a wrong offset!");
+
+// ScriptStruct KuroAnim.IKTarget
+// 0x0030 (0x0030 - 0x0000)
+struct FIKTarget final
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x000C)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  Rotation;                                          // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         Alpha;                                             // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_24[0xC];                                       // 0x0024(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FIKTarget) == 0x000010, "Wrong alignment on FIKTarget");
+static_assert(sizeof(FIKTarget) == 0x000030, "Wrong size on FIKTarget");
+static_assert(offsetof(FIKTarget, Location) == 0x000000, "Member 'FIKTarget::Location' has a wrong offset!");
+static_assert(offsetof(FIKTarget, Rotation) == 0x000010, "Member 'FIKTarget::Rotation' has a wrong offset!");
+static_assert(offsetof(FIKTarget, Alpha) == 0x000020, "Member 'FIKTarget::Alpha' has a wrong offset!");
 
 // ScriptStruct KuroAnim.AnimNode_KuroHumanIK
-// 0x0168 (0x0250 - 0x00E8)
-struct alignas(0x10) FAnimNode_KuroHumanIK final : public FAnimNode_SkeletalControlBase
+// 0x0208 (0x02F0 - 0x00E8)
+struct FAnimNode_KuroHumanIK final : public FAnimNode_SkeletalControlBase
 {
 public:
 	TArray<struct FKuroHumanIKPart>               FootParts;                                         // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -670,27 +724,36 @@ public:
 	bool                                          bNoLerp;                                           // 0x0119(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         Pad_11A[0x2];                                      // 0x011A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         RootLerpSpeed;                                     // 0x011C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PartLerpSpeed;                                     // 0x0120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GroundDepth;                                       // 0x0124(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaxIKFootDetectDepth;                              // 0x0128(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MovingSpeed;                                       // 0x012C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                MovingVelocity;                                    // 0x0130(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WalkRunMix;                                        // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DegMovementSlop;                                   // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ClimbRadius;                                       // 0x0144(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                SlideForward;                                      // 0x0148(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SlideRadius;                                       // 0x0154(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bStandSlide;                                       // 0x0158(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_159[0x3];                                      // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         PredictStrength;                                   // 0x015C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         PredictIterateMaxOffset;                           // 0x0160(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PredictIterateMaxCount;                            // 0x0164(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PredictDisableAccel;                               // 0x0168(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDrawDebug;                                        // 0x016C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16D[0xE3];                                     // 0x016D(0x00E3)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         FootLerpSpeed;                                     // 0x0120(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HandLerpSpeed;                                     // 0x0124(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         HandTurnSpeed;                                     // 0x0128(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GroundDepth;                                       // 0x012C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxIKFootDetectDepth;                              // 0x0130(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MovingSpeed;                                       // 0x0134(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                MovingVelocity;                                    // 0x0138(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WalkRunMix;                                        // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DegMovementSlop;                                   // 0x0148(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ClimbRadius;                                       // 0x014C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SlideForward;                                      // 0x0150(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SlideRadius;                                       // 0x015C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStandSlide;                                       // 0x0160(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_161[0x3];                                      // 0x0161(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PredictStrength;                                   // 0x0164(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseComplexPrediction;                             // 0x0168(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_169[0x3];                                      // 0x0169(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PredictIterateMaxCount;                            // 0x016C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PredictInvalidDistance;                            // 0x0170(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PredictDisableAccel;                               // 0x0174(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         StepLockLandingTimeRatio;                          // 0x0178(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PredictIterateOffset;                              // 0x017C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                DefaultTipOffsetAtLand;                            // 0x0180(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18C[0x4];                                      // 0x018C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FIKTarget                              LeftHandTargetCS;                                  // 0x0190(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	struct FIKTarget                              RightHandTargetCS;                                 // 0x01C0(0x0030)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1F0[0x100];                                    // 0x01F0(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimNode_KuroHumanIK) == 0x000010, "Wrong alignment on FAnimNode_KuroHumanIK");
-static_assert(sizeof(FAnimNode_KuroHumanIK) == 0x000250, "Wrong size on FAnimNode_KuroHumanIK");
+static_assert(sizeof(FAnimNode_KuroHumanIK) == 0x0002F0, "Wrong size on FAnimNode_KuroHumanIK");
 static_assert(offsetof(FAnimNode_KuroHumanIK, FootParts) == 0x0000E8, "Member 'FAnimNode_KuroHumanIK::FootParts' has a wrong offset!");
 static_assert(offsetof(FAnimNode_KuroHumanIK, HandParts) == 0x0000F8, "Member 'FAnimNode_KuroHumanIK::HandParts' has a wrong offset!");
 static_assert(offsetof(FAnimNode_KuroHumanIK, Mode) == 0x000108, "Member 'FAnimNode_KuroHumanIK::Mode' has a wrong offset!");
@@ -701,22 +764,90 @@ static_assert(offsetof(FAnimNode_KuroHumanIK, DeltaSeconds) == 0x000114, "Member
 static_assert(offsetof(FAnimNode_KuroHumanIK, bForbiddenCurvePosition) == 0x000118, "Member 'FAnimNode_KuroHumanIK::bForbiddenCurvePosition' has a wrong offset!");
 static_assert(offsetof(FAnimNode_KuroHumanIK, bNoLerp) == 0x000119, "Member 'FAnimNode_KuroHumanIK::bNoLerp' has a wrong offset!");
 static_assert(offsetof(FAnimNode_KuroHumanIK, RootLerpSpeed) == 0x00011C, "Member 'FAnimNode_KuroHumanIK::RootLerpSpeed' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, PartLerpSpeed) == 0x000120, "Member 'FAnimNode_KuroHumanIK::PartLerpSpeed' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, GroundDepth) == 0x000124, "Member 'FAnimNode_KuroHumanIK::GroundDepth' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, MaxIKFootDetectDepth) == 0x000128, "Member 'FAnimNode_KuroHumanIK::MaxIKFootDetectDepth' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, MovingSpeed) == 0x00012C, "Member 'FAnimNode_KuroHumanIK::MovingSpeed' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, MovingVelocity) == 0x000130, "Member 'FAnimNode_KuroHumanIK::MovingVelocity' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, WalkRunMix) == 0x00013C, "Member 'FAnimNode_KuroHumanIK::WalkRunMix' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, DegMovementSlop) == 0x000140, "Member 'FAnimNode_KuroHumanIK::DegMovementSlop' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, ClimbRadius) == 0x000144, "Member 'FAnimNode_KuroHumanIK::ClimbRadius' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, SlideForward) == 0x000148, "Member 'FAnimNode_KuroHumanIK::SlideForward' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, SlideRadius) == 0x000154, "Member 'FAnimNode_KuroHumanIK::SlideRadius' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, bStandSlide) == 0x000158, "Member 'FAnimNode_KuroHumanIK::bStandSlide' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, PredictStrength) == 0x00015C, "Member 'FAnimNode_KuroHumanIK::PredictStrength' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, PredictIterateMaxOffset) == 0x000160, "Member 'FAnimNode_KuroHumanIK::PredictIterateMaxOffset' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, PredictIterateMaxCount) == 0x000164, "Member 'FAnimNode_KuroHumanIK::PredictIterateMaxCount' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, PredictDisableAccel) == 0x000168, "Member 'FAnimNode_KuroHumanIK::PredictDisableAccel' has a wrong offset!");
-static_assert(offsetof(FAnimNode_KuroHumanIK, bDrawDebug) == 0x00016C, "Member 'FAnimNode_KuroHumanIK::bDrawDebug' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, FootLerpSpeed) == 0x000120, "Member 'FAnimNode_KuroHumanIK::FootLerpSpeed' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, HandLerpSpeed) == 0x000124, "Member 'FAnimNode_KuroHumanIK::HandLerpSpeed' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, HandTurnSpeed) == 0x000128, "Member 'FAnimNode_KuroHumanIK::HandTurnSpeed' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, GroundDepth) == 0x00012C, "Member 'FAnimNode_KuroHumanIK::GroundDepth' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, MaxIKFootDetectDepth) == 0x000130, "Member 'FAnimNode_KuroHumanIK::MaxIKFootDetectDepth' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, MovingSpeed) == 0x000134, "Member 'FAnimNode_KuroHumanIK::MovingSpeed' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, MovingVelocity) == 0x000138, "Member 'FAnimNode_KuroHumanIK::MovingVelocity' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, WalkRunMix) == 0x000144, "Member 'FAnimNode_KuroHumanIK::WalkRunMix' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, DegMovementSlop) == 0x000148, "Member 'FAnimNode_KuroHumanIK::DegMovementSlop' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, ClimbRadius) == 0x00014C, "Member 'FAnimNode_KuroHumanIK::ClimbRadius' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, SlideForward) == 0x000150, "Member 'FAnimNode_KuroHumanIK::SlideForward' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, SlideRadius) == 0x00015C, "Member 'FAnimNode_KuroHumanIK::SlideRadius' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, bStandSlide) == 0x000160, "Member 'FAnimNode_KuroHumanIK::bStandSlide' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, PredictStrength) == 0x000164, "Member 'FAnimNode_KuroHumanIK::PredictStrength' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, bUseComplexPrediction) == 0x000168, "Member 'FAnimNode_KuroHumanIK::bUseComplexPrediction' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, PredictIterateMaxCount) == 0x00016C, "Member 'FAnimNode_KuroHumanIK::PredictIterateMaxCount' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, PredictInvalidDistance) == 0x000170, "Member 'FAnimNode_KuroHumanIK::PredictInvalidDistance' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, PredictDisableAccel) == 0x000174, "Member 'FAnimNode_KuroHumanIK::PredictDisableAccel' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, StepLockLandingTimeRatio) == 0x000178, "Member 'FAnimNode_KuroHumanIK::StepLockLandingTimeRatio' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, PredictIterateOffset) == 0x00017C, "Member 'FAnimNode_KuroHumanIK::PredictIterateOffset' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, DefaultTipOffsetAtLand) == 0x000180, "Member 'FAnimNode_KuroHumanIK::DefaultTipOffsetAtLand' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, LeftHandTargetCS) == 0x000190, "Member 'FAnimNode_KuroHumanIK::LeftHandTargetCS' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroHumanIK, RightHandTargetCS) == 0x0001C0, "Member 'FAnimNode_KuroHumanIK::RightHandTargetCS' has a wrong offset!");
+
+// ScriptStruct KuroAnim.AnimNode_KuroModifyBones
+// 0x00A8 (0x0190 - 0x00E8)
+struct FAnimNode_KuroModifyBones final : public FAnimNode_SkeletalControlBase
+{
+public:
+	TMap<class FName, struct FTransform>          BoneTransformsMap;                                 // 0x00E8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EBoneModificationMode                         TranslationMode;                                   // 0x0138(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBoneModificationMode                         RotationMode;                                      // 0x0139(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBoneModificationMode                         ScaleMode;                                         // 0x013A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBoneControlSpace                             TranslationSpace;                                  // 0x013B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBoneControlSpace                             RotationSpace;                                     // 0x013C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EBoneControlSpace                             ScaleSpace;                                        // 0x013D(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_13E[0x52];                                     // 0x013E(0x0052)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAnimNode_KuroModifyBones) == 0x000008, "Wrong alignment on FAnimNode_KuroModifyBones");
+static_assert(sizeof(FAnimNode_KuroModifyBones) == 0x000190, "Wrong size on FAnimNode_KuroModifyBones");
+static_assert(offsetof(FAnimNode_KuroModifyBones, BoneTransformsMap) == 0x0000E8, "Member 'FAnimNode_KuroModifyBones::BoneTransformsMap' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroModifyBones, TranslationMode) == 0x000138, "Member 'FAnimNode_KuroModifyBones::TranslationMode' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroModifyBones, RotationMode) == 0x000139, "Member 'FAnimNode_KuroModifyBones::RotationMode' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroModifyBones, ScaleMode) == 0x00013A, "Member 'FAnimNode_KuroModifyBones::ScaleMode' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroModifyBones, TranslationSpace) == 0x00013B, "Member 'FAnimNode_KuroModifyBones::TranslationSpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroModifyBones, RotationSpace) == 0x00013C, "Member 'FAnimNode_KuroModifyBones::RotationSpace' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroModifyBones, ScaleSpace) == 0x00013D, "Member 'FAnimNode_KuroModifyBones::ScaleSpace' has a wrong offset!");
+
+// ScriptStruct KuroAnim.KuroMotorWheelIkParams
+// 0x004C (0x004C - 0x0000)
+struct FKuroMotorWheelIkParams final
+{
+public:
+	struct FBoneReference                         IkBone;                                            // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                RotateAxis;                                        // 0x0014(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MinTurnAngle;                                      // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTurnAngle;                                      // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxTurnSpeed;                                      // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         IkWheelBone;                                       // 0x002C(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                WheelRotateAxis;                                   // 0x0040(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FKuroMotorWheelIkParams) == 0x000004, "Wrong alignment on FKuroMotorWheelIkParams");
+static_assert(sizeof(FKuroMotorWheelIkParams) == 0x00004C, "Wrong size on FKuroMotorWheelIkParams");
+static_assert(offsetof(FKuroMotorWheelIkParams, IkBone) == 0x000000, "Member 'FKuroMotorWheelIkParams::IkBone' has a wrong offset!");
+static_assert(offsetof(FKuroMotorWheelIkParams, RotateAxis) == 0x000014, "Member 'FKuroMotorWheelIkParams::RotateAxis' has a wrong offset!");
+static_assert(offsetof(FKuroMotorWheelIkParams, MinTurnAngle) == 0x000020, "Member 'FKuroMotorWheelIkParams::MinTurnAngle' has a wrong offset!");
+static_assert(offsetof(FKuroMotorWheelIkParams, MaxTurnAngle) == 0x000024, "Member 'FKuroMotorWheelIkParams::MaxTurnAngle' has a wrong offset!");
+static_assert(offsetof(FKuroMotorWheelIkParams, MaxTurnSpeed) == 0x000028, "Member 'FKuroMotorWheelIkParams::MaxTurnSpeed' has a wrong offset!");
+static_assert(offsetof(FKuroMotorWheelIkParams, IkWheelBone) == 0x00002C, "Member 'FKuroMotorWheelIkParams::IkWheelBone' has a wrong offset!");
+static_assert(offsetof(FKuroMotorWheelIkParams, WheelRotateAxis) == 0x000040, "Member 'FKuroMotorWheelIkParams::WheelRotateAxis' has a wrong offset!");
+
+// ScriptStruct KuroAnim.AnimNode_KuroMotorIK
+// 0x0068 (0x0150 - 0x00E8)
+struct FAnimNode_KuroMotorIK final : public FAnimNode_SkeletalControlBase
+{
+public:
+	TArray<struct FKuroMotorWheelIkParams>        MotorWheelIkParams;                                // 0x00E8(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UMotorWheelDisplayInfoObject*           DisplayInfoObject;                                 // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_100[0x50];                                     // 0x0100(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAnimNode_KuroMotorIK) == 0x000008, "Wrong alignment on FAnimNode_KuroMotorIK");
+static_assert(sizeof(FAnimNode_KuroMotorIK) == 0x000150, "Wrong size on FAnimNode_KuroMotorIK");
+static_assert(offsetof(FAnimNode_KuroMotorIK, MotorWheelIkParams) == 0x0000E8, "Member 'FAnimNode_KuroMotorIK::MotorWheelIkParams' has a wrong offset!");
+static_assert(offsetof(FAnimNode_KuroMotorIK, DisplayInfoObject) == 0x0000F8, "Member 'FAnimNode_KuroMotorIK::DisplayInfoObject' has a wrong offset!");
 
 // ScriptStruct KuroAnim.KuroRotateBonePart
 // 0x0018 (0x0018 - 0x0000)
@@ -941,7 +1072,7 @@ static_assert(offsetof(FAnimNode_PhyCloth, DisturbSplit) == 0x000130, "Member 'F
 static_assert(offsetof(FAnimNode_PhyCloth, OriginAlphaCurveName) == 0x000148, "Member 'FAnimNode_PhyCloth::OriginAlphaCurveName' has a wrong offset!");
 
 // ScriptStruct KuroAnim.AnimNode_SightLock
-// 0x00E8 (0x01D0 - 0x00E8)
+// 0x0100 (0x01E8 - 0x00E8)
 struct FAnimNode_SightLock final : public FAnimNode_SkeletalControlBase
 {
 public:
@@ -952,16 +1083,18 @@ public:
 	struct FVector                                UpAxisInSightBone;                                 // 0x00FC(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                SightBoneBaseEuler;                                // 0x0108(0x000C)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AssistRatio;                                       // 0x0114(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SightBoneLimit[0x4];                               // 0x0118(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AssistLimit;                                       // 0x0128(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                TargetDirect;                                      // 0x012C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   SightBoneName;                                     // 0x0138(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   BeginBoneName;                                     // 0x0144(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   EndBoneName;                                       // 0x0150(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15C[0x74];                                     // 0x015C(0x0074)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 SightBoneLimit;                                    // 0x0118(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          SightBoneLimitOnRefPose;                           // 0x0128(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_129[0x3];                                      // 0x0129(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         AssistLimit;                                       // 0x012C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TargetDirect;                                      // 0x0130(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   SightBoneName;                                     // 0x013C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BeginBoneName;                                     // 0x0148(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   EndBoneName;                                       // 0x0154(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_160[0x88];                                     // 0x0160(0x0088)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimNode_SightLock) == 0x000008, "Wrong alignment on FAnimNode_SightLock");
-static_assert(sizeof(FAnimNode_SightLock) == 0x0001D0, "Wrong size on FAnimNode_SightLock");
+static_assert(sizeof(FAnimNode_SightLock) == 0x0001E8, "Wrong size on FAnimNode_SightLock");
 static_assert(offsetof(FAnimNode_SightLock, Increment) == 0x0000E8, "Member 'FAnimNode_SightLock::Increment' has a wrong offset!");
 static_assert(offsetof(FAnimNode_SightLock, Mode) == 0x0000EC, "Member 'FAnimNode_SightLock::Mode' has a wrong offset!");
 static_assert(offsetof(FAnimNode_SightLock, SightDirectInSightBone) == 0x0000F0, "Member 'FAnimNode_SightLock::SightDirectInSightBone' has a wrong offset!");
@@ -969,11 +1102,12 @@ static_assert(offsetof(FAnimNode_SightLock, UpAxisInSightBone) == 0x0000FC, "Mem
 static_assert(offsetof(FAnimNode_SightLock, SightBoneBaseEuler) == 0x000108, "Member 'FAnimNode_SightLock::SightBoneBaseEuler' has a wrong offset!");
 static_assert(offsetof(FAnimNode_SightLock, AssistRatio) == 0x000114, "Member 'FAnimNode_SightLock::AssistRatio' has a wrong offset!");
 static_assert(offsetof(FAnimNode_SightLock, SightBoneLimit) == 0x000118, "Member 'FAnimNode_SightLock::SightBoneLimit' has a wrong offset!");
-static_assert(offsetof(FAnimNode_SightLock, AssistLimit) == 0x000128, "Member 'FAnimNode_SightLock::AssistLimit' has a wrong offset!");
-static_assert(offsetof(FAnimNode_SightLock, TargetDirect) == 0x00012C, "Member 'FAnimNode_SightLock::TargetDirect' has a wrong offset!");
-static_assert(offsetof(FAnimNode_SightLock, SightBoneName) == 0x000138, "Member 'FAnimNode_SightLock::SightBoneName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_SightLock, BeginBoneName) == 0x000144, "Member 'FAnimNode_SightLock::BeginBoneName' has a wrong offset!");
-static_assert(offsetof(FAnimNode_SightLock, EndBoneName) == 0x000150, "Member 'FAnimNode_SightLock::EndBoneName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_SightLock, SightBoneLimitOnRefPose) == 0x000128, "Member 'FAnimNode_SightLock::SightBoneLimitOnRefPose' has a wrong offset!");
+static_assert(offsetof(FAnimNode_SightLock, AssistLimit) == 0x00012C, "Member 'FAnimNode_SightLock::AssistLimit' has a wrong offset!");
+static_assert(offsetof(FAnimNode_SightLock, TargetDirect) == 0x000130, "Member 'FAnimNode_SightLock::TargetDirect' has a wrong offset!");
+static_assert(offsetof(FAnimNode_SightLock, SightBoneName) == 0x00013C, "Member 'FAnimNode_SightLock::SightBoneName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_SightLock, BeginBoneName) == 0x000148, "Member 'FAnimNode_SightLock::BeginBoneName' has a wrong offset!");
+static_assert(offsetof(FAnimNode_SightLock, EndBoneName) == 0x000154, "Member 'FAnimNode_SightLock::EndBoneName' has a wrong offset!");
 
 // ScriptStruct KuroAnim.SimpleDCCConfig
 // 0x0040 (0x0040 - 0x0000)
@@ -1149,6 +1283,157 @@ static_assert(offsetof(FAnimNode_TextureFace, MouthAlphaThreshold) == 0x0000A4, 
 static_assert(offsetof(FAnimNode_TextureFace, OpenMouthThreshold) == 0x0000A8, "Member 'FAnimNode_TextureFace::OpenMouthThreshold' has a wrong offset!");
 static_assert(offsetof(FAnimNode_TextureFace, OpenMouthTexId) == 0x0000AC, "Member 'FAnimNode_TextureFace::OpenMouthTexId' has a wrong offset!");
 
+// ScriptStruct KuroAnim.VehicleAxisData
+// 0x0006 (0x0006 - 0x0000)
+struct FVehicleAxisData final
+{
+public:
+	EAxis                                         ForwardAxis;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForwardAxisReverse;                               // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         RightAxis;                                         // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRightAxisReverse;                                 // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         UpAxis;                                            // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpAxisReverse;                                    // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVehicleAxisData) == 0x000001, "Wrong alignment on FVehicleAxisData");
+static_assert(sizeof(FVehicleAxisData) == 0x000006, "Wrong size on FVehicleAxisData");
+static_assert(offsetof(FVehicleAxisData, ForwardAxis) == 0x000000, "Member 'FVehicleAxisData::ForwardAxis' has a wrong offset!");
+static_assert(offsetof(FVehicleAxisData, bForwardAxisReverse) == 0x000001, "Member 'FVehicleAxisData::bForwardAxisReverse' has a wrong offset!");
+static_assert(offsetof(FVehicleAxisData, RightAxis) == 0x000002, "Member 'FVehicleAxisData::RightAxis' has a wrong offset!");
+static_assert(offsetof(FVehicleAxisData, bRightAxisReverse) == 0x000003, "Member 'FVehicleAxisData::bRightAxisReverse' has a wrong offset!");
+static_assert(offsetof(FVehicleAxisData, UpAxis) == 0x000004, "Member 'FVehicleAxisData::UpAxis' has a wrong offset!");
+static_assert(offsetof(FVehicleAxisData, bUpAxisReverse) == 0x000005, "Member 'FVehicleAxisData::bUpAxisReverse' has a wrong offset!");
+
+// ScriptStruct KuroAnim.VehicleWheelData
+// 0x01A0 (0x01A0 - 0x0000)
+struct alignas(0x10) FVehicleWheelData final
+{
+public:
+	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVehicleAxisData                       WheelAxis;                                         // 0x0014(0x0006)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bWheelSteer;                                       // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1B[0x1];                                       // 0x001B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Radius;                                            // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSpinDegPerTick;                                 // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxOffsetFromDefault;                              // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBoneReference                         StrutBone;                                         // 0x0028(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                StrutRotateAxis;                                   // 0x003C(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bStrutRotation;                                    // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSuspension;                                       // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4A[0x2];                                       // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SuspensionMax;                                     // 0x004C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SuspensionMin;                                     // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SuspensionStiffness;                               // 0x0054(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoContactDropSpeed;                                // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxSteerDeg;                                       // 0x005C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SteerInterpSpeedDegPerSec;                         // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_64[0x13C];                                     // 0x0064(0x013C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FVehicleWheelData) == 0x000010, "Wrong alignment on FVehicleWheelData");
+static_assert(sizeof(FVehicleWheelData) == 0x0001A0, "Wrong size on FVehicleWheelData");
+static_assert(offsetof(FVehicleWheelData, Bone) == 0x000000, "Member 'FVehicleWheelData::Bone' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, WheelAxis) == 0x000014, "Member 'FVehicleWheelData::WheelAxis' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, bWheelSteer) == 0x00001A, "Member 'FVehicleWheelData::bWheelSteer' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, Radius) == 0x00001C, "Member 'FVehicleWheelData::Radius' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, MaxSpinDegPerTick) == 0x000020, "Member 'FVehicleWheelData::MaxSpinDegPerTick' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, MaxOffsetFromDefault) == 0x000024, "Member 'FVehicleWheelData::MaxOffsetFromDefault' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, StrutBone) == 0x000028, "Member 'FVehicleWheelData::StrutBone' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, StrutRotateAxis) == 0x00003C, "Member 'FVehicleWheelData::StrutRotateAxis' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, bStrutRotation) == 0x000048, "Member 'FVehicleWheelData::bStrutRotation' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, bSuspension) == 0x000049, "Member 'FVehicleWheelData::bSuspension' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, SuspensionMax) == 0x00004C, "Member 'FVehicleWheelData::SuspensionMax' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, SuspensionMin) == 0x000050, "Member 'FVehicleWheelData::SuspensionMin' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, SuspensionStiffness) == 0x000054, "Member 'FVehicleWheelData::SuspensionStiffness' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, NoContactDropSpeed) == 0x000058, "Member 'FVehicleWheelData::NoContactDropSpeed' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, MaxSteerDeg) == 0x00005C, "Member 'FVehicleWheelData::MaxSteerDeg' has a wrong offset!");
+static_assert(offsetof(FVehicleWheelData, SteerInterpSpeedDegPerSec) == 0x000060, "Member 'FVehicleWheelData::SteerInterpSpeedDegPerSec' has a wrong offset!");
+
+// ScriptStruct KuroAnim.TrailerConnector
+// 0x0110 (0x0110 - 0x0000)
+struct alignas(0x10) FTrailerConnector final
+{
+public:
+	struct FBoneReference                         Bone;                                              // 0x0000(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVehicleAxisData                       Axis;                                              // 0x0014(0x0006)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bEnableYaw;                                        // 0x001A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnablePitch;                                      // 0x001B(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YawLimitDeg;                                       // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PitchLimitDeg;                                     // 0x0020(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrailerYawMaxRateDegPerSec;                        // 0x0024(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrailerYawRateRatio;                               // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         YawArmFallback;                                    // 0x002C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30[0xE0];                                      // 0x0030(0x00E0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FTrailerConnector) == 0x000010, "Wrong alignment on FTrailerConnector");
+static_assert(sizeof(FTrailerConnector) == 0x000110, "Wrong size on FTrailerConnector");
+static_assert(offsetof(FTrailerConnector, Bone) == 0x000000, "Member 'FTrailerConnector::Bone' has a wrong offset!");
+static_assert(offsetof(FTrailerConnector, Axis) == 0x000014, "Member 'FTrailerConnector::Axis' has a wrong offset!");
+static_assert(offsetof(FTrailerConnector, bEnableYaw) == 0x00001A, "Member 'FTrailerConnector::bEnableYaw' has a wrong offset!");
+static_assert(offsetof(FTrailerConnector, bEnablePitch) == 0x00001B, "Member 'FTrailerConnector::bEnablePitch' has a wrong offset!");
+static_assert(offsetof(FTrailerConnector, YawLimitDeg) == 0x00001C, "Member 'FTrailerConnector::YawLimitDeg' has a wrong offset!");
+static_assert(offsetof(FTrailerConnector, PitchLimitDeg) == 0x000020, "Member 'FTrailerConnector::PitchLimitDeg' has a wrong offset!");
+static_assert(offsetof(FTrailerConnector, TrailerYawMaxRateDegPerSec) == 0x000024, "Member 'FTrailerConnector::TrailerYawMaxRateDegPerSec' has a wrong offset!");
+static_assert(offsetof(FTrailerConnector, TrailerYawRateRatio) == 0x000028, "Member 'FTrailerConnector::TrailerYawRateRatio' has a wrong offset!");
+static_assert(offsetof(FTrailerConnector, YawArmFallback) == 0x00002C, "Member 'FTrailerConnector::YawArmFallback' has a wrong offset!");
+
+// ScriptStruct KuroAnim.AnimNode_VehicleDetectFloor
+// 0x0138 (0x0220 - 0x00E8)
+struct alignas(0x10) FAnimNode_VehicleDetectFloor final : public FAnimNode_SkeletalControlBase
+{
+public:
+	struct FBoneReference                         BodyBone;                                          // 0x00E8(0x0014)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_FC[0x4];                                       // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVehicleWheelData>              Wheels;                                            // 0x0100(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         WheelAutoTurnToForwardAlpha;                       // 0x0110(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTrailerConnector>              Connectors;                                        // 0x0118(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVehicleWheelData>              TrailerWheels;                                     // 0x0128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	float                                         TrailerYawLag;                                     // 0x0138(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrailerPitchLag;                                   // 0x013C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TrailerSoftLimitDeg;                               // 0x0140(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ExtraTraceDown;                                    // 0x0144(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETraceTypeQuery                               TraceChannel;                                      // 0x0148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAxis                                         RootUpAxis;                                        // 0x0149(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVehicleAxisData                       BodyAxis;                                          // 0x014A(0x0006)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ChassisTiltMaxDist;                                // 0x0150(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyChassisVerticalOffset;                       // 0x0154(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_155[0x3];                                      // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ChassisHeightLerp;                                 // 0x0158(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugDraw;                                        // 0x015C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDebugLog;                                         // 0x015D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_15E[0x2];                                      // 0x015E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         PlaneNormalInterpSpeed;                            // 0x0160(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         PlaneHeightInterpSpeed;                            // 0x0164(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         NoContactPointWeight;                              // 0x0168(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultChassisHeight;                              // 0x016C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableChassisAdjust;                               // 0x0170(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_171[0xAF];                                     // 0x0171(0x00AF)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FAnimNode_VehicleDetectFloor) == 0x000010, "Wrong alignment on FAnimNode_VehicleDetectFloor");
+static_assert(sizeof(FAnimNode_VehicleDetectFloor) == 0x000220, "Wrong size on FAnimNode_VehicleDetectFloor");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, BodyBone) == 0x0000E8, "Member 'FAnimNode_VehicleDetectFloor::BodyBone' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, Wheels) == 0x000100, "Member 'FAnimNode_VehicleDetectFloor::Wheels' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, WheelAutoTurnToForwardAlpha) == 0x000110, "Member 'FAnimNode_VehicleDetectFloor::WheelAutoTurnToForwardAlpha' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, Connectors) == 0x000118, "Member 'FAnimNode_VehicleDetectFloor::Connectors' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, TrailerWheels) == 0x000128, "Member 'FAnimNode_VehicleDetectFloor::TrailerWheels' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, TrailerYawLag) == 0x000138, "Member 'FAnimNode_VehicleDetectFloor::TrailerYawLag' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, TrailerPitchLag) == 0x00013C, "Member 'FAnimNode_VehicleDetectFloor::TrailerPitchLag' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, TrailerSoftLimitDeg) == 0x000140, "Member 'FAnimNode_VehicleDetectFloor::TrailerSoftLimitDeg' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, ExtraTraceDown) == 0x000144, "Member 'FAnimNode_VehicleDetectFloor::ExtraTraceDown' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, TraceChannel) == 0x000148, "Member 'FAnimNode_VehicleDetectFloor::TraceChannel' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, RootUpAxis) == 0x000149, "Member 'FAnimNode_VehicleDetectFloor::RootUpAxis' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, BodyAxis) == 0x00014A, "Member 'FAnimNode_VehicleDetectFloor::BodyAxis' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, ChassisTiltMaxDist) == 0x000150, "Member 'FAnimNode_VehicleDetectFloor::ChassisTiltMaxDist' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, bApplyChassisVerticalOffset) == 0x000154, "Member 'FAnimNode_VehicleDetectFloor::bApplyChassisVerticalOffset' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, ChassisHeightLerp) == 0x000158, "Member 'FAnimNode_VehicleDetectFloor::ChassisHeightLerp' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, bDebugDraw) == 0x00015C, "Member 'FAnimNode_VehicleDetectFloor::bDebugDraw' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, bDebugLog) == 0x00015D, "Member 'FAnimNode_VehicleDetectFloor::bDebugLog' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, PlaneNormalInterpSpeed) == 0x000160, "Member 'FAnimNode_VehicleDetectFloor::PlaneNormalInterpSpeed' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, PlaneHeightInterpSpeed) == 0x000164, "Member 'FAnimNode_VehicleDetectFloor::PlaneHeightInterpSpeed' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, NoContactPointWeight) == 0x000168, "Member 'FAnimNode_VehicleDetectFloor::NoContactPointWeight' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, DefaultChassisHeight) == 0x00016C, "Member 'FAnimNode_VehicleDetectFloor::DefaultChassisHeight' has a wrong offset!");
+static_assert(offsetof(FAnimNode_VehicleDetectFloor, EnableChassisAdjust) == 0x000170, "Member 'FAnimNode_VehicleDetectFloor::EnableChassisAdjust' has a wrong offset!");
+
 // ScriptStruct KuroAnim.ClimbStateStruct
 // 0x0003 (0x0003 - 0x0000)
 struct FClimbStateStruct final
@@ -1179,6 +1464,21 @@ static_assert(sizeof(FClimbInfoStruct) == 0x000010, "Wrong size on FClimbInfoStr
 static_assert(offsetof(FClimbInfoStruct, IsClimbMoving) == 0x000000, "Member 'FClimbInfoStruct::IsClimbMoving' has a wrong offset!");
 static_assert(offsetof(FClimbInfoStruct, ClimbInput) == 0x000004, "Member 'FClimbInfoStruct::ClimbInput' has a wrong offset!");
 static_assert(offsetof(FClimbInfoStruct, OnWallAngle) == 0x00000C, "Member 'FClimbInfoStruct::OnWallAngle' has a wrong offset!");
+
+// ScriptStruct KuroAnim.MotorWheelDisplayInfo
+// 0x0014 (0x0014 - 0x0000)
+struct FMotorWheelDisplayInfo final
+{
+public:
+	struct FVector                                WheelLocation;                                     // 0x0000(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WheelSpeed;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WheelAccel;                                        // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMotorWheelDisplayInfo) == 0x000004, "Wrong alignment on FMotorWheelDisplayInfo");
+static_assert(sizeof(FMotorWheelDisplayInfo) == 0x000014, "Wrong size on FMotorWheelDisplayInfo");
+static_assert(offsetof(FMotorWheelDisplayInfo, WheelLocation) == 0x000000, "Member 'FMotorWheelDisplayInfo::WheelLocation' has a wrong offset!");
+static_assert(offsetof(FMotorWheelDisplayInfo, WheelSpeed) == 0x00000C, "Member 'FMotorWheelDisplayInfo::WheelSpeed' has a wrong offset!");
+static_assert(offsetof(FMotorWheelDisplayInfo, WheelAccel) == 0x000010, "Member 'FMotorWheelDisplayInfo::WheelAccel' has a wrong offset!");
 
 // ScriptStruct KuroAnim.LeanAmount
 // 0x0008 (0x0008 - 0x0000)

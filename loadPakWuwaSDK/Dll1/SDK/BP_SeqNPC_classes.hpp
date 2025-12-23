@@ -10,6 +10,7 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "BP_NpcCombinedMesh_classes.hpp"
 
@@ -18,20 +19,22 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SeqNPC.BP_SeqNPC_C
-// 0x0038 (0x0408 - 0x03D0)
+// 0x0088 (0x0460 - 0x03D8)
 class ABP_SeqNPC_C final : public ABP_NpcCombinedMesh_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class USeqAudio_Seq_V2_C*                     SeqAudio_Seq_V2;                                   // 0x03D8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UABPC_Seq_Body_V2_C*                    ABPC_Body_V2;                                      // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
-	class UPD_NpcSetupData_C*                     NPC_DA;                                            // 0x03E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         MaxLod;                                            // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         LodBias;                                           // 0x03F4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          IgnoreSockets;                                     // 0x03F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3F9[0x3];                                      // 0x03F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         TalkID;                                            // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TalkID_SP;                                         // 0x0400(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x03D8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class USeqAudio_Seq_V2_C*                     SeqAudio_Seq_V2;                                   // 0x03E0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UABPC_Seq_Body_V2_C*                    ABPC_Body_V2;                                      // 0x03E8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class UPD_NpcSetupData_C*                     NPC_DA;                                            // 0x03F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         MaxLod;                                            // 0x03F8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         LodBias;                                           // 0x03FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          IgnoreSockets;                                     // 0x0400(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_401[0x3];                                      // 0x0401(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         TalkID;                                            // 0x0404(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TalkID_SP;                                         // 0x0408(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, Interp, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_40C[0x4];                                      // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FTransform>          Float_Curve_Data;                                  // 0x0410(0x0050)(Edit, BlueprintVisible)
 
 public:
 	void ExecuteUbergraph_BP_SeqNPC(int32 EntryPoint);
@@ -43,6 +46,9 @@ public:
 	TArray<class FName> GetSupportGroupNames();
 	bool GetAnimDataVector(TMap<class FName, struct FVector>* VectorCurveData);
 	bool GetAnimDataFloat(TArray<struct FNamedCurveValue>* FloatCurveData);
+	bool SetAnimDataTransform(const TMap<class FName, struct FTransform>& FloatCurveData);
+	bool IsCustomSupport();
+	bool GetAnimDataTransform(TMap<class FName, struct FTransform>* FloatCurveData);
 	void GetABPC_Body_V2(class UABPC_Seq_Body_V2_C** ABPC_Body_V2_0);
 	void GetSeqAudio(class USeqAudio_Seq_V2_C** SeqAudio);
 
@@ -57,16 +63,17 @@ public:
 	}
 };
 static_assert(alignof(ABP_SeqNPC_C) == 0x000008, "Wrong alignment on ABP_SeqNPC_C");
-static_assert(sizeof(ABP_SeqNPC_C) == 0x000408, "Wrong size on ABP_SeqNPC_C");
-static_assert(offsetof(ABP_SeqNPC_C, UberGraphFrame) == 0x0003D0, "Member 'ABP_SeqNPC_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, SeqAudio_Seq_V2) == 0x0003D8, "Member 'ABP_SeqNPC_C::SeqAudio_Seq_V2' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, ABPC_Body_V2) == 0x0003E0, "Member 'ABP_SeqNPC_C::ABPC_Body_V2' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, NPC_DA) == 0x0003E8, "Member 'ABP_SeqNPC_C::NPC_DA' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, MaxLod) == 0x0003F0, "Member 'ABP_SeqNPC_C::MaxLod' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, LodBias) == 0x0003F4, "Member 'ABP_SeqNPC_C::LodBias' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, IgnoreSockets) == 0x0003F8, "Member 'ABP_SeqNPC_C::IgnoreSockets' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, TalkID) == 0x0003FC, "Member 'ABP_SeqNPC_C::TalkID' has a wrong offset!");
-static_assert(offsetof(ABP_SeqNPC_C, TalkID_SP) == 0x000400, "Member 'ABP_SeqNPC_C::TalkID_SP' has a wrong offset!");
+static_assert(sizeof(ABP_SeqNPC_C) == 0x000460, "Wrong size on ABP_SeqNPC_C");
+static_assert(offsetof(ABP_SeqNPC_C, UberGraphFrame) == 0x0003D8, "Member 'ABP_SeqNPC_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, SeqAudio_Seq_V2) == 0x0003E0, "Member 'ABP_SeqNPC_C::SeqAudio_Seq_V2' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, ABPC_Body_V2) == 0x0003E8, "Member 'ABP_SeqNPC_C::ABPC_Body_V2' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, NPC_DA) == 0x0003F0, "Member 'ABP_SeqNPC_C::NPC_DA' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, MaxLod) == 0x0003F8, "Member 'ABP_SeqNPC_C::MaxLod' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, LodBias) == 0x0003FC, "Member 'ABP_SeqNPC_C::LodBias' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, IgnoreSockets) == 0x000400, "Member 'ABP_SeqNPC_C::IgnoreSockets' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, TalkID) == 0x000404, "Member 'ABP_SeqNPC_C::TalkID' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, TalkID_SP) == 0x000408, "Member 'ABP_SeqNPC_C::TalkID_SP' has a wrong offset!");
+static_assert(offsetof(ABP_SeqNPC_C, Float_Curve_Data) == 0x000410, "Member 'ABP_SeqNPC_C::Float_Curve_Data' has a wrong offset!");
 
 }
 

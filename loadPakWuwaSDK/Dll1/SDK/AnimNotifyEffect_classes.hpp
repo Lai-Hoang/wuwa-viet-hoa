@@ -12,9 +12,9 @@
 
 #include "ESkillEffectType_structs.hpp"
 #include "EAnimNotifyEffectLocationType_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK
@@ -42,6 +42,7 @@ public:
 	bool                                          NeedAnyTag;                                        // 0x0128(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper)
 	bool                                          IgnoreWhenInvisible;                               // 0x0129(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          IsSyncEffectTimeScale;                             // 0x012A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          DisableOnVehicle;                                  // 0x012B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	bool K2_ValidateAssets();
@@ -80,6 +81,7 @@ static_assert(offsetof(UAnimNotifyEffect_C, PlayNeedTags) == 0x0000D8, "Member '
 static_assert(offsetof(UAnimNotifyEffect_C, NeedAnyTag) == 0x000128, "Member 'UAnimNotifyEffect_C::NeedAnyTag' has a wrong offset!");
 static_assert(offsetof(UAnimNotifyEffect_C, IgnoreWhenInvisible) == 0x000129, "Member 'UAnimNotifyEffect_C::IgnoreWhenInvisible' has a wrong offset!");
 static_assert(offsetof(UAnimNotifyEffect_C, IsSyncEffectTimeScale) == 0x00012A, "Member 'UAnimNotifyEffect_C::IsSyncEffectTimeScale' has a wrong offset!");
+static_assert(offsetof(UAnimNotifyEffect_C, DisableOnVehicle) == 0x00012B, "Member 'UAnimNotifyEffect_C::DisableOnVehicle' has a wrong offset!");
 
 }
 

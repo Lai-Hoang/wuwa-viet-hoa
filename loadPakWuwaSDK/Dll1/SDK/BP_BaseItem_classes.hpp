@@ -28,9 +28,9 @@ public:
 	int32                                         EntityId;                                          // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void ReceiveBeginPlay();
 	int32 GetEntityId();
 	void ApplyEntityId(int32 EntityId_0);
+	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_BaseItem(int32 EntryPoint);
 
 public:

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "SVisionData_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SReBulletDataMain_structs.hpp"
-#include "SCaughtInfo_structs.hpp"
-#include "SSkillInfo_structs.hpp"
-#include "SVisionData_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "SCharacterPart_structs.hpp"
+#include "SCaughtInfo_structs.hpp"
 #include "EMovementDirection_structs.hpp"
+#include "SCharacterPart_structs.hpp"
+#include "SSkillInfo_structs.hpp"
 #include "SEffectData_structs.hpp"
 #include "SAttributeModifierData_structs.hpp"
 #include "SDamageData_structs.hpp"
@@ -55,7 +55,7 @@ static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, CallFunc_D_InverseTr
 static_assert(offsetof(BPL_CharacterUtility_C_GetLocalWind, CallFunc_Conv_VectorDoubleToVector_ReturnValue) == 0x000088, "Member 'BPL_CharacterUtility_C_GetLocalWind::CallFunc_Conv_VectorDoubleToVector_ReturnValue' has a wrong offset!");
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetMovementSettings
-// 0x0CA0 (0x0CA0 - 0x0000)
+// 0x0CC0 (0x0CC0 - 0x0000)
 struct BPL_CharacterUtility_C_DtGetMovementSettings final
 {
 public:
@@ -63,21 +63,21 @@ public:
 	class FName                                   rowName;                                           // 0x0008(0x000C)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	uint8                                         Pad_14[0x4];                                       // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FSMovementSetting_State                data;                                              // 0x0020(0x0638)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          ReturnValue;                                       // 0x0658(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_659[0x7];                                      // 0x0659(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSMovementSetting_State                CallFunc_GetDataTableRowFromName_OutRow;           // 0x0660(0x0638)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0C98(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FSMovementSetting_State                data;                                              // 0x0020(0x0648)(Parm, OutParm, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0668(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_669[0x7];                                      // 0x0669(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSMovementSetting_State                CallFunc_GetDataTableRowFromName_OutRow;           // 0x0670(0x0648)(NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0CB8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(BPL_CharacterUtility_C_DtGetMovementSettings) == 0x000008, "Wrong alignment on BPL_CharacterUtility_C_DtGetMovementSettings");
-static_assert(sizeof(BPL_CharacterUtility_C_DtGetMovementSettings) == 0x000CA0, "Wrong size on BPL_CharacterUtility_C_DtGetMovementSettings");
+static_assert(sizeof(BPL_CharacterUtility_C_DtGetMovementSettings) == 0x000CC0, "Wrong size on BPL_CharacterUtility_C_DtGetMovementSettings");
 static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, dataTable) == 0x000000, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::dataTable' has a wrong offset!");
 static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, rowName) == 0x000008, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::rowName' has a wrong offset!");
 static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, __WorldContext) == 0x000018, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::__WorldContext' has a wrong offset!");
 static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, data) == 0x000020, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::data' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, ReturnValue) == 0x000658, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::ReturnValue' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, CallFunc_GetDataTableRowFromName_OutRow) == 0x000660, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000C98, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, ReturnValue) == 0x000668, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::ReturnValue' has a wrong offset!");
+static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, CallFunc_GetDataTableRowFromName_OutRow) == 0x000670, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(BPL_CharacterUtility_C_DtGetMovementSettings, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000CB8, "Member 'BPL_CharacterUtility_C_DtGetMovementSettings::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
 
 // Function BPL_CharacterUtility.BPL_CharacterUtility_C.DtGetBulletData
 // 0x05B0 (0x05B0 - 0x0000)

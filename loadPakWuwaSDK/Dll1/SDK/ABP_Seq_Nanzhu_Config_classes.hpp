@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // AnimBlueprintGeneratedClass ABP_Seq_Nanzhu_Config.ABP_Seq_Nanzhu_Config_C
-// 0x0000 (0x28A0 - 0x28A0)
+// 0x0000 (0x33A0 - 0x33A0)
 class UABP_Seq_Nanzhu_Config_C final : public UABP_BaseRole_Seq_V2_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UABP_Seq_Nanzhu_Config_C) == 0x000010, "Wrong alignment on UABP_Seq_Nanzhu_Config_C");
-static_assert(sizeof(UABP_Seq_Nanzhu_Config_C) == 0x0028A0, "Wrong size on UABP_Seq_Nanzhu_Config_C");
+static_assert(sizeof(UABP_Seq_Nanzhu_Config_C) == 0x0033A0, "Wrong size on UABP_Seq_Nanzhu_Config_C");
 
 }
 

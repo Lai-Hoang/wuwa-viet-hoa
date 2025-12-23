@@ -112,35 +112,41 @@ static_assert(offsetof(FSMInfo_Base, NodeGuid) == 0x000038, "Member 'FSMInfo_Bas
 static_assert(offsetof(FSMInfo_Base, OwnerNodeGuid) == 0x000048, "Member 'FSMInfo_Base::OwnerNodeGuid' has a wrong offset!");
 static_assert(offsetof(FSMInfo_Base, NodeInstance) == 0x000058, "Member 'FSMInfo_Base::NodeInstance' has a wrong offset!");
 
-// ScriptStruct SMSystem.SMTransaction_Base
-// 0x0003 (0x0003 - 0x0000)
-struct FSMTransaction_Base
+// ScriptStruct SMSystem.SMExposedFunctionHandler
+// 0x0028 (0x0028 - 0x0000)
+struct FSMExposedFunctionHandler final
 {
 public:
-	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	ESMTransactionType                            TransactionType;                                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bOriginatedFromServer : 1;                         // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	class FName                                   BoundFunction;                                     // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESMExposedFunctionExecutionType               ExecutionType;                                     // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFunction*                              Function;                                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UObject*                                OwnerObject;                                       // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FSMTransaction_Base) == 0x000001, "Wrong alignment on FSMTransaction_Base");
-static_assert(sizeof(FSMTransaction_Base) == 0x000003, "Wrong size on FSMTransaction_Base");
-static_assert(offsetof(FSMTransaction_Base, TransactionType) == 0x000001, "Member 'FSMTransaction_Base::TransactionType' has a wrong offset!");
+static_assert(alignof(FSMExposedFunctionHandler) == 0x000008, "Wrong alignment on FSMExposedFunctionHandler");
+static_assert(sizeof(FSMExposedFunctionHandler) == 0x000028, "Wrong size on FSMExposedFunctionHandler");
+static_assert(offsetof(FSMExposedFunctionHandler, BoundFunction) == 0x000000, "Member 'FSMExposedFunctionHandler::BoundFunction' has a wrong offset!");
+static_assert(offsetof(FSMExposedFunctionHandler, ExecutionType) == 0x00000C, "Member 'FSMExposedFunctionHandler::ExecutionType' has a wrong offset!");
+static_assert(offsetof(FSMExposedFunctionHandler, Function) == 0x000010, "Member 'FSMExposedFunctionHandler::Function' has a wrong offset!");
+static_assert(offsetof(FSMExposedFunctionHandler, OwnerObject) == 0x000018, "Member 'FSMExposedFunctionHandler::OwnerObject' has a wrong offset!");
 
-// ScriptStruct SMSystem.SMActivateStateTransaction
-// 0x0019 (0x001C - 0x0003)
-struct FSMActivateStateTransaction final : public FSMTransaction_Base
+// ScriptStruct SMSystem.SMStateHistory
+// 0x0020 (0x0020 - 0x0000)
+struct FSMStateHistory final
 {
 public:
-	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGuid                                  BaseGuid;                                          // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeInState;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bIsActive : 1;                                     // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bSetAllParents : 1;                                // 0x0018(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  StateGuid;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDateTime                              StartTime;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeInState;                                       // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ServerTimeInState;                                 // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSMActivateStateTransaction) == 0x000004, "Wrong alignment on FSMActivateStateTransaction");
-static_assert(sizeof(FSMActivateStateTransaction) == 0x00001C, "Wrong size on FSMActivateStateTransaction");
-static_assert(offsetof(FSMActivateStateTransaction, BaseGuid) == 0x000004, "Member 'FSMActivateStateTransaction::BaseGuid' has a wrong offset!");
-static_assert(offsetof(FSMActivateStateTransaction, TimeInState) == 0x000014, "Member 'FSMActivateStateTransaction::TimeInState' has a wrong offset!");
+static_assert(alignof(FSMStateHistory) == 0x000008, "Wrong alignment on FSMStateHistory");
+static_assert(sizeof(FSMStateHistory) == 0x000020, "Wrong size on FSMStateHistory");
+static_assert(offsetof(FSMStateHistory, StateGuid) == 0x000000, "Member 'FSMStateHistory::StateGuid' has a wrong offset!");
+static_assert(offsetof(FSMStateHistory, StartTime) == 0x000010, "Member 'FSMStateHistory::StartTime' has a wrong offset!");
+static_assert(offsetof(FSMStateHistory, TimeInState) == 0x000018, "Member 'FSMStateHistory::TimeInState' has a wrong offset!");
+static_assert(offsetof(FSMStateHistory, ServerTimeInState) == 0x00001C, "Member 'FSMStateHistory::ServerTimeInState' has a wrong offset!");
 
 // ScriptStruct SMSystem.SMTransitionInfo
 // 0x0038 (0x0098 - 0x0060)
@@ -161,24 +167,32 @@ static_assert(offsetof(FSMTransitionInfo, ToStateGuid) == 0x000070, "Member 'FSM
 static_assert(offsetof(FSMTransitionInfo, Priority) == 0x000080, "Member 'FSMTransitionInfo::Priority' has a wrong offset!");
 static_assert(offsetof(FSMTransitionInfo, LastNetworkTimestamp) == 0x000088, "Member 'FSMTransitionInfo::LastNetworkTimestamp' has a wrong offset!");
 
-// ScriptStruct SMSystem.SMExposedFunctionHandler
-// 0x0028 (0x0028 - 0x0000)
-struct FSMExposedFunctionHandler final
+// ScriptStruct SMSystem.SMReferenceContainer
+// 0x0018 (0x0018 - 0x0000)
+struct FSMReferenceContainer final
 {
 public:
-	class FName                                   BoundFunction;                                     // 0x0000(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESMExposedFunctionExecutionType               ExecutionType;                                     // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFunction*                              Function;                                          // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UObject*                                OwnerObject;                                       // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_20[0x8];                                       // 0x0020(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  PathGuid;                                          // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USMInstance*                            Reference;                                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FSMExposedFunctionHandler) == 0x000008, "Wrong alignment on FSMExposedFunctionHandler");
-static_assert(sizeof(FSMExposedFunctionHandler) == 0x000028, "Wrong size on FSMExposedFunctionHandler");
-static_assert(offsetof(FSMExposedFunctionHandler, BoundFunction) == 0x000000, "Member 'FSMExposedFunctionHandler::BoundFunction' has a wrong offset!");
-static_assert(offsetof(FSMExposedFunctionHandler, ExecutionType) == 0x00000C, "Member 'FSMExposedFunctionHandler::ExecutionType' has a wrong offset!");
-static_assert(offsetof(FSMExposedFunctionHandler, Function) == 0x000010, "Member 'FSMExposedFunctionHandler::Function' has a wrong offset!");
-static_assert(offsetof(FSMExposedFunctionHandler, OwnerObject) == 0x000018, "Member 'FSMExposedFunctionHandler::OwnerObject' has a wrong offset!");
+static_assert(alignof(FSMReferenceContainer) == 0x000008, "Wrong alignment on FSMReferenceContainer");
+static_assert(sizeof(FSMReferenceContainer) == 0x000018, "Wrong size on FSMReferenceContainer");
+static_assert(offsetof(FSMReferenceContainer, PathGuid) == 0x000000, "Member 'FSMReferenceContainer::PathGuid' has a wrong offset!");
+static_assert(offsetof(FSMReferenceContainer, Reference) == 0x000010, "Member 'FSMReferenceContainer::Reference' has a wrong offset!");
+
+// ScriptStruct SMSystem.SMStateInfo
+// 0x0020 (0x0080 - 0x0060)
+struct FSMStateInfo final : public FSMInfo_Base
+{
+public:
+	TArray<struct FSMTransitionInfo>              OutgoingTransitions;                               // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bIsEndState;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSMStateInfo) == 0x000008, "Wrong alignment on FSMStateInfo");
+static_assert(sizeof(FSMStateInfo) == 0x000080, "Wrong size on FSMStateInfo");
+static_assert(offsetof(FSMStateInfo, OutgoingTransitions) == 0x000060, "Member 'FSMStateInfo::OutgoingTransitions' has a wrong offset!");
+static_assert(offsetof(FSMStateInfo, bIsEndState) == 0x000070, "Member 'FSMStateInfo::bIsEndState' has a wrong offset!");
 
 // ScriptStruct SMSystem.SMNode_Base
 // 0x00D0 (0x00D0 - 0x0000)
@@ -262,33 +276,6 @@ static_assert(offsetof(FSMConduit, CanEnterConduitGraphEvaluator) == 0x000128, "
 static_assert(offsetof(FSMConduit, ConduitEnteredGraphEvaluator) == 0x000138, "Member 'FSMConduit::ConduitEnteredGraphEvaluator' has a wrong offset!");
 static_assert(offsetof(FSMConduit, ConditionalEvaluationType) == 0x000148, "Member 'FSMConduit::ConditionalEvaluationType' has a wrong offset!");
 
-// ScriptStruct SMSystem.SMStateInfo
-// 0x0020 (0x0080 - 0x0060)
-struct FSMStateInfo final : public FSMInfo_Base
-{
-public:
-	TArray<struct FSMTransitionInfo>              OutgoingTransitions;                               // 0x0060(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bIsEndState;                                       // 0x0070(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_71[0xF];                                       // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSMStateInfo) == 0x000008, "Wrong alignment on FSMStateInfo");
-static_assert(sizeof(FSMStateInfo) == 0x000080, "Wrong size on FSMStateInfo");
-static_assert(offsetof(FSMStateInfo, OutgoingTransitions) == 0x000060, "Member 'FSMStateInfo::OutgoingTransitions' has a wrong offset!");
-static_assert(offsetof(FSMStateInfo, bIsEndState) == 0x000070, "Member 'FSMStateInfo::bIsEndState' has a wrong offset!");
-
-// ScriptStruct SMSystem.SMReferenceContainer
-// 0x0018 (0x0018 - 0x0000)
-struct FSMReferenceContainer final
-{
-public:
-	struct FGuid                                  PathGuid;                                          // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class USMInstance*                            Reference;                                         // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSMReferenceContainer) == 0x000008, "Wrong alignment on FSMReferenceContainer");
-static_assert(sizeof(FSMReferenceContainer) == 0x000018, "Wrong size on FSMReferenceContainer");
-static_assert(offsetof(FSMReferenceContainer, PathGuid) == 0x000000, "Member 'FSMReferenceContainer::PathGuid' has a wrong offset!");
-static_assert(offsetof(FSMReferenceContainer, Reference) == 0x000010, "Member 'FSMReferenceContainer::Reference' has a wrong offset!");
-
 // ScriptStruct SMSystem.SMDebugStateMachine
 // 0x0001 (0x0001 - 0x0000)
 struct FSMDebugStateMachine final
@@ -298,23 +285,6 @@ public:
 };
 static_assert(alignof(FSMDebugStateMachine) == 0x000001, "Wrong alignment on FSMDebugStateMachine");
 static_assert(sizeof(FSMDebugStateMachine) == 0x000001, "Wrong size on FSMDebugStateMachine");
-
-// ScriptStruct SMSystem.SMStateHistory
-// 0x0020 (0x0020 - 0x0000)
-struct FSMStateHistory final
-{
-public:
-	struct FGuid                                  StateGuid;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDateTime                              StartTime;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TimeInState;                                       // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ServerTimeInState;                                 // 0x001C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSMStateHistory) == 0x000008, "Wrong alignment on FSMStateHistory");
-static_assert(sizeof(FSMStateHistory) == 0x000020, "Wrong size on FSMStateHistory");
-static_assert(offsetof(FSMStateHistory, StateGuid) == 0x000000, "Member 'FSMStateHistory::StateGuid' has a wrong offset!");
-static_assert(offsetof(FSMStateHistory, StartTime) == 0x000010, "Member 'FSMStateHistory::StartTime' has a wrong offset!");
-static_assert(offsetof(FSMStateHistory, TimeInState) == 0x000018, "Member 'FSMStateHistory::TimeInState' has a wrong offset!");
-static_assert(offsetof(FSMStateHistory, ServerTimeInState) == 0x00001C, "Member 'FSMStateHistory::ServerTimeInState' has a wrong offset!");
 
 // ScriptStruct SMSystem.SMNodeDescription
 // 0x0040 (0x0040 - 0x0000)
@@ -388,6 +358,19 @@ static_assert(offsetof(FSMStateMachine, DynamicStateMachineReferenceVariable) ==
 static_assert(offsetof(FSMStateMachine, ReferencedStateMachine) == 0x000278, "Member 'FSMStateMachine::ReferencedStateMachine' has a wrong offset!");
 static_assert(offsetof(FSMStateMachine, IsReferencedByInstance) == 0x000280, "Member 'FSMStateMachine::IsReferencedByInstance' has a wrong offset!");
 
+// ScriptStruct SMSystem.SMTransaction_Base
+// 0x0003 (0x0003 - 0x0000)
+struct FSMTransaction_Base
+{
+public:
+	uint8                                         Pad_0[0x1];                                        // 0x0000(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	ESMTransactionType                            TransactionType;                                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bOriginatedFromServer : 1;                         // 0x0002(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+};
+static_assert(alignof(FSMTransaction_Base) == 0x000001, "Wrong alignment on FSMTransaction_Base");
+static_assert(sizeof(FSMTransaction_Base) == 0x000003, "Wrong size on FSMTransaction_Base");
+static_assert(offsetof(FSMTransaction_Base, TransactionType) == 0x000001, "Member 'FSMTransaction_Base::TransactionType' has a wrong offset!");
+
 // ScriptStruct SMSystem.SMFullSyncStateTransaction
 // 0x0015 (0x0018 - 0x0003)
 struct FSMFullSyncStateTransaction final : public FSMTransaction_Base
@@ -416,6 +399,23 @@ public:
 static_assert(alignof(FSMFullSyncTransaction) == 0x000008, "Wrong alignment on FSMFullSyncTransaction");
 static_assert(sizeof(FSMFullSyncTransaction) == 0x000020, "Wrong size on FSMFullSyncTransaction");
 static_assert(offsetof(FSMFullSyncTransaction, ActiveStates) == 0x000008, "Member 'FSMFullSyncTransaction::ActiveStates' has a wrong offset!");
+
+// ScriptStruct SMSystem.SMActivateStateTransaction
+// 0x0019 (0x001C - 0x0003)
+struct FSMActivateStateTransaction final : public FSMTransaction_Base
+{
+public:
+	uint8                                         Pad_3[0x1];                                        // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGuid                                  BaseGuid;                                          // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TimeInState;                                       // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bIsActive : 1;                                     // 0x0018(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bSetAllParents : 1;                                // 0x0018(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_19[0x3];                                       // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSMActivateStateTransaction) == 0x000004, "Wrong alignment on FSMActivateStateTransaction");
+static_assert(sizeof(FSMActivateStateTransaction) == 0x00001C, "Wrong size on FSMActivateStateTransaction");
+static_assert(offsetof(FSMActivateStateTransaction, BaseGuid) == 0x000004, "Member 'FSMActivateStateTransaction::BaseGuid' has a wrong offset!");
+static_assert(offsetof(FSMActivateStateTransaction, TimeInState) == 0x000014, "Member 'FSMActivateStateTransaction::TimeInState' has a wrong offset!");
 
 // ScriptStruct SMSystem.SMTransitionTransaction
 // 0x0035 (0x0038 - 0x0003)

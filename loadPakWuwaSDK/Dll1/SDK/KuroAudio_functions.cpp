@@ -17,333 +17,6 @@
 namespace SDK
 {
 
-// Function KuroAudio.KuroAmbientSoundComponent.PlaySound
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
-
-void UKuroAmbientSoundComponent::PlaySound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAmbientSoundComponent", "PlaySound");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAmbientSoundComponent.StopSound
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
-
-void UKuroAmbientSoundComponent::StopSound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAmbientSoundComponent", "StopSound");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAmbientSoundComponent.IsPlaying
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UKuroAmbientSoundComponent::IsPlaying() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAmbientSoundComponent", "IsPlaying");
-
-	Params::KuroAmbientSoundComponent_IsPlaying Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroAudio.KuroAudioDelegates.SetAudioPauseDelegate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TDelegate<void()>&                InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UKuroAudioDelegates::SetAudioPauseDelegate(const TDelegate<void()>& InDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroAudioDelegates", "SetAudioPauseDelegate");
-
-	Params::KuroAudioDelegates_SetAudioPauseDelegate Parms{};
-
-	Parms.InDelegate = InDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAudioDelegates.SetAudioResumeDelegate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const TDelegate<void()>&                InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UKuroAudioDelegates::SetAudioResumeDelegate(const TDelegate<void()>& InDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroAudioDelegates", "SetAudioResumeDelegate");
-
-	Params::KuroAudioDelegates_SetAudioResumeDelegate Parms{};
-
-	Parms.InDelegate = InDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAudioDelegates.UnbindAudioPauseDelegate
-// (Final, Native, Static, Public, BlueprintCallable)
-
-void UKuroAudioDelegates::UnbindAudioPauseDelegate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroAudioDelegates", "UnbindAudioPauseDelegate");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAudioDelegates.UnbindAudioResumeDelegate
-// (Final, Native, Static, Public, BlueprintCallable)
-
-void UKuroAudioDelegates::UnbindAudioResumeDelegate()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("KuroAudioDelegates", "UnbindAudioResumeDelegate");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.D_DynamicReverbTrace
-// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVectorDouble&             Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bForceUpdate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroAudioEnvironmentSubsystem::D_DynamicReverbTrace(const struct FVectorDouble& Location, const bool bForceUpdate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "D_DynamicReverbTrace");
-
-	Params::KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace Parms{};
-
-	Parms.Location = std::move(Location);
-	Parms.bForceUpdate = bForceUpdate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.DynamicReverbApply
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
-
-void UKuroAudioEnvironmentSubsystem::DynamicReverbApply()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "DynamicReverbApply");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.DynamicReverbReset
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
-
-void UKuroAudioEnvironmentSubsystem::DynamicReverbReset()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "DynamicReverbReset");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.DynamicReverbTrace
-// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const bool                              bForceUpdate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UKuroAudioEnvironmentSubsystem::DynamicReverbTrace(const struct FVector& Location, const bool bForceUpdate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "DynamicReverbTrace");
-
-	Params::KuroAudioEnvironmentSubsystem_DynamicReverbTrace Parms{};
-
-	Parms.Location = std::move(Location);
-	Parms.bForceUpdate = bForceUpdate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentInfo
-// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKuroAudioEnvironmentInfo        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FKuroAudioEnvironmentInfo UKuroAudioEnvironmentSubsystem::GetEnvironmentInfo(const struct FVector& Location) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "GetEnvironmentInfo");
-
-	Params::KuroAudioEnvironmentSubsystem_GetEnvironmentInfo Parms{};
-
-	Parms.Location = std::move(Location);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentInfo_MusicCompatible
-// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FKuroAudioEnvironmentInfo        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-struct FKuroAudioEnvironmentInfo UKuroAudioEnvironmentSubsystem::GetEnvironmentInfo_MusicCompatible(const struct FVector& Location) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "GetEnvironmentInfo_MusicCompatible");
-
-	Params::KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible Parms{};
-
-	Parms.Location = std::move(Location);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentStates
-// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TMap<class FString, class FString>      ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-
-TMap<class FString, class FString> UKuroAudioEnvironmentSubsystem::GetEnvironmentStates(const struct FVector& Location) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "GetEnvironmentStates");
-
-	Params::KuroAudioEnvironmentSubsystem_GetEnvironmentStates Parms{};
-
-	Parms.Location = std::move(Location);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function KuroAudio.KuroAudioStatics.ChangeIosAudioSessionProperties
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 
@@ -796,6 +469,333 @@ void UKuroAudioStatics::StopAll(const class AActor* Actor)
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAmbientSoundComponent.PlaySound
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+
+void UKuroAmbientSoundComponent::PlaySound()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAmbientSoundComponent", "PlaySound");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAmbientSoundComponent.StopSound
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+
+void UKuroAmbientSoundComponent::StopSound()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAmbientSoundComponent", "StopSound");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAmbientSoundComponent.IsPlaying
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroAmbientSoundComponent::IsPlaying() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAmbientSoundComponent", "IsPlaying");
+
+	Params::KuroAmbientSoundComponent_IsPlaying Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAudio.KuroAudioDelegates.SetAudioPauseDelegate
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TDelegate<void()>&                InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UKuroAudioDelegates::SetAudioPauseDelegate(const TDelegate<void()>& InDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAudioDelegates", "SetAudioPauseDelegate");
+
+	Params::KuroAudioDelegates_SetAudioPauseDelegate Parms{};
+
+	Parms.InDelegate = InDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAudioDelegates.SetAudioResumeDelegate
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const TDelegate<void()>&                InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UKuroAudioDelegates::SetAudioResumeDelegate(const TDelegate<void()>& InDelegate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAudioDelegates", "SetAudioResumeDelegate");
+
+	Params::KuroAudioDelegates_SetAudioResumeDelegate Parms{};
+
+	Parms.InDelegate = InDelegate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAudioDelegates.UnbindAudioPauseDelegate
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UKuroAudioDelegates::UnbindAudioPauseDelegate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAudioDelegates", "UnbindAudioPauseDelegate");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAudioDelegates.UnbindAudioResumeDelegate
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UKuroAudioDelegates::UnbindAudioResumeDelegate()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroAudioDelegates", "UnbindAudioResumeDelegate");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.D_DynamicReverbTrace
+// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVectorDouble&             Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bForceUpdate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroAudioEnvironmentSubsystem::D_DynamicReverbTrace(const struct FVectorDouble& Location, const bool bForceUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "D_DynamicReverbTrace");
+
+	Params::KuroAudioEnvironmentSubsystem_D_DynamicReverbTrace Parms{};
+
+	Parms.Location = std::move(Location);
+	Parms.bForceUpdate = bForceUpdate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.DynamicReverbApply
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+
+void UKuroAudioEnvironmentSubsystem::DynamicReverbApply()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "DynamicReverbApply");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.DynamicReverbReset
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+
+void UKuroAudioEnvironmentSubsystem::DynamicReverbReset()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "DynamicReverbReset");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.DynamicReverbTrace
+// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const bool                              bForceUpdate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UKuroAudioEnvironmentSubsystem::DynamicReverbTrace(const struct FVector& Location, const bool bForceUpdate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "DynamicReverbTrace");
+
+	Params::KuroAudioEnvironmentSubsystem_DynamicReverbTrace Parms{};
+
+	Parms.Location = std::move(Location);
+	Parms.bForceUpdate = bForceUpdate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentInfo
+// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FKuroAudioEnvironmentInfo        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FKuroAudioEnvironmentInfo UKuroAudioEnvironmentSubsystem::GetEnvironmentInfo(const struct FVector& Location) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "GetEnvironmentInfo");
+
+	Params::KuroAudioEnvironmentSubsystem_GetEnvironmentInfo Parms{};
+
+	Parms.Location = std::move(Location);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentInfo_MusicCompatible
+// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FKuroAudioEnvironmentInfo        ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FKuroAudioEnvironmentInfo UKuroAudioEnvironmentSubsystem::GetEnvironmentInfo_MusicCompatible(const struct FVector& Location) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "GetEnvironmentInfo_MusicCompatible");
+
+	Params::KuroAudioEnvironmentSubsystem_GetEnvironmentInfo_MusicCompatible Parms{};
+
+	Parms.Location = std::move(Location);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroAudio.KuroAudioEnvironmentSubsystem.GetEnvironmentStates
+// (Final, BlueprintCosmetic, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FVector&                   Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TMap<class FString, class FString>      ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+TMap<class FString, class FString> UKuroAudioEnvironmentSubsystem::GetEnvironmentStates(const struct FVector& Location) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("KuroAudioEnvironmentSubsystem", "GetEnvironmentStates");
+
+	Params::KuroAudioEnvironmentSubsystem_GetEnvironmentStates Parms{};
+
+	Parms.Location = std::move(Location);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

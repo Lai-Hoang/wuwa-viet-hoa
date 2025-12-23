@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "TemplateSequence_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
+#include "TemplateSequence_structs.hpp"
 
 
 namespace SDK
@@ -213,11 +213,11 @@ static_assert(offsetof(ATemplateSequenceActor, TemplateSequence) == 0x0002D8, "M
 static_assert(offsetof(ATemplateSequenceActor, BindingOverride) == 0x0002F8, "Member 'ATemplateSequenceActor::BindingOverride' has a wrong offset!");
 
 // Class TemplateSequence.TemplateSequencePlayer
-// 0x0008 (0x06F8 - 0x06F0)
+// 0x0008 (0x0700 - 0x06F8)
 class UTemplateSequencePlayer final : public UMovieSceneSequencePlayer
 {
 public:
-	uint8                                         Pad_6F0[0x8];                                      // 0x06F0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_6F8[0x8];                                      // 0x06F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UTemplateSequencePlayer* CreateTemplateSequencePlayer(class UObject* WorldContextObject, class UTemplateSequence* TemplateSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ATemplateSequenceActor** OutActor);
@@ -233,7 +233,7 @@ public:
 	}
 };
 static_assert(alignof(UTemplateSequencePlayer) == 0x000008, "Wrong alignment on UTemplateSequencePlayer");
-static_assert(sizeof(UTemplateSequencePlayer) == 0x0006F8, "Wrong size on UTemplateSequencePlayer");
+static_assert(sizeof(UTemplateSequencePlayer) == 0x000700, "Wrong size on UTemplateSequencePlayer");
 
 // Class TemplateSequence.TemplateSequenceSystem
 // 0x0070 (0x00B8 - 0x0048)

@@ -10,18 +10,18 @@
 
 #include "Basic.hpp"
 
-#include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "SSequenceCamera_Settings_structs.hpp"
-#include "SCameraDebugTool_SubCameraModification_structs.hpp"
-#include "ECameraGravityMode_structs.hpp"
-#include "EAimAssistMode_structs.hpp"
-#include "SCameraDebugTool_CameraModeInfo_structs.hpp"
 #include "SCameraDebugTool_ControllerModification_structs.hpp"
+#include "ECameraGravityMode_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SCameraDebugTool_CameraModeInfo_structs.hpp"
+#include "SCameraDebugTool_SubCameraModification_structs.hpp"
+#include "EAimAssistMode_structs.hpp"
+#include "ESequenceCameraAnsEffectiveClientType_structs.hpp"
+#include "SSequenceCamera_Settings_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "SCameraModifier_Condition_structs.hpp"
 #include "SCameraModifier_Settings_structs.hpp"
 #include "SBaseCurve_structs.hpp"
+#include "SCameraModifier_Condition_structs.hpp"
 #include "ECameraAnsEffectiveClientType_structs.hpp"
 #include "ECustomCameraMode_structs.hpp"
 #include "Engine_structs.hpp"
@@ -1009,6 +1009,24 @@ static_assert(alignof(CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEnti
 static_assert(sizeof(CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId) == 0x000010, "Wrong size on CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId");
 static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId, __WorldContext) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId::__WorldContext' has a wrong offset!");
 static_assert(offsetof(CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId, ReturnValue) == 0x000008, "Member 'CameraBlueprintFunctionLibrary_C_GetCameraSpecificLockEntityId::ReturnValue' has a wrong offset!");
+
+// Function CameraBlueprintFunctionLibrary.CameraBlueprintFunctionLibrary_C.EnableCameraSpecificLockLocation
+// 0x0030 (0x0030 - 0x0000)
+struct CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation final
+{
+public:
+	struct FVectorDouble                          location;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         priority;                                          // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_1C[0x4];                                       // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation) == 0x000008, "Wrong alignment on CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation");
+static_assert(sizeof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation) == 0x000030, "Wrong size on CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation");
+static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation, location) == 0x000000, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation::location' has a wrong offset!");
+static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation, priority) == 0x000018, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation::priority' has a wrong offset!");
+static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation, __WorldContext) == 0x000020, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation::__WorldContext' has a wrong offset!");
+static_assert(offsetof(CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation, ReturnValue) == 0x000028, "Member 'CameraBlueprintFunctionLibrary_C_EnableCameraSpecificLockLocation::ReturnValue' has a wrong offset!");
 
 }
 

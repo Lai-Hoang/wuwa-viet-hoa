@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "ESceneBattleInteractEntityType_structs.hpp"
 #include "Engine_classes.hpp"
+#include "ESceneBattleInteractEntityType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SceneBattleInteract.BP_SceneBattleInteract_C
-// 0x0060 (0x0098 - 0x0038)
+// 0x0090 (0x00C8 - 0x0038)
 class UBP_SceneBattleInteract_C final : public UPrimaryDataAsset
 {
 public:
@@ -36,12 +36,22 @@ public:
 	int32                                         RippleType;                                        // 0x0074(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RippleDensity;                                     // 0x0078(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESceneBattleInteractEntityType                EntityType;                                        // 0x007C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_7D[0x3];                                       // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          BreakEvent;                                        // 0x007D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_7E[0x2];                                       // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BreakIntensity;                                    // 0x0080(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         BreakRadius;                                       // 0x0084(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RippleMinConnectDistance;                          // 0x0088(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         RippleMaxConnectDistance;                          // 0x008C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SendWeaponEvent;                                   // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ForceFieldRadius;                                  // 0x0094(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         RotationalForceField;                              // 0x0098(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CentripetalForceField;                             // 0x009C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DirectionalForceField;                             // 0x00A0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         NoiseForceField;                                   // 0x00AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         WeaponRadius;                                      // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                WeaponOffset;                                      // 0x00B4(0x000C)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         SampleIntensity;                                   // 0x00C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -54,7 +64,7 @@ public:
 	}
 };
 static_assert(alignof(UBP_SceneBattleInteract_C) == 0x000008, "Wrong alignment on UBP_SceneBattleInteract_C");
-static_assert(sizeof(UBP_SceneBattleInteract_C) == 0x000098, "Wrong size on UBP_SceneBattleInteract_C");
+static_assert(sizeof(UBP_SceneBattleInteract_C) == 0x0000C8, "Wrong size on UBP_SceneBattleInteract_C");
 static_assert(offsetof(UBP_SceneBattleInteract_C, ShapeType) == 0x000038, "Member 'UBP_SceneBattleInteract_C::ShapeType' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, WeaponType) == 0x00003C, "Member 'UBP_SceneBattleInteract_C::WeaponType' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, EffectRadius) == 0x000040, "Member 'UBP_SceneBattleInteract_C::EffectRadius' has a wrong offset!");
@@ -67,11 +77,20 @@ static_assert(offsetof(UBP_SceneBattleInteract_C, RippleIntensity) == 0x000070, 
 static_assert(offsetof(UBP_SceneBattleInteract_C, RippleType) == 0x000074, "Member 'UBP_SceneBattleInteract_C::RippleType' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, RippleDensity) == 0x000078, "Member 'UBP_SceneBattleInteract_C::RippleDensity' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, EntityType) == 0x00007C, "Member 'UBP_SceneBattleInteract_C::EntityType' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, BreakEvent) == 0x00007D, "Member 'UBP_SceneBattleInteract_C::BreakEvent' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, BreakIntensity) == 0x000080, "Member 'UBP_SceneBattleInteract_C::BreakIntensity' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, BreakRadius) == 0x000084, "Member 'UBP_SceneBattleInteract_C::BreakRadius' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, RippleMinConnectDistance) == 0x000088, "Member 'UBP_SceneBattleInteract_C::RippleMinConnectDistance' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, RippleMaxConnectDistance) == 0x00008C, "Member 'UBP_SceneBattleInteract_C::RippleMaxConnectDistance' has a wrong offset!");
 static_assert(offsetof(UBP_SceneBattleInteract_C, SendWeaponEvent) == 0x000090, "Member 'UBP_SceneBattleInteract_C::SendWeaponEvent' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, ForceFieldRadius) == 0x000094, "Member 'UBP_SceneBattleInteract_C::ForceFieldRadius' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, RotationalForceField) == 0x000098, "Member 'UBP_SceneBattleInteract_C::RotationalForceField' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, CentripetalForceField) == 0x00009C, "Member 'UBP_SceneBattleInteract_C::CentripetalForceField' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, DirectionalForceField) == 0x0000A0, "Member 'UBP_SceneBattleInteract_C::DirectionalForceField' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, NoiseForceField) == 0x0000AC, "Member 'UBP_SceneBattleInteract_C::NoiseForceField' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, WeaponRadius) == 0x0000B0, "Member 'UBP_SceneBattleInteract_C::WeaponRadius' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, WeaponOffset) == 0x0000B4, "Member 'UBP_SceneBattleInteract_C::WeaponOffset' has a wrong offset!");
+static_assert(offsetof(UBP_SceneBattleInteract_C, SampleIntensity) == 0x0000C0, "Member 'UBP_SceneBattleInteract_C::SampleIntensity' has a wrong offset!");
 
 }
 

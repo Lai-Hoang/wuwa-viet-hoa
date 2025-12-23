@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "KuroHotPatch_structs.hpp"
+#include "CoreUObject_classes.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -62,7 +62,9 @@ public:
 	class FString                                 ParallelApp;                                       // 0x0070(0x0010)(Edit, ZeroConstructor, Config, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bLocalPackaging;                                   // 0x0080(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bNeedHotPatch;                                     // 0x0081(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_82[0x6];                                       // 0x0082(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSeparateVideo;                                    // 0x0082(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableOptionalPackage;                            // 0x0083(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_84[0x4];                                       // 0x0084(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -83,6 +85,8 @@ static_assert(offsetof(UKuroAppSetting, InternalUse) == 0x000060, "Member 'UKuro
 static_assert(offsetof(UKuroAppSetting, ParallelApp) == 0x000070, "Member 'UKuroAppSetting::ParallelApp' has a wrong offset!");
 static_assert(offsetof(UKuroAppSetting, bLocalPackaging) == 0x000080, "Member 'UKuroAppSetting::bLocalPackaging' has a wrong offset!");
 static_assert(offsetof(UKuroAppSetting, bNeedHotPatch) == 0x000081, "Member 'UKuroAppSetting::bNeedHotPatch' has a wrong offset!");
+static_assert(offsetof(UKuroAppSetting, bSeparateVideo) == 0x000082, "Member 'UKuroAppSetting::bSeparateVideo' has a wrong offset!");
+static_assert(offsetof(UKuroAppSetting, bEnableOptionalPackage) == 0x000083, "Member 'UKuroAppSetting::bEnableOptionalPackage' has a wrong offset!");
 
 // Class KuroHotPatch.KuroCheckFiles
 // 0x0048 (0x0078 - 0x0030)
@@ -175,6 +179,7 @@ public:
 	static void ClearPatchPaks();
 	static void CloseShaderLibrary();
 	static bool CopyFile(const class FString& DstPath, const class FString& SrcPath);
+	static void CreateRestartFile();
 	static bool Decrypt(const class FString& InCipher, class FString* OutPlain);
 	static bool DeleteDirectory(const class FString& DirPath);
 	static bool DeleteFile(const class FString& FilePath);
@@ -193,8 +198,10 @@ public:
 	static int32 GetRemainPrecompileShaders();
 	static int64 GetTotalAndFreeSpace(const class FString& CheckPath, int64* FreeSize);
 	static int32 GetTotalPrecompileShaders();
+	static bool IsEnableOptionalPackage();
 	static bool IsFirstIntoLauncher();
 	static bool IsLocalPackaging();
+	static bool IsSeparateVideo();
 	static bool IsStartupMountSuccess();
 	static void LogoutToLauncher();
 	static bool MakeDirectory(const class FString& DirPath);

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "EEffectType_structs.hpp"
 #include "EEffectPlay_structs.hpp"
+#include "EEffectType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "SEffectColorParameter_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "SEffectFloatParameter_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_structs.hpp"
 #include "KuroRenderingRuntimeBPPlugin_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SEffectFloatParameter_structs.hpp"
 #include "SEffectVectorParameter_structs.hpp"
 
 
@@ -67,6 +67,7 @@ public:
 	class FString                                 FloatParameterName2;                               // 0x03D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	EEffectPlay                                   EditorPlayType;                                    // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          VisibleInRaytracing;                               // 0x03E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          InUIScene;                                         // 0x03E2(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	void ExecuteUbergraph_BP_EffectActor(int32 EntryPoint);
@@ -87,7 +88,10 @@ public:
 	void Play(const class FString& Reason);
 	void PlayEffect();
 	void StopEffect();
+	void AfterSpawnEffect(int32 EffectHandle);
 	void GetHandle(int32* Handle);
+
+	struct FBox GetStreamingBoundsEx() const;
 
 public:
 	static class UClass* StaticClass()
@@ -135,6 +139,7 @@ static_assert(offsetof(ABP_EffectActor_C, FloatParameterName1) == 0x0003C0, "Mem
 static_assert(offsetof(ABP_EffectActor_C, FloatParameterName2) == 0x0003D0, "Member 'ABP_EffectActor_C::FloatParameterName2' has a wrong offset!");
 static_assert(offsetof(ABP_EffectActor_C, EditorPlayType) == 0x0003E0, "Member 'ABP_EffectActor_C::EditorPlayType' has a wrong offset!");
 static_assert(offsetof(ABP_EffectActor_C, VisibleInRaytracing) == 0x0003E1, "Member 'ABP_EffectActor_C::VisibleInRaytracing' has a wrong offset!");
+static_assert(offsetof(ABP_EffectActor_C, InUIScene) == 0x0003E2, "Member 'ABP_EffectActor_C::InUIScene' has a wrong offset!");
 
 }
 

@@ -57,20 +57,6 @@ static_assert(offsetof(FActorSerializeData, RootComponentPropertyData) == 0x0000
 static_assert(offsetof(FActorSerializeData, HierarchyIndex) == 0x000040, "Member 'FActorSerializeData::HierarchyIndex' has a wrong offset!");
 static_assert(offsetof(FActorSerializeData, IsActive) == 0x000044, "Member 'FActorSerializeData::IsActive' has a wrong offset!");
 
-// ScriptStruct PrefabSystem.NestedPrefabInstanceChain
-// 0x0018 (0x0018 - 0x0000)
-struct FNestedPrefabInstanceChain final
-{
-public:
-	int32                                         FileID;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 FileIDChain;                                       // 0x0008(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FNestedPrefabInstanceChain) == 0x000008, "Wrong alignment on FNestedPrefabInstanceChain");
-static_assert(sizeof(FNestedPrefabInstanceChain) == 0x000018, "Wrong size on FNestedPrefabInstanceChain");
-static_assert(offsetof(FNestedPrefabInstanceChain, FileID) == 0x000000, "Member 'FNestedPrefabInstanceChain::FileID' has a wrong offset!");
-static_assert(offsetof(FNestedPrefabInstanceChain, FileIDChain) == 0x000008, "Member 'FNestedPrefabInstanceChain::FileIDChain' has a wrong offset!");
-
 // ScriptStruct PrefabSystem.ComponentSerializeData
 // 0x002C (0x0038 - 0x000C)
 struct FComponentSerializeData final : public FObjectSerializeData
@@ -90,6 +76,20 @@ static_assert(offsetof(FComponentSerializeData, ParentComponentFileID) == 0x0000
 static_assert(offsetof(FComponentSerializeData, HierarchyIndex) == 0x000014, "Member 'FComponentSerializeData::HierarchyIndex' has a wrong offset!");
 static_assert(offsetof(FComponentSerializeData, Name) == 0x000018, "Member 'FComponentSerializeData::Name' has a wrong offset!");
 static_assert(offsetof(FComponentSerializeData, PropertyData) == 0x000028, "Member 'FComponentSerializeData::PropertyData' has a wrong offset!");
+
+// ScriptStruct PrefabSystem.NestedPrefabInstanceChain
+// 0x0018 (0x0018 - 0x0000)
+struct FNestedPrefabInstanceChain final
+{
+public:
+	int32                                         FileID;                                            // 0x0000(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 FileIDChain;                                       // 0x0008(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FNestedPrefabInstanceChain) == 0x000008, "Wrong alignment on FNestedPrefabInstanceChain");
+static_assert(sizeof(FNestedPrefabInstanceChain) == 0x000018, "Wrong size on FNestedPrefabInstanceChain");
+static_assert(offsetof(FNestedPrefabInstanceChain, FileID) == 0x000000, "Member 'FNestedPrefabInstanceChain::FileID' has a wrong offset!");
+static_assert(offsetof(FNestedPrefabInstanceChain, FileIDChain) == 0x000008, "Member 'FNestedPrefabInstanceChain::FileIDChain' has a wrong offset!");
 
 // ScriptStruct PrefabSystem.NestedPrefabInstanceData
 // 0x0048 (0x0048 - 0x0000)

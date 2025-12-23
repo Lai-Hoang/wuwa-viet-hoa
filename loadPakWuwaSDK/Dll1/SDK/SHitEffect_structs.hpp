@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "SHitWhirlpool_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "EHitAnim_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "EVelocityCurveType_structs.hpp"
+#include "SHitWhirlpool_structs.hpp"
 
 
 namespace SDK

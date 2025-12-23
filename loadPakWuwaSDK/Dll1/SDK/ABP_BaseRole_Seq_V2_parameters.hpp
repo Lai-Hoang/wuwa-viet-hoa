@@ -18,40 +18,64 @@ namespace SDK::Params
 {
 
 // Function ABP_BaseRole_Seq_V2.ABP_BaseRole_Seq_V2_C.ExecuteUbergraph_ABP_BaseRole_Seq_V2
-// 0x0050 (0x0050 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2 final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4[0x4];                                        // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TScriptInterface<class IABPC_Seq_Interface_C> K2Node_DynamicCast_AsABPC_Seq_Interface;           // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_21[0x3];                                       // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         K2Node_Event_DeltaTimeX;                           // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UABPC_Seq_Body_V2_C*                    CallFunc_GetABPC_Body_V2_ABPC_Body_V2;             // 0x0028(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_3D[0x3];                                       // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x0044(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_DeltaTimeX;                           // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwningActor_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_TryGetPawnOwner_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TScriptInterface<class ISeqAnimDataInterface> K2Node_DynamicCast_AsSeq_Anim_Data_Interface;      // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_29[0x7];                                       // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TScriptInterface<class IABPC_Seq_Interface_C> K2Node_DynamicCast_AsABPC_Seq_Interface;           // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_41[0x7];                                       // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FName, struct FTransform>          CallFunc_GetAnimDataTransform_FloatCurveData;      // 0x0048(0x0050)()
+	bool                                          CallFunc_GetAnimDataTransform_ReturnValue;         // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_99[0x7];                                       // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UABPC_Seq_Body_V2_C*                    CallFunc_GetABPC_Body_V2_ABPC_Body_V2;             // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_A9[0x3];                                       // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_Multiply_FloatFloat_ReturnValue;          // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x00BC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_Event_Alpha;                                // 0x00C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2) == 0x000008, "Wrong alignment on ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2");
-static_assert(sizeof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2) == 0x000050, "Wrong size on ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2");
+static_assert(sizeof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2) == 0x0000C8, "Wrong size on ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2");
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, EntryPoint) == 0x000000, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::EntryPoint' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000008, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_DynamicCast_AsABPC_Seq_Interface) == 0x000010, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_DynamicCast_AsABPC_Seq_Interface' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_Event_DeltaTimeX) == 0x000024, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_Event_DeltaTimeX' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_GetABPC_Body_V2_ABPC_Body_V2) == 0x000028, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_GetABPC_Body_V2_ABPC_Body_V2' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_BreakRotator_Roll) == 0x000030, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_BreakRotator_Pitch) == 0x000034, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_BreakRotator_Yaw) == 0x000038, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_IsValid_ReturnValue) == 0x00003C, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x000040, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_MakeVector2D_ReturnValue) == 0x000044, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_Event_DeltaTimeX) == 0x000004, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_Event_DeltaTimeX' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_GetOwningActor_ReturnValue) == 0x000008, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_GetOwningActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_TryGetPawnOwner_ReturnValue) == 0x000010, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_TryGetPawnOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_DynamicCast_AsSeq_Anim_Data_Interface) == 0x000018, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_DynamicCast_AsSeq_Anim_Data_Interface' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_DynamicCast_bSuccess) == 0x000028, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_DynamicCast_AsABPC_Seq_Interface) == 0x000030, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_DynamicCast_AsABPC_Seq_Interface' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_DynamicCast_bSuccess_1) == 0x000040, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_GetAnimDataTransform_FloatCurveData) == 0x000048, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_GetAnimDataTransform_FloatCurveData' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_GetAnimDataTransform_ReturnValue) == 0x000098, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_GetAnimDataTransform_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_GetABPC_Body_V2_ABPC_Body_V2) == 0x0000A0, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_GetABPC_Body_V2_ABPC_Body_V2' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_IsValid_ReturnValue) == 0x0000A8, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_BreakRotator_Roll) == 0x0000AC, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_BreakRotator_Pitch) == 0x0000B0, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_BreakRotator_Yaw) == 0x0000B4, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_Multiply_FloatFloat_ReturnValue) == 0x0000B8, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_Multiply_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, CallFunc_MakeVector2D_ReturnValue) == 0x0000BC, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::CallFunc_MakeVector2D_ReturnValue' has a wrong offset!");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2, K2Node_Event_Alpha) == 0x0000C4, "Member 'ABP_BaseRole_Seq_V2_C_ExecuteUbergraph_ABP_BaseRole_Seq_V2::K2Node_Event_Alpha' has a wrong offset!");
+
+// Function ABP_BaseRole_Seq_V2.ABP_BaseRole_Seq_V2_C.SetStateAnimAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_BaseRole_Seq_V2_C_SetStateAnimAlpha final
+{
+public:
+	float                                         Alpha;                                             // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_BaseRole_Seq_V2_C_SetStateAnimAlpha) == 0x000004, "Wrong alignment on ABP_BaseRole_Seq_V2_C_SetStateAnimAlpha");
+static_assert(sizeof(ABP_BaseRole_Seq_V2_C_SetStateAnimAlpha) == 0x000004, "Wrong size on ABP_BaseRole_Seq_V2_C_SetStateAnimAlpha");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_SetStateAnimAlpha, Alpha) == 0x000000, "Member 'ABP_BaseRole_Seq_V2_C_SetStateAnimAlpha::Alpha' has a wrong offset!");
 
 // Function ABP_BaseRole_Seq_V2.ABP_BaseRole_Seq_V2_C.BlueprintUpdateAnimation
 // 0x0004 (0x0004 - 0x0000)
@@ -124,6 +148,17 @@ static_assert(alignof(ABP_BaseRole_Seq_V2_C_修型层) == 0x000008, "Wrong align
 static_assert(sizeof(ABP_BaseRole_Seq_V2_C_修型层) == 0x000020, "Wrong size on ABP_BaseRole_Seq_V2_C_修型层");
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C_修型层, InPose_0) == 0x000000, "Member 'ABP_BaseRole_Seq_V2_C_修型层::InPose_0' has a wrong offset!");
 static_assert(offsetof(ABP_BaseRole_Seq_V2_C_修型层, 修型层_0) == 0x000010, "Member 'ABP_BaseRole_Seq_V2_C_修型层::修型层_0' has a wrong offset!");
+
+// Function ABP_BaseRole_Seq_V2.ABP_BaseRole_Seq_V2_C.GetStateAnimAlpha
+// 0x0004 (0x0004 - 0x0000)
+struct ABP_BaseRole_Seq_V2_C_GetStateAnimAlpha final
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(ABP_BaseRole_Seq_V2_C_GetStateAnimAlpha) == 0x000004, "Wrong alignment on ABP_BaseRole_Seq_V2_C_GetStateAnimAlpha");
+static_assert(sizeof(ABP_BaseRole_Seq_V2_C_GetStateAnimAlpha) == 0x000004, "Wrong size on ABP_BaseRole_Seq_V2_C_GetStateAnimAlpha");
+static_assert(offsetof(ABP_BaseRole_Seq_V2_C_GetStateAnimAlpha, ReturnValue) == 0x000000, "Member 'ABP_BaseRole_Seq_V2_C_GetStateAnimAlpha::ReturnValue' has a wrong offset!");
 
 }
 

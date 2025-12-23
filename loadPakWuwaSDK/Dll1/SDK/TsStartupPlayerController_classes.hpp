@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // TypeScriptGeneratedClass TsStartupPlayerController.TsStartupPlayerController_C
-// 0x0000 (0x0778 - 0x0778)
+// 0x0000 (0x0788 - 0x0788)
 class ATsStartupPlayerController_C : public ATsBasePlayerController_C
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(ATsStartupPlayerController_C) == 0x000008, "Wrong alignment on ATsStartupPlayerController_C");
-static_assert(sizeof(ATsStartupPlayerController_C) == 0x000778, "Wrong size on ATsStartupPlayerController_C");
+static_assert(sizeof(ATsStartupPlayerController_C) == 0x000788, "Wrong size on ATsStartupPlayerController_C");
 
 }
 

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "EInteractionType_structs.hpp"
-#include "SInteractionOption_structs.hpp"
 #include "EinteractionIconType_structs.hpp"
+#include "SInteractionOption_structs.hpp"
 
 
 namespace SDK

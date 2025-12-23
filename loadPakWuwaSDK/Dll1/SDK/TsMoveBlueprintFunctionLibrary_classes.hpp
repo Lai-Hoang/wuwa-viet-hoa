@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_classes.hpp"
+#include "EClimbState_structs.hpp"
 #include "EMovementDirection_structs.hpp"
 #include "EExitClimb_structs.hpp"
 #include "EEnterClimb_structs.hpp"
-#include "EClimbState_structs.hpp"
 
 
 namespace SDK
@@ -123,6 +123,12 @@ public:
 	static void TurnOnCameraDrivenAutoFlightMode(int32 entityId, class UBP_CameraDrivenAutoFlightData_C* dataAsset, class UObject* __WorldContext);
 	static void AddActorWorldOffsetWithContextAndReset(int32 entityId, const struct FVectorDouble& offset, bool sweep, const class FString& context, class UObject* __WorldContext);
 	static bool SetActorLookAtWithContext(int32 entityId, const struct FVectorDouble& targetPoint, const class FString& context, class UObject* __WorldContext);
+	static bool MoveCharacter(int32 entityId, const struct FVectorDouble& targetLocation, float speed, int32 arriveDist, class UObject* __WorldContext);
+	static struct FVeloctiyBlend LerpVelocityBlend(const struct FVeloctiyBlend& out, const struct FVeloctiyBlend& to, float alpha, class UObject* __WorldContext);
+	static void LeftStartSwing(int32 entityId, class UObject* __WorldContext);
+	static void LeftLoopSwing(int32 entityId, class UObject* __WorldContext);
+	static void LeftEndSwing(int32 entityId, class UObject* __WorldContext);
+	static void ResetClimbConfig(int32 entityId, const class FString& key, class UObject* __WorldContext);
 
 public:
 	static class UClass* StaticClass()

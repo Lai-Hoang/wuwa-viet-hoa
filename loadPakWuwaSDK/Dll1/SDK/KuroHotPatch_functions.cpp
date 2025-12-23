@@ -463,6 +463,25 @@ bool UKuroLauncherLibrary::CopyFile(const class FString& DstPath, const class FS
 }
 
 
+// Function KuroHotPatch.KuroLauncherLibrary.CreateRestartFile
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UKuroLauncherLibrary::CreateRestartFile()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroLauncherLibrary", "CreateRestartFile");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function KuroHotPatch.KuroLauncherLibrary.Decrypt
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -966,6 +985,31 @@ int32 UKuroLauncherLibrary::GetTotalPrecompileShaders()
 }
 
 
+// Function KuroHotPatch.KuroLauncherLibrary.IsEnableOptionalPackage
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroLauncherLibrary::IsEnableOptionalPackage()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroLauncherLibrary", "IsEnableOptionalPackage");
+
+	Params::KuroLauncherLibrary_IsEnableOptionalPackage Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroHotPatch.KuroLauncherLibrary.IsFirstIntoLauncher
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1004,6 +1048,31 @@ bool UKuroLauncherLibrary::IsLocalPackaging()
 		Func = StaticClass()->GetFunction("KuroLauncherLibrary", "IsLocalPackaging");
 
 	Params::KuroLauncherLibrary_IsLocalPackaging Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroHotPatch.KuroLauncherLibrary.IsSeparateVideo
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UKuroLauncherLibrary::IsSeparateVideo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroLauncherLibrary", "IsSeparateVideo");
+
+	Params::KuroLauncherLibrary_IsSeparateVideo Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

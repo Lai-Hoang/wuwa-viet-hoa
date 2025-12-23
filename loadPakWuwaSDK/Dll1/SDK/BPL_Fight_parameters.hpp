@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
+#include "Engine_structs.hpp"
+#include "SGEData_structs.hpp"
 #include "GameplayTags_structs.hpp"
 #include "KuroGAS_structs.hpp"
-#include "SGEData_structs.hpp"
-#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 
 
 namespace SDK::Params
@@ -331,13 +331,15 @@ struct BPL_Fight_C_删除材质效果 final
 public:
 	class ATsBaseCharacter_C*                     设置对象_;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Handle_;                                           // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_C[0x4];                                        // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          PlayWithEnd;                                       // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	uint8                                         Pad_D[0x3];                                        // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPL_Fight_C_删除材质效果) == 0x000008, "Wrong alignment on BPL_Fight_C_删除材质效果");
 static_assert(sizeof(BPL_Fight_C_删除材质效果) == 0x000018, "Wrong size on BPL_Fight_C_删除材质效果");
 static_assert(offsetof(BPL_Fight_C_删除材质效果, 设置对象_) == 0x000000, "Member 'BPL_Fight_C_删除材质效果::设置对象_' has a wrong offset!");
 static_assert(offsetof(BPL_Fight_C_删除材质效果, Handle_) == 0x000008, "Member 'BPL_Fight_C_删除材质效果::Handle_' has a wrong offset!");
+static_assert(offsetof(BPL_Fight_C_删除材质效果, PlayWithEnd) == 0x00000C, "Member 'BPL_Fight_C_删除材质效果::PlayWithEnd' has a wrong offset!");
 static_assert(offsetof(BPL_Fight_C_删除材质效果, __WorldContext) == 0x000010, "Member 'BPL_Fight_C_删除材质效果::__WorldContext' has a wrong offset!");
 
 // Function BPL_Fight.BPL_Fight_C.反应伤害倍率计算

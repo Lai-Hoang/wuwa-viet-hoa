@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "ESkillTargetDirection_structs.hpp"
+#include "ESkillOverrideType_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "SSkillBehavior_structs.hpp"
+#include "SSkillCooldownInfo_structs.hpp"
+#include "SSkillTarget_structs.hpp"
 #include "ESkillMode_structs.hpp"
 #include "GameplayTags_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "SSkillCooldownInfo_structs.hpp"
 #include "SSkillTrigger_structs.hpp"
-#include "SSkillBehavior_structs.hpp"
 #include "ESkillGenre_structs.hpp"
-#include "SSkillTarget_structs.hpp"
-#include "ESkillOverrideType_structs.hpp"
+#include "ESkillTargetDirection_structs.hpp"
 
 
 namespace SDK

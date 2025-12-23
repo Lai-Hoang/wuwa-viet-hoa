@@ -51,6 +51,7 @@ public:
 	uint8                                         Pad_F9[0x3];                                       // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         相机过渡时间;                                      // 0x00FC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          约束宽高比;                                        // 0x0100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
+	bool                                          IsEnableDynamicStreamingSource;                    // 0x0101(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -87,6 +88,7 @@ static_assert(offsetof(UBP_SequenceData_C, GraphName) == 0x0000E8, "Member 'UBP_
 static_assert(offsetof(UBP_SequenceData_C, bIsForceFinalTrans) == 0x0000F8, "Member 'UBP_SequenceData_C::bIsForceFinalTrans' has a wrong offset!");
 static_assert(offsetof(UBP_SequenceData_C, 相机过渡时间) == 0x0000FC, "Member 'UBP_SequenceData_C::相机过渡时间' has a wrong offset!");
 static_assert(offsetof(UBP_SequenceData_C, 约束宽高比) == 0x000100, "Member 'UBP_SequenceData_C::约束宽高比' has a wrong offset!");
+static_assert(offsetof(UBP_SequenceData_C, IsEnableDynamicStreamingSource) == 0x000101, "Member 'UBP_SequenceData_C::IsEnableDynamicStreamingSource' has a wrong offset!");
 
 }
 

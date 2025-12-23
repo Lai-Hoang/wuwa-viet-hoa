@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass BP_SM_TaskRandomMontage.BP_SM_TaskRandomMontage_C
-// 0x0018 (0x0048 - 0x0030)
+// 0x0020 (0x0050 - 0x0030)
 class UBP_SM_TaskRandomMontage_C final : public UASMTask
 {
 public:
@@ -26,6 +26,7 @@ public:
 	bool                                          允许打断;                                          // 0x0041(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	uint8                                         Pad_42[0x2];                                       // 0x0042(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         BlendInTime;                                       // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          客户端随机;                                        // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 
 public:
 	static class UClass* StaticClass()
@@ -38,11 +39,12 @@ public:
 	}
 };
 static_assert(alignof(UBP_SM_TaskRandomMontage_C) == 0x000008, "Wrong alignment on UBP_SM_TaskRandomMontage_C");
-static_assert(sizeof(UBP_SM_TaskRandomMontage_C) == 0x000048, "Wrong size on UBP_SM_TaskRandomMontage_C");
+static_assert(sizeof(UBP_SM_TaskRandomMontage_C) == 0x000050, "Wrong size on UBP_SM_TaskRandomMontage_C");
 static_assert(offsetof(UBP_SM_TaskRandomMontage_C, MontageNames) == 0x000030, "Member 'UBP_SM_TaskRandomMontage_C::MontageNames' has a wrong offset!");
 static_assert(offsetof(UBP_SM_TaskRandomMontage_C, 加载期间隐藏模型) == 0x000040, "Member 'UBP_SM_TaskRandomMontage_C::加载期间隐藏模型' has a wrong offset!");
 static_assert(offsetof(UBP_SM_TaskRandomMontage_C, 允许打断) == 0x000041, "Member 'UBP_SM_TaskRandomMontage_C::允许打断' has a wrong offset!");
 static_assert(offsetof(UBP_SM_TaskRandomMontage_C, BlendInTime) == 0x000044, "Member 'UBP_SM_TaskRandomMontage_C::BlendInTime' has a wrong offset!");
+static_assert(offsetof(UBP_SM_TaskRandomMontage_C, 客户端随机) == 0x000048, "Member 'UBP_SM_TaskRandomMontage_C::客户端随机' has a wrong offset!");
 
 }
 

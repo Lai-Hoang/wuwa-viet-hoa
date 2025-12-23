@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function AudioMixer.SubmixEffectReverbPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Function AudioMixer.QuartzClockHandle.PauseClock
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// const struct FSubmixEffectReverbSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSettings& InSettings)
+void UQuartzClockHandle::PauseClock(const class UObject* WorldContextObject)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectReverbPreset", "SetSettings");
+		Func = Class->GetFunction("QuartzClockHandle", "PauseClock");
 
-	Params::SubmixEffectReverbPreset_SetSettings Parms{};
+	Params::QuartzClockHandle_PauseClock Parms{};
 
-	Parms.InSettings = std::move(InSettings);
+	Parms.WorldContextObject = WorldContextObject;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -42,25 +42,23 @@ void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSett
 }
 
 
-// Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect
-// (Final, Native, Public, BlueprintCallable)
+// Function AudioMixer.QuartzClockHandle.ResetTransport
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
-// const class UReverbEffect*              InReverbEffect                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             WetLevel                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const float                             DryLevel                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(const class UReverbEffect* InReverbEffect, const float WetLevel, const float DryLevel)
+void UQuartzClockHandle::ResetTransport(const class UObject* WorldContextObject, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& InDelegate)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("SubmixEffectReverbPreset", "SetSettingsWithReverbEffect");
+		Func = Class->GetFunction("QuartzClockHandle", "ResetTransport");
 
-	Params::SubmixEffectReverbPreset_SetSettingsWithReverbEffect Parms{};
+	Params::QuartzClockHandle_ResetTransport Parms{};
 
-	Parms.InReverbEffect = InReverbEffect;
-	Parms.WetLevel = WetLevel;
-	Parms.DryLevel = DryLevel;
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.InDelegate = InDelegate;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -68,6 +66,434 @@ void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(const class UReverbE
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.ResumeClock
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::ResumeClock(const class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "ResumeClock");
+
+	Params::QuartzClockHandle_ResumeClock Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.SetBeatsPerMinute
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
+// float                                   BeatsPerMinute                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::SetBeatsPerMinute(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float BeatsPerMinute)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "SetBeatsPerMinute");
+
+	Params::QuartzClockHandle_SetBeatsPerMinute Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
+	Parms.Delegate = Delegate;
+	Parms.BeatsPerMinute = BeatsPerMinute;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.SetMillisecondsPerTick
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
+// float                                   MillisecondsPerTick                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::SetMillisecondsPerTick(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float MillisecondsPerTick)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "SetMillisecondsPerTick");
+
+	Params::QuartzClockHandle_SetMillisecondsPerTick Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
+	Parms.Delegate = Delegate;
+	Parms.MillisecondsPerTick = MillisecondsPerTick;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.SetSecondsPerTick
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
+// float                                   SecondsPerTick                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::SetSecondsPerTick(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float SecondsPerTick)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "SetSecondsPerTick");
+
+	Params::QuartzClockHandle_SetSecondsPerTick Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
+	Parms.Delegate = Delegate;
+	Parms.SecondsPerTick = SecondsPerTick;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.SetThirtySecondNotesPerMinute
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
+// float                                   ThirtySecondsNotesPerMinute                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::SetThirtySecondNotesPerMinute(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float ThirtySecondsNotesPerMinute)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "SetThirtySecondNotesPerMinute");
+
+	Params::QuartzClockHandle_SetThirtySecondNotesPerMinute Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
+	Parms.Delegate = Delegate;
+	Parms.ThirtySecondsNotesPerMinute = ThirtySecondsNotesPerMinute;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.SetTicksPerSecond
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
+// float                                   TicksPerSecond                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::SetTicksPerSecond(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float TicksPerSecond)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "SetTicksPerSecond");
+
+	Params::QuartzClockHandle_SetTicksPerSecond Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
+	Parms.Delegate = Delegate;
+	Parms.TicksPerSecond = TicksPerSecond;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.SubscribeToAllQuantizationEvents
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)>&OnQuantizationEvent                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::SubscribeToAllQuantizationEvents(const class UObject* WorldContextObject, const TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)>& OnQuantizationEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "SubscribeToAllQuantizationEvents");
+
+	Params::QuartzClockHandle_SubscribeToAllQuantizationEvents Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.OnQuantizationEvent = OnQuantizationEvent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.SubscribeToQuantizationEvent
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EQuartzCommandQuantization              InQuantizationBoundary                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)>&OnQuantizationEvent                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::SubscribeToQuantizationEvent(const class UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary, const TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)>& OnQuantizationEvent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "SubscribeToQuantizationEvent");
+
+	Params::QuartzClockHandle_SubscribeToQuantizationEvent Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.InQuantizationBoundary = InQuantizationBoundary;
+	Parms.OnQuantizationEvent = OnQuantizationEvent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.UnsubscribeFromAllTimeDivisions
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::UnsubscribeFromAllTimeDivisions(const class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "UnsubscribeFromAllTimeDivisions");
+
+	Params::QuartzClockHandle_UnsubscribeFromAllTimeDivisions Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.UnsubscribeFromTimeDivision
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EQuartzCommandQuantization              InQuantizationBoundary                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UQuartzClockHandle::UnsubscribeFromTimeDivision(const class UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "UnsubscribeFromTimeDivision");
+
+	Params::QuartzClockHandle_UnsubscribeFromTimeDivision Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.InQuantizationBoundary = InQuantizationBoundary;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.GetBeatsPerMinute
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UQuartzClockHandle::GetBeatsPerMinute(const class UObject* WorldContextObject) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "GetBeatsPerMinute");
+
+	Params::QuartzClockHandle_GetBeatsPerMinute Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.GetMillisecondsPerTick
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UQuartzClockHandle::GetMillisecondsPerTick(const class UObject* WorldContextObject) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "GetMillisecondsPerTick");
+
+	Params::QuartzClockHandle_GetMillisecondsPerTick Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.GetSecondsPerTick
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UQuartzClockHandle::GetSecondsPerTick(const class UObject* WorldContextObject) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "GetSecondsPerTick");
+
+	Params::QuartzClockHandle_GetSecondsPerTick Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.GetThirtySecondNotesPerMinute
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UQuartzClockHandle::GetThirtySecondNotesPerMinute(const class UObject* WorldContextObject) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "GetThirtySecondNotesPerMinute");
+
+	Params::QuartzClockHandle_GetThirtySecondNotesPerMinute Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AudioMixer.QuartzClockHandle.GetTicksPerSecond
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UQuartzClockHandle::GetTicksPerSecond(const class UObject* WorldContextObject) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("QuartzClockHandle", "GetTicksPerSecond");
+
+	Params::QuartzClockHandle_GetTicksPerSecond Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1163,486 +1589,6 @@ float UAudioMixerBlueprintLibrary::TrimAudioCache(float InMegabytesToFree)
 }
 
 
-// Function AudioMixer.QuartzClockHandle.PauseClock
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::PauseClock(const class UObject* WorldContextObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "PauseClock");
-
-	Params::QuartzClockHandle_PauseClock Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.ResetTransport
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&InDelegate                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::ResetTransport(const class UObject* WorldContextObject, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& InDelegate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "ResetTransport");
-
-	Params::QuartzClockHandle_ResetTransport Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.InDelegate = InDelegate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.ResumeClock
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::ResumeClock(const class UObject* WorldContextObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "ResumeClock");
-
-	Params::QuartzClockHandle_ResumeClock Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.SetBeatsPerMinute
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-// float                                   BeatsPerMinute                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::SetBeatsPerMinute(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float BeatsPerMinute)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "SetBeatsPerMinute");
-
-	Params::QuartzClockHandle_SetBeatsPerMinute Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
-	Parms.Delegate = Delegate;
-	Parms.BeatsPerMinute = BeatsPerMinute;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.SetMillisecondsPerTick
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-// float                                   MillisecondsPerTick                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::SetMillisecondsPerTick(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float MillisecondsPerTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "SetMillisecondsPerTick");
-
-	Params::QuartzClockHandle_SetMillisecondsPerTick Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
-	Parms.Delegate = Delegate;
-	Parms.MillisecondsPerTick = MillisecondsPerTick;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.SetSecondsPerTick
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-// float                                   SecondsPerTick                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::SetSecondsPerTick(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float SecondsPerTick)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "SetSecondsPerTick");
-
-	Params::QuartzClockHandle_SetSecondsPerTick Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
-	Parms.Delegate = Delegate;
-	Parms.SecondsPerTick = SecondsPerTick;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.SetThirtySecondNotesPerMinute
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-// float                                   ThirtySecondsNotesPerMinute                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::SetThirtySecondNotesPerMinute(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float ThirtySecondsNotesPerMinute)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "SetThirtySecondNotesPerMinute");
-
-	Params::QuartzClockHandle_SetThirtySecondNotesPerMinute Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
-	Parms.Delegate = Delegate;
-	Parms.ThirtySecondsNotesPerMinute = ThirtySecondsNotesPerMinute;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.SetTicksPerSecond
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const struct FQuartzQuantizationBoundary&QuantizationBoundary                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-// const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>&Delegate                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, AdvancedDisplay, NativeAccessSpecifierPublic)
-// float                                   TicksPerSecond                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::SetTicksPerSecond(const class UObject* WorldContextObject, const struct FQuartzQuantizationBoundary& QuantizationBoundary, const TDelegate<void(EQuartzCommandDelegateSubType EventType, class FName Name)>& Delegate, float TicksPerSecond)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "SetTicksPerSecond");
-
-	Params::QuartzClockHandle_SetTicksPerSecond Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.QuantizationBoundary = std::move(QuantizationBoundary);
-	Parms.Delegate = Delegate;
-	Parms.TicksPerSecond = TicksPerSecond;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.SubscribeToAllQuantizationEvents
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)>&OnQuantizationEvent                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::SubscribeToAllQuantizationEvents(const class UObject* WorldContextObject, const TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)>& OnQuantizationEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "SubscribeToAllQuantizationEvents");
-
-	Params::QuartzClockHandle_SubscribeToAllQuantizationEvents Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.OnQuantizationEvent = OnQuantizationEvent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.SubscribeToQuantizationEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EQuartzCommandQuantization              InQuantizationBoundary                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// const TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)>&OnQuantizationEvent                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::SubscribeToQuantizationEvent(const class UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary, const TDelegate<void(class FName ClockName, EQuartzCommandQuantization QuantizationType, int32 NumBars, int32 Beat, float BeatFraction)>& OnQuantizationEvent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "SubscribeToQuantizationEvent");
-
-	Params::QuartzClockHandle_SubscribeToQuantizationEvent Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.InQuantizationBoundary = InQuantizationBoundary;
-	Parms.OnQuantizationEvent = OnQuantizationEvent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.UnsubscribeFromAllTimeDivisions
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::UnsubscribeFromAllTimeDivisions(const class UObject* WorldContextObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "UnsubscribeFromAllTimeDivisions");
-
-	Params::QuartzClockHandle_UnsubscribeFromAllTimeDivisions Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.UnsubscribeFromTimeDivision
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EQuartzCommandQuantization              InQuantizationBoundary                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UQuartzClockHandle::UnsubscribeFromTimeDivision(const class UObject* WorldContextObject, EQuartzCommandQuantization InQuantizationBoundary)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "UnsubscribeFromTimeDivision");
-
-	Params::QuartzClockHandle_UnsubscribeFromTimeDivision Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.InQuantizationBoundary = InQuantizationBoundary;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.GetBeatsPerMinute
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UQuartzClockHandle::GetBeatsPerMinute(const class UObject* WorldContextObject) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "GetBeatsPerMinute");
-
-	Params::QuartzClockHandle_GetBeatsPerMinute Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.GetMillisecondsPerTick
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UQuartzClockHandle::GetMillisecondsPerTick(const class UObject* WorldContextObject) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "GetMillisecondsPerTick");
-
-	Params::QuartzClockHandle_GetMillisecondsPerTick Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.GetSecondsPerTick
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UQuartzClockHandle::GetSecondsPerTick(const class UObject* WorldContextObject) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "GetSecondsPerTick");
-
-	Params::QuartzClockHandle_GetSecondsPerTick Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.GetThirtySecondNotesPerMinute
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UQuartzClockHandle::GetThirtySecondNotesPerMinute(const class UObject* WorldContextObject) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "GetThirtySecondNotesPerMinute");
-
-	Params::QuartzClockHandle_GetThirtySecondNotesPerMinute Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AudioMixer.QuartzClockHandle.GetTicksPerSecond
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const class UObject*                    WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UQuartzClockHandle::GetTicksPerSecond(const class UObject* WorldContextObject) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("QuartzClockHandle", "GetTicksPerSecond");
-
-	Params::QuartzClockHandle_GetTicksPerSecond Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetExternalSubmix
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -1708,6 +1654,60 @@ void USubmixEffectSubmixEQPreset::SetSettings(const struct FSubmixEffectSubmixEQ
 	Params::SubmixEffectSubmixEQPreset_SetSettings Parms{};
 
 	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SubmixEffectReverbPreset.SetSettings
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// const struct FSubmixEffectReverbSettings&InSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubmixEffectReverbPreset", "SetSettings");
+
+	Params::SubmixEffectReverbPreset_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// const class UReverbEffect*              InReverbEffect                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             WetLevel                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             DryLevel                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(const class UReverbEffect* InReverbEffect, const float WetLevel, const float DryLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubmixEffectReverbPreset", "SetSettingsWithReverbEffect");
+
+	Params::SubmixEffectReverbPreset_SetSettingsWithReverbEffect Parms{};
+
+	Parms.InReverbEffect = InReverbEffect;
+	Parms.WetLevel = WetLevel;
+	Parms.DryLevel = DryLevel;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

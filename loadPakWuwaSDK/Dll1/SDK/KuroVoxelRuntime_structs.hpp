@@ -14,22 +14,31 @@
 namespace SDK
 {
 
+// Enum KuroVoxelRuntime.EKuroVoxelCaveType
+// NumValues: 0x0007
+enum class EKuroVoxelCaveType : uint8
+{
+	Cave                                     = 0,
+	Room                                     = 1,
+	Transition                               = 2,
+	RoomTransition                           = 3,
+	BigWorld                                 = 254,
+	Default                                  = 255,
+	EKuroVoxelCaveType_MAX                   = 256,
+};
+
 // ScriptStruct KuroVoxelRuntime.KuroVoxelInfo
-// 0x0004 (0x0004 - 0x0000)
+// 0x0002 (0x0002 - 0x0000)
 struct FKuroVoxelInfo final
 {
 public:
 	uint8                                         MtlID;                                             // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         EnvType;                                           // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         StreamingType;                                     // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         LoadAdjustValue;                                   // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FKuroVoxelInfo) == 0x000001, "Wrong alignment on FKuroVoxelInfo");
-static_assert(sizeof(FKuroVoxelInfo) == 0x000004, "Wrong size on FKuroVoxelInfo");
+static_assert(sizeof(FKuroVoxelInfo) == 0x000002, "Wrong size on FKuroVoxelInfo");
 static_assert(offsetof(FKuroVoxelInfo, MtlID) == 0x000000, "Member 'FKuroVoxelInfo::MtlID' has a wrong offset!");
 static_assert(offsetof(FKuroVoxelInfo, EnvType) == 0x000001, "Member 'FKuroVoxelInfo::EnvType' has a wrong offset!");
-static_assert(offsetof(FKuroVoxelInfo, StreamingType) == 0x000002, "Member 'FKuroVoxelInfo::StreamingType' has a wrong offset!");
-static_assert(offsetof(FKuroVoxelInfo, LoadAdjustValue) == 0x000003, "Member 'FKuroVoxelInfo::LoadAdjustValue' has a wrong offset!");
 
 }
 

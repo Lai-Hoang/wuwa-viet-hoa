@@ -1087,6 +1087,80 @@ void AKuroMoveTrigger::OnEnterOverlap(class UPrimitiveComponent* OverlappedCompo
 }
 
 
+// Function KuroMovement.KuroMovementBPLibrary.KuroBinarySearchCurve
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UCurveFloat*                      Curve                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Y                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   From                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   To                                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   tolerance                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UKuroMovementBPLibrary::KuroBinarySearchCurve(class UCurveFloat* Curve, float Y, float From, float To, float tolerance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroMovementBPLibrary", "KuroBinarySearchCurve");
+
+	Params::KuroMovementBPLibrary_KuroBinarySearchCurve Parms{};
+
+	Parms.Curve = Curve;
+	Parms.Y = Y;
+	Parms.From = From;
+	Parms.To = To;
+	Parms.tolerance = tolerance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function KuroMovement.KuroMovementBPLibrary.KuroEaseSpeedTo
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UPawnMovementComponent*           PawnMoveComp                                           (Parm, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             TargetSpeed                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const EKuroEasingFuncType               EaseType                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             TransitionTime                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const float                             Exponent                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// const class FString&                    CurvePath                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UKuroMovementBPLibrary::KuroEaseSpeedTo(class UPawnMovementComponent* PawnMoveComp, const float TargetSpeed, const EKuroEasingFuncType EaseType, const float TransitionTime, const float Exponent, const class FString& CurvePath)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KuroMovementBPLibrary", "KuroEaseSpeedTo");
+
+	Params::KuroMovementBPLibrary_KuroEaseSpeedTo Parms{};
+
+	Parms.PawnMoveComp = PawnMoveComp;
+	Parms.TargetSpeed = TargetSpeed;
+	Parms.EaseType = EaseType;
+	Parms.TransitionTime = TransitionTime;
+	Parms.Exponent = Exponent;
+	Parms.CurvePath = std::move(CurvePath);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KuroMovement.KuroMovementBPLibrary.KuroKite
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:

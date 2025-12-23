@@ -10,60 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "AnimGraphRuntime_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "AnimGraphRuntime_structs.hpp"
 #include "CoreUObject_classes.hpp"
 
 
 namespace SDK
 {
-
-// Class AnimGraphRuntime.SequencerAnimationSupport
-// 0x0000 (0x0000 - 0x0000)
-class ISequencerAnimationSupport final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SequencerAnimationSupport">();
-	}
-	static class ISequencerAnimationSupport* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ISequencerAnimationSupport>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(ISequencerAnimationSupport) == 0x000001, "Wrong alignment on ISequencerAnimationSupport");
-static_assert(sizeof(ISequencerAnimationSupport) == 0x000001, "Wrong size on ISequencerAnimationSupport");
-
-// Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0010 (0x0670 - 0x0660)
-class UAnimSequencerInstance : public UAnimInstance
-{
-public:
-	uint8                                         Pad_660[0x10];                                     // 0x0660(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AnimSequencerInstance">();
-	}
-	static class UAnimSequencerInstance* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAnimSequencerInstance>();
-	}
-};
-static_assert(alignof(UAnimSequencerInstance) == 0x000010, "Wrong alignment on UAnimSequencerInstance");
-static_assert(sizeof(UAnimSequencerInstance) == 0x000670, "Wrong size on UAnimSequencerInstance");
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
 // 0x0010 (0x0050 - 0x0040)
@@ -86,6 +40,26 @@ public:
 static_assert(alignof(UAnimNotify_PlayMontageNotify) == 0x000008, "Wrong alignment on UAnimNotify_PlayMontageNotify");
 static_assert(sizeof(UAnimNotify_PlayMontageNotify) == 0x000050, "Wrong size on UAnimNotify_PlayMontageNotify");
 static_assert(offsetof(UAnimNotify_PlayMontageNotify, NotifyName) == 0x000040, "Member 'UAnimNotify_PlayMontageNotify::NotifyName' has a wrong offset!");
+
+// Class AnimGraphRuntime.AnimSequencerInstance
+// 0x0010 (0x0740 - 0x0730)
+class UAnimSequencerInstance : public UAnimInstance
+{
+public:
+	uint8                                         Pad_730[0x10];                                     // 0x0730(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AnimSequencerInstance">();
+	}
+	static class UAnimSequencerInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimSequencerInstance>();
+	}
+};
+static_assert(alignof(UAnimSequencerInstance) == 0x000010, "Wrong alignment on UAnimSequencerInstance");
+static_assert(sizeof(UAnimSequencerInstance) == 0x000740, "Wrong size on UAnimSequencerInstance");
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotifyWindow
 // 0x0010 (0x0050 - 0x0040)
@@ -175,6 +149,32 @@ static_assert(offsetof(UPlayMontageCallbackProxy, OnBlendOut) == 0x000040, "Memb
 static_assert(offsetof(UPlayMontageCallbackProxy, OnInterrupted) == 0x000050, "Member 'UPlayMontageCallbackProxy::OnInterrupted' has a wrong offset!");
 static_assert(offsetof(UPlayMontageCallbackProxy, OnNotifyBegin) == 0x000060, "Member 'UPlayMontageCallbackProxy::OnNotifyBegin' has a wrong offset!");
 static_assert(offsetof(UPlayMontageCallbackProxy, OnNotifyEnd) == 0x000070, "Member 'UPlayMontageCallbackProxy::OnNotifyEnd' has a wrong offset!");
+
+// Class AnimGraphRuntime.SequencerAnimationSupport
+// 0x0000 (0x0000 - 0x0000)
+class ISequencerAnimationSupport final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SequencerAnimationSupport">();
+	}
+	static class ISequencerAnimationSupport* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ISequencerAnimationSupport>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(ISequencerAnimationSupport) == 0x000001, "Wrong alignment on ISequencerAnimationSupport");
+static_assert(sizeof(ISequencerAnimationSupport) == 0x000001, "Wrong size on ISequencerAnimationSupport");
 
 }
 

@@ -11,22 +11,22 @@
 #include "Basic.hpp"
 
 #include "ESkillBehaviorActionType_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "ESkillBehaviorLocationType_structs.hpp"
-#include "GameplayTags_structs.hpp"
-#include "ESkillBehaviorLocationForwardType_structs.hpp"
+#include "CoreUObject_structs.hpp"
 #include "ESkillBehaviorRestrictType_structs.hpp"
+#include "SBaseCurve_structs.hpp"
+#include "ESkillBehaviorLocationForwardType_structs.hpp"
 #include "ESkillBehaviorRotationType_structs.hpp"
-#include "Engine_structs.hpp"
+#include "GameplayTags_structs.hpp"
 #include "SSkillBehaviorCue_structs.hpp"
 #include "SSkillBehaviorBullet_structs.hpp"
-#include "SBaseCurve_structs.hpp"
-#include "ESkillBehaviorBestSpotType_structs.hpp"
-#include "ECameraAnsEffectiveClientType_structs.hpp"
 #include "SCameraModifier_Condition_structs.hpp"
+#include "ECameraAnsEffectiveClientType_structs.hpp"
+#include "ESkillBehaviorBestSpotType_structs.hpp"
 #include "SCameraModifier_Settings_structs.hpp"
 #include "SSequenceCamera_Settings_structs.hpp"
 #include "ESkillBehaviorBuffTargetType_structs.hpp"
+#include "Engine_structs.hpp"
 #include "SSkillBehaviorUpdateCustomValue_structs.hpp"
 
 
@@ -34,7 +34,7 @@ namespace SDK
 {
 
 // UserDefinedStruct SSkillBehaviorAction.SSkillBehaviorAction
-// 0x02C0 (0x02C0 - 0x0000)
+// 0x02D0 (0x02D0 - 0x0000)
 struct FSSkillBehaviorAction final
 {
 public:
@@ -103,9 +103,10 @@ public:
 	uint8                                         Pad_27C[0x4];                                      // 0x027C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSSkillBehaviorUpdateCustomValue       UpdateCustomValue_257_8F128846455436A6E50D79874DF0F5EE; // 0x0280(0x0010)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	TSoftObjectPtr<class UPrimaryDataAsset>       CommonConf_268_DCE4CA4341FC32509C5E399C236F59F6;   // 0x0290(0x0030)(Edit, BlueprintVisible, HasGetValueTypeHash)
+	class FName                                   BoneName_279_5555292A4E0F4C5D59E11C82A48BFD0D;     // 0x02C0(0x000C)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(FSSkillBehaviorAction) == 0x000008, "Wrong alignment on FSSkillBehaviorAction");
-static_assert(sizeof(FSSkillBehaviorAction) == 0x0002C0, "Wrong size on FSSkillBehaviorAction");
+static_assert(sizeof(FSSkillBehaviorAction) == 0x0002D0, "Wrong size on FSSkillBehaviorAction");
 static_assert(offsetof(FSSkillBehaviorAction, ActionType_19_928EDB4F42F86E100915608112580A79) == 0x000000, "Member 'FSSkillBehaviorAction::ActionType_19_928EDB4F42F86E100915608112580A79' has a wrong offset!");
 static_assert(offsetof(FSSkillBehaviorAction, LocationType_189_529AE283410C2E1005CB1F87D7127A4D) == 0x000001, "Member 'FSSkillBehaviorAction::LocationType_189_529AE283410C2E1005CB1F87D7127A4D' has a wrong offset!");
 static_assert(offsetof(FSSkillBehaviorAction, BlackboardKey_209_F7A2DF3E49A071728CEDCDAC40CC9A37) == 0x000008, "Member 'FSSkillBehaviorAction::BlackboardKey_209_F7A2DF3E49A071728CEDCDAC40CC9A37' has a wrong offset!");
@@ -159,6 +160,7 @@ static_assert(offsetof(FSSkillBehaviorAction, StartSection_245_FC2AC39C4289C2607
 static_assert(offsetof(FSSkillBehaviorAction, StartTime_246_B7BFD6B741AA0F21C4262384C5DDFBBE) == 0x000278, "Member 'FSSkillBehaviorAction::StartTime_246_B7BFD6B741AA0F21C4262384C5DDFBBE' has a wrong offset!");
 static_assert(offsetof(FSSkillBehaviorAction, UpdateCustomValue_257_8F128846455436A6E50D79874DF0F5EE) == 0x000280, "Member 'FSSkillBehaviorAction::UpdateCustomValue_257_8F128846455436A6E50D79874DF0F5EE' has a wrong offset!");
 static_assert(offsetof(FSSkillBehaviorAction, CommonConf_268_DCE4CA4341FC32509C5E399C236F59F6) == 0x000290, "Member 'FSSkillBehaviorAction::CommonConf_268_DCE4CA4341FC32509C5E399C236F59F6' has a wrong offset!");
+static_assert(offsetof(FSSkillBehaviorAction, BoneName_279_5555292A4E0F4C5D59E11C82A48BFD0D) == 0x0002C0, "Member 'FSSkillBehaviorAction::BoneName_279_5555292A4E0F4C5D59E11C82A48BFD0D' has a wrong offset!");
 
 }
 

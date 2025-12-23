@@ -10,15 +10,15 @@
 
 #include "Basic.hpp"
 
-#include "SlateCore_structs.hpp"
 #include "AkAudio_structs.hpp"
 #include "WwiseResourceLoader_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "CoreUObject_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "CoreUObject_structs.hpp"
+#include "CoreUObject_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "UMG_classes.hpp"
 
 
@@ -720,7 +720,7 @@ static_assert(alignof(UAkFolder) == 0x000008, "Wrong alignment on UAkFolder");
 static_assert(sizeof(UAkFolder) == 0x000058, "Wrong size on UAkFolder");
 
 // Class AkAudio.DrawPortalComponent
-// 0x0000 (0x0510 - 0x0510)
+// 0x0000 (0x0530 - 0x0530)
 class UDrawPortalComponent final : public UPrimitiveComponent
 {
 public:
@@ -734,10 +734,10 @@ public:
 	}
 };
 static_assert(alignof(UDrawPortalComponent) == 0x000010, "Wrong alignment on UDrawPortalComponent");
-static_assert(sizeof(UDrawPortalComponent) == 0x000510, "Wrong size on UDrawPortalComponent");
+static_assert(sizeof(UDrawPortalComponent) == 0x000530, "Wrong size on UDrawPortalComponent");
 
 // Class AkAudio.DrawRoomComponent
-// 0x0000 (0x0510 - 0x0510)
+// 0x0000 (0x0530 - 0x0530)
 class UDrawRoomComponent final : public UPrimitiveComponent
 {
 public:
@@ -751,7 +751,7 @@ public:
 	}
 };
 static_assert(alignof(UDrawRoomComponent) == 0x000010, "Wrong alignment on UDrawRoomComponent");
-static_assert(sizeof(UDrawRoomComponent) == 0x000510, "Wrong size on UDrawRoomComponent");
+static_assert(sizeof(UDrawRoomComponent) == 0x000530, "Wrong size on UDrawRoomComponent");
 
 // Class AkAudio.AkEffectShareSet
 // 0x0068 (0x00C0 - 0x0058)

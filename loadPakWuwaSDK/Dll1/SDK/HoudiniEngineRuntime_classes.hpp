@@ -21,212 +21,6 @@
 namespace SDK
 {
 
-// Class HoudiniEngineRuntime.HoudiniAsset
-// 0x0028 (0x0058 - 0x0030)
-class UHoudiniAsset final : public UObject
-{
-public:
-	class FString                                 AssetFileName;                                     // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<uint8>                                 AssetBytes;                                        // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint32                                        AssetBytesCount;                                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bAssetLimitedCommercial;                           // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bAssetNonCommercial;                               // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bAssetExpanded;                                    // 0x0056(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_57[0x1];                                       // 0x0057(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniAsset">();
-	}
-	static class UHoudiniAsset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniAsset>();
-	}
-};
-static_assert(alignof(UHoudiniAsset) == 0x000008, "Wrong alignment on UHoudiniAsset");
-static_assert(sizeof(UHoudiniAsset) == 0x000058, "Wrong size on UHoudiniAsset");
-static_assert(offsetof(UHoudiniAsset, AssetFileName) == 0x000030, "Member 'UHoudiniAsset::AssetFileName' has a wrong offset!");
-static_assert(offsetof(UHoudiniAsset, AssetBytes) == 0x000040, "Member 'UHoudiniAsset::AssetBytes' has a wrong offset!");
-static_assert(offsetof(UHoudiniAsset, AssetBytesCount) == 0x000050, "Member 'UHoudiniAsset::AssetBytesCount' has a wrong offset!");
-static_assert(offsetof(UHoudiniAsset, bAssetLimitedCommercial) == 0x000054, "Member 'UHoudiniAsset::bAssetLimitedCommercial' has a wrong offset!");
-static_assert(offsetof(UHoudiniAsset, bAssetNonCommercial) == 0x000055, "Member 'UHoudiniAsset::bAssetNonCommercial' has a wrong offset!");
-static_assert(offsetof(UHoudiniAsset, bAssetExpanded) == 0x000056, "Member 'UHoudiniAsset::bAssetExpanded' has a wrong offset!");
-
-// Class HoudiniEngineRuntime.HoudiniAssetActor
-// 0x0008 (0x02B8 - 0x02B0)
-class AHoudiniAssetActor final : public AActor
-{
-public:
-	class UHoudiniAssetComponent*                 HoudiniAssetComponent;                             // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniAssetActor">();
-	}
-	static class AHoudiniAssetActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AHoudiniAssetActor>();
-	}
-};
-static_assert(alignof(AHoudiniAssetActor) == 0x000008, "Wrong alignment on AHoudiniAssetActor");
-static_assert(sizeof(AHoudiniAssetActor) == 0x0002B8, "Wrong size on AHoudiniAssetActor");
-static_assert(offsetof(AHoudiniAssetActor, HoudiniAssetComponent) == 0x0002B0, "Member 'AHoudiniAssetActor::HoudiniAssetComponent' has a wrong offset!");
-
-// Class HoudiniEngineRuntime.HoudiniAssetComponent
-// 0x0510 (0x0A20 - 0x0510)
-class UHoudiniAssetComponent : public UPrimitiveComponent
-{
-public:
-	uint8                                         Pad_510[0x8];                                      // 0x0510(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHoudiniAsset*                          HoudiniAsset;                                      // 0x0518(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCookOnParameterChange;                            // 0x0520(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUploadTransformsToHoudiniEngine;                  // 0x0521(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCookOnTransformChange;                            // 0x0522(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCookOnAssetInputCook;                             // 0x0523(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOutputless;                                       // 0x0524(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOutputTemplateGeos;                               // 0x0525(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseOutputNodes;                                   // 0x0526(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_527[0x1];                                      // 0x0527(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDirectoryPath                         TemporaryCookFolder;                               // 0x0528(0x0010)(NativeAccessSpecifierPublic)
-	struct FDirectoryPath                         BakeFolder;                                        // 0x0538(0x0010)(NativeAccessSpecifierPublic)
-	EHoudiniStaticMeshMethod                      StaticMeshMethod;                                  // 0x0548(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_549[0x7];                                      // 0x0549(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHoudiniStaticMeshGenerationProperties StaticMeshGenerationProperties;                    // 0x0550(0x01C8)(Edit, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FMeshBuildSettings                     StaticMeshBuildSettings;                           // 0x0718(0x0030)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bOverrideGlobalProxyStaticMeshSettings;            // 0x0748(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableProxyStaticMeshOverride;                    // 0x0749(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableProxyStaticMeshRefinementByTimerOverride;   // 0x074A(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_74B[0x1];                                      // 0x074B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ProxyMeshAutoRefineTimeoutSecondsOverride;         // 0x074C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableProxyStaticMeshRefinementOnPreSaveWorldOverride; // 0x0750(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableProxyStaticMeshRefinementOnPreBeginPIEOverride; // 0x0751(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_752[0x2];                                      // 0x0752(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         AssetId;                                           // 0x0754(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<int32>                                 NodeIdsToCook;                                     // 0x0758(0x0010)(ZeroConstructor, Transient, DuplicateTransient, Protected, NativeAccessSpecifierProtected)
-	TMap<int32, int32>                            OutputNodeCookCounts;                              // 0x0768(0x0050)(Transient, DuplicateTransient, Protected, NativeAccessSpecifierProtected)
-	TSet<class UHoudiniAssetComponent*>           DownstreamHoudiniAssets;                           // 0x07B8(0x0050)(ExportObject, DuplicateTransient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	struct FGuid                                  ComponentGUID;                                     // 0x0808(0x0010)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FGuid                                  HapiGUID;                                          // 0x0818(0x0010)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 HapiAssetName;                                     // 0x0828(0x0010)(ZeroConstructor, DuplicateTransient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EHoudiniAssetState                            AssetState;                                        // 0x0838(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EHoudiniAssetState                            DebugLastAssetState;                               // 0x0839(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EHoudiniAssetStateResult                      AssetStateResult;                                  // 0x083A(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_83B[0x5];                                      // 0x083B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             LastComponentTransform;                            // 0x0840(0x0030)(DuplicateTransient, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint32                                        SubAssetIndex;                                     // 0x0870(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         AssetCookCount;                                    // 0x0874(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasBeenLoaded;                                    // 0x0878(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasBeenDuplicated;                                // 0x0879(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bPendingDelete;                                    // 0x087A(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bRecookRequested;                                  // 0x087B(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bRebuildRequested;                                 // 0x087C(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableCooking;                                    // 0x087D(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bForceNeedUpdate;                                  // 0x087E(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bLastCookSuccess;                                  // 0x087F(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bParameterDefinitionUpdateNeeded;                  // 0x0880(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bBlueprintStructureModified;                       // 0x0881(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bBlueprintModified;                                // 0x0882(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_883[0x5];                                      // 0x0883(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UHoudiniParameter*>              Parameters;                                        // 0x0888(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<class UHoudiniInput*>                  Inputs;                                            // 0x0898(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<class UHoudiniOutput*>                 Outputs;                                           // 0x08A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FHoudiniBakedOutput>            BakedOutputs;                                      // 0x08B8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<TWeakObjectPtr<class AActor>>          UntrackedOutputs;                                  // 0x08C8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<class UHoudiniHandleComponent*>        HandleComponents;                                  // 0x08D8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	bool                                          bHasComponentTransformChanged;                     // 0x08E8(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bFullyLoaded;                                      // 0x08E9(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_8EA[0x6];                                      // 0x08EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UHoudiniPDGAssetLink*                   PDGAssetLink;                                      // 0x08F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FTimerHandle                           RefineMeshesTimer;                                 // 0x08F8(0x0008)(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_900[0x18];                                     // 0x0900(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bNoProxyMeshNextCookRequested;                     // 0x0918(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_919[0x7];                                      // 0x0919(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class UObject*, int32>                   InputPresets;                                      // 0x0920(0x0050)(Transient, DuplicateTransient, Protected, NativeAccessSpecifierProtected)
-	bool                                          bBakeAfterNextCook;                                // 0x0970(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_971[0x77];                                     // 0x0971(0x0077)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bCachedIsPreview;                                  // 0x09E8(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_9E9[0xF];                                      // 0x09E9(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LastTickTime;                                      // 0x09F8(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_A00[0x18];                                     // 0x0A00(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	EHoudiniPCGToolType                           PCGToolType;                                       // 0x0A18(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bPCGToolGenerateMenuExpanded;                      // 0x0A19(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_A1A[0x6];                                      // 0x0A1A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniAssetComponent">();
-	}
-	static class UHoudiniAssetComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniAssetComponent>();
-	}
-};
-static_assert(alignof(UHoudiniAssetComponent) == 0x000010, "Wrong alignment on UHoudiniAssetComponent");
-static_assert(sizeof(UHoudiniAssetComponent) == 0x000A20, "Wrong size on UHoudiniAssetComponent");
-static_assert(offsetof(UHoudiniAssetComponent, HoudiniAsset) == 0x000518, "Member 'UHoudiniAssetComponent::HoudiniAsset' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bCookOnParameterChange) == 0x000520, "Member 'UHoudiniAssetComponent::bCookOnParameterChange' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bUploadTransformsToHoudiniEngine) == 0x000521, "Member 'UHoudiniAssetComponent::bUploadTransformsToHoudiniEngine' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bCookOnTransformChange) == 0x000522, "Member 'UHoudiniAssetComponent::bCookOnTransformChange' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bCookOnAssetInputCook) == 0x000523, "Member 'UHoudiniAssetComponent::bCookOnAssetInputCook' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bOutputless) == 0x000524, "Member 'UHoudiniAssetComponent::bOutputless' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bOutputTemplateGeos) == 0x000525, "Member 'UHoudiniAssetComponent::bOutputTemplateGeos' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bUseOutputNodes) == 0x000526, "Member 'UHoudiniAssetComponent::bUseOutputNodes' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, TemporaryCookFolder) == 0x000528, "Member 'UHoudiniAssetComponent::TemporaryCookFolder' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, BakeFolder) == 0x000538, "Member 'UHoudiniAssetComponent::BakeFolder' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, StaticMeshMethod) == 0x000548, "Member 'UHoudiniAssetComponent::StaticMeshMethod' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, StaticMeshGenerationProperties) == 0x000550, "Member 'UHoudiniAssetComponent::StaticMeshGenerationProperties' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, StaticMeshBuildSettings) == 0x000718, "Member 'UHoudiniAssetComponent::StaticMeshBuildSettings' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bOverrideGlobalProxyStaticMeshSettings) == 0x000748, "Member 'UHoudiniAssetComponent::bOverrideGlobalProxyStaticMeshSettings' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bEnableProxyStaticMeshOverride) == 0x000749, "Member 'UHoudiniAssetComponent::bEnableProxyStaticMeshOverride' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bEnableProxyStaticMeshRefinementByTimerOverride) == 0x00074A, "Member 'UHoudiniAssetComponent::bEnableProxyStaticMeshRefinementByTimerOverride' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, ProxyMeshAutoRefineTimeoutSecondsOverride) == 0x00074C, "Member 'UHoudiniAssetComponent::ProxyMeshAutoRefineTimeoutSecondsOverride' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bEnableProxyStaticMeshRefinementOnPreSaveWorldOverride) == 0x000750, "Member 'UHoudiniAssetComponent::bEnableProxyStaticMeshRefinementOnPreSaveWorldOverride' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bEnableProxyStaticMeshRefinementOnPreBeginPIEOverride) == 0x000751, "Member 'UHoudiniAssetComponent::bEnableProxyStaticMeshRefinementOnPreBeginPIEOverride' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, AssetId) == 0x000754, "Member 'UHoudiniAssetComponent::AssetId' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, NodeIdsToCook) == 0x000758, "Member 'UHoudiniAssetComponent::NodeIdsToCook' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, OutputNodeCookCounts) == 0x000768, "Member 'UHoudiniAssetComponent::OutputNodeCookCounts' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, DownstreamHoudiniAssets) == 0x0007B8, "Member 'UHoudiniAssetComponent::DownstreamHoudiniAssets' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, ComponentGUID) == 0x000808, "Member 'UHoudiniAssetComponent::ComponentGUID' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, HapiGUID) == 0x000818, "Member 'UHoudiniAssetComponent::HapiGUID' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, HapiAssetName) == 0x000828, "Member 'UHoudiniAssetComponent::HapiAssetName' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, AssetState) == 0x000838, "Member 'UHoudiniAssetComponent::AssetState' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, DebugLastAssetState) == 0x000839, "Member 'UHoudiniAssetComponent::DebugLastAssetState' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, AssetStateResult) == 0x00083A, "Member 'UHoudiniAssetComponent::AssetStateResult' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, LastComponentTransform) == 0x000840, "Member 'UHoudiniAssetComponent::LastComponentTransform' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, SubAssetIndex) == 0x000870, "Member 'UHoudiniAssetComponent::SubAssetIndex' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, AssetCookCount) == 0x000874, "Member 'UHoudiniAssetComponent::AssetCookCount' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bHasBeenLoaded) == 0x000878, "Member 'UHoudiniAssetComponent::bHasBeenLoaded' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bHasBeenDuplicated) == 0x000879, "Member 'UHoudiniAssetComponent::bHasBeenDuplicated' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bPendingDelete) == 0x00087A, "Member 'UHoudiniAssetComponent::bPendingDelete' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bRecookRequested) == 0x00087B, "Member 'UHoudiniAssetComponent::bRecookRequested' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bRebuildRequested) == 0x00087C, "Member 'UHoudiniAssetComponent::bRebuildRequested' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bEnableCooking) == 0x00087D, "Member 'UHoudiniAssetComponent::bEnableCooking' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bForceNeedUpdate) == 0x00087E, "Member 'UHoudiniAssetComponent::bForceNeedUpdate' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bLastCookSuccess) == 0x00087F, "Member 'UHoudiniAssetComponent::bLastCookSuccess' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bParameterDefinitionUpdateNeeded) == 0x000880, "Member 'UHoudiniAssetComponent::bParameterDefinitionUpdateNeeded' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bBlueprintStructureModified) == 0x000881, "Member 'UHoudiniAssetComponent::bBlueprintStructureModified' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bBlueprintModified) == 0x000882, "Member 'UHoudiniAssetComponent::bBlueprintModified' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, Parameters) == 0x000888, "Member 'UHoudiniAssetComponent::Parameters' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, Inputs) == 0x000898, "Member 'UHoudiniAssetComponent::Inputs' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, Outputs) == 0x0008A8, "Member 'UHoudiniAssetComponent::Outputs' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, BakedOutputs) == 0x0008B8, "Member 'UHoudiniAssetComponent::BakedOutputs' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, UntrackedOutputs) == 0x0008C8, "Member 'UHoudiniAssetComponent::UntrackedOutputs' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, HandleComponents) == 0x0008D8, "Member 'UHoudiniAssetComponent::HandleComponents' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bHasComponentTransformChanged) == 0x0008E8, "Member 'UHoudiniAssetComponent::bHasComponentTransformChanged' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bFullyLoaded) == 0x0008E9, "Member 'UHoudiniAssetComponent::bFullyLoaded' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, PDGAssetLink) == 0x0008F0, "Member 'UHoudiniAssetComponent::PDGAssetLink' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, RefineMeshesTimer) == 0x0008F8, "Member 'UHoudiniAssetComponent::RefineMeshesTimer' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bNoProxyMeshNextCookRequested) == 0x000918, "Member 'UHoudiniAssetComponent::bNoProxyMeshNextCookRequested' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, InputPresets) == 0x000920, "Member 'UHoudiniAssetComponent::InputPresets' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bBakeAfterNextCook) == 0x000970, "Member 'UHoudiniAssetComponent::bBakeAfterNextCook' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bCachedIsPreview) == 0x0009E8, "Member 'UHoudiniAssetComponent::bCachedIsPreview' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, LastTickTime) == 0x0009F8, "Member 'UHoudiniAssetComponent::LastTickTime' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, PCGToolType) == 0x000A18, "Member 'UHoudiniAssetComponent::PCGToolType' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent, bPCGToolGenerateMenuExpanded) == 0x000A19, "Member 'UHoudiniAssetComponent::bPCGToolGenerateMenuExpanded' has a wrong offset!");
-
 // Class HoudiniEngineRuntime.HoudiniParameter
 // 0x00E0 (0x0110 - 0x0030)
 class UHoudiniParameter : public UObject
@@ -306,48 +100,354 @@ static_assert(offsetof(UHoudiniParameter, ParamExpression) == 0x0000A8, "Member 
 static_assert(offsetof(UHoudiniParameter, Tags) == 0x0000B8, "Member 'UHoudiniParameter::Tags' has a wrong offset!");
 static_assert(offsetof(UHoudiniParameter, bAutoUpdate) == 0x000108, "Member 'UHoudiniParameter::bAutoUpdate' has a wrong offset!");
 
-// Class HoudiniEngineRuntime.HoudiniParameterColor
-// 0x0028 (0x0138 - 0x0110)
-class UHoudiniParameterColor final : public UHoudiniParameter
+// Class HoudiniEngineRuntime.HoudiniParameterChoice
+// 0x0070 (0x0180 - 0x0110)
+class UHoudiniParameterChoice final : public UHoudiniParameter
 {
 public:
-	struct FLinearColor                           Color;                                             // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FLinearColor                           DefaultColor;                                      // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsChildOfRamp;                                    // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         IntValue;                                          // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         DefaultIntValue;                                   // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 StringValue;                                       // 0x0118(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 DefaultStringValue;                                // 0x0128(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class FString>                         StringChoiceValues;                                // 0x0138(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<class FString>                         StringChoiceLabels;                                // 0x0148(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_158[0x10];                                     // 0x0158(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bIsChildOfRamp;                                    // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 IntValuesArray;                                    // 0x0170(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HoudiniParameterColor">();
+		return StaticClassImpl<"HoudiniParameterChoice">();
 	}
-	static class UHoudiniParameterColor* GetDefaultObj()
+	static class UHoudiniParameterChoice* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniParameterColor>();
+		return GetDefaultObjImpl<UHoudiniParameterChoice>();
 	}
 };
-static_assert(alignof(UHoudiniParameterColor) == 0x000008, "Wrong alignment on UHoudiniParameterColor");
-static_assert(sizeof(UHoudiniParameterColor) == 0x000138, "Wrong size on UHoudiniParameterColor");
-static_assert(offsetof(UHoudiniParameterColor, Color) == 0x000110, "Member 'UHoudiniParameterColor::Color' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterColor, DefaultColor) == 0x000120, "Member 'UHoudiniParameterColor::DefaultColor' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterColor, bIsChildOfRamp) == 0x000130, "Member 'UHoudiniParameterColor::bIsChildOfRamp' has a wrong offset!");
+static_assert(alignof(UHoudiniParameterChoice) == 0x000008, "Wrong alignment on UHoudiniParameterChoice");
+static_assert(sizeof(UHoudiniParameterChoice) == 0x000180, "Wrong size on UHoudiniParameterChoice");
+static_assert(offsetof(UHoudiniParameterChoice, IntValue) == 0x000110, "Member 'UHoudiniParameterChoice::IntValue' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterChoice, DefaultIntValue) == 0x000114, "Member 'UHoudiniParameterChoice::DefaultIntValue' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterChoice, StringValue) == 0x000118, "Member 'UHoudiniParameterChoice::StringValue' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterChoice, DefaultStringValue) == 0x000128, "Member 'UHoudiniParameterChoice::DefaultStringValue' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterChoice, StringChoiceValues) == 0x000138, "Member 'UHoudiniParameterChoice::StringChoiceValues' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterChoice, StringChoiceLabels) == 0x000148, "Member 'UHoudiniParameterChoice::StringChoiceLabels' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterChoice, bIsChildOfRamp) == 0x000168, "Member 'UHoudiniParameterChoice::bIsChildOfRamp' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterChoice, IntValuesArray) == 0x000170, "Member 'UHoudiniParameterChoice::IntValuesArray' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniAsset
+// 0x0028 (0x0058 - 0x0030)
+class UHoudiniAsset final : public UObject
+{
+public:
+	class FString                                 AssetFileName;                                     // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 AssetBytes;                                        // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint32                                        AssetBytesCount;                                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bAssetLimitedCommercial;                           // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bAssetNonCommercial;                               // 0x0055(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bAssetExpanded;                                    // 0x0056(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_57[0x1];                                       // 0x0057(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniAsset">();
+	}
+	static class UHoudiniAsset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniAsset>();
+	}
+};
+static_assert(alignof(UHoudiniAsset) == 0x000008, "Wrong alignment on UHoudiniAsset");
+static_assert(sizeof(UHoudiniAsset) == 0x000058, "Wrong size on UHoudiniAsset");
+static_assert(offsetof(UHoudiniAsset, AssetFileName) == 0x000030, "Member 'UHoudiniAsset::AssetFileName' has a wrong offset!");
+static_assert(offsetof(UHoudiniAsset, AssetBytes) == 0x000040, "Member 'UHoudiniAsset::AssetBytes' has a wrong offset!");
+static_assert(offsetof(UHoudiniAsset, AssetBytesCount) == 0x000050, "Member 'UHoudiniAsset::AssetBytesCount' has a wrong offset!");
+static_assert(offsetof(UHoudiniAsset, bAssetLimitedCommercial) == 0x000054, "Member 'UHoudiniAsset::bAssetLimitedCommercial' has a wrong offset!");
+static_assert(offsetof(UHoudiniAsset, bAssetNonCommercial) == 0x000055, "Member 'UHoudiniAsset::bAssetNonCommercial' has a wrong offset!");
+static_assert(offsetof(UHoudiniAsset, bAssetExpanded) == 0x000056, "Member 'UHoudiniAsset::bAssetExpanded' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniAssetActor
+// 0x0008 (0x02B8 - 0x02B0)
+class AHoudiniAssetActor final : public AActor
+{
+public:
+	class UHoudiniAssetComponent*                 HoudiniAssetComponent;                             // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniAssetActor">();
+	}
+	static class AHoudiniAssetActor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AHoudiniAssetActor>();
+	}
+};
+static_assert(alignof(AHoudiniAssetActor) == 0x000008, "Wrong alignment on AHoudiniAssetActor");
+static_assert(sizeof(AHoudiniAssetActor) == 0x0002B8, "Wrong size on AHoudiniAssetActor");
+static_assert(offsetof(AHoudiniAssetActor, HoudiniAssetComponent) == 0x0002B0, "Member 'AHoudiniAssetActor::HoudiniAssetComponent' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniInputObject
+// 0x00D0 (0x0100 - 0x0030)
+#pragma pack(push, 0x1)
+class alignas(0x10) UHoudiniInputObject : public UObject
+{
+public:
+	TSoftObjectPtr<class UObject>                 InputObject;                                       // 0x0030(0x0030)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             Transform;                                         // 0x0060(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	EHoudiniInputObjectType                       Type;                                              // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         InputNodeId;                                       // 0x0094(0x0004)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InputObjectNodeId;                                 // 0x0098(0x0004)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  Guid;                                              // 0x009C(0x0010)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_AC[0x2C];                                      // 0x00AC(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bHasChanged;                                       // 0x00D8(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bNeedsToTriggerUpdate;                             // 0x00D9(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bTransformChanged;                                 // 0x00DA(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bImportAsReference;                                // 0x00DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bImportAsReferenceRotScaleEnabled;                 // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bImportAsReferenceBboxEnabled;                     // 0x00DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bImportAsReferenceMaterialEnabled;                 // 0x00DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_DF[0x1];                                       // 0x00DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         MaterialReferences;                                // 0x00E0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bCanDeleteHoudiniNodes;                            // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniInputObject">();
+	}
+	static class UHoudiniInputObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniInputObject>();
+	}
+};
+#pragma pack(pop)
+static_assert(alignof(UHoudiniInputObject) == 0x000010, "Wrong alignment on UHoudiniInputObject");
+static_assert(sizeof(UHoudiniInputObject) == 0x000100, "Wrong size on UHoudiniInputObject");
+static_assert(offsetof(UHoudiniInputObject, InputObject) == 0x000030, "Member 'UHoudiniInputObject::InputObject' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, Transform) == 0x000060, "Member 'UHoudiniInputObject::Transform' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, Type) == 0x000090, "Member 'UHoudiniInputObject::Type' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, InputNodeId) == 0x000094, "Member 'UHoudiniInputObject::InputNodeId' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, InputObjectNodeId) == 0x000098, "Member 'UHoudiniInputObject::InputObjectNodeId' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, Guid) == 0x00009C, "Member 'UHoudiniInputObject::Guid' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, bHasChanged) == 0x0000D8, "Member 'UHoudiniInputObject::bHasChanged' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, bNeedsToTriggerUpdate) == 0x0000D9, "Member 'UHoudiniInputObject::bNeedsToTriggerUpdate' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, bTransformChanged) == 0x0000DA, "Member 'UHoudiniInputObject::bTransformChanged' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, bImportAsReference) == 0x0000DB, "Member 'UHoudiniInputObject::bImportAsReference' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, bImportAsReferenceRotScaleEnabled) == 0x0000DC, "Member 'UHoudiniInputObject::bImportAsReferenceRotScaleEnabled' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, bImportAsReferenceBboxEnabled) == 0x0000DD, "Member 'UHoudiniInputObject::bImportAsReferenceBboxEnabled' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, bImportAsReferenceMaterialEnabled) == 0x0000DE, "Member 'UHoudiniInputObject::bImportAsReferenceMaterialEnabled' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, MaterialReferences) == 0x0000E0, "Member 'UHoudiniInputObject::MaterialReferences' has a wrong offset!");
+static_assert(offsetof(UHoudiniInputObject, bCanDeleteHoudiniNodes) == 0x0000F0, "Member 'UHoudiniInputObject::bCanDeleteHoudiniNodes' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniInputStaticMesh
+// 0x0000 (0x0100 - 0x0100)
+class UHoudiniInputStaticMesh : public UHoudiniInputObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniInputStaticMesh">();
+	}
+	static class UHoudiniInputStaticMesh* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniInputStaticMesh>();
+	}
+};
+static_assert(alignof(UHoudiniInputStaticMesh) == 0x000010, "Wrong alignment on UHoudiniInputStaticMesh");
+static_assert(sizeof(UHoudiniInputStaticMesh) == 0x000100, "Wrong size on UHoudiniInputStaticMesh");
+
+// Class HoudiniEngineRuntime.HoudiniInputFoliageType_InstancedStaticMesh
+// 0x0000 (0x0100 - 0x0100)
+class UHoudiniInputFoliageType_InstancedStaticMesh final : public UHoudiniInputStaticMesh
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniInputFoliageType_InstancedStaticMesh">();
+	}
+	static class UHoudiniInputFoliageType_InstancedStaticMesh* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniInputFoliageType_InstancedStaticMesh>();
+	}
+};
+static_assert(alignof(UHoudiniInputFoliageType_InstancedStaticMesh) == 0x000010, "Wrong alignment on UHoudiniInputFoliageType_InstancedStaticMesh");
+static_assert(sizeof(UHoudiniInputFoliageType_InstancedStaticMesh) == 0x000100, "Wrong size on UHoudiniInputFoliageType_InstancedStaticMesh");
+
+// Class HoudiniEngineRuntime.HoudiniAssetComponent
+// 0x0510 (0x0A40 - 0x0530)
+class UHoudiniAssetComponent : public UPrimitiveComponent
+{
+public:
+	uint8                                         Pad_528[0x8];                                      // 0x0528(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHoudiniAsset*                          HoudiniAsset;                                      // 0x0530(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCookOnParameterChange;                            // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUploadTransformsToHoudiniEngine;                  // 0x0539(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCookOnTransformChange;                            // 0x053A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCookOnAssetInputCook;                             // 0x053B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutputless;                                       // 0x053C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOutputTemplateGeos;                               // 0x053D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseOutputNodes;                                   // 0x053E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_53F[0x1];                                      // 0x053F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDirectoryPath                         TemporaryCookFolder;                               // 0x0540(0x0010)(NativeAccessSpecifierPublic)
+	struct FDirectoryPath                         BakeFolder;                                        // 0x0550(0x0010)(NativeAccessSpecifierPublic)
+	EHoudiniStaticMeshMethod                      StaticMeshMethod;                                  // 0x0560(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_561[0x7];                                      // 0x0561(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHoudiniStaticMeshGenerationProperties StaticMeshGenerationProperties;                    // 0x0568(0x01C8)(Edit, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FMeshBuildSettings                     StaticMeshBuildSettings;                           // 0x0730(0x0030)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bOverrideGlobalProxyStaticMeshSettings;            // 0x0760(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableProxyStaticMeshOverride;                    // 0x0761(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableProxyStaticMeshRefinementByTimerOverride;   // 0x0762(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_763[0x1];                                      // 0x0763(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ProxyMeshAutoRefineTimeoutSecondsOverride;         // 0x0764(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableProxyStaticMeshRefinementOnPreSaveWorldOverride; // 0x0768(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableProxyStaticMeshRefinementOnPreBeginPIEOverride; // 0x0769(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_76A[0x2];                                      // 0x076A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         AssetId;                                           // 0x076C(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<int32>                                 NodeIdsToCook;                                     // 0x0770(0x0010)(ZeroConstructor, Transient, DuplicateTransient, Protected, NativeAccessSpecifierProtected)
+	TMap<int32, int32>                            OutputNodeCookCounts;                              // 0x0780(0x0050)(Transient, DuplicateTransient, Protected, NativeAccessSpecifierProtected)
+	TSet<class UHoudiniAssetComponent*>           DownstreamHoudiniAssets;                           // 0x07D0(0x0050)(ExportObject, DuplicateTransient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	struct FGuid                                  ComponentGUID;                                     // 0x0820(0x0010)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FGuid                                  HapiGUID;                                          // 0x0830(0x0010)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 HapiAssetName;                                     // 0x0840(0x0010)(ZeroConstructor, DuplicateTransient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EHoudiniAssetState                            AssetState;                                        // 0x0850(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EHoudiniAssetState                            DebugLastAssetState;                               // 0x0851(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EHoudiniAssetStateResult                      AssetStateResult;                                  // 0x0852(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_853[0xD];                                      // 0x0853(0x000D)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             LastComponentTransform;                            // 0x0860(0x0030)(DuplicateTransient, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint32                                        SubAssetIndex;                                     // 0x0890(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         AssetCookCount;                                    // 0x0894(0x0004)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasBeenLoaded;                                    // 0x0898(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasBeenDuplicated;                                // 0x0899(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPendingDelete;                                    // 0x089A(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bRecookRequested;                                  // 0x089B(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bRebuildRequested;                                 // 0x089C(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableCooking;                                    // 0x089D(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bForceNeedUpdate;                                  // 0x089E(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bLastCookSuccess;                                  // 0x089F(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bParameterDefinitionUpdateNeeded;                  // 0x08A0(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bBlueprintStructureModified;                       // 0x08A1(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bBlueprintModified;                                // 0x08A2(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_8A3[0x5];                                      // 0x08A3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UHoudiniParameter*>              Parameters;                                        // 0x08A8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<class UHoudiniInput*>                  Inputs;                                            // 0x08B8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<class UHoudiniOutput*>                 Outputs;                                           // 0x08C8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FHoudiniBakedOutput>            BakedOutputs;                                      // 0x08D8(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<TWeakObjectPtr<class AActor>>          UntrackedOutputs;                                  // 0x08E8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<class UHoudiniHandleComponent*>        HandleComponents;                                  // 0x08F8(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	bool                                          bHasComponentTransformChanged;                     // 0x0908(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bFullyLoaded;                                      // 0x0909(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_90A[0x6];                                      // 0x090A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UHoudiniPDGAssetLink*                   PDGAssetLink;                                      // 0x0910(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FTimerHandle                           RefineMeshesTimer;                                 // 0x0918(0x0008)(NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_920[0x18];                                     // 0x0920(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bNoProxyMeshNextCookRequested;                     // 0x0938(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_939[0x7];                                      // 0x0939(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class UObject*, int32>                   InputPresets;                                      // 0x0940(0x0050)(Transient, DuplicateTransient, Protected, NativeAccessSpecifierProtected)
+	bool                                          bBakeAfterNextCook;                                // 0x0990(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_991[0x77];                                     // 0x0991(0x0077)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bCachedIsPreview;                                  // 0x0A08(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A09[0xF];                                      // 0x0A09(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LastTickTime;                                      // 0x0A18(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A20[0x18];                                     // 0x0A20(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	EHoudiniPCGToolType                           PCGToolType;                                       // 0x0A38(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bPCGToolGenerateMenuExpanded;                      // 0x0A39(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_A3A[0x6];                                      // 0x0A3A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniAssetComponent">();
+	}
+	static class UHoudiniAssetComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniAssetComponent>();
+	}
+};
+static_assert(alignof(UHoudiniAssetComponent) == 0x000010, "Wrong alignment on UHoudiniAssetComponent");
+static_assert(sizeof(UHoudiniAssetComponent) == 0x000A40, "Wrong size on UHoudiniAssetComponent");
+static_assert(offsetof(UHoudiniAssetComponent, HoudiniAsset) == 0x000530, "Member 'UHoudiniAssetComponent::HoudiniAsset' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bCookOnParameterChange) == 0x000538, "Member 'UHoudiniAssetComponent::bCookOnParameterChange' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bUploadTransformsToHoudiniEngine) == 0x000539, "Member 'UHoudiniAssetComponent::bUploadTransformsToHoudiniEngine' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bCookOnTransformChange) == 0x00053A, "Member 'UHoudiniAssetComponent::bCookOnTransformChange' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bCookOnAssetInputCook) == 0x00053B, "Member 'UHoudiniAssetComponent::bCookOnAssetInputCook' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bOutputless) == 0x00053C, "Member 'UHoudiniAssetComponent::bOutputless' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bOutputTemplateGeos) == 0x00053D, "Member 'UHoudiniAssetComponent::bOutputTemplateGeos' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bUseOutputNodes) == 0x00053E, "Member 'UHoudiniAssetComponent::bUseOutputNodes' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, TemporaryCookFolder) == 0x000540, "Member 'UHoudiniAssetComponent::TemporaryCookFolder' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, BakeFolder) == 0x000550, "Member 'UHoudiniAssetComponent::BakeFolder' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, StaticMeshMethod) == 0x000560, "Member 'UHoudiniAssetComponent::StaticMeshMethod' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, StaticMeshGenerationProperties) == 0x000568, "Member 'UHoudiniAssetComponent::StaticMeshGenerationProperties' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, StaticMeshBuildSettings) == 0x000730, "Member 'UHoudiniAssetComponent::StaticMeshBuildSettings' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bOverrideGlobalProxyStaticMeshSettings) == 0x000760, "Member 'UHoudiniAssetComponent::bOverrideGlobalProxyStaticMeshSettings' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bEnableProxyStaticMeshOverride) == 0x000761, "Member 'UHoudiniAssetComponent::bEnableProxyStaticMeshOverride' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bEnableProxyStaticMeshRefinementByTimerOverride) == 0x000762, "Member 'UHoudiniAssetComponent::bEnableProxyStaticMeshRefinementByTimerOverride' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, ProxyMeshAutoRefineTimeoutSecondsOverride) == 0x000764, "Member 'UHoudiniAssetComponent::ProxyMeshAutoRefineTimeoutSecondsOverride' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bEnableProxyStaticMeshRefinementOnPreSaveWorldOverride) == 0x000768, "Member 'UHoudiniAssetComponent::bEnableProxyStaticMeshRefinementOnPreSaveWorldOverride' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bEnableProxyStaticMeshRefinementOnPreBeginPIEOverride) == 0x000769, "Member 'UHoudiniAssetComponent::bEnableProxyStaticMeshRefinementOnPreBeginPIEOverride' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, AssetId) == 0x00076C, "Member 'UHoudiniAssetComponent::AssetId' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, NodeIdsToCook) == 0x000770, "Member 'UHoudiniAssetComponent::NodeIdsToCook' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, OutputNodeCookCounts) == 0x000780, "Member 'UHoudiniAssetComponent::OutputNodeCookCounts' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, DownstreamHoudiniAssets) == 0x0007D0, "Member 'UHoudiniAssetComponent::DownstreamHoudiniAssets' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, ComponentGUID) == 0x000820, "Member 'UHoudiniAssetComponent::ComponentGUID' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, HapiGUID) == 0x000830, "Member 'UHoudiniAssetComponent::HapiGUID' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, HapiAssetName) == 0x000840, "Member 'UHoudiniAssetComponent::HapiAssetName' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, AssetState) == 0x000850, "Member 'UHoudiniAssetComponent::AssetState' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, DebugLastAssetState) == 0x000851, "Member 'UHoudiniAssetComponent::DebugLastAssetState' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, AssetStateResult) == 0x000852, "Member 'UHoudiniAssetComponent::AssetStateResult' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, LastComponentTransform) == 0x000860, "Member 'UHoudiniAssetComponent::LastComponentTransform' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, SubAssetIndex) == 0x000890, "Member 'UHoudiniAssetComponent::SubAssetIndex' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, AssetCookCount) == 0x000894, "Member 'UHoudiniAssetComponent::AssetCookCount' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bHasBeenLoaded) == 0x000898, "Member 'UHoudiniAssetComponent::bHasBeenLoaded' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bHasBeenDuplicated) == 0x000899, "Member 'UHoudiniAssetComponent::bHasBeenDuplicated' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bPendingDelete) == 0x00089A, "Member 'UHoudiniAssetComponent::bPendingDelete' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bRecookRequested) == 0x00089B, "Member 'UHoudiniAssetComponent::bRecookRequested' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bRebuildRequested) == 0x00089C, "Member 'UHoudiniAssetComponent::bRebuildRequested' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bEnableCooking) == 0x00089D, "Member 'UHoudiniAssetComponent::bEnableCooking' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bForceNeedUpdate) == 0x00089E, "Member 'UHoudiniAssetComponent::bForceNeedUpdate' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bLastCookSuccess) == 0x00089F, "Member 'UHoudiniAssetComponent::bLastCookSuccess' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bParameterDefinitionUpdateNeeded) == 0x0008A0, "Member 'UHoudiniAssetComponent::bParameterDefinitionUpdateNeeded' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bBlueprintStructureModified) == 0x0008A1, "Member 'UHoudiniAssetComponent::bBlueprintStructureModified' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bBlueprintModified) == 0x0008A2, "Member 'UHoudiniAssetComponent::bBlueprintModified' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, Parameters) == 0x0008A8, "Member 'UHoudiniAssetComponent::Parameters' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, Inputs) == 0x0008B8, "Member 'UHoudiniAssetComponent::Inputs' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, Outputs) == 0x0008C8, "Member 'UHoudiniAssetComponent::Outputs' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, BakedOutputs) == 0x0008D8, "Member 'UHoudiniAssetComponent::BakedOutputs' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, UntrackedOutputs) == 0x0008E8, "Member 'UHoudiniAssetComponent::UntrackedOutputs' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, HandleComponents) == 0x0008F8, "Member 'UHoudiniAssetComponent::HandleComponents' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bHasComponentTransformChanged) == 0x000908, "Member 'UHoudiniAssetComponent::bHasComponentTransformChanged' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bFullyLoaded) == 0x000909, "Member 'UHoudiniAssetComponent::bFullyLoaded' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, PDGAssetLink) == 0x000910, "Member 'UHoudiniAssetComponent::PDGAssetLink' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, RefineMeshesTimer) == 0x000918, "Member 'UHoudiniAssetComponent::RefineMeshesTimer' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bNoProxyMeshNextCookRequested) == 0x000938, "Member 'UHoudiniAssetComponent::bNoProxyMeshNextCookRequested' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, InputPresets) == 0x000940, "Member 'UHoudiniAssetComponent::InputPresets' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bBakeAfterNextCook) == 0x000990, "Member 'UHoudiniAssetComponent::bBakeAfterNextCook' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bCachedIsPreview) == 0x000A08, "Member 'UHoudiniAssetComponent::bCachedIsPreview' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, LastTickTime) == 0x000A18, "Member 'UHoudiniAssetComponent::LastTickTime' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, PCGToolType) == 0x000A38, "Member 'UHoudiniAssetComponent::PCGToolType' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent, bPCGToolGenerateMenuExpanded) == 0x000A39, "Member 'UHoudiniAssetComponent::bPCGToolGenerateMenuExpanded' has a wrong offset!");
 
 // Class HoudiniEngineRuntime.HoudiniAssetBlueprintComponent
-// 0x0100 (0x0B20 - 0x0A20)
+// 0x0100 (0x0B40 - 0x0A40)
 class UHoudiniAssetBlueprintComponent final : public UHoudiniAssetComponent
 {
 public:
-	uint8                                         Pad_A20[0x48];                                     // 0x0A20(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          FauxBPProperty;                                    // 0x0A68(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHoudiniAssetChanged;                              // 0x0A69(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bUpdatedFromTemplate;                              // 0x0A6A(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsInBlueprintEditor;                              // 0x0A6B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bCanDeleteHoudiniNodes;                            // 0x0A6C(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasRegisteredComponentTemplate;                   // 0x0A6D(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_A6E[0xA];                                      // 0x0A6E(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<struct FHoudiniOutputObjectIdentifier, struct FGuid> CachedOutputNodes;                     // 0x0A78(0x0050)(Protected, NativeAccessSpecifierProtected)
-	TMap<struct FGuid, struct FGuid>              CachedInputNodes;                                  // 0x0AC8(0x0050)(Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_B18[0x8];                                      // 0x0B18(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_A40[0x48];                                     // 0x0A40(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          FauxBPProperty;                                    // 0x0A88(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHoudiniAssetChanged;                              // 0x0A89(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bUpdatedFromTemplate;                              // 0x0A8A(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsInBlueprintEditor;                              // 0x0A8B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bCanDeleteHoudiniNodes;                            // 0x0A8C(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasRegisteredComponentTemplate;                   // 0x0A8D(0x0001)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_A8E[0xA];                                      // 0x0A8E(0x000A)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<struct FHoudiniOutputObjectIdentifier, struct FGuid> CachedOutputNodes;                     // 0x0A98(0x0050)(Protected, NativeAccessSpecifierProtected)
+	TMap<struct FGuid, struct FGuid>              CachedInputNodes;                                  // 0x0AE8(0x0050)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_B38[0x8];                                      // 0x0B38(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool HasParameter(const class FString& Name_0);
@@ -365,15 +465,15 @@ public:
 	}
 };
 static_assert(alignof(UHoudiniAssetBlueprintComponent) == 0x000010, "Wrong alignment on UHoudiniAssetBlueprintComponent");
-static_assert(sizeof(UHoudiniAssetBlueprintComponent) == 0x000B20, "Wrong size on UHoudiniAssetBlueprintComponent");
-static_assert(offsetof(UHoudiniAssetBlueprintComponent, FauxBPProperty) == 0x000A68, "Member 'UHoudiniAssetBlueprintComponent::FauxBPProperty' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetBlueprintComponent, bHoudiniAssetChanged) == 0x000A69, "Member 'UHoudiniAssetBlueprintComponent::bHoudiniAssetChanged' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetBlueprintComponent, bUpdatedFromTemplate) == 0x000A6A, "Member 'UHoudiniAssetBlueprintComponent::bUpdatedFromTemplate' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetBlueprintComponent, bIsInBlueprintEditor) == 0x000A6B, "Member 'UHoudiniAssetBlueprintComponent::bIsInBlueprintEditor' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetBlueprintComponent, bCanDeleteHoudiniNodes) == 0x000A6C, "Member 'UHoudiniAssetBlueprintComponent::bCanDeleteHoudiniNodes' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetBlueprintComponent, bHasRegisteredComponentTemplate) == 0x000A6D, "Member 'UHoudiniAssetBlueprintComponent::bHasRegisteredComponentTemplate' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetBlueprintComponent, CachedOutputNodes) == 0x000A78, "Member 'UHoudiniAssetBlueprintComponent::CachedOutputNodes' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetBlueprintComponent, CachedInputNodes) == 0x000AC8, "Member 'UHoudiniAssetBlueprintComponent::CachedInputNodes' has a wrong offset!");
+static_assert(sizeof(UHoudiniAssetBlueprintComponent) == 0x000B40, "Wrong size on UHoudiniAssetBlueprintComponent");
+static_assert(offsetof(UHoudiniAssetBlueprintComponent, FauxBPProperty) == 0x000A88, "Member 'UHoudiniAssetBlueprintComponent::FauxBPProperty' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetBlueprintComponent, bHoudiniAssetChanged) == 0x000A89, "Member 'UHoudiniAssetBlueprintComponent::bHoudiniAssetChanged' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetBlueprintComponent, bUpdatedFromTemplate) == 0x000A8A, "Member 'UHoudiniAssetBlueprintComponent::bUpdatedFromTemplate' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetBlueprintComponent, bIsInBlueprintEditor) == 0x000A8B, "Member 'UHoudiniAssetBlueprintComponent::bIsInBlueprintEditor' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetBlueprintComponent, bCanDeleteHoudiniNodes) == 0x000A8C, "Member 'UHoudiniAssetBlueprintComponent::bCanDeleteHoudiniNodes' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetBlueprintComponent, bHasRegisteredComponentTemplate) == 0x000A8D, "Member 'UHoudiniAssetBlueprintComponent::bHasRegisteredComponentTemplate' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetBlueprintComponent, CachedOutputNodes) == 0x000A98, "Member 'UHoudiniAssetBlueprintComponent::CachedOutputNodes' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetBlueprintComponent, CachedInputNodes) == 0x000AE8, "Member 'UHoudiniAssetBlueprintComponent::CachedInputNodes' has a wrong offset!");
 
 // Class HoudiniEngineRuntime.HoudiniAssetParameter
 // 0x0058 (0x0088 - 0x0030)
@@ -412,6 +512,32 @@ public:
 static_assert(alignof(UHoudiniAssetParameterButton) == 0x000008, "Wrong alignment on UHoudiniAssetParameterButton");
 static_assert(sizeof(UHoudiniAssetParameterButton) == 0x000088, "Wrong size on UHoudiniAssetParameterButton");
 
+// Class HoudiniEngineRuntime.HoudiniLandscapePtr
+// 0x0040 (0x0070 - 0x0030)
+class UHoudiniLandscapePtr final : public UObject
+{
+public:
+	TSoftObjectPtr<class ALandscapeProxy>         LandscapeSoftPtr;                                  // 0x0030(0x0030)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHoudiniLandscapeOutputBakeType               BakeType;                                          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   EditLayerName;                                     // 0x0064(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniLandscapePtr">();
+	}
+	static class UHoudiniLandscapePtr* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniLandscapePtr>();
+	}
+};
+static_assert(alignof(UHoudiniLandscapePtr) == 0x000008, "Wrong alignment on UHoudiniLandscapePtr");
+static_assert(sizeof(UHoudiniLandscapePtr) == 0x000070, "Wrong size on UHoudiniLandscapePtr");
+static_assert(offsetof(UHoudiniLandscapePtr, LandscapeSoftPtr) == 0x000030, "Member 'UHoudiniLandscapePtr::LandscapeSoftPtr' has a wrong offset!");
+static_assert(offsetof(UHoudiniLandscapePtr, BakeType) == 0x000060, "Member 'UHoudiniLandscapePtr::BakeType' has a wrong offset!");
+static_assert(offsetof(UHoudiniLandscapePtr, EditLayerName) == 0x000064, "Member 'UHoudiniLandscapePtr::EditLayerName' has a wrong offset!");
+
 // Class HoudiniEngineRuntime.HoudiniAssetParameterChoice
 // 0x0038 (0x00C0 - 0x0088)
 class UHoudiniAssetParameterChoice final : public UHoudiniAssetParameter
@@ -431,6 +557,32 @@ public:
 };
 static_assert(alignof(UHoudiniAssetParameterChoice) == 0x000008, "Wrong alignment on UHoudiniAssetParameterChoice");
 static_assert(sizeof(UHoudiniAssetParameterChoice) == 0x0000C0, "Wrong size on UHoudiniAssetParameterChoice");
+
+// Class HoudiniEngineRuntime.HoudiniParameterColor
+// 0x0028 (0x0138 - 0x0110)
+class UHoudiniParameterColor final : public UHoudiniParameter
+{
+public:
+	struct FLinearColor                           Color;                                             // 0x0110(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FLinearColor                           DefaultColor;                                      // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsChildOfRamp;                                    // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_131[0x7];                                      // 0x0131(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniParameterColor">();
+	}
+	static class UHoudiniParameterColor* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterColor>();
+	}
+};
+static_assert(alignof(UHoudiniParameterColor) == 0x000008, "Wrong alignment on UHoudiniParameterColor");
+static_assert(sizeof(UHoudiniParameterColor) == 0x000138, "Wrong size on UHoudiniParameterColor");
+static_assert(offsetof(UHoudiniParameterColor, Color) == 0x000110, "Member 'UHoudiniParameterColor::Color' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterColor, DefaultColor) == 0x000120, "Member 'UHoudiniParameterColor::DefaultColor' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterColor, bIsChildOfRamp) == 0x000130, "Member 'UHoudiniParameterColor::bIsChildOfRamp' has a wrong offset!");
 
 // Class HoudiniEngineRuntime.HoudiniAssetParameterColor
 // 0x0010 (0x0098 - 0x0088)
@@ -472,31 +624,25 @@ public:
 static_assert(alignof(UHoudiniAssetParameterFile) == 0x000008, "Wrong alignment on UHoudiniAssetParameterFile");
 static_assert(sizeof(UHoudiniAssetParameterFile) == 0x0000B0, "Wrong size on UHoudiniAssetParameterFile");
 
-// Class HoudiniEngineRuntime.HoudiniParameterButtonStrip
-// 0x0028 (0x0138 - 0x0110)
-class UHoudiniParameterButtonStrip final : public UHoudiniParameter
+// Class HoudiniEngineRuntime.HoudiniInstancedActorComponent_V1
+// 0x0010 (0x0230 - 0x0220)
+class UHoudiniInstancedActorComponent_V1 final : public USceneComponent
 {
 public:
-	int32                                         Count;                                             // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         Labels;                                            // 0x0118(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<int32>                                 Values;                                            // 0x0128(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_218[0x18];                                     // 0x0218(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HoudiniParameterButtonStrip">();
+		return StaticClassImpl<"HoudiniInstancedActorComponent_V1">();
 	}
-	static class UHoudiniParameterButtonStrip* GetDefaultObj()
+	static class UHoudiniInstancedActorComponent_V1* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniParameterButtonStrip>();
+		return GetDefaultObjImpl<UHoudiniInstancedActorComponent_V1>();
 	}
 };
-static_assert(alignof(UHoudiniParameterButtonStrip) == 0x000008, "Wrong alignment on UHoudiniParameterButtonStrip");
-static_assert(sizeof(UHoudiniParameterButtonStrip) == 0x000138, "Wrong size on UHoudiniParameterButtonStrip");
-static_assert(offsetof(UHoudiniParameterButtonStrip, Count) == 0x000110, "Member 'UHoudiniParameterButtonStrip::Count' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterButtonStrip, Labels) == 0x000118, "Member 'UHoudiniParameterButtonStrip::Labels' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterButtonStrip, Values) == 0x000128, "Member 'UHoudiniParameterButtonStrip::Values' has a wrong offset!");
+static_assert(alignof(UHoudiniInstancedActorComponent_V1) == 0x000010, "Wrong alignment on UHoudiniInstancedActorComponent_V1");
+static_assert(sizeof(UHoudiniInstancedActorComponent_V1) == 0x000230, "Wrong size on UHoudiniInstancedActorComponent_V1");
 
 // Class HoudiniEngineRuntime.HoudiniAssetParameterFloat
 // 0x0038 (0x00C0 - 0x0088)
@@ -517,6 +663,23 @@ public:
 };
 static_assert(alignof(UHoudiniAssetParameterFloat) == 0x000008, "Wrong alignment on UHoudiniAssetParameterFloat");
 static_assert(sizeof(UHoudiniAssetParameterFloat) == 0x0000C0, "Wrong size on UHoudiniAssetParameterFloat");
+
+// Class HoudiniEngineRuntime.HoudiniParameterButton
+// 0x0000 (0x0110 - 0x0110)
+class UHoudiniParameterButton final : public UHoudiniParameter
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniParameterButton">();
+	}
+	static class UHoudiniParameterButton* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterButton>();
+	}
+};
+static_assert(alignof(UHoudiniParameterButton) == 0x000008, "Wrong alignment on UHoudiniParameterButton");
+static_assert(sizeof(UHoudiniParameterButton) == 0x000110, "Wrong size on UHoudiniParameterButton");
 
 // Class HoudiniEngineRuntime.HoudiniAssetParameterFolder
 // 0x0000 (0x0088 - 0x0088)
@@ -572,6 +735,36 @@ public:
 static_assert(alignof(UHoudiniAssetParameterInt) == 0x000008, "Wrong alignment on UHoudiniAssetParameterInt");
 static_assert(sizeof(UHoudiniAssetParameterInt) == 0x0000B8, "Wrong size on UHoudiniAssetParameterInt");
 
+// Class HoudiniEngineRuntime.HoudiniHandleComponent
+// 0x0030 (0x0250 - 0x0220)
+class UHoudiniHandleComponent final : public USceneComponent
+{
+public:
+	TArray<class UHoudiniHandleParameter*>        XformParms;                                        // 0x0218(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	class UHoudiniHandleParameter*                RSTParm;                                           // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UHoudiniHandleParameter*                RotOrderParm;                                      // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHoudiniHandleType                            HandleType;                                        // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 HandleName;                                        // 0x0240(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniHandleComponent">();
+	}
+	static class UHoudiniHandleComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniHandleComponent>();
+	}
+};
+static_assert(alignof(UHoudiniHandleComponent) == 0x000010, "Wrong alignment on UHoudiniHandleComponent");
+static_assert(sizeof(UHoudiniHandleComponent) == 0x000250, "Wrong size on UHoudiniHandleComponent");
+static_assert(offsetof(UHoudiniHandleComponent, XformParms) == 0x000218, "Member 'UHoudiniHandleComponent::XformParms' has a wrong offset!");
+static_assert(offsetof(UHoudiniHandleComponent, RSTParm) == 0x000228, "Member 'UHoudiniHandleComponent::RSTParm' has a wrong offset!");
+static_assert(offsetof(UHoudiniHandleComponent, RotOrderParm) == 0x000230, "Member 'UHoudiniHandleComponent::RotOrderParm' has a wrong offset!");
+static_assert(offsetof(UHoudiniHandleComponent, HandleType) == 0x000238, "Member 'UHoudiniHandleComponent::HandleType' has a wrong offset!");
+static_assert(offsetof(UHoudiniHandleComponent, HandleName) == 0x000240, "Member 'UHoudiniHandleComponent::HandleName' has a wrong offset!");
+
 // Class HoudiniEngineRuntime.HoudiniAssetParameterLabel
 // 0x0000 (0x0088 - 0x0088)
 class UHoudiniAssetParameterLabel final : public UHoudiniAssetParameter
@@ -588,6 +781,34 @@ public:
 };
 static_assert(alignof(UHoudiniAssetParameterLabel) == 0x000008, "Wrong alignment on UHoudiniAssetParameterLabel");
 static_assert(sizeof(UHoudiniAssetParameterLabel) == 0x000088, "Wrong size on UHoudiniAssetParameterLabel");
+
+// Class HoudiniEngineRuntime.HoudiniParameterFile
+// 0x0038 (0x0148 - 0x0110)
+class UHoudiniParameterFile final : public UHoudiniParameter
+{
+public:
+	TArray<class FString>                         Values;                                            // 0x0110(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<class FString>                         DefaultValues;                                     // 0x0120(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	class FString                                 Filters;                                           // 0x0130(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsReadOnly;                                       // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniParameterFile">();
+	}
+	static class UHoudiniParameterFile* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterFile>();
+	}
+};
+static_assert(alignof(UHoudiniParameterFile) == 0x000008, "Wrong alignment on UHoudiniParameterFile");
+static_assert(sizeof(UHoudiniParameterFile) == 0x000148, "Wrong size on UHoudiniParameterFile");
+static_assert(offsetof(UHoudiniParameterFile, Values) == 0x000110, "Member 'UHoudiniParameterFile::Values' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterFile, DefaultValues) == 0x000120, "Member 'UHoudiniParameterFile::DefaultValues' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterFile, Filters) == 0x000130, "Member 'UHoudiniParameterFile::Filters' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterFile, bIsReadOnly) == 0x000140, "Member 'UHoudiniParameterFile::bIsReadOnly' has a wrong offset!");
 
 // Class HoudiniEngineRuntime.HoudiniAssetParameterMultiparm
 // 0x0008 (0x0090 - 0x0088)
@@ -645,6 +866,23 @@ public:
 };
 static_assert(alignof(UHoudiniAssetParameterSeparator) == 0x000008, "Wrong alignment on UHoudiniAssetParameterSeparator");
 static_assert(sizeof(UHoudiniAssetParameterSeparator) == 0x000088, "Wrong size on UHoudiniAssetParameterSeparator");
+
+// Class HoudiniEngineRuntime.HoudiniInputSkeletalMesh
+// 0x0000 (0x0100 - 0x0100)
+class UHoudiniInputSkeletalMesh final : public UHoudiniInputObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniInputSkeletalMesh">();
+	}
+	static class UHoudiniInputSkeletalMesh* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniInputSkeletalMesh>();
+	}
+};
+static_assert(alignof(UHoudiniInputSkeletalMesh) == 0x000010, "Wrong alignment on UHoudiniInputSkeletalMesh");
+static_assert(sizeof(UHoudiniInputSkeletalMesh) == 0x000100, "Wrong size on UHoudiniInputSkeletalMesh");
 
 // Class HoudiniEngineRuntime.HoudiniAssetParameterString
 // 0x0010 (0x0098 - 0x0088)
@@ -705,301 +943,6 @@ public:
 };
 static_assert(alignof(UHoudiniAssetComponentMaterials_V1) == 0x000008, "Wrong alignment on UHoudiniAssetComponentMaterials_V1");
 static_assert(sizeof(UHoudiniAssetComponentMaterials_V1) == 0x0000D0, "Wrong size on UHoudiniAssetComponentMaterials_V1");
-
-// Class HoudiniEngineRuntime.HoudiniHandleComponent_V1
-// 0x0090 (0x02B0 - 0x0220)
-class UHoudiniHandleComponent_V1 final : public USceneComponent
-{
-public:
-	uint8                                         Pad_218[0x98];                                     // 0x0218(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniHandleComponent_V1">();
-	}
-	static class UHoudiniHandleComponent_V1* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniHandleComponent_V1>();
-	}
-};
-static_assert(alignof(UHoudiniHandleComponent_V1) == 0x000010, "Wrong alignment on UHoudiniHandleComponent_V1");
-static_assert(sizeof(UHoudiniHandleComponent_V1) == 0x0002B0, "Wrong size on UHoudiniHandleComponent_V1");
-
-// Class HoudiniEngineRuntime.HoudiniSplineComponent_V1
-// 0x00F0 (0x0310 - 0x0220)
-class UHoudiniSplineComponent_V1 final : public USceneComponent
-{
-public:
-	uint8                                         Pad_218[0xF8];                                     // 0x0218(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniSplineComponent_V1">();
-	}
-	static class UHoudiniSplineComponent_V1* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniSplineComponent_V1>();
-	}
-};
-static_assert(alignof(UHoudiniSplineComponent_V1) == 0x000010, "Wrong alignment on UHoudiniSplineComponent_V1");
-static_assert(sizeof(UHoudiniSplineComponent_V1) == 0x000310, "Wrong size on UHoudiniSplineComponent_V1");
-
-// Class HoudiniEngineRuntime.HoudiniAssetInput
-// 0x0128 (0x01B0 - 0x0088)
-class UHoudiniAssetInput final : public UHoudiniAssetParameter
-{
-public:
-	uint8                                         Pad_88[0x128];                                     // 0x0088(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniAssetInput">();
-	}
-	static class UHoudiniAssetInput* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniAssetInput>();
-	}
-};
-static_assert(alignof(UHoudiniAssetInput) == 0x000008, "Wrong alignment on UHoudiniAssetInput");
-static_assert(sizeof(UHoudiniAssetInput) == 0x0001B0, "Wrong size on UHoudiniAssetInput");
-
-// Class HoudiniEngineRuntime.HoudiniAssetInstanceInput
-// 0x00E8 (0x0170 - 0x0088)
-class UHoudiniAssetInstanceInput final : public UHoudiniAssetParameter
-{
-public:
-	uint8                                         Pad_88[0xE8];                                      // 0x0088(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniAssetInstanceInput">();
-	}
-	static class UHoudiniAssetInstanceInput* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniAssetInstanceInput>();
-	}
-};
-static_assert(alignof(UHoudiniAssetInstanceInput) == 0x000008, "Wrong alignment on UHoudiniAssetInstanceInput");
-static_assert(sizeof(UHoudiniAssetInstanceInput) == 0x000170, "Wrong size on UHoudiniAssetInstanceInput");
-
-// Class HoudiniEngineRuntime.HoudiniAssetInstanceInputField
-// 0x0160 (0x0190 - 0x0030)
-class UHoudiniAssetInstanceInputField final : public UObject
-{
-public:
-	uint8                                         Pad_30[0x160];                                     // 0x0030(0x0160)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniAssetInstanceInputField">();
-	}
-	static class UHoudiniAssetInstanceInputField* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniAssetInstanceInputField>();
-	}
-};
-static_assert(alignof(UHoudiniAssetInstanceInputField) == 0x000008, "Wrong alignment on UHoudiniAssetInstanceInputField");
-static_assert(sizeof(UHoudiniAssetInstanceInputField) == 0x000190, "Wrong size on UHoudiniAssetInstanceInputField");
-
-// Class HoudiniEngineRuntime.HoudiniAssetComponent_V1
-// 0x0540 (0x0A50 - 0x0510)
-class UHoudiniAssetComponent_V1 final : public UPrimitiveComponent
-{
-public:
-	uint8                                         bGeneratedDoubleSidedGeometry : 1;                 // 0x0510(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_511[0x7];                                      // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      GeneratedPhysMaterial;                             // 0x0518(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBodyInstance                          DefaultBodyInstance;                               // 0x0520(0x0178)(Edit, NativeAccessSpecifierPublic)
-	ECollisionTraceFlag                           GeneratedCollisionTraceFlag;                       // 0x0698(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_699[0x3];                                      // 0x0699(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         GeneratedLightMapResolution;                       // 0x069C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GeneratedDistanceFieldResolutionScale;             // 0x06A0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FWalkableSlopeOverride                 GeneratedWalkableSlopeOverride;                    // 0x06A4(0x0010)(Edit, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	int32                                         GeneratedLightMapCoordinateIndex;                  // 0x06B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bGeneratedUseMaximumStreamingTexelRatio : 1;       // 0x06B8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_6B9[0x3];                                      // 0x06B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         GeneratedStreamingDistanceMultiplier;              // 0x06BC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UFoliageType_InstancedStaticMesh*       GeneratedFoliageDefaultSettings;                   // 0x06C0(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UAssetUserData*>                 GeneratedAssetUserData;                            // 0x06C8(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
-	class FText                                   BakeFolder;                                        // 0x06D8(0x0018)(NativeAccessSpecifierPublic)
-	class FText                                   TempCookFolder;                                    // 0x06F0(0x0018)(NativeAccessSpecifierPublic)
-	uint8                                         Pad_708[0x348];                                    // 0x0708(0x0348)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniAssetComponent_V1">();
-	}
-	static class UHoudiniAssetComponent_V1* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniAssetComponent_V1>();
-	}
-};
-static_assert(alignof(UHoudiniAssetComponent_V1) == 0x000010, "Wrong alignment on UHoudiniAssetComponent_V1");
-static_assert(sizeof(UHoudiniAssetComponent_V1) == 0x000A50, "Wrong size on UHoudiniAssetComponent_V1");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedPhysMaterial) == 0x000518, "Member 'UHoudiniAssetComponent_V1::GeneratedPhysMaterial' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, DefaultBodyInstance) == 0x000520, "Member 'UHoudiniAssetComponent_V1::DefaultBodyInstance' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedCollisionTraceFlag) == 0x000698, "Member 'UHoudiniAssetComponent_V1::GeneratedCollisionTraceFlag' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedLightMapResolution) == 0x00069C, "Member 'UHoudiniAssetComponent_V1::GeneratedLightMapResolution' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedDistanceFieldResolutionScale) == 0x0006A0, "Member 'UHoudiniAssetComponent_V1::GeneratedDistanceFieldResolutionScale' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedWalkableSlopeOverride) == 0x0006A4, "Member 'UHoudiniAssetComponent_V1::GeneratedWalkableSlopeOverride' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedLightMapCoordinateIndex) == 0x0006B4, "Member 'UHoudiniAssetComponent_V1::GeneratedLightMapCoordinateIndex' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedStreamingDistanceMultiplier) == 0x0006BC, "Member 'UHoudiniAssetComponent_V1::GeneratedStreamingDistanceMultiplier' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedFoliageDefaultSettings) == 0x0006C0, "Member 'UHoudiniAssetComponent_V1::GeneratedFoliageDefaultSettings' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedAssetUserData) == 0x0006C8, "Member 'UHoudiniAssetComponent_V1::GeneratedAssetUserData' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, BakeFolder) == 0x0006D8, "Member 'UHoudiniAssetComponent_V1::BakeFolder' has a wrong offset!");
-static_assert(offsetof(UHoudiniAssetComponent_V1, TempCookFolder) == 0x0006F0, "Member 'UHoudiniAssetComponent_V1::TempCookFolder' has a wrong offset!");
-
-// Class HoudiniEngineRuntime.HoudiniInstancedActorComponent_V1
-// 0x0010 (0x0230 - 0x0220)
-class UHoudiniInstancedActorComponent_V1 final : public USceneComponent
-{
-public:
-	uint8                                         Pad_218[0x18];                                     // 0x0218(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniInstancedActorComponent_V1">();
-	}
-	static class UHoudiniInstancedActorComponent_V1* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniInstancedActorComponent_V1>();
-	}
-};
-static_assert(alignof(UHoudiniInstancedActorComponent_V1) == 0x000010, "Wrong alignment on UHoudiniInstancedActorComponent_V1");
-static_assert(sizeof(UHoudiniInstancedActorComponent_V1) == 0x000230, "Wrong size on UHoudiniInstancedActorComponent_V1");
-
-// Class HoudiniEngineRuntime.HoudiniAssetStateEvents
-// 0x0000 (0x0000 - 0x0000)
-class IHoudiniAssetStateEvents final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniAssetStateEvents">();
-	}
-	static class IHoudiniAssetStateEvents* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IHoudiniAssetStateEvents>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(IHoudiniAssetStateEvents) == 0x000001, "Wrong alignment on IHoudiniAssetStateEvents");
-static_assert(sizeof(IHoudiniAssetStateEvents) == 0x000001, "Wrong size on IHoudiniAssetStateEvents");
-
-// Class HoudiniEngineRuntime.HoudiniMeshSplitInstancerComponent_V1
-// 0x0020 (0x0240 - 0x0220)
-class UHoudiniMeshSplitInstancerComponent_V1 final : public USceneComponent
-{
-public:
-	uint8                                         Pad_218[0x28];                                     // 0x0218(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniMeshSplitInstancerComponent_V1">();
-	}
-	static class UHoudiniMeshSplitInstancerComponent_V1* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniMeshSplitInstancerComponent_V1>();
-	}
-};
-static_assert(alignof(UHoudiniMeshSplitInstancerComponent_V1) == 0x000010, "Wrong alignment on UHoudiniMeshSplitInstancerComponent_V1");
-static_assert(sizeof(UHoudiniMeshSplitInstancerComponent_V1) == 0x000240, "Wrong size on UHoudiniMeshSplitInstancerComponent_V1");
-
-// Class HoudiniEngineRuntime.HoudiniEngineCopyPropertiesInterface
-// 0x0000 (0x0000 - 0x0000)
-class IHoudiniEngineCopyPropertiesInterface final
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniEngineCopyPropertiesInterface">();
-	}
-	static class IHoudiniEngineCopyPropertiesInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IHoudiniEngineCopyPropertiesInterface>();
-	}
-
-	class UObject* AsUObject()
-	{
-		return reinterpret_cast<UObject*>(this);
-	}
-	const class UObject* AsUObject() const
-	{
-		return reinterpret_cast<const UObject*>(this);
-	}
-};
-static_assert(alignof(IHoudiniEngineCopyPropertiesInterface) == 0x000001, "Wrong alignment on IHoudiniEngineCopyPropertiesInterface");
-static_assert(sizeof(IHoudiniEngineCopyPropertiesInterface) == 0x000001, "Wrong size on IHoudiniEngineCopyPropertiesInterface");
-
-// Class HoudiniEngineRuntime.HoudiniHandleParameter
-// 0x0010 (0x0040 - 0x0030)
-class UHoudiniHandleParameter final : public UObject
-{
-public:
-	class UHoudiniParameter*                      AssetParameter;                                    // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TupleIndex;                                        // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniHandleParameter">();
-	}
-	static class UHoudiniHandleParameter* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniHandleParameter>();
-	}
-};
-static_assert(alignof(UHoudiniHandleParameter) == 0x000008, "Wrong alignment on UHoudiniHandleParameter");
-static_assert(sizeof(UHoudiniHandleParameter) == 0x000040, "Wrong size on UHoudiniHandleParameter");
-static_assert(offsetof(UHoudiniHandleParameter, AssetParameter) == 0x000030, "Member 'UHoudiniHandleParameter::AssetParameter' has a wrong offset!");
-static_assert(offsetof(UHoudiniHandleParameter, TupleIndex) == 0x000038, "Member 'UHoudiniHandleParameter::TupleIndex' has a wrong offset!");
-
-// Class HoudiniEngineRuntime.HoudiniHandleComponent
-// 0x0030 (0x0250 - 0x0220)
-class UHoudiniHandleComponent final : public USceneComponent
-{
-public:
-	TArray<class UHoudiniHandleParameter*>        XformParms;                                        // 0x0218(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-	class UHoudiniHandleParameter*                RSTParm;                                           // 0x0228(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UHoudiniHandleParameter*                RotOrderParm;                                      // 0x0230(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHoudiniHandleType                            HandleType;                                        // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_239[0x7];                                      // 0x0239(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 HandleName;                                        // 0x0240(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniHandleComponent">();
-	}
-	static class UHoudiniHandleComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniHandleComponent>();
-	}
-};
-static_assert(alignof(UHoudiniHandleComponent) == 0x000010, "Wrong alignment on UHoudiniHandleComponent");
-static_assert(sizeof(UHoudiniHandleComponent) == 0x000250, "Wrong size on UHoudiniHandleComponent");
-static_assert(offsetof(UHoudiniHandleComponent, XformParms) == 0x000218, "Member 'UHoudiniHandleComponent::XformParms' has a wrong offset!");
-static_assert(offsetof(UHoudiniHandleComponent, RSTParm) == 0x000228, "Member 'UHoudiniHandleComponent::RSTParm' has a wrong offset!");
-static_assert(offsetof(UHoudiniHandleComponent, RotOrderParm) == 0x000230, "Member 'UHoudiniHandleComponent::RotOrderParm' has a wrong offset!");
-static_assert(offsetof(UHoudiniHandleComponent, HandleType) == 0x000238, "Member 'UHoudiniHandleComponent::HandleType' has a wrong offset!");
-static_assert(offsetof(UHoudiniHandleComponent, HandleName) == 0x000240, "Member 'UHoudiniHandleComponent::HandleName' has a wrong offset!");
 
 // Class HoudiniEngineRuntime.HoudiniInput
 // 0x02B8 (0x02E8 - 0x0030)
@@ -1173,205 +1116,25 @@ static_assert(offsetof(UHoudiniInput, SplineTag) == 0x0002D0, "Member 'UHoudiniI
 static_assert(offsetof(UHoudiniInput, OnlyInputHeightField) == 0x0002E0, "Member 'UHoudiniInput::OnlyInputHeightField' has a wrong offset!");
 static_assert(offsetof(UHoudiniInput, InputSplineType) == 0x0002E1, "Member 'UHoudiniInput::InputSplineType' has a wrong offset!");
 
-// Class HoudiniEngineRuntime.HoudiniInputObject
-// 0x00D0 (0x0100 - 0x0030)
-#pragma pack(push, 0x1)
-class alignas(0x10) UHoudiniInputObject : public UObject
+// Class HoudiniEngineRuntime.HoudiniHandleComponent_V1
+// 0x0090 (0x02B0 - 0x0220)
+class UHoudiniHandleComponent_V1 final : public USceneComponent
 {
 public:
-	TSoftObjectPtr<class UObject>                 InputObject;                                       // 0x0030(0x0030)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             Transform;                                         // 0x0060(0x0030)(IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	EHoudiniInputObjectType                       Type;                                              // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_91[0x3];                                       // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         InputNodeId;                                       // 0x0094(0x0004)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InputObjectNodeId;                                 // 0x0098(0x0004)(ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData, NonTransactional, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  Guid;                                              // 0x009C(0x0010)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_AC[0x2C];                                      // 0x00AC(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bHasChanged;                                       // 0x00D8(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bNeedsToTriggerUpdate;                             // 0x00D9(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bTransformChanged;                                 // 0x00DA(0x0001)(ZeroConstructor, DuplicateTransient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bImportAsReference;                                // 0x00DB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bImportAsReferenceRotScaleEnabled;                 // 0x00DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bImportAsReferenceBboxEnabled;                     // 0x00DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bImportAsReferenceMaterialEnabled;                 // 0x00DE(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_DF[0x1];                                       // 0x00DF(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         MaterialReferences;                                // 0x00E0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bCanDeleteHoudiniNodes;                            // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_F1[0x7];                                       // 0x00F1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_218[0x98];                                     // 0x0218(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HoudiniInputObject">();
+		return StaticClassImpl<"HoudiniHandleComponent_V1">();
 	}
-	static class UHoudiniInputObject* GetDefaultObj()
+	static class UHoudiniHandleComponent_V1* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniInputObject>();
+		return GetDefaultObjImpl<UHoudiniHandleComponent_V1>();
 	}
 };
-#pragma pack(pop)
-static_assert(alignof(UHoudiniInputObject) == 0x000010, "Wrong alignment on UHoudiniInputObject");
-static_assert(sizeof(UHoudiniInputObject) == 0x000100, "Wrong size on UHoudiniInputObject");
-static_assert(offsetof(UHoudiniInputObject, InputObject) == 0x000030, "Member 'UHoudiniInputObject::InputObject' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, Transform) == 0x000060, "Member 'UHoudiniInputObject::Transform' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, Type) == 0x000090, "Member 'UHoudiniInputObject::Type' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, InputNodeId) == 0x000094, "Member 'UHoudiniInputObject::InputNodeId' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, InputObjectNodeId) == 0x000098, "Member 'UHoudiniInputObject::InputObjectNodeId' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, Guid) == 0x00009C, "Member 'UHoudiniInputObject::Guid' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, bHasChanged) == 0x0000D8, "Member 'UHoudiniInputObject::bHasChanged' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, bNeedsToTriggerUpdate) == 0x0000D9, "Member 'UHoudiniInputObject::bNeedsToTriggerUpdate' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, bTransformChanged) == 0x0000DA, "Member 'UHoudiniInputObject::bTransformChanged' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, bImportAsReference) == 0x0000DB, "Member 'UHoudiniInputObject::bImportAsReference' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, bImportAsReferenceRotScaleEnabled) == 0x0000DC, "Member 'UHoudiniInputObject::bImportAsReferenceRotScaleEnabled' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, bImportAsReferenceBboxEnabled) == 0x0000DD, "Member 'UHoudiniInputObject::bImportAsReferenceBboxEnabled' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, bImportAsReferenceMaterialEnabled) == 0x0000DE, "Member 'UHoudiniInputObject::bImportAsReferenceMaterialEnabled' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, MaterialReferences) == 0x0000E0, "Member 'UHoudiniInputObject::MaterialReferences' has a wrong offset!");
-static_assert(offsetof(UHoudiniInputObject, bCanDeleteHoudiniNodes) == 0x0000F0, "Member 'UHoudiniInputObject::bCanDeleteHoudiniNodes' has a wrong offset!");
-
-// Class HoudiniEngineRuntime.HoudiniStaticMesh
-// 0x00A0 (0x00D0 - 0x0030)
-class UHoudiniStaticMesh final : public UObject
-{
-public:
-	bool                                          bHasNormals;                                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasTangents;                                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasColors;                                        // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        NumUVLayers;                                       // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bHasPerFaceMaterials;                              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector>                        VertexPositions;                                   // 0x0040(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FIntVector>                     TriangleIndices;                                   // 0x0050(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FColor>                         VertexInstanceColors;                              // 0x0060(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FVector>                        VertexInstanceNormals;                             // 0x0070(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FVector>                        VertexInstanceUTangents;                           // 0x0080(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FVector>                        VertexInstanceVTangents;                           // 0x0090(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FVector2D>                      VertexInstanceUVs;                                 // 0x00A0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<int32>                                 MaterialIDsPerTriangle;                            // 0x00B0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FStaticMaterial>                StaticMaterials;                                   // 0x00C0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	uint32 AddStaticMaterial(const struct FStaticMaterial& InStaticMaterial);
-	void CalculateNormals(bool bInComputeWeightedNormals);
-	void CalculateTangents(bool bInComputeWeightedNormals);
-	class UMaterialInterface* GetMaterial(int32 InMaterialIndex);
-	void Initialize(uint32 InNumVertices, uint32 InNumTriangles, uint32 InNumUVLayers, uint32 InInitialNumStaticMaterials, bool bInHasNormals, bool bInHasTangents, bool bInHasColors, bool bInHasPerFaceMaterials);
-	void Optimize();
-	void SetHasColors(bool bInHasColors);
-	void SetHasNormals(bool bInHasNormals);
-	void SetHasPerFaceMaterials(bool bInHasPerFaceMaterials);
-	void SetHasTangents(bool bInHasTangents);
-	void SetNumStaticMaterials(uint32 InNumStaticMaterials);
-	void SetNumUVLayers(uint32 InNumUVLayers);
-	void SetStaticMaterial(uint32 InMaterialIndex, const struct FStaticMaterial& InStaticMaterial);
-	void SetTriangleMaterialID(uint32 InTriangleIndex, int32 InMaterialID);
-	void SetTriangleVertexColor(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, const struct FColor& InColor);
-	void SetTriangleVertexIndices(uint32 InTriangleIndex, const struct FIntVector& InTriangleVertexIndices);
-	void SetTriangleVertexNormal(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, const struct FVector& InNormal);
-	void SetTriangleVertexUTangent(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, const struct FVector& InUTangent);
-	void SetTriangleVertexUV(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, uint8 InUVLayer, const struct FVector2D& InUV);
-	void SetTriangleVertexVTangent(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, const struct FVector& InVTangent);
-	void SetVertexPosition(uint32 InVertexIndex, const struct FVector& InPosition);
-
-	struct FBox CalcBounds() const;
-	const TArray<int32> GetMaterialIDsPerTriangle() const;
-	int32 GetMaterialIndex(class FName InMaterialSlotName) const;
-	uint32 GetNumStaticMaterials() const;
-	uint32 GetNumTriangles() const;
-	uint32 GetNumUVLayers() const;
-	uint32 GetNumVertexInstances() const;
-	uint32 GetNumVertices() const;
-	const TArray<struct FStaticMaterial> GetStaticMaterials() const;
-	const TArray<struct FIntVector> GetTriangleIndices() const;
-	const TArray<struct FColor> GetVertexInstanceColors() const;
-	const TArray<struct FVector> GetVertexInstanceNormals() const;
-	const TArray<struct FVector> GetVertexInstanceUTangents() const;
-	const TArray<struct FVector2D> GetVertexInstanceUVs() const;
-	const TArray<struct FVector> GetVertexInstanceVTangents() const;
-	const TArray<struct FVector> GetVertexPositions() const;
-	bool HasColors() const;
-	bool HasNormals() const;
-	bool HasPerFaceMaterials() const;
-	bool HasTangents() const;
-	bool IsValid(bool bInSkipVertexIndicesCheck) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniStaticMesh">();
-	}
-	static class UHoudiniStaticMesh* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniStaticMesh>();
-	}
-};
-static_assert(alignof(UHoudiniStaticMesh) == 0x000008, "Wrong alignment on UHoudiniStaticMesh");
-static_assert(sizeof(UHoudiniStaticMesh) == 0x0000D0, "Wrong size on UHoudiniStaticMesh");
-static_assert(offsetof(UHoudiniStaticMesh, bHasNormals) == 0x000030, "Member 'UHoudiniStaticMesh::bHasNormals' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, bHasTangents) == 0x000031, "Member 'UHoudiniStaticMesh::bHasTangents' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, bHasColors) == 0x000032, "Member 'UHoudiniStaticMesh::bHasColors' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, NumUVLayers) == 0x000034, "Member 'UHoudiniStaticMesh::NumUVLayers' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, bHasPerFaceMaterials) == 0x000038, "Member 'UHoudiniStaticMesh::bHasPerFaceMaterials' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, VertexPositions) == 0x000040, "Member 'UHoudiniStaticMesh::VertexPositions' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, TriangleIndices) == 0x000050, "Member 'UHoudiniStaticMesh::TriangleIndices' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceColors) == 0x000060, "Member 'UHoudiniStaticMesh::VertexInstanceColors' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceNormals) == 0x000070, "Member 'UHoudiniStaticMesh::VertexInstanceNormals' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceUTangents) == 0x000080, "Member 'UHoudiniStaticMesh::VertexInstanceUTangents' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceVTangents) == 0x000090, "Member 'UHoudiniStaticMesh::VertexInstanceVTangents' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceUVs) == 0x0000A0, "Member 'UHoudiniStaticMesh::VertexInstanceUVs' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, MaterialIDsPerTriangle) == 0x0000B0, "Member 'UHoudiniStaticMesh::MaterialIDsPerTriangle' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMesh, StaticMaterials) == 0x0000C0, "Member 'UHoudiniStaticMesh::StaticMaterials' has a wrong offset!");
-
-// Class HoudiniEngineRuntime.HoudiniInputStaticMesh
-// 0x0000 (0x0100 - 0x0100)
-class UHoudiniInputStaticMesh : public UHoudiniInputObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniInputStaticMesh">();
-	}
-	static class UHoudiniInputStaticMesh* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniInputStaticMesh>();
-	}
-};
-static_assert(alignof(UHoudiniInputStaticMesh) == 0x000010, "Wrong alignment on UHoudiniInputStaticMesh");
-static_assert(sizeof(UHoudiniInputStaticMesh) == 0x000100, "Wrong size on UHoudiniInputStaticMesh");
-
-// Class HoudiniEngineRuntime.HoudiniInputSkeletalMesh
-// 0x0000 (0x0100 - 0x0100)
-class UHoudiniInputSkeletalMesh final : public UHoudiniInputObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniInputSkeletalMesh">();
-	}
-	static class UHoudiniInputSkeletalMesh* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniInputSkeletalMesh>();
-	}
-};
-static_assert(alignof(UHoudiniInputSkeletalMesh) == 0x000010, "Wrong alignment on UHoudiniInputSkeletalMesh");
-static_assert(sizeof(UHoudiniInputSkeletalMesh) == 0x000100, "Wrong size on UHoudiniInputSkeletalMesh");
-
-// Class HoudiniEngineRuntime.HoudiniInputGeometryCollection
-// 0x0000 (0x0100 - 0x0100)
-class UHoudiniInputGeometryCollection final : public UHoudiniInputObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniInputGeometryCollection">();
-	}
-	static class UHoudiniInputGeometryCollection* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniInputGeometryCollection>();
-	}
-};
-static_assert(alignof(UHoudiniInputGeometryCollection) == 0x000010, "Wrong alignment on UHoudiniInputGeometryCollection");
-static_assert(sizeof(UHoudiniInputGeometryCollection) == 0x000100, "Wrong size on UHoudiniInputGeometryCollection");
+static_assert(alignof(UHoudiniHandleComponent_V1) == 0x000010, "Wrong alignment on UHoudiniHandleComponent_V1");
+static_assert(sizeof(UHoudiniHandleComponent_V1) == 0x0002B0, "Wrong size on UHoudiniHandleComponent_V1");
 
 // Class HoudiniEngineRuntime.HoudiniInputSceneComponent
 // 0x0030 (0x0130 - 0x0100)
@@ -1436,6 +1199,222 @@ public:
 static_assert(alignof(UHoudiniInputInstancedMeshComponent) == 0x000010, "Wrong alignment on UHoudiniInputInstancedMeshComponent");
 static_assert(sizeof(UHoudiniInputInstancedMeshComponent) == 0x000170, "Wrong size on UHoudiniInputInstancedMeshComponent");
 static_assert(offsetof(UHoudiniInputInstancedMeshComponent, InstanceTransforms) == 0x000160, "Member 'UHoudiniInputInstancedMeshComponent::InstanceTransforms' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniSplineComponent_V1
+// 0x00F0 (0x0310 - 0x0220)
+class UHoudiniSplineComponent_V1 final : public USceneComponent
+{
+public:
+	uint8                                         Pad_218[0xF8];                                     // 0x0218(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniSplineComponent_V1">();
+	}
+	static class UHoudiniSplineComponent_V1* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniSplineComponent_V1>();
+	}
+};
+static_assert(alignof(UHoudiniSplineComponent_V1) == 0x000010, "Wrong alignment on UHoudiniSplineComponent_V1");
+static_assert(sizeof(UHoudiniSplineComponent_V1) == 0x000310, "Wrong size on UHoudiniSplineComponent_V1");
+
+// Class HoudiniEngineRuntime.HoudiniAssetInput
+// 0x0128 (0x01B0 - 0x0088)
+class UHoudiniAssetInput final : public UHoudiniAssetParameter
+{
+public:
+	uint8                                         Pad_88[0x128];                                     // 0x0088(0x0128)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniAssetInput">();
+	}
+	static class UHoudiniAssetInput* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniAssetInput>();
+	}
+};
+static_assert(alignof(UHoudiniAssetInput) == 0x000008, "Wrong alignment on UHoudiniAssetInput");
+static_assert(sizeof(UHoudiniAssetInput) == 0x0001B0, "Wrong size on UHoudiniAssetInput");
+
+// Class HoudiniEngineRuntime.HoudiniAssetInstanceInput
+// 0x00E8 (0x0170 - 0x0088)
+class UHoudiniAssetInstanceInput final : public UHoudiniAssetParameter
+{
+public:
+	uint8                                         Pad_88[0xE8];                                      // 0x0088(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniAssetInstanceInput">();
+	}
+	static class UHoudiniAssetInstanceInput* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniAssetInstanceInput>();
+	}
+};
+static_assert(alignof(UHoudiniAssetInstanceInput) == 0x000008, "Wrong alignment on UHoudiniAssetInstanceInput");
+static_assert(sizeof(UHoudiniAssetInstanceInput) == 0x000170, "Wrong size on UHoudiniAssetInstanceInput");
+
+// Class HoudiniEngineRuntime.HoudiniAssetInstanceInputField
+// 0x0160 (0x0190 - 0x0030)
+class UHoudiniAssetInstanceInputField final : public UObject
+{
+public:
+	uint8                                         Pad_30[0x160];                                     // 0x0030(0x0160)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniAssetInstanceInputField">();
+	}
+	static class UHoudiniAssetInstanceInputField* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniAssetInstanceInputField>();
+	}
+};
+static_assert(alignof(UHoudiniAssetInstanceInputField) == 0x000008, "Wrong alignment on UHoudiniAssetInstanceInputField");
+static_assert(sizeof(UHoudiniAssetInstanceInputField) == 0x000190, "Wrong size on UHoudiniAssetInstanceInputField");
+
+// Class HoudiniEngineRuntime.HoudiniAssetComponent_V1
+// 0x0530 (0x0A60 - 0x0530)
+class UHoudiniAssetComponent_V1 final : public UPrimitiveComponent
+{
+public:
+	uint8                                         bGeneratedDoubleSidedGeometry : 1;                 // 0x0528(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_529[0x7];                                      // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      GeneratedPhysMaterial;                             // 0x0530(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBodyInstance                          DefaultBodyInstance;                               // 0x0538(0x0178)(Edit, NativeAccessSpecifierPublic)
+	ECollisionTraceFlag                           GeneratedCollisionTraceFlag;                       // 0x06B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_6B1[0x3];                                      // 0x06B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         GeneratedLightMapResolution;                       // 0x06B4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GeneratedDistanceFieldResolutionScale;             // 0x06B8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FWalkableSlopeOverride                 GeneratedWalkableSlopeOverride;                    // 0x06BC(0x0010)(Edit, IsPlainOldData, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	int32                                         GeneratedLightMapCoordinateIndex;                  // 0x06CC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bGeneratedUseMaximumStreamingTexelRatio : 1;       // 0x06D0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_6D1[0x3];                                      // 0x06D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         GeneratedStreamingDistanceMultiplier;              // 0x06D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UFoliageType_InstancedStaticMesh*       GeneratedFoliageDefaultSettings;                   // 0x06D8(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, AdvancedDisplay, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UAssetUserData*>                 GeneratedAssetUserData;                            // 0x06E0(0x0010)(Edit, ExportObject, ZeroConstructor, ContainsInstancedReference, AdvancedDisplay, NativeAccessSpecifierPublic)
+	class FText                                   BakeFolder;                                        // 0x06F0(0x0018)(NativeAccessSpecifierPublic)
+	class FText                                   TempCookFolder;                                    // 0x0708(0x0018)(NativeAccessSpecifierPublic)
+	uint8                                         Pad_720[0x340];                                    // 0x0720(0x0340)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniAssetComponent_V1">();
+	}
+	static class UHoudiniAssetComponent_V1* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniAssetComponent_V1>();
+	}
+};
+static_assert(alignof(UHoudiniAssetComponent_V1) == 0x000010, "Wrong alignment on UHoudiniAssetComponent_V1");
+static_assert(sizeof(UHoudiniAssetComponent_V1) == 0x000A60, "Wrong size on UHoudiniAssetComponent_V1");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedPhysMaterial) == 0x000530, "Member 'UHoudiniAssetComponent_V1::GeneratedPhysMaterial' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, DefaultBodyInstance) == 0x000538, "Member 'UHoudiniAssetComponent_V1::DefaultBodyInstance' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedCollisionTraceFlag) == 0x0006B0, "Member 'UHoudiniAssetComponent_V1::GeneratedCollisionTraceFlag' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedLightMapResolution) == 0x0006B4, "Member 'UHoudiniAssetComponent_V1::GeneratedLightMapResolution' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedDistanceFieldResolutionScale) == 0x0006B8, "Member 'UHoudiniAssetComponent_V1::GeneratedDistanceFieldResolutionScale' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedWalkableSlopeOverride) == 0x0006BC, "Member 'UHoudiniAssetComponent_V1::GeneratedWalkableSlopeOverride' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedLightMapCoordinateIndex) == 0x0006CC, "Member 'UHoudiniAssetComponent_V1::GeneratedLightMapCoordinateIndex' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedStreamingDistanceMultiplier) == 0x0006D4, "Member 'UHoudiniAssetComponent_V1::GeneratedStreamingDistanceMultiplier' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedFoliageDefaultSettings) == 0x0006D8, "Member 'UHoudiniAssetComponent_V1::GeneratedFoliageDefaultSettings' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, GeneratedAssetUserData) == 0x0006E0, "Member 'UHoudiniAssetComponent_V1::GeneratedAssetUserData' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, BakeFolder) == 0x0006F0, "Member 'UHoudiniAssetComponent_V1::BakeFolder' has a wrong offset!");
+static_assert(offsetof(UHoudiniAssetComponent_V1, TempCookFolder) == 0x000708, "Member 'UHoudiniAssetComponent_V1::TempCookFolder' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniMeshSplitInstancerComponent_V1
+// 0x0020 (0x0240 - 0x0220)
+class UHoudiniMeshSplitInstancerComponent_V1 final : public USceneComponent
+{
+public:
+	uint8                                         Pad_218[0x28];                                     // 0x0218(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniMeshSplitInstancerComponent_V1">();
+	}
+	static class UHoudiniMeshSplitInstancerComponent_V1* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniMeshSplitInstancerComponent_V1>();
+	}
+};
+static_assert(alignof(UHoudiniMeshSplitInstancerComponent_V1) == 0x000010, "Wrong alignment on UHoudiniMeshSplitInstancerComponent_V1");
+static_assert(sizeof(UHoudiniMeshSplitInstancerComponent_V1) == 0x000240, "Wrong size on UHoudiniMeshSplitInstancerComponent_V1");
+
+// Class HoudiniEngineRuntime.HoudiniEngineCopyPropertiesInterface
+// 0x0000 (0x0000 - 0x0000)
+class IHoudiniEngineCopyPropertiesInterface final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniEngineCopyPropertiesInterface">();
+	}
+	static class IHoudiniEngineCopyPropertiesInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IHoudiniEngineCopyPropertiesInterface>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IHoudiniEngineCopyPropertiesInterface) == 0x000001, "Wrong alignment on IHoudiniEngineCopyPropertiesInterface");
+static_assert(sizeof(IHoudiniEngineCopyPropertiesInterface) == 0x000001, "Wrong size on IHoudiniEngineCopyPropertiesInterface");
+
+// Class HoudiniEngineRuntime.HoudiniHandleParameter
+// 0x0010 (0x0040 - 0x0030)
+class UHoudiniHandleParameter final : public UObject
+{
+public:
+	class UHoudiniParameter*                      AssetParameter;                                    // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TupleIndex;                                        // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3C[0x4];                                       // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniHandleParameter">();
+	}
+	static class UHoudiniHandleParameter* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniHandleParameter>();
+	}
+};
+static_assert(alignof(UHoudiniHandleParameter) == 0x000008, "Wrong alignment on UHoudiniHandleParameter");
+static_assert(sizeof(UHoudiniHandleParameter) == 0x000040, "Wrong size on UHoudiniHandleParameter");
+static_assert(offsetof(UHoudiniHandleParameter, AssetParameter) == 0x000030, "Member 'UHoudiniHandleParameter::AssetParameter' has a wrong offset!");
+static_assert(offsetof(UHoudiniHandleParameter, TupleIndex) == 0x000038, "Member 'UHoudiniHandleParameter::TupleIndex' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniInputGeometryCollection
+// 0x0000 (0x0100 - 0x0100)
+class UHoudiniInputGeometryCollection final : public UHoudiniInputObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniInputGeometryCollection">();
+	}
+	static class UHoudiniInputGeometryCollection* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniInputGeometryCollection>();
+	}
+};
+static_assert(alignof(UHoudiniInputGeometryCollection) == 0x000010, "Wrong alignment on UHoudiniInputGeometryCollection");
+static_assert(sizeof(UHoudiniInputGeometryCollection) == 0x000100, "Wrong size on UHoudiniInputGeometryCollection");
 
 // Class HoudiniEngineRuntime.HoudiniInputSplineComponent
 // 0x0020 (0x0150 - 0x0130)
@@ -1681,23 +1660,6 @@ public:
 static_assert(alignof(UHoudiniInputDataTable) == 0x000010, "Wrong alignment on UHoudiniInputDataTable");
 static_assert(sizeof(UHoudiniInputDataTable) == 0x000100, "Wrong size on UHoudiniInputDataTable");
 
-// Class HoudiniEngineRuntime.HoudiniInputFoliageType_InstancedStaticMesh
-// 0x0000 (0x0100 - 0x0100)
-class UHoudiniInputFoliageType_InstancedStaticMesh final : public UHoudiniInputStaticMesh
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniInputFoliageType_InstancedStaticMesh">();
-	}
-	static class UHoudiniInputFoliageType_InstancedStaticMesh* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniInputFoliageType_InstancedStaticMesh>();
-	}
-};
-static_assert(alignof(UHoudiniInputFoliageType_InstancedStaticMesh) == 0x000010, "Wrong alignment on UHoudiniInputFoliageType_InstancedStaticMesh");
-static_assert(sizeof(UHoudiniInputFoliageType_InstancedStaticMesh) == 0x000100, "Wrong size on UHoudiniInputFoliageType_InstancedStaticMesh");
-
 // Class HoudiniEngineRuntime.HoudiniInputBlueprint
 // 0x0060 (0x0160 - 0x0100)
 class UHoudiniInputBlueprint final : public UHoudiniInputObject
@@ -1748,43 +1710,6 @@ static_assert(sizeof(UHoudiniInstancedActorComponent) == 0x000230, "Wrong size o
 static_assert(offsetof(UHoudiniInstancedActorComponent, InstancedObject) == 0x000218, "Member 'UHoudiniInstancedActorComponent::InstancedObject' has a wrong offset!");
 static_assert(offsetof(UHoudiniInstancedActorComponent, InstancedActors) == 0x000220, "Member 'UHoudiniInstancedActorComponent::InstancedActors' has a wrong offset!");
 
-// Class HoudiniEngineRuntime.HoudiniParameterChoice
-// 0x0070 (0x0180 - 0x0110)
-class UHoudiniParameterChoice final : public UHoudiniParameter
-{
-public:
-	int32                                         IntValue;                                          // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         DefaultIntValue;                                   // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 StringValue;                                       // 0x0118(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 DefaultStringValue;                                // 0x0128(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class FString>                         StringChoiceValues;                                // 0x0138(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<class FString>                         StringChoiceLabels;                                // 0x0148(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_158[0x10];                                     // 0x0158(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bIsChildOfRamp;                                    // 0x0168(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_169[0x7];                                      // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 IntValuesArray;                                    // 0x0170(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniParameterChoice">();
-	}
-	static class UHoudiniParameterChoice* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterChoice>();
-	}
-};
-static_assert(alignof(UHoudiniParameterChoice) == 0x000008, "Wrong alignment on UHoudiniParameterChoice");
-static_assert(sizeof(UHoudiniParameterChoice) == 0x000180, "Wrong size on UHoudiniParameterChoice");
-static_assert(offsetof(UHoudiniParameterChoice, IntValue) == 0x000110, "Member 'UHoudiniParameterChoice::IntValue' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterChoice, DefaultIntValue) == 0x000114, "Member 'UHoudiniParameterChoice::DefaultIntValue' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterChoice, StringValue) == 0x000118, "Member 'UHoudiniParameterChoice::StringValue' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterChoice, DefaultStringValue) == 0x000128, "Member 'UHoudiniParameterChoice::DefaultStringValue' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterChoice, StringChoiceValues) == 0x000138, "Member 'UHoudiniParameterChoice::StringChoiceValues' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterChoice, StringChoiceLabels) == 0x000148, "Member 'UHoudiniParameterChoice::StringChoiceLabels' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterChoice, bIsChildOfRamp) == 0x000168, "Member 'UHoudiniParameterChoice::bIsChildOfRamp' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterChoice, IntValuesArray) == 0x000170, "Member 'UHoudiniParameterChoice::IntValuesArray' has a wrong offset!");
-
 // Class HoudiniEngineRuntime.HoudiniMeshSplitInstancerComponent
 // 0x0020 (0x0240 - 0x0220)
 class UHoudiniMeshSplitInstancerComponent final : public USceneComponent
@@ -1809,32 +1734,6 @@ static_assert(sizeof(UHoudiniMeshSplitInstancerComponent) == 0x000240, "Wrong si
 static_assert(offsetof(UHoudiniMeshSplitInstancerComponent, Instances) == 0x000218, "Member 'UHoudiniMeshSplitInstancerComponent::Instances' has a wrong offset!");
 static_assert(offsetof(UHoudiniMeshSplitInstancerComponent, OverrideMaterials) == 0x000228, "Member 'UHoudiniMeshSplitInstancerComponent::OverrideMaterials' has a wrong offset!");
 static_assert(offsetof(UHoudiniMeshSplitInstancerComponent, InstancedMesh) == 0x000238, "Member 'UHoudiniMeshSplitInstancerComponent::InstancedMesh' has a wrong offset!");
-
-// Class HoudiniEngineRuntime.HoudiniLandscapePtr
-// 0x0040 (0x0070 - 0x0030)
-class UHoudiniLandscapePtr final : public UObject
-{
-public:
-	TSoftObjectPtr<class ALandscapeProxy>         LandscapeSoftPtr;                                  // 0x0030(0x0030)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHoudiniLandscapeOutputBakeType               BakeType;                                          // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_61[0x3];                                       // 0x0061(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   EditLayerName;                                     // 0x0064(0x000C)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniLandscapePtr">();
-	}
-	static class UHoudiniLandscapePtr* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniLandscapePtr>();
-	}
-};
-static_assert(alignof(UHoudiniLandscapePtr) == 0x000008, "Wrong alignment on UHoudiniLandscapePtr");
-static_assert(sizeof(UHoudiniLandscapePtr) == 0x000070, "Wrong size on UHoudiniLandscapePtr");
-static_assert(offsetof(UHoudiniLandscapePtr, LandscapeSoftPtr) == 0x000030, "Member 'UHoudiniLandscapePtr::LandscapeSoftPtr' has a wrong offset!");
-static_assert(offsetof(UHoudiniLandscapePtr, BakeType) == 0x000060, "Member 'UHoudiniLandscapePtr::BakeType' has a wrong offset!");
-static_assert(offsetof(UHoudiniLandscapePtr, EditLayerName) == 0x000064, "Member 'UHoudiniLandscapePtr::EditLayerName' has a wrong offset!");
 
 // Class HoudiniEngineRuntime.HoudiniLandscapeEditLayer
 // 0x0040 (0x0070 - 0x0030)
@@ -1908,81 +1807,31 @@ static_assert(offsetof(UHoudiniOutput, bHasEditableNodeBuilt) == 0x0001B1, "Memb
 static_assert(offsetof(UHoudiniOutput, bIsUpdating) == 0x0001B2, "Member 'UHoudiniOutput::bIsUpdating' has a wrong offset!");
 static_assert(offsetof(UHoudiniOutput, bCanDeleteHoudiniNodes) == 0x0001B3, "Member 'UHoudiniOutput::bCanDeleteHoudiniNodes' has a wrong offset!");
 
-// Class HoudiniEngineRuntime.HoudiniParameterFolder
-// 0x0010 (0x0120 - 0x0110)
-class UHoudiniParameterFolder final : public UHoudiniParameter
+// Class HoudiniEngineRuntime.HoudiniParameterButtonStrip
+// 0x0028 (0x0138 - 0x0110)
+class UHoudiniParameterButtonStrip final : public UHoudiniParameter
 {
 public:
-	EHoudiniFolderParameterType                   FolderType;                                        // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bExpanded;                                         // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bChosen;                                           // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_113[0x1];                                      // 0x0113(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ChildCounter;                                      // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bIsContentShown;                                   // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         Count;                                             // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_114[0x4];                                      // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         Labels;                                            // 0x0118(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<int32>                                 Values;                                            // 0x0128(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"HoudiniParameterFolder">();
+		return StaticClassImpl<"HoudiniParameterButtonStrip">();
 	}
-	static class UHoudiniParameterFolder* GetDefaultObj()
+	static class UHoudiniParameterButtonStrip* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UHoudiniParameterFolder>();
+		return GetDefaultObjImpl<UHoudiniParameterButtonStrip>();
 	}
 };
-static_assert(alignof(UHoudiniParameterFolder) == 0x000008, "Wrong alignment on UHoudiniParameterFolder");
-static_assert(sizeof(UHoudiniParameterFolder) == 0x000120, "Wrong size on UHoudiniParameterFolder");
-static_assert(offsetof(UHoudiniParameterFolder, FolderType) == 0x000110, "Member 'UHoudiniParameterFolder::FolderType' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterFolder, bExpanded) == 0x000111, "Member 'UHoudiniParameterFolder::bExpanded' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterFolder, bChosen) == 0x000112, "Member 'UHoudiniParameterFolder::bChosen' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterFolder, ChildCounter) == 0x000114, "Member 'UHoudiniParameterFolder::ChildCounter' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterFolder, bIsContentShown) == 0x000118, "Member 'UHoudiniParameterFolder::bIsContentShown' has a wrong offset!");
-
-// Class HoudiniEngineRuntime.HoudiniParameterButton
-// 0x0000 (0x0110 - 0x0110)
-class UHoudiniParameterButton final : public UHoudiniParameter
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniParameterButton">();
-	}
-	static class UHoudiniParameterButton* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterButton>();
-	}
-};
-static_assert(alignof(UHoudiniParameterButton) == 0x000008, "Wrong alignment on UHoudiniParameterButton");
-static_assert(sizeof(UHoudiniParameterButton) == 0x000110, "Wrong size on UHoudiniParameterButton");
-
-// Class HoudiniEngineRuntime.HoudiniParameterFile
-// 0x0038 (0x0148 - 0x0110)
-class UHoudiniParameterFile final : public UHoudiniParameter
-{
-public:
-	TArray<class FString>                         Values;                                            // 0x0110(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<class FString>                         DefaultValues;                                     // 0x0120(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	class FString                                 Filters;                                           // 0x0130(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsReadOnly;                                       // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_141[0x7];                                      // 0x0141(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"HoudiniParameterFile">();
-	}
-	static class UHoudiniParameterFile* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UHoudiniParameterFile>();
-	}
-};
-static_assert(alignof(UHoudiniParameterFile) == 0x000008, "Wrong alignment on UHoudiniParameterFile");
-static_assert(sizeof(UHoudiniParameterFile) == 0x000148, "Wrong size on UHoudiniParameterFile");
-static_assert(offsetof(UHoudiniParameterFile, Values) == 0x000110, "Member 'UHoudiniParameterFile::Values' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterFile, DefaultValues) == 0x000120, "Member 'UHoudiniParameterFile::DefaultValues' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterFile, Filters) == 0x000130, "Member 'UHoudiniParameterFile::Filters' has a wrong offset!");
-static_assert(offsetof(UHoudiniParameterFile, bIsReadOnly) == 0x000140, "Member 'UHoudiniParameterFile::bIsReadOnly' has a wrong offset!");
+static_assert(alignof(UHoudiniParameterButtonStrip) == 0x000008, "Wrong alignment on UHoudiniParameterButtonStrip");
+static_assert(sizeof(UHoudiniParameterButtonStrip) == 0x000138, "Wrong size on UHoudiniParameterButtonStrip");
+static_assert(offsetof(UHoudiniParameterButtonStrip, Count) == 0x000110, "Member 'UHoudiniParameterButtonStrip::Count' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterButtonStrip, Labels) == 0x000118, "Member 'UHoudiniParameterButtonStrip::Labels' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterButtonStrip, Values) == 0x000128, "Member 'UHoudiniParameterButtonStrip::Values' has a wrong offset!");
 
 // Class HoudiniEngineRuntime.HoudiniParameterFloat
 // 0x0050 (0x0160 - 0x0110)
@@ -2032,6 +1881,37 @@ static_assert(offsetof(UHoudiniParameterFloat, Max) == 0x00014C, "Member 'UHoudi
 static_assert(offsetof(UHoudiniParameterFloat, UIMin) == 0x000150, "Member 'UHoudiniParameterFloat::UIMin' has a wrong offset!");
 static_assert(offsetof(UHoudiniParameterFloat, UIMax) == 0x000154, "Member 'UHoudiniParameterFloat::UIMax' has a wrong offset!");
 static_assert(offsetof(UHoudiniParameterFloat, bIsChildOfRamp) == 0x000158, "Member 'UHoudiniParameterFloat::bIsChildOfRamp' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniParameterFolder
+// 0x0010 (0x0120 - 0x0110)
+class UHoudiniParameterFolder final : public UHoudiniParameter
+{
+public:
+	EHoudiniFolderParameterType                   FolderType;                                        // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bExpanded;                                         // 0x0111(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bChosen;                                           // 0x0112(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_113[0x1];                                      // 0x0113(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ChildCounter;                                      // 0x0114(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bIsContentShown;                                   // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_119[0x7];                                      // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniParameterFolder">();
+	}
+	static class UHoudiniParameterFolder* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniParameterFolder>();
+	}
+};
+static_assert(alignof(UHoudiniParameterFolder) == 0x000008, "Wrong alignment on UHoudiniParameterFolder");
+static_assert(sizeof(UHoudiniParameterFolder) == 0x000120, "Wrong size on UHoudiniParameterFolder");
+static_assert(offsetof(UHoudiniParameterFolder, FolderType) == 0x000110, "Member 'UHoudiniParameterFolder::FolderType' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterFolder, bExpanded) == 0x000111, "Member 'UHoudiniParameterFolder::bExpanded' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterFolder, bChosen) == 0x000112, "Member 'UHoudiniParameterFolder::bChosen' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterFolder, ChildCounter) == 0x000114, "Member 'UHoudiniParameterFolder::ChildCounter' has a wrong offset!");
+static_assert(offsetof(UHoudiniParameterFolder, bIsContentShown) == 0x000118, "Member 'UHoudiniParameterFolder::bIsContentShown' has a wrong offset!");
 
 // Class HoudiniEngineRuntime.HoudiniParameterFolderList
 // 0x0018 (0x0128 - 0x0110)
@@ -2825,15 +2705,109 @@ static_assert(offsetof(UHoudiniSplineComponent, bIsEditableOutputCurve) == 0x000
 static_assert(offsetof(UHoudiniSplineComponent, NodeId) == 0x0004A4, "Member 'UHoudiniSplineComponent::NodeId' has a wrong offset!");
 static_assert(offsetof(UHoudiniSplineComponent, PartName) == 0x0004A8, "Member 'UHoudiniSplineComponent::PartName' has a wrong offset!");
 
+// Class HoudiniEngineRuntime.HoudiniStaticMesh
+// 0x00A0 (0x00D0 - 0x0030)
+class UHoudiniStaticMesh final : public UObject
+{
+public:
+	bool                                          bHasNormals;                                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasTangents;                                      // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasColors;                                        // 0x0032(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_33[0x1];                                       // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        NumUVLayers;                                       // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bHasPerFaceMaterials;                              // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_39[0x7];                                       // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        VertexPositions;                                   // 0x0040(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FIntVector>                     TriangleIndices;                                   // 0x0050(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FColor>                         VertexInstanceColors;                              // 0x0060(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FVector>                        VertexInstanceNormals;                             // 0x0070(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FVector>                        VertexInstanceUTangents;                           // 0x0080(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FVector>                        VertexInstanceVTangents;                           // 0x0090(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FVector2D>                      VertexInstanceUVs;                                 // 0x00A0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<int32>                                 MaterialIDsPerTriangle;                            // 0x00B0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FStaticMaterial>                StaticMaterials;                                   // 0x00C0(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	uint32 AddStaticMaterial(const struct FStaticMaterial& InStaticMaterial);
+	void CalculateNormals(bool bInComputeWeightedNormals);
+	void CalculateTangents(bool bInComputeWeightedNormals);
+	class UMaterialInterface* GetMaterial(int32 InMaterialIndex);
+	void Initialize(uint32 InNumVertices, uint32 InNumTriangles, uint32 InNumUVLayers, uint32 InInitialNumStaticMaterials, bool bInHasNormals, bool bInHasTangents, bool bInHasColors, bool bInHasPerFaceMaterials);
+	void Optimize();
+	void SetHasColors(bool bInHasColors);
+	void SetHasNormals(bool bInHasNormals);
+	void SetHasPerFaceMaterials(bool bInHasPerFaceMaterials);
+	void SetHasTangents(bool bInHasTangents);
+	void SetNumStaticMaterials(uint32 InNumStaticMaterials);
+	void SetNumUVLayers(uint32 InNumUVLayers);
+	void SetStaticMaterial(uint32 InMaterialIndex, const struct FStaticMaterial& InStaticMaterial);
+	void SetTriangleMaterialID(uint32 InTriangleIndex, int32 InMaterialID);
+	void SetTriangleVertexColor(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, const struct FColor& InColor);
+	void SetTriangleVertexIndices(uint32 InTriangleIndex, const struct FIntVector& InTriangleVertexIndices);
+	void SetTriangleVertexNormal(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, const struct FVector& InNormal);
+	void SetTriangleVertexUTangent(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, const struct FVector& InUTangent);
+	void SetTriangleVertexUV(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, uint8 InUVLayer, const struct FVector2D& InUV);
+	void SetTriangleVertexVTangent(uint32 InTriangleIndex, uint8 InTriangleVertexIndex, const struct FVector& InVTangent);
+	void SetVertexPosition(uint32 InVertexIndex, const struct FVector& InPosition);
+
+	struct FBox CalcBounds() const;
+	const TArray<int32> GetMaterialIDsPerTriangle() const;
+	int32 GetMaterialIndex(class FName InMaterialSlotName) const;
+	uint32 GetNumStaticMaterials() const;
+	uint32 GetNumTriangles() const;
+	uint32 GetNumUVLayers() const;
+	uint32 GetNumVertexInstances() const;
+	uint32 GetNumVertices() const;
+	const TArray<struct FStaticMaterial> GetStaticMaterials() const;
+	const TArray<struct FIntVector> GetTriangleIndices() const;
+	const TArray<struct FColor> GetVertexInstanceColors() const;
+	const TArray<struct FVector> GetVertexInstanceNormals() const;
+	const TArray<struct FVector> GetVertexInstanceUTangents() const;
+	const TArray<struct FVector2D> GetVertexInstanceUVs() const;
+	const TArray<struct FVector> GetVertexInstanceVTangents() const;
+	const TArray<struct FVector> GetVertexPositions() const;
+	bool HasColors() const;
+	bool HasNormals() const;
+	bool HasPerFaceMaterials() const;
+	bool HasTangents() const;
+	bool IsValid(bool bInSkipVertexIndicesCheck) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniStaticMesh">();
+	}
+	static class UHoudiniStaticMesh* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UHoudiniStaticMesh>();
+	}
+};
+static_assert(alignof(UHoudiniStaticMesh) == 0x000008, "Wrong alignment on UHoudiniStaticMesh");
+static_assert(sizeof(UHoudiniStaticMesh) == 0x0000D0, "Wrong size on UHoudiniStaticMesh");
+static_assert(offsetof(UHoudiniStaticMesh, bHasNormals) == 0x000030, "Member 'UHoudiniStaticMesh::bHasNormals' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, bHasTangents) == 0x000031, "Member 'UHoudiniStaticMesh::bHasTangents' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, bHasColors) == 0x000032, "Member 'UHoudiniStaticMesh::bHasColors' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, NumUVLayers) == 0x000034, "Member 'UHoudiniStaticMesh::NumUVLayers' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, bHasPerFaceMaterials) == 0x000038, "Member 'UHoudiniStaticMesh::bHasPerFaceMaterials' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, VertexPositions) == 0x000040, "Member 'UHoudiniStaticMesh::VertexPositions' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, TriangleIndices) == 0x000050, "Member 'UHoudiniStaticMesh::TriangleIndices' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceColors) == 0x000060, "Member 'UHoudiniStaticMesh::VertexInstanceColors' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceNormals) == 0x000070, "Member 'UHoudiniStaticMesh::VertexInstanceNormals' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceUTangents) == 0x000080, "Member 'UHoudiniStaticMesh::VertexInstanceUTangents' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceVTangents) == 0x000090, "Member 'UHoudiniStaticMesh::VertexInstanceVTangents' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, VertexInstanceUVs) == 0x0000A0, "Member 'UHoudiniStaticMesh::VertexInstanceUVs' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, MaterialIDsPerTriangle) == 0x0000B0, "Member 'UHoudiniStaticMesh::MaterialIDsPerTriangle' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMesh, StaticMaterials) == 0x0000C0, "Member 'UHoudiniStaticMesh::StaticMaterials' has a wrong offset!");
+
 // Class HoudiniEngineRuntime.HoudiniStaticMeshComponent
-// 0x0020 (0x0570 - 0x0550)
+// 0x0030 (0x0590 - 0x0560)
 class UHoudiniStaticMeshComponent final : public UMeshComponent
 {
 public:
-	class UHoudiniStaticMesh*                     Mesh;                                              // 0x0548(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FBox                                   LocalBounds;                                       // 0x0550(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bHoudiniIconVisible;                               // 0x056C(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_56D[0x3];                                      // 0x056D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UHoudiniStaticMesh*                     Mesh;                                              // 0x0560(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FBox                                   LocalBounds;                                       // 0x0568(0x001C)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bHoudiniIconVisible;                               // 0x0584(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_585[0xB];                                      // 0x0585(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UHoudiniStaticMesh* GetMesh();
@@ -2854,10 +2828,36 @@ public:
 	}
 };
 static_assert(alignof(UHoudiniStaticMeshComponent) == 0x000010, "Wrong alignment on UHoudiniStaticMeshComponent");
-static_assert(sizeof(UHoudiniStaticMeshComponent) == 0x000570, "Wrong size on UHoudiniStaticMeshComponent");
-static_assert(offsetof(UHoudiniStaticMeshComponent, Mesh) == 0x000548, "Member 'UHoudiniStaticMeshComponent::Mesh' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMeshComponent, LocalBounds) == 0x000550, "Member 'UHoudiniStaticMeshComponent::LocalBounds' has a wrong offset!");
-static_assert(offsetof(UHoudiniStaticMeshComponent, bHoudiniIconVisible) == 0x00056C, "Member 'UHoudiniStaticMeshComponent::bHoudiniIconVisible' has a wrong offset!");
+static_assert(sizeof(UHoudiniStaticMeshComponent) == 0x000590, "Wrong size on UHoudiniStaticMeshComponent");
+static_assert(offsetof(UHoudiniStaticMeshComponent, Mesh) == 0x000560, "Member 'UHoudiniStaticMeshComponent::Mesh' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMeshComponent, LocalBounds) == 0x000568, "Member 'UHoudiniStaticMeshComponent::LocalBounds' has a wrong offset!");
+static_assert(offsetof(UHoudiniStaticMeshComponent, bHoudiniIconVisible) == 0x000584, "Member 'UHoudiniStaticMeshComponent::bHoudiniIconVisible' has a wrong offset!");
+
+// Class HoudiniEngineRuntime.HoudiniAssetStateEvents
+// 0x0000 (0x0000 - 0x0000)
+class IHoudiniAssetStateEvents final
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"HoudiniAssetStateEvents">();
+	}
+	static class IHoudiniAssetStateEvents* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IHoudiniAssetStateEvents>();
+	}
+
+	class UObject* AsUObject()
+	{
+		return reinterpret_cast<UObject*>(this);
+	}
+	const class UObject* AsUObject() const
+	{
+		return reinterpret_cast<const UObject*>(this);
+	}
+};
+static_assert(alignof(IHoudiniAssetStateEvents) == 0x000001, "Wrong alignment on IHoudiniAssetStateEvents");
+static_assert(sizeof(IHoudiniAssetStateEvents) == 0x000001, "Wrong size on IHoudiniAssetStateEvents");
 
 }
 
