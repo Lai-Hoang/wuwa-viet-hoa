@@ -1,282 +1,1024 @@
 Id,Content
-Event_XZPLW_1_1,"KuKu, good to see you again, Bloom Bearer."
-Event_XZPLW_1_2,Do you remember me? I'm the Tethys Terminal assigned to look after Ms. Chisa.
-Event_XZPLW_1_3,What's the matter?
-Event_XZPLW_1_4,Did something happen to Chisa?
-Event_XZPLW_1_5,Your friend in Honami City asked me to pass along a few words—
-Event_XZPLW_1_6,"This time, it's not about Ms. Chisa. In fact, her emotional readings have been high lately. She's now preparing to resume her studies at the Academy."
-Event_XZPLW_1_7,Your friend in Honami City asked me to pass along a few words—
-Event_XZPLW_1_8,"Passenger, radio repairs are almost done. As for <te href=260004>Lahai-Roi</te>, that region you and Chisa talked about, I've made a discovery."
-Event_XZPLW_1_9,"""If you have time, come see me at the cafe."""
-Event_XZPLW_1_10,I think I know who that is.
-Event_XZPLW_1_11,"So, the coffee-making capybara."
-Event_XZPLW_1_12,Ku! My mission here is complete. Good luck on your journey.
-Event_XZPLW_10_1,"…Impressive, Stardust. Victory is yours."
-Event_XZPLW_10_2,"Your last blow shook me to my very core. But next time, I will win!"
-Event_XZPLW_10_3,"Next time, we'll go all out again!"
-Event_XZPLW_10_4,Of course. Wait… I feel myself fading.
-Event_XZPLW_10_5,So this was it... My final wish... was to fight you properly.
-Event_XZPLW_10_6,"...You've remembered now, haven't you? Everyone else has found their path. Now, it's our turn."
-Event_XZPLW_10_7,"In this duel called life, let's walk together and shine forth to the future!"
-Event_XZPLW_10_8,...
-Event_XZPLW_10_9,So… nobody cared about the half-priced bento?
-Event_XZPLW_11_1,"...You win, King."
-Event_XZPLW_11_2,"Hahahaha! Your strike shook my soul, Stardust. But in the end, the King stands above all."
-Event_XZPLW_11_3,"Next time, we'll go all out again!"
-Event_XZPLW_11_4,Of course. Wait… I feel myself fading.
-Event_XZPLW_11_5,So this was it... My final wish... was to fight you properly.
-Event_XZPLW_11_6,"...You've remembered now, haven't you? Everyone else has found their path. Now, it's our turn."
-Event_XZPLW_11_7,"In this duel called life, let's walk together and shine forth to the future!"
-Event_XZPLW_11_8,...
-Event_XZPLW_11_9,So… nobody cared about the half-priced bento?
-Event_XZPLW_12_1,"...Incredible, Stardust. You've found a third possibility beyond victory and defeat."
-Event_XZPLW_12_2,But it's not enough! A tie cannot shake the King's soul.
-Event_XZPLW_12_3,"Tonight, this street has no winner. No one has earned this half-priced bento."
-Event_XZPLW_12_4,In that case... let's give it to the one who witnessed our duel.
-Event_XZPLW_12_5,"You there, spectator. This half-priced bento belongs to you now."
-Event_XZPLW_12_6,What?
-Event_XZPLW_12_7,But I didn't even do anything.
-Event_XZPLW_12_8,"No, I saw it, the duelist's spirit burning within you."
-Event_XZPLW_12_9,"Yes. You must've fought countless soul-shaking battles, haven't you?"
-Event_XZPLW_12_10,"Take it, and know you hold the symbol of glory—this half-priced bento!"
-Event_XZPLW_13_1,(Deliver the castaway.)
-Event_XZPLW_13_2,"Ah, Passenger, you found it! The legendary half-priced bento!"
-Event_XZPLW_13_3,...
-Event_XZPLW_13_4,What is this half-priced bento anyway?
-Event_XZPLW_13_5,"A half-priced bento is a bento that gets marked down late at night, a symbol of rules and hope!"
-Event_XZPLW_13_6,"It's the little spark of joy on the shelf when your stomach growls, an oasis you find in the desert of thirst..."
-Event_XZPLW_13_7,"Ahem. Anyway, I'll restore the information inside this frequency right away."
-Event_XZPLW_15_1,"With a cafeteria this fancy, bringing a bento to class feels pointless..."
-Event_XZPLW_15_2,"Oof, now I'm hungry just watching."
-Event_XZPLW_16_1,I've got bad news... A package meant for the cafe has gone missing.
-Event_XZPLW_16_2,What happened?
-Event_XZPLW_16_3,New outfits again?
-Event_XZPLW_16_4,"One of us found a castaway outside, and we figured it'd be easier for you if we mailed it straight here."
-Event_XZPLW_16_5,"Along the way, a helpful citizen offered to deliver it, but he never showed up."
-Event_XZPLW_16_6,That sounds fishy.
-Event_XZPLW_16_7,I don't know... but I can track every lost package's location.
-Event_XZPLW_16_8,"Right now, it's sitting deep inside the Hanakage Underground Street. Please come with me!"
-Event_XZPLW_16_9,"... Are you sure he was just being ""helpful""?"
-Event_XZPLW_17_1,"I failed, I failed, I failed, I failed, I failed, I failed, I failed..."
-Event_XZPLW_17_2,What's wrong? You look more helpless than helpful now.
-Event_XZPLW_17_3,Why did you take the package?
-Event_XZPLW_17_4,Could you stop repeating that?
-Event_XZPLW_17_5,"Ah, I'm sorry I took this sword… Someone like me doesn't deserve to hold it."
-Event_XZPLW_17_6,"I used to run with a gang, living a life of failure. And when I finally managed to find a decent job through an agency, I got fired for being clumsy."
-Event_XZPLW_17_7,"To stop my family from worrying, I pretended to go to work every day. But all I did was wander around like a vagrant..."
-Event_XZPLW_17_8,"This sword reminded me of when I was a kid, when I was still naively brave. So I wanted… to prove myself."
-Event_XZPLW_17_9,I thought I could help people get rid of the monsters in the underground street. It took everything in me just to lure it this far.
-Event_XZPLW_17_10,"What kind of fool am I, thinking I could be a hero of justice? I'm long past the age for that."
-Event_XZPLW_17_11,You're selling yourself short.
-Event_XZPLW_17_12,Your life is not a failure.
-Event_XZPLW_17_13,"At least, you still had the courage to hold this sword, didn't you? You've come this far with justice in your heart."
-Event_XZPLW_17_14,"…Thank you. Please, take this ""hero's sword."" Do what I couldn't... Finish off those monsters!"
-Event_XZPLW_17_15,Request accepted. I'll take care of it for you.
-Event_XZPLW_17_16,"Aww, you guys got me emotional… but wait, that's our package in the first place!"
-Event_XZPLW_17_17,"Careful, Passenger! I can sense something dangerous ahead."
-Event_XZPLW_17_18,But… I couldn't. I couldn't take another step forward... because I didn't have the courage to face it.
-Event_XZPLW_18_1,Well done. The underground street will finally see some peace for now.
-Event_XZPLW_18_2,Why are you here alone?
-Event_XZPLW_18_3,Where's that young man?
-Event_XZPLW_18_4,"After you defeated the TD, he vanished with a smile on his face, perhaps knowing his efforts hadn't been in vain."
-Event_XZPLW_18_5,"Oh, and in his final moments, he left a message for you..."
-Event_XZPLW_18_6,"""What you said made me realize, even with all the bumps in my life, I'm no different from others. We're all just trying to live each day the best we can."""
-Event_XZPLW_18_7,"""I still have friends I trust, and a family who cares for me. I think… it's time for me to go home."""
-Event_XZPLW_18_8,He came to terms with it in the end.
-Event_XZPLW_18_9,…Yes. Anyone who lives each day the best they can is already a hero in their own story.
-Event_XZPLW_18_10,"Alright, let's see what Lahai-Roi information is tucked away in here."
-Event_XZPLW_18_11,Shouldn't we return to the cafe first?
-Event_XZPLW_18_12,Not anymore. <ano=Namipons>We</ano> have made a little upgrade to the Lahai-Roi Frequency Analyzer...
-Event_XZPLW_18_13,"From now on, you'll be able to connect to it remotely through your Terminal."
-Event_XZPLW_2_1,"Welcome, Passenger! These days, Honami has been flooded with ""castaways"" from Lahai-Roi."
-Event_XZPLW_2_2,"By the way, have you ever heard of castaways?"
-Event_XZPLW_2_3,Chisa mentioned it before.
-Event_XZPLW_2_4,Not that I can recall.
-Event_XZPLW_2_5,"That makes it easier. They're things from outside Honami, like the cassette you and Chisa found in the fountain."
-Event_XZPLW_2_6,They're frequencies from elsewhere that end up in Honami for all sorts of reasons.
-Event_XZPLW_2_7,The cassette you and Chisa found in the fountain was a typical castaway.
-Event_XZPLW_2_8,What's bringing more castaways from Lahai-Roi?
-Event_XZPLW_2_9,"My guess is that when the rift at the Crossing opened, it ""spat"" them into Honami City."
-Event_XZPLW_2_10,"Since Lahai-Roi is your next stop, the information inside those frequencies will definitely be of some use."
-Event_XZPLW_2_11,"The problem is… once they reach Honami, their appearance changes."
-Event_XZPLW_2_12,Any idea why?
-Event_XZPLW_2_13,Hmm... maybe they lose part of their frequency while passing through the rift. Or maybe Honami can't interpret their original form.
-Event_XZPLW_2_14,"From what I heard from Chisa, Startorch Academy's technology is two steps ahead of what we have here."
-Event_XZPLW_2_15,"So, Honami just reshapes them into something familiar to the Left Behind."
-Event_XZPLW_2_16,But I've figured out a way to restore their true form—
-Event_XZPLW_2_17,"Pon-pon! Presenting, the Lahai-Roi Frequency Analyzer!"
-Event_XZPLW_2_18,...Isn't that the radio?
-Event_XZPLW_2_19,...And a monitor from the Black Shores?
-Event_XZPLW_2_20,"Hehe, yes... I traded several cups of coffee to borrow this mystical monitor from the Black Shores passengers."
-Event_XZPLW_2_21,"The process is simple. Step one, analyze the frequencies with the radio. Step two, reconstruct their images on the display!"
-Event_XZPLW_2_22,Relax. I'll handle the technical parts. All you need to do is bring me the castaways.
-Event_XZPLW_2_23,And where exactly am I supposed to find them?
-Event_XZPLW_2_24,Sounds like a hassle.
-Event_XZPLW_2_25,No need to worry. I will provide you with their general locations.
-Event_XZPLW_2_26,No hassle. I will provide you with their general locations.
-Event_XZPLW_2_27,"In fact, the nearest one is just by the Crossing."
-Event_XZPLW_2_28,"Passenger, if you're interested, go take a look."
-Event_XZPLW_20_1,The restored image… looks like a very special elevator.
-Event_XZPLW_20_2,But why would Honami City interpret it as a sword?
-Event_XZPLW_21_1,"Passenger, this is your ever-reliable transport Namipon, here for you rain or shine."
-Event_XZPLW_21_2,The castaway this time is...
-Event_XZPLW_21_3,This castaway is a very common means of transport in Honami City.
-Event_XZPLW_21_4,"I have pinpointed its location. Please, follow me!"
-Event_XZPLW_22_1,"You know, Honami used to have an urban legend called the ""Goddess in the Fountain."""
-Event_XZPLW_22_2,That fountain looks suspicious. I'm sensing a strange frequency.
-Event_XZPLW_23_1,"Tell me, did you drop this Gale Bike, or this Road Bike?"
-Event_XZPLW_23_2,...?
-Event_XZPLW_23_3,What's the difference?
-Event_XZPLW_23_4,"The Gale Bike is very fast. It can climb steep slopes, but it's tough to handle. So it's only for experts."
-Event_XZPLW_23_5,"The Road Bike is a bit slower, but much more stable, and you can take it on special lanes. Perfect for normal riders."
-Event_XZPLW_23_6,I'm a pro cyclist.
-Event_XZPLW_23_7,The regular one will do for me.
-Event_XZPLW_23_8,"Oops, there's only one bike left. But it's still a solid ride, far better than any cheap knock-off."
-Event_XZPLW_23_9,"(Obviously, this voice is not coming from the fountain...)"
-Event_XZPLW_24_1,Sigh… I knew I couldn't hide from you.
-Event_XZPLW_24_2,"…Sorry, I wasn't trying to prank anyone. I just wanted to help advertise my family's bike shop."
-Event_XZPLW_24_3,Advertise?
-Event_XZPLW_24_4,"Yes. My dad runs the shop all by himself, but lately, business has been slow."
-Event_XZPLW_24_5,...Everyone's switching to cars or the subway. Maybe no one wants bikes anymore?
-Event_XZPLW_24_6,"Not at all. Times may shift, and fashions may change, but the worth of a vehicle goes far beyond the vehicle itself."
-Event_XZPLW_24_7,"Even if someday bikes disappear from the streets, the culture they embody will live on!"
-Event_XZPLW_24_8,Namipon...
-Event_XZPLW_24_9,Never seen you so worked up before.
-Event_XZPLW_24_10,"Thank you, Namipon. Wait, you can talk?! So the mascot of Honami is real?"
-Event_XZPLW_24_11,"Ahaha, it's a long story... Passenger, I'll take her to somewhere safe first."
-Event_XZPLW_24_12,That's another castaway hunt wrapped up nicely.
-Event_XZPLW_26_1,So the most common vehicles in Lahai-Roi are... motorcycles?
-Event_XZPLW_26_2,"Sitting on a motorcycle, feeling the wind race past your ear, that sounds relaxing."
-Event_XZPLW_27_1,"Super Detective Team, back in action! I cannot wait to hunt the truth with you."
-Event_XZPLW_27_2,"Long time no see, detective."
-Event_XZPLW_27_3,I figured you'd show up.
-Event_XZPLW_27_4,"This time, the castaway awaits in the Honami Central Park. It's the kind of item that brings nostalgia."
-Event_XZPLW_27_5,"Enough chatter. Come on, let's go!"
-Event_XZPLW_28_1,Hmm... No luck spotting it myself. I'll leave this challenge to you!
-Event_XZPLW_28_2,"Every speck, every mark, scrutinize them all. The smallest clue could be the missing piece of the puzzle."
-Event_XZPLW_29_1,This is… a tent? Looks ordinary.
-Event_XZPLW_29_2,Haha! Real detectives aren't like those in novels and comics. Big cases don't fall into our laps at every street corner.
-Event_XZPLW_29_3,"Most days, it's just humble work, like tracking runaway cats, shadowing cheating—Ahem..."
-Event_XZPLW_29_4,"Anyway, the tent, yes. That reminds me of a bizarre case I solved years ago. Care for a tale?"
-Event_XZPLW_29_5,"Yes, please."
-Event_XZPLW_29_6,"Even if I say no, you'll just keep going, won't you?"
-Event_XZPLW_29_7,"It was a summer's day. A middle-aged sculptor—let's call him ""A""—was found dead in his camping tent."
-Event_XZPLW_29_8,"Time of death, dawn. Cause, a dagger through the back. And at the scene stood a plaster statue."
-Event_XZPLW_29_9,"It seemed ""A"" was working on a new sculpture when the killer struck from behind."
-Event_XZPLW_29_10,"But here comes the curious part. The ground was muddy from the rain the night before, but there was not a single footprint around the tent."
-Event_XZPLW_29_11,"Which means... no one in, no one out. That tent was a classic ""locked room""!"
-Event_XZPLW_29_12,Did you just make that up?
-Event_XZPLW_29_13,The story's a bit worn out…
-Event_XZPLW_29_14,"Ahem. Want to try your hand at deduction? To be clear, this case involves no Resonator tricks."
-Event_XZPLW_29_15,(This was clearly suicide.)
-Event_XZPLW_29_16,(This was clearly a statue trick.)
-Event_XZPLW_29_17,I'm not in the mood for riddles.
-Event_XZPLW_29_18,"It was ice. ""A"" froze the dagger's hilt in a block of ice, blade pointing upward."
-Event_XZPLW_29_19,"Then he leaned back onto it, stabbing himself. The ice melted in the summer heat, erasing the evidence and making it seem like a murder."
-Event_XZPLW_29_20,Brilliant! You noticed the temperature and drew a solid answer!
-Event_XZPLW_29_21,"It was the statue. The killer disguised themselves as a plaster statue, then stabbed ""A"" when his guard was down."
-Event_XZPLW_29_22,"And when others arrived, the killer kept pretending to be a plaster statue, right at the scene."
-Event_XZPLW_29_23,Excellent! You focused on the key object and drew a solid answer!
-Event_XZPLW_29_24,"Hmm, I was hoping you'd dazzle me with your own theory."
-Event_XZPLW_29_25,"Alright then, just tell me the truth."
-Event_XZPLW_29_26,Very well! The truth is that the killer sent a Chop Chop Echo inside the tent to do the dirty work!
-Event_XZPLW_29_27,...Totally believable.
-Event_XZPLW_29_28,Chisa would hate this kind of deduction.
-Event_XZPLW_29_29,"Ahem. Now then, time to unveil the Lahai-Roi secrets in this castaway!"
-Event_XZPLW_3_1,(This does look like something you'd find in Honami.)
-Event_XZPLW_3_2,(Looks like a note is attached to it.)
-Event_XZPLW_31_1,The design of these living facilities is really unique...
-Event_XZPLW_31_2,Am I seeing straight? Why are their tents shaped like sheep?
-Event_XZPLW_32_1,The Namipon in charge of this search... is not here?
-Event_XZPLW_33_1,"To lighten her master's troubles is the basic duty of a maid.
-If you are reading this note, it means—
-I have already set out to retrieve the castaway for you!
-
-This time, the castaway should be near the Meishin Passageway.
-There shouldn't be any danger… I hope."
-Event_XZPLW_34_1,"As long as I carry my master's mission, I will not give in!"
-Event_XZPLW_34_2,Oh no… I can't... I'm terrible at combat...
-Event_XZPLW_35_1,Goshujin-sama! Thank you for saving me in time. I found this castaway further inside the passageway.
-Event_XZPLW_35_2,"For some reason, the castaway seems to have drawn the TDs here."
-Event_XZPLW_35_3,You need to stay safe.
-Event_XZPLW_35_4,Don't go off to risky places by yourself again.
-Event_XZPLW_35_5,"Understood. Next time, I will not disgrace myself like this."
-Event_XZPLW_35_6,"Please, allow me to show you the castaway's original form!"
-Event_XZPLW_37_1,It turns out to be a mechanical bird that wakes people in the morning.
-Event_XZPLW_37_2,"Hehe, Goshujin-sama, I'm sure you'd prefer a maid's voice waking you up instead, right?"
-Event_XZPLW_38_1,"Passenger, welcome back. Finally, our castaway search is almost finished."
-Event_XZPLW_38_2,Almost finished?
-Event_XZPLW_38_3,You're finally back to your usual self.
-Event_XZPLW_38_4,Yes. These past days must have been tiring for you.
-Event_XZPLW_38_5,Because it's the one you know best.
-Event_XZPLW_38_6,"Thanks to the castaways we've collected, I can soon pin down the coordinates from Honami to Lahai-Roi."
-Event_XZPLW_38_7,"Once the rift stabilizes, you and Chisa will be able to return to your Academy."
-Event_XZPLW_38_8,"You've been a huge help, Namipon."
-Event_XZPLW_38_9,But… there's still one last castaway to be found.
-Event_XZPLW_38_10,"Hehe, and it's really close by. It's up on the coffeehouse terrace."
-Event_XZPLW_38_11,"Go check it out, Passenger."
-Event_XZPLW_39_1,"Morning, {PlayerName}. Hope I didn't surprise you much."
-Event_XZPLW_39_2,"Good to see you again, Chisa."
-Event_XZPLW_39_3,…I should've guessed.
-Event_XZPLW_39_4,Namipon said the last castaway was up here on the terrace.
-Event_XZPLW_39_5,"Well, I'm sort of a ""castaway"" from <te href=260004>Lahai-Roi</te> myself."
-Event_XZPLW_39_6,"Haha, sorry. I was making weird jokes again. Anyway, here it is. I found it near Neon Tower."
-Event_XZPLW_39_7,"The search went smoothly. The only challenge was not knowing the exact location, but a sweet schoolgirl showed me the way."
-Event_XZPLW_39_8,A sweet... schoolgirl?
-Event_XZPLW_39_9,"Right. She was into robot culture, and before she left, she told me—"
-Event_XZPLW_39_10,"""In times like this, even a schoolgirl can pilot a robot!"""
-Event_XZPLW_39_11,...
-Event_XZPLW_39_12,Is that some new catchphrase?
-Event_XZPLW_39_13,"It's nice, isn't it? Even as the loop ends, some of the Left Behind remain here in Honami, living their quiet, everyday lives."
-Event_XZPLW_39_14,"You must have pieced together something about Lahai-Roi from the castaways, right?"
-Event_XZPLW_39_15,I can't help much… I didn't stay at Startorch Academy long enough to gather much info.
-Event_XZPLW_39_16,That means we're on the same starting line. We'll learn about Lahai-Roi together once we get there.
-Event_XZPLW_39_17,Hm. I'd love to.
-Event_XZPLW_39_18,"I have a feeling… Once you're back at the Academy, you'll be pulled into many things."
-Event_XZPLW_39_19,What sort of things?
-Event_XZPLW_39_20,Is there something you know?
-Event_XZPLW_39_21,I honestly don't know. But it should have a lot to do with your time there.
-Event_XZPLW_39_22,"Sooner or later, we'll run into our own share of troubles. But whatever happens, I believe everything will turn out all right."
-Event_XZPLW_39_23,"We'll help each other out, classmate."
-Event_XZPLW_39_24,"Yes, we will help each other. As classmates."
-Event_XZPLW_39_25,"Ahem, back to the business. Let's take a look at what's inside this castaway."
-Event_XZPLW_4_1,"When... did the rain stop?
-...Even if no rain falls, I will stay here with you."
-Event_XZPLW_41_1,"…On my way to academic enrollment, I saw this towering figure standing at the horizon of the frostlands."
-Event_XZPLW_41_2,"Later, I found its name in the Academy orientation materials—"
-Event_XZPLW_41_3,Exostrider.
-Event_XZPLW_41_4,"From what I read, it's directly tied to why Startorch Academy was founded in Lahai-Roi."
-Event_XZPLW_42_1,"Some time later, you arrive near the Meishin Passageway mentioned in the note…"
-Event_XZPLW_5_1,"Back so soon, Passenger! Seems everything went well."
-Event_XZPLW_5_2,(Deliver the castaway.)
-Event_XZPLW_5_3,"Ah, a sunny doll that carries people's wishes."
-Event_XZPLW_5_4,"When the rainy season comes, Honami folk hang these dolls by their windows, hoping for fair weather."
-Event_XZPLW_5_5,"Alright, time to find out what Lahai-Roi intel it holds..."
-Event_XZPLW_7_1,"So, this is the sun Lahai-Roi's people have been living under."
-Event_XZPLW_7_2,If that's the case… does it still rain there at all?
-Event_XZPLW_8_1,"Passenger, you're here! I'll be guiding you to the castaway today."
-Event_XZPLW_8_2,"It's you, the mall guide."
-Event_XZPLW_8_3,Why is it you this time?
-Event_XZPLW_8_4,"This time, the castaway is not at the Crossing. It's over by the shops on Ginga Street."
-Event_XZPLW_8_5,And I know Ginga Street inside out. So they sent me to guide you.
-Event_XZPLW_8_6,Time to set off.
-Event_XZPLW_8_7,That's a bit of a trek.
-Event_XZPLW_8_8,"Hold on, Passenger. I can teleport you there directly."
-Event_XZPLW_8_9,"Destination: Ginga Street! In three, two, one... off we go!"
-Event_XZPLW_9_1,This bento... I saw it first.
-Event_XZPLW_9_2,"Hah! ""First come, first served""? Don't insult me with playground rules. Remember, Stardust—"
-Event_XZPLW_9_3,"When night falls, this street becomes a battlefield. And the half-priced bento is the crown of a true King!"
-Event_XZPLW_9_4,"If you lack the resolve to burn your soul for glory, then pay full price like the loser you are!"
-Event_XZPLW_9_5,"I get it now. But with my companions' bonds on my shoulders, I will not lose."
-Event_XZPLW_9_6,Then let me show you what a true King's duel is.
-Event_XZPLW_9_7,...
-Event_XZPLW_9_8,It's just a bento...
-Event_XZPLW_9_9,Hold it. Seems our duel has attracted a spectator.
-Event_XZPLW_9_10,"You there, stranger, tell us. Who deserves this half-priced bento?"
-Event_XZPLW_9_11,"Stardust, obviously."
-Event_XZPLW_9_12,"The King, no doubt."
-Event_XZPLW_9_13,"Actually, I'm an Apex Duelist of Peak of Prestige."
-Event_XZPLW_9_14,Hah! Then you clearly know nothing of the gulf between me and him!
-Event_XZPLW_9_15,Hahahaha! Good! For I am the King of Ginga Street.
-Event_XZPLW_9_16,I see… so you're a duelist as well. But what is this Peak of Prestige?
-Event_XZPLW_9_17,"Like that, you witness a mysterious evening duel on Ginga Street."
+Main_LahaiRoi_3_2_708_1,Am I seeing things? Is that... a Void Storm? But the Solisylum did not sound the alarm!
+Main_LahaiRoi_3_2_708_2,Could the Solisylum's predictions of the Void Storm be wrong...
+Main_LahaiRoi_3_2_708_3,Impossible! The prophecies of the Heliodic Six are never wrong! We must have just missed the warning!
+Main_LahaiRoi_3_2_708_4,"Wait, I remember now! Astrid just returned from Bjartr Woods! As a Shepherdess, she must know more. We will go ask her!"
+Main_LahaiRoi_3_2_708_5,Yes. Let us hope she simply forgot to tell the rest of us...
+Main_LahaiRoi_3_2_709_1,Are you alright?!
+Main_LahaiRoi_3_2_709_2,It's nothing. It was but a moment in the Void Storm. Some components of the Exoswarm I carry...  it was some protection.
+Main_LahaiRoi_3_2_709_3,See? Still flesh and blood. I have not faded into a frequency...
+Main_LahaiRoi_3_2_709_4,Frightful for a Void Storm to strike so suddenly...
+Main_LahaiRoi_3_2_709_5,"I remember, the healers at Startorch Academy can check for frequency sickness! It is not far. We should go there now!"
+Main_LahaiRoi_3_2_1_1,"Hello, I'm Mornye from the Spacetrek Collective.
+Sorry to bother you, but I need a clear report on what happened during the Hyvatia Detector's failure, so I can lead a repair plan. Since you and Lynae were the only witnesses on-site, I'd like to meet with both of you tomorrow.
+If you're willing, please respond with ""I accept."""
+Main_LahaiRoi_3_2_1_2,I accept.
+Main_LahaiRoi_3_2_1_3,Sure. Where?
+Main_LahaiRoi_3_2_1_4,Thank you. We'll meet at the Academy dormitory at nine o'clock tomorrow morning. I'll be there on time.
+Main_LahaiRoi_3_2_1_5,"Besides that, I want to ask about something unrelated to work."
+Main_LahaiRoi_3_2_1_6,"During the Voidworm's attack on Startorch Academy, were you injured? If you experience any frequency issues again, we can help. I'll handle your case myself."
+Main_LahaiRoi_3_2_1_7,"I'm fine. The frequency loss has stopped for now, but I appreciate you checking in."
+Main_LahaiRoi_3_2_1_8,"There is one thing... It's a bit strange, though..."
+Main_LahaiRoi_3_2_1_9,Would it be possible to bring some delicious Spacetrek snacks to the meeting?
+Main_LahaiRoi_3_2_1_11,...O...kay?
+Main_LahaiRoi_3_2_1_12,Sorry. It's Abby's idea.
+Main_LahaiRoi_3_2_1_13,"If it's inappropriate for a work meeting, don't worry about it."
+Main_LahaiRoi_3_2_1_14,"...No, it's fine."
+Main_LahaiRoi_3_2_1_15,I'll make a note of it.
+Main_LahaiRoi_3_2_1_16,I accept.
+Main_LahaiRoi_3_2_1_17,Sure. Where?
+Main_LahaiRoi_3_2_1_18,I'm not hurt.
+Main_LahaiRoi_3_2_10_1,"Hi, are you Astrid, Maja's mom?"
+Main_LahaiRoi_3_2_10_2,"Hm? Greetings. Yes, I am. And you two are?"
+Main_LahaiRoi_3_2_10_3,"This is Professor Mornye, Maja's teacher."
+Main_LahaiRoi_3_2_10_4,"Yes, and this is {PlayerName}, a senior Professor at the Academy."
+Main_LahaiRoi_3_2_10_5,We've come for a home visit.
+Main_LahaiRoi_3_2_10_6,A home visit...? Has the girl broken any school rules?
+Main_LahaiRoi_3_2_10_7,Yes. She severely violated the experiment protocol.
+Main_LahaiRoi_3_2_10_8,She created a robot that caused significant damage to the Academy.
+Main_LahaiRoi_3_2_10_9,What?! H-How could she...
+Main_LahaiRoi_3_2_10_10,"I am deeply sorry! I should have taught her better. Whatever she has done, I offer my apologies to the Academy on her behalf."
+Main_LahaiRoi_3_2_10_11,"Is the punishment severe? If compensation is needed, I will pay for it myself—"
+Main_LahaiRoi_3_2_10_12,No compensation is necessary.
+Main_LahaiRoi_3_2_10_13,But we'll need your cooperation in the handling of this case.
+Main_LahaiRoi_3_2_10_14,"Professor Mornye, could you explain how Maja's robot caused the damage?"
+Main_LahaiRoi_3_2_10_15,"Y-yes, as my mentor just explained..."
+Main_LahaiRoi_3_2_10_16,"She... failed to follow the proper protocol. She used unstable Exoswarm material in her design, which led the robot to act unpredictably."
+Main_LahaiRoi_3_2_10_17,I've already spoken to her about the dangers of using materials susceptible to Voidmatter during field research.
+Main_LahaiRoi_3_2_10_18,Voidmatter?
+Main_LahaiRoi_3_2_10_19,"What... exactly are you asking? I am sorry, I've not studied at your Startorch Academy. I'm not familiar with your terms."
+Main_LahaiRoi_3_2_10_20,(Her demeanor changed just now. She's hiding something. Maybe more pressure.)
+Main_LahaiRoi_3_2_10_21,"We need to understand the full scope of the robot's malfunction. We understand that this morning, it was you who helped Maja activate the robots and enable auto-run."
+Main_LahaiRoi_3_2_10_22,Yes. Exactly what my mentor said.
+Main_LahaiRoi_3_2_10_23,"Please, lead us to the site of the incident. Once we're there, I'll reconstruct the robots' actions from the trace evidence."
+Main_LahaiRoi_3_2_10_25,"N-No. We can't. If the robots' path is traced, it will expose that thing—"
+Main_LahaiRoi_3_2_10_26,"""That thing""?"
+Main_LahaiRoi_3_2_10_27,What are you hiding?
+Main_LahaiRoi_3_2_10_28,"I am deeply sorry! Yes, help Maja activate the robots I did, but I... I can't remember the exact location. Please, you must return—"
+Main_LahaiRoi_3_2_10_30,That's a Void Storm. How can this be? The Collective hasn't received any recent warnings.
+Main_LahaiRoi_3_2_10_31,We need to ensure the safety of those here first.
+Main_LahaiRoi_3_2_10_32,Questions can wait. Let's go.
+Main_LahaiRoi_3_2_10_33,"You and Mornye pose as Academy professors when meeting Astrid, quickly finding that she appears to be hiding something. At that moment, a Void Storm erupts."
+Main_LahaiRoi_3_2_101_1,That light just now... Mornye must have entered the Reactor Drive.
+Main_LahaiRoi_3_2_101_2,"{PlayerName}, the Spacetrek Collective has connected to your vehicle and will provide assistance!"
+Main_LahaiRoi_3_2_101_3,We can't reach Professor Mornye. You're our only hope now!
+Main_LahaiRoi_3_2_101_4,Leave it to me. I'll find her!
+Main_LahaiRoi_3_2_12_1,Be careful. The Exoswarm here have been contaminated.
+Main_LahaiRoi_3_2_13_1,Down here. It's some kind of weird device.
+Main_LahaiRoi_3_2_13_3,A device? Leave the mechanical work to me. Steady now.
+Main_LahaiRoi_3_2_14_1,Looks like it was this.
+Main_LahaiRoi_3_2_14_2,"With this shut down, the Void Storm is gone."
+Main_LahaiRoi_3_2_14_3,Is this your Forte?
+Main_LahaiRoi_3_2_14_4,"Eh? No, I–I just read a lot about this..."
+Main_LahaiRoi_3_2_14_5,"From its structure, it looks like a canister that can both store and emit energy."
+Main_LahaiRoi_3_2_14_6,"Ugh, it's so stinky!"
+Main_LahaiRoi_3_2_14_7,It smells just like that giant worm you fought! Didn't we deal with it already?!
+Main_LahaiRoi_3_2_14_8,Giant worm... You mean the <te href=700004>Voidworm</te>?
+Main_LahaiRoi_3_2_14_9,"I see. It's capturing frequencies with high precision, storing energy data."
+Main_LahaiRoi_3_2_14_10,"It's based on ecological models, tracking activity in natural environments, and reconstructing that data mathematically."
+Main_LahaiRoi_3_2_14_11,"A field modulator, parametric projection..."
+Main_LahaiRoi_3_2_14_14,"Oh, sorry."
+Main_LahaiRoi_3_2_14_15,Can you try a version that I can understand?
+Main_LahaiRoi_3_2_14_16,Explain it so Abby understands.
+Main_LahaiRoi_3_2_14_17,"Right. Simply put, this device extracted the Voidworm's frequency and used itself as the epicenter to spread Voidmatter. That storm just now was artificially created."
+Main_LahaiRoi_3_2_14_18,Maja's probe got contaminated because they likely made contact with it by accident.
+Main_LahaiRoi_3_2_14_19,Chuuu...
+Main_LahaiRoi_3_2_14_20,Eh? Did you guys just hear something?
+Main_LahaiRoi_3_2_14_21,Chuuu… Chuuuu…
+Main_LahaiRoi_3_2_14_22,It's coming from under that heap of Exoswarm material. Let's go take a look.
+Main_LahaiRoi_3_2_14_23,???
+Main_LahaiRoi_3_2_14_24,You and Mornye locate the cause of the Void Storm: a device containing sealed Voidworm frequency.
+Main_LahaiRoi_3_2_1401_1,Chuuu...
+Main_LahaiRoi_3_2_15_1,Chuuu...
+Main_LahaiRoi_3_2_15_4,It's a <te href=700026>Soliskin</te>.
+Main_LahaiRoi_3_2_15_5,So this is what they look like.
+Main_LahaiRoi_3_2_15_6,I've seen one of these before.
+Main_LahaiRoi_3_2_15_7,"Yes, these special creatures typically linger around the Roya tribe."
+Main_LahaiRoi_3_2_15_8,You've seen one? So you've done some exploring already.
+Main_LahaiRoi_3_2_15_9,Royan records state that Soliskin first appeared in Lahai-Roi the day the Exostrider fell from the sky.
+Main_LahaiRoi_3_2_15_10,"They're believed to be fragments of the Exostrider's consciousness. The Shepards protect them, shielding them from Void Storm contamination until they mature and return to the Solistrees in Bjartr Woods."
+Main_LahaiRoi_3_2_15_11,This one must have hidden under the Exoswarm wreckage when the Void Storm broke out.
+Main_LahaiRoi_3_2_15_12,Chuuu...
+Main_LahaiRoi_3_2_15_13,(This... feels like what happened back at the Academy.)
+Main_LahaiRoi_3_2_15_14,I just saw this Soliskin's memories.
+Main_LahaiRoi_3_2_15_15,That Royan woman planted the device here and triggered the Void Storm. This Soliskin is the only survivor.
+Main_LahaiRoi_3_2_15_16,So our suspicions about Astrid are confirmed. Should we go back to the camp and talk to her?
+Main_LahaiRoi_3_2_15_17,No need. I heard everything.
+Main_LahaiRoi_3_2_15_18,I did place this device here.
+Main_LahaiRoi_3_2_15_19,Tell us what happened.
+Main_LahaiRoi_3_2_15_20,"A few days ago, I was shepherding mature Soliskin to <te href=700021>Bjartr Woods</te> when I met Foreseer Yngvar."
+Main_LahaiRoi_3_2_15_21,"He looked tired, like he had just finished speaking to someone. When he saw me, he looked shocked and left quickly."
+Main_LahaiRoi_3_2_15_22,I saw the device fall from his sleeve.
+Main_LahaiRoi_3_2_15_23,Why did you take it?
+Main_LahaiRoi_3_2_15_24,I did not think much of it. I planned to return it to him the next time we meet.
+Main_LahaiRoi_3_2_15_25,But... the Soliskin did not like it. It had an... unnatural energy.
+Main_LahaiRoi_3_2_15_26,"I did not want to keep it at the camp, but I also did not want Yngvar to know I had taken it."
+Main_LahaiRoi_3_2_15_27,"So I buried it here. The rest, you already know."
+Main_LahaiRoi_3_2_15_28,"You and Mornye track the source of the sound to find a Soliskin. Reading its memories, you see Astrid burying the device that triggered the Void Storm. When confronted, Astrid explains that the device came from Foreseer Yngvar."
+Main_LahaiRoi_3_2_19_1,You two. Please halt.
+Main_LahaiRoi_3_2_19_2,"From your clothing, I see of my people you are not. What brings you to Haldarheim?"
+Main_LahaiRoi_3_2_19_3,Chuuu!
+Main_LahaiRoi_3_2_19_4,Oh? A Soliskin...
+Main_LahaiRoi_3_2_19_5,We are shepherding it home.
+Main_LahaiRoi_3_2_19_6,Chuuu! Chuuu!
+Main_LahaiRoi_3_2_19_7,Heh. How interesting... Soliskin trust only those they feel safe with. Its trust you have earned. My thanks for guiding it back.
+Main_LahaiRoi_3_2_19_8,"But I must ask, I sense one of you carries the aura of the Spacetrek Collective. The other, from the vast world beyond the frostlands. Why come under the guise of Shepherds?"
+Main_LahaiRoi_3_2_19_9,(Not sure who here knows what Yngvar did. Best not to mention his name. Don't want to stir things up.)
+Main_LahaiRoi_3_2_19_10,We rescued this Soliskin from a Void Storm. We were told it needed to return here for the Rite of Return.
+Main_LahaiRoi_3_2_19_11,"Void Storm? You mean, the one just before?"
+Main_LahaiRoi_3_2_19_12,Chuuu—
+Main_LahaiRoi_3_2_19_13,Haha! Then grateful I must be to you both!
+Main_LahaiRoi_3_2_19_14,"But ask I must—the Void Storm, it happened near Atuja camp, yes?"
+Main_LahaiRoi_3_2_19_15,"A Shepherdess named Astrid abides there. Saved the stray Soliskin you did, yet entrust it to a true Shepherdess you did not. Why come all this way?"
+Main_LahaiRoi_3_2_19_16,"(I forgot about that. Without a solid reason, he might start to suspect something.)"
+Main_LahaiRoi_3_2_19_17,Because... Astrid has been hiding something from you.
+Main_LahaiRoi_3_2_19_18,Your meaning?
+Main_LahaiRoi_3_2_19_19,"Astrid's daughter, Maja, is a student at Startorch Academy. She conducted experiments that broke protocol and caused damage to school property."
+Main_LahaiRoi_3_2_19_20,Maja is now facing harsh punishment. Astrid is busy handling the consequences and cannot fulfill her duties as a Shepherdess.
+Main_LahaiRoi_3_2_19_21,"According to the Startorch Academy Faculty Code, as Maja's teachers, it is our duty to address the repercussions of a student's actions."
+Main_LahaiRoi_3_2_19_22,"Since Astrid can't shepherd this Soliskin, we must step in to do so ourselves."
+Main_LahaiRoi_3_2_19_24,Exactly what Professor Mornye said.
+Main_LahaiRoi_3_2_19_25,"I should have known Astrid's daughter would stir such trouble! A tangled weave this time, but she will go to great lengths for her girl."
+Main_LahaiRoi_3_2_19_26,"The Academy's willingness to come this far is unexpected. Forgive my earlier words. You saved the Soliskin and helped our people. The title of ""Shepherd,"" you have earned."
+Main_LahaiRoi_3_2_19_27,"Tonight, we hold a feast for tomorrow's <te href=700028>Rite of Return</te>. Join us, as a gesture to make amends for my earlier rudeness."
+Main_LahaiRoi_3_2_19_28,"Come. From this day forth, the Roya call you friends."
+Main_LahaiRoi_3_2_19_29,Rest at the camp if you wish. The feast will begin at the eighth hour of the night.
+Main_LahaiRoi_3_2_19_30,"Haldarheim's village elder, Aksel, is initially suspicious of you, but Mornye gains his trust by introducing herself as Maja's teacher. You are invited to the pre-rite feast."
+Main_LahaiRoi_3_2_2_1,Tick-tock! Almost time to meet up with Mornye!
+Main_LahaiRoi_3_2_2_2,"I can't stop thinking about those Spacetrek snacks. What are they gonna be, huh?!"
+Main_LahaiRoi_3_2_20_1,"You have made an error. If we follow your calculations, the Reactor Drive's rotation angle stands at four point zero six thousandths of a turn."
+Main_LahaiRoi_3_2_20_2,"No, no, no! It is you who is mistaken. I've recalculated it eight times, and it is four point zero eight thousandths of a turn!"
+Main_LahaiRoi_3_2_20_3,Excuse me. Have you seen Foreseer Yngvar around?
+Main_LahaiRoi_3_2_20_4,Foreseer Yngvar? Ha! We'd have no chance of such a meeting.
+Main_LahaiRoi_3_2_20_5,"In the history of the Heliodic Six, those like Yngvar seldom walk among us. If you seek him, your best hope lies in the Rite of Return on the morrow."
+Main_LahaiRoi_3_2_20_6,"Ah, I still remember how the current ""Eye"" joined us in such spirited debates of numbers before taking her seat. Mmm, she would."
+Main_LahaiRoi_3_2_20_7,"If she were here now, she would agree that..."
+Main_LahaiRoi_3_2_20_8,She would agree that it is four point zero six thousandths.
+Main_LahaiRoi_3_2_20_9,"No, it is four point zero eight thousandths!"
+Main_LahaiRoi_3_2_2001_1,"You have made an error. If we follow your calculations, the Reactor Drive's rotation angle stands at four point zero six thousandths of a turn."
+Main_LahaiRoi_3_2_2001_2,"No, no, no! It is you who is mistaken. I've recalculated it eight times, and it is four point zero eight thousandths of a turn!"
+Main_LahaiRoi_3_2_21_1,"It is time to part, Marigold..."
+Main_LahaiRoi_3_2_21_2,Chuuu...
+Main_LahaiRoi_3_2_21_3,Excuse me. Have you seen Foreseer Yngvar around?
+Main_LahaiRoi_3_2_21_4,"Foreseer Yngvar... Yes, with the Rite of Return on the morrow, we will likely meet him."
+Main_LahaiRoi_3_2_21_5,"Truth be told, the Soliskin do not favor him much. We Shepherds have little contact with him."
+Main_LahaiRoi_3_2_21_6,Chuuu-um.
+Main_LahaiRoi_3_2_21_7,"Though as one of the successors to the Heliodic Six, his standing is not for us to question."
+Main_LahaiRoi_3_2_21_8,"Still, I would hope that the future Heliodic Six is one favored by the Soliskin... someone like Sigrika, perhaps."
+Main_LahaiRoi_3_2_21_9,Chuuu!
+Main_LahaiRoi_3_2_2101_1,"It is time to part, Marigold..."
+Main_LahaiRoi_3_2_2101_2,Chuuu...
+Main_LahaiRoi_3_2_22_1,The feast tonight brings new faces. Seems we'll need to prepare enough for two more...
+Main_LahaiRoi_3_2_22_2,Excuse me. Have you seen Foreseer Yngvar around?
+Main_LahaiRoi_3_2_22_3,Yngvar? That boy doesn't come round here anymore.
+Main_LahaiRoi_3_2_22_4,"I will speak the truth. After his parents were caught in a Void Storm when he was a boy, 'twas Aksel and I who raised him."
+Main_LahaiRoi_3_2_22_5,"A quiet child was he. Few were his friends. When his Resonance Ability was discovered and the Heliodic Six chose him as a successor, he was overjoyed. ""No longer will the other children pick on me,"" he said."
+Main_LahaiRoi_3_2_22_6,"But somewhere along the way, he changed. No longer did he wish to take the mantle of the Six. He grew distant, with nary a visit home."
+Main_LahaiRoi_3_2_22_7,"Ah, well... Even if it's but for a meal, it warms the hearth when he returns."
+Main_LahaiRoi_3_2_2201_1,The feast tonight brings new faces. Seems we'll need to prepare enough for two more...
+Main_LahaiRoi_3_2_23_1,(There's still some time before the feast begins. Maybe someone here knows something about Foreseer Yngvar.)
+Main_LahaiRoi_3_2_233_5,The signature waveform of this Void Storm matches the one that device generated before. This is no naturally occurring phenomenon.
+Main_LahaiRoi_3_2_233_6,When did you have the chance to analyze this?
+Main_LahaiRoi_3_2_233_7,"When my prosthetic legs charge, I prefer to keep my mind occupied."
+Main_LahaiRoi_3_2_24_1,Friends—it is time we feast!
+Main_LahaiRoi_3_2_24_2,"Tomorrow marks the Rite of Return, where we send our beloved Soliskin back to the great body of the Exostrider. Into radiant light they will transform to join its sacred form."
+Main_LahaiRoi_3_2_24_3,"Farewell it will be, yet a new beginning as well! For when the Exostrider wakes, we will reunite in its body!"
+Main_LahaiRoi_3_2_24_4,"Now, let us put aside the sorrow of parting and embrace the joy of new life with good food and drink!"
+Main_LahaiRoi_3_2_24_5,"But heed this, my friends. Too much drink you will not have. Should you make a fool of yourself in tomorrow's Rite, help I will not give."
+Main_LahaiRoi_3_2_24_6,What is it? Are you feeling nervous?
+Main_LahaiRoi_3_2_24_7,We will face Foreseer Yngvar tomorrow.
+Main_LahaiRoi_3_2_24_8,"I've simulated seventy-three possible outcomes, but even so, I can't cover every scenario."
+Main_LahaiRoi_3_2_24_9,"If I could build a model that covers all possible outcomes, considering the target system, the chaotic conditions, and the necessary compensations..."
+Main_LahaiRoi_3_2_24_10,You were quick on your feet earlier. You've already got this.
+Main_LahaiRoi_3_2_24_11,That's because I believed your approach was effective. I tried to follow along.
+Main_LahaiRoi_3_2_24_12,Did I really do well?
+Main_LahaiRoi_3_2_24_13,Of course. Give yourself more credit.
+Main_LahaiRoi_3_2_24_14,Yes. Keep practicing and it'll come more easily.
+Main_LahaiRoi_3_2_24_15,Good. Phew...
+Main_LahaiRoi_3_2_24_16,Understood. I'll make sure to do better next time.
+Main_LahaiRoi_3_2_24_18,Chuuu! Chuuu-chuuu!
+Main_LahaiRoi_3_2_24_19,What's this cutie trying to say?
+Main_LahaiRoi_3_2_24_20,"Chuuu, chuuu!"
+Main_LahaiRoi_3_2_24_21,"Ah, I know! It wants us to give it a name."
+Main_LahaiRoi_3_2_24_22,"Well, since it's really trying to buddy up to us, how about we call it ""Buddy""?"
+Main_LahaiRoi_3_2_24_23,Chuuu!
+Main_LahaiRoi_3_2_24_24,Oh? It seems to like it.
+Main_LahaiRoi_3_2_24_25,Then it's settled.
+Main_LahaiRoi_3_2_24_26,Well... that's a relief.
+Main_LahaiRoi_3_2_24_27,"Hello, will you dance with us and the Soliskin?"
+Main_LahaiRoi_3_2_24_28,Grandfather Aksel says the Soliskin are happiest when dancing with Shepherds!
+Main_LahaiRoi_3_2_24_29,"Oh, but I'm not good at dancing."
+Main_LahaiRoi_3_2_24_30,I'll join you. Let's dance with Buddy. What do you say?
+Main_LahaiRoi_3_2_24_31,HOORAY!
+Main_LahaiRoi_3_2_24_32,Our real battle starts tomorrow.
+Main_LahaiRoi_3_2_24_33,"Tonight, let's relax a little, Mornye."
+Main_LahaiRoi_3_2_24_34,"Yes. My mentor should take {Male=him;Female=her} own advice, too."
+Main_LahaiRoi_3_2_24_35,Chu... Chu... Uuuugh...
+Main_LahaiRoi_3_2_24_36,Hmph...
+Main_LahaiRoi_3_2_24_37,Some uninvited guests have arrived.
+Main_LahaiRoi_3_2_24_38,"With that in mind, you can relax a bit now, right?"
+Main_LahaiRoi_3_2_24_39,"At the feast, Mornye is visibly anxious about confronting Yngvar the next day. She relaxes only after hearing your encouragement. You name the rescued Soliskin ""Buddy,"" and before the feast ends, you remind Mornye to rest.
+Unnoticed in the shadows, another Soliskin appears to have become contaminated."
+Main_LahaiRoi_3_2_25_1,That is something she would say.
+Main_LahaiRoi_3_2_25_2,"Not that I know where the 13th planet of Norma is, but... at least I can figure out where she is from the picture."
+Main_LahaiRoi_3_2_26_1,Mentor?
+Main_LahaiRoi_3_2_26_2,"We can drop the act now, right? Or do you think we should continue?"
+Main_LahaiRoi_3_2_26_3,Someone might be listening. We should keep it up to prevent us from being exposed.
+Main_LahaiRoi_3_2_26_4,Do you... want to sit for a while?
+Main_LahaiRoi_3_2_26_5,How're your legs holding up?
+Main_LahaiRoi_3_2_26_6,"Oh, you noticed."
+Main_LahaiRoi_3_2_26_7,"They've been running all day, so their power is low. I planned to wait until they finished charging before coming back."
+Main_LahaiRoi_3_2_26_8,"While they charge, I can't move. I feel a bit, er... embarrassed having you see me like this."
+Main_LahaiRoi_3_2_26_9,Does it hurt?
+Main_LahaiRoi_3_2_26_10,It doesn't anymore.
+Main_LahaiRoi_3_2_26_11,"Before I had prosthetic legs, I had a condition that kept me in a wheelchair."
+Main_LahaiRoi_3_2_26_12,"Now, at least I don't have to worry about being immobile anymore."
+Main_LahaiRoi_3_2_26_13,I can finally chase after what I really want.
+Main_LahaiRoi_3_2_26_14,The stars here are beautiful.
+Main_LahaiRoi_3_2_26_15,"Mm, I love stars."
+Main_LahaiRoi_3_2_26_16,"Beneath Lahai-Roi's frostlands, the stars here are actually just lights created by atmospheric arrays."
+Main_LahaiRoi_3_2_26_17,"Once, someone put it like this to me..."
+Main_LahaiRoi_3_2_26_18,"""It's because we see the stars that humanity imagines what lies beyond the sky."""
+Main_LahaiRoi_3_2_26_19,"""Maybe the stars are humanity's muse."""
+Main_LahaiRoi_3_2_26_20,An interesting way to put it.
+Main_LahaiRoi_3_2_26_21,That's a romantic image.
+Main_LahaiRoi_3_2_26_22,I think so too.
+Main_LahaiRoi_3_2_26_23,But... I also believe that reaching the stars isn't enough.
+Main_LahaiRoi_3_2_26_24,There will be a day we build a miracle that lasts longer and is more beautiful than the stars themselves.
+Main_LahaiRoi_3_2_26_25,"That's the dream I've carried all this time. And now, I'll use these two legs to take the first step."
+Main_LahaiRoi_3_2_26_26,For that to come true...
+Main_LahaiRoi_3_2_26_27,"The New Solar Ceremony must succeed, right?"
+Main_LahaiRoi_3_2_26_28,Exactly! This ceremony is how we retrieve the Exostrider's core energy component.
+Main_LahaiRoi_3_2_26_29,Then we'll use the multiphasic energy conversion model through the superconducting network to inject Rabelle energy into the neural interface.
+Main_LahaiRoi_3_2_26_30,"It will follow a three-stage activation protocol. The reverse-phase oscillation model, then excavation to finally create a phased-array energy field."
+Main_LahaiRoi_3_2_26_35,There's still some time before my legs finish charging. Let's stargaze a little longer.
+Main_LahaiRoi_3_2_26_36,"Chu, Chuuu! Chuuu! Chuuu!"
+Main_LahaiRoi_3_2_26_37,"Okay, little Buddy. I'll wake {Male=him;Female=her} up now."
+Main_LahaiRoi_3_2_26_38,...Mornye?
+Main_LahaiRoi_3_2_26_39,"Mentor, you're awake!"
+Main_LahaiRoi_3_2_26_40,Something isn't right. We seem to have a situation in Bjartr Woods.
+Main_LahaiRoi_3_2_26_41,"Later, you find Mornye gazing at the stars. She tells you her dream: to build a greater miracle than the stars themselves with human hands. To do that, she must ensure the New Solar Ceremony succeeds.
+The next morning, a commotion erupts in Bjartr Woods."
+Main_LahaiRoi_3_2_28_1,Wh-what's happening... This isn't right. Help!
+Main_LahaiRoi_3_2_28_2,Be careful! Don't get caught in the Void Storm!
+Main_LahaiRoi_3_2_29_1,But the Soliskin... many have already entered Bjartr Woods!
+Main_LahaiRoi_3_2_29_2,"A Void Storm would... No, I don't want to think of it!"
+Main_LahaiRoi_3_2_3_1,{PlayerName}—over here!
+Main_LahaiRoi_3_2_3_2,"It's been a while, Lynae."
+Main_LahaiRoi_3_2_3_3,You bet! Just passed all my entrance exams yesterday!
+Main_LahaiRoi_3_2_3_4,"Which means... today you're officially meeting ""Lynae, first-year student in Startorch Academy""!"
+Main_LahaiRoi_3_2_3_5,Congrats on a successful enrollment.
+Main_LahaiRoi_3_2_3_6,So when's our next joyride going to be?
+Main_LahaiRoi_3_2_3_7,"Ugh, I really wanna hit the road with you again, but I'm kinda on a ""mental health watchlist."" If I break even one tiny rule on day one, Miss Lucilla will be dragging me in for a ""friendly chat."""
+Main_LahaiRoi_3_2_3_8,I gotta hold out until I figure out a route that slips past the cameras.
+Main_LahaiRoi_3_2_3_9,"Oh, but hey, you got Mornye's email about the <te href=700013>Hyvatia Detector</te>, right? It's almost go-time. How about we hang by the entrance, and then we—"
+Main_LahaiRoi_3_2_3_10,Material fatigue... thermal cycles... boundary conditions... initial stress states...
+Main_LahaiRoi_3_2_3_11,Infraction detected. High-wattage devices are strictly prohibited in dormitory zones.
+Main_LahaiRoi_3_2_3_12,The core differential equation is... elastoplastic transition... cyclic strength coefficients...
+Main_LahaiRoi_3_2_3_13,"Please comply with the ""Startorch Academy Dormitory Code of Conduct""! Issuing first warning. Issuing second warning!"
+Main_LahaiRoi_3_2_3_14,Coefficient correct. Units mismatch? Recalculating...
+Main_LahaiRoi_3_2_3_15,Noncompliance confirmed. Initiating restraint protocol.
+Main_LahaiRoi_3_2_3_16,Conclusion: material upgrade required. I'll add it to the agenda for tomorrow's meeting.
+Main_LahaiRoi_3_2_3_17,"Right. Now, time for the scheduled meeting with {PlayerName} and Lynae."
+Main_LahaiRoi_3_2_3_19,I'm sorry. Did I keep you waiting?
+Main_LahaiRoi_3_2_3_20,"Ah, haha! Not at all. Actually, you noticed us right as the clock struck the hour. Perfect timing, Professor."
+Main_LahaiRoi_3_2_3_21,Are you all right?
+Main_LahaiRoi_3_2_3_22,Is the robot going to be okay?
+Main_LahaiRoi_3_2_3_23,I'm fine.
+Main_LahaiRoi_3_2_3_24,Just a minor short circuit. It triggered a restraint protocol. I assumed it was malfunctioning.
+Main_LahaiRoi_3_2_3_25,Oh... I forgot to disable the reactor emitter in my weapon system. That's probably what it was referring to...
+Main_LahaiRoi_3_2_3_26,"Apologies. After this meeting, I need to return to the Spacetrek Collective for a presentation. I had hoped to finish some calculations first."
+Main_LahaiRoi_3_2_3_27,"If that's the case, let's begin now."
+Main_LahaiRoi_3_2_3_29,"I do have other appointments today, but... I believe there is time for some light conversation."
+Main_LahaiRoi_3_2_3_30,"I wasn't sure what you meant by ""delicious,"" so I brought samples from my latest food research."
+Main_LahaiRoi_3_2_3_31,YESSS! I knew it! Professor Mornye's a real gem!
+Main_LahaiRoi_3_2_3_32,Let's get started! We can eat while we talk!
+Main_LahaiRoi_3_2_3_33,"Of course, come on in. I already tidied up my dorm, so sit wherever you like!"
+Main_LahaiRoi_3_2_3_34,"You and Lynae wait in her dorm for Mornye to arrive. Lost in thought, Mornye forgets to disable the reactor emitter in her weapon system. A TARD-E Unit accuses her of using a high-wattage device and moves to detain her, only to be subdued effortlessly. Lynae invites both of you inside to talk over food."
+Main_LahaiRoi_3_2_30_1,"Children! Don't panic, the escape route is this way."
+Main_LahaiRoi_3_2_30_2,"The Roya have survived worse disasters. Take care of one another, your lives matter more than anything else!"
+Main_LahaiRoi_3_2_300_1,Three days later.
+Main_LahaiRoi_3_2_31_5,"What is it that brings you here? With the Void Storm's fury upon us, it is no time to enter Bjartr Woods."
+Main_LahaiRoi_3_2_31_6,This is a disaster not seen in centuries. We have always believed the <te href=700027>Solistrees'</te> light protects the woods from such storms.
+Main_LahaiRoi_3_2_31_7,"The Rite of Return cannot be done, not in these times. I urge you both to head to safety, quickly!"
+Main_LahaiRoi_3_2_31_8,Let's investigate this together.
+Main_LahaiRoi_3_2_31_9,Another Void Storm...
+Main_LahaiRoi_3_2_32_1,"Just like before. When it's disabled, the Void Storm stops."
+Main_LahaiRoi_3_2_32_2,However...
+Main_LahaiRoi_3_2_32_3,"If this really was the work of Foreseer Yngvar, what would make him do something like this?"
+Main_LahaiRoi_3_2_32_4,Who are you?
+Main_LahaiRoi_3_2_32_6,Do not worry. The path... has already been laid.
+Main_LahaiRoi_3_2_32_7,At last... finally...
+Main_LahaiRoi_3_2_32_8,Mentor? Mentor! Are you alright?
+Main_LahaiRoi_3_2_32_9,Did you see something again? It seemed worse than last time.
+Main_LahaiRoi_3_2_32_10,I think I saw a glimpse inside Solisylum.
+Main_LahaiRoi_3_2_32_12,"This Void Storm might not have just affected the woods here, but the workings of Solisylum itself."
+Main_LahaiRoi_3_2_32_13,Greetings.
+Main_LahaiRoi_3_2_32_14,"The Shaper once made a prediction. If a visitor from beyond Lahai-Roi protects Bjartr Woods from destruction, an invitation to Solisylum they will receive."
+Main_LahaiRoi_3_2_32_15,"Now, the one from the prediction appears. <te href=700018>Solisylum</te> awaits your arrival."
+Main_LahaiRoi_3_2_32_17,"Mentor, please... wait a moment."
+Main_LahaiRoi_3_2_32_18,There's something I want to say to you.
+Main_LahaiRoi_3_2_32_19,I think that's why I've been seeing visions of this member of the Six.
+Main_LahaiRoi_3_2_32_20,Chuuu...
+Main_LahaiRoi_3_2_32_21,Chu... Chu?
+Main_LahaiRoi_3_2_32_22,Buddy?
+Main_LahaiRoi_3_2_32_23,They have their own missions to complete.
+Main_LahaiRoi_3_2_32_24,"The road to Solisylum is here. Please, follow this path."
+Main_LahaiRoi_3_2_32_25,"Inside the woods, another device identical to the previous ones is causing a Void Storm. After shutting it down, you hear that same mysterious man's voice.
+A Shepherdess then approaches and invites you into the Solisylum, believing you to be the visitor who is predicted to stop the destruction."
+Main_LahaiRoi_3_2_34_1,"What's the matter, Mornye？"
+Main_LahaiRoi_3_2_34_2,I...
+Main_LahaiRoi_3_2_34_3,I really wish I could accompany you to Solisylum. But I think it's best if we part ways here.
+Main_LahaiRoi_3_2_34_4,Are you concerned about something?
+Main_LahaiRoi_3_2_34_5,"Yes. When you touched the Solistree earlier, and even during your first vision, you looked like you were in intense pain."
+Main_LahaiRoi_3_2_34_7,"But I lack the ability to connect with them like you do. And the Spacetrek Collective's knowledge doesn't align with the ways of the Roya. In this matter, I fear... I won't be of much help."
+Main_LahaiRoi_3_2_34_8,"Instead of joining you, I think there are other ways I can contribute—such as researching the unknowns we still face."
+Main_LahaiRoi_3_2_34_9,Like Yngvar's true purpose.
+Main_LahaiRoi_3_2_34_10,Like the true origins of the Void Storm device.
+Main_LahaiRoi_3_2_34_11,"Yes. Yngvar should have been present at the Rite of Return, were it not for that Void Storm. It's reasonable to suspect he's the one who planted the device."
+Main_LahaiRoi_3_2_34_12,"Additionally, the environment here is unusual. Investigating these anomalies should help our work here."
+Main_LahaiRoi_3_2_34_13,"Insightful as always, Professor Mornye."
+Main_LahaiRoi_3_2_34_14,"No. You, my mentor, are still far ahead of me."
+Main_LahaiRoi_3_2_34_15,Well then. I guess this is goodbye for now.
+Main_LahaiRoi_3_2_34_16,Stay in touch.
+Main_LahaiRoi_3_2_34_17,"If you're in any danger, call me."
+Main_LahaiRoi_3_2_34_18,"Mm, you too."
+Main_LahaiRoi_3_2_34_19,Please take care. I'll see you when we regroup.
+Main_LahaiRoi_3_2_34_20,"Mornye suggests splitting up. While you head to the Solisylum, she will investigate Yngvar and the origin of the Void Storm device."
+Main_LahaiRoi_3_2_400_1,I detect signs of a Void Storm in the woods. Waveform... analyzing now.
+Main_LahaiRoi_3_2_400_2,So this is what's causing the panic.
+Main_LahaiRoi_3_2_5_2,"Ugh... the smells are all mixing together. It's kinda fishy, and the texture is wet and gooey."
+Main_LahaiRoi_3_2_5_4,"So it's true, huh? You guys actually made food that tastes awful but keeps you running for three days straight. I thought that was just a joke."
+Main_LahaiRoi_3_2_5_5,It's a scientific breakthrough using energy-compression tech. It's one of Collective's most iconic achievements.
+Main_LahaiRoi_3_2_5_6,"{PlayerName}, do you... also not like it?"
+Main_LahaiRoi_3_2_5_7,This is peak science.
+Main_LahaiRoi_3_2_5_8,"If this is what progress tastes like, I want to go back."
+Main_LahaiRoi_3_2_5_9,Yes! I knew you would understand.
+Main_LahaiRoi_3_2_5_10,"In fact, its energy compression efficiency exceeds 95%. That exceeds the benchmarks set by both the New Federation and Huaxu Academy, even nearing the theoretical limit."
+Main_LahaiRoi_3_2_5_11,"From a scientific standpoint, it's a far greater achievement than taste."
+Main_LahaiRoi_3_2_5_12,I... see...
+Main_LahaiRoi_3_2_5_13,I'll... raise the priority level of flavor optimization for the next iteration.
+Main_LahaiRoi_3_2_5_14,"Now, I'd like to review the incident with the Hyvatia Detector."
+Main_LahaiRoi_3_2_5_15,"Lynae, {PlayerName}, can you walk me through exactly how you managed to contain it?"
+Main_LahaiRoi_3_2_5_16,(Describe how you contained the Hyvatia incident.)
+Main_LahaiRoi_3_2_5_18,"To summarize, your method of stopping the Hyvatia included blade slashes, repeated shots with coated rounds, and physical force—stomping, striking—until it was rendered inoperable and immobile."
+Main_LahaiRoi_3_2_5_19,Did I miss anything?
+Main_LahaiRoi_3_2_5_20,"Uh... Professor Mornye, you're not here to..."
+Main_LahaiRoi_3_2_5_21,"...Make us pay for it, are you?"
+Main_LahaiRoi_3_2_5_22,"I mean, it all happened really fast! We didn't have any other way to stop it!"
+Main_LahaiRoi_3_2_5_23,"Besides, we're just students! We couldn't afford that even if we wanted to..."
+Main_LahaiRoi_3_2_5_24,No. You're misunderstanding.
+Main_LahaiRoi_3_2_5_25,"Different damage mechanisms cause distinct failures, and require specific repair methods."
+Main_LahaiRoi_3_2_5_26,"Damage from certain special Resonance abilities is hard to detect through standard diagnostics without prior data. So, you two did well to suppress it physically."
+Main_LahaiRoi_3_2_5_27,"During the <te href=700016>New Solar Ceremony</te>, the <te href=700013>Hyvatia Detector</te> is essential in monitoring environmental parameters. I've already passed your report to Professor Anslem. He should complete repairs soon."
+Main_LahaiRoi_3_2_5_28,"At the upcoming meeting with the <te href=700015>Roya</te>, the Spacetrek Collective will need to present a full restoration plan to keep our partnership intact."
+Main_LahaiRoi_3_2_5_29,"There's a third party involved in this ""New Solar Ceremony""?"
+Main_LahaiRoi_3_2_5_30,"Yes, though it's a long story. Where do I even begin..."
+Main_LahaiRoi_3_2_5_31,"SCANNING FOR OFFENDERS! VIOLATION DETECTED: Unauthorized high-wattage device in the dormitory. An offender has assaulted this unit. If sighted, report immediately!"
+Main_LahaiRoi_3_2_5_32,"Pfft... Even Professor Mornye isn't safe from TARD-E's wrath, huh?"
+Main_LahaiRoi_3_2_5_33,"No worries, I got this. I'll draw its attention while you two make for it."
+Main_LahaiRoi_3_2_5_34,"Three, two, one—"
+Main_LahaiRoi_3_2_5_35,That's our cue.
+Main_LahaiRoi_3_2_5_36,Mm.
+Main_LahaiRoi_3_2_5_37,"After you try the Research Institute food samples Mornye brought, she asks about your fight with Hyvatia. From her account, you learn that the New Solar Ceremony is approaching and that Hyvatia is essential to it. Just as she prepares to explain more, a TARD-E Unit interrupts."
+Main_LahaiRoi_3_2_52_1,"As expected, the Reactor Drive is protected by aggressive Exoswarm acting like the immune system."
+Main_LahaiRoi_3_2_52_2,It appears to actively absorb surrounding Voidmatter to maintain the Drive's stability.
+Main_LahaiRoi_3_2_52_3,Contact with its claws is highly hazardous. Be cautious.
+Main_LahaiRoi_3_2_53_1,Approaching the target location. Preparing to receive data.
+Main_LahaiRoi_3_2_53_2,Voidmatter concentration is increasing. Abnormal expression detected in the Reactor Drive! Evacuate immediately!
+Main_LahaiRoi_3_2_53_3,"Repeat, evacuate immediately!"
+Main_LahaiRoi_3_2_53_6,We have already... come this far.
+Main_LahaiRoi_3_2_53_7,So...
+Main_LahaiRoi_3_2_53_8,Pity... I don't want to say goodbye yet.
+Main_LahaiRoi_3_2_53_9,Data received. Analyzing...
+Main_LahaiRoi_3_2_53_10,"Professor Mornye, are you there? If you hear this, please respond!"
+Main_LahaiRoi_3_2_53_11,I'll take that final step myself!
+Main_LahaiRoi_3_2_54_1,Are you leaving Lahai-Roi?
+Main_LahaiRoi_3_2_54_2,Yes.
+Main_LahaiRoi_3_2_54_3,"Sometimes, only by saying goodbye can there be progress and change."
+Main_LahaiRoi_3_2_54_4,"After all, even if I leave—"
+Main_LahaiRoi_3_2_54_5,Lahai-Roi will still continue forward on its own feet.
+Main_LahaiRoi_3_2_54_6,Isn't that right?
+Main_LahaiRoi_3_2_54_7,Have I... reached you this time...
+Main_LahaiRoi_3_2_54_8,Mentor...
+Main_LahaiRoi_3_2_54_9,Report: Data analysis complete. Helios is operational again!
+Main_LahaiRoi_3_2_54_10,How wonderful.
+Main_LahaiRoi_3_2_54_11,The sun.
+Main_LahaiRoi_3_2_54_12,So beautiful.
+Main_LahaiRoi_3_2_55_2,"{PlayerName}, over here!"
+Main_LahaiRoi_3_2_55_3,"First, the good news! They've crossed my name off the ""mental health watchlist."" I'm finally FREE!"
+Main_LahaiRoi_3_2_55_4,Congrats!
+Main_LahaiRoi_3_2_55_5,Enjoy the sweet taste of freedom!
+Main_LahaiRoi_3_2_55_6,"And... the bad news. Since I kinda did some falsifying during the investigation, they said I breached the rules."
+Main_LahaiRoi_3_2_55_7,Huh?!
+Main_LahaiRoi_3_2_55_8,"But since I did it to make sure the bad guy didn't get away with anything, and I actually helped out—"
+Main_LahaiRoi_3_2_55_9,So the Academy got its hands on solid evidence?
+Main_LahaiRoi_3_2_55_10,"Well, once you have your suspect, the rest is easy. Plus, there's one teacher whose Forte can wring out the truth from anyone."
+Main_LahaiRoi_3_2_55_13,But I do have Professor Mornye to thank for sending an official email that explained everything. That's the only reason they believed me.
+Main_LahaiRoi_3_2_55_14,I guess that means it'll be harder to skip her classes now.
+Main_LahaiRoi_3_2_55_15,Dr. Herssen said she was Overclocked for too long... I'm worried.
+Main_LahaiRoi_3_2_55_16,She'll be fine.
+Main_LahaiRoi_3_2_55_17,You should be more worried about passing her class.
+Main_LahaiRoi_3_2_55_18,"Yeah, you're right!"
+Main_LahaiRoi_3_2_55_19,Let's go check on her. I bet knowing we're thinking about her will help her bounce back faster!
+Main_LahaiRoi_3_2_55_20,Hello. May I ask if you are {PlayerName}?
+Main_LahaiRoi_3_2_55_21,I'm here to inform you that Professor Mornye has just woken up.
+Main_LahaiRoi_3_2_55_22,"The final verdict is I'll still have to stay on the ""mental health watchlist"" for a while."
+Main_LahaiRoi_3_2_55_23,"The New Solar Ceremony succeeds. Back at the Academy, you meet Lynae and learn that Mornye, who collapsed from Overclocking inside the Reactor Drive, has regained consciousness."
+Main_LahaiRoi_3_2_57_1,"Please wait, don't come in yet—"
+Main_LahaiRoi_3_2_57_2,Ugh... Ahh!
+Main_LahaiRoi_3_2_57_3,"Sorry, my body... I still can't move like I normally do."
+Main_LahaiRoi_3_2_57_4,"I've gone through rehab before, and it's been a while since this happened. Don't worry, I can handle this much on my own. Ugh..."
+Main_LahaiRoi_3_2_57_5,"Professor Mornye, how are you feeling now?"
+Main_LahaiRoi_3_2_57_6,Dr. Herssen said you were in bad shape. It's great to see you've recovered a little.
+Main_LahaiRoi_3_2_57_7,"To be honest, at that time, I didn't think I'd make it."
+Main_LahaiRoi_3_2_57_8,"But... but when I was drifting in and out of consciousness, I thought I saw a girl within a light blue ring."
+Main_LahaiRoi_3_2_57_9,A light blue ring?
+Main_LahaiRoi_3_2_57_10,Can you describe what you saw in more detail?
+Main_LahaiRoi_3_2_57_11,"I... I can't be sure, but I think she protected me."
+Main_LahaiRoi_3_2_57_12,(It sounds like the girl Mornye saw is the same one I encountered when I first got to Lahai-Roi.)
+Main_LahaiRoi_3_2_57_13,"(She's able to go up against the Threnodian herself, and appear in the Reactor Drive. She's connected with the Exostrider and the Threnodian in ways we still don't fully understand.)"
+Main_LahaiRoi_3_2_57_14,(Figuring out who she is and what happened to her will be the next big task.)
+Main_LahaiRoi_3_2_57_15,"{PlayerName}? {PlayerName}—Hey, stop spacing out!"
+Main_LahaiRoi_3_2_57_16,"To celebrate Professor Mornye waking up and the crisis being averted, don't you think we should..."
+Main_LahaiRoi_3_2_57_17,Should what?
+Main_LahaiRoi_3_2_57_18,Go for a ride!
+Main_LahaiRoi_3_2_57_19,"Nothing beats the wind on your face, especially when—"
+Main_LahaiRoi_3_2_57_20,The three of us still don't have a group picture!
+Main_LahaiRoi_3_2_57_21,"Heh, a photo under the new Helios? Sounds like it'll make a good souvenir."
+Main_LahaiRoi_3_2_57_22,Yes.
+Main_LahaiRoi_3_2_57_23,"Witnessing the rise of the new sun together. That's also the promise between the two of us, Mentor."
+Main_LahaiRoi_3_2_57_24,"Though still physically weak, Mornye is out of danger. She tells you that inside the Drive, she saw what seemed to be a girl with a light blue ring who saved her. You decide this mystery will be your next goal.
+To celebrate the end of the crisis and Mornye's recovery, you, Lynae, and Mornye head out for a ride."
+Main_LahaiRoi_3_2_58_1,"So? Not bad, huh?"
+Main_LahaiRoi_3_2_58_2,"Back in the day, whenever I was stressed about the future, hanging out here always made me feel a little better."
+Main_LahaiRoi_3_2_58_3,"Look, now we can just enjoy the breeze without a care in the world!"
+Main_LahaiRoi_3_2_58_4,"I used to think that when I saw this view, I'd cry because my wish would be fulfilled."
+Main_LahaiRoi_3_2_58_5,"But now, when I see Helios's light pouring over the land, with the ancient frostlands and people who've been here for only a few decades sharing the same warmth..."
+Main_LahaiRoi_3_2_58_6,"I just think, what a beautiful sight."
+Main_LahaiRoi_3_2_58_7,"Well, let's scream that from the rooftops!"
+Main_LahaiRoi_3_2_58_8,To freedom!
+Main_LahaiRoi_3_2_58_9,To civilization.
+Main_LahaiRoi_3_2_58_10,To new beginnings.
+Main_LahaiRoi_3_2_58_11,"The three of you witness Lahai-Roi bathed in Helios's light. You toast to freedom, to civilization, and to new beginnings."
+Main_LahaiRoi_3_2_6_1,"Hmm... the frequency that connected with you was coming from here. But now, I don't smell a thing."
+Main_LahaiRoi_3_2_6_2,(The voice from earlier said it would share the last of the Heliogyre's strength so it wouldn't fade. It must be that Soliskin. Did it eventually vanish here?)
+Main_LahaiRoi_3_2_6_3,Did you find what you're looking for?
+Main_LahaiRoi_3_2_6_4,No. The trail ends here. But I saw other things in that memory.
+Main_LahaiRoi_3_2_6_5,"Mornye, do you know of a ""Heliogyre""?"
+Main_LahaiRoi_3_2_6_6,Yes.
+Main_LahaiRoi_3_2_6_7,"The ""<te href=700019>Heliogyre</te>"" is one of the most important components of the New Solar Ceremony."
+Main_LahaiRoi_3_2_6_14,"In that memory, I heard a voice say he would force the Heliogyre to a standstill."
+Main_LahaiRoi_3_2_6_15,A standstill?
+Main_LahaiRoi_3_2_6_16,(Describe what you saw to Mornye.)
+Main_LahaiRoi_3_2_6_17,"You're saying you heard a voice asking for help, saying he would stop the Heliogyre's workings."
+Main_LahaiRoi_3_2_6_18,Could that be why the meeting was cancelled?
+Main_LahaiRoi_3_2_6_19,"(When I handled the Voidworm, a voice told me to protect the sun. Whoever she is, I don't think she intends harm. She offered to help. For now, I'll do what she suggested.)"
+Main_LahaiRoi_3_2_6_20,"(One thing is certain. The one who knows me by my ""Arbiter"" title needs my help.)"
+Main_LahaiRoi_3_2_6_21,(Black robes with golden embroidery...)
+Main_LahaiRoi_3_2_6_22,(A headpiece shaped like two horns...)
+Main_LahaiRoi_3_2_6_23,(And those unusual eyes...)
+Main_LahaiRoi_3_2_6_24,"I need to find out who he is, Mornye. Do you know any Roya who are familiar with the tribe's inner workings?"
+Main_LahaiRoi_3_2_6_25,Hmm... I do have some Royan students. They might know who he is.
+Main_LahaiRoi_3_2_6_26,It's class hours at the Academy. Should we head back?
+Main_LahaiRoi_3_2_6_27,"Help! Help! Maja—Maja, she... Someone, please help!"
+Main_LahaiRoi_3_2_6_28,"Otherwise, our thesis data will disappear entirely!"
+Main_LahaiRoi_3_2_6_29,"Don't worry, {PlayerName}. If you see a student shouting ""help"" and ""thesis"" in the same breath, no matter how loudly they scream, it's never really an emergency."
+Main_LahaiRoi_3_2_6_30,"But Maja is one of the Royan students I mentioned. Since you're looking for her, we might as well see what it's about."
+Main_LahaiRoi_3_2_6_31,(Hm. Yet another problem tied to the Research Institute. We shouldn't reveal our plans to them just yet.)
+Main_LahaiRoi_3_2_6_34,"Hyvatia can monitor environmental data, but raw observational data on the Reactor Drive can only be obtained from the Heliogyre—a component of the Exostrider itself."
+Main_LahaiRoi_3_2_6_35,Only the Roya tribe can discern the Heliogyre's readings. That's why the Collective needs their cooperation during the New Solar Ceremony.
+Main_LahaiRoi_3_2_6_36,"You find no trace of the frequency's source but uncover a new clue: the ""Heliogyre"" mentioned in the vision is an indispensable component of the New Solar Ceremony, and only the Roya can discern its workings. Just as you plan to question Roya students, a cry for help rings out."
+Main_LahaiRoi_3_2_8_1,"Calm down, Maja, calm down... Good, they've stopped for now. Maybe I should just shut them down?"
+Main_LahaiRoi_3_2_8_2,"No, if I force the shutdown, I'll lose the data. Our thesis! Oh, somebody help!!"
+Main_LahaiRoi_3_2_8_3,Ugh...
+Main_LahaiRoi_3_2_8_4,Is she in a bad situation?
+Main_LahaiRoi_3_2_8_5,No. It's just a routine malfunction. But...
+Main_LahaiRoi_3_2_8_6,Huh? Professor Mornye?!
+Main_LahaiRoi_3_2_8_7,"Oh no, I've been caught out of class! Wait, wait, let me explain! I wasn't skipping class! I'm here for a very good reason! It's not that I don't respect the class, o-or my teachers!"
+Main_LahaiRoi_3_2_8_8,"So, uh... can you just..."
+Main_LahaiRoi_3_2_8_9,"Even if you beg me, credits will still be deducted."
+Main_LahaiRoi_3_2_8_10,Why don't you start by explaining yourself?
+Main_LahaiRoi_3_2_8_11,"Well, these are probe robots from a few days ago. We sent them out to measure Voidmatter concentrations in the tundra."
+Main_LahaiRoi_3_2_8_12,"We thought we'd finish collecting the data before class, but when we tried to approach them, they started attacking us."
+Main_LahaiRoi_3_2_8_13,I chased it all the way here. That's why I missed the class today...
+Main_LahaiRoi_3_2_8_14,The internal <te href=700023>Exoswarm material</te> was eroded by Voidmatter. That's what caused the malfunction.
+Main_LahaiRoi_3_2_8_15,This should have been covered in your Material Science coursework. Such material is inherently unstable and can only be used in controlled environments.
+Main_LahaiRoi_3_2_8_16,I'm so sorry...
+Main_LahaiRoi_3_2_8_17,"For safety reasons, you'll need to shut down the units first, then clean the contaminated parts with Voidmatter."
+Main_LahaiRoi_3_2_8_18,But approaching them right now may lead to further damage. We need a pulse generator to stun them from a distance. I'll submit a request.
+Main_LahaiRoi_3_2_8_19,There's a simpler solution.
+Main_LahaiRoi_3_2_8_20,(Unsheath your sword.)
+Main_LahaiRoi_3_2_8_21,"No wait, that's against protocol..."
+Main_LahaiRoi_3_2_8_22,Never mind. I'll think about how to write the review report later.
+Main_LahaiRoi_3_2_8_23,￥#&@... Scanning... Target... Eradication...
+Main_LahaiRoi_3_2_8_24,"Maja's probe robot has gone berserk from Voidmatter contamination. Mornye proposes standard containment procedures, but you opt for a simpler solution."
+Main_LahaiRoi_3_2_800_1,"So we need to find Foreseer Yngvar at Haldarheim's Rite of Return, is that right?"
+Main_LahaiRoi_3_2_800_2,Do you want to leave now?
+Main_LahaiRoi_3_2_800_3,Let's go.
+Main_LahaiRoi_3_2_800_4,I still have something to attend to first.
+Main_LahaiRoi_3_2_800_5,"Okay, let's be on our way then."
+Main_LahaiRoi_3_2_9_1,"Now, it's back to normal."
+Main_LahaiRoi_3_2_9_2,Great! Do you think the data...
+Main_LahaiRoi_3_2_9_3,It's still there.
+Main_LahaiRoi_3_2_9_4,"But sending the robot out there broke the experiment protocol. Even if you got the data, it won't count in your thesis."
+Main_LahaiRoi_3_2_9_5,What?!
+Main_LahaiRoi_3_2_9_6,"But... Oh, well. Thanks anyway for helping out. Professor Mornye, and—"
+Main_LahaiRoi_3_2_9_7,You can call me {PlayerName}.
+Main_LahaiRoi_3_2_9_8,"Maja, we do have something we'd like to ask you."
+Main_LahaiRoi_3_2_9_9,(Describe the vision you saw.)
+Main_LahaiRoi_3_2_9_10,"You want to find a Roya in black robes with gold embroidery, wearing a headpiece shaped like two horns?"
+Main_LahaiRoi_3_2_9_11,"The horns are a symbol of the Exostrider. <te href=700024>Shepherds</te> wear them, but no Shepherd would wear a robe like that..."
+Main_LahaiRoi_3_2_9_12,"Could be someone higher up. Like the <te href=700025>Solsworn</te> from the Solisylum, or even one of <te href=700020>The Heliodic Six</te>."
+Main_LahaiRoi_3_2_9_13,The Heliodic Six... They're the ones who are supposed to give us the Heliogyre's readings during the New Solar Ceremony.
+Main_LahaiRoi_3_2_9_14,"That's right. They're the six most powerful members of the Roya tribe. The highest in rank, too."
+Main_LahaiRoi_3_2_9_15,"I've heard they use the Heliogyre to predict everything, from bird migrations to Void Storms. They know it all."
+Main_LahaiRoi_3_2_9_16,How do I meet with one of them?
+Main_LahaiRoi_3_2_9_17,Huh?! That might be hard.
+Main_LahaiRoi_3_2_9_18,They never leave the <te href=700018>Solisylum</te>. It's surrounded by light all year round. Very few Roya are even allowed to enter.
+Main_LahaiRoi_3_2_9_19,But maybe you could try meeting with one of the unappointed Heliodic Six?
+Main_LahaiRoi_3_2_9_20,"Sigrika is currently out researching in the frostlands. The only other one around is Foreseer Yngvar, but he doesn't show himself much."
+Main_LahaiRoi_3_2_9_21,"If you want to find him, my mam might be able to help. She's a Royan Shepherdess over at Atuja camp. Name's Astrid."
+Main_LahaiRoi_3_2_9_22,"Now then, I'd better get back to class before I lose all my credits. Who knew I'd run into trouble today? I even asked my mam to help me with the robot."
+Main_LahaiRoi_3_2_9_23,Very good. Good luck with your thesis paper.
+Main_LahaiRoi_3_2_9_24,Phew... I'm better at talking with students in class.
+Main_LahaiRoi_3_2_9_25,"{PlayerName}, did you learn what you needed?"
+Main_LahaiRoi_3_2_9_26,The last person that those robots likely saw before they lost control was Maja's mother.
+Main_LahaiRoi_3_2_9_27,I think we can talk to her under the guise of a friendly house visit.
+Main_LahaiRoi_3_2_9_28,"Hmm... In that case, I can accompany you as a Professor from the Academy. As for your identity, {PlayerName}..."
+Main_LahaiRoi_3_2_9_29,It's okay. It will simply be a convenient title.
+Main_LahaiRoi_3_2_9_30,Mornye?
+Main_LahaiRoi_3_2_9_31,Would it be okay for you to act as... my mentor?
+Main_LahaiRoi_3_2_9_32,As in acting as a Professor too? Sure.
+Main_LahaiRoi_3_2_9_33,But aren't you going to tell me I should report this to the Academy to handle?
+Main_LahaiRoi_3_2_9_34,I was just thinking of ways to help you find who you're looking for.
+Main_LahaiRoi_3_2_9_35,"Your reasons are your own. I trust your judgement, and you can tell me later."
+Main_LahaiRoi_3_2_9_36,I hope I act the part of Professor well.
+Main_LahaiRoi_3_2_9_37,"Feel free to give me pointers, Junior Professor."
+Main_LahaiRoi_3_2_9_38,"Yes, feel free to give me pointers too, Mentor."
+Main_LahaiRoi_3_2_9_39,I think the person I am now... can be of help to you.
+Main_LahaiRoi_3_2_9_40,"Based on Maja's description, the man who asked for your help is likely one of the Roya's Heliodic Six, figures who rarely leave the Solisylum. As a compromise, you decide to seek out one of the unappointed successors to Heliodic Six, Foreseer Yngvar. Maja advises you to speak to her mother, Astrid."
+Main_LahaiRoi_3_2_960_1,Be careful!
+Main_LahaiRoi_3_2_961_29,"So, this device is Foreseer Yngvar's. Mentor, what do you make of this?"
+Main_LahaiRoi_3_2_961_30,She doesn't seem to be lying.
+Main_LahaiRoi_3_2_961_31,We need to verify this ourselves.
+Main_LahaiRoi_3_2_961_32,Hmm... I trust your judgement.
+Main_LahaiRoi_3_2_961_33,"This Foreseer Yngvar is the one Maja mentioned before, the unappointed member of the Heliodic Six. Could it be an attempt to tighten his grip on power?"
+Main_LahaiRoi_3_2_961_34,No. That is impossible.
+Main_LahaiRoi_3_2_961_35,"Each of <ano=the Solsworn>these successors</ano> is chosen when their Resonance Ability first awakens. Even if someone desired the position, it is impossible to change the appointment."
+Main_LahaiRoi_3_2_961_36,Hmm... meaning no one can threaten Yngvar's position.
+Main_LahaiRoi_3_2_961_37,(But he could harbor animosity toward the current Heliodic Six. Yngvar is still our lead to find them.)
+Main_LahaiRoi_3_2_961_38,(Things are getting more complicated. A direct approach with Yngvar might not be a good idea.)
+Main_LahaiRoi_3_2_961_39,Where can we find him?
+Main_LahaiRoi_3_2_961_40,"The Solisylum's people usually abide in the village bordering Bjartr Woods, called Haldarheim."
+Main_LahaiRoi_3_2_961_41,"It is the time of the <te href=700028>Rite of Return</te>. The Soliskin will return to the Solistrees and to the Exostrider. As is tradition, Foreseer Yngvar will attend the rite."
+Main_LahaiRoi_3_2_961_42,But you are not Roya. You may not be allowed to witness the rite.
+Main_LahaiRoi_3_2_961_43,Uuu...
+Main_LahaiRoi_3_2_961_44,"Huh? Wait, but we did find this little one here."
+Main_LahaiRoi_3_2_961_45,"Is this the Soliskin you saved? Well... Perhaps you may attend as ""Shepherds."""
+Main_LahaiRoi_3_2_961_46,"Soliskin have been companions to the Roya for hundreds of years. If they hear that you saved one, they will be grateful."
+Main_LahaiRoi_3_2_961_47,Chu... Chuuu!
+Main_LahaiRoi_3_2_961_48,We're in this together now.
+Main_LahaiRoi_3_2_961_49,I've never been this close to a Soliskin before. Please let me know if I'm doing something wrong.
+Main_LahaiRoi_3_2_961_50,Chuuu!
+Main_LahaiRoi_3_2_961_51,"Astrid tells you that Yngvar will appear at the upcoming Rite of Return. To find him, you decide to travel with the rescued Soliskin to a village named Haldarheim and take part in the rite."
+Main_LahaiRoi_3_2_962_1,The wind feels nice... I could stay here a little longer.
+Main_LahaiRoi_3_2_962_2,Do you want to join me?
+Main_LahaiRoi_3_2_962_3,Do you have a moment to chat?
+Main_LahaiRoi_3_2_962_4,I have some matters to attend to.
+Main_LahaiRoi_3_2_962_5,Yes. The Spacetrek Collective has given me a whole month of paid sick leave. My schedule is clear.
+Main_LahaiRoi_3_2_962_6,The last time I had this much time off... I think I was back in middle school when I tumbled down a flight of stairs.
+Main_LahaiRoi_3_2_962_7,Were you alright?
+Main_LahaiRoi_3_2_962_8,"Well, at the time, I dropped the book I was reading down the stairs. So I accidentally... No, I shouldn't mention such embarrassing things like that in front of you."
+Main_LahaiRoi_3_2_962_9,"Now, what would you like to discuss?"
+Main_LahaiRoi_3_2_962_10,The New Solar Ceremony.
+Main_LahaiRoi_3_2_962_11,About your nickname for me...
+Main_LahaiRoi_3_2_962_12,Did we know each other before?
+Main_LahaiRoi_3_2_962_13,Take care of yourself. See you next time.
+Main_LahaiRoi_3_2_962_14,"The Reactor Drive didn't land as the Spacetrek Collective had originally planned. But now that it's on the ground, we can finally start researching it."
+Main_LahaiRoi_3_2_962_16,"And then, someday, we'll prove that both the sun and the stars are within our reach."
+Main_LahaiRoi_3_2_962_17,It would be nice if you could be there to witness it with me.
+Main_LahaiRoi_3_2_962_18,(Chat about something else.)
+Main_LahaiRoi_3_2_962_19,Oh... it's because... it prevents your identity from being exposed.
+Main_LahaiRoi_3_2_962_20,"But that's no longer necessary, right?"
+Main_LahaiRoi_3_2_962_21,You're right. I suppose I can't call you that anymore...
+Main_LahaiRoi_3_2_962_22,"But I have a friend. She faced a medical condition, and during a difficult time, she was guided by a mentor."
+Main_LahaiRoi_3_2_962_23,"Even though that mentor left soon after, their influence stayed with her, and, well, still affects me... I–I mean, my friend."
+Main_LahaiRoi_3_2_962_24,"As long as you have something to teach, you remain a mentor."
+Main_LahaiRoi_3_2_962_25,So... can I still call you that?
+Main_LahaiRoi_3_2_962_26,(Chat about something else.)
+Main_LahaiRoi_3_2_962_27,That's... a secret.
+Main_LahaiRoi_3_2_962_28,What?!
+Main_LahaiRoi_3_2_962_29,"It's because someone made me promise that when they left. ""Only by saying goodbye can there be progress and change,"" they said."
+Main_LahaiRoi_3_2_962_30,"So until their goals are achieved, that ""goodbye"" must remain final."
+Main_LahaiRoi_3_2_962_31,Until when?
+Main_LahaiRoi_3_2_962_32,"Hmm... maybe until the Reactor Drive is fully analyzed, the Exostrider on the frostlands is activated again, and the disaster buried deep below is finally dealt with. Or maybe until there are no more calamities left on this planet."
+Main_LahaiRoi_3_2_962_33,"Until I can give you that answer myself... Please, hold on to that curiosity for just a little longer."
+Main_LahaiRoi_3_2_962_34,(Chat about something else.)
+Main_LahaiRoi_3_2_962_35,"Okay. See you next time. Oh, one more thing—"
+Main_LahaiRoi_3_2_962_36,"Stay a bit longer this time, Mentor."
+Main_LahaiRoi_3_2_963_1,Approaching the Reactor Drive. Diverting max power to the hover cannons!
+Main_LahaiRoi_3_2_963_2,"Mornye, you've already done so much."
+Main_LahaiRoi_3_2_963_3,Just leave the rest to me!
+Main_LahaiRoi_3_2_964_1,"Boost Mode can be activated! Fuel is limited, so use it carefully."
+Main_LahaiRoi_3_2_964_2,This should be enough for what I need.
+Main_LahaiRoi_3_2_965_1,"Ugh, the light gets worse the closer we get."
+Main_LahaiRoi_3_2_965_2,{PlayerName}! The energy disturbances within the Drive are growing unstable. Professor Mornye is being consumed by it!
+Main_LahaiRoi_3_2_965_3,Faster. I need to move faster!
+Main_LahaiRoi_3_2_966_1,So let's try out the Institute's new tech.
+Main_LahaiRoi_3_2_967_1,Energy concentration inside the Reactor Drive is rising. Critical defense protocols can be activated.
+Main_LahaiRoi_3_2_967_2,Thanks.
+Main_LahaiRoi_3_2_968_1,"Three days ago, when Helios was launched, we registered an unexpected spike in Voidmatter concentrations near Hyvatia. It interfered with the launch."
+Main_LahaiRoi_3_2_968_2,"We're still unsure what triggered the surge. But after comparing the waveforms with the device Professor Mornye brought back, we suspect it was an artificially induced Void Storm."
+Main_LahaiRoi_3_2_968_3,And we found you unconscious close by.
+Main_LahaiRoi_3_2_968_4,"Dr. Herssen, I really can't remember anything..."
+Main_LahaiRoi_3_2_968_5,(Chuckles) You can relax. Professor Lucilla has already given you the clear. You're not a suspect.
+Main_LahaiRoi_3_2_968_6,"Heh, a doctor's duty, isn't it? But there is one thing I need your testimony on."
+Main_LahaiRoi_3_2_968_7,"Before you fainted, who did you see?"
+Main_LahaiRoi_3_2_968_8,"Good day, gentlemen! Hyvatia's routine maintenance has been completed. I'll be on my way."
+Main_LahaiRoi_3_2_968_9,Who's that?
+Main_LahaiRoi_3_2_968_10,Never mind. No time to think about that.
+Main_LahaiRoi_3_2_968_11,"Dr. Herssen, the Academy's review committee thinks what I've said is unbelievable. But if you're willing to trust me..."
+Main_LahaiRoi_3_2_968_12,"Before I passed out, I saw... myself."
+Main_LahaiRoi_3_2_968_13,"Ahh, it seems my hastily chosen pawn has proven to be utterly ineffectual. It appears I'll have to add the final flourish to push the story to its climax."
+Main_LahaiRoi_3_2_968_14,"But no matter, no matter. I'll simply chalk this up as a poor judgment call. A band of fools who enacted a farce."
+Main_LahaiRoi_3_2_968_15,"Such a pity, though. With this piece expended, the chapter where the girl forms her bond with the Threnodian must be delayed."
+Main_LahaiRoi_3_2_968_16,"But that is a tale to be savored later. Right, {PlayerName}?"
+Main_LahaiRoi_3_2_968_17,"I'm just here for protective oversight. Acting as your personal bodyguard, you might say."
+Main_LahaiRoi_3_2_968_18,Aren't you the campus doctor? And you're... here to protect me?
+Main_LahaiRoi_3_2_968_19,"Dr. Herssen discovers a suspicious individual who fainted near Hyvatia during the Void Storm. The man claims that just before passing out, he saw ""himself.""
+Meanwhile, a ""researcher"" watches everything unfold with obvious delight."
+Main_LahaiRoi_3_2_976_1,I found the device. It's close to the Solistree.
+Main_LahaiRoi_3_2_976_2,Solistree? I have a bad feeling about this.
+Main_LahaiRoi_3_2_977_1,There are so many contaminated Exoswarm here. The Voidmatter concentration is also very high.
+Main_LahaiRoi_3_2_977_2,Maybe the device Astrid had was incomplete. This could be the real deal.
+Main_LahaiRoi_3_2_978_1,"Mornye, where are you?"
+Main_LahaiRoi_3_2_978_3,Has the feast finished already?
+Main_LahaiRoi_3_2_978_4,"Yes, it has."
+Main_LahaiRoi_3_2_978_5,I couldn't find you. I was worried.
+Main_LahaiRoi_3_2_978_6,I'm sorry if I worried you.
+Main_LahaiRoi_3_2_978_7,"But... I'm the professor, and you're the student. It should be my place to worry about you."
+Main_LahaiRoi_3_2_978_8,(Attachment: a picture of the night sky)
+Main_LahaiRoi_3_2_978_9,I'm here. Right beneath the 13th planet of the Norma constellation.
+Main_LahaiRoi_3_2_978_10,"I'm afraid I'm unable to move at the moment. Please, I'll need you to come find me here."
+Main_LahaiRoi_3_2_978_13,...I see. Sorry to make you worry.
+Main_LahaiRoi_3_2_978_14,"Mornye, where are you?"
+Main_LahaiRoi_3_2_978_15,"Yes, it is."
+Main_LahaiRoi_3_2_978_16,I couldn't find you. I was worried.
+Main_LahaiRoi_3_2_978_17,I thought I was your mentor?
+Main_LahaiRoi_3_2_979_1,Hmm. Where did Mornye go? I'll send her a <ano=WavesLine>message</ano>.
+Main_LahaiRoi_3_2_980_1,That looks like the center of the storm ahead. Let's see what we're dealing with.
+Main_LahaiRoi_3_2_981_1,We're in the Void Storm's range now. Check that your FCR is working.
+Main_LahaiRoi_3_2_981_4,Don't stray too far from me.
+Main_LahaiRoi_3_2_982_1,Ready to go to Atuja camp to find Astrid?
+Main_LahaiRoi_3_2_982_2,Let's go.
+Main_LahaiRoi_3_2_982_3,Let's go a bit later.
+Main_LahaiRoi_3_2_982_4,"Okay, let's go together... Mentor."
+Main_LahaiRoi_3_2_983_1,You saw it too? It went in this direction.
+Main_LahaiRoi_3_2_983_2,Yes. Strange though. Why here?
+Main_LahaiRoi_3_2_983_3,What are you two looking for?
+Main_LahaiRoi_3_2_983_4,"Oh, you must be from Startorch Academy. Have you seen a Soliskin? White. About the size of a pumpkin."
+Main_LahaiRoi_3_2_983_5,Can't say I have.
+Main_LahaiRoi_3_2_983_6,"Actually, we did see one flying this way while we were setting up at the market. If Svanar hadn't seen it too, I would've thought I was imagining it."
+Main_LahaiRoi_3_2_983_8,"If you happen to spot it, please tell us."
+Main_LahaiRoi_3_2_9831_1,You saw it too? It went in this direction.
+Main_LahaiRoi_3_2_9831_2,Yes. Strange though. Why here?
+Main_LahaiRoi_3_2_985_1,"Hey, TARD-E. How much power do you run on?"
+Main_LahaiRoi_3_2_985_2,Standard output: 200 units. Compliant with dormitory safety protocols.
+Main_LahaiRoi_3_2_985_3,Uh-huh. And when you're chasing down a student?
+Main_LahaiRoi_3_2_985_4,"To ensure the successful apprehension of a rule-breaking student, my output increases to 1,200 units."
+Main_LahaiRoi_3_2_985_5,I guess that makes you the high-wattage device.
+Main_LahaiRoi_3_2_997_1,"I'm Mornye, and this is my mentor... Uh, let me try that again..."
+Main_LahaiRoi_3_2_997_3,What are you...?
+Main_LahaiRoi_3_2_997_4,"Just practicing. I'm not very good at speaking with parents. And this time, I don't have an assistant to help write a script for me."
+Main_LahaiRoi_3_2_997_5,Why don't you leave it to me? You just focus on what you're good at.
+Main_LahaiRoi_3_2_997_6,Alright.
+Main_LahaiRoi_3_2_998_1,"I'm fine now, Mornye. Sorry to worry you. You must need to get back to the Spacetrek Collective, right?"
+Main_LahaiRoi_3_2_998_2,That's okay.
+Main_LahaiRoi_3_2_998_3,But you just...
+Main_LahaiRoi_3_2_998_4,"You looked... shaken just now. I'll stay with you. If it involves more frequency loss, I'd like to stay close to transport you to the infirmary."
+Main_LahaiRoi_3_2_998_5,Transport me?
+Main_LahaiRoi_3_2_999_1,Thank you. You don't need to go any further. I can head back to the Research Institute by myself.
+Main_LahaiRoi_3_2_999_2,Stay safe.
+Main_LahaiRoi_3_2_999_3,"No more rule-breaking, alright?"
+Main_LahaiRoi_3_2_999_4,"Mm, you too."
+Main_LahaiRoi_3_2_999_5,That was... an accident...
+Main_LahaiRoi_3_2_999_6,Huh?
+Main_LahaiRoi_3_2_999_7,Something wrong?
+Main_LahaiRoi_3_2_999_8,It's a notice from the Collective. The Royan delegation canceled the meeting. The ceremony is now on hold. That's odd...
+Main_LahaiRoi_3_2_999_9,Warren handles Royan communications. I'll ask him what's going on when I'm back at the Institute.
+Main_LahaiRoi_3_2_999_10,"Since that slot is free now, I can use the time to recalibrate..."
+Main_LahaiRoi_3_2_999_11,What don't you give yourself a little break?
+Main_LahaiRoi_3_2_999_12,"Hm, that isn't on the list."
+Main_LahaiRoi_3_2_999_13,The New Solar Ceremony is nearly upon us. It's the culmination of decades of work. Everyone at the Collective is giving their all to realize it.
+Main_LahaiRoi_3_2_999_14,"Last time we met at the Institute, I... we made each other a promise. Do you still remember?"
+Main_LahaiRoi_3_2_999_15,I remember.
+Main_LahaiRoi_3_2_999_16,A promise?
+Main_LahaiRoi_3_2_999_17,Would you like to attend the New Solar Ceremony?
+Main_LahaiRoi_3_2_999_18,"I… I'd want you there to witness it. The rise of the new sun, and humanity taking their first steps into the future they've built with their own hands."
+Main_LahaiRoi_3_2_999_19,"We did promise to witness it together, didn't we?"
+Main_LahaiRoi_3_2_999_20,Yes.
+Main_LahaiRoi_3_2_999_21,"That's all right. Consider this my official invitation, then."
+Main_LahaiRoi_3_2_999_22,I hope to attend the ceremony together with you.
+Main_LahaiRoi_3_2_999_23,"I… I'd want you there to witness it. The rise of the new sun, and humanity taking their first steps into the future they've built with their own hands."
+Main_LahaiRoi_3_2_999_24,"As the ceremony draws near, the Spactrek Collective will become increasingly occupied. Opportunities to meet like this will be rare. But this promise will still stand."
+Main_LahaiRoi_3_2_999_25,Then it's a promise.
+Main_LahaiRoi_3_2_999_26,"Before my power is spent, I have little time left."
+Main_LahaiRoi_3_2_999_27,The only choice now is to force the Heliogyre to a standstill.
+Main_LahaiRoi_3_2_999_28,"The last of its strength I will share with you, so fade you will not. But you must hurry."
+Main_LahaiRoi_3_2_999_29,"Before that, take this memory to {Male=him;Female=her}."
+Main_LahaiRoi_3_2_999_30,"Take it to the one they call ""Arbiter."""
+Main_LahaiRoi_3_2_999_31,"{PlayerName}, what happened? Are you alright?!"
+Main_LahaiRoi_3_2_999_32,I... saw someone's memory.
+Main_LahaiRoi_3_2_999_33,"Whoa, you scared me! And just now, a frequency jumped into your Tacet Mark! It felt like... some kinda connection?"
+Main_LahaiRoi_3_2_999_34,"Can you trace where it came from, Abby?"
+Main_LahaiRoi_3_2_999_35,"Sniff, sniff, sniff..."
+Main_LahaiRoi_3_2_999_36,I smell it coming from over there!
+Main_LahaiRoi_3_2_999_37,Good. Let's go check it out.
+Main_LahaiRoi_3_2_999_38,"You escort Mornye out, and she invites you to witness the New Solar Ceremony together. Suddenly, a burst of frequency flows into your Tacet Mark. You have a vision of a man who addresses you as ""Arbiter,"" pleading for help. You and Mornye decide to track the frequency's source."
+Main_LahaiRoi_3_2_103_2,"Heavy encryption, but it's sloppy."
+Main_LahaiRoi_3_2_35_1,The road to Solisylum is here. Or do you have something else to ask?
+Main_LahaiRoi_3_2_35_2,Ask about the Heliodic Six.
+Main_LahaiRoi_3_2_35_3,About the prediction…
+Main_LahaiRoi_3_2_35_4,Ask about the man in your visions.
+Main_LahaiRoi_3_2_35_5,About Yngvar…
+Main_LahaiRoi_3_2_35_6,I have no further questions.
+Main_LahaiRoi_3_2_35_7,"This history, every Royan child learns from birth—"
+Main_LahaiRoi_3_2_35_8,"""The Exostrider's heart is our sun. It gives us light. Thus, we need not freeze in the eternal night."""
+Main_LahaiRoi_3_2_35_9,"""And the Six, with the Heliogyre as their tally, read the heavens. Thus, we need not fade into the void."""
+Main_LahaiRoi_3_2_35_10,They are our prophets. They are our sacrifices.
+Main_LahaiRoi_3_2_35_11,"More than this... that, I believe, they will tell you themselves within Solisylum."
+Main_LahaiRoi_3_2_35_12,"""Should a visitor from beyond Lahai-Roi save Bjartr Woods from ruin, invite them into Solisylum."""
+Main_LahaiRoi_3_2_35_13,"For centuries, the Six have foretold our skies. Never have they been wrong."
+Main_LahaiRoi_3_2_35_14,"This was the first prediction so... specific. To you, proven as its subject, our people offer our highest welcome."
+Main_LahaiRoi_3_2_35_15,"Black robes with golden embroidery, a headpiece shaped like two horns, and unusual eyes... It seems you have met one of the Six."
+Main_LahaiRoi_3_2_35_16,"The frequency you felt was likely a Soliskin, carrying the message for them. It spent the last of its strength crossing Lahai-Roi to reach you."
+Main_LahaiRoi_3_2_35_17,"Yet they chose a Soliskin, not our own people, to send the word..."
+Main_LahaiRoi_3_2_35_18,Could it be... some turmoil is stirring within the Roya themselves?
+Main_LahaiRoi_3_2_35_19,"Chosen by the Heliogyre as a Solsworn, he was. That much is certain."
+Main_LahaiRoi_3_2_35_20,It is not my place to speak on other matters.
+Main_LahaiRoi_3_2_35_21,I see. Then I shall wait here.
+Main_LahaiRoi_3_2_36_1,You may approach.
+Main_LahaiRoi_3_2_36_2,"The Heliodic Six are expecting you, as was predicted."
+Main_LahaiRoi_3_2_37_1,The Heliogyre has awakened. It seems the Arbiter foretold in the fractured records... is you.
+Main_LahaiRoi_3_2_37_2,Have you been the one attempting to reach me?
+Main_LahaiRoi_3_2_37_3,Yes. With great reverence is your presence here met.
+Main_LahaiRoi_3_2_37_4,"Solisylum, as you see it, is not as it once was. Five of the Six have lost their minds, and the light of the Heliogyre no longer flows."
+Main_LahaiRoi_3_2_37_5,This is why I summoned you.
+Main_LahaiRoi_3_2_37_6,Tell me everything that has happened.
+Main_LahaiRoi_3_2_37_7,"You witnessed the Void Storm in Bjartr Woods, yes?"
+Main_LahaiRoi_3_2_37_8,"The <te href=700027>Solistrees</te> shield the woods from such storms. Yet, through malice and dark intent, corrupted were the roots. And so too, the Heliogyre."
+Main_LahaiRoi_3_2_37_9,The others succumbed to the corruption. Only I was able to sever my link to the Heliogyre before the corruption could claim me.
+Main_LahaiRoi_3_2_37_10,"With the last of my strength, I turned the six stars to halt the Heliogyre and prevent the corruption's spread."
+Main_LahaiRoi_3_2_37_11,"That, at least, ensured that when my strength failed and I fell into slumber, untouched by others the Heliogyre would remain."
+Main_LahaiRoi_3_2_37_12,"No one, save for one."
+Main_LahaiRoi_3_2_37_13,Me.
+Main_LahaiRoi_3_2_37_14,Correct.
+Main_LahaiRoi_3_2_37_15,"As one of the Six, I can glimpse the near future within the Heliogyre. But I am bound here, unable to act."
+Main_LahaiRoi_3_2_37_16,All I could do was send a Soliskin entrusted with my message to you.
+Main_LahaiRoi_3_2_37_17,(That Soliskin that vanished just outside the Academy.)
+Main_LahaiRoi_3_2_37_18,"Because of your actions, the source of the corruption was stopped. The stars are now aligned, and the Heliogyre turns once again."
+Main_LahaiRoi_3_2_37_19,But the other Five are no more. They can no longer fulfill their roles within the Heliodic Six.
+Main_LahaiRoi_3_2_37_20,I have one final request.
+Main_LahaiRoi_3_2_37_21,"But before that, allow me to tell you what the Heliodic Six truly are."
+Main_LahaiRoi_3_2_37_22,"Inside the Solisylum, you finally meet the man in the visions: the Shaper, the only conscious member of the Heliodic Six.
+He explains he was forced to halt the Heliogyre to prevent the Void Storms in Bjartr Woods from causing further contamination. With the situation there now contained, only you, the Arbiter, can restart it."
+Main_LahaiRoi_3_2_38_1,Centuries ago
+Main_LahaiRoi_3_2_38_2,a Calamity awoke beneath the ice
+Main_LahaiRoi_3_2_38_3,The void devoured all
+Main_LahaiRoi_3_2_38_4,"erasing every trace, every existence"
+Main_LahaiRoi_3_2_38_5,"In darkness, the Exostrider's blade"
+Main_LahaiRoi_3_2_38_6,sealed the threat deep below
+Main_LahaiRoi_3_2_38_7,It drew its fiery Drive
+Main_LahaiRoi_3_2_38_8,a light that would never fade
+Main_LahaiRoi_3_2_38_9,lifting it high over Lahai-Roi's sky
+Main_LahaiRoi_3_2_38_10,Under its glow
+Main_LahaiRoi_3_2_38_11,the frost did melt
+Main_LahaiRoi_3_2_38_12,life blossoming with Exoswarm aid
+Main_LahaiRoi_3_2_38_13,Yet the Calamity stirred
+Main_LahaiRoi_3_2_38_14,its remnants ravaging the living
+Main_LahaiRoi_3_2_38_15,"Thus, the six wisest among us"
+Main_LahaiRoi_3_2_38_16,became the Heliodic Six
+Main_LahaiRoi_3_2_38_17,The Exostrider's lens became our Heliogyre
+Main_LahaiRoi_3_2_38_18,"From the Drive's turn, the season's laws we discerned"
+Main_LahaiRoi_3_2_38_19,We shed all idle thought
+Main_LahaiRoi_3_2_38_20,to link our minds to the Heliogyre
+Main_LahaiRoi_3_2_38_21,Our shared cognition converged
+Main_LahaiRoi_3_2_38_22,for mortals to touch the edge of the Divine
+Main_LahaiRoi_3_2_38_23,"Since then, the Roya have walked Lahai-Roi"
+Main_LahaiRoi_3_2_38_24,for centuries
+Main_LahaiRoi_3_2_39_1,"The Six shared their computational power, weaving a vast network to reach the Exostrider in a dimension beyond mortal understanding."
+Main_LahaiRoi_3_2_39_2,The data we provided to the Spacetrek Collective was interpreted through this network.
+Main_LahaiRoi_3_2_39_3,"But now, the only one who can continue the calculations... is me."
+Main_LahaiRoi_3_2_39_4,Can you not select new members for the Six?
+Main_LahaiRoi_3_2_39_5,The ones chosen for the Six are born with Resonance with the Heliogyre. It cannot be forced.
+Main_LahaiRoi_3_2_39_6,"Now the remaining five cannot calculate, and there are not enough worthy successors. Even if the Heliogyre resumes its rotations, unable to interpret its readings we will be."
+Main_LahaiRoi_3_2_39_7,"For this reason, the aid I seek is this..."
+Main_LahaiRoi_3_2_39_8,"With your authority, allow me to bear the calculations of the Six alone and act in their stead."
+Main_LahaiRoi_3_2_39_9,The Heliogyre was meant to be interpreted by six.
+Main_LahaiRoi_3_2_39_10,"If you bear all the calculations alone, what will become of you?"
+Main_LahaiRoi_3_2_39_11,I cannot say.
+Main_LahaiRoi_3_2_39_12,"All I know is this: If no one remains to interpret the Heliogyre, the Void Storm's occurrences will be unknown. Life will once more fall into peril."
+Main_LahaiRoi_3_2_39_13,The Spacetrek Collective's decades of effort in preparing for the New Solar Ceremony will come to nothing.
+Main_LahaiRoi_3_2_39_14,To ask this of you... is too cruel.
+Main_LahaiRoi_3_2_39_15,"Since the moment I was brought to Solisylum as a child, I have never once seen the world beyond. In the Heliogyre's light do I glimpse the universe, and in seeing life rejoice under my protection do I take comfort."
+Main_LahaiRoi_3_2_39_16,This has long since become second nature to me. A part of my life.
+Main_LahaiRoi_3_2_39_17,"So now, what I bear is not glory or burden, but duty."
+Main_LahaiRoi_3_2_39_18,"Arbiter, please. Grant me this authority."
+Main_LahaiRoi_3_2_39_19,(Agree.)
+Main_LahaiRoi_3_2_39_20,I respect what you wish to persist.
+Main_LahaiRoi_3_2_39_22,......
+Main_LahaiRoi_3_2_39_31,"But the Shaper's true request is that you use your Arbiter authority to let him alone bear the computational burden of the entire Six. Respecting his resolve, you agree."
+Main_LahaiRoi_3_2_3902_23,This is...
+Main_LahaiRoi_3_2_3902_24,"<i>Soon, a great calamity will fall upon Lahai-Roi.</i>"
+Main_LahaiRoi_3_2_3902_25,"<i>I will share all that I know of the Heliogyre with you. When you call, answer I will.</i>"
+Main_LahaiRoi_3_2_3902_26,(Residual Voidmatter corruption?! I need to find a way to cleanse it!)
+Main_LahaiRoi_3_2_3902_27,CHUUU—
+Main_LahaiRoi_3_2_3902_28,That sound... Is it Buddy?
+Main_LahaiRoi_3_2_3902_29,"<i>Save your strength for the calamity ahead, Arbiter.</i>"
+Main_LahaiRoi_3_2_3902_30,<i>The children will help.</i>
+Main_LahaiRoi_3_2_40_1,There are signs of Voidmatter contamination in the plants and water.
+Main_LahaiRoi_3_2_40_2,"If I follow these traces, I should be able to find the source."
+Main_LahaiRoi_3_2_41_1,Thank you. It's a pleasure working with you as well.
+Main_LahaiRoi_3_2_41_2,So their plan wasn't just to disrupt the Heliogyre by unleashing the Void Storm in Bjartr Woods. They also planned to...
+Main_LahaiRoi_3_2_41_4,A scientist... crippled... It's you.
+Main_LahaiRoi_3_2_41_5,All I have to do is get rid of you!
+Main_LahaiRoi_3_2_41_6,I'm not really good at dealing with this kind of conversation.
+Main_LahaiRoi_3_2_41_7,"Access to this lab, wearing Royan attire... You must be Yngvar, one of the successors to the Heliodic Six."
+Main_LahaiRoi_3_2_41_8,"Heliodic Six. Ha, the Six."
+Main_LahaiRoi_3_2_41_9,"Just because of my Resonance Ability would I be forced to spend my entire life trapped in that Heliogyre! They call it a Roya's highest honor, but did they ask if we wanted that fate?!"
+Main_LahaiRoi_3_2_41_10,"Everyone acts like they respect me, but the only one who truly wants to help me is that good lord from outside the tribe."
+Main_LahaiRoi_3_2_41_11,From outside the tribe. You've joined forces with the Fractsidus?
+Main_LahaiRoi_3_2_41_12,Hah? What's that? Who cares?!
+Main_LahaiRoi_3_2_41_13,"I just know that person promised that if I placed the device near the Solistree, my wish would come true."
+Main_LahaiRoi_3_2_41_14,Then I'd finally escape this frozen wasteland and go start a new life in the New Federation!
+Main_LahaiRoi_3_2_41_15,"You have no idea what you're doing, and no idea who you're aligning yourself with."
+Main_LahaiRoi_3_2_41_16,"This project proposal comes from the Spacetrek Collective, dated ten years ago. It outlines an idea to use the <te href=700010>Drive's</te> emergency response mechanism to artificially make it fall from the sky."
+Main_LahaiRoi_3_2_41_17,"And the method for triggering this mechanism is to pollute the Solistrees' root system with Voidmatter, making the Reactor Drive determine that the Threnodian has breached the lock."
+Main_LahaiRoi_3_2_41_18,"You–you're saying that because I dropped that device there, the Drive is going to..."
+Main_LahaiRoi_3_2_41_19,"Mornye, the Heliogyre is operational again. We can get the readings you need for the New Solar Ceremony."
+Main_LahaiRoi_3_2_41_20,But something happening out there isn't right.
+Main_LahaiRoi_3_2_41_21,"Yes. Once I've handled something here, I'll regroup with you."
+Main_LahaiRoi_3_2_41_22,"Move aside. Before the Drive falls completely, I need to go back to launch Helios."
+Main_LahaiRoi_3_2_41_24,"Hahaha... No, his orders were clear. You don't go anywhere. After that, no matter what happens to Lahai-Roi, I'm going to the New Federation to start my new life!！"
+Main_LahaiRoi_3_2_41_25,You're just a cripple. I won't let you stop me now!
+Main_LahaiRoi_3_2_41_26,"It's been a while since I've heard someone talk like that, since I had these legs, anyway."
+Main_LahaiRoi_3_2_41_27,I've been told that in situations like this...
+Main_LahaiRoi_3_2_41_28,Ah—wait—wait a second!
+Main_LahaiRoi_3_2_41_29,I should make my displeasure very clear.
+Main_LahaiRoi_3_2_41_30,"Alright... Now, it's about time I catch up with my mentor."
+Main_LahaiRoi_3_2_41_31,"Mornye investigates a lab she finds in the woods. She learns that the purpose of the Void Storm device is to contaminate the Solistrees, thereby triggering the Reactor Drive's emergency immune response, causing it to crash and destroy Lahai-Roi.
+After dealing with Yngvar who was sent to kill her, Mornye goes to meet you."
+Main_LahaiRoi_3_2_42_1,Mornye!
+Main_LahaiRoi_3_2_42_2,"Let's go, Mentor."
+Main_LahaiRoi_3_2_45_1,"We need to get to Spacetrek Collective quickly. The Fractsidus tricked Yngvar into working for them, but their real goal is to send the Reactor Drive crashing to the ground."
+Main_LahaiRoi_3_2_45_3,"I've already alerted the Academy to evacuate the area around the impact zone. Before the Drive crashes, it is imperative that we successfully deploy and launch Helios."
+Main_LahaiRoi_3_2_48_1,Where is Anslem at a time like this?! Who else can calibrate Hyvatia?
+Main_LahaiRoi_3_2_48_2,"Cody, Vance, examine the orbital status of <te href=700017>Helios</te> again. Also, the propulsion system needs to be double-checked!"
+Main_LahaiRoi_3_2_48_3,"Professor, do you really plan to launch it without the raw data?"
+Main_LahaiRoi_3_2_48_4,I understand your concerns... but we're on the verge of a disaster. The Collective can't just sit by and watch it happen.
+Main_LahaiRoi_3_2_48_5,This is my decision as the supervisor of this project. I will bear the consequences.
+Main_LahaiRoi_3_2_48_6,No need for that.
+Main_LahaiRoi_3_2_48_7,We've established contact with the Roya tribe and obtained the Drive's raw data. We can proceed with the New Solar Ceremony as originally planned.
+Main_LahaiRoi_3_2_48_8,...Professor Mornye?
+Main_LahaiRoi_3_2_48_9,Did you just say you managed to obtain the data? Wonderful news. I'll prepare the connective instruments for you—
+Main_LahaiRoi_3_2_48_10,There's no need for us to continue pretending anymore.
+Main_LahaiRoi_3_2_48_11,"Warren... Or should I say, traitor aligned with the Fractsidus."
+Main_LahaiRoi_3_2_48_12,"That is a serious accusation, Professor Mornye."
+Main_LahaiRoi_3_2_48_13,I know. I meant it to be.
+Main_LahaiRoi_3_2_48_14,"You must be very familiar with this device, Warren."
+Main_LahaiRoi_3_2_48_15,You handcrafted it to avoid leaving usage records... a clever idea.
+Main_LahaiRoi_3_2_48_16,"But since it is a ""personal"" creation... the marks left behind are like fingerprints."
+Main_LahaiRoi_3_2_48_17,"These are your marks. They've betrayed your deeds. Warren, you've desecrated the hard work of everyone involved."
+Main_LahaiRoi_3_2_48_18,"Anslem's experiment accident, your current position in the project... It seems the Fractsidus played a part in both, didn't they?"
+Main_LahaiRoi_3_2_48_19,"Tch, that's a lot of assumptions and conjectures. With no evidence, I could easily sue you for slander—"
+Main_LahaiRoi_3_2_48_20,You're right. All I have right now are assumptions and conjectures. But my ultimate goal isn't to have you face justice today.
+Main_LahaiRoi_3_2_48_21,"Once we've identified the suspects, we'll have plenty of time to gather the evidence."
+Main_LahaiRoi_3_2_48_22,What I need in this moment... is for you to step down as supervisor of this project.
+Main_LahaiRoi_3_2_48_23,The one taking over... will be me.
+Main_LahaiRoi_3_2_48_24,One more thing. Your subordinate provided us with some key evidence already.
+Main_LahaiRoi_3_2_48_25,"You want me to testify against Professor Warren? That's practically perjury… Sure, I could work some verbal magic, but honestly, I don't even know who I'm dealing with on the other side..."
+Main_LahaiRoi_3_2_48_26,"It is a dirty tactic, but it's effective. I'm confident in my analysis of those devices, but we'll need the university's verification to use them as evidence."
+Main_LahaiRoi_3_2_48_27,"In the limited time we have, the quickest way to detain Warren is your testimony."
+Main_LahaiRoi_3_2_48_28,Professor Mornye...
+Main_LahaiRoi_3_2_48_29,"You can keep this recording. If I'm wrong, it'll be your guarantee later."
+Main_LahaiRoi_3_2_48_30,Or... you can refuse.
+Main_LahaiRoi_3_2_48_31,"—Nice working with you, then."
+Main_LahaiRoi_3_2_48_32,Thank you. It's a pleasure working with you as well.
+Main_LahaiRoi_3_2_48_33,(How did that traitor manage to...?!)
+Main_LahaiRoi_3_2_48_34,"From here on out, {PlayerName} and I will be overseeing the launch procedure. All Spacetrek Collective personnel, to your stations!"
+Main_LahaiRoi_3_2_48_35,"{PlayerName}, please input the Drive's raw observational data into Helios."
+Main_LahaiRoi_3_2_48_36,"Shaper, can you hear me?"
+Main_LahaiRoi_3_2_48_37,Of course. To you have all the Heliogyre's readings been transmitted.
+Main_LahaiRoi_3_2_48_38,Then everything is ready. Let's commence with the New Solar Ceremony!
+Main_LahaiRoi_3_2_48_39,I have already notified the Collective. The investigation will start soon.
+Main_LahaiRoi_3_2_48_40,"With Lynae's help, Mornye identifies the mastermind behind the current Academy conspiracy: the Research Institute lab supervisor, Warren. Mornye assumes command of the New Solar Ceremony and invites you to input the data obtained from the Shaper in preparation for Helios's launch."
+Main_LahaiRoi_3_2_49_1,Helios launch sequence—initiating!
+Main_LahaiRoi_3_2_49_2,Voidmatter Module calibration complete.
+Main_LahaiRoi_3_2_49_3,Core energy system operation normal.
+Main_LahaiRoi_3_2_49_5,Hatch doors opened. Propulsion system primed and ready.
+Main_LahaiRoi_3_2_49_6,Helios is ready for launch!
+Main_LahaiRoi_3_2_49_8,Pre-burner ignition successful!
+Main_LahaiRoi_3_2_49_9,"5, 4, 3, 2..."
+Main_LahaiRoi_3_2_49_10,Let our light... shine in the sky.
+Main_LahaiRoi_3_2_49_11,"Helios is approaching target altitude. Progress, 16%... 47%... 92%"
+Main_LahaiRoi_3_2_49_12,Warning! Light output decay exceeds expected rates. Critical threshold surpassed!
+Main_LahaiRoi_3_2_49_13,Sensor failure detected. Data reading compromised!
+Main_LahaiRoi_3_2_49_14,Auto-repair anomaly detected!
+Main_LahaiRoi_3_2_49_15,Command unresponsive. Control program failure!
+Main_LahaiRoi_3_2_50_1,Cause found! The Hyvatia Detector's signals are jammed!
+Main_LahaiRoi_3_2_50_2,"Large-scale, highly concentrated Voidmatter detected on the surface. It's surpassing the measurement threshold. Calibration can't continue!"
+Main_LahaiRoi_3_2_50_3,At a time like this...
+Main_LahaiRoi_3_2_50_4,"Adjust the measurement location. No, if the impact is this widespread, any adjustment would be pointless. Modify the detection components. No, even if theoretically feasible, there's no time to construct them."
+Main_LahaiRoi_3_2_50_5,"What about high-powered Voidmatter neutralizers? No, without the Drive's light, all energy components will be inoperable..."
+Main_LahaiRoi_3_2_50_7,"Breathe, Mornye."
+Main_LahaiRoi_3_2_50_8,"O-oh? Sorry, I'm just—"
+Main_LahaiRoi_3_2_50_9,Tell me what's happening. We'll figure it out together.
+Main_LahaiRoi_3_2_50_10,The launch failure is caused by the Detector's inability to measure the Drive's operating parameters. That's due to the high concentration of Voidmatter interfering with the readings.
+Main_LahaiRoi_3_2_50_11,"There are two potential solutions: We could increase the Detector's tolerance to Voidmatter. Or, we could eliminate the surrounding Voidmatter. But neither of those options are feasible in the time we have."
+Main_LahaiRoi_3_2_50_13,What if we transport it somewhere that isn't affected by Voidmatter?
+Main_LahaiRoi_3_2_50_14,"Hmm, that's not realistic. The only places that aren't affected by Voidmatter right now are Bjartr Woods and Startorch Academy under the protective barrier. Or the Institute thousands of meters above..."
+Main_LahaiRoi_3_2_50_15,High altitude.
+Main_LahaiRoi_3_2_50_16,Looks like there's another high altitude spot.
+Main_LahaiRoi_3_2_50_17,Do we have spares for Hyvatia's measurement modules?
+Main_LahaiRoi_3_2_50_18,Uh-yes! Researcher Anslem left behind several prototypes. I'll go fetch one from the warehouse.
+Main_LahaiRoi_3_2_50_19,But what do you intend to do with them?
+Main_LahaiRoi_3_2_50_20,"The eyes of the gods have failed us. So have our machines. Now, we move forward with our own hands."
+Main_LahaiRoi_3_2_50_21,"Helios malfunctions because highly concentrated Voidmatter suddenly appears around Hyvatia, blocking its operation.
+To retrieve data critical to the launch, you and Mornye decide to venture directly into the Reactor Drive."
+Main_LahaiRoi_3_2_700_1,"One of the Six, holding the ""Chronicler"" seat. His breath carries a strange chill."
+Main_LahaiRoi_3_2_701_1,"One of the Six, holding the ""Recorder"" seat. Not a single speck of dust lies upon her robes."
+Main_LahaiRoi_3_2_702_1,"One of the Six, holding the ""Refiner"" seat. Her closed eyes seem less like rest, and more like a designed state."
+Main_LahaiRoi_3_2_703_1,"One of the Six, holding the ""Eye"" seat. She looks as if she hasn't seen the sun in a very long time."
+Main_LahaiRoi_3_2_704_1,"One of the Six, holding the ""Binder"" seat. He resembles a vessel carved by time itself."
+Main_LahaiRoi_3_2_900_1,"Solisylum has appeared for you. Please, enter."
+Main_LahaiRoi_3_2_937_1,All systems have entered the final launch check sequence.
+Main_LahaiRoi_3_2_938_1,Preparing to open the energy output channel.
+Main_LahaiRoi_3_2_939_1,Pressure in the reaction chamber is stable.
+Main_LahaiRoi_3_2_939_2,Waveform shows no anomalies.
+Main_LahaiRoi_3_2_940_1,"Hello, Predicted One."
+Main_LahaiRoi_3_2_941_1,The Void Storm in Bjartr Woods has stopped.
+Main_LahaiRoi_3_2_941_2,That must be the hero who stopped the destruction...
+Main_LahaiRoi_3_2_942_1,So that's the one the Heliodic Six predicted would appear...
+Main_LahaiRoi_3_2_942_2,Solisylum appeared for {Male=him;Female=her} too...
+Main_LahaiRoi_3_2_943_1,A test chamber stimulating the Void Storm's contamination of the Solistrees.
+Main_LahaiRoi_3_2_944_1,"This device, used to create artificial Void Storms, is mostly identical to the ones found before."
+Main_LahaiRoi_3_2_945_1,There we go.
+Main_LahaiRoi_3_2_946_1,Found it. This must be where the contamination is coming from.
+Main_LahaiRoi_3_2_947_1,A Terminal? It must belong to the owner of this lab.
+Main_LahaiRoi_3_2_969_4,How were things on your end? Any danger?
+Main_LahaiRoi_3_2_969_5,All good. The Heliogyre is back online. I now have direct contact with Solisylum and can relay the data you need for the New Solar Ceremony.
+Main_LahaiRoi_3_2_969_8,It's time for the final step.
+Main_LahaiRoi_3_2_971_1,<b>7364</b>... The numbers in the note must be the Terminal's password.
+Main_LahaiRoi_3_2_972_1,Mm. There's a note tucked here.
+Main_LahaiRoi_3_2_972_2,There are two types of handwriting. So there's more than one person who has access to this lab.
+Main_LahaiRoi_3_2_972_3,"Based on Astrid's testimony, one of them must be that Yngvar. The other must be the one who operates this lab."
+Main_LahaiRoi_3_2_972_4,"From the note, they change the password after each Terminal use and leave the new one here to inform the other."
+Main_LahaiRoi_3_2_972_5,The newest password is... <b>7364</b>. I'll try that now.
+Main_LahaiRoi_3_2_973_1,"Hm, it's encrypted. If I can open it, there's bound to be information about this device and its owner."
+Main_LahaiRoi_3_2_973_2,"The password can only be entered once... I could force it open like I did last time, but the risk is unknown."
+Main_LahaiRoi_3_2_973_3,(Force upon the Terminal.)
+Main_LahaiRoi_3_2_973_4,(Leave and keep investigating)
+Main_LahaiRoi_3_2_973_5,(Input the password.)
+Main_LahaiRoi_3_2_973_6,Efficiency first.
+Main_LahaiRoi_3_2_973_7,I should look around first. There might be clues about the password.
+Main_LahaiRoi_3_2_973_8,"<b>7364</b>, there."
+Main_LahaiRoi_3_2_973_9,Keeping the password like this... Good thing Yngvar isn't one of my students.
+Main_LahaiRoi_3_2_974_1,It's a test chamber. They were simulating what would happen if the Solistrees were contaminated by the Void Storm.
+Main_LahaiRoi_3_2_974_2,It... feels wrong.
+Main_LahaiRoi_3_2_975_1,This must be the device capable of generating artificial Void Storms.
+Main_LahaiRoi_3_2_975_2,It's consistent with the designs we found earlier. This looks like the unit that Astrid found before. Some prototype under development.
+Main_LahaiRoi_3_2_975_3,It seems all the devices were produced here.
+Main_LahaiRoi_3_2_984_1,This is a Spacetrek Collective project proposal.
+Main_LahaiRoi_3_2_984_2,"""Evaluation result: Proposal not approved."" And these marks on the devices..."
+Main_LahaiRoi_3_2_984_3,Looks like I'm going to need her help again.
+Main_LahaiRoi_3_2_986_1,We're running out of time. I'll use my Resonance Ability to create a more efficient path.
+Main_LahaiRoi_3_2_986_2,"Please, hold on tight."
+Main_LahaiRoi_3_2_986_3,Huh?
+Main_LahaiRoi_3_2_988_1,"The moment we launch Helios, we'll need the raw observational data from Solisylum. Are you ready?"
+Main_LahaiRoi_3_2_988_2,Yes. The Shaper has already shared all the Heliogyre's data with me. I can access it anytime.
+Main_LahaiRoi_3_2_988_3,Everything's set. Let's complete our mission.
+Main_LahaiRoi_3_2_990_1,"Well, since Mentor is already headed to the Heliogyre, I'd best get started on what I can contribute."
+Main_LahaiRoi_3_2_991_1,"<i>The Rite of Return, the ritual that once sealed the calamity deep underground.</i>"
+Main_LahaiRoi_3_2_991_2,"<i>Just now, the children have offered their strength.</i>"
+Main_LahaiRoi_3_2_991_3,<i>The Heliogyre can once again begin its rotation.</i>
+Main_LahaiRoi_3_2_991_4,Useless fool.
+Main_LahaiRoi_3_2_991_5,I told you to destroy the Heliogyre. Completely.
+Main_LahaiRoi_3_2_991_6,"I'm sorry, but there's a reason for this! Some uninvited guests threw off the whole operation."
+Main_LahaiRoi_3_2_991_7,Save it. I don't want to hear your excuses.
+Main_LahaiRoi_3_2_991_8,"At this point, our entire plan has fallen apart because you screwed up. And to think, I went out of my way to get a pass for you to the New Federation."
+Main_LahaiRoi_3_2_991_9,"No! I'm begging you, don't leave me here! I'll do anything, just tell me what you need!"
+Main_LahaiRoi_3_2_991_10,Ugh. You're lucky the one at the top gave someone as pathetic as you one last chance.
+Main_LahaiRoi_3_2_991_11,"There's the other visitor in Bjartr Woods now, right? Some crippled scientist."
+Main_LahaiRoi_3_2_991_12,Find her. Make sure she... doesn't make it back to the Collective.
+Main_LahaiRoi_3_2_991_13,"Through the Rite of Return, Buddy and the other Soliskin merge with the Solistrees, helping to strengthen the seal on a calamity deep underground.
+Elsewhere, Yngvar receives an order to ensure Mornye never makes it back to the Spacetrek Collective."
+Main_LahaiRoi_3_2_992_1,Aligning the pattern on the star with the Heliogyre makes it glow. It's feeding power into it.
+Main_LahaiRoi_3_2_992_2,If I channel light from all directions... I should be able to restart the Heliogyre.
+Main_LahaiRoi_3_2_993_1,My Tacet Mark... It's resonating with this star-like object.
+Main_LahaiRoi_3_2_993_2,Seems like I'm able to move it.
+Main_LahaiRoi_3_2_994_1,There are only five members of the Heliodic Six here. The one who called for help isn't among them.
+Main_LahaiRoi_3_2_994_2,But he should be somewhere in Solisylum. Where haven't I checked yet?
+Main_LahaiRoi_3_2_996_1,The dim light here—It's like something I saw in those memories.
+Main_LahaiRoi_3_2_996_2,"From this angle, the faint ring in the center is probably the Heliogyre they put to a halt."
+Main_LahaiRoi_3_2_3902_31,"Linked to the Heliogyre, the Shaper foresees a massive disaster approaching Lahai-Roi. He urges you to conserve your strength, promising that he and the Soliskin will handle the immediate danger."
