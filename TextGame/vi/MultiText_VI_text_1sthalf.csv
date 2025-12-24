@@ -808,7 +808,6 @@ Main_LahaiRoi_3_1_499_52,"Ồ, ý hay đấy! Đợi một lát nhé…"
 Main_LahaiRoi_3_1_5_1,(Tần số của tôi…)
 Main_LahaiRoi_3_1_5_2,Chúc bạn thượng lộ bình an.
 Main_LahaiRoi_3_1_50_1,Bạn ở đây!
-Main_LahaiRoi_3_1_50_2,Hai ngày qua của bạn thế nào
 Main_LahaiRoi_3_1_50_3,"Cuộc điều tra Fractsidus vẫn còn kéo dài. Và vì tôi chưa chính thức đăng ký học, nên tôi không có lớp nào cả. Thật chán... Họ còn tịch thu cả xe của tôi nữa. Giáo sư Mornye giao cho tôi một đống bài tập để tôi bận rộn."
 Main_LahaiRoi_3_1_50_4,"Vậy, bạn đang trốn tránh bài tập của mình sao"
 Main_LahaiRoi_3_1_50_5,"Không hẳn đâu. Chỉ là kể từ khi tôi gửi tin tức đó cho bạn, mọi người cứ liên tục chạy đến xin chụp ảnh chung với tôi."
@@ -824,7 +823,6 @@ Main_LahaiRoi_3_1_50_15,"Cảm ơn, tôi cần nó đấy! Mọi thứ phải di
 Main_LahaiRoi_3_1_50_16,Tôi không lo lắng về điểm số.
 Main_LahaiRoi_3_1_50_17,Chỉ là… trường sẽ gửi cho bạn một lá thư nhập học mới. Bạn sẽ phải bắt đầu lại từ đầu với tư cách là học viên năm nhất trong Chương trình Chuẩn bị.
 Main_LahaiRoi_3_1_50_18,Vậy chúng ta giờ học chung lớp rồi à?
-Main_LahaiRoi_3_1_50_19,"Lần này, lá thư nhập học này sẽ thuộc về bạn."
 Main_LahaiRoi_3_1_50_20,"Hmm? Ngẫm lại thì… Cũng không tệ lắm, thật ra."
 Main_LahaiRoi_3_1_50_21,"Thư của tôi… Đúng rồi, bạn nói đúng."
 Main_LahaiRoi_3_1_50_22,Mọi thứ cứ như mơ vậy.
@@ -1001,8 +999,6 @@ Main_LahaiRoi_3_1_21_1,Thời tiết hôm nay thật đẹp.
 Main_LahaiRoi_3_1_21_2,Bạn cảm thấy thế nào Bạn ổn không
 Main_LahaiRoi_3_1_21_3,Không tệ Không quá. Gió mát đấy.
 Main_LahaiRoi_3_1_21_4,Bạn đã cố tình vi phạm giới hạn tốc độ trên suốt quãng đường.
-Main_LahaiRoi_3_1_206_14,"Cô đi theo dấu vết và tìm thấy người liên lạc của Fractsidus đang cầm một thiết bị kỳ lạ trước Máy Phát Hiện Hyvatia. Hắn chế nhạo cô vì do dự giữa ""tội phạm"" và ""người bảo vệ"", tuyên bố sự do dự của cô đã gây ra rắc rối cho hắn. Hắn đe dọa sẽ phơi bày danh tính của cô, buộc cô phải chọn một bên.
-Khi Lynae từ chối, hắn kích hoạt thiết bị, làm hỏng Máy Phát Hiện Hyvatia và trốn thoát."
 Main_LahaiRoi_3_1_21_5,"Ừm, không tệ đâu nhỉ"
 Main_LahaiRoi_3_1_21_6,"Hừ, tôi xem đó là lời khen về kỹ năng lái xe của tôi…"
 Main_LahaiRoi_3_1_21_7,"Nhưng thật lòng mà nói, đã rất lâu rồi kể từ lần cuối tôi đua với ai khác. Được đưa bạn đi như thế này đúng là làm tôi vui cả ngày!"
@@ -1207,7 +1203,6 @@ Main_LahaiRoi_3_1_332_1,Hít thở phào... May mắn quá. Tôi nên báo cáo 
 Main_LahaiRoi_3_1_332_2,Điều này có thường xuyên xảy ra không?
 Main_LahaiRoi_3_1_332_3,"Ừm… Nhưng mà vẫn hơi kỳ lạ đấy. Thông thường, mấy con bot bảo trì sẽ dọn dẹp mọi thứ rất nhanh thôi."
 Main_LahaiRoi_3_1_333_1,Hít thở phào... May mắn quá. Tớ nên báo cáo mớ hỗn độn đó về Học Viện.
-Main_LahaiRoi_3_1_333_2,Chuyện này có thường xuyên xảy ra không?
 Main_LahaiRoi_3_1_334_2,À...
 Main_LahaiRoi_3_1_334_3,Có chuyện gì vậy?
 Main_LahaiRoi_3_1_333_3,"Ừm… Nhưng mà vẫn hơi kỳ lạ đấy. Thông thường, mấy con bot bảo trì sẽ dọn dẹp mọi thứ rất nhanh thôi."
@@ -1291,3 +1286,8 @@ Main_LahaiRoi_3_1_325_10,Cuộc sống Học viện này đúng là một chuy�
 Main_LahaiRoi_3_1_37_32,"Bạn và Lynae hợp tác để ngăn chặn sự điên cuồng của Hyvatia. Khi bạn hỏi cô ấy tại sao lại ở đó, cô ấy do dự khi giải thích.
 Warren xuất hiện và kinh hoàng trước sự tàn phá. Anh ta yêu cầu biết tại sao cô lại ở Viện trong giờ học và nghi ngờ cô có liên quan. Lynae vẫn im lặng, như thể đang che giấu điều gì đó.
 Ngay khi cô ấy chuẩn bị sử dụng Forte để trốn thoát, bạn đã can thiệp Bạn chỉ ra rằng cô ấy đã giúp ngăn chặn một thảm họa và không có động cơ để phá hoại, gọi cáo buộc của Warren là quá sớm Cuối cùng, ông ta ra lệnh cho cả hai bạn trở lại Học viện để điều tra chính thức"
+Main_LahaiRoi_3_1_333_2,Điều này có thường xuyên xảy ra không?
+Main_LahaiRoi_3_1_50_2,Hai ngày qua bạn thế nào
+Main_LahaiRoi_3_1_50_19,"Lần này, thư nhập học sẽ là của bạn."
+Main_LahaiRoi_3_1_206_14,"Lynae đi theo dấu vết và tìm thấy người liên lạc của Fractsidus đang cầm một thiết bị kỳ lạ trước Máy Phát Hiện Hyvatia. Hắn chế giễu cô vì do dự giữa ""tội phạm"" và ""người bảo vệ"", tuyên bố sự lưỡng lự của cô đã gây ra rắc rối cho hắn. Hắn đe dọa sẽ phơi bày danh tính của cô, buộc cô phải chọn một bên.
+Khi Lynae từ chối, hắn kích hoạt thiết bị, làm hỏng Máy Phát Hiện Hyvatia và trốn thoát."
