@@ -18,7 +18,7 @@ Giải thích 2 file version.dll,wuwaVietHoa.dll
 <br>
 version.dll có tác dụng để load wuwaVietHoa.dll vào game.
 <br>
-wuwaVietHoa.dll có tác dụng bỏ qua kiểm tra file của game (cần thiết. nếu không có chơi 15p sẽ bị văng game).
+wuwaVietHoa.dll có tác dụng bỏ qua kiểm tra Chữ ký file Pak của game (cần thiết. nếu không có chơi 15p sẽ bị văng game).
 <br>
 <br>
 
