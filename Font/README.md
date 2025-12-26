@@ -1,8 +1,22 @@
-#Chọn 1 trong số Font này. Tải và copy vào thư mục "~mods".
+# Chọn 1 trong số Font này. Tải và copy vào thư mục "~mods".
+
+bản Launcher :
+```console
+\Wuthering Waves Game\Client\Content\Paks\~mods
+```
+bản Steam :
+```console
+\Wuthering Waves\Client\Content\Paks\~mods
+```
 
 ## Nếu muốn font nào đó khác thì vui lòng tạo issues Gửi file font CÓ "việt hóa". Định dạng ".ttf & .otf".
 
 # DEMO
+
+<br>
+Font GenshinFont
+
+![GenshinFont_100_P](Hinh/GenshinFont_100_P.jpg)
 
 <br>
 Font FixedsysExcelsior
