@@ -1,1024 +1,652 @@
 Id,Content
-Main_LahaiRoi_3_2_708_1,Mình có đang nhìn nhầm không? Cái đó... là Bão Hư Không sao? Nhưng Solisylum không hề báo động!
+Main_LahaiRoi_3_2_708_2,Phải chăng những dự đoán của Solisylum về Bão Hư Không là sai...
+Main_LahaiRoi_3_2_708_1,Tôi có đang nhìn thấy mọi thứ không? Đó có phải là... một cơn bão Hư Không không? Nhưng Solisylum không phát ra âm thanh báo động!
+Main_LahaiRoi_3_2_708_3,Không thể nào! Những dự đoán của Heliodic Six chưa từng sai bao giờ! Chúng ta chắc chắn đã bỏ lỡ lời cảnh báo!
+Main_LahaiRoi_3_2_708_4,"Chờ đã, tôi nhớ ra rồi! Astrid vừa trở về từ Bjartr Woods! Là một Shepherdess, cô ấy phải biết nhiều hơn. Chúng ta sẽ đi hỏi cô ấy!"
+Main_LahaiRoi_3_2_708_5,Đúng. Hãy hy vọng cô ấy chỉ quên nói với những người còn lại trong chúng ta...
 Main_LahaiRoi_3_2_709_1,Bạn ổn chứ?!
-Main_LahaiRoi_3_2_708_5,Vâng. Hy vọng cô ấy chỉ đơn giản là quên nói cho chúng tôi thôi…
-Main_LahaiRoi_3_2_708_2,Liệu những dự đoán về Bão Vô Cực của Solisylum có thể sai không…
-Main_LahaiRoi_3_2_708_4,"Khoan đã, tôi nhớ ra rồi! Astrid vừa trở về từ Rừng Bjartr! Với tư cách là một Người Chăn Dắt, cô ấy chắc hẳn biết nhiều hơn. Chúng ta đi hỏi cô ấy!"
-Main_LahaiRoi_3_2_709_2,Không có gì đâu. Nó chỉ là một khoảnh khắc trong Bão Vô Cực. Một vài bộ phận của Exoswarm mà tôi mang theo… nó có tác dụng bảo vệ.
+Main_LahaiRoi_3_2_709_2,Không có gì đâu. Đó chỉ là một khoảnh khắc trong Cơn Bão Hư Không. Một số thành phần của Exoswarm mà tôi mang theo... đó là một sự bảo vệ nào đó.
+Main_LahaiRoi_3_2_709_3,Nhìn thấy chưa? Vẫn là máu thịt. Tôi chưa phai nhạt vào một tần số...
+Main_LahaiRoi_3_2_709_4,Thật đáng sợ khi một cơn bão Hư Không tấn công bất ngờ như vậy...
+Main_LahaiRoi_3_2_709_5,"Tôi nhớ, những người chữa bệnh ở Học viện Startorch có thể kiểm tra bệnh tần số! Nó không xa lắm. Chúng ta nên đến đó ngay bây giờ!"
 Main_LahaiRoi_3_2_1_2,Tôi chấp nhận.
-Main_LahaiRoi_3_2_709_3,Nhìn này Vẫn là máu thịt thôi mà Ta không biến thành một tần số đâu
-Main_LahaiRoi_3_2_709_4,Quả thật đáng sợ khi một Bão Hư Không ập đến đột ngột như vậy
-Main_LahaiRoi_3_2_709_5,"Tôi nhớ, các nhà chữa bệnh tại Học viện Startorch có thể kiểm tra bệnh tần số! Không xa đâu. Chúng ta nên đến đó ngay bây giờ!"
-Main_LahaiRoi_3_2_1_3,Được thôi Bạn ở đâu
-Main_LahaiRoi_3_2_1_4,Cảm ơn bạn. Chúng ta sẽ gặp nhau tại ký túc xá Học viện vào chín giờ sáng mai. Tôi sẽ đến đúng giờ.
-Main_LahaiRoi_3_2_1_5,"Ngoài ra, tôi muốn hỏi về một điều không liên quan đến công việc."
-Main_LahaiRoi_3_2_1_6,"Trong cuộc tấn công của Voidworm vào Học viện Startorch, bạn có bị thương không? Nếu bạn gặp lại bất kỳ vấn đề về tần số nào, chúng tôi có thể giúp bạn. Tôi sẽ tự mình xử lý trường hợp của bạn."
-Main_LahaiRoi_3_2_1_7,"Tôi ổn. Tần suất mất kết nối đã dừng lại rồi, nhưng tôi cảm ơn bạn đã quan tâm."
-Main_LahaiRoi_3_2_1_8,Có một điều đó… Nó hơi kỳ lạ đấy
-Main_LahaiRoi_3_2_1_9,Bạn có thể mang một ít đồ ăn Spacetrek ngon đến buổi họp được không
-Main_LahaiRoi_3_2_1_11,...Được chứ?
-Main_LahaiRoi_3_2_1_1,"Chào bạn, tôi là Mornye đến từ Collective Spacetrek.
-Xin lỗi vì đã làm phiền bạn, nhưng tôi cần một báo cáo rõ ràng về những gì đã xảy ra trong quá trình lỗi của Máy Phát Hiện Hyvatia, để tôi có thể xây dựng kế hoạch sửa chữa. Vì bạn và Lynae là những người chứng kiến duy nhất tại hiện trường, tôi muốn gặp cả hai người vào ngày mai.
-Nếu bạn sẵn lòng, hãy trả lời bằng ""Tôi đồng ý."""
-Main_LahaiRoi_3_2_1_16,Tôi chấp nhận.
-Main_LahaiRoi_3_2_1_12,"Xin lỗi, đó là ý tưởng của Abby."
-Main_LahaiRoi_3_2_1_17,Được thôi Bạn ở đâu
-Main_LahaiRoi_3_2_1_13,"Nếu nó không phù hợp cho một cuộc họp làm việc, bạn đừng lo về nó."
-Main_LahaiRoi_3_2_1_14,"Không, không sao đâu bạn."
+Main_LahaiRoi_3_2_1_4,Cảm ơn. Chúng ta sẽ gặp nhau tại ký túc xá Học viện lúc 9 giờ sáng ngày mai. Tôi sẽ đến đó đúng giờ.
+Main_LahaiRoi_3_2_1_3,Chắc chắn. Ở đâu?
+Main_LahaiRoi_3_2_1_1,"Xin chào, tôi là Mornye đến từ Spacetrek Collective.
+Xin lỗi đã làm phiền bạn, nhưng tôi cần một báo cáo rõ ràng về những gì đã xảy ra trong sự cố của Hyvatia Detector, để tôi có thể đưa ra kế hoạch sửa chữa. Vì bạn và Lynae là nhân chứng duy nhất tại hiện trường nên tôi muốn gặp cả hai bạn vào ngày mai.
+Nếu bạn sẵn lòng, vui lòng trả lời bằng ""Tôi chấp nhận."""
+Main_LahaiRoi_3_2_1_6,"Trong cuộc tấn công của Voidworm vào Học viện Startorch, bạn có bị thương không? Nếu bạn gặp lại bất kỳ vấn đề tần số nào, chúng tôi có thể trợ giúp. Tôi sẽ tự mình giải quyết trường hợp của bạn."
+Main_LahaiRoi_3_2_1_7,"Tôi ổn. Việc mất tần số đã dừng lại cho đến lúc này, nhưng tôi đánh giá cao việc bạn quan tâm."
+Main_LahaiRoi_3_2_1_5,"Ngoài ra, tôi muốn hỏi một số chuyện không liên quan đến công việc."
+Main_LahaiRoi_3_2_1_9,Có thể mang theo một số đồ ăn nhẹ Spacetrek ngon miệng đến cuộc họp không?
+Main_LahaiRoi_3_2_1_8,"Có một điều... Tuy nhiên, nó hơi lạ một chút..."
+Main_LahaiRoi_3_2_1_12,Rất tiếc. Đó là ý tưởng của Abby.
+Main_LahaiRoi_3_2_1_11,...O...kay?
+Main_LahaiRoi_3_2_1_13,"Nếu nó không phù hợp cho một cuộc họp công việc, đừng lo lắng về điều đó."
 Main_LahaiRoi_3_2_1_15,Tôi sẽ ghi lại điều đó.
+Main_LahaiRoi_3_2_1_14,"...Không, không sao đâu."
 Main_LahaiRoi_3_2_1_18,Tôi không bị thương.
-Main_LahaiRoi_3_2_10_1,"Chào, bạn là Astrid, mẹ của Maja đúng không"
-Main_LahaiRoi_3_2_10_2,"Hm? Chào hỏi. Vâng, tôi là. Còn hai bạn là ai?"
-Main_LahaiRoi_3_2_10_3,"Đây là Giáo sư Mornye, thầy giáo của Maja."
-Main_LahaiRoi_3_2_10_5,Chúng tôi đến thăm nhà bạn.
-Main_LahaiRoi_3_2_10_6,Viếng thăm nhà sao...? Cô bé có vi phạm quy tắc trường nào không?
-Main_LahaiRoi_3_2_10_7,Vâng. Cô ấy đã nghiêm trọng vi phạm quy trình thí nghiệm.
-Main_LahaiRoi_3_2_10_8,Cô ấy tạo ra một robot gây ra thiệt hại đáng kể cho Học viện.
-Main_LahaiRoi_3_2_10_9,Cái gì?! B-Bà ấy làm sao có thể…
-Main_LahaiRoi_3_2_10_10,"Tôi thực sự rất xin lỗi! Tôi đáng lẽ phải dạy dỗ cô ấy tốt hơn. Dù cô ấy đã làm gì, tôi xin lỗi Học viện thay cho cô ấy."
-Main_LahaiRoi_3_2_10_11,"Trừng phạt có nghiêm trọng không? Nếu cần bồi thường, tôi sẽ tự trả."
-Main_LahaiRoi_3_2_10_12,Không cần bồi thường
-Main_LahaiRoi_3_2_10_13,Nhưng chúng tôi cần sự hợp tác của bạn trong việc xử lý vụ việc này.
-Main_LahaiRoi_3_2_10_14,"Giáo sư Mornye, bạn có thể giải thích làm thế nào mà robot của Maja gây ra thiệt hại được không"
-Main_LahaiRoi_3_2_10_15,"V-vâng, như người thầy của tôi vừa giải thích…"
-Main_LahaiRoi_3_2_10_16,"Cô ấy… đã không tuân thủ đúng quy trình. Cô ấy sử dụng vật liệu Exoswarm không ổn định trong thiết kế của mình, điều này dẫn đến việc robot hành động khó đoán."
-Main_LahaiRoi_3_2_10_17,Tôi đã nói với cô ấy về những nguy hiểm khi sử dụng vật liệu dễ bị ảnh hưởng bởi Voidmatter trong quá trình nghiên cứu thực địa.
-Main_LahaiRoi_3_2_10_18,Vô ảnh?
-Main_LahaiRoi_3_2_10_19,"Cái gì... bạn đang hỏi chính xác là gì vậy? Tôi xin lỗi, tôi chưa từng học tại Học viện Startorch của bạn. Tôi không quen với các thuật ngữ của bạn."
-Main_LahaiRoi_3_2_10_20,(Biểu cảm của cô vừa thay đổi. Cô đang giấu điều gì đó. Có lẽ áp lực lớn hơn.)
-Main_LahaiRoi_3_2_10_21,"Chúng ta cần hiểu rõ phạm vi trục trặc của robot. Chúng ta hiểu rằng sáng nay, chính bạn đã giúp Maja kích hoạt robot và bật chế độ tự động chạy."
-Main_LahaiRoi_3_2_10_22,Vâng. Chính xác như lời thầy giáo của tôi đã nói.
-Main_LahaiRoi_3_2_10_23,"Xin hãy dẫn chúng tôi đến hiện trường vụ việc. Khi đến đó, tôi sẽ tái hiện lại hành động của robot từ các bằng chứng còn sót lại."
-Main_LahaiRoi_3_2_10_25,"Không được. Chúng ta không thể. Nếu lộ đường đi của robot, nó sẽ phơi bày thứ đó—"
-Main_LahaiRoi_3_2_10_26,Cái thứ đó?
-Main_LahaiRoi_3_2_10_27,Bạn đang giấu gì vậy
-Main_LahaiRoi_3_2_10_28,"Tôi thực sự rất xin lỗi! Vâng, tôi đã giúp Maja kích hoạt robot, nhưng tôi… không thể nhớ chính xác vị trí. Lütfen, bạn phải quay lại—"
-Main_LahaiRoi_3_2_10_30,Đó là Bão Hư Không. Sao có thể? Tập thể chưa nhận được cảnh báo gần đây nào.
-Main_LahaiRoi_3_2_10_31,Chúng ta cần đảm bảo an toàn cho những người ở đây trước.
-Main_LahaiRoi_3_2_10_32,Câu hỏi có thể chờ đợi được. Đi thôi.
-Main_LahaiRoi_3_2_10_33,"Bạn và Mornye giả làm giáo sư Học viện khi gặp Astrid, nhanh chóng nhận ra rằng cô ấy đang che giấu điều gì đó. Ngay lúc đó, một Bão Hư Không bùng phát."
-Main_LahaiRoi_3_2_101_1,Ánh sáng vừa rồi… Mornye chắc hẳn đã tiến vào Ổ Động Phản Ứng.
-Main_LahaiRoi_3_2_101_2,"{PlayerName}, Tập thể Spacetrek đã kết nối với phương tiện của bạn và sẽ hỗ trợ bạn!"
-Main_LahaiRoi_3_2_101_3,Chúng tôi không thể liên lạc với Giáo sư Mornye. Bạn là niềm hy vọng duy nhất của chúng tôi lúc này!
-Main_LahaiRoi_3_2_101_4,"Để tôi lo, tôi sẽ tìm thấy cô ấy!"
-Main_LahaiRoi_3_2_12_1,Cẩn thận nhé. Bầy Exoswarm ở đây đã bị nhiễm độc.
-Main_LahaiRoi_3_2_13_1,Ở đây này. Có vẻ như là một thiết bị kỳ lạ.
-Main_LahaiRoi_3_2_13_3,Một thiết bị sao? Để tôi lo phần cơ khí. Bình tĩnh nào.
-Main_LahaiRoi_3_2_14_1,Có vẻ là nó đây.
-Main_LahaiRoi_3_2_14_2,"Với việc đóng cửa này, Bão Void đã biến mất."
-Main_LahaiRoi_3_2_14_4,"Ơ? Không, tôi–tôi chỉ đọc rất nhiều về điều này thôi mà…"
-Main_LahaiRoi_3_2_14_5,"Dựa vào cấu trúc của nó, có vẻ như đây là một bình chứa có thể vừa lưu trữ vừa phát ra năng lượng."
-Main_LahaiRoi_3_2_14_6,"Ôi, bốc mùi quá!"
-Main_LahaiRoi_3_2_14_7,Nó đúng mùi con sâu khổng lồ mà bạn đã đánh! Chúng ta đã xử lý nó chưa vậy?!
-Main_LahaiRoi_3_2_14_8,Cái sâu khổng lồ... Ý bạn là <te href=700004>Đại Thực Tinh.</te>?
-Main_LahaiRoi_3_2_14_9,"Tôi hiểu rồi. Nó đang thu thập tần số với độ chính xác cao, lưu trữ dữ liệu năng lượng."
-Main_LahaiRoi_3_2_14_10,"Nó dựa trên các mô hình sinh thái, theo dõi hoạt động trong môi trường tự nhiên và tái tạo dữ liệu đó một cách toán học."
-Main_LahaiRoi_3_2_14_11,"Bộ điều chỉnh trường, chiếu hình tham số..."
-Main_LahaiRoi_3_2_14_14,"Ôi, xin lỗi."
-Main_LahaiRoi_3_2_14_19,Chuuu…
-Main_LahaiRoi_3_2_14_15,Bạn có thể thử một phiên bản mà tôi có thể hiểu được không
-Main_LahaiRoi_3_2_14_16,Giải thích để Abby hiểu nhé.
-Main_LahaiRoi_3_2_14_17,"Được thôi. Nói một cách đơn giản, thiết bị này đã trích xuất tần số của Voidworm và sử dụng chính nó làm tâm điểm để lan truyền Voidmatter. Cơn bão vừa rồi là do tạo ra một cách nhân tạo."
+Main_LahaiRoi_3_2_1_16,Tôi chấp nhận.
+Main_LahaiRoi_3_2_1_17,Chắc chắn. Ở đâu?
+Main_LahaiRoi_3_2_10_1,"Xin chào, bạn có phải là Astrid, mẹ của Maja không?"
+Main_LahaiRoi_3_2_10_2,"Hửm? Xin chào. Vâng, đúng vậy. Và hai bạn là ai?"
+Main_LahaiRoi_3_2_10_3,"Đây là Giáo sư Mornye, giáo viên của Maja."
+Main_LahaiRoi_3_2_10_5,Chúng tôi đến thăm nhà.
+Main_LahaiRoi_3_2_10_6,Về thăm nhà...? Cô gái đó có vi phạm nội quy nào của trường không?
+Main_LahaiRoi_3_2_10_4,"Vâng, và đây là {PlayerName}, một giáo sư cao cấp tại Học viện."
+Main_LahaiRoi_3_2_10_8,Cô đã tạo ra một con robot gây thiệt hại đáng kể cho Học viện.
+Main_LahaiRoi_3_2_10_7,Đúng. Cô ấy đã vi phạm nghiêm trọng quy trình thí nghiệm.
+Main_LahaiRoi_3_2_10_11,"Hình phạt có nặng không? Nếu cần bồi thường, tôi sẽ tự mình trả—"
+Main_LahaiRoi_3_2_10_10,"Tôi thực sự xin lỗi! Lẽ ra tôi nên dạy cô ấy tốt hơn. Dù cô ấy đã làm gì, tôi thay mặt cô ấy gửi lời xin lỗi đến Học viện."
+Main_LahaiRoi_3_2_10_13,Nhưng chúng tôi cần sự hợp tác của bạn trong việc xử lý trường hợp này.
+Main_LahaiRoi_3_2_10_12,Không cần phải bồi thường.
+Main_LahaiRoi_3_2_10_15,"Vâng, như người thầy của tôi vừa giải thích..."
+Main_LahaiRoi_3_2_10_14,"Giáo sư Mornye, ông có thể giải thích tại sao robot của Maja lại gây ra thiệt hại như vậy không?"
+Main_LahaiRoi_3_2_10_16,"Cô ấy... đã không tuân theo đúng quy trình. Cô ấy đã sử dụng vật liệu Exoswarm không ổn định trong thiết kế của mình, điều này khiến robot hoạt động không thể đoán trước."
+Main_LahaiRoi_3_2_10_17,Tôi đã nói chuyện với cô ấy về những nguy hiểm khi sử dụng các vật liệu nhạy cảm với Voidmatter trong quá trình nghiên cứu thực địa.
+Main_LahaiRoi_3_2_10_18,Vật chất hư không?
+Main_LahaiRoi_3_2_10_19,"Chính xác thì bạn đang hỏi gì? Tôi xin lỗi, tôi chưa học ở Học viện Startorch của bạn. Tôi không quen với các điều khoản của bạn."
+Main_LahaiRoi_3_2_10_20,(Thái độ của cô ấy vừa thay đổi. Cô ấy đang che giấu điều gì đó. Có lẽ áp lực nhiều hơn.)
+Main_LahaiRoi_3_2_10_21,"Chúng ta cần hiểu toàn bộ lỗi trục trặc của robot. Chúng tôi hiểu rằng sáng nay, chính bạn là người đã giúp Maja kích hoạt robot và kích hoạt tính năng tự động chạy."
+Main_LahaiRoi_3_2_10_23,"Xin vui lòng dẫn chúng tôi đến địa điểm xảy ra vụ việc. Khi chúng ta tới đó, tôi sẽ tái tạo lại hành động của robot từ dấu vết."
+Main_LahaiRoi_3_2_10_22,Đúng. Chính xác như lời cố vấn của tôi đã nói.
+Main_LahaiRoi_3_2_10_26,"""Đồ đó""?"
+Main_LahaiRoi_3_2_10_25,"N-No. Chúng tôi không thể. Nếu đường đi của robot bị dò ra, nó sẽ làm lộ ra thứ đó—"
+Main_LahaiRoi_3_2_10_27,Bạn đang che giấu điều gì?
+Main_LahaiRoi_3_2_10_28,"Tôi thực sự xin lỗi! Vâng, tôi đã giúp Maja kích hoạt robot, nhưng tôi... tôi không thể nhớ chính xác vị trí. Làm ơn, bạn phải quay lại—"
+Main_LahaiRoi_3_2_10_31,Chúng ta cần phải đảm bảo sự an toàn của những người ở đây trước tiên.
+Main_LahaiRoi_3_2_10_30,Đó là Bão Hư Không. Làm thế nào điều này có thể được? The Collective chưa nhận được bất kỳ cảnh báo nào gần đây.
+Main_LahaiRoi_3_2_10_9,Cái gì cơ?! C-Cô ấy sao có thể…
+Main_LahaiRoi_3_2_101_1,Ánh sáng vừa rồi... Mornye chắc chắn đã vào Reactor Drive.
+Main_LahaiRoi_3_2_10_32,Câu hỏi có thể chờ đợi. Đi thôi.
+Main_LahaiRoi_3_2_10_33,"Bạn và Mornye đóng vai các giáo sư của Học viện khi gặp Astrid, nhanh chóng phát hiện ra rằng cô ấy dường như đang che giấu điều gì đó. Vào lúc đó, một cơn bão Void nổ ra."
+Main_LahaiRoi_3_2_101_3,Chúng ta không thể liên lạc được với Giáo sư Mornye. Bạn là niềm hy vọng duy nhất của chúng tôi!
+Main_LahaiRoi_3_2_101_2,"{PlayerName}, Spacetrek Collective đã kết nối với xe của bạn và sẽ cung cấp hỗ trợ!"
+Main_LahaiRoi_3_2_13_1,Xuống đây. Đó là một loại thiết bị kỳ lạ.
+Main_LahaiRoi_3_2_101_4,Để đó cho tôi. Tôi sẽ tìm cô ấy!
+Main_LahaiRoi_3_2_12_1,Hãy cẩn thận. Exoswarm ở đây đã bị ô nhiễm.
+Main_LahaiRoi_3_2_14_1,Có vẻ như nó là cái này.
+Main_LahaiRoi_3_2_13_3,Một thiết bị? Hãy để công việc cơ khí cho tôi. Bây giờ ổn định rồi.
+Main_LahaiRoi_3_2_14_2,"Khi việc này bị tắt, Bão Void sẽ biến mất."
+Main_LahaiRoi_3_2_14_4,"Ơ? Không, tớ-tớ vừa đọc rất nhiều về điều này..."
+Main_LahaiRoi_3_2_14_3,Đó có phải là một trong những Khả năng Cộng hưởng của bạn không?
+Main_LahaiRoi_3_2_14_5,"Từ cấu trúc của nó, nó trông giống như một chiếc hộp có thể vừa lưu trữ vừa phát ra năng lượng."
+Main_LahaiRoi_3_2_14_6,"Ặc, hôi quá!"
+Main_LahaiRoi_3_2_14_7,Nó có mùi giống như con sâu khổng lồ mà bạn đã chiến đấu! Chẳng phải chúng ta đã giải quyết nó rồi sao?!
+Main_LahaiRoi_3_2_14_9,"Tôi hiểu rồi. Nó đang thu nhận tần số với độ chính xác cao, lưu trữ dữ liệu năng lượng."
+Main_LahaiRoi_3_2_14_8,Con sâu khổng lồ... Bạn có ý là <te href=700004>Sâu hầm</te>?
+Main_LahaiRoi_3_2_14_10,"Nó dựa trên các mô hình sinh thái, theo dõi hoạt động trong môi trường tự nhiên và tái tạo dữ liệu đó về mặt toán học."
+Main_LahaiRoi_3_2_14_11,"Bộ điều biến trường, phép chiếu tham số..."
+Main_LahaiRoi_3_2_14_14,"Ồ, xin lỗi."
+Main_LahaiRoi_3_2_14_15,Bạn có thể thử một phiên bản mà tôi có thể hiểu được không?
+Main_LahaiRoi_3_2_14_16,Hãy giải thích để Abby hiểu.
+Main_LahaiRoi_3_2_14_17,"Đúng. Nói một cách đơn giản, thiết bị này trích xuất tần số của Voidworm và sử dụng chính nó làm tâm chấn để phát tán Voidmatter. Cơn bão vừa rồi được tạo ra một cách nhân tạo."
+Main_LahaiRoi_3_2_14_18,Tàu thăm dò của Maja bị nhiễm bẩn vì có thể họ đã vô tình tiếp xúc với nó.
+Main_LahaiRoi_3_2_14_19,Chuuu...
+Main_LahaiRoi_3_2_14_20,Ơ? Các bạn vừa nghe thấy gì đó phải không?
 Main_LahaiRoi_3_2_14_23,???
-Main_LahaiRoi_3_2_14_18,Thiết bị thăm dò của Maja bị nhiễm bẩn vì có khả năng bạn đã vô tình chạm vào nó.
-Main_LahaiRoi_3_2_1401_1,Chuuu…
-Main_LahaiRoi_3_2_14_20,Ơ? Các bạn vừa nghe thấy gì à?
-Main_LahaiRoi_3_2_14_21,Chuuuu… Chuuuu…
-Main_LahaiRoi_3_2_14_22,Nó đang đến từ dưới đống vật liệu Exoswarm kia. Đi xem thử thôi.
-Main_LahaiRoi_3_2_15_1,Chuuu…
-Main_LahaiRoi_3_2_14_24,Bạn và Mornye tìm thấy nguyên nhân của Bão Vô Ảnh: một thiết bị chứa tần số Giun Vô Ảnh bị phong ấn.
-Main_LahaiRoi_3_2_15_4,Đây là <te href=700026>Soliskin</te>.
-Main_LahaiRoi_3_2_15_7,"Đúng vậy, những sinh vật đặc biệt này thường quanh vùng bộ tộc Roya."
-Main_LahaiRoi_3_2_15_6,Tôi đã từng thấy thứ này rồi.
-Main_LahaiRoi_3_2_15_5,Đây là hình dạng của chúng.
-Main_LahaiRoi_3_2_15_12,Chuuu…
-Main_LahaiRoi_3_2_15_8,Bạn đã thấy một cái rồi sao Vậy bạn đã khám phá một chút rồi đúng không
-Main_LahaiRoi_3_2_15_9,Hồ sơ của Royan ghi lại rằng Soliskin lần đầu tiên xuất hiện ở Lahai-Roi vào ngày Exostrider rơi từ trên trời xuống.
-Main_LahaiRoi_3_2_15_10,"Người ta tin rằng chúng là những mảnh vỡ ý thức của Exostrider. Những Người Chăn Dắt bảo vệ chúng, che chắn chúng khỏi sự ô nhiễm của Bão Void cho đến khi chúng trưởng thành và trở về với Cây Solistrees trong Rừng Bjartr."
-Main_LahaiRoi_3_2_15_11,Cái này chắc hẳn đã ẩn mình dưới đống đổ nát của Exoswarm khi Bão Void bùng phát
-Main_LahaiRoi_3_2_15_13,(Cái cảm giác này… giống như những gì đã xảy ra tại Học Viện vậy.)
-Main_LahaiRoi_3_2_15_14,Tôi vừa xem ký ức của một Soliskin.
-Main_LahaiRoi_3_2_15_15,Người phụ nữ Royan đó đã cài thiết bị ở đây và kích hoạt Bão Hư Không. Sinh vật Soliskin này là người duy nhất còn sống.
-Main_LahaiRoi_3_2_15_16,Vậy thì những nghi ngờ của chúng ta về Astrid đã được xác nhận. Chúng ta có nên quay lại trại và nói chuyện với bạn không?
-Main_LahaiRoi_3_2_15_17,Không cần thiết đâu. Tôi đã nghe tất cả rồi.
-Main_LahaiRoi_3_2_15_18,Tôi đã đặt thiết bị này ở đây rồi.
-Main_LahaiRoi_3_2_15_19,Hãy kể cho chúng tôi những gì đã xảy ra.
-Main_LahaiRoi_3_2_15_21,"Anh ta trông có vẻ mệt mỏi, như vừa mới xong việc nói chuyện với ai đó. Khi anh ta thấy tôi, anh ta trông có vẻ sốc và rời đi nhanh chóng."
-Main_LahaiRoi_3_2_15_22,Tôi thấy thiết bị rơi khỏi tay áo của anh ta.
-Main_LahaiRoi_3_2_15_23,Tại sao bạn lại cầm nó?
-Main_LahaiRoi_3_2_15_24,Tôi không nghĩ nhiều về chuyện đó. Tôi định trả lại cho anh lần sau chúng ta gặp mặt.
-Main_LahaiRoi_3_2_15_20,"Vài ngày trước, tôi đang dẫn dắt những người Soliskin trưởng thành đến <te href=700021>Rừng Bjartr</te> Khi tôi gặp Foreseer Yngvar."
-Main_LahaiRoi_3_2_15_25,Nhưng… da Soliskin không thích điều đó. Nó có một nguồn năng lượng… bất thường.
+Main_LahaiRoi_3_2_14_21,Chuuu… Chuuuu…
+Main_LahaiRoi_3_2_1401_1,Chuuu...
+Main_LahaiRoi_3_2_15_1,Chuuu...
+Main_LahaiRoi_3_2_14_22,Nó phát ra từ dưới đống vật liệu Exoswarm đó. Hãy đi xem thử.
+Main_LahaiRoi_3_2_14_24,Bạn và Mornye xác định nguyên nhân gây ra Bão Void: một thiết bị chứa tần số Voidworm bị phong ấn.
+Main_LahaiRoi_3_2_15_5,Vậy ra chúng trông như thế này.
+Main_LahaiRoi_3_2_15_6,Tôi đã từng thấy một trong những thứ này trước đây.
+Main_LahaiRoi_3_2_15_4,Đó là một <te href=700026>Soliskin</te>.
+Main_LahaiRoi_3_2_15_7,"Đúng vậy, những sinh vật đặc biệt này thường quanh quẩn gần bộ tộc Roya"
+Main_LahaiRoi_3_2_15_8,Bạn đã nhìn thấy một? Vậy là bạn đã thực hiện xong một số khám phá rồi.
+Main_LahaiRoi_3_2_15_9,Hồ sơ của Royan ghi rằng Soliskin xuất hiện lần đầu ở Lahai-Roi vào ngày Exostrider từ trên trời rơi xuống.
+Main_LahaiRoi_3_2_15_12,Chuuu...
+Main_LahaiRoi_3_2_15_10,"Chúng được cho là những mảnh ý thức của Exostrider. Các Shepard bảo vệ chúng, che chắn chúng khỏi sự ô nhiễm của Bão Hư Không cho đến khi chúng trưởng thành và quay trở lại Solitrees ở Rừng Bjartr."
+Main_LahaiRoi_3_2_15_11,Người này chắc hẳn đã ẩn náu dưới đống đổ nát của Exoswarm khi Bão Hư Không nổ ra.
+Main_LahaiRoi_3_2_15_13,(Chuyện này... giống như chuyện đã xảy ra ở Academy vậy.)
+Main_LahaiRoi_3_2_15_14,Tôi vừa nhìn thấy ký ức của Soliskin.
+Main_LahaiRoi_3_2_15_15,Người phụ nữ Royan đó đã đặt thiết bị ở đây và kích hoạt Bão Hư Không. Soliskin này là người sống sót duy nhất.
+Main_LahaiRoi_3_2_15_16,"Vì vậy, những nghi ngờ của chúng tôi về Astrid đã được xác nhận. Chúng ta có nên quay lại trại và nói chuyện với cô ấy không?"
+Main_LahaiRoi_3_2_15_17,Không cần. Tôi đã nghe thấy mọi thứ.
+Main_LahaiRoi_3_2_15_18,Tôi đã đặt thiết bị này ở đây.
+Main_LahaiRoi_3_2_15_21,"Anh ấy trông mệt mỏi, như thể vừa mới nói chuyện xong với ai đó. Khi nhìn thấy tôi, anh ấy trông sốc và nhanh chóng rời đi."
+Main_LahaiRoi_3_2_15_19,Hãy cho chúng tôi biết chuyện gì đã xảy ra.
+Main_LahaiRoi_3_2_15_20,"Một vài ngày trước, tôi đang chăn dắt Soliskin trưởng thành <te href=700021>Rừng Bjartr</te> khi tôi gặp Foreseer Yngvar."
+Main_LahaiRoi_3_2_15_23,Tại sao bạn lấy nó?
+Main_LahaiRoi_3_2_15_22,Tôi nhìn thấy thiết bị rơi khỏi tay áo anh ấy.
+Main_LahaiRoi_3_2_15_24,Tôi không nghĩ nhiều về nó. Tôi dự định sẽ trả lại cho anh ấy vào lần gặp mặt tiếp theo.
+Main_LahaiRoi_3_2_15_25,Nhưng... Soliskin không thích nó. Nó có một... năng lượng không tự nhiên.
 Main_LahaiRoi_3_2_15_26,"Tôi không muốn giữ nó ở trại, nhưng tôi cũng không muốn Yngvar biết tôi đã lấy nó."
+Main_LahaiRoi_3_2_15_28,"Bạn và Mornye lần theo nguồn âm thanh để tìm Soliskin. Đọc ký ức của nó, bạn thấy Astrid đang chôn thiết bị đã kích hoạt Bão Void. Khi đối mặt, Astrid giải thích rằng thiết bị này đến từ Foreseer Yngvar."
+Main_LahaiRoi_3_2_19_1,Hai bạn. Xin hãy dừng lại.
+Main_LahaiRoi_3_2_15_27,Thế là tôi chôn nó ở đây. Phần còn lại thì bạn đã biết rồi.
 Main_LahaiRoi_3_2_19_3,Chuuu!
-Main_LahaiRoi_3_2_15_27,"Tôi chôn nó ở đây rồi. Phần còn lại, bạn đã biết."
-Main_LahaiRoi_3_2_15_28,"Bạn và Mornye lần theo nguồn âm thanh để tìm một Soliskin. Đọc ký ức của nó, bạn thấy Astrid chôn cất thiết bị đã kích hoạt Bão Void. Khi đối mặt, Astrid giải thích rằng thiết bị đó đến từ Foreseer Yngvar."
-Main_LahaiRoi_3_2_19_1,Hai người kia. Đứng lại.
-Main_LahaiRoi_3_2_19_2,"Qua trang phục của bạn, tôi thấy bạn không phải là người của chúng tôi. Điều gì đưa bạn đến Haldarheim"
-Main_LahaiRoi_3_2_19_4,Ồ? Một người Soliskin…
-Main_LahaiRoi_3_2_19_5,Chúng tôi đang dẫn nó về nhà.
+Main_LahaiRoi_3_2_19_2,"Từ quần áo của bạn, tôi thấy bạn không phải là người của tôi. Điều gì đưa bạn đến Haldarheim?"
+Main_LahaiRoi_3_2_19_4,Ồ? Một Soliskin...
+Main_LahaiRoi_3_2_19_5,Chúng tôi đang chăn nó về nhà.
 Main_LahaiRoi_3_2_19_6,Chuuu! Chuuu!
-Main_LahaiRoi_3_2_19_7,Ha ha. Thật thú vị đấy… Soliskin chỉ tin tưởng những người mà chúng cảm thấy an toàn. Bạn đã có được sự tin tưởng đó. Cảm ơn bạn vì đã dẫn nó trở lại.
+Main_LahaiRoi_3_2_19_7,Hừ. Thật thú vị... Soliskin chỉ tin tưởng những người mà họ cảm thấy an toàn. Đó là sự tin tưởng mà bạn đã kiếm được. Cảm ơn tôi đã hướng dẫn nó trở lại.
+Main_LahaiRoi_3_2_19_9,(Không biết ở đây có ai biết Yngvar đã làm gì không. Tốt nhất là đừng nhắc đến tên anh ấy. Không muốn khuấy động mọi chuyện lên.)
+Main_LahaiRoi_3_2_19_8,"Nhưng tôi phải hỏi, tôi cảm thấy một trong số các bạn mang hào quang của Spacetrek Collective. Người còn lại, đến từ thế giới rộng lớn bên ngoài vùng băng giá. Tại sao lại đội lốt Shepherds?"
+Main_LahaiRoi_3_2_19_10,Chúng tôi đã giải cứu Soliskin này khỏi cơn bão Void. Chúng tôi được thông báo rằng nó cần phải quay lại đây để thực hiện Nghi thức Trở về.
+Main_LahaiRoi_3_2_19_11,Void Storm? Bạn có ý nói cơn bão trước đó không?
 Main_LahaiRoi_3_2_19_12,Chuuu—
-Main_LahaiRoi_3_2_19_8,"Nhưng ta phải hỏi, ta cảm nhận một trong các bạn mang dấu ấn của tập thể Spacetrek. Người còn lại, đến từ thế giới rộng lớn vượt ra ngoài vùng băng giá. Vì sao lại giả danh Mục tử?"
-Main_LahaiRoi_3_2_19_9,(Không chắc ai ở đây biết Yngvar đã làm gì. Tốt nhất là đừng nên nhắc đến tên anh ta. Không muốn làm mọi thứ trở nên phức tạp.)
-Main_LahaiRoi_3_2_19_10,Chúng tôi đã giải cứu người Soliskin này khỏi Bão Hư Không. Chúng tôi được biết người này cần phải quay trở lại đây để thực hiện Nghi Lễ Hồi Hướng.
-Main_LahaiRoi_3_2_19_11,Bão Không? Ý bạn là cơn bão ngay trước đó hả
-Main_LahaiRoi_3_2_19_13,Haha! Vậy thì ta phải biết ơn hai bạn lắm!
-Main_LahaiRoi_3_2_19_14,"Nhưng tôi phải hỏi—Bão Void, nó xảy ra gần trại Atuja, đúng không?"
-Main_LahaiRoi_3_2_19_15,"Ở đó có một người chăn cừu tên là Astrid. Bạn đã cứu được Soliskin hoang, nhưng lại không giao nó cho một người chăn cừu thực thụ. Tại sao bạn lại đến đây xa xôi như vậy"
-Main_LahaiRoi_3_2_19_16,"(Tôi quên mất chuyện đó rồi. Nếu không có lý do chính đáng, anh ta có thể bắt đầu nghi ngờ điều gì đó.)"
-Main_LahaiRoi_3_2_19_17,Bởi vì… Astrid đang giấu bạn điều gì đó.
-Main_LahaiRoi_3_2_19_18,Ý bạn là gì
-Main_LahaiRoi_3_2_19_19,"Con gái của Astrid, Maja, là học sinh của Học viện Startorch. Cô đã tiến hành các thí nghiệm vi phạm quy tắc và gây thiệt hại cho tài sản của trường."
-Main_LahaiRoi_3_2_19_20,Maja hiện đang phải đối mặt với hình phạt khắc nghiệt. Astrid đang bận xử lý hậu quả và không thể hoàn thành nhiệm vụ của mình với tư cách là một Người Chăn Dắt.
-Main_LahaiRoi_3_2_19_21,"Theo Quy Chế Giảng Viên Học Viện Startorch, với tư cách là những người thầy của Maja, chúng tôi có nhiệm vụ giải quyết những hậu quả từ hành động của một học sinh"
-Main_LahaiRoi_3_2_19_22,"Vì Astrid không thể dẫn dắt Soliskin này, chúng ta phải tự mình đứng ra làm việc đó."
-Main_LahaiRoi_3_2_19_24,Chính xác như lời Giáo sư Mornye đã nói.
-Main_LahaiRoi_3_2_19_25,"Tôi lẽ ra nên biết con gái của Astrid sẽ gây ra nhiều rắc rối như vậy! Một mớ hỗn độn lần này, nhưng cô ta sẽ làm mọi thứ vì con gái mình."
-Main_LahaiRoi_3_2_19_26,"Sự sẵn lòng đến xa xôi như thế này của Học Viện thật bất ngờ. Xin hãy bỏ qua những lời nói của tôi trước đây. Bạn đã cứu loài Soliskin và giúp đỡ dân chúng của chúng tôi. Danh hiệu ""Người Chăn Dắt"", bạn đã xứng đáng."
-Main_LahaiRoi_3_2_19_28,"Đến đây. Từ ngày hôm nay, Roya xưng bạn là bạn bè."
-Main_LahaiRoi_3_2_19_29,Bạn có thể nghỉ ngơi tại trại nếu muốn. Yến tiệc sẽ bắt đầu vào giờ thứ tám của đêm.
-Main_LahaiRoi_3_2_19_30,"Haldarheim trưởng làng, Aksel, ban đầu nghi ngờ bạn, nhưng Mornye đã chiếm được lòng tin của ông bằng cách tự giới thiệu là giáo viên của Maja. Bạn được mời đến bữa tiệc trước nghi lễ."
-Main_LahaiRoi_3_2_2_1,Tick-tock! Hầu như đã đến lúc gặp Mornye rồi!
-Main_LahaiRoi_3_2_19_27,"Tối nay, chúng ta tổ chức một yến tiệc cho ngày mai. <te href=700028>Nghi thức Hồi Hương</te>. Hãy tham gia cùng chúng tôi, như một cử chỉ để chuộc lỗi cho sự thô lỗ của tôi trước đây."
-Main_LahaiRoi_3_2_2_2,"Tôi không thể ngừng nghĩ về những món ăn Spacetrek đó. Chúng sẽ là gì, cơ chứ?!"
-Main_LahaiRoi_3_2_20_1,"Bạn đã mắc lỗi. Nếu chúng ta theo dõi tính toán của bạn, góc quay của Ổ Động Cơ Phản Ứng là không đến bốn phẩy không sáu phần nghìn của một vòng."
-Main_LahaiRoi_3_2_20_2,"Không, không, không! Là bạn đã nhầm đấy. Tôi đã tính lại tám lần rồi, và nó là không chính xác bốn phẩy không tám phần nghìn của một vòng!"
-Main_LahaiRoi_3_2_20_3,"Xin lỗi, bạn có thấy Foreseer Yngvar ở đâu không?"
-Main_LahaiRoi_3_2_20_4,Nhà tiên tri Yngvar ư? Hừ! Chúng ta chẳng có cơ hội nào để có được cuộc gặp gỡ đó đâu.
-Main_LahaiRoi_3_2_20_5,"Trong lịch sử của Heliodic Six, những người như Yngvar ít khi xuất hiện. Nếu bạn tìm kiếm anh ta, hy vọng tốt nhất của bạn nằm ở Nghi thức Hồi sinh vào ngày mai."
-Main_LahaiRoi_3_2_2001_1,"Bạn đã mắc lỗi. Nếu chúng ta theo dõi tính toán của bạn, góc quay của Ổ Động Cơ Phản Ứng là không đến bốn phẩy không sáu phần nghìn của một vòng."
-Main_LahaiRoi_3_2_2001_2,"Không, không, không! Là bạn đã nhầm đấy. Tôi đã tính lại tám lần rồi, và nó là không chính xác bốn phẩy không tám phần nghìn của một vòng!"
-Main_LahaiRoi_3_2_20_6,"À, tôi vẫn còn nhớ khi ""Mắt"" hiện tại gia nhập chúng ta trong những cuộc tranh luận sôi nổi về số liệu trước khi cô ấy ngồi vào vị trí. Ồ, cô ấy sẽ làm thế mà."
-Main_LahaiRoi_3_2_21_2,Chuuu…
-Main_LahaiRoi_3_2_20_7,"Nếu cô ấy ở đây lúc này, cô ấy sẽ đồng ý rằng…"
-Main_LahaiRoi_3_2_21_3,"Xin lỗi, bạn có thấy Foreseer Yngvar ở đâu không?"
-Main_LahaiRoi_3_2_20_8,Cô ấy sẽ đồng ý rằng đó là bốn phẩy không chấm không sáu nghìn.
-Main_LahaiRoi_3_2_20_9,"Không, đó là bốn phẩy không tám nghìn!"
-Main_LahaiRoi_3_2_21_1,"Đã đến lúc chúng ta phải chia tay rồi, Marigold…"
-Main_LahaiRoi_3_2_21_4,"Người tiên tri Yngvar... Đúng, với Nghi thức Hồi sinh vào ngày mai, chúng ta có lẽ sẽ gặp được hắn."
+Main_LahaiRoi_3_2_19_13,Haha! Thế thì tôi phải biết ơn cả hai bạn!
+Main_LahaiRoi_3_2_19_14,"Nhưng tôi phải hỏi—cơn Bão Hư Không, nó xảy ra gần trại Atuja, đúng không?"
+Main_LahaiRoi_3_2_19_15,"Một người chăn cừu tên là Astrid đang ở đó. Bạn đã cứu chú cừu Soliskin lạc đường, nhưng lại không trao nó cho một người chăn cừu thực sự. Tại sao lại đến đây?"
+Main_LahaiRoi_3_2_19_16,"(Tôi quên mất điều đó. Nếu không có lý do chắc chắn, anh ta có thể bắt đầu nghi ngờ điều gì đó.)"
+Main_LahaiRoi_3_2_19_17,Vì... Astrid đã giấu bạn điều gì đó.
+Main_LahaiRoi_3_2_19_18,Ý của bạn là gì?
+Main_LahaiRoi_3_2_19_19,"Con gái của Astrid, Maja, là sinh viên của Học viện Startorch. Cô đã tiến hành các thí nghiệm phá vỡ giao thức và gây thiệt hại cho tài sản của trường."
+Main_LahaiRoi_3_2_19_21,"Theo Bộ quy tắc của Học viện Startorch, với tư cách là giáo viên của Maja, nhiệm vụ của chúng tôi là giải quyết hậu quả từ hành động của học sinh."
+Main_LahaiRoi_3_2_19_20,Maja hiện đang phải đối mặt với sự trừng phạt khắc nghiệt. Astrid đang bận giải quyết hậu quả và không thể hoàn thành nhiệm vụ của mình với tư cách là một Nữ chăn cừu.
+Main_LahaiRoi_3_2_19_24,Đúng như những gì giáo sư Mornye đã nói.
+Main_LahaiRoi_3_2_19_22,Vì Astrid không thể chăn dắt Soliskin này nên chúng ta phải tự mình can thiệp.
+Main_LahaiRoi_3_2_19_25,"Lẽ ra tôi phải biết con gái của Astrid sẽ gây ra rắc rối như vậy! Lần này có một mớ hỗn độn, nhưng cô ấy sẽ cố gắng hết sức vì cô gái của mình."
+Main_LahaiRoi_3_2_19_26,"Việc Học viện sẵn sàng tiến xa đến mức này là điều không thể ngờ tới. Hãy tha thứ cho những lời nói trước đó của tôi. Bạn đã cứu Soliskin và giúp đỡ người dân của chúng tôi. Bạn đã đạt được danh hiệu ""Người chăn cừu""."
+Main_LahaiRoi_3_2_19_28,"Đến. Kể từ ngày hôm nay, Royal gọi các bạn là bạn."
+Main_LahaiRoi_3_2_19_29,Nghỉ ngơi tại trại nếu bạn muốn. Bữa tiệc sẽ bắt đầu vào giờ thứ tám trong đêm.
+Main_LahaiRoi_3_2_19_30,"Già làng Haldarheim, Aksel, ban đầu nghi ngờ bạn, nhưng Mornye đã lấy được lòng tin của ông bằng cách tự giới thiệu mình là giáo viên của Maja. Bạn được mời đến dự bữa tiệc trước nghi thức."
+Main_LahaiRoi_3_2_2_1,Tick-tock! Gần đến lúc gặp Mornye rồi!
+Main_LahaiRoi_3_2_2_2,Tôi không thể ngừng nghĩ về những món ăn nhẹ Spacetrek. Chúng sẽ như thế nào nhỉ?!
+Main_LahaiRoi_3_2_19_27,"Tối nay chúng ta tổ chức tiệc cho ngày mai <te href=700028>Nghi thức trở về</te>. Hãy tham gia cùng chúng tôi, như một cử chỉ để đền bù cho sự thô lỗ trước đây của tôi."
+Main_LahaiRoi_3_2_20_1,"Bạn đã phạm sai lầm. Nếu chúng ta làm theo tính toán của bạn, góc quay của Bộ truyền động Lò phản ứng sẽ ở mức bốn điểm không sáu phần nghìn vòng quay."
+Main_LahaiRoi_3_2_20_2,"Không, không, không! Chính bạn mới là người đã nhầm lẫn. Ta đã tính toán lại tám lần, chính xác là bốn phẩy không tám phần nghìn một lượt!"
+Main_LahaiRoi_3_2_20_3,Xin lỗi. Bạn có thấy Foreseer Yngvar ở quanh đây không?
+Main_LahaiRoi_3_2_20_4,Nhà tiên tri Yngvar? Hà! Chúng ta sẽ không có cơ hội có một cuộc gặp như vậy.
+Main_LahaiRoi_3_2_20_5,"Trong lịch sử của Heliodic Six, những người như Yngvar hiếm khi sánh bước cùng chúng ta. Nếu bạn tìm kiếm anh ta, hy vọng tốt nhất của bạn nằm ở Nghi thức trở lại vào ngày mai."
+Main_LahaiRoi_3_2_20_6,"Ah, tôi vẫn nhớ cách ""Con mắt"" hiện tại đã cùng chúng tôi tranh luận sôi nổi về các con số trước khi ngồi xuống. Mmm, cô ấy sẽ làm vậy."
+Main_LahaiRoi_3_2_20_7,"Nếu bây giờ cô ấy ở đây, cô ấy sẽ đồng ý rằng..."
+Main_LahaiRoi_3_2_2001_1,"Bạn đã phạm sai lầm. Nếu chúng ta làm theo tính toán của bạn, góc quay của Bộ truyền động Lò phản ứng sẽ ở mức bốn điểm không sáu phần nghìn vòng quay."
+Main_LahaiRoi_3_2_2001_2,"Không, không, không! Chính bạn mới là người đã nhầm lẫn. Ta đã tính toán lại tám lần, chính xác là bốn phẩy không tám phần nghìn một lượt!"
+Main_LahaiRoi_3_2_20_8,Cô ấy sẽ đồng ý rằng đó là bốn điểm không sáu phần nghìn.
+Main_LahaiRoi_3_2_21_2,Chuuu...
+Main_LahaiRoi_3_2_21_3,Xin lỗi. Bạn có thấy Foreseer Yngvar ở quanh đây không?
+Main_LahaiRoi_3_2_20_9,"Không, đó là bốn phẩy không tám phần nghìn!"
+Main_LahaiRoi_3_2_21_1,"Đã đến lúc chia tay, Marigold..."
+Main_LahaiRoi_3_2_21_4,"Nhà tiên tri Yngvar... Đúng vậy, với Nghi thức Trở về vào ngày mai, chúng ta có thể sẽ gặp anh ấy."
+Main_LahaiRoi_3_2_21_5,"Sự thật mà nói, Soliskin không ưu ái anh ta nhiều. Chúng tôi, những người chăn cừu, ít có liên lạc với anh ấy."
+Main_LahaiRoi_3_2_21_6,Chuuu-um.
 Main_LahaiRoi_3_2_21_9,Chuuu!
-Main_LahaiRoi_3_2_2101_1,"Đã đến lúc chúng ta phải chia tay rồi, Marigold…"
-Main_LahaiRoi_3_2_21_5,"Thực tế mà nói, người Soliskin không mấy ưa anh ta. Chúng tôi, những Shepherd, cũng ít liên lạc với anh ta."
-Main_LahaiRoi_3_2_21_6,Ừm.
-Main_LahaiRoi_3_2_2101_2,Chuuu…
-Main_LahaiRoi_3_2_22_2,"Xin lỗi, bạn có thấy Foreseer Yngvar ở đâu không?"
-Main_LahaiRoi_3_2_21_7,"Mặc dù là một trong những người kế thừa của Heliodic Six, vị trí của anh ấy không phải là thứ chúng ta có quyền đặt câu hỏi"
-Main_LahaiRoi_3_2_21_8,"Dù vậy, tôi vẫn hy vọng rằng tương lai của Heliodic Six sẽ là một điều may mắn đối với Soliskin… có lẽ là một người như Sigrika chẳng hạn."
-Main_LahaiRoi_3_2_22_1,Bữa tiệc tối nay có những gương mặt mới. Có vẻ chúng ta cần chuẩn bị đủ cho hai người nữa…
-Main_LahaiRoi_3_2_22_3,Yngvar? Cậu bé đó không còn đến đây nữa rồi.
-Main_LahaiRoi_3_2_2201_1,Bữa tiệc tối nay có những gương mặt mới. Có vẻ chúng ta cần chuẩn bị đủ cho hai người nữa…
-Main_LahaiRoi_3_2_22_4,"Tôi sẽ nói sự thật. Sau khi cha mẹ cậu bị kẹt trong Bão Hư Không khi còn bé, Aksel và tôi đã nuôi cậu lớn."
-Main_LahaiRoi_3_2_22_5,"Em là một đứa trẻ trầm lặng. Số bạn bè của em rất ít. Khi Khả năng Cộng hưởng của em được phát hiện và Lục Tinh Ánh Dương chọn em làm người kế vị, em vô cùng vui mừng. ""Từ giờ em sẽ không còn bị lũ trẻ khác trêu chọc nữa,"" em nói."
-Main_LahaiRoi_3_2_22_6,"Nhưng ở đâu đó trên con đường, anh ta đã thay đổi. Anh ta không còn mong muốn nhận lấy trách nhiệm của Lục Nhân. Anh ta trở nên xa cách, hiếm khi lui về nhà."
-Main_LahaiRoi_3_2_22_7,"Ừm, thì… Dù chỉ vì một bữa ăn thôi, nó cũng làm ấm lòng khi anh ấy trở về."
-Main_LahaiRoi_3_2_23_1,(Vẫn còn một chút thời gian trước khi lễ hội bắt đầu. Có lẽ ai đó ở đây biết gì về Người Thấu Thị Yngvar.)
-Main_LahaiRoi_3_2_233_5,Dạng sóng đặc trưng của Cơn Bão Vô Hình này khớp với dạng sóng mà thiết bị đã tạo ra trước đây. Đây không phải là hiện tượng tự nhiên.
-Main_LahaiRoi_3_2_233_6,Bạn có cơ hội nào để phân tích việc này khi nào vậy
-Main_LahaiRoi_3_2_233_7,"Khi chân giả của tôi được kích hoạt, tôi thích giữ tâm trí luôn bận rộn."
-Main_LahaiRoi_3_2_24_1,Bạn bè—đã đến lúc chúng ta tụ họp rồi!
-Main_LahaiRoi_3_2_24_2,"Ngày mai đánh dấu Nghi thức Hồi quy, nơi chúng ta đưa những Soliskin thân yêu trở về với cơ thể vĩ đại của Exostrider. Họ sẽ biến thành ánh sáng rực rỡ để gia nhập hình dáng thiêng liêng của nó."
-Main_LahaiRoi_3_2_24_3,"Tạm biệt, nhưng cũng là một khởi đầu mới! Vì khi Exostrider thức tỉnh, chúng ta sẽ hội ngộ trong cơ thể nó!"
-Main_LahaiRoi_3_2_24_4,"Bây giờ, hãy gác lại nỗi buồn chia ly và cùng tận hưởng niềm vui của cuộc sống mới với đồ ăn thức uống ngon nhé!"
-Main_LahaiRoi_3_2_24_5,"Nhưng hãy nghe đây, các bạn. Các bạn đừng uống quá nhiều đâu. Nếu ngày mai các bạn làm trò hề trong Nghi lễ, tôi sẽ không giúp đỡ đâu."
-Main_LahaiRoi_3_2_24_6,Cái gì vậy? Bạn có cảm thấy căng thẳng không?
-Main_LahaiRoi_3_2_24_7,Ngày mai chúng ta sẽ đối mặt với Foreseer Yngvar.
-Main_LahaiRoi_3_2_24_8,"Tôi đã mô phỏng bảy mươi ba kết quả có thể xảy ra, nhưng ngay cả vậy, tôi cũng không thể bao phủ mọi tình huống."
-Main_LahaiRoi_3_2_24_9,"Nếu tôi có thể xây dựng một mô hình bao gồm tất cả các kết quả có thể xảy ra, xem xét hệ thống mục tiêu, các điều kiện hỗn loạn và các sự bù đắp cần thiết…"
-Main_LahaiRoi_3_2_24_10,Bạn rất nhanh nhẹn lúc nãy Bạn đã làm được rồi
-Main_LahaiRoi_3_2_24_11,Bởi vì tôi tin phương pháp của bạn là hiệu quả Tôi đã cố gắng theo dõi
-Main_LahaiRoi_3_2_24_12,Mình có thực sự làm tốt không
-Main_LahaiRoi_3_2_24_13,Tất nhiên rồi Hãy đánh giá cao bản thân hơn đi
-Main_LahaiRoi_3_2_24_14,Ừ. Tiếp tục luyện tập và bạn sẽ làm được dễ dàng hơn.
-Main_LahaiRoi_3_2_24_15,Tốt. Phù…
-Main_LahaiRoi_3_2_24_16,Đã hiểu rồi Tôi sẽ cố gắng hơn vào lần sau
+Main_LahaiRoi_3_2_2101_1,"Đã đến lúc chia tay, Marigold..."
+Main_LahaiRoi_3_2_2101_2,Chuuu...
+Main_LahaiRoi_3_2_21_7,"Mặc dù là một trong những người kế vị của Heliodic Six, địa vị của anh ấy không phải là điều chúng ta cần nghi ngờ."
+Main_LahaiRoi_3_2_22_2,Xin lỗi. Bạn có thấy Foreseer Yngvar ở quanh đây không?
+Main_LahaiRoi_3_2_21_8,"Tuy nhiên, tôi vẫn hy vọng rằng Heliodic Six trong tương lai sẽ được Soliskin ưa chuộng... có lẽ là ai đó giống như Sigrika."
+Main_LahaiRoi_3_2_22_1,Bữa tiệc tối nay mang đến những gương mặt mới. Có vẻ như chúng ta cần chuẩn bị đủ cho hai người nữa...
+Main_LahaiRoi_3_2_22_3,Yngvar? Cậu bé đó không còn đến đây nữa.
+Main_LahaiRoi_3_2_22_6,"Nhưng ở đâu đó trên đường đi, anh ấy đã thay đổi. Anh ấy không còn muốn khoác lên mình chiếc áo của Six nữa. Anh ngày càng xa cách, hiếm khi về thăm nhà."
+Main_LahaiRoi_3_2_22_4,"Tôi sẽ nói sự thật. Sau khi cha mẹ anh ấy bị cuốn vào Cơn bão Hư Không khi anh ấy còn là một cậu bé, chính Aksel và tôi là người đã nuôi nấng anh ấy."
+Main_LahaiRoi_3_2_2201_1,Bữa tiệc tối nay mang đến những gương mặt mới. Có vẻ như chúng ta cần chuẩn bị đủ cho hai người nữa...
+Main_LahaiRoi_3_2_22_5,"Anh ấy là một đứa trẻ trầm lặng. Rất ít bạn bè của anh ấy. Khi Khả năng Cộng hưởng của anh được phát hiện và Heliodic Six đã chọn anh làm người kế vị, anh đã vui mừng khôn xiết. “Những đứa trẻ khác sẽ không bắt nạt tôi nữa,” anh nói."
+Main_LahaiRoi_3_2_22_7,"À, à... Dù chỉ là một bữa ăn, nó sẽ sưởi ấm lò sưởi khi bạn trở về."
+Main_LahaiRoi_3_2_23_1,(Vẫn còn chút thời gian trước khi bữa tiệc bắt đầu. Có lẽ ai đó ở đây biết điều gì đó về Tiên nhân Yngvar.)
+Main_LahaiRoi_3_2_233_5,Dạng sóng đặc trưng của cơn bão Void này khớp với dạng sóng mà thiết bị đã tạo trước đó. Đây không phải là hiện tượng tự nhiên xảy ra.
+Main_LahaiRoi_3_2_233_6,Khi nào bạn có cơ hội để phân tích điều này?
+Main_LahaiRoi_3_2_233_7,"Khi đôi chân giả của tôi hoạt động, tôi thích giữ cho đầu óc mình bận rộn hơn."
+Main_LahaiRoi_3_2_24_1,Bạn ơi—đã đến lúc chúng ta ăn tiệc!
+Main_LahaiRoi_3_2_24_2,"Ngày mai đánh dấu Nghi thức trở về, nơi chúng ta gửi Soliskin yêu quý của mình trở lại cơ thể vĩ đại của Exostrider. Thành ánh sáng rạng rỡ, họ sẽ biến đổi để gia nhập hình dạng thiêng liêng của nó."
+Main_LahaiRoi_3_2_24_3,"Tạm biệt cũng sẽ đến, nhưng đó cũng là một khởi đầu mới! Vì khi Exostrider thức dậy, chúng ta sẽ đoàn tụ trong cơ thể của nó!"
+Main_LahaiRoi_3_2_24_4,"Bây giờ, hãy để lại nỗi buồn chia ly và đón nhận niềm vui cuộc sống mới bằng đồ ăn thức uống ngon nhé!"
+Main_LahaiRoi_3_2_24_5,"Nhưng hãy lưu ý điều này, các bạn của tôi. Quá nhiều đồ uống bạn sẽ không có. Nếu bạn tự biến mình thành kẻ ngốc trong Nghi thức ngày mai, tôi sẽ không giúp đỡ."
+Main_LahaiRoi_3_2_24_6,Nó là gì vậy? Bạn có cảm thấy lo lắng không?
+Main_LahaiRoi_3_2_24_7,Ngày mai chúng ta sẽ đối đầu với Foreseer Yngvar.
+Main_LahaiRoi_3_2_24_9,"Nếu tôi có thể xây dựng một mô hình bao gồm tất cả các kết quả có thể xảy ra, xem xét hệ thống mục tiêu, các điều kiện hỗn loạn và các khoản bồi thường cần thiết..."
+Main_LahaiRoi_3_2_24_10,Bạn đã nhanh chân trước đó. Bạn đã có được điều này.
+Main_LahaiRoi_3_2_24_8,"Tôi đã mô phỏng bảy mươi ba kết quả có thể xảy ra, nhưng dù vậy, tôi cũng không thể bao quát hết mọi tình huống."
+Main_LahaiRoi_3_2_24_12,Tôi đã thực sự làm tốt phải không?
+Main_LahaiRoi_3_2_24_11,Đó là vì tôi tin cách tiếp cận của bạn có hiệu quả. Tôi cố gắng làm theo.
+Main_LahaiRoi_3_2_24_13,Tất nhiên rồi. Hãy cho bản thân nhiều tín dụng hơn.
+Main_LahaiRoi_3_2_24_15,Tốt. Phew...
+Main_LahaiRoi_3_2_24_14,Đúng. Hãy tiếp tục luyện tập và nó sẽ đến dễ dàng hơn.
+Main_LahaiRoi_3_2_24_16,Đã hiểu. Tôi sẽ đảm bảo làm tốt hơn vào lần sau.
 Main_LahaiRoi_3_2_24_18,Chuuu! Chuuu-chuuu!
+Main_LahaiRoi_3_2_24_19,Cô nàng dễ thương này đang muốn nói gì vậy?
+Main_LahaiRoi_3_2_24_21,"À, tôi biết rồi! Nó muốn chúng ta đặt tên cho nó."
 Main_LahaiRoi_3_2_24_23,Chuuu!
-Main_LahaiRoi_3_2_24_19,Cưng này đang cố gắng nói gì vậy
-Main_LahaiRoi_3_2_24_25,Vậy thì đã quyết định rồi.
 Main_LahaiRoi_3_2_24_20,"Chuuu, chuuu!"
-Main_LahaiRoi_3_2_24_21,"À, tớ biết! Nó muốn chúng ta cho nó một cái tên."
-Main_LahaiRoi_3_2_24_22,"Được thôi, vì nó đang cố gắng thân thiện với chúng ta, sao chúng ta không gọi nó là ""Buddy"" nhỉ"
-Main_LahaiRoi_3_2_24_24,Ồ? Có vẻ nó thích điều đó.
-Main_LahaiRoi_3_2_24_26,Thôi thì… may quá.
-Main_LahaiRoi_3_2_24_27,"Chào bạn, bạn có muốn cùng chúng tôi và những người Soliskin khiêu vũ không?"
-Main_LahaiRoi_3_2_24_28,Ông nội Aksel nói rằng người Soliskin hạnh phúc nhất khi khiêu vũ cùng các Shepherd!
-Main_LahaiRoi_3_2_24_29,"Ồ, nhưng mà tôi không giỏi nhảy lắm."
-Main_LahaiRoi_3_2_24_30,Tôi sẽ đến với bạn. Hãy cùng nhảy với Buddy nhé. Bạn thấy sao?
-Main_LahaiRoi_3_2_24_31,Hooray!
+Main_LahaiRoi_3_2_24_25,Thế là ổn thỏa.
+Main_LahaiRoi_3_2_24_22,"Well, since it's really trying to buddy up to us, how about we call it ""Buddy""?  
+Chà, vì nó thực sự đang cố gắng kết bạn với chúng ta, nên chúng ta gọi nó là ""Buddy"" thì sao?"
+Main_LahaiRoi_3_2_24_24,Ồ? Nó có vẻ thích nó.
+Main_LahaiRoi_3_2_24_26,Chà... thật là nhẹ nhõm.
+Main_LahaiRoi_3_2_24_27,"Xin chào, bạn sẽ nhảy cùng chúng tôi và Soliskin chứ?"
+Main_LahaiRoi_3_2_24_28,Ông nội Aksel nói Soliskin hạnh phúc nhất khi khiêu vũ với Shepherds!
+Main_LahaiRoi_3_2_24_29,"Ồ, nhưng tôi không giỏi nhảy."
+Main_LahaiRoi_3_2_24_30,Tôi sẽ tham gia cùng bạn. Hãy nhảy cùng Buddy. Bạn nói gì?
+Main_LahaiRoi_3_2_24_31,HOORAY!
+Main_LahaiRoi_3_2_24_32,Trận chiến thực sự của chúng ta bắt đầu vào ngày mai.
+Main_LahaiRoi_3_2_24_33,"Tối nay, chúng ta hãy thư giãn một chút nhé, Mornye."
 Main_LahaiRoi_3_2_24_36,Hừ...
-Main_LahaiRoi_3_2_24_32,Cuộc chiến thực sự của chúng ta bắt đầu từ ngày mai.
-Main_LahaiRoi_3_2_24_33,"Tối nay, chúng ta thư giãn một chút đi, Mornye."
-Main_LahaiRoi_3_2_24_35,Chu... Chu... Ưuugh...
-Main_LahaiRoi_3_2_24_37,Một vài vị khách không mời đã đến.
-Main_LahaiRoi_3_2_24_38,"Với điều đó trong đầu, bạn có thể thả lỏng một chút rồi đúng không"
+Main_LahaiRoi_3_2_24_35,Chu... Chu... Uuuugh...
+Main_LahaiRoi_3_2_24_37,Một số vị khách không mời đã đến.
+Main_LahaiRoi_3_2_24_38,"Với ý nghĩ đó, bây giờ bạn có thể thư giãn một chút, phải không?"
+Main_LahaiRoi_3_2_24_34,"Đúng. Người cố vấn của tôi nên đảm nhận {Male=anh ấy;Female=cô ấy} lời khuyên của riêng mình, quá."
+Main_LahaiRoi_3_2_25_1,Đó là điều cô ấy sẽ nói.
 Main_LahaiRoi_3_2_26_1,Sư phụ?
-Main_LahaiRoi_3_2_25_1,Đó là điều mà cô ấy sẽ nói
-Main_LahaiRoi_3_2_24_34,Ừ. Người thầy của tôi nên {Male=anh ấy;Female=cô ấy} Lắng cả lời khuyên của bạn nữa.
-Main_LahaiRoi_3_2_25_2,"Tôi không biết hành tinh thứ 13 của Norma ở đâu, nhưng ít nhất tôi có thể đoán ra cô ấy đến từ đâu dựa vào bức ảnh."
-Main_LahaiRoi_3_2_26_2,Chúng ta có thể bỏ đi màn kịch này ngay bây giờ được không? Hay bạn nghĩ chúng ta nên tiếp tục?
-Main_LahaiRoi_3_2_24_39,"Trong bữa tiệc, Mornye có vẻ rất lo lắng về việc đối mặt với Yngvar vào ngày mai. Cô ấy chỉ thư giãn sau khi nghe lời động viên của bạn. Bạn đặt tên cho người Soliskin được giải cứu là ""Buddy"", và trước khi bữa tiệc kết thúc, bạn nhắc Mornye nghỉ ngơi.
-Ẩn mình trong bóng tối, có vẻ như một Soliskin khác đã bị nhiễm độc."
-Main_LahaiRoi_3_2_26_3,Có thể có người đang nghe lén Bạn nên tiếp tục để tránh bị lộ
-Main_LahaiRoi_3_2_26_4,Bạn… muốn ngồi nghỉ một lát sao
+Main_LahaiRoi_3_2_25_2,"Không phải là tôi biết hành tinh thứ 13 của Norma ở đâu, nhưng... ít nhất tôi có thể đoán được cô ấy ở đâu từ bức ảnh."
+Main_LahaiRoi_3_2_24_39,"Tại bữa tiệc, Mornye tỏ ra lo lắng rõ rệt về việc đối đầu với Yngvar vào ngày hôm sau. Cô chỉ thư giãn sau khi nghe lời động viên của bạn. Bạn đặt tên cho Soliskin được giải cứu là ""Buddy"" và trước khi bữa tiệc kết thúc, bạn nhắc Mornye nghỉ ngơi.
+Không được chú ý trong bóng tối, một Soliskin khác dường như đã bị ô nhiễm."
+Main_LahaiRoi_3_2_26_2,Bây giờ chúng ta có thể dừng màn diễn lại được phải không? Hay bạn nghĩ chúng ta nên tiếp tục?
+Main_LahaiRoi_3_2_26_3,Có thể ai đó đang lắng nghe. Chúng ta nên duy trì để tránh bị lộ.
+Main_LahaiRoi_3_2_26_4,Bạn có... muốn ngồi một lúc không?
+Main_LahaiRoi_3_2_26_5,Chân của bạn thế nào rồi?
+Main_LahaiRoi_3_2_26_6,"Ồ, bạn đã nhận thấy."
 Main_LahaiRoi_3_2_26_9,Có đau không?
-Main_LahaiRoi_3_2_26_5,Chân bạn thế nào rồi
-Main_LahaiRoi_3_2_26_6,"Ồ, bạn để ý rồi."
-Main_LahaiRoi_3_2_26_7,"Họ đã chạy cả ngày rồi, nên năng lượng của họ đang thấp. Tôi định chờ đến khi họ nạp đầy pin mới quay lại."
-Main_LahaiRoi_3_2_26_8,"Khi chúng tấn công, tôi không thể di chuyển được. Tôi cảm thấy hơi, ừm… ngại ngùng khi để bạn thấy tôi như thế này."
+Main_LahaiRoi_3_2_26_7,Họ đã chạy cả ngày nên năng lượng của họ đang yếu. Tôi dự định đợi cho đến khi họ sạc xong rồi mới quay lại.
 Main_LahaiRoi_3_2_26_10,Nó không còn nữa.
-Main_LahaiRoi_3_2_26_11,"Trước khi tôi có chân giả, tôi từng bị một chứng bệnh khiến tôi phải ngồi xe lăn."
-Main_LahaiRoi_3_2_26_12,"Bây giờ, ít nhất tôi không phải lo lắng về việc bị bất động nữa rồi."
+Main_LahaiRoi_3_2_26_8,"Trong khi họ sạc, tôi không thể di chuyển. Tôi cảm thấy hơi, ờ... xấu hổ khi bạn nhìn thấy tôi như thế này."
+Main_LahaiRoi_3_2_26_11,"Trước khi tôi có chân giả, tôi bị bệnh phải ngồi xe lăn."
+Main_LahaiRoi_3_2_26_12,"Bây giờ, ít nhất tôi không còn phải lo lắng về việc bất động nữa."
 Main_LahaiRoi_3_2_26_13,Cuối cùng tôi cũng có thể theo đuổi những gì tôi thực sự muốn.
-Main_LahaiRoi_3_2_26_14,Ngôi sao ở đây thật đẹp.
-Main_LahaiRoi_3_2_26_15,"Ừm, mình thích các vì sao."
-Main_LahaiRoi_3_2_26_19,Có lẽ các vì sao là nguồn cảm hứng của nhân loại.
-Main_LahaiRoi_3_2_26_16,"Dưới vùng băng giá của Lahai-Roi, những ngôi sao ở đây thực chất chỉ là ánh sáng được tạo ra bởi các mảng khí quyển."
-Main_LahaiRoi_3_2_26_17,"Đã từng, có người nói với tôi như thế này…"
-Main_LahaiRoi_3_2_26_18,"Bởi vì chúng ta thấy những ngôi sao, nhân loại mới tưởng tượng ra những gì nằm ngoài bầu trời."
-Main_LahaiRoi_3_2_26_20,Một cách diễn đạt thú vị đấy.
+Main_LahaiRoi_3_2_26_14,Những ngôi sao ở đây thật đẹp.
+Main_LahaiRoi_3_2_26_16,"Dưới vùng đất băng giá của Lahai-Roi, các ngôi sao ở đây thực chất chỉ là những ánh sáng được tạo ra bởi các mảng khí quyển."
+Main_LahaiRoi_3_2_26_15,"Mm, tôi yêu các ngôi sao."
+Main_LahaiRoi_3_2_26_17,"Một lần, có người đã nói với tôi như thế này..."
+Main_LahaiRoi_3_2_26_18,Chính vì chúng ta nhìn thấy những ngôi sao mà loài người tưởng tượng ra những gì nằm ngoài bầu trời.
+Main_LahaiRoi_3_2_26_19,Có lẽ các ngôi sao là nàng thơ của nhân loại.
+Main_LahaiRoi_3_2_26_20,Một cách thú vị để nói về nó.
 Main_LahaiRoi_3_2_26_21,Đó là một hình ảnh lãng mạn.
 Main_LahaiRoi_3_2_26_22,Tôi cũng nghĩ vậy.
-Main_LahaiRoi_3_2_26_23,Nhưng… tôi cũng tin rằng chạm tới các vì sao thôi chưa đủ.
-Main_LahaiRoi_3_2_26_24,Sẽ có một ngày chúng ta kiến tạo nên một kỳ tích tồn tại lâu hơn và đẹp hơn cả những ngôi sao.
-Main_LahaiRoi_3_2_26_25,"Đó là giấc mơ mà tôi đã mang theo suốt thời gian này. Và bây giờ, tôi sẽ dùng đôi chân này để bước điệu đầu tiên."
-Main_LahaiRoi_3_2_26_26,Để điều đó xảy ra…
-Main_LahaiRoi_3_2_26_27,Nghi lễ Mặt Trời Mới phải thành công chứ đúng không
-Main_LahaiRoi_3_2_26_28,Chính xác! Nghi lễ này là cách chúng ta thu hồi thành phần năng lượng lõi của Exostrider.
-Main_LahaiRoi_3_2_26_29,"Sau đó, chúng ta sẽ sử dụng mô hình chuyển đổi năng lượng đa pha thông qua mạng lưới siêu dẫn để tiêm năng lượng Rabelle vào giao diện thần kinh."
-Main_LahaiRoi_3_2_26_30,"Nó sẽ tuân theo một giao thức kích hoạt ba giai đoạn. Mô hình dao động đảo ngược, sau đó là khai quật để cuối cùng tạo ra trường năng lượng mảng pha."
-Main_LahaiRoi_3_2_26_35,Vẫn còn một chút thời gian trước khi chân tôi hoàn thành nạp năng lượng. Chúng ta ngắm sao thêm một chút nữa nhé.
-Main_LahaiRoi_3_2_26_36,"Chu, Chu, Chu!"
-Main_LahaiRoi_3_2_26_38,...Mornye?
-Main_LahaiRoi_3_2_26_39,"Thầy, bạn tỉnh rồi!"
-Main_LahaiRoi_3_2_26_40,Có điều gì đó không ổn. Có vẻ như chúng ta có một tình huống ở Rừng Bjartr.
-Main_LahaiRoi_3_2_28_1,Xảy ra chuyện gì vậy… Không đúng lắm. Cứu với!
-Main_LahaiRoi_3_2_26_37,"Được thôi, nhóc Buddy. Tôi sẽ đánh thức {Male=anh ấy;Female=cô ấy} Nâng cấp ngay bây giờ."
-Main_LahaiRoi_3_2_28_2,Cẩn thận đó! Đừng để bị cuốn vào Bão Hư Không!
-Main_LahaiRoi_3_2_29_1,Nhưng lũ Soliskin… đã có rất nhiều người tiến vào Rừng Bjartr rồi!
-Main_LahaiRoi_3_2_26_41,"Sau này, bạn tìm thấy Mornye đang ngắm nhìn các vì sao. Cô ấy kể với bạn giấc mơ của mình: tạo nên một kỳ tích vĩ đại hơn cả các vì sao bằng đôi tay con người. Để làm được điều đó, cô ấy phải đảm bảo Nghi Lễ Ánh Dương Mới thành công.
-Sáng hôm sau, một sự náo động bùng lên ở Rừng Bjartr."
-Main_LahaiRoi_3_2_29_2,"Một Bão Hư Không sẽ… Không, tôi không muốn nghĩ về điều đó!"
-Main_LahaiRoi_3_2_3_1,{PlayerName}— Ở đây này!
-Main_LahaiRoi_3_2_3_2,"Đã lâu rồi, Lynae."
-Main_LahaiRoi_3_2_3_3,Chắc chắn rồi! Vừa vượt qua tất cả các kỳ thi đầu vào ngày hôm qua!
-Main_LahaiRoi_3_2_3_4,"Điều đó có nghĩa là… hôm nay bạn chính thức gặp ""Lynae, sinh viên năm nhất của Học viện Startorch"" rồi đấy!"
+Main_LahaiRoi_3_2_26_23,Nhưng... tôi cũng tin rằng việc chạm tới các vì sao thôi là chưa đủ.
+Main_LahaiRoi_3_2_26_24,Sẽ có một ngày chúng ta tạo nên một điều kỳ diệu tồn tại lâu dài và đẹp đẽ hơn chính những vì sao.
+Main_LahaiRoi_3_2_26_25,"Đó là ước mơ mà tôi đã mang theo suốt thời gian qua. Và bây giờ, tôi sẽ dùng hai chân này để bước bước đầu tiên."
+Main_LahaiRoi_3_2_26_26,Để điều đó trở thành hiện thực...
+Main_LahaiRoi_3_2_26_27,Lễ Mặt Trời Mới phải thành công chứ?
+Main_LahaiRoi_3_2_26_28,Chính xác! Buổi lễ này là cách chúng tôi lấy lại thành phần năng lượng cốt lõi của Exostrider.
+Main_LahaiRoi_3_2_26_29,"Sau đó, chúng ta sẽ sử dụng mô hình chuyển đổi năng lượng đa pha thông qua mạng siêu dẫn để đưa năng lượng Rabelle vào giao diện thần kinh."
+Main_LahaiRoi_3_2_26_30,"Nó sẽ tuân theo một giao thức kích hoạt ba giai đoạn. Mô hình dao động ngược pha, sau đó khai quật để cuối cùng tạo ra trường năng lượng mảng pha."
+Main_LahaiRoi_3_2_26_35,Vẫn còn chút thời gian trước khi chân tôi sạc xong. Hãy ngắm sao lâu hơn một chút.
+Main_LahaiRoi_3_2_26_36,"Chu, Chuuu! Chuuu! Chuuu!"
+Main_LahaiRoi_3_2_26_38,...Chào buổi sáng?
+Main_LahaiRoi_3_2_26_39,"Sư phụ, bạn đã tỉnh rồi!"
+Main_LahaiRoi_3_2_26_40,Có gì đó không ổn. Chúng ta dường như đang gặp phải một tình huống ở Bjartr Woods.
+Main_LahaiRoi_3_2_26_37,"Được rồi, bạn nhỏ. Tôi sẽ thức dậy {Male=anh ấy;Female=cô ấy} lên bây giờ."
+Main_LahaiRoi_3_2_28_1,"Wh-what's happening... This isn't right. Help!  
+C-chuyện gì đang xảy ra vậy... Điều này không đúng. Giúp đỡ!"
+Main_LahaiRoi_3_2_28_2,Hãy cẩn thận! Đừng để bị cuốn vào Cơn Bão Hư Không!
+Main_LahaiRoi_3_2_26_41,"Sau đó, bạn thấy Mornye đang ngắm sao. Cô ấy kể cho bạn nghe ước mơ của mình: xây dựng một phép màu vĩ đại hơn chính những ngôi sao bằng bàn tay con người. Để làm được điều đó, cô phải đảm bảo Lễ Mặt Trời Mới thành công.
+Sáng hôm sau, một vụ náo động nổ ra ở Bjartr Woods."
+Main_LahaiRoi_3_2_29_1,Nhưng Soliskin... nhiều người đã vào Bjartr Woods!
+Main_LahaiRoi_3_2_29_2,"Một cơn bão Hư Không sẽ... Không, tôi không muốn nghĩ tới nó!"
+Main_LahaiRoi_3_2_3_1,{PlayerName}—ở đây!
+Main_LahaiRoi_3_2_3_2,"Đã lâu không gặp, Lynae."
+Main_LahaiRoi_3_2_3_3,Bạn đặt cược! Vừa vượt qua tất cả các bài kiểm tra đầu vào của tôi ngày hôm qua!
+Main_LahaiRoi_3_2_3_4,"Điều đó có nghĩa là... hôm nay bạn sẽ chính thức gặp gỡ ""Lynae, sinh viên năm nhất Học viện Startorch""!"
 Main_LahaiRoi_3_2_3_5,Chúc mừng bạn đã đăng ký thành công.
-Main_LahaiRoi_3_2_3_6,Vậy chuyến phiêu lưu tiếp theo của chúng ta khi nào vậy bạn
-Main_LahaiRoi_3_2_3_7,"Ugh, tớ thực sự muốn lại đi trên đường với bạn, nhưng mà hiện tại tớ đang bị theo dõi sức khỏe tinh thần đấy. Chỉ cần bạn vi phạm dù chỉ một quy tắc nhỏ vào ngày đầu tiên thôi, cô Lucilla sẽ kéo tớ lại để ""tâm sự thân thiện"" đấy."
-Main_LahaiRoi_3_2_3_8,Mình phải kiên nhẫn chờ tìm được đường lén qua được camera.
-Main_LahaiRoi_3_2_3_10,Mỏi vật liệu… chu kỳ nhiệt… điều kiện biên… trạng thái ứng suất ban đầu…
-Main_LahaiRoi_3_2_3_11,Vi phạm được phát hiện. Các thiết bị tiêu thụ điện năng cao bị nghiêm cấm trong khu vực ký túc xá.
-Main_LahaiRoi_3_2_3_12,Phương trình vi phân cốt lõi là… chuyển tiếp đàn hồi - dẻo… hệ số cường độ chịu uốn xoay…
-Main_LahaiRoi_3_2_3_13,"Vui lòng tuân thủ ""Quy tắc ứng xử Ký túc xá Học viện Startorch""! Cảnh cáo lần thứ nhất. Cảnh cáo lần thứ hai!"
-Main_LahaiRoi_3_2_3_14,Hệ số chính xác. Đơn vị không khớp sao Bạn? Đang tính toán lại…
-Main_LahaiRoi_3_2_3_15,Vi phạm đã xác nhận. Bắt đầu quy trình hạn chế.
-Main_LahaiRoi_3_2_3_16,Kết luận: cần nâng cấp vật liệu Bạn cần thêm nó vào chương trình nghị sự cho cuộc họp ngày mai
+Main_LahaiRoi_3_2_3_6,Vậy chuyến đi vui vẻ tiếp theo của chúng ta sẽ diễn ra khi nào?
+Main_LahaiRoi_3_2_3_8,Tôi phải cầm cự cho đến khi tìm ra lối đi qua camera.
+Main_LahaiRoi_3_2_3_7,"Ugh, tôi thực sự muốn lên đường với bạn lần nữa, nhưng tôi hơi nằm trong ""danh sách theo dõi sức khỏe tâm thần"". Nếu tôi vi phạm dù chỉ một quy tắc nhỏ vào ngày đầu tiên, cô Lucilla sẽ kéo tôi vào một cuộc ""trò chuyện thân thiện""."
+Main_LahaiRoi_3_2_3_10,Mỏi vật liệu... chu trình nhiệt... điều kiện biên... trạng thái ứng suất ban đầu...
+Main_LahaiRoi_3_2_3_11,Đã phát hiện vi phạm. Các thiết bị có công suất cao bị nghiêm cấm trong khu ký túc xá.
+Main_LahaiRoi_3_2_3_12,Phương trình vi phân cốt lõi là... sự chuyển tiếp đàn hồi dẻo... hệ số cường độ tuần hoàn...
+Main_LahaiRoi_3_2_3_13,"Vui lòng tuân thủ ""Quy tắc ứng xử của Ký túc xá Học viện Startorch""! Đưa ra cảnh báo đầu tiên. Đưa ra cảnh báo thứ hai!"
+Main_LahaiRoi_3_2_3_9,"Ồ, nhưng này, bạn đã nhận được email của Mornye về <te href=700013>Máy dò Hyvatia</te>, Phải? Gần tới giờ xuất phát rồi. Hay chúng ta nên bám sát lối vào và sau đó—"
+Main_LahaiRoi_3_2_3_14,Hệ số đúng. Đơn vị không khớp? Đang tính lại...
+Main_LahaiRoi_3_2_3_15,Sự không tuân thủ đã được xác nhận. Bắt đầu giao thức hạn chế.
+Main_LahaiRoi_3_2_3_16,Kết luận: yêu cầu nâng cấp vật liệu. Tôi sẽ thêm nó vào chương trình nghị sự cho cuộc họp ngày mai.
+Main_LahaiRoi_3_2_3_19,Tôi xin lỗi. Tôi có để bạn chờ đợi không?
 Main_LahaiRoi_3_2_3_21,Bạn ổn chứ?
-Main_LahaiRoi_3_2_3_9,"Ôi, nhưng này, bạn có email của Mornye về cái <te href=700013>Máy Phát Hiện Hyvatia</te>, Đúng chứ? Đến lúc hành động rồi đây. Chúng ta đứng gần lối vào, rồi chúng ta—"
-Main_LahaiRoi_3_2_3_19,"Tôi xin lỗi, tôi có khiến bạn phải chờ đợi không"
+Main_LahaiRoi_3_2_3_20,"À, haha! Không có gì. Thực ra, bạn đã chú ý đến chúng tôi ngay khi đồng hồ điểm đúng giờ. Thời điểm hoàn hảo đấy, Giáo sư."
 Main_LahaiRoi_3_2_3_23,Tôi ổn.
-Main_LahaiRoi_3_2_3_20,"Haha! Không hề đâu. Bạn nhận ra chúng tôi ngay khi đồng hồ điểm giờ đấy. Đúng giờ quá, Giáo sư."
-Main_LahaiRoi_3_2_3_22,Robot có ổn không bạn
-Main_LahaiRoi_3_2_3_17,"Được rồi, bây giờ đến lúc cho cuộc họp đã lên lịch với {PlayerName} và Lynae."
-Main_LahaiRoi_3_2_3_24,Chỉ là một đoản mạch nhỏ. Nó kích hoạt giao thức hạn chế. Tôi cho rằng nó đang gặp trục trặc.
-Main_LahaiRoi_3_2_3_25,Ồ… Tôi quên tắt bộ phát phản ứng trong hệ thống vũ khí của mình. Có lẽ nó đang nói đến điều đó…
-Main_LahaiRoi_3_2_3_26,"Xin lỗi. Sau cuộc họp này, tôi cần quay lại tập đoàn Spacetrek để thuyết trình. Tôi đã hy vọng sẽ hoàn thành một vài tính toán trước đó."
-Main_LahaiRoi_3_2_3_27,"Nếu là như vậy, chúng ta bắt đầu ngay thôi."
-Main_LahaiRoi_3_2_3_29,"Tôi cũng có những cuộc hẹn khác hôm nay, nhưng… tôi nghĩ có thời gian cho một vài cuộc trò chuyện nhẹ nhàng."
-Main_LahaiRoi_3_2_3_30,"Tôi không chắc bạn muốn nói gì khi dùng từ ""ngon"", nên tôi mang theo một số mẫu từ nghiên cứu ẩm thực mới nhất của tôi."
-Main_LahaiRoi_3_2_3_31,YEESSS! Tôi biết mà! Giáo sư Mornye đúng là một bảo vật!
-Main_LahaiRoi_3_2_3_32,Bắt đầu thôi nào! Chúng ta có thể ăn trong lúc nói chuyện được!
-Main_LahaiRoi_3_2_3_33,"Tất nhiên, vào đi mà. Phòng của tôi đã dọn dẹp rồi, bạn cứ ngồi ở đâu cũng được!"
-Main_LahaiRoi_3_2_3_34,"Bạn và Lynae chờ ở phòng ký túc xá của cô ấy cho đến khi Mornye đến. Mải suy nghĩ, Mornye quên tắt bộ phát sóng phản ứng trong hệ thống vũ khí của cô ấy. Một Đơn vị TARD-E cáo buộc cô ấy sử dụng thiết bị công suất cao và tiến lại để bắt giữ cô ấy, nhưng lại bị áp chế một cách dễ dàng. Lynae mời cả hai bạn vào bên trong để trò chuyện trong lúc ăn."
-Main_LahaiRoi_3_2_30_1,"Trẻ em! Đừng hoảng loạn, đường thoát ở hướng này."
-Main_LahaiRoi_3_2_30_2,"Họ đã sống sót qua những thảm họa tồi tệ hơn rồi. Hãy quan tâm và bảo vệ lẫn nhau, mạng sống của bạn quan trọng hơn tất cả!"
+Main_LahaiRoi_3_2_3_17,Phải. Bây giờ là thời gian cho cuộc họp đã định với {PlayerName} và Lynae.
+Main_LahaiRoi_3_2_3_22,Robot sẽ ổn chứ?
+Main_LahaiRoi_3_2_3_24,Chỉ là một sự cố ngắn mạch nhỏ. Nó kích hoạt một giao thức hạn chế. Tôi cho rằng nó đang gặp trục trặc.
+Main_LahaiRoi_3_2_3_25,Ồ... tôi quên tắt bộ phát lò phản ứng trong hệ thống vũ khí của mình. Đó có lẽ là điều nó ám chỉ...
+Main_LahaiRoi_3_2_3_26,"Xin lỗi. Sau cuộc họp này, tôi cần quay lại Spacetrek Collective để thuyết trình. Tôi đã hy vọng hoàn thành một số phép tính trước."
+Main_LahaiRoi_3_2_3_27,"Nếu đúng như vậy, hãy bắt đầu ngay bây giờ."
+Main_LahaiRoi_3_2_3_29,"Hôm nay tôi có cuộc hẹn khác, nhưng... tôi tin rằng vẫn còn thời gian để nói chuyện nhẹ nhàng."
+Main_LahaiRoi_3_2_3_30,"Tôi không chắc bạn nói đến ""ngon"" là thế nào, nên tôi đã mang theo mẫu từ nghiên cứu thực phẩm mới nhất của mình."
+Main_LahaiRoi_3_2_3_31,CÓ! Tôi biết điều đó! Giáo sư Mornye thực sự là một viên ngọc quý!
+Main_LahaiRoi_3_2_3_32,Hãy bắt đầu! Chúng ta có thể vừa ăn vừa nói chuyện!
+Main_LahaiRoi_3_2_3_33,"Tất nhiên, vào đi. Tôi đã dọn dẹp ký túc xá của mình rồi, nên bạn muốn ngồi đâu cũng được!"
+Main_LahaiRoi_3_2_3_34,"Bạn và Lynae đợi Mornye đến tại ký túc xá của cô ấy. Mải suy nghĩ, Mornye quên tắt bộ phát lò phản ứng trong hệ thống vũ khí của mình. Một đơn vị TARD-E cáo buộc cô ấy sử dụng một thiết bị có công suất cao và di chuyển để giam giữ cô ấy nhưng bị khuất phục một cách dễ dàng. Lynae mời cả hai bạn vào nhà để nói chuyện về đồ ăn."
+Main_LahaiRoi_3_2_30_1,"Những đứa trẻ! Đừng hoảng sợ, lối thoát là lối này."
+Main_LahaiRoi_3_2_30_2,"Roya đã sống sót sau những thảm họa tồi tệ hơn. Hãy quan tâm lẫn nhau, cuộc sống của bạn quan trọng hơn bất cứ điều gì khác!"
 Main_LahaiRoi_3_2_300_1,Ba ngày sau.
-Main_LahaiRoi_3_2_31_5,"Điều gì đưa bạn đến đây vậy? Với cơn giận dữ của Bão Vô Tận ập đến, đây không phải là thời điểm thích hợp để vào Rừng Bjartr."
-Main_LahaiRoi_3_2_31_7,"Nghi thức Hồi sinh không thể thực hiện được, không thể trong thời điểm này. Ta khuyên hai bạn hãy nhanh chóng tìm đến nơi an toàn!"
-Main_LahaiRoi_3_2_31_8,Hãy cùng điều tra chuyện này nhé.
-Main_LahaiRoi_3_2_31_9,Một Bão Vô Tận khác…
+Main_LahaiRoi_3_2_31_5,"Điều gì đã đưa bạn đến đây? Với cơn thịnh nộ của Bão Hư Không, không còn thời gian để vào Rừng Bjartr."
+Main_LahaiRoi_3_2_31_7,"Nghi thức Trả lại không thể được thực hiện, không phải trong thời điểm này. Tôi kêu gọi cả hai bạn hãy nhanh chóng đến nơi an toàn!"
+Main_LahaiRoi_3_2_31_8,Chúng ta hãy cùng nhau điều tra điều này.
+Main_LahaiRoi_3_2_31_9,Lại một cơn bão hư không...
 Main_LahaiRoi_3_2_32_2,Tuy nhiên...
-Main_LahaiRoi_3_2_32_1,"Giống như mọi khi. Khi nó bị vô hiệu hóa, Bão Void sẽ dừng lại."
+Main_LahaiRoi_3_2_32_1,"Cũng giống như trước đây. Khi nó bị vô hiệu hóa, Bão Hư Không sẽ dừng lại."
 Main_LahaiRoi_3_2_32_4,Bạn là ai?
-Main_LahaiRoi_3_2_32_3,"Nếu đây thực sự là công việc của Foreseer Yngvar, điều gì khiến anh ta làm điều này?"
-Main_LahaiRoi_3_2_32_6,Đừng lo lắng. Con đường… đã được mở sẵn rồi.
-Main_LahaiRoi_3_2_32_7,Cuối cùng… cuối cùng…
-Main_LahaiRoi_3_2_32_8,Huấn luyện viên? Huấn luyện viên! Bạn có ổn không?
-Main_LahaiRoi_3_2_31_6,Đây là một thảm họa chưa từng thấy trong nhiều thế kỷ. Chúng ta luôn tin rằng <te href=700027>Solistrees'</te> Ánh sáng bảo vệ khu rừng khỏi những cơn bão như vậy.
+Main_LahaiRoi_3_2_32_3,"Nếu đây thực sự là tác phẩm của Foreseer Yngvar, điều gì sẽ khiến anh ta làm những việc như thế này?"
+Main_LahaiRoi_3_2_31_6,Đây là một thảm họa chưa từng thấy trong nhiều thế kỷ. Chúng tôi luôn tin tưởng vào <te href=700027>Solistrees'</te> ánh sáng bảo vệ rừng khỏi những cơn bão như vậy.
+Main_LahaiRoi_3_2_32_6,Đừng lo lắng. Con đường... đã được trải sẵn.
+Main_LahaiRoi_3_2_32_7,Cuối cùng... cuối cùng...
+Main_LahaiRoi_3_2_32_8,Người hướng dẫn? Người hướng dẫn! Bạn có ổn không?
+Main_LahaiRoi_3_2_32_9,Bạn có nhìn thấy gì nữa không? Lần này có vẻ tệ hơn lần trước.
 Main_LahaiRoi_3_2_32_13,Lời chào.
-Main_LahaiRoi_3_2_32_9,Bạn có thấy gì nữa không? Có vẻ tệ hơn lần trước.
-Main_LahaiRoi_3_2_32_10,Tôi nghĩ tôi đã thoáng thấy bên trong Solisylum.
-Main_LahaiRoi_3_2_32_12,Cơn Bão Vô Tận này có thể không chỉ ảnh hưởng đến khu rừng ở đây mà còn đến cả hoạt động của Solisylum.
-Main_LahaiRoi_3_2_32_14,"Người Tạo Dạng từng đưa ra một lời tiên tri. Nếu một người đến từ bên ngoài Lahai-Roi bảo vệ Rừng Bjartr khỏi sự hủy diệt, bạn sẽ nhận được một lời mời đến Solisylum."
-Main_LahaiRoi_3_2_32_17,"Thầy, xin hãy đợi một lát."
-Main_LahaiRoi_3_2_32_20,Chuuu…
-Main_LahaiRoi_3_2_32_18,Có điều gì đó tôi muốn nói với bạn.
-Main_LahaiRoi_3_2_32_19,Tôi nghĩ đó là lý do tại sao tôi lại thấy những ảo ảnh về thành viên của Lục Thần.
+Main_LahaiRoi_3_2_32_10,Tôi nghĩ tôi đã thấy thoáng qua bên trong Solisylum.
+Main_LahaiRoi_3_2_32_12,Cơn bão Void này có thể không chỉ ảnh hưởng đến khu rừng ở đây mà còn ảnh hưởng đến hoạt động của chính Solisylum.
+Main_LahaiRoi_3_2_32_14,"Shaper từng đưa ra một dự đoán. Nếu một du khách đến từ bên ngoài Lahai-Roi bảo vệ Bjartr Woods khỏi sự hủy diệt, họ sẽ nhận được lời mời đến Solisylum."
+Main_LahaiRoi_3_2_32_17,"Cố vấn, xin vui lòng... chờ một chút."
+Main_LahaiRoi_3_2_32_18,Có điều này tôi muốn nói với bạn.
+Main_LahaiRoi_3_2_32_20,Chuuu...
+Main_LahaiRoi_3_2_32_15,"Bây giờ, người trong dự đoán xuất hiện. <te href=700018>Solisylum</te> đang chờ bạn đến."
+Main_LahaiRoi_3_2_32_19,Tôi nghĩ đó là lý do tại sao tôi hay nhìn thấy hình ảnh của thành viên này trong Six.
 Main_LahaiRoi_3_2_32_21,Chu... Chu?
-Main_LahaiRoi_3_2_32_22,Bạn hả
-Main_LahaiRoi_3_2_32_23,Họ có những nhiệm vụ riêng để hoàn thành.
-Main_LahaiRoi_3_2_32_15,"Bây giờ, người được dự đoán đã xuất hiện. <te href=700018>Solisylum</te> Đang chờ đợi bạn đến."
-Main_LahaiRoi_3_2_32_24,"Con đường đến Solisylum đã mở ra. Vui lòng, hãy đi theo con đường này."
+Main_LahaiRoi_3_2_32_22,Buddy?
+Main_LahaiRoi_3_2_32_23,Họ có nhiệm vụ riêng của họ để hoàn thành.
+Main_LahaiRoi_3_2_32_24,Đường đến Solisylum ở đây. Xin vui lòng đi theo con đường này.
 Main_LahaiRoi_3_2_34_2,Tôi...
-Main_LahaiRoi_3_2_34_1,"Có chuyện gì vậy, Mornye？"
-Main_LahaiRoi_3_2_34_3,Tôi thực sự mong muốn có thể đi cùng bạn đến Solisylum. Nhưng tôi nghĩ rằng tốt nhất chúng ta nên chia tay ở đây.
-Main_LahaiRoi_3_2_34_4,Bạn có lo lắng về điều gì không
-Main_LahaiRoi_3_2_34_5,"Vâng. Khi bạn chạm vào Solistree lúc nãy, và ngay cả trong tầm nhìn đầu tiên của bạn, bạn trông có vẻ rất đau đớn."
-Main_LahaiRoi_3_2_32_25,"Bên trong khu rừng, một thiết bị giống hệt như những thiết bị trước đó đang gây ra Bão Hư Không. Sau khi vô hiệu hóa nó, bạn nghe thấy giọng nói bí ẩn của người đàn ông đó.
-Một người chăn cừu sau đó tiếp cận và mời bạn vào Solisylum, tin rằng bạn là người được dự đoán sẽ ngăn chặn sự hủy diệt."
-Main_LahaiRoi_3_2_34_7,"Nhưng tôi lại thiếu khả năng kết nối với họ như bạn vậy. Và kiến thức của Tập thể Spacetrek không phù hợp với cách thức của Roya. Về vấn đề này, tôi sợ rằng… tôi sẽ không thể giúp ích được nhiều đâu."
-Main_LahaiRoi_3_2_34_8,"Thay vì cùng bạn, tôi nghĩ có những cách khác tôi có thể đóng góp—ví dụ như nghiên cứu những điều chúng ta vẫn còn chưa biết."
+Main_LahaiRoi_3_2_34_1,"Có chuyện gì thế, Mornye?"
+Main_LahaiRoi_3_2_34_3,Tôi thực sự ước mình có thể đi cùng bạn đến Solisylum. Nhưng tôi nghĩ tốt nhất chúng ta nên chia tay ở đây.
+Main_LahaiRoi_3_2_32_25,"Trong khu rừng, một thiết bị khác giống hệt những thiết bị trước đó đang gây ra cơn bão Void. Sau khi tắt nó, bạn sẽ nghe thấy giọng nói của người đàn ông bí ẩn đó.
+Sau đó, Shepherdess tiếp cận và mời bạn vào Solisylum, tin rằng bạn chính là vị khách được dự đoán sẽ ngăn chặn sự hủy diệt."
+Main_LahaiRoi_3_2_34_4,Bạn đang lo lắng về điều gì đó?
+Main_LahaiRoi_3_2_34_5,"Đúng. Khi bạn chạm vào Solitree trước đó và ngay cả trong lần nhìn đầu tiên, bạn trông như đang bị đau dữ dội."
+Main_LahaiRoi_3_2_34_7,"Nhưng tôi thiếu khả năng kết nối với họ như bạn. Và kiến thức của Spacetrek Collective không phù hợp với cách làm của Roya. Trong vấn đề này, tôi e rằng... tôi sẽ không giúp được gì nhiều."
+Main_LahaiRoi_3_2_34_8,"Thay vì tham gia cùng bạn, tôi nghĩ có nhiều cách khác mà tôi có thể đóng góp—chẳng hạn như nghiên cứu những điều chưa biết mà chúng ta vẫn phải đối mặt."
 Main_LahaiRoi_3_2_34_9,Giống như mục đích thực sự của Yngvar.
-Main_LahaiRoi_3_2_34_10,Giống như nguồn gốc thực sự của thiết bị Bão Hư Không.
-Main_LahaiRoi_3_2_34_11,"Ừ. Yngvar lẽ ra phải có mặt tại Nghi Lễ Hồi Hương, nếu không vì Cơn Bão Hư Không kia. Điều hoàn toàn hợp lý để nghi ngờ anh ta là người đã cài đặt thiết bị."
-Main_LahaiRoi_3_2_34_12,"Ngoài ra, môi trường ở đây cũng rất bất thường. Điều tra những dị thường này sẽ giúp ích cho công việc của chúng ta."
-Main_LahaiRoi_3_2_34_13,"Thông thái như thường lệ, Giáo sư Mornye."
-Main_LahaiRoi_3_2_34_14,"Không, bạn, người thầy của tôi, vẫn còn đi trước tôi rất xa."
-Main_LahaiRoi_3_2_34_15,Được thôi. Có vẻ đây là lời tạm biệt rồi.
-Main_LahaiRoi_3_2_34_16,Hãy giữ liên lạc nhé.
-Main_LahaiRoi_3_2_34_17,"Nếu bạn gặp nguy hiểm, hãy gọi cho tôi."
-Main_LahaiRoi_3_2_34_18,"Ừ, bạn cũng vậy."
-Main_LahaiRoi_3_2_34_19,Xin bạn hãy cẩn thận Bạn nhớ giữ gìn sức khỏe nhé Mình sẽ gặp bạn khi chúng ta tập hợp lại
-Main_LahaiRoi_3_2_34_20,"Mornye đề nghị chia làm hai nhóm Bạn đi đến Solisylum, còn cô sẽ điều tra Yngvar và nguồn gốc của thiết bị Bão Không."
-Main_LahaiRoi_3_2_400_1,Tôi phát hiện dấu hiệu của Bão Hư Không trong rừng. Sóng... đang phân tích ngay bây giờ.
-Main_LahaiRoi_3_2_400_2,Đây là nguyên nhân gây ra sự hoảng loạn.
-Main_LahaiRoi_3_2_5_2,"Ư... mùi tanh nồng hòa lẫn vào nhau cả. Nó hơi tanh, và chất nhờt thì ẩm ướt, dính nhớt nữa."
-Main_LahaiRoi_3_2_5_4,"Thì ra là sự thật, đúng không? Các bạn thực sự làm ra món ăn vừa kinh khủng lại vừa đủ để các bạn chạy được ba ngày liên tục. Tôi cứ tưởng đó chỉ là đùa thôi."
-Main_LahaiRoi_3_2_5_5,Đây là một đột phá khoa học sử dụng công nghệ nén năng lượng. Đây là một trong những thành tựu mang tính biểu tượng nhất của Collective.
-Main_LahaiRoi_3_2_5_6,"{PlayerName}, bạn… cũng không thích nó phải không?"
-Main_LahaiRoi_3_2_5_7,Đây là đỉnh cao của khoa học.
-Main_LahaiRoi_3_2_5_8,"Nếu đây là vị của sự tiến bộ, tôi muốn quay lại."
-Main_LahaiRoi_3_2_5_9,Vâng! Tôi biết bạn sẽ hiểu thôi mà.
-Main_LahaiRoi_3_2_5_10,"Trên thực tế, hiệu suất nén năng lượng của nó vượt quá 95%. Con số này vượt qua các tiêu chuẩn do cả Liên bang Mới và Học viện Huaxu đặt ra, thậm chí còn tiến gần đến giới hạn lý thuyết."
-Main_LahaiRoi_3_2_5_11,"Về mặt khoa học mà nói, đó là một thành tựu lớn hơn nhiều so với khẩu vị"
-Main_LahaiRoi_3_2_5_12,Tôi… thấy…
-Main_LahaiRoi_3_2_5_13,Tôi sẽ nâng mức độ ưu tiên cho việc tối ưu hương vị trong lần lặp tiếp theo.
-Main_LahaiRoi_3_2_5_14,"Bây giờ, tôi muốn xem lại sự cố với Máy Phát Hiện Hyvatia."
-Main_LahaiRoi_3_2_5_16,(Bạn mô tả cách bạn xử lý sự cố Hyvatia như thế nào.)
-Main_LahaiRoi_3_2_5_18,"Tóm lại, phương pháp của bạn để ngăn chặn Hyvatia bao gồm những đường chém, những loạt đạn liên tiếp với đạn được phủ lớp, và sức mạnh vật lý—đấm đá—cho đến khi nó bị vô hiệu hóa và bất động."
-Main_LahaiRoi_3_2_5_19,Mình có bỏ sót gì không?
-Main_LahaiRoi_3_2_5_20,"Ừm... Giáo sư Mornye, bạn không ở đây để..."
-Main_LahaiRoi_3_2_5_15,"Lynae, {PlayerName}, Bạn có thể giải thích chi tiết cho tôi cách bạn đã kiềm chế được nó không?"
-Main_LahaiRoi_3_2_5_21,"Buồn cười thật, bạn muốn chúng ta trả giá à"
-Main_LahaiRoi_3_2_5_22,"Ý là, mọi thứ diễn ra quá nhanh! Chúng ta không có cách nào khác để ngăn chặn nó!"
-Main_LahaiRoi_3_2_5_23,"Mà thôi, chúng tôi chỉ là sinh viên thôi mà! Ngay cả muốn cũng không đủ tiền đâu…"
-Main_LahaiRoi_3_2_5_24,"Không, bạn đang hiểu lầm."
-Main_LahaiRoi_3_2_5_25,"Các cơ chế gây sát thương khác nhau dẫn đến các loại hỏng hóc khác nhau, và đòi hỏi các phương pháp sửa chữa cụ thể."
-Main_LahaiRoi_3_2_5_26,"Sát thương từ một số khả năng cộng hưởng đặc biệt khó phát hiện qua chẩn đoán tiêu chuẩn nếu không có dữ liệu trước đó. Vậy nên, hai bạn đã làm tốt khi kiềm chế nó bằng phương pháp vật lý."
-Main_LahaiRoi_3_2_5_29,"Có một bên thứ ba liên quan đến ""Nghi Lễ Mặt Trời Mới"" này sao"
-Main_LahaiRoi_3_2_5_30,"Ừ, dù nó là một câu chuyện dài đấy. Tôi phải bắt đầu từ đâu bây giờ…"
-Main_LahaiRoi_3_2_5_31,"QUÉT NGƯỜI VI PHẠM! PHÁT HIỆN VI PHẠM: Thiết bị công suất cao trái phép trong ký túc xá. Một người vi phạm đã tấn công đơn vị này. Nếu bạn nhìn thấy, hãy báo cáo ngay lập tức!"
-Main_LahaiRoi_3_2_5_32,"Khụ... Ngay cả Giáo sư Mornye cũng không thoát khỏi sự tức giận của TARD-E sao, bạn nhỉ"
-Main_LahaiRoi_3_2_5_33,"Đừng lo, tôi lo được việc này. Tôi sẽ thu hút sự chú ý của nó trong khi hai bạn rời đi."
+Main_LahaiRoi_3_2_34_10,Giống như nguồn gốc thực sự của thiết bị Void Storm.
+Main_LahaiRoi_3_2_34_11,Đúng. Yngvar phải có mặt tại Nghi thức Trở về nếu không có Cơn bão Hư Không đó. Thật hợp lý khi nghi ngờ anh ta là người đã cài đặt thiết bị này.
+Main_LahaiRoi_3_2_34_13,"Vẫn luôn sâu sắc, Giáo sư Mornye."
+Main_LahaiRoi_3_2_34_14,"Không. Bạn, người cố vấn của tôi, vẫn còn ở phía trước tôi rất xa."
+Main_LahaiRoi_3_2_34_15,Vậy thì. Tôi đoán bây giờ đây là lời tạm biệt.
+Main_LahaiRoi_3_2_34_12,"Ngoài ra, môi trường ở đây rất khác thường. Việc điều tra những điểm bất thường này sẽ giúp ích cho công việc của chúng tôi ở đây."
+Main_LahaiRoi_3_2_34_16,Giữ liên lạc.
+Main_LahaiRoi_3_2_34_17,"Nếu bạn gặp nguy hiểm gì, hãy gọi cho tôi."
+Main_LahaiRoi_3_2_34_18,"Ừm, bạn cũng vậy."
+Main_LahaiRoi_3_2_34_19,Xin hãy bảo trọng. Tôi sẽ gặp bạn khi chúng ta tập hợp lại.
+Main_LahaiRoi_3_2_400_1,Tôi phát hiện dấu hiệu của Bão Hư Không trong rừng. Dạng sóng... đang phân tích ngay bây giờ.
+Main_LahaiRoi_3_2_34_20,"Mornye đề nghị chia tay. Khi bạn đến Solisylum, cô ấy sẽ điều tra Yngvar và nguồn gốc của thiết bị Void Storm."
+Main_LahaiRoi_3_2_400_2,Vì vậy đây chính là nguyên nhân gây ra sự hoảng loạn.
+Main_LahaiRoi_3_2_5_2,Ugh... các mùi đều trộn lẫn với nhau. Nó có mùi tanh và kết cấu ướt và dính.
+Main_LahaiRoi_3_2_5_4,Vậy đó là sự thật hả? Các bạn thực sự đã làm ra những món ăn có mùi vị rất tệ nhưng vẫn khiến bạn phải chạy suốt ba ngày liền. Tôi tưởng đó chỉ là một trò đùa.
+Main_LahaiRoi_3_2_5_5,Đó là một bước đột phá khoa học sử dụng công nghệ nén năng lượng. Đó là một trong những thành tựu mang tính biểu tượng nhất của Collective.
+Main_LahaiRoi_3_2_5_6,"{PlayerName}, bạn... cũng không thích nó à?"
+Main_LahaiRoi_3_2_5_7,Đây là khoa học đỉnh cao.
+Main_LahaiRoi_3_2_5_8,Nếu đây là cảm giác của sự tiến bộ thì tôi muốn quay lại.
+Main_LahaiRoi_3_2_5_11,"Từ quan điểm khoa học, đó là một thành tựu lớn hơn nhiều so với hương vị."
+Main_LahaiRoi_3_2_5_10,"Thực tế, hiệu suất nén năng lượng của nó vượt quá 95%. Điều đó vượt quá tiêu chuẩn do cả Liên bang Mới và Học viện Huaxu đặt ra, thậm chí gần đến giới hạn lý thuyết."
+Main_LahaiRoi_3_2_5_9,Đúng! Tôi biết bạn sẽ hiểu.
+Main_LahaiRoi_3_2_5_12,Tôi... hiểu...
+Main_LahaiRoi_3_2_5_14,Bây giờ tôi muốn xem lại sự việc xảy ra với Máy dò Hyvatia.
+Main_LahaiRoi_3_2_5_16,(Mô tả cách bạn ngăn chặn sự cố Hyvatia.)
+Main_LahaiRoi_3_2_5_13,Tôi sẽ... nâng mức độ ưu tiên tối ưu hóa hương vị cho lần lặp tiếp theo.
+Main_LahaiRoi_3_2_5_15,"Lynae, {PlayerName}, bạn có thể hướng dẫn tôi chính xác cách bạn quản lý nó được không?"
+Main_LahaiRoi_3_2_5_19,Tôi có bỏ lỡ điều gì không?
+Main_LahaiRoi_3_2_5_18,"Tóm lại, phương pháp ngăn chặn Hyvatia của bạn bao gồm chém bằng lưỡi dao, bắn liên tục bằng đạn được bọc và dùng lực vật lý—dậm, tấn công—cho đến khi nó không thể hoạt động và bất động."
+Main_LahaiRoi_3_2_5_21,...Bắt chúng tôi phải trả giá phải không?
+Main_LahaiRoi_3_2_5_20,"Uh... Giáo sư Mornye, ông không ở đây để..."
+Main_LahaiRoi_3_2_5_22,"Ý tôi là, mọi chuyện diễn ra rất nhanh! Chúng tôi không còn cách nào khác để ngăn chặn nó!"
+Main_LahaiRoi_3_2_5_23,"Hơn nữa, chúng ta chỉ là sinh viên mà thôi! Chúng ta không thể đủ khả năng để làm điều đó ngay cả khi chúng ta muốn..."
+Main_LahaiRoi_3_2_5_24,Không. Bạn đang hiểu lầm.
+Main_LahaiRoi_3_2_5_25,Các cơ chế hư hỏng khác nhau gây ra các lỗi khác nhau và yêu cầu các phương pháp sửa chữa cụ thể.
+Main_LahaiRoi_3_2_5_26,"Thiệt hại từ một số khả năng Cộng hưởng đặc biệt khó được phát hiện thông qua chẩn đoán tiêu chuẩn nếu không có dữ liệu trước. Vì vậy, hai bạn đã làm rất tốt để ngăn chặn nó về mặt thể chất."
+Main_LahaiRoi_3_2_5_27,"Trong khi <te href=700016>Lễ Solar mới</te>, của <te href=700013>Máy dò Hyvatia</te> Việc theo dõi các thông số môi trường là cần thiết. Tôi đã chuyển báo cáo của bạn cho Giáo sư Anslem. Anh ấy nên hoàn thành việc sửa chữa sớm."
+Main_LahaiRoi_3_2_5_29,"Có bên thứ ba tham gia vào ""Lễ mặt trời mới"" này?"
+Main_LahaiRoi_3_2_5_30,"Vâng, dù đó là một câu chuyện dài. Tôi thậm chí phải bắt đầu từ đâu..."
+Main_LahaiRoi_3_2_5_31,QUÉT TÌM VI PHẠM! PHÁT HIỆN VI PHẠM: Thiết bị công suất cao trái phép trong ký túc xá. Một kẻ phạm tội đã tấn công đơn vị này. Nếu thấy phải báo ngay!
+Main_LahaiRoi_3_2_5_28,"Tại cuộc gặp sắp tới với <te href=700015>Roya</te>, Spacetrek Collective sẽ cần trình bày một kế hoạch khôi phục toàn diện để duy trì mối quan hệ đối tác của chúng ta."
+Main_LahaiRoi_3_2_5_32,Pfft... Ngay cả Giáo sư Mornye cũng không an toàn trước cơn thịnh nộ của TARD-E phải không?
+Main_LahaiRoi_3_2_5_33,"Đừng lo lắng, tôi có cái này. Tôi sẽ thu hút sự chú ý của nó trong khi hai người làm việc đó."
 Main_LahaiRoi_3_2_5_36,Ừm.
-Main_LahaiRoi_3_2_5_27,"Trong <te href=700016>Nghi Lễ Hiến Tế Mặt Trời Mới</te>, của <te href=700013>Máy Phát Hiện Hyvatia</te> Việc này rất quan trọng trong việc theo dõi các thông số môi trường. Tôi đã chuyển báo cáo của bạn cho Giáo sư Anslem rồi. Ông ấy nên sớm hoàn thành sửa chữa."
 Main_LahaiRoi_3_2_5_34,"Ba, hai, một—"
-Main_LahaiRoi_3_2_5_28,"Trong cuộc họp sắp tới với <te href=700015>Roya</te>, Tập thể Spacetrek sẽ cần trình bày một kế hoạch phục hồi đầy đủ để giữ vững mối quan hệ hợp tác của chúng ta."
-Main_LahaiRoi_3_2_5_35,Đó là tín hiệu của chúng ta.
-Main_LahaiRoi_3_2_5_37,"Sau khi bạn thử các mẫu thức ăn từ Viện Nghiên cứu mà Mornye mang đến, cô ấy hỏi về trận chiến của bạn với Hyvatia. Theo lời kể của cô ấy, bạn biết được rằng Nghi Lễ Mặt Trời Mới đang đến gần và Hyvatia đóng vai trò quan trọng trong đó. Ngay khi cô ấy chuẩn bị giải thích thêm, một Đơn Vị TARD-E ngắt lời."
-Main_LahaiRoi_3_2_52_1,"Đúng như dự đoán, Ổ Động Cơ Phản Ứng được bảo vệ bởi Bầy Ngoài Xâm hung hãn, hoạt động như hệ miễn dịch."
-Main_LahaiRoi_3_2_52_2,Có vẻ như nó đang chủ động hấp thụ Vật Chất Vô Định xung quanh để duy trì sự ổn định của Drive.
-Main_LahaiRoi_3_2_52_3,Tiếp xúc với vuốt của nó cực kỳ nguy hiểm Cẩn thận
-Main_LahaiRoi_3_2_53_1,Tiến đến địa điểm mục tiêu. Chuẩn bị nhận dữ liệu.
+Main_LahaiRoi_3_2_5_35,Đó là gợi ý của chúng tôi.
+Main_LahaiRoi_3_2_5_37,"Sau khi bạn thử mẫu thức ăn của Viện Nghiên cứu mà Mornye mang đến, cô ấy hỏi về cuộc chiến của bạn với Hyvatia. Từ lời kể của cô ấy, bạn biết rằng Lễ Mặt trời Mới đang đến gần và Hyvatia rất cần thiết cho lễ đó. Ngay khi cô chuẩn bị giải thích thêm thì Đơn vị TARD-E chen vào."
+Main_LahaiRoi_3_2_52_1,"Đúng như dự đoán, Reactor Drive được bảo vệ bởi Exoswarm hung hãn hoạt động giống như hệ thống miễn dịch."
+Main_LahaiRoi_3_2_52_2,Nó dường như tích cực hấp thụ Vật chất trống xung quanh để duy trì sự ổn định của Drive.
+Main_LahaiRoi_3_2_52_3,Tiếp xúc với móng vuốt của nó là rất nguy hiểm. Hãy thận trọng.
+Main_LahaiRoi_3_2_53_1,Đang tiếp cận vị trí mục tiêu. Đang chuẩn bị nhận dữ liệu.
+Main_LahaiRoi_3_2_53_2,Nồng độ vật chất trống ngày càng tăng. Biểu hiện bất thường được phát hiện trong Reactor Drive! Di tản ngay lập tức!
 Main_LahaiRoi_3_2_53_7,Vậy...
-Main_LahaiRoi_3_2_53_2,Nồng độ Vật chất Vô ảnh đang gia tăng. Phát hiện biểu hiện bất thường trong Ổ Động Cơ Phản ứng! Sơ tán ngay lập tức!
-Main_LahaiRoi_3_2_53_3,"Lặp lại, sơ tán ngay lập tức!"
-Main_LahaiRoi_3_2_53_6,Chúng ta đã... đi được đến đây rồi.
-Main_LahaiRoi_3_2_53_8,Thật đáng tiếc… Tôi không muốn nói lời tạm biệt với bạn ngay bây giờ.
-Main_LahaiRoi_3_2_53_9,Dữ liệu đã nhận. Đang phân tích...
+Main_LahaiRoi_3_2_53_3,"Nhắc lại, sơ tán ngay lập tức!"
+Main_LahaiRoi_3_2_53_6,Chúng ta đã... đi xa đến mức này rồi.
+Main_LahaiRoi_3_2_53_8,Tiếc quá... tôi chưa muốn nói lời tạm biệt.
+Main_LahaiRoi_3_2_53_9,Dữ liệu đã nhận được. Đang phân tích...
+Main_LahaiRoi_3_2_53_10,"Giáo sư Mornye, ông có đó không? Nếu bạn nghe thấy điều này, xin vui lòng trả lời!"
+Main_LahaiRoi_3_2_54_1,Bạn sắp rời Lahai-Roi phải không?
+Main_LahaiRoi_3_2_53_11,Tôi sẽ tự mình thực hiện bước cuối cùng đó!
 Main_LahaiRoi_3_2_54_2,Được.
-Main_LahaiRoi_3_2_53_10,"Giáo sư Mornye, bạn có nghe thấy không? Nếu bạn nghe thấy, xin hãy trả lời!"
-Main_LahaiRoi_3_2_53_11,Tôi sẽ tự mình bước thêm bước cuối cùng này!
-Main_LahaiRoi_3_2_54_1,Bạn rời khỏi Lahai-Roi sao
-Main_LahaiRoi_3_2_54_3,"Đôi khi, chỉ bằng cách nói lời tạm biệt mới có thể có sự tiến bộ và thay đổi."
-Main_LahaiRoi_3_2_54_4,"Dù sao, ngay cả khi tôi rời đi—"
-Main_LahaiRoi_3_2_54_5,Lahai-Roi vẫn sẽ tiếp tục tiến về phía trước bằng chính đôi chân của nó.
-Main_LahaiRoi_3_2_54_6,Phải không bạn?
-Main_LahaiRoi_3_2_54_7,Tôi... có đến được với bạn lần này không...
+Main_LahaiRoi_3_2_54_3,"Đôi khi, chỉ bằng cách nói lời tạm biệt mới có thể tiến bộ và thay đổi."
+Main_LahaiRoi_3_2_54_4,"Sau cùng, ngay cả khi tôi rời đi—"
+Main_LahaiRoi_3_2_54_7,Liệu lần này tôi... có đến được với bạn không...
+Main_LahaiRoi_3_2_54_6,Đúng không?
+Main_LahaiRoi_3_2_54_5,Lahai-Roi vẫn sẽ tiếp tục tiến lên trên đôi chân của mình.
 Main_LahaiRoi_3_2_54_10,Tuyệt vời thật.
-Main_LahaiRoi_3_2_54_8,Huấn luyện viên…
-Main_LahaiRoi_3_2_54_9,Báo cáo: Phân tích dữ liệu hoàn tất. Helios đã hoạt động trở lại!
+Main_LahaiRoi_3_2_54_9,Báo cáo: Phân tích dữ liệu hoàn tất. Helios hoạt động trở lại!
+Main_LahaiRoi_3_2_54_8,Mentor...
+Main_LahaiRoi_3_2_54_12,Rất đẹp.
+Main_LahaiRoi_3_2_55_2,"{PlayerName}, ở đây!"
 Main_LahaiRoi_3_2_54_11,Mặt trời.
-Main_LahaiRoi_3_2_54_12,Đẹp quá.
-Main_LahaiRoi_3_2_55_2,"{PlayerName}, Ở đây!"
+Main_LahaiRoi_3_2_55_4,Xin chúc mừng!
+Main_LahaiRoi_3_2_55_3,"Đầu tiên, tin tốt! Họ đã gạch tên tôi khỏi ""danh sách theo dõi sức khỏe tâm thần"". Cuối cùng tôi cũng MIỄN PHÍ!"
+Main_LahaiRoi_3_2_55_6,Và... tin xấu. Vì tôi đã làm một số điều giả mạo trong quá trình điều tra nên họ nói rằng tôi đã vi phạm các quy tắc.
+Main_LahaiRoi_3_2_55_5,Tận hưởng hương vị ngọt ngào của tự do!
 Main_LahaiRoi_3_2_55_7,Hả?!
-Main_LahaiRoi_3_2_55_3,"Đầu tiên là tin tốt! Họ đã gạch tên tôi khỏi ""danh sách theo dõi sức khỏe tinh thần."" Cuối cùng thì tôi cũng được tự do!"
-Main_LahaiRoi_3_2_55_4,Chúc mừng!
-Main_LahaiRoi_3_2_55_5,Tận hưởng vị ngọt của tự do!
-Main_LahaiRoi_3_2_55_6,"Và… tin xấu. Vì tôi có hơi sửa đổi một chút trong quá trình điều tra, họ nói tôi vi phạm quy tắc"
-Main_LahaiRoi_3_2_55_8,"Nhưng vì tôi làm vậy để đảm bảo kẻ xấu không thoát tội, và tôi thực sự đã giúp đỡ—"
-Main_LahaiRoi_3_2_55_9,Vậy Học Viện có được bằng chứng xác thực rồi sao
+Main_LahaiRoi_3_2_55_9,Vậy là Học viện đã có trong tay bằng chứng chắc chắn?
+Main_LahaiRoi_3_2_55_8,"Nhưng vì tôi làm như vậy để đảm bảo kẻ xấu không thoát khỏi bất cứ điều gì, và tôi thực sự đã giúp đỡ—"
+Main_LahaiRoi_3_2_55_14,Tôi đoán điều đó có nghĩa là bây giờ việc bỏ lớp của cô ấy sẽ khó khăn hơn.
+Main_LahaiRoi_3_2_55_13,Nhưng tôi phải cảm ơn Giáo sư Mornye vì đã gửi một email chính thức giải thích mọi thứ. Đó là lý do duy nhất họ tin tôi.
 Main_LahaiRoi_3_2_55_16,Cô ấy sẽ ổn thôi.
-Main_LahaiRoi_3_2_55_10,"Được thôi, khi bạn đã có nghi phạm, mọi thứ còn lại rất đơn giản. Thêm vào đó, có một giáo viên mà Forte của người đó có thể moi được sự thật từ bất kỳ ai."
-Main_LahaiRoi_3_2_55_13,Nhưng tôi vẫn phải cảm ơn Giáo sư Mornye vì đã gửi một email chính thức giải thích mọi thứ. Đó là lý do duy nhất họ tin tôi.
-Main_LahaiRoi_3_2_55_14,Có vẻ như việc trốn học của bạn sẽ khó khăn hơn đấy.
-Main_LahaiRoi_3_2_55_15,Bác sĩ Herssen nói cô ấy bị quá tải quá lâu rồi… Tôi lo lắng.
+Main_LahaiRoi_3_2_55_10,"Chà, một khi bạn đã có nghi phạm, phần còn lại thật dễ dàng. Ngoài ra, có một giáo viên có sở trường có thể moi ra sự thật từ bất kỳ ai."
+Main_LahaiRoi_3_2_55_18,"Vâng, bạn nói đúng!"
 Main_LahaiRoi_3_2_55_17,Bạn nên lo lắng hơn về việc vượt qua lớp học của cô ấy.
-Main_LahaiRoi_3_2_55_18,"Ừ, bạn nói đúng mà!"
-Main_LahaiRoi_3_2_55_19,Chúng ta đi xem cô ấy thế nào đi. Tôi cá là biết chúng ta đang nghĩ về cô ấy sẽ giúp cô ấy nhanh chóng hồi phục hơn!
-Main_LahaiRoi_3_2_55_20,Chào bạn. Tôi có thể hỏi bạn có phải {PlayerName}?
-Main_LahaiRoi_3_2_55_21,Tôi đến đây để thông báo với bạn rằng Giáo sư Mornye vừa tỉnh lại.
-Main_LahaiRoi_3_2_55_22,"Kết luận cuối cùng là tôi vẫn phải nằm trong danh sách ""giám sát sức khỏe tinh thần"" trong một thời gian."
-Main_LahaiRoi_3_2_55_23,"Nghi thức Mặt Trời Mới thành công. Quay trở lại Học Viện, bạn gặp Lynae và được biết Mornye, người đã ngã gục vì Quá Tải trong Trình Điều Khiển Phản Ứng, đã tỉnh lại."
-Main_LahaiRoi_3_2_57_1,"Vui lòng chờ, đừng vào đây trước nhé—"
-Main_LahaiRoi_3_2_57_2,Ư... Aaa!
-Main_LahaiRoi_3_2_57_3,"Xin lỗi, cơ thể tôi… tôi vẫn chưa thể cử động như bình thường được"
-Main_LahaiRoi_3_2_57_4,"Tôi đã từng trải qua phục hồi chức năng rồi, cũng đã khá lâu kể từ lần đó. Đừng lo, tôi có thể tự mình xử lý được chuyện này. Ugh…"
-Main_LahaiRoi_3_2_57_5,"Giáo sư Mornye, bạn cảm thấy thế nào rồi"
-Main_LahaiRoi_3_2_57_6,Bác sĩ Herssen nói bạn đang trong tình trạng rất tệ. Rất vui khi thấy bạn đã hồi phục một chút.
-Main_LahaiRoi_3_2_57_7,"Thực lòng mà nói, lúc đó tôi không nghĩ mình sẽ sống sót đâu"
-Main_LahaiRoi_3_2_57_9,Một chiếc nhẫn xanh lam nhạt sao
-Main_LahaiRoi_3_2_57_10,Bạn có thể mô tả chi tiết hơn những gì bạn đã thấy không
-Main_LahaiRoi_3_2_57_11,"Tôi… tôi không chắc, nhưng tôi nghĩ cô ấy đã bảo vệ tôi."
-Main_LahaiRoi_3_2_57_12,(Có vẻ như cô gái mà Mornye nhìn thấy là người mà tôi đã gặp khi mới đến Lahai-Roi.)
-Main_LahaiRoi_3_2_57_13,(Cô ấy có thể đối đầu trực tiếp với Threnodian và xuất hiện trong Buồng Phản Ứng. Cô ấy có mối liên hệ với Exostrider và Threnodian theo những cách mà chúng ta vẫn chưa hiểu rõ hoàn toàn.)
-Main_LahaiRoi_3_2_57_14,(Tìm hiểu xem cô ấy là ai và điều gì đã xảy ra với cô ấy sẽ là nhiệm vụ quan trọng tiếp theo.)
-Main_LahaiRoi_3_2_57_15,"{PlayerName}? {PlayerName}—Này, đừng mơ màng nữa!"
-Main_LahaiRoi_3_2_57_16,"Để ăn mừng việc Giáo sư Mornye tỉnh lại và khủng hoảng được giải quyết, bạn nghĩ chúng ta nên…"
-Main_LahaiRoi_3_2_57_17,Nên dịch cái gì?
+Main_LahaiRoi_3_2_55_15,Tiến sĩ Herssen nói rằng cô ấy đã được ép xung quá lâu... Tôi lo lắng.
+Main_LahaiRoi_3_2_55_20,Xin chào. Tôi có thể hỏi bạn có phải không {PlayerName}?
+Main_LahaiRoi_3_2_55_19,Hãy đi kiểm tra cô ấy. Tôi cá rằng việc biết chúng ta đang nghĩ về cô ấy sẽ giúp cô ấy phục hồi nhanh hơn!
+Main_LahaiRoi_3_2_55_23,"Lễ năng lượng mặt trời mới thành công. Trở lại Học viện, bạn gặp Lynae và biết rằng Mornye, người đã gục ngã sau khi ép xung bên trong Reactor Drive, đã tỉnh lại."
+Main_LahaiRoi_3_2_55_21,Tôi đến đây để thông báo với bạn rằng Giáo sư Mornye vừa tỉnh dậy.
+Main_LahaiRoi_3_2_55_22,Phán quyết cuối cùng là tôi vẫn phải nằm trong “danh sách theo dõi sức khỏe tâm thần” một thời gian.
+Main_LahaiRoi_3_2_57_1,"Vui lòng đợi, đừng vào vội—"
+Main_LahaiRoi_3_2_57_2,Ờ... À!
+Main_LahaiRoi_3_2_57_4,"Tôi đã từng trải qua quá trình cai nghiện trước đây, và đã lâu rồi chuyện này mới xảy ra. Đừng lo, việc này tôi có thể tự mình giải quyết được. Ờ..."
+Main_LahaiRoi_3_2_57_3,"Xin lỗi, cơ thể của tôi... tôi vẫn không thể di chuyển như bình thường."
+Main_LahaiRoi_3_2_57_6,Bác sĩ Herssen nói bạn đang ở tình trạng rất tệ. Thật tuyệt khi thấy bạn đã hồi phục được một chút.
+Main_LahaiRoi_3_2_57_7,"Thành thật mà nói, vào lúc đó, tôi không nghĩ mình sẽ làm được."
+Main_LahaiRoi_3_2_57_8,"Nhưng… nhưng khi tôi đang lơ lửng giữa trạng thái mất ý thức, tôi nghĩ mình đã nhìn thấy một cô gái với chiếc nhẫn màu xanh nhạt."
+Main_LahaiRoi_3_2_57_5,"Giáo sư Mornye, bây giờ ông cảm thấy thế nào?"
+Main_LahaiRoi_3_2_57_9,Một chiếc nhẫn màu xanh nhạt?
+Main_LahaiRoi_3_2_57_11,"Tôi... tôi không thể chắc chắn, nhưng tôi nghĩ cô ấy đã bảo vệ tôi."
+Main_LahaiRoi_3_2_57_10,Bạn có thể mô tả những gì bạn nhìn thấy chi tiết hơn?
+Main_LahaiRoi_3_2_57_14,(Tìm ra cô ấy là ai và chuyện gì đã xảy ra với cô ấy sẽ là nhiệm vụ lớn tiếp theo.)
+Main_LahaiRoi_3_2_57_12,(Có vẻ như cô gái mà Mornye nhìn thấy chính là cô gái tôi gặp khi lần đầu đến Lahai-Roi.)
+Main_LahaiRoi_3_2_57_13,(Cô ấy có thể tự mình đối đầu với Threnodian và xuất hiện trong Reactor Drive. Cô ấy kết nối với Exostrider và Threnodian theo những cách mà chúng ta vẫn chưa hiểu hết.)
+Main_LahaiRoi_3_2_57_16,"Để chúc mừng Giáo sư Mornye thức tỉnh và cuộc khủng hoảng được ngăn chặn, bạn có nghĩ chúng ta nên..."
+Main_LahaiRoi_3_2_57_15,"{PlayerName}? {PlayerName}—Này, đừng có giãn cách nữa!"
+Main_LahaiRoi_3_2_57_17,Nên cái gì?
+Main_LahaiRoi_3_2_57_19,"Không có gì có thể đánh bại được cơn gió thổi vào mặt bạn, đặc biệt là khi—"
+Main_LahaiRoi_3_2_57_18,Đi một chuyến đi!
+Main_LahaiRoi_3_2_57_21,"Heh, một bức ảnh dưới Helios mới? Có vẻ như nó sẽ là một món quà lưu niệm tuyệt vời."
+Main_LahaiRoi_3_2_57_20,Ba chúng ta vẫn chưa có ảnh nhóm!
 Main_LahaiRoi_3_2_57_22,Được.
-Main_LahaiRoi_3_2_57_18,Đi thôi!
-Main_LahaiRoi_3_2_57_19,"Không gì sánh bằng cảm giác gió thổi trên mặt bạn, đặc biệt khi—"
-Main_LahaiRoi_3_2_57_20,Chúng mình vẫn chưa có ảnh chụp cả nhóm!
-Main_LahaiRoi_3_2_57_21,"Hừ, một bức ảnh dưới Helios mới ư Nghe có vẻ sẽ làm kỷ niệm đẹp đấy"
-Main_LahaiRoi_3_2_57_23,"Chứng kiến sự trỗi dậy của mặt trời mới cùng nhau Đó cũng là lời hứa giữa hai chúng ta, Sư phụ."
-Main_LahaiRoi_3_2_58_1,Vậy sao? Không tệ chứ nhỉ?
-Main_LahaiRoi_3_2_58_2,"Ngày xưa, mỗi khi tôi lo lắng về tương lai, việc ở đây luôn khiến tôi cảm thấy tốt hơn một chút."
-Main_LahaiRoi_3_2_58_3,"Nhìn này, bây giờ chúng ta có thể thoải mái tận hưởng làn gió mát mà không cần lo lắng gì cả!"
-Main_LahaiRoi_3_2_58_4,"Tôi từng nghĩ rằng khi nhìn thấy cảnh này, tôi sẽ khóc vì ước nguyện của tôi sẽ thành hiện thực."
-Main_LahaiRoi_3_2_57_24,"Mặc dù vẫn còn yếu đuối về thể chất, Mornye đã không còn nguy hiểm. Cô ấy nói với bạn rằng trong Drive, cô ấy đã thấy có vẻ như một cô gái với nhẫn xanh nhạt đã cứu cô ấy. Bạn quyết định bí ẩn này sẽ là mục tiêu tiếp theo của bạn.
-Để ăn mừng sự kết thúc của cuộc khủng hoảng và sự hồi phục của Mornye, bạn, Lynae và Mornye cùng đi dạo phố."
-Main_LahaiRoi_3_2_58_5,"Nhưng giờ đây, khi tôi thấy ánh sáng của Helios trải khắp vùng đất, với những vùng băng giá cổ xưa và những người mới đến nơi này vài chục năm trước cùng chia sẻ sự ấm áp đó…"
-Main_LahaiRoi_3_2_58_6,"Tôi chỉ nghĩ, thật là một cảnh tượng đẹp quá."
-Main_LahaiRoi_3_2_58_7,"Được thôi, hãy hét điều đó lên trên nóc nhà nào!"
-Main_LahaiRoi_3_2_58_8,Tới tự do!
+Main_LahaiRoi_3_2_57_24,"Dù thể chất còn yếu nhưng Mornye đã thoát khỏi nguy hiểm. Cô ấy nói với bạn rằng bên trong Drive, cô ấy nhìn thấy một cô gái có chiếc nhẫn màu xanh nhạt đã cứu cô ấy. Bạn quyết định bí ẩn này sẽ là mục tiêu tiếp theo của bạn.
+Để kỷ niệm sự kết thúc của cuộc khủng hoảng và sự hồi phục của Mornye, bạn, Lynae và Mornye lên đường đi chơi."
+Main_LahaiRoi_3_2_57_23,"Cùng nhau chứng kiến sự trỗi dậy của mặt trời mới. Đó cũng là lời hứa giữa hai chúng ta, Mentor."
+Main_LahaiRoi_3_2_58_1,So? Không tệ nhỉ?
+Main_LahaiRoi_3_2_58_2,"Trước đây, mỗi khi tôi căng thẳng về tương lai, việc ở đây luôn khiến tôi cảm thấy dễ chịu hơn một chút."
+Main_LahaiRoi_3_2_58_3,"Hãy nhìn xem, bây giờ chúng ta có thể tận hưởng làn gió mà không cần quan tâm đến thế giới!"
+Main_LahaiRoi_3_2_58_5,"Nhưng bây giờ, khi tôi nhìn thấy ánh sáng của Helios tràn ngập vùng đất, với những vùng đất băng giá cổ kính và những con người mới ở đây vài thập kỷ đã chia sẻ cùng một hơi ấm..."
+Main_LahaiRoi_3_2_58_4,"Tôi từng nghĩ rằng khi tôi nhìn thấy khung cảnh này, tôi sẽ khóc vì ước muốn của tôi sẽ được thực hiện."
+Main_LahaiRoi_3_2_58_8,Để tự do!
+Main_LahaiRoi_3_2_58_6,"Tôi chỉ nghĩ, thật là một cảnh đẹp."
+Main_LahaiRoi_3_2_58_7,"Chà, hãy hét lên điều đó từ trên mái nhà!"
 Main_LahaiRoi_3_2_58_9,Đến nền văn minh.
-Main_LahaiRoi_3_2_58_10,Chào những khởi đầu mới.
-Main_LahaiRoi_3_2_58_11,"Ba người bạn chứng kiến Lahai-Roi được tắm trong ánh sáng của Helios. Bạn nâng ly chúc cho tự do, cho nền văn minh và cho những khởi đầu mới."
-Main_LahaiRoi_3_2_6_1,"Hmm... tần số kết nối với bạn đến từ đây. Nhưng bây giờ, tôi không ngửi thấy gì cả."
+Main_LahaiRoi_3_2_58_10,Đến những khởi đầu mới.
+Main_LahaiRoi_3_2_58_11,"Ba bạn chứng kiến Lahai-Roi tắm trong ánh sáng của Helios. Bạn nâng ly chúc mừng tự do, nền văn minh và những khởi đầu mới."
+Main_LahaiRoi_3_2_6_1,Hmm... tần số kết nối với bạn đến từ đây. Nhưng bây giờ tôi chẳng ngửi thấy gì cả.
+Main_LahaiRoi_3_2_6_3,Bạn đã tìm thấy những gì bạn đang tìm kiếm?
+Main_LahaiRoi_3_2_6_4,Không. Con đường kết thúc ở đây. Nhưng tôi đã thấy những điều khác trong ký ức đó.
+Main_LahaiRoi_3_2_6_2,(Giọng nói trước đó nói rằng nó sẽ chia sẻ sức mạnh cuối cùng của Heliogyre để nó không bị phai nhạt. Chắc chắn là Soliskin đó. Cuối cùng nó đã biến mất ở đây?)
 Main_LahaiRoi_3_2_6_6,Được.
-Main_LahaiRoi_3_2_6_2,(Tiếng nói lúc nãy nói rằng nó sẽ chia sẻ phần cuối cùng của sức mạnh Heliogyre để nó không biến mất. Chắc hẳn là Soliskin. Nó có biến mất ở đây không?)
-Main_LahaiRoi_3_2_6_3,Bạn tìm thấy những gì bạn đang tìm không?
-Main_LahaiRoi_3_2_6_4,Không. Con đường này kết thúc ở đây thôi. Nhưng tôi đã thấy những thứ khác trong ký ức đó.
-Main_LahaiRoi_3_2_6_5,"Mornye, bạn có biết ""Heliogyre"" là gì không"
+Main_LahaiRoi_3_2_6_5,"Mornye, bạn có biết về ""Heliogyre"" không?"
+Main_LahaiRoi_3_2_6_15,Sự bế tắc?
+Main_LahaiRoi_3_2_6_16,(Hãy mô tả những gì bạn đã thấy cho Mornye.)
 Main_LahaiRoi_3_2_6_14,"Trong ký ức đó, tôi nghe thấy một giọng nói nói rằng hắn sẽ buộc Heliogyre phải dừng lại."
-Main_LahaiRoi_3_2_6_15,Tình trạng bế tắc?
-Main_LahaiRoi_3_2_6_16,(Hãy mô tả những gì bạn thấy cho Mornye.)
-Main_LahaiRoi_3_2_6_7,"""Echo""<te href=700019>Heliogyre</te>"" là một trong những thành phần quan trọng nhất của Nghi Lễ Ánh Dương Mới."
-Main_LahaiRoi_3_2_6_17,"Bạn đang nói bạn nghe thấy một giọng nói kêu cứu, nói rằng hắn sẽ ngăn chặn hoạt động của Heliogyre"
-Main_LahaiRoi_3_2_6_18,Có phải đó là lý do cuộc họp bị hủy không?
-Main_LahaiRoi_3_2_6_19,"(Khi tôi điều khiển Voidworm, một giọng nói bảo tôi phải bảo vệ mặt trời. Dù là ai, tôi không nghĩ cô ấy có ý xấu. Cô ấy đề nghị giúp đỡ. Hiện tại, tôi sẽ làm theo lời cô ấy.)"
-Main_LahaiRoi_3_2_6_21,(Áo choàng đen thêu chỉ vàng...)
-Main_LahaiRoi_3_2_6_22,(Một chiếc mũ hình dáng như hai chiếc sừng…)
-Main_LahaiRoi_3_2_6_23,(Và đôi mắt khác thường kia…)
-Main_LahaiRoi_3_2_6_24,"Tôi cần tìm hiểu anh ta là ai, Mornye. Bạn có biết bất kỳ Roya nào quen thuộc với nội bộ của bộ tộc không"
-Main_LahaiRoi_3_2_6_25,Hmm... Tôi có một vài học viên Royan. Có lẽ họ biết anh ta là ai.
-Main_LahaiRoi_3_2_6_26,Giờ học ở Học Viện rồi. Mình quay lại không
-Main_LahaiRoi_3_2_6_27,"Cứu! Cứu! Maja—Maja, cô ấy... Ai đó, làm ơn giúp!"
-Main_LahaiRoi_3_2_6_28,"Nếu không, dữ liệu luận án của chúng ta sẽ biến mất hoàn toàn!"
-Main_LahaiRoi_3_2_6_29,"Đừng lo lắng, {PlayerName}. Nếu bạn thấy một học sinh vừa hét ""cứu"" vừa hét ""luận văn"" cùng một lúc, bất kể họ hét to đến đâu, đó chưa bao giờ là tình huống khẩn cấp."
-Main_LahaiRoi_3_2_6_31,(Ừm. Vẫn còn một vấn đề nữa liên quan đến Viện Nghiên Cứu. Chúng ta không nên tiết lộ kế hoạch của mình cho họ vội.)
-Main_LahaiRoi_3_2_6_34,"Hyvatia có thể theo dõi dữ liệu môi trường, nhưng dữ liệu quan sát thô về Động cơ Phản ứng chỉ có thể thu thập được từ Heliogyre—một bộ phận của Exostrider."
+Main_LahaiRoi_3_2_6_17,"Bạn đang nói rằng bạn đã nghe thấy một giọng nói yêu cầu giúp đỡ, nói rằng anh ta sẽ ngừng hoạt động của Heliogyre."
+Main_LahaiRoi_3_2_6_7,"""Echo""<te href=700019>Heliogyre</te>"" là một trong những thành phần quan trọng nhất của New Solar Ceremony."
+Main_LahaiRoi_3_2_6_20,"(Và có một điều chắc chắn. Người biết đến tôi với danh hiệu ""Arbiter"" cần tôi giúp đỡ.)"
+Main_LahaiRoi_3_2_6_19,"(Khi tôi xử lý con Voidworm, một giọng nói bảo tôi phải bảo vệ mặt trời. Dù cô ấy là ai, tôi không nghĩ cô ấy có ý định làm hại. Cô đề nghị giúp đỡ. Hiện tại, tôi sẽ làm theo những gì cô ấy đề nghị.)"
+Main_LahaiRoi_3_2_6_18,Có lẽ đó là lý do tại sao cuộc họp bị hủy bỏ?
+Main_LahaiRoi_3_2_6_22,(Chiếc mũ đội đầu có hình hai chiếc sừng...)
+Main_LahaiRoi_3_2_6_21,(Áo choàng đen thêu vàng...)
+Main_LahaiRoi_3_2_6_23,(Và đôi mắt khác thường đó...)
+Main_LahaiRoi_3_2_6_24,"Tôi cần tìm ra hắn là ai, Mornye. Bạn có biết Roya nào quen thuộc với hoạt động nội bộ của bộ tộc không?"
+Main_LahaiRoi_3_2_6_26,Đó là giờ học ở Học viện. Chúng ta có nên quay lại không?
+Main_LahaiRoi_3_2_6_27,"Giúp đỡ! Giúp đỡ! Maja—Maja, cô ấy... Ai đó, làm ơn giúp đỡ!"
+Main_LahaiRoi_3_2_6_28,"Nếu không, dữ liệu luận án của chúng tôi sẽ biến mất hoàn toàn!"
+Main_LahaiRoi_3_2_6_25,Hmm... Tôi có một số học sinh Royan. Họ có thể biết anh ta là ai.
+Main_LahaiRoi_3_2_6_30,Nhưng Maja là một trong những học sinh của Roya mà tôi đã đề cập. Vì bạn đang tìm cô ấy nên chúng tôi cũng có thể xem nó nói về cái gì.
+Main_LahaiRoi_3_2_6_29,"Đừng lo lắng, {PlayerName}. Nếu bạn thấy một học sinh hét lên ""help"" và ""thesis"" trong cùng một hơi thở, cho dù họ có hét to đến đâu thì đó cũng không bao giờ thực sự là một trường hợp khẩn cấp."
+Main_LahaiRoi_3_2_6_31,(Ừm. Còn một vấn đề khác gắn liền với Viện Nghiên cứu. Chúng ta chưa nên tiết lộ kế hoạch của mình cho họ ngay lúc này.)
+Main_LahaiRoi_3_2_6_35,Chỉ có bộ tộc Roya mới có thể phân biệt được lời đọc của Heliogyre. Chính vì vậy mà Tập thể cần sự hợp tác của các bạn trong Lễ Mặt Trời Mới.
+Main_LahaiRoi_3_2_6_34,"Hyvatia có thể giám sát dữ liệu môi trường, nhưng dữ liệu quan sát thô trên Reactor Drive chỉ có thể được lấy từ Heliogyre—một thành phần của chính Exostrider."
+Main_LahaiRoi_3_2_8_1,"Bình tĩnh, Maja, bình tĩnh... Tốt, họ đã dừng lại rồi. Có lẽ tôi nên tắt chúng đi?"
+Main_LahaiRoi_3_2_8_2,"Không, nếu tôi buộc tắt máy, tôi sẽ mất dữ liệu. Luận án của chúng tôi! Ôi, ai đó giúp với!!"
+Main_LahaiRoi_3_2_6_36,"Bạn không tìm thấy dấu vết nào về nguồn tần số nhưng lại phát hiện ra manh mối mới: ""Heliogyre"" được đề cập trong tầm nhìn là một thành phần không thể thiếu của Nghi lễ Mặt trời Mới và chỉ Roya mới có thể nhận ra hoạt động của nó. Ngay khi bạn định thẩm vấn học sinh Roya, một tiếng kêu cứu vang lên."
+Main_LahaiRoi_3_2_8_5,Không. Đó chỉ là một sự cố thông thường. Nhưng...
 Main_LahaiRoi_3_2_8_3,Ugh...
-Main_LahaiRoi_3_2_6_35,Chỉ có bộ tộc Roya mới có thể giải mã được kết quả đo đạc của Heliogyre. Đó là lý do tại sao Collective cần sự hợp tác của họ trong Nghi Lễ Thái Dương Mới.
-Main_LahaiRoi_3_2_6_36,"Bạn không tìm thấy dấu vết nguồn của tần số nhưng phát hiện ra một manh mối mới: ""Heliogyre"" được nhắc đến trong tầm nhìn là một thành phần không thể thiếu của Nghi Lễ Mặt Trời Mới, và chỉ những người Roya mới có thể hiểu được cách thức hoạt động của nó. Ngay khi bạn định thẩm vấn học sinh Roya, một tiếng kêu cứu vang lên."
-Main_LahaiRoi_3_2_8_1,"Bình tĩnh đi, Maja, bình tĩnh đi… Được rồi, chúng đã dừng lại rồi. Có lẽ tôi nên tắt chúng đi nhỉ?"
-Main_LahaiRoi_3_2_8_2,"Không, nếu tôi ép hệ thống tắt, tôi sẽ mất dữ liệu. Luận án của chúng ta! Ôi, có ai giúp tôi với!!"
-Main_LahaiRoi_3_2_8_4,Cô ấy có đang ở trong tình huống khó khăn không?
-Main_LahaiRoi_3_2_8_5,"Không, chỉ là lỗi chức năng thông thường thôi mà. Nhưng…"
-Main_LahaiRoi_3_2_8_6,Ơ? Giáo sư Mornye?!
-Main_LahaiRoi_3_2_8_7,"Ôi không, tôi bị bắt gặp đi học muộn! Khoan, khoan, để tôi giải thích! Tôi không trốn học đâu! Tôi đến đây vì một lý do rất tốt! Không phải là tôi không tôn trọng lớp học, hay thầy cô đâu!"
-Main_LahaiRoi_3_2_8_8,"Vậy, ờ... bạn có thể..."
-Main_LahaiRoi_3_2_8_9,"Ngay cả khi bạn van xin tôi, điểm vẫn sẽ bị trừ."
-Main_LahaiRoi_3_2_8_10,Tại sao bạn không bắt đầu bằng cách giải thích về bản thân mình?
-Main_LahaiRoi_3_2_8_11,Đây là những robot trinh sát từ vài ngày trước. Chúng tôi đã cử chúng đi để đo nồng độ Vật chất Vô tận ở vùng băng giá.
+Main_LahaiRoi_3_2_8_4,Có phải cô ấy đang ở trong tình trạng tồi tệ?
+Main_LahaiRoi_3_2_8_6,Hả? Giáo sư Mornye?!
+Main_LahaiRoi_3_2_8_7,"Ôi không, tôi đã bị đuổi khỏi lớp! Đợi đã, đợi đã, để tôi giải thích! Tôi không trốn học! Tôi ở đây vì một lý do rất chính đáng! Không phải là tôi không tôn trọng lớp, o-hay thầy cô của tôi!"
+Main_LahaiRoi_3_2_8_8,"Vậy, ừ... bạn có thể..."
+Main_LahaiRoi_3_2_8_9,"Ngay cả khi bạn cầu xin tôi, tín dụng vẫn sẽ bị trừ."
+Main_LahaiRoi_3_2_8_11,"Chà, đây là những robot thăm dò từ vài ngày trước. Chúng tôi cử họ đi đo nồng độ Voidmatter ở vùng lãnh nguyên."
+Main_LahaiRoi_3_2_8_12,"Chúng tôi nghĩ mình sẽ thu thập xong dữ liệu trước giờ học, nhưng khi chúng tôi cố gắng tiếp cận họ, họ bắt đầu tấn công chúng tôi."
+Main_LahaiRoi_3_2_8_10,Tại sao bạn không bắt đầu bằng cách giải thích chính mình?
+Main_LahaiRoi_3_2_8_13,Tôi đã đuổi theo họ tới tận đây. Đó là lý do tại sao tôi đã bỏ lỡ buổi học ngày hôm nay...
 Main_LahaiRoi_3_2_8_16,Tôi rất xin lỗi...
-Main_LahaiRoi_3_2_8_12,"Chúng tôi nghĩ chúng tôi sẽ thu thập đủ dữ liệu trước giờ học, nhưng khi chúng tôi cố gắng tiếp cận họ, họ bắt đầu tấn công bạn."
-Main_LahaiRoi_3_2_8_15,Điều này lẽ ra phải được đề cập trong khóa học Khoa học Vật liệu của bạn rồi. Loại vật liệu này vốn dĩ không ổn định và chỉ có thể được sử dụng trong môi trường được kiểm soát.
-Main_LahaiRoi_3_2_8_17,"Để đảm bảo an toàn, bạn cần tắt các thiết bị trước, sau đó làm sạch các bộ phận bị nhiễm độc bằng Voidmatter."
-Main_LahaiRoi_3_2_8_18,Nhưng tiếp cận chúng ngay lúc này có thể dẫn đến thiệt hại thêm. Chúng ta cần một máy phát xung để làm chúng bất động từ xa. Tôi sẽ gửi yêu cầu.
+Main_LahaiRoi_3_2_8_17,"Vì lý do an toàn, bạn cần tắt thiết bị trước tiên, sau đó làm sạch các bộ phận bị ô nhiễm bằng Voidmatter."
+Main_LahaiRoi_3_2_8_14,nội bộ <te href=700023>Vật liệu Exoswarm</te> đã bị Voidmatter ăn mòn. Đó là nguyên nhân gây ra sự cố.
+Main_LahaiRoi_3_2_8_15,Điều này đáng lẽ phải được đề cập trong khóa học Khoa học Vật liệu của bạn. Vật liệu như vậy vốn không ổn định và chỉ có thể được sử dụng trong môi trường được kiểm soát.
 Main_LahaiRoi_3_2_8_19,Có một giải pháp đơn giản hơn.
-Main_LahaiRoi_3_2_8_20,(Rút kiếm của bạn.)
-Main_LahaiRoi_3_2_8_21,"Khoan đã, điều đó trái với quy trình rồi…"
-Main_LahaiRoi_3_2_8_22,Không sao đâu Bạn cứ suy nghĩ cách viết báo cáo đánh giá sau nhé
-Main_LahaiRoi_3_2_8_23,￥#&@... Quét… Mục tiêu… Xóa bỏ…
+Main_LahaiRoi_3_2_8_18,Nhưng tiếp cận họ ngay bây giờ có thể dẫn đến thiệt hại nặng nề hơn. Chúng ta cần một máy phát xung để làm choáng chúng từ xa. Tôi sẽ gửi yêu cầu.
+Main_LahaiRoi_3_2_8_22,Đừng bận tâm. Tôi sẽ suy nghĩ về cách viết báo cáo đánh giá sau.
+Main_LahaiRoi_3_2_8_21,"Đợi đã, điều đó trái với giao thức..."
+Main_LahaiRoi_3_2_8_20,(Hãy rút kiếm ra.)
+Main_LahaiRoi_3_2_8_23,￥#&@... Đang quét... Mục tiêu... Tiêu diệt...
+Main_LahaiRoi_3_2_8_24,"Robot thăm dò của Maja trở nên điên cuồng vì ô nhiễm Voidmatter. Mornye đề xuất các quy trình quản thúc tiêu chuẩn, nhưng bạn chọn giải pháp đơn giản hơn."
+Main_LahaiRoi_3_2_800_2,Bạn có muốn rời đi bây giờ không?
 Main_LahaiRoi_3_2_800_3,Đi thôi.
-Main_LahaiRoi_3_2_8_14,Bên trong <te href=700023>Vật liệu Exoswarm</te> Bị xói mòn bởi Voidmatter. Đó là nguyên nhân gây ra trục trặc.
-Main_LahaiRoi_3_2_800_1,"Vậy chúng ta cần tìm Foreseer Yngvar tại Nghi Lễ Hồi Quá của Haldarheim, đúng không?"
-Main_LahaiRoi_3_2_800_2,Bạn muốn rời đi ngay bây giờ sao
-Main_LahaiRoi_3_2_800_4,Tôi vẫn còn việc cần phải làm trước.
-Main_LahaiRoi_3_2_800_5,"Được thôi, chúng ta đi thôi."
-Main_LahaiRoi_3_2_9_2,Tuyệt vời! Bạn nghĩ về dữ liệu...
-Main_LahaiRoi_3_2_9_5,Cái gì?!
-Main_LahaiRoi_3_2_9_3,Vẫn còn ở đó.
-Main_LahaiRoi_3_2_9_6,"Nhưng… Ồ, thôi vậy. Cảm ơn bạn vì đã giúp đỡ. Giáo sư Mornye, và—"
-Main_LahaiRoi_3_2_9_8,"Maja, chúng tôi có một vài điều muốn hỏi bạn."
-Main_LahaiRoi_3_2_9_9,(Mô tả tầm nhìn mà bạn thấy.)
-Main_LahaiRoi_3_2_9_7,Bạn có thể gọi tôi {PlayerName}.
-Main_LahaiRoi_3_2_9_10,"Bạn muốn tìm một Roya mặc áo choàng đen thêu vàng, đội một chiếc mũ hình sừng à?"
-Main_LahaiRoi_3_2_9_13,Lục Hằng... Họ là những người được giao nhiệm vụ cung cấp số liệu của Hằng Đạo cho chúng ta trong Nghi Lễ Thái Dương Mới.
-Main_LahaiRoi_3_2_9_14,Đúng vậy. Họ là sáu thành viên mạnh nhất của bộ tộc Roya. Xếp hạng cũng cao nhất đấy.
-Main_LahaiRoi_3_2_9_15,"Tôi nghe nói họ dùng Heliogyre để dự đoán mọi thứ, từ sự di cư của chim đến Bão Void. Họ biết tất cả."
-Main_LahaiRoi_3_2_9_16,Tôi phải gặp một trong số họ như thế nào
-Main_LahaiRoi_3_2_9_17,Hả?! Có lẽ điều đó sẽ khó đấy.
-Main_LahaiRoi_3_2_9_11,"Sừng là biểu tượng của Exostrider. <te href=700024>Người Chăn Dắt</te> Mặc chúng, nhưng không người Chăn Dắt nào lại mặc một chiếc áo choàng như vậy"
-Main_LahaiRoi_3_2_9_19,Nhưng có lẽ bạn có thể thử gặp một trong Sáu người Heliơ không được bổ nhiệm.
-Main_LahaiRoi_3_2_9_20,"Sigrika hiện đang đi nghiên cứu ở vùng băng giá. Người còn lại ở đây là Foreseer Yngvar, nhưng anh ta không thường xuyên xuất hiện."
-Main_LahaiRoi_3_2_9_21,"Nếu bạn muốn tìm anh ta, mẹ tôi có thể giúp bạn được. Bà là một Người chăn cừu Royan tại trại Atuja. Tên là Astrid."
-Main_LahaiRoi_3_2_9_18,Họ không bao giờ rời khỏi <te href=700018>Solisylum</te>. Nó được bao quanh bởi ánh sáng suốt quanh năm. Rất ít người Roya được phép vào.
-Main_LahaiRoi_3_2_9_23,Rất tốt. Chúc bạn may mắn với bài luận khóa luận của bạn.
-Main_LahaiRoi_3_2_9_24,Hít thở sâu... Mình nói chuyện với học sinh trong lớp dễ hơn đấy.
-Main_LahaiRoi_3_2_9_25,"{PlayerName}, Bạn có học được những gì bạn cần không?"
-Main_LahaiRoi_3_2_9_26,Người cuối cùng mà những con robot có khả năng nhìn thấy trước khi chúng mất kiểm soát có lẽ là mẹ của Maja.
-Main_LahaiRoi_3_2_9_27,Tôi nghĩ chúng ta có thể nói chuyện với cô ấy dưới vỏ bọc một chuyến thăm nhà thân thiện.
-Main_LahaiRoi_3_2_9_28,"Hmm... Nếu vậy, ta có thể đồng hành với bạn với vai trò Giáo sư từ Học viện. Còn về danh tính của bạn, {PlayerName}..."
-Main_LahaiRoi_3_2_9_29,"Không sao cả, nó chỉ là một cái tên tiện lợi thôi."
-Main_LahaiRoi_3_2_9_30,Mornye?
-Main_LahaiRoi_3_2_9_31,Bạn có thể làm người cố vấn cho tôi được không
-Main_LahaiRoi_3_2_9_33,Nhưng bạn không định nói với tôi rằng tôi nên báo cáo việc này cho Học Viện để họ xử lý sao
-Main_LahaiRoi_3_2_9_34,Tôi đang nghĩ cách để giúp bạn tìm người bạn đang tìm.
-Main_LahaiRoi_3_2_9_35,Lý do của bạn là của riêng bạn Tôi tin vào phán đoán của bạn và bạn có thể kể cho tôi sau
-Main_LahaiRoi_3_2_9_36,Tôi hy vọng tôi thể hiện vai trò Giáo sư thật tốt.
-Main_LahaiRoi_3_2_960_1,Cẩn thận!
-Main_LahaiRoi_3_2_9_37,"Cứ thoải mái chỉ cho tôi, Giáo sư trẻ tuổi."
-Main_LahaiRoi_3_2_9_38,"Vâng, bạn cứ thoải mái chỉ cho tôi thêm đi, Sư phụ."
-Main_LahaiRoi_3_2_9_39,Tôi nghĩ người mà tôi đang là… có thể giúp bạn.
-Main_LahaiRoi_3_2_9_40,"Dựa theo mô tả của Maja, người đàn ông nhờ bạn giúp đỡ có lẽ là một trong Sáu Thần Mặt Trời của Roya, những người hiếm khi rời khỏi Solisylum. Để thỏa hiệp, bạn quyết định tìm kiếm một trong những người kế vị Sáu Thần Mặt Trời chưa được bổ nhiệm, Người Thấu Thị Yngvar. Maja khuyên bạn nên nói chuyện với mẹ cô, Astrid."
-Main_LahaiRoi_3_2_961_29,"Vậy, thiết bị này là của Foreseer Yngvar. Thầy, thầy nghĩ sao về điều này?"
-Main_LahaiRoi_3_2_961_30,Có vẻ như cô ấy không nói dối.
-Main_LahaiRoi_3_2_961_31,Chúng ta cần tự mình xác minh điều này.
-Main_LahaiRoi_3_2_961_32,Hmm... Tôi tin vào phán đoán của bạn.
-Main_LahaiRoi_3_2_961_33,"Đây là Foreseer Yngvar mà Maja đã từng nhắc đến, thành viên không được bổ nhiệm của Heliodic Six. Không chăng đây là một nỗ lực để thắt chặt quyền lực của hắn sao"
-Main_LahaiRoi_3_2_961_34,"Không, điều đó không thể."
-Main_LahaiRoi_3_2_961_36,Ừm... nghĩa là không ai có thể đe dọa vị trí của Yngvar.
-Main_LahaiRoi_3_2_961_37,(Nhưng anh ta có thể căm ghét những người thuộc Heliodic Six hiện tại. Yngvar vẫn là manh mối hàng đầu để tìm họ.)
-Main_LahaiRoi_3_2_961_38,(Mọi thứ đang trở nên phức tạp hơn. Một cách tiếp cận trực tiếp với Yngvar có thể không phải là một ý hay đâu.)
-Main_LahaiRoi_3_2_961_39,Chúng ta có thể tìm thấy anh ấy ở đâu
-Main_LahaiRoi_3_2_961_40,"Người Solisylum thường sinh sống ở ngôi làng giáp Rừng Bjartr, tên là Haldarheim."
-Main_LahaiRoi_3_2_961_42,Nhưng bạn không phải Roya. Có thể bạn không được phép chứng kiến nghi thức.
-Main_LahaiRoi_3_2_961_43,Uuu…
-Main_LahaiRoi_3_2_961_44,"Hả? Khoan đã, nhưng chúng ta tìm thấy bé này ở đây mà."
-Main_LahaiRoi_3_2_961_41,"Đã đến thời điểm của <te href=700028>Nghi thức Hồi Hương</te>. Người Soliskin sẽ trở về Solistrees và Exostrider. Theo truyền thống, Người Thấu Thị Yngvar sẽ tham dự nghi thức."
-Main_LahaiRoi_3_2_961_45,"Đây có phải là Soliskin mà bạn đã cứu không? Ờ… Có lẽ bạn có thể tham gia với tư cách là ""Người Chăn Dắt."""
-Main_LahaiRoi_3_2_961_46,"Soliskin đã là bạn đồng hành của Roya hàng trăm năm. Nếu họ nghe thấy bạn đã cứu một người trong số đó, họ sẽ rất biết ơn."
-Main_LahaiRoi_3_2_961_50,Chuuu!
-Main_LahaiRoi_3_2_961_35,"Mỗi <ano=Người Đinh Tiến>những người kế nhiệm này</ano> Nó được chọn khi Khả năng Cộng hưởng của họ lần đầu thức tỉnh. Ngay cả khi ai đó mong muốn vị trí đó, việc thay đổi quyết định là không thể."
-Main_LahaiRoi_3_2_961_47,Chu... Chu!
-Main_LahaiRoi_3_2_961_48,Chúng ta cùng nhau vượt qua chuyện này rồi.
-Main_LahaiRoi_3_2_961_49,Tôi chưa từng đến gần một Soliskin như vậy trước đây. Xin cho tôi biết nếu tôi đang làm gì sai.
-Main_LahaiRoi_3_2_961_51,"Astrid nói với bạn rằng Yngvar sẽ xuất hiện tại Nghi Lễ Hồi Hương sắp tới. Để tìm ông ta, bạn quyết định đi cùng người Soliskin được giải cứu đến một ngôi làng tên là Haldarheim và tham gia nghi lễ."
-Main_LahaiRoi_3_2_962_1,Gió mát thật… Mình có thể ở lại đây thêm một chút nữa.
-Main_LahaiRoi_3_2_962_2,Bạn có muốn cùng tôi không
-Main_LahaiRoi_3_2_962_3,Bạn có một chút thời gian để trò chuyện không
-Main_LahaiRoi_3_2_962_4,Tôi có một vài việc cần phải làm.
-Main_LahaiRoi_3_2_962_5,Vâng. Tập thể Spacetrek đã cho tôi một tháng nghỉ ốm có lương. Lịch trình của tôi rất rảnh.
-Main_LahaiRoi_3_2_962_6,"Lần cuối tôi có nhiều thời gian nghỉ ngơi như vậy… tôi nghĩ là khi tôi còn học cấp hai, lúc tôi ngã xuống cầu thang."
-Main_LahaiRoi_3_2_962_7,Bạn có ổn không?
-Main_LahaiRoi_3_2_962_8,"Ừm, lúc đó tôi làm rơi cuốn sách đang đọc xuống cầu thang. Vậy nên tôi vô tình… Không, tôi không nên kể những chuyện đáng xấu hổ như vậy trước mặt bạn."
-Main_LahaiRoi_3_2_962_9,"Bây giờ, bạn muốn thảo luận về điều gì"
-Main_LahaiRoi_3_2_962_10,Nghi Lễ Mặt Trời Mới.
-Main_LahaiRoi_3_2_962_11,Về biệt danh bạn đặt cho tôi…
-Main_LahaiRoi_3_2_962_12,Chúng ta đã từng quen nhau chưa
-Main_LahaiRoi_3_2_962_13,Hãy chăm sóc bản thân nhé Bạn. Hẹn gặp lại lần sau.
-Main_LahaiRoi_3_2_962_14,"Động cơ phản ứng không hạ cánh theo đúng kế hoạch ban đầu của Tập đoàn Spacetrek. Nhưng giờ đã ở trên mặt đất, chúng ta có thể bắt đầu nghiên cứu nó."
-Main_LahaiRoi_3_2_962_16,"Và rồi, một ngày nào đó, chúng ta sẽ chứng minh được cả mặt trời và những vì sao đều nằm trong tầm tay bạn."
-Main_LahaiRoi_3_2_962_17,Thật tốt nếu bạn có thể ở đó chứng kiến nó cùng tôi.
-Main_LahaiRoi_3_2_962_18,(Hãy nói về điều gì khác.)
-Main_LahaiRoi_3_2_962_19,Ồ... là vì... nó ngăn chặn danh tính của bạn bị phơi bày.
-Main_LahaiRoi_3_2_962_20,"Nhưng điều đó không còn cần thiết nữa, đúng không?"
-Main_LahaiRoi_3_2_962_21,Bạn nói đúng. Có lẽ tôi không thể gọi bạn như vậy nữa…
-Main_LahaiRoi_3_2_962_26,(Hãy nói về điều gì khác.)
-Main_LahaiRoi_3_2_962_22,"Nhưng tôi có một người bạn. Cô ấy phải đối mặt với một tình trạng y tế, và trong một thời điểm khó khăn, cô ấy được một người cố vấn dẫn dắt."
-Main_LahaiRoi_3_2_962_28,Cái gì?!
-Main_LahaiRoi_3_2_962_23,"Mặc dù người cố vấn đó rời đi không lâu sau đó, ảnh hưởng của họ vẫn còn với cô, và, nói thật thì vẫn còn ảnh hưởng đến tôi… Tôi–ý tôi là, bạn tôi."
-Main_LahaiRoi_3_2_962_24,"Miễn là bạn có điều gì đó để dạy, bạn vẫn là một người thầy."
-Main_LahaiRoi_3_2_962_25,Vậy còn được gọi bạn như vậy không
-Main_LahaiRoi_3_2_962_27,Đó… là một bí mật.
-Main_LahaiRoi_3_2_962_29,"Là vì có người đã hứa với tôi rằng khi họ rời đi. ""Chỉ có nói lời tạm biệt mới có thể có sự tiến bộ và thay đổi,"" họ nói."
-Main_LahaiRoi_3_2_962_34,(Hãy nói về điều gì khác.)
-Main_LahaiRoi_3_2_962_30,"Vì vậy cho đến khi mục tiêu của họ đạt được, lời ""tạm biệt"" đó phải luôn là kết thúc."
-Main_LahaiRoi_3_2_962_31,Đến bao giờ vậy?
-Main_LahaiRoi_3_2_962_32,"Ừm... có lẽ cho đến khi Động Cơ Phản Ứng được phân tích hoàn toàn, Exostrider trên vùng băng giá được kích hoạt lại, và thảm họa chôn sâu bên dưới cuối cùng được giải quyết. Hoặc có lẽ cho đến khi không còn thiên tai nào trên hành tinh này nữa"
-Main_LahaiRoi_3_2_962_33,Cho đến khi tôi có thể tự mình trả lời bạn… Xin hãy giữ lấy sự tò mò đó thêm một chút nữa.
-Main_LahaiRoi_3_2_962_35,"Được thôi. Hẹn gặp bạn lần sau. À, còn một việc nữa—"
-Main_LahaiRoi_3_2_962_36,"Ở lại thêm một chút nữa đi, Sư phụ."
-Main_LahaiRoi_3_2_963_1,Tiến đến Động Cơ Phản Ứng. Điều phối tối đa năng lượng đến pháo nổi!
-Main_LahaiRoi_3_2_963_2,"Mornye, bạn đã làm rất nhiều rồi."
-Main_LahaiRoi_3_2_963_3,cứ để tôi lo phần còn lại nhé!
-Main_LahaiRoi_3_2_964_1,"Chế độ Tăng tốc có thể kích hoạt! Nhiên liệu có hạn, vì vậy hãy sử dụng cẩn thận."
-Main_LahaiRoi_3_2_964_2,Có lẽ đây là đủ cho những gì tôi cần.
-Main_LahaiRoi_3_2_965_1,"Ugh, ánh sáng càng tệ hơn khi chúng ta đến gần."
-Main_LahaiRoi_3_2_967_2,Cảm ơn.
-Main_LahaiRoi_3_2_965_3,Nhanh hơn. Tôi cần phải di chuyển nhanh hơn!
-Main_LahaiRoi_3_2_966_1,Vậy chúng ta hãy thử công nghệ mới của Viện đi
-Main_LahaiRoi_3_2_967_1,Năng lượng tập trung bên trong Ổ Động Cơ Phản Ứng đang tăng lên. Các giao thức phòng thủ quan trọng có thể được kích hoạt.
-Main_LahaiRoi_3_2_968_2,"Chúng tôi vẫn chưa chắc chắn điều gì đã kích hoạt đợt sóng này. Nhưng sau khi so sánh dạng sóng với thiết bị mà Giáo sư Mornye mang về, chúng tôi nghi ngờ đó là Bão Hư Không được tạo ra một cách nhân tạo."
-Main_LahaiRoi_3_2_968_1,"Ba ngày trước, khi Helios được phóng, chúng tôi đã ghi nhận sự gia tăng bất thường về nồng độ Vật chất Vô ảnh gần Hyvatia. Nó đã gây ảnh hưởng đến quá trình phóng."
-Main_LahaiRoi_3_2_968_3,Và chúng tôi tìm thấy bạn bất tỉnh ngay bên cạnh.
-Main_LahaiRoi_3_2_968_4,"Tiến sĩ Herssen, tôi thực sự không nhớ gì cả…"
-Main_LahaiRoi_3_2_968_9,Ai đó?
-Main_LahaiRoi_3_2_968_6,"Hừ, nghĩa vụ của một bác sĩ mà đúng không? Nhưng có một việc tôi cần bạn làm chứng về."
-Main_LahaiRoi_3_2_968_7,"Trước khi bạn ngất đi, bạn đã thấy ai?"
-Main_LahaiRoi_3_2_968_8,"Chào ngày, quý ông! Bảo trì định kỳ của Hyvatia đã hoàn tất. Tôi sẽ đi đây."
-Main_LahaiRoi_3_2_968_5,(Chuckles) Bạn có thể yên tâm rồi. Giáo sư Lucilla đã cho bạn phép đi rồi. Bạn không phải là đối tượng tình nghi.
-Main_LahaiRoi_3_2_968_10,Không sao cả Không có thời gian để nghĩ về điều đó
-Main_LahaiRoi_3_2_968_11,"Tiến sĩ Herssen, ủy ban xét duyệt của Học viện cho rằng những gì tôi nói là không thể tin được. Nhưng nếu bạn sẵn lòng tin tôi…"
-Main_LahaiRoi_3_2_968_12,"Trước khi tôi ngất đi, tôi thấy… chính mình."
-Main_LahaiRoi_3_2_968_14,"Nhưng thôi, thôi đi. Tôi chỉ xem đây là một quyết định sai lầm. Một đám người ngốc thực hiện một trò hề"
-Main_LahaiRoi_3_2_968_15,"Thật đáng tiếc, dù sao đi nữa. Với phần này đã tiêu tốn, chương mà cô gái kết nối với Threnodian sẽ phải trì hoãn."
-Main_LahaiRoi_3_2_968_16,"Nhưng đó là một câu chuyện để bạn thưởng thức sau. Được rồi, {PlayerName}?"
-Main_LahaiRoi_3_2_968_17,Tôi chỉ đến đây để giám sát bảo vệ thôi. Có thể nói là người vệ sĩ cá nhân của bạn.
-Main_LahaiRoi_3_2_968_18,Anh không phải là bác sĩ trường sao? Và anh đến đây để bảo vệ tôi sao?
-Main_LahaiRoi_3_2_976_1,Tôi tìm thấy thiết bị rồi. Nó ở gần Solistree.
-Main_LahaiRoi_3_2_976_2,Solistree? Tôi có một linh cảm không tốt về chuyện này.
-Main_LahaiRoi_3_2_977_1,Ở đây có quá nhiều Exoswarm bị nhiễm độc. Nồng độ Voidmatter cũng rất cao.
-Main_LahaiRoi_3_2_977_2,Có lẽ thiết bị mà Astrid có là chưa hoàn chỉnh. Đây có thể là thứ có thật.
-Main_LahaiRoi_3_2_968_19,"Tiến sĩ Herssen phát hiện một người khả nghi bất tỉnh gần Hyvatia trong cơn Bão Vô Ảnh. Người này khẳng định rằng ngay trước khi ngất đi, anh ta đã thấy ""bản thân mình.""
-Trong lúc đó, một ""nhà nghiên cứu"" theo dõi mọi chuyện diễn ra với vẻ thích thú rõ ràng."
-Main_LahaiRoi_3_2_978_1,"Mornye, bạn ở đâu?"
-Main_LahaiRoi_3_2_978_3,Lễ hội đã kết thúc rồi sao?
-Main_LahaiRoi_3_2_978_4,"Vâng, có rồi"
-Main_LahaiRoi_3_2_978_5,Tôi không tìm thấy bạn. Tôi rất lo lắng.
-Main_LahaiRoi_3_2_978_6,Tôi xin lỗi nếu tôi đã làm bạn lo lắng.
-Main_LahaiRoi_3_2_978_7,"Nhưng… tôi là giáo sư, còn bạn là học trò. Đáng lẽ ra tôi phải lo cho bạn."
-Main_LahaiRoi_3_2_978_8,(Đính kèm: một bức ảnh về bầu trời đêm)
-Main_LahaiRoi_3_2_978_14,"Mornye, bạn ở đâu?"
-Main_LahaiRoi_3_2_978_9,Tôi ở đây. Ngay dưới hành tinh thứ 13 của chòm sao Norma.
-Main_LahaiRoi_3_2_978_10,Tôi e là tôi không thể di chuyển được lúc này. Xin hãy đến tìm tôi ở đây nhé bạn.
-Main_LahaiRoi_3_2_978_16,Tôi không tìm thấy bạn. Tôi rất lo lắng.
-Main_LahaiRoi_3_2_978_13,...Tôi hiểu rồi. Xin lỗi vì đã làm bạn lo lắng.
-Main_LahaiRoi_3_2_978_15,"Ừ, đúng vậy."
-Main_LahaiRoi_3_2_978_17,Tôi tưởng tôi là người hướng dẫn của bạn?
-Main_LahaiRoi_3_2_980_1,Có vẻ như đó là tâm bão phía trước. Chúng ta hãy xem chúng ta đang đối mặt với điều gì.
-Main_LahaiRoi_3_2_981_1,Chúng ta đang trong phạm vi Bão Vô Cực rồi. Kiểm tra xem FCR của bạn có hoạt động không.
-Main_LahaiRoi_3_2_982_2,Đi thôi.
-Main_LahaiRoi_3_2_981_4,Đừng rời xa tôi quá nhiều.
-Main_LahaiRoi_3_2_982_1,Sẵn sàng đến Trại Atuja để tìm Astrid chưa
-Main_LahaiRoi_3_2_979_1,Ừm. Mornye đi đâu rồi nhỉ? Tôi sẽ gửi một <ano=WavesLine>Tin nhắn</ano>.
-Main_LahaiRoi_3_2_982_3,Chúng ta đi muộn hơn một chút nhé.
-Main_LahaiRoi_3_2_982_4,"Được rồi, chúng ta đi cùng nhau… Thầy."
-Main_LahaiRoi_3_2_983_1,Bạn cũng thấy chứ? Nó đi theo hướng này.
-Main_LahaiRoi_3_2_983_2,Vâng. Lạ thật. Tại sao lại ở đây nhỉ
-Main_LahaiRoi_3_2_983_5,Không thể nói là tôi có.
-Main_LahaiRoi_3_2_983_3,Các bạn đang tìm gì vậy
-Main_LahaiRoi_3_2_9831_1,Bạn cũng thấy chứ? Nó đi theo hướng này.
-Main_LahaiRoi_3_2_9831_2,Vâng. Lạ thật. Tại sao lại ở đây nhỉ
-Main_LahaiRoi_3_2_983_4,"Ồ, bạn chắc hẳn là đến từ Học viện Startorch. Bạn có thấy Soliskin không? Màu trắng. Khoảng bằng kích thước quả bí."
-Main_LahaiRoi_3_2_983_6,"Thực ra, chúng tôi cũng đã thấy một chiếc bay theo hướng này khi chúng tôi đang chuẩn bị ở chợ. Nếu Svanar cũng không thấy nó, tôi đã nghĩ mình đang tưởng tượng ra thôi."
-Main_LahaiRoi_3_2_983_8,"Nếu bạn tình cờ thấy nó, xin vui lòng cho chúng tôi biết."
-Main_LahaiRoi_3_2_985_1,"Chào, TARD-E. Bạn dùng bao nhiêu năng lượng vậy?"
-Main_LahaiRoi_3_2_985_2,Đầu ra tiêu chuẩn: 200 đơn vị. Tuân thủ quy trình an toàn ký túc xá.
-Main_LahaiRoi_3_2_985_3,Ừm. Và khi bạn đang truy đuổi một học viên?
-Main_LahaiRoi_3_2_985_4,"Để đảm bảo bắt giữ thành công một học sinh vi phạm quy tắc, năng lượng của tôi tăng lên 1200 đơn vị."
-Main_LahaiRoi_3_2_985_5,Có lẽ điều đó có nghĩa là bạn là thiết bị tiêu thụ điện năng cao.
-Main_LahaiRoi_3_2_997_6,Được rồi.
-Main_LahaiRoi_3_2_997_1,"Tôi là Mornye, và đây là người hướng dẫn của tôi... Ờ, để tôi thử lại nhé"
-Main_LahaiRoi_3_2_997_3,Bạn là...?
-Main_LahaiRoi_3_2_997_4,"Đang tập thôi. Mình không giỏi lắm trong việc nói chuyện với phụ huynh. Và lần này, mình cũng không có trợ lý để giúp viết kịch bản cho bạn."
-Main_LahaiRoi_3_2_998_2,Không sao đâu.
-Main_LahaiRoi_3_2_997_5,Tại sao bạn không để tôi lo việc đó Bạn cứ tập trung vào những gì bạn giỏi.
-Main_LahaiRoi_3_2_998_1,"Tôi ổn rồi, Mornye. Xin lỗi vì đã làm bạn lo lắng. Bạn chắc phải quay lại tập đoàn Spacetrek rồi nhỉ"
-Main_LahaiRoi_3_2_998_3,Nhưng bạn thì cứ…
-Main_LahaiRoi_3_2_998_4,"Bạn có vẻ khá hoảng rồi. Tôi sẽ ở bên bạn. Nếu tình trạng mất kết nối trở nên nghiêm trọng hơn, tôi muốn ở gần để đưa bạn đến phòng y tế."
-Main_LahaiRoi_3_2_998_5,Đưa tôi đi chứ?
-Main_LahaiRoi_3_2_999_1,Cảm ơn bạn. Bạn không cần phải đi xa hơn nữa. Tôi có thể tự mình quay lại Viện Nghiên cứu.
-Main_LahaiRoi_3_2_999_4,"Ừ, bạn cũng vậy."
-Main_LahaiRoi_3_2_999_6,Hả?
-Main_LahaiRoi_3_2_999_2,Hãy giữ an toàn.
-Main_LahaiRoi_3_2_999_3,"Không được phá luật nữa đâu, được chứ?"
-Main_LahaiRoi_3_2_999_5,Đó là… một tai nạn…
-Main_LahaiRoi_3_2_999_7,Có chuyện gì không bạn
-Main_LahaiRoi_3_2_999_8,Đây là thông báo từ Collective. Phái đoàn Royan đã hủy cuộc họp. Nghi lễ hiện đang bị tạm dừng. Thật kỳ lạ…
-Main_LahaiRoi_3_2_999_9,Warren phụ trách truyền thông của Royan Bạn có thể hỏi anh ấy chuyện gì đang xảy ra khi tôi quay lại Viện Nghiên cứu
-Main_LahaiRoi_3_2_999_10,"Bây giờ khe đó đã trống, tôi có thể dùng thời gian để hiệu chỉnh lại"
-Main_LahaiRoi_3_2_999_11,Bạn không cho phép mình nghỉ ngơi một chút sao
-Main_LahaiRoi_3_2_999_12,"Hm, cái này không có trong danh sách."
-Main_LahaiRoi_3_2_999_17,Bạn có muốn tham dự Nghi Lễ Ánh Dương Mới không
-Main_LahaiRoi_3_2_999_18,"Tôi… Tôi muốn bạn ở đó để chứng kiến nó. Sự trỗi dậy của mặt trời mới, và nhân loại bước những bước đầu tiên vào tương lai mà họ đã xây dựng bằng chính đôi tay mình."
-Main_LahaiRoi_3_2_999_13,Nghi thức Mặt Trời Mới sắp bắt đầu. Đây là kết quả của nhiều năm công sức. Tất cả mọi người trong Collective đều đang dốc hết sức để hiện thực hóa nó.
-Main_LahaiRoi_3_2_999_14,"Lần trước chúng ta gặp nhau tại Viện, tôi… chúng ta đã hứa với nhau. Bạn còn nhớ không?"
-Main_LahaiRoi_3_2_999_20,Được.
-Main_LahaiRoi_3_2_999_15,Tôi nhớ.
-Main_LahaiRoi_3_2_999_16,Một lời hứa?
-Main_LahaiRoi_3_2_999_23,"Tôi… Tôi muốn bạn ở đó để chứng kiến nó. Sự trỗi dậy của mặt trời mới, và nhân loại bước những bước đầu tiên vào tương lai mà họ đã xây dựng bằng chính đôi tay mình."
-Main_LahaiRoi_3_2_999_19,"Chúng ta đã hứa sẽ cùng nhau chứng kiến nó, đúng không?"
-Main_LahaiRoi_3_2_999_21,Được thôi. Vậy thì coi đây là lời mời chính thức của tôi nhé.
-Main_LahaiRoi_3_2_999_22,Tôi hy vọng được tham dự buổi lễ cùng bạn.
-Main_LahaiRoi_3_2_999_24,"Khi buổi lễ đến gần, Tập thể Spactrek sẽ ngày càng bận rộn hơn. Những cơ hội gặp gỡ như thế này sẽ rất hiếm. Nhưng lời hứa này vẫn sẽ còn hiệu lực"
-Main_LahaiRoi_3_2_999_25,Đó là một lời hứa.
-Main_LahaiRoi_3_2_999_26,"Trước khi sức mạnh của tôi cạn kiệt, tôi không còn nhiều thời gian đâu."
-Main_LahaiRoi_3_2_999_27,Bây giờ lựa chọn duy nhất là buộc Heliogyre phải dừng lại.
-Main_LahaiRoi_3_2_999_28,"Ta sẽ chia sẻ sức mạnh cuối cùng của ta với bạn, để bạn không biến mất. Nhưng bạn phải nhanh lên."
-Main_LahaiRoi_3_2_999_30,"Đưa nó cho người mà họ gọi là ""Arbiter."""
-Main_LahaiRoi_3_2_999_31,"{PlayerName}, Chuyện gì xảy ra vậy? Bạn có ổn không?!"
-Main_LahaiRoi_3_2_999_29,"Trước đó, hãy lấy ký ức này để {Male=anh ấy;Female=cô ấy}."
-Main_LahaiRoi_3_2_999_32,Tôi… thấy được ký ức của ai đó.
-Main_LahaiRoi_3_2_999_33,"Trời ơi, bạn làm tôi giật mình đấy! Và vừa rồi, một tần số đã nhảy vào Tacet Mark của bạn! Cảm giác như... một loại kết nối nào đó?"
-Main_LahaiRoi_3_2_999_34,"Bạn có thể tìm ra nó đến từ đâu không, Abby?"
-Main_LahaiRoi_3_2_999_35,"Ngửi, ngửi, ngửi…"
-Main_LahaiRoi_3_2_999_36,Tôi ngửi thấy nó đến từ đằng kia!
-Main_LahaiRoi_3_2_999_37,Tốt. Đi xem thử thôi.
-Main_LahaiRoi_3_2_999_38,"Bạn hộ tống Mornye ra ngoài, và cô ấy mời bạn cùng chứng kiến Nghi Lễ Ánh Dương Mới. Đột nhiên, một luồng tần số tràn vào Tacet Mark của bạn. Bạn có một ảo ảnh về một người đàn ông xưng bạn là ""Árbitrer"", cầu xin sự giúp đỡ. Bạn và Mornye quyết định lần theo nguồn gốc của tần số đó."
-Main_LahaiRoi_3_2_103_2,"Mã hóa mạnh, nhưng lại cẩu thả."
-Main_LahaiRoi_3_2_35_1,Con đường đến Solisylum đã ở đây rồi Bạn Có lẽ bạn còn điều gì muốn hỏi
-Main_LahaiRoi_3_2_35_2,Hỏi về Heliodic Six.
-Main_LahaiRoi_3_2_35_3,Về dự đoán…
-Main_LahaiRoi_3_2_35_6,Tôi không có thêm câu hỏi nào.
-Main_LahaiRoi_3_2_35_4,Hỏi về người đàn ông trong những ảo ảnh của bạn.
-Main_LahaiRoi_3_2_35_5,Về Yngvar…
-Main_LahaiRoi_3_2_35_7,"Lịch sử này, mọi đứa trẻ Royan đều học từ khi mới sinh—"
-Main_LahaiRoi_3_2_35_8,"Trái tim của Exostrider là mặt trời của chúng ta. Nó cho chúng ta ánh sáng. Vì vậy, chúng ta không cần phải đóng băng trong đêm vĩnh cửu."
-Main_LahaiRoi_3_2_35_9,"Và Sáu người, với Heliogyre làm thống kê của họ, đọc bầu trời. Vì vậy, chúng ta không cần phải tan biến vào hư vô."
-Main_LahaiRoi_3_2_35_10,Họ là tiên tri của chúng ta. Họ là sự hy sinh của chúng ta.
-Main_LahaiRoi_3_2_35_11,"Nhiều hơn điều đó, tôi tin rằng họ sẽ tự mình kể cho bạn trong Solisylum."
-Main_LahaiRoi_3_2_35_13,"Trong nhiều thế kỷ, Sáu Người đã tiên đoán bầu trời của chúng ta. Chưa bao giờ họ sai cả."
-Main_LahaiRoi_3_2_35_14,"Đây là dự đoán đầu tiên, quá cụ thể. Đối với bạn, người được chứng minh là chủ thể của nó, chúng tôi xin chào đón trân trọng nhất."
-Main_LahaiRoi_3_2_35_15,"Áo choàng đen thêu chỉ vàng, một đầu đội hình dáng như hai sừng, và đôi mắt khác thường… Có vẻ bạn đã gặp một trong Sáu."
-Main_LahaiRoi_3_2_35_18,Có lẽ nào... có sự hỗn loạn đang trỗi dậy trong chính những Roya?
-Main_LahaiRoi_3_2_35_19,"Được chọn bởi Heliogyre với tư cách là một Solsworn, anh ấy đã được chọn vậy. Điều đó chắc chắn."
-Main_LahaiRoi_3_2_35_20,Không phải là việc của tôi để nói về những vấn đề khác.
-Main_LahaiRoi_3_2_35_21,Tôi hiểu rồi Vậy thì tôi sẽ chờ ở đây
-Main_LahaiRoi_3_2_36_1,Bạn có thể tiến lại gần.
-Main_LahaiRoi_3_2_36_2,"Sáu người thuộc phái Helios đang chờ bạn, như đã được tiên đoán."
-Main_LahaiRoi_3_2_37_1,Heliogyre đã thức tỉnh. Có vẻ như Đấng Xét Xét được tiên tri trong những ghi chép vỡ vụn… là bạn.
-Main_LahaiRoi_3_2_37_2,Bạn có phải là người đang cố gắng liên hệ với tôi không
-Main_LahaiRoi_3_2_37_3,Vâng. Sự hiện diện của bạn tại đây được chào đón với sự tôn kính lớn lao.
-Main_LahaiRoi_3_2_37_4,"Solisylum, như bạn thấy, không còn như xưa nữa. Năm trong số Sáu đã mất trí, và ánh sáng của Heliogyre không còn chảy nữa."
-Main_LahaiRoi_3_2_37_5,Đây là lý do tôi triệu hồi bạn.
-Main_LahaiRoi_3_2_37_6,Hãy kể cho tôi mọi thứ đã xảy ra.
-Main_LahaiRoi_3_2_37_7,Bạn đã chứng kiến Bão Vô Tận ở Rừng Bjartr rồi đúng không
-Main_LahaiRoi_3_2_37_8,"The <te href=700027>Cây Độc Thủ</te> Che chở cho khu rừng khỏi những cơn bão như vậy. Nhưng bằng sự độc ác và ý định đen tối, rễ cây đã bị tha hóa. Và cũng như vậy, Heliogyre."
-Main_LahaiRoi_3_2_37_13,Tôi.
-Main_LahaiRoi_3_2_37_9,Những người khác đã khuất phục trước sự tha hóa. Chỉ tôi mới có thể cắt đứt liên kết với Heliogyre trước khi sự tha hóa có thể chiếm đoạt tôi.
-Main_LahaiRoi_3_2_37_14,Chính xác.
-Main_LahaiRoi_3_2_37_10,"Với sức mạnh cuối cùng của tôi, tôi xoay ngược sáu ngôi sao để chặn đứng Heliogyre và ngăn chặn sự lan rộng của sự tha hóa."
-Main_LahaiRoi_3_2_37_11,"Điều đó ít nhất đảm bảo rằng khi sức mạnh của tôi cạn kiệt và tôi chìm vào giấc ngủ, Heliogyre sẽ vẫn còn đó, không bị ảnh hưởng bởi bất kỳ ai."
-Main_LahaiRoi_3_2_37_12,"Không ai, trừ một người."
-Main_LahaiRoi_3_2_37_15,"Là một trong Sáu, tôi có thể thoáng nhìn thấy tương lai gần trong Heliogyre. Nhưng tôi bị ràng buộc ở đây, không thể hành động."
-Main_LahaiRoi_3_2_37_16,Tất cả những gì tôi có thể làm là gửi một Soliskin mang theo thông điệp của tôi đến bạn.
-Main_LahaiRoi_3_2_37_17,(Đó là Soliskin biến mất ngay bên ngoài Học viện.)
-Main_LahaiRoi_3_2_37_18,"Bởi vì những hành động của bạn, nguồn gốc của sự tha hóa đã bị ngăn chặn. Các vì sao hiện đang hòa hợp, và Heliogyre quay trở lại."
-Main_LahaiRoi_3_2_37_19,Nhưng năm người còn lại đã không còn nữa. Họ không thể tiếp tục đảm nhận vai trò của mình trong nhóm Heliodic Six.
-Main_LahaiRoi_3_2_37_20,Tôi có một yêu cầu cuối cùng.
-Main_LahaiRoi_3_2_37_21,"Nhưng trước khi vậy, hãy để tôi kể cho bạn biết Sáu Ngôi Mặt Trời thực sự là gì."
-Main_LahaiRoi_3_2_38_1,Hàng thế kỷ trước
-Main_LahaiRoi_3_2_38_2,Một Thảm họa thức tỉnh dưới lớp băng.
-Main_LahaiRoi_3_2_38_3,Khoảng không nuốt chửng tất cả
-Main_LahaiRoi_3_2_38_4,"Xóa bỏ mọi dấu vết, mọi sự tồn tại"
-Main_LahaiRoi_3_2_37_22,"Bên trong Solisylum, bạn cuối cùng cũng gặp được người trong những ảo ảnh: Người Tạo Hình, thành viên có ý thức duy nhất trong nhóm Heliodic Six.
-Anh ta giải thích rằng anh ta buộc phải dừng lại Heliogyre để ngăn chặn Bão Hư Không ở Bjartr Woods gây ra ô nhiễm thêm. Với tình hình ở đó hiện đã được kiểm soát, chỉ có bạn, người Điều Phán, mới có thể khởi động lại nó."
-Main_LahaiRoi_3_2_38_5,"Trong bóng tối, lưỡi kiếm của Exostrider"
-Main_LahaiRoi_3_2_38_6,Đã phong ấn mối đe dọa sâu dưới lòng đất
-Main_LahaiRoi_3_2_38_7,Nó triệu hồi Drive rực lửa của mình
-Main_LahaiRoi_3_2_38_8,ánh sáng sẽ không bao giờ tắt
-Main_LahaiRoi_3_2_38_9,nâng nó lên cao trên bầu trời Lahai-Roi
-Main_LahaiRoi_3_2_38_10,Dưới ánh sáng của nó
-Main_LahaiRoi_3_2_38_11,Băng giá đã tan chảy
-Main_LahaiRoi_3_2_38_12,Cuộc sống nở rộ nhờ sự hỗ trợ của Exoswarm
-Main_LahaiRoi_3_2_38_13,Nhưng Thảm họa vẫn đang trỗi dậy
-Main_LahaiRoi_3_2_38_14,tàn dư của nó tàn phá những người sống
-Main_LahaiRoi_3_2_38_15,"Vậy, sáu người thông thái nhất trong chúng ta"
-Main_LahaiRoi_3_2_38_16,trở thành Lục Hồi Ứng
-Main_LahaiRoi_3_2_38_17,Ống kính của Exostrider trở thành Heliogyre của chúng ta
-Main_LahaiRoi_3_2_38_18,"Từ khoảnh khắc Drive bắt đầu, chúng ta đã nhận ra luật lệ của mùa."
-Main_LahaiRoi_3_2_38_19,Chúng ta gạt bỏ mọi suy nghĩ vô nghĩa
-Main_LahaiRoi_3_2_38_20,để kết nối tâm trí với Heliogyre
-Main_LahaiRoi_3_2_38_21,Nhận thức chung của chúng ta hội tụ lại
-Main_LahaiRoi_3_2_38_22,Để phàm nhân chạm tới bờ vực của Đấng Thiêng.
-Main_LahaiRoi_3_2_38_23,"Kể từ đó, Roya đã đi trên Lahai-Roi"
-Main_LahaiRoi_3_2_38_24,qua nhiều thế kỷ
-Main_LahaiRoi_3_2_39_1,"Sáu người chia sẻ sức mạnh tính toán, dệt nên một mạng lưới rộng lớn để tiếp cận Exostrider trong một chiều không gian vượt quá sự hiểu biết của phàm nhân."
-Main_LahaiRoi_3_2_39_2,Dữ liệu mà chúng tôi cung cấp cho Spacetrek Collective đã được diễn giải thông qua mạng lưới này.
-Main_LahaiRoi_3_2_39_3,"Nhưng giờ, người duy nhất có thể tiếp tục các tính toán… là tôi."
-Main_LahaiRoi_3_2_39_4,Bạn không thể không chọn thành viên mới cho Sáu sao?
-Main_LahaiRoi_3_2_39_5,Những người được chọn cho Lục Thần sinh ra với sự Cộng Hưởng với Vòng Xoáy Mặt Trời. Nó không thể cưỡng cầu.
-Main_LahaiRoi_3_2_39_7,"Vì lẽ đó, sự giúp đỡ mà tôi tìm kiếm là đây…"
-Main_LahaiRoi_3_2_39_8,"Với quyền hạn của bạn, hãy để tôi tự gánh vác các tính toán của Six và hành động thay cho họ."
-Main_LahaiRoi_3_2_39_9,Heliogyre được thiết kế để sáu người cùng diễn giải.
-Main_LahaiRoi_3_2_39_10,"Nếu bạn gánh chịu tất cả các tính toán một mình, bạn sẽ ra sao"
-Main_LahaiRoi_3_2_39_11,Tôi không thể nói.
-Main_LahaiRoi_3_2_39_12,"Tất cả những gì tôi biết là điều này: Nếu không còn ai để giải thích về Heliogyre, những sự kiện của Bão Hư Không sẽ bị lãng quên. Cuộc sống sẽ một lần nữa rơi vào nguy hiểm."
-Main_LahaiRoi_3_2_39_13,Nỗ lực nhiều thập kỷ của Collective Spacetrek trong việc chuẩn bị cho Nghi Lễ Thái Dương Mới sẽ trở thành vô ích.
-Main_LahaiRoi_3_2_39_14,Yêu cầu điều này của bạn… thật quá tàn nhẫn.
-Main_LahaiRoi_3_2_39_19,(Đồng ý.)
-Main_LahaiRoi_3_2_39_15,"Kể từ khi tôi được đưa đến Solisylum khi còn bé, tôi chưa từng một lần nhìn thấy thế giới bên ngoài. Trong ánh sáng của Heliogyre, tôi thoáng thấy vũ trụ, và nhìn thấy sự sống hân hoan dưới sự bảo vệ của tôi, tôi thấy an lòng."
-Main_LahaiRoi_3_2_39_22,......
-Main_LahaiRoi_3_2_39_16,Điều này đã trở thành bản năng của tôi từ lâu rồi. Một phần cuộc sống của tôi.
-Main_LahaiRoi_3_2_3902_23,Đây là...
-Main_LahaiRoi_3_2_39_17,"Bây giờ, thứ ta mang trên vai không phải vinh quang hay gánh nặng, mà là trách nhiệm."
-Main_LahaiRoi_3_2_39_18,"Thẩm phán, làm ơn. Xin cấp quyền này cho tôi."
-Main_LahaiRoi_3_2_39_20,Tôi tôn trọng những gì bạn muốn kiên trì
-Main_LahaiRoi_3_2_39_31,"Nhưng yêu cầu thực sự của Shaper là bạn sử dụng quyền hạn Arbiter để để ông ấy một mình gánh chịu khối lượng tính toán của toàn bộ Six. Tôn trọng quyết định của ông ấy, bạn đồng ý."
-Main_LahaiRoi_3_2_3902_24,"<i>Sớm thôi, một tai họa lớn sẽ giáng xuống Lahai-Roi.</i>"
-Main_LahaiRoi_3_2_3902_25,"<i>Tôi sẽ chia sẻ tất cả những gì tôi biết về Heliogyre với bạn. Khi bạn gọi, tôi sẽ trả lời.</i>"
-Main_LahaiRoi_3_2_3902_26,(Ô nhiễm Hư Không tàn dư?! Ta cần tìm cách thanh tẩy nó!)
-Main_LahaiRoi_3_2_3902_27,CHUUU—
-Main_LahaiRoi_3_2_3902_28,Tiếng động đó... Là Buddy hả
-Main_LahaiRoi_3_2_3902_29,"<i>Giữ sức lực cho tai ương sắp tới, bạn nhé, Thẩm Phán.</i>"
-Main_LahaiRoi_3_2_3902_30,<i>Các bé sẽ giúp đỡ.</i>
-Main_LahaiRoi_3_2_40_1,Có dấu hiệu nhiễm độc Voidmatter trong thực vật và nước.
-Main_LahaiRoi_3_2_40_2,"Nếu tôi theo dấu vết này, tôi nên có thể tìm được nguồn gốc."
-Main_LahaiRoi_3_2_41_1,Cảm ơn bạn. Rất vui được làm việc với bạn.
-Main_LahaiRoi_3_2_41_2,"Vì vậy, kế hoạch của họ không chỉ là phá rối Heliogyre bằng cách giải phóng Bão Vô Cực trong Rừng Bjartr. Họ còn dự định…"
-Main_LahaiRoi_3_2_41_4,Một nhà khoa học… bị tàn tật… Là bạn.
-Main_LahaiRoi_3_2_41_5,Tất cả những gì tôi cần làm là loại bỏ bạn!
-Main_LahaiRoi_3_2_41_6,Tôi không thực sự giỏi xử lý những cuộc trò chuyện như thế này.
-Main_LahaiRoi_3_2_41_7,"Tiếp cận phòng thí nghiệm này, mặc trang phục Royan... Bạn phải là Yngvar, một trong những người kế vị của Heliodic Six."
-Main_LahaiRoi_3_2_41_8,"Heliodic Six. Ha, cái Six đó."
-Main_LahaiRoi_3_2_41_9,"Chỉ vì Khả Năng Cộng Hưởng của tôi, tôi sẽ phải bị giam cầm trong đó suốt cuộc đời trong Vòng xoáy Heliogyre đó sao! Họ gọi đó là vinh dự cao nhất của Roya, nhưng họ có hỏi xem chúng tôi có muốn số phận đó không?!"
-Main_LahaiRoi_3_2_41_10,"Mọi người đều tỏ ra tôn trọng tôi, nhưng người duy nhất thực sự muốn giúp tôi là vị thần tốt bụng kia bên ngoài bộ tộc."
-Main_LahaiRoi_3_2_41_11,Từ bên ngoài bộ tộc. Bạn đã liên kết với Fractsidus rồi sao
-Main_LahaiRoi_3_2_41_12,Hả? Cái gì vậy? Ai quan tâm?!
-Main_LahaiRoi_3_2_41_13,"Tôi chỉ biết người đó hứa rằng nếu tôi đặt thiết bị gần Solistree, ước nguyện của bạn sẽ thành hiện thực."
-Main_LahaiRoi_3_2_41_15,"Bạn hoàn toàn không biết mình đang làm gì, và không biết mình đang liên kết với ai."
-Main_LahaiRoi_3_2_41_18,"Bạn–bạn đang nói điều đó là vì tôi đánh rơi thiết bị đó, Drive sẽ…"
-Main_LahaiRoi_3_2_41_19,"Mornye, Cỗ máy Heliogyre đã hoạt động trở lại. Chúng ta có thể lấy được những dữ liệu bạn cần cho Nghi lễ Mặt Trời mới."
-Main_LahaiRoi_3_2_41_20,Nhưng có điều gì đó đang xảy ra ngoài kia không ổn.
-Main_LahaiRoi_3_2_41_21,"Ừ. Khi mà tôi xử xong việc này, tôi sẽ liên lạc với bạn."
-Main_LahaiRoi_3_2_41_22,"Nhường đường đi. Trước khi Drive hoàn toàn sụp đổ, tôi cần quay lại kích hoạt Helios."
-Main_LahaiRoi_3_2_41_25,Bạn chỉ là một kẻ tàn tật thôi. Tôi sẽ không để bạn ngăn cản tôi đâu!
-Main_LahaiRoi_3_2_41_16,"Đề xuất dự án này đến từ Collective Spacetrek, có niên đại cách đây mười năm. Nó phác thảo ý tưởng sử dụng <te href=700010>Lái xe</te> cơ chế ứng phó khẩn cấp để nhân tạo khiến nó rơi từ bầu trời."
-Main_LahaiRoi_3_2_41_27,Tôi được nói là trong những tình huống như thế này…
-Main_LahaiRoi_3_2_41_28,Khoan—khoan đã—đợi một chút!
-Main_LahaiRoi_3_2_41_29,Tôi cần phải bày tỏ rõ sự không hài lòng của mình.
-Main_LahaiRoi_3_2_41_30,Được rồi… Đến lúc tôi gặp lại người thầy của mình rồi.
-Main_LahaiRoi_3_2_42_1,Mornye!
-Main_LahaiRoi_3_2_42_2,"Đi thôi, Sư phụ."
-Main_LahaiRoi_3_2_45_1,"Chúng ta cần đến Spacetrek Collective thật nhanh. Fractsidus đã lừa Yngvar làm việc cho chúng, nhưng mục tiêu thực sự của chúng là khiến Động cơ Phản ứng rơi xuống đất."
-Main_LahaiRoi_3_2_45_3,"Tôi đã thông báo cho Học viện về việc sơ tán khu vực xung quanh điểm va chạm. Trước khi Drive sụp đổ, điều tối quan trọng là chúng ta phải triển khai và phóng Helios thành công."
-Main_LahaiRoi_3_2_41_31,"Mornye điều tra một phòng thí nghiệm mà cô tìm thấy trong rừng. Cô phát hiện ra rằng mục đích của thiết bị Bão Hư Không là làm ô nhiễm các Cây Solis, từ đó kích hoạt phản ứng miễn dịch khẩn cấp của Động cơ Phản ứng, khiến nó rơi và phá hủy Lahai-Roi.
-Sau khi giải quyết Yngvar, kẻ được cử đến để giết cô, Mornye đến gặp bạn."
-Main_LahaiRoi_3_2_48_1,Anslem giờ ở đâu vậy?! Còn ai có thể hiệu chỉnh Hyvatia được?
-Main_LahaiRoi_3_2_48_3,"Giáo sư, ngài thực sự định khởi động nó mà không có dữ liệu thô sao"
-Main_LahaiRoi_3_2_48_4,Tôi hiểu những lo lắng của bạn… nhưng chúng ta đang đứng trước thảm họa. Tập thể không thể chỉ đứng nhìn điều đó xảy ra.
-Main_LahaiRoi_3_2_48_5,Đây là quyết định của tôi với tư cách giám sát dự án. Tôi sẽ chịu trách nhiệm về những hậu quả.
-Main_LahaiRoi_3_2_48_6,Không cần thiết đâu
-Main_LahaiRoi_3_2_48_2,"Cody, Vance, hãy kiểm tra trạng thái quỹ đạo của <te href=700017>Helios</te> Lại nữa. Hệ thống đẩy cũng cần được kiểm tra kỹ lưỡng!"
-Main_LahaiRoi_3_2_48_7,Chúng tôi đã thiết lập liên lạc với bộ tộc Roya và có được dữ liệu thô của Drive. Chúng tôi có thể tiến hành Nghi Lễ Mặt Trời Mới như kế hoạch ban đầu.
-Main_LahaiRoi_3_2_48_8,...Giáo sư Mornye?
-Main_LahaiRoi_3_2_48_9,Bạn vừa nói bạn có thể lấy được dữ liệu sao? Tin tuyệt vời. Tôi sẽ chuẩn bị các thiết bị kết nối cho bạn—
-Main_LahaiRoi_3_2_48_10,Không cần thiết phải giả vờ nữa đâu bạn.
-Main_LahaiRoi_3_2_48_11,"Warren... Hay nói đúng hơn, kẻ phản bội liên kết với Fractsidus."
-Main_LahaiRoi_3_2_48_12,"Đó là một cáo buộc nghiêm trọng, Giáo sư Mornye."
-Main_LahaiRoi_3_2_48_13,Tôi biết mà Tôi đã có ý như vậy mà
-Main_LahaiRoi_3_2_48_14,"Bạn chắc hẳn đã rất quen thuộc với thiết bị này rồi, Warren."
-Main_LahaiRoi_3_2_48_15,Bạn tự tay chế tạo nó để tránh để lại dấu vết sử dụng… một ý tưởng thông minh.
-Main_LahaiRoi_3_2_48_16,"Nhưng vì nó là một tạo tác ""cá nhân""... những dấu ấn còn lại giống như vân tay."
-Main_LahaiRoi_3_2_48_17,"Đây là những vết tích của bạn. Chúng phản bội những hành động của bạn. Warren, bạn đã làm ô uế công sức của tất cả mọi người liên quan."
-Main_LahaiRoi_3_2_48_18,"Tai nạn thí nghiệm của Anslem, vị trí hiện tại của bạn trong dự án… Có vẻ như Fractsidus đã can thiệp vào cả hai, phải không?"
-Main_LahaiRoi_3_2_48_20,Bạn nói đúng. Tất cả những gì tôi có lúc này chỉ là những giả định và suy đoán. Nhưng mục tiêu cuối cùng của tôi không phải là để bạn đối mặt với công lý ngày hôm nay.
-Main_LahaiRoi_3_2_48_21,"Khi chúng ta đã xác định được những nghi phạm, chúng ta sẽ có đủ thời gian để thu thập bằng chứng."
-Main_LahaiRoi_3_2_48_22,Tôi cần gì lúc này… là bạn lùi lại vai trò giám sát dự án này.
-Main_LahaiRoi_3_2_48_23,Người sẽ chiếm lấy nó... là tôi.
-Main_LahaiRoi_3_2_48_24,Một điều nữa. Người cấp dưới của bạn đã cung cấp cho chúng tôi một số bằng chứng quan trọng rồi.
-Main_LahaiRoi_3_2_48_25,"Bạn muốn tôi làm chứng chống lại Giáo sư Warren sao? Điều đó gần như là tội nguyền… Tất nhiên, tôi có thể dùng một vài lời lẽ khéo léo, nhưng thật lòng mà nói, tôi còn không biết mình đang đối mặt với ai nữa…"
-Main_LahaiRoi_3_2_48_26,"Đó là một chiến thuật bẩn thỉu, nhưng nó hiệu quả. Tôi tin tưởng vào phân tích của tôi về những thiết bị đó, nhưng chúng ta sẽ cần xác minh của trường đại học để sử dụng chúng làm bằng chứng."
-Main_LahaiRoi_3_2_48_27,"Trong khoảng thời gian hạn chế chúng ta có, cách nhanh nhất để tạm giữ Warren là lời khai của bạn."
-Main_LahaiRoi_3_2_48_28,Giáo sư Mornye...
-Main_LahaiRoi_3_2_48_32,Cảm ơn bạn. Rất vui được làm việc với bạn.
-Main_LahaiRoi_3_2_48_29,"Bạn có thể giữ bản ghi này. Nếu tôi sai, nó sẽ là sự đảm bảo của bạn sau này."
-Main_LahaiRoi_3_2_48_30,Hoặc bạn có thể từ chối
-Main_LahaiRoi_3_2_48_31,Rất vui được làm việc với bạn.
-Main_LahaiRoi_3_2_48_33,(Làm thế nào mà kẻ phản bội đó lại có thể…?!)
-Main_LahaiRoi_3_2_48_35,"{PlayerName}, Vui lòng nhập dữ liệu quan sát thô từ Drive vào Helios."
-Main_LahaiRoi_3_2_48_36,"Shaper, bạn có nghe thấy tôi không?"
-Main_LahaiRoi_3_2_48_37,Tất nhiên rồi. Bạn đã nhận được toàn bộ dữ liệu từ Heliogyre chưa.
-Main_LahaiRoi_3_2_48_38,Bây giờ mọi thứ đã sẵn sàng rồi. Chúng ta hãy bắt đầu Nghi Lễ Mặt Trời Mới!
-Main_LahaiRoi_3_2_48_34,"Từ đây trở đi, {PlayerName} Và tôi sẽ giám sát quy trình khởi động. Tất cả nhân viên Spacetrek Collective, đến vị trí của bạn!"
-Main_LahaiRoi_3_2_48_39,Tôi đã thông báo cho Collective rồi. Cuộc điều tra sẽ bắt đầu sớm thôi.
-Main_LahaiRoi_3_2_48_40,"Với sự giúp đỡ của Lynae, Mornye xác định được kẻ chủ mưu đằng sau âm mưu hiện tại của Học viện: Giám sát viên phòng thí nghiệm Viện Nghiên cứu, Warren. Mornye tiếp quản Nghi thức Mặt Trời Mới và mời bạn nhập dữ liệu thu được từ Shaper để chuẩn bị cho việc phóng Helios."
-Main_LahaiRoi_3_2_49_1,Helios trình tự khởi động—bắt đầu!
-Main_LahaiRoi_3_2_49_2,Hiệu chỉnh Mô-đun Vật chất Hư không hoàn tất.
-Main_LahaiRoi_3_2_49_9,"5, 4, 3, 2..."
-Main_LahaiRoi_3_2_49_3,Hệ thống năng lượng cốt lõi hoạt động bình thường.
-Main_LahaiRoi_3_2_49_5,Cửa khoang mở ra. Hệ thống đẩy đã sẵn sàng.
-Main_LahaiRoi_3_2_49_6,Helios đã sẵn sàng phóng!
-Main_LahaiRoi_3_2_49_8,Khởi động tiền đốt thành công!
-Main_LahaiRoi_3_2_49_10,Hãy để ánh sáng của chúng ta... tỏa sáng trên bầu trời.
-Main_LahaiRoi_3_2_49_11,"Helios đang tiếp cận độ cao mục tiêu. Tiến trình, 16%... 47%... 92%"
-Main_LahaiRoi_3_2_49_12,Cảnh báo! Độ suy giảm độ sáng vượt quá mức dự kiến. Ngưỡng tới hạn bị vượt qua!
-Main_LahaiRoi_3_2_49_13,Lỗi cảm biến được phát hiện. Dữ liệu đọc bị ảnh hưởng!
-Main_LahaiRoi_3_2_49_14,Lỗi tự động sửa chữa được phát hiện!
-Main_LahaiRoi_3_2_49_15,Lệnh không phản hồi. Chương trình điều khiển bị lỗi!
-Main_LahaiRoi_3_2_50_1,Đã tìm thấy nguyên nhân! Tín hiệu của Máy Phát Hiện Hyvatia bị nhiễu!
-Main_LahaiRoi_3_2_50_2,"Phát hiện lượng lớn, đậm đặc Voidmatter trên bề mặt. Nó vượt quá ngưỡng đo lường. Hiệu chỉnh không thể tiếp tục!"
-Main_LahaiRoi_3_2_50_3,Vào lúc như thế này…
-Main_LahaiRoi_3_2_50_4,"Điều chỉnh vị trí đo lường đi. Không, nếu tác động lan rộng đến mức này, bất kỳ điều chỉnh nào cũng vô ích thôi. Sửa đổi các thành phần phát hiện đi. Không, ngay cả khi về mặt lý thuyết có khả thi, không có thời gian để chế tạo chúng đâu."
-Main_LahaiRoi_3_2_50_5,"Còn về các chất trung hòa Hư Không công suất cao thì sao? Không, nếu không có ánh sáng từ Drive, tất cả các thành phần năng lượng sẽ không hoạt động"
-Main_LahaiRoi_3_2_50_7,"Hít thở sâu đi, Mornye."
-Main_LahaiRoi_3_2_50_8,"Ồ? Xin lỗi, tôi chỉ—"
-Main_LahaiRoi_3_2_50_9,Hãy kể cho tôi những gì đang xảy ra Bạn sẽ cùng tôi tìm ra cách giải quyết
-Main_LahaiRoi_3_2_50_10,Lỗi khởi động xảy ra do Detector không thể đo được các thông số hoạt động của Drive. Điều này là do nồng độ vật chất Void quá cao gây nhiễu cho kết quả đo đạc.
-Main_LahaiRoi_3_2_50_11,"Có hai giải pháp tiềm năng: Chúng ta có thể tăng khả năng chịu đựng Voidmatter của Detector. Hoặc, chúng ta có thể loại bỏ Voidmatter xung quanh. Nhưng cả hai lựa chọn đó đều không khả thi trong khoảng thời gian chúng ta có."
-Main_LahaiRoi_3_2_50_13,Điều gì sẽ xảy ra nếu chúng ta vận chuyển nó đến một nơi không bị ảnh hưởng bởi Voidmatter?
-Main_LahaiRoi_3_2_50_14,"Ừm, điều đó không thực tế lắm. Những nơi duy nhất không bị ảnh hưởng bởi Voidmatter lúc này là Khu rừng Bjartr và Học viện Startorch dưới lớp rào chắn bảo vệ. Hay Viện nghiên cứu ở độ cao hàng ngàn mét…"
-Main_LahaiRoi_3_2_50_15,Độ cao lớn.
-Main_LahaiRoi_3_2_50_16,Có vẻ như lại có một địa điểm ở độ cao lớn nữa.
-Main_LahaiRoi_3_2_50_17,Chúng ta có đồ dự phòng cho các mô-đun đo lường của Hyvatia không?
-Main_LahaiRoi_3_2_50_18,Ừ-vâng! Nhà nghiên cứu Anslem đã để lại một vài nguyên mẫu. Tôi sẽ đi lấy một cái từ kho.
-Main_LahaiRoi_3_2_50_19,Nhưng bạn định làm gì với chúng?
-Main_LahaiRoi_3_2_50_20,"Đôi mắt của các vị thần đã thất bại với chúng ta. Máy móc của chúng ta cũng vậy. Giờ đây, chúng ta tiến lên bằng chính đôi tay mình."
-Main_LahaiRoi_3_2_700_1,"Một trong Sáu, nắm giữ vị trí ""Người Ký Ức"". Lời thở của hắn mang một sự lạnh lẽo kỳ lạ."
-Main_LahaiRoi_3_2_701_1,"Một trong Sáu, nắm giữ vị trí ""Người Ghi Chép"". Không một hạt bụi nào trên trang phục của cô."
-Main_LahaiRoi_3_2_702_1,"Một trong Sáu, nắm giữ vị trí ""Refiner"". Đôi mắt nhắm nghiền của cô dường như không phải là nghỉ ngơi, mà giống như một trạng thái được thiết kế."
-Main_LahaiRoi_3_2_703_1,"Một trong Sáu, nắm giữ vị trí ""Mắt"". Cô trông như thể đã rất lâu rồi mới nhìn thấy ánh mặt trời."
-Main_LahaiRoi_3_2_50_21,"Helios gặp trục trặc vì một lượng lớn Vô Ảnh Hư Tích đột ngột xuất hiện xung quanh Hyvatia, làm gián đoạn hoạt động của nó.
-Để thu thập dữ liệu quan trọng cho quá trình khởi động, bạn và Mornye quyết định trực tiếp xâm nhập vào Ổ Động Cơ Phản Ứng."
-Main_LahaiRoi_3_2_704_1,"Một trong Sáu, nắm giữ vị trí ""Binder"". Ngoại hình của hắn tựa như một thân thể được thời gian khắc họa."
-Main_LahaiRoi_3_2_900_1,Solisylum đã xuất hiện cho bạn. Hãy vào đi.
-Main_LahaiRoi_3_2_937_1,Tất cả hệ thống đã vào trình tự kiểm tra khởi động cuối cùng.
-Main_LahaiRoi_3_2_938_1,Đang chuẩn bị mở kênh đầu ra năng lượng.
-Main_LahaiRoi_3_2_939_1,Áp suất trong buồng phản ứng ổn định.
-Main_LahaiRoi_3_2_939_2,Dạng sóng không có bất thường.
-Main_LahaiRoi_3_2_940_1,"Chào bạn, Người Được Chọn."
-Main_LahaiRoi_3_2_941_1,Bão Vô Cực trong Khu Rừng Bjartr đã dừng lại.
-Main_LahaiRoi_3_2_941_2,Đó chắc hẳn là người hùng đã ngăn chặn sự hủy diệt…
-Main_LahaiRoi_3_2_942_1,Vậy đây là thứ mà nhóm Heliodic Six dự đoán sẽ xuất hiện…
-Main_LahaiRoi_3_2_943_1,Một phòng thử nghiệm mô phỏng sự xâm nhiễm của Bão Hư Không vào các Cây Solis.
-Main_LahaiRoi_3_2_944_1,"Thiết bị này, dùng để tạo ra Bão Hư Không nhân tạo, phần lớn giống với những thiết bị từng được tìm thấy trước đây."
-Main_LahaiRoi_3_2_945_1,Đến đó rồi.
-Main_LahaiRoi_3_2_946_1,Tìm thấy rồi. Chắc đây là nơi nguồn gốc của sự ô nhiễm
-Main_LahaiRoi_3_2_942_2,Solisylum xuất hiện rồi {Male=anh ấy;Female=cô ấy} quá…
-Main_LahaiRoi_3_2_947_1,Một thiết bị đầu cuối ư Nó chắc hẳn là của chủ phòng thí nghiệm này
-Main_LahaiRoi_3_2_969_4,Mọi thứ ở phía bạn thế nào rồi Bạn có gặp nguy hiểm không
-Main_LahaiRoi_3_2_969_5,Mọi thứ đều ổn cả. Heliogyre đã hoạt động trở lại. Bây giờ tôi có thể liên lạc trực tiếp với Solisylum và có thể chuyển giao dữ liệu bạn cần cho Nghi Lễ Mặt Trời Mới.
-Main_LahaiRoi_3_2_969_8,Đã đến lúc cho bước cuối cùng.
-Main_LahaiRoi_3_2_971_1,<b>7364</b>... Các số trong ghi chú phải là mật khẩu của Terminal.
-Main_LahaiRoi_3_2_972_1,Ừm. Có một ghi chú được giấu ở đây.
-Main_LahaiRoi_3_2_972_2,Có hai loại chữ viết. Vậy có hơn một người có quyền truy cập vào phòng thí nghiệm này.
-Main_LahaiRoi_3_2_972_3,"Dựa trên lời khai của Astrid, một trong số đó phải là Yngvar. Người còn lại phải là người điều hành phòng thí nghiệm này."
-Main_LahaiRoi_3_2_972_4,"Theo ghi chú, họ thay đổi mật khẩu sau mỗi lần sử dụng Terminal và để lại mật khẩu mới ở đây để thông báo cho người khác."
-Main_LahaiRoi_3_2_973_1,"Hm, nó bị mã hóa rồi. Nếu tôi có thể mở được nó, chắc chắn sẽ có thông tin về thiết bị này và chủ nhân của nó."
-Main_LahaiRoi_3_2_973_2,"Mật khẩu chỉ có thể nhập một lần… Tôi có thể dùng lực phá nó như lần trước, nhưng rủi ro là không xác định."
-Main_LahaiRoi_3_2_973_3,(Buộc vào Thiết bị Đầu cuối.)
-Main_LahaiRoi_3_2_973_4,(Rời đi và tiếp tục điều tra)
-Main_LahaiRoi_3_2_972_5,Mật khẩu mới nhất là… <b>7364</b>. Tôi sẽ thử ngay bây giờ.
-Main_LahaiRoi_3_2_973_5,(Nhập mật khẩu.)
-Main_LahaiRoi_3_2_973_6,Hiệu quả là trên hết.
-Main_LahaiRoi_3_2_973_7,Tôi nên xem xét xung quanh trước. Có thể có manh mối về mật khẩu.
-Main_LahaiRoi_3_2_973_8,"<b>7364</b>, Đến đó."
-Main_LahaiRoi_3_2_973_9,Giữ mật khẩu như này à... May mắn thay Yngvar không phải học trò của tôi.
-Main_LahaiRoi_3_2_974_1,Đây là một phòng thử nghiệm. Họ đang mô phỏng điều gì sẽ xảy ra nếu các Solistrees bị nhiễm độc bởi Bão Vô Tận.
-Main_LahaiRoi_3_2_974_2,Nó… có cảm giác sai sai.
-Main_LahaiRoi_3_2_975_1,Đây chắc hẳn là thiết bị có khả năng tạo ra Bão Hư Không nhân tạo.
-Main_LahaiRoi_3_2_975_2,Nó phù hợp với các thiết kế mà chúng ta đã tìm thấy trước đó. Đây có vẻ là đơn vị mà Astrid đã tìm thấy trước. Một nguyên mẫu đang được phát triển.
-Main_LahaiRoi_3_2_975_3,Có vẻ như tất cả các thiết bị đều được sản xuất ở đây.
-Main_LahaiRoi_3_2_984_1,Đây là đề xuất dự án của tập đoàn Spacetrek.
-Main_LahaiRoi_3_2_986_3,Hả?
-Main_LahaiRoi_3_2_984_2,Kết quả đánh giá: Đề xuất không được phê duyệt. Và những dấu hiệu này trên thiết bị…
-Main_LahaiRoi_3_2_984_3,Có vẻ như tôi sẽ cần sự giúp đỡ của cô ấy lần nữa.
-Main_LahaiRoi_3_2_986_1,Chúng ta sắp hết thời gian rồi. Tôi sẽ sử dụng Khả năng cộng hưởng của mình để tạo ra một con đường hiệu quả hơn.
-Main_LahaiRoi_3_2_986_2,Xin hãy bám chặt nhé.
-Main_LahaiRoi_3_2_988_1,"Ngay khi chúng ta khởi động Helios, chúng ta sẽ cần dữ liệu quan sát thô từ Solisylum. Bạn đã sẵn sàng chưa?"
-Main_LahaiRoi_3_2_988_2,Vâng. Người Tạo Hình đã chia sẻ tất cả dữ liệu của Heliogyre cho tôi rồi. Tôi có thể truy cập nó bất cứ lúc nào.
-Main_LahaiRoi_3_2_988_3,Mọi thứ đã sẵn sàng rồi. Hãy hoàn thành nhiệm vụ của chúng ta.
-Main_LahaiRoi_3_2_990_1,"Được thôi, vì Sư Phụ đã đang trên đường đến Heliogyre, lẽ ra tôi nên bắt đầu chuẩn bị những gì tôi có thể đóng góp."
-Main_LahaiRoi_3_2_991_1,"<i>Nghi thức Hồi sinh, nghi thức từng phong ấn thảm họa sâu dưới lòng đất.</i>"
-Main_LahaiRoi_3_2_991_2,"<i>Vừa rồi, lũ trẻ đã dâng hiến sức mạnh của chúng.</i>"
-Main_LahaiRoi_3_2_991_3,<i>Heliogyre có thể bắt đầu quay trở lại.</i>
-Main_LahaiRoi_3_2_991_4,Tên ngốc.
-Main_LahaiRoi_3_2_991_5,Tôi đã bảo bạn phá hủy Heliogyre rồi. Hoàn toàn.
-Main_LahaiRoi_3_2_991_6,"Tôi xin lỗi, nhưng có lý do cho việc này! Một vài vị khách không mời đã phá hỏng toàn bộ kế hoạch."
-Main_LahaiRoi_3_2_991_7,Lưu lại đi. Tôi không muốn nghe những lời bào chữa của bạn.
-Main_LahaiRoi_3_2_991_8,"Đến thời điểm này, toàn bộ kế hoạch của chúng ta đã sụp đổ vì bạn làm hỏng mọi thứ. Mà tôi còn vất vả xin một giấy thông hành cho bạn vào Liên Bang Mới nữa chứ."
-Main_LahaiRoi_3_2_991_9,"Không! Tôi đang van bạn, đừng bỏ tôi ở đây! Tôi sẽ làm bất cứ điều gì, chỉ nói cho tôi bạn cần gì!"
-Main_LahaiRoi_3_2_991_10,Ư ừ. Bạn may mắn vì người ở trên đã cho một kẻ đáng thương như bạn một cơ hội cuối cùng.
-Main_LahaiRoi_3_2_991_12,Tìm cô ta. Đảm bảo rằng cô ta… không trở lại với Collective.
-Main_LahaiRoi_3_2_992_1,Căn chỉnh hình mẫu trên ngôi sao với Heliogyre sẽ khiến nó phát sáng. Nó đang truyền năng lượng vào đó.
-Main_LahaiRoi_3_2_992_2,Nếu tôi dẫn nguồn sáng từ mọi hướng… tôi nên có thể khởi động lại Heliogyre.
-Main_LahaiRoi_3_2_993_1,Dấu ấn Tacet của tôi… Nó đang cộng hưởng với vật thể giống như ngôi sao này.
-Main_LahaiRoi_3_2_993_2,Có vẻ như tôi có thể di chuyển được nó.
-Main_LahaiRoi_3_2_991_13,"Thông qua Nghi Thức Hồi Tích, Buddy và những Soliskin khác hòa nhập với Solistrees, giúp củng cố phong ấn trên một thảm họa sâu dưới lòng đất.
-Ở một nơi khác, Yngvar nhận được lệnh đảm bảo Mornye không bao giờ quay trở lại với Tập hợp Spacetrek."
-Main_LahaiRoi_3_2_994_1,Chỉ có năm thành viên của Heliodic Six ở đây thôi. Người đã kêu cứu thì không có trong số họ.
-Main_LahaiRoi_3_2_994_2,Nhưng hắn nên ở đâu đó trong Solisylum. Tôi còn chưa kiểm tra ở đâu nữa nhỉ?
-Main_LahaiRoi_3_2_996_1,Ánh sáng yếu ớt ở đây—Giống như thứ gì đó tôi đã thấy trong những ký ức ấy.
-Main_LahaiRoi_3_2_996_2,"Từ góc độ này, vòng sáng nhạt ở trung tâm có lẽ là Heliogyre mà họ đã chặn đứng."
-Main_LahaiRoi_3_2_3902_31,"Liên kết với Heliogyre, Người Tạo Hình thấy trước một thảm họa lớn đang tiến đến Lahai-Roi. Ngài khuyên bạn nên tiết kiệm sức lực, hứa rằng ngài và những người Soliskin sẽ xử lý mối nguy hiểm trực tiếp."
-Main_LahaiRoi_3_2_14_3,Đó có phải là một trong những Khả năng Cộng hưởng của bạn không?
-Main_LahaiRoi_3_2_6_20,"(Và một điều chắc chắn. Người biết tôi qua danh hiệu ""Arbiter"" cần sự giúp đỡ của tôi.)"
-Main_LahaiRoi_3_2_57_8,"Nhưng… nhưng khi tôi đang chập chờn giữa tỉnh và ngủ, tôi nghĩ mình đã thấy một cô gái với nhẫn màu xanh lam nhạt."
-Main_LahaiRoi_3_2_708_3,Không thể! Dự đoán của Heliodic Six chưa bao giờ sai! Chúng ta chắc chắn đã bỏ lỡ cảnh báo!
-Main_LahaiRoi_3_2_10_4,"Vâng, và đây là {PlayerName}, một giáo sư cao cấp tại Học viện."
-Main_LahaiRoi_3_2_6_30,"Nhưng Maja là một trong số những học viên Roya mà tôi đã đề cập. Vì bạn đang tìm cô ấy, chúng ta cũng xem thử là chuyện gì nhé."
-Main_LahaiRoi_3_2_8_13,Tôi đuổi theo họ đến đây. Đó là lý do tôi bị lỡ lớp học hôm nay…
-Main_LahaiRoi_3_2_8_24,"Robot thăm dò của Maja đã phát điên do nhiễm Voidmatter. Mornye đề xuất các biện pháp ngăn chặn tiêu chuẩn, nhưng bạn chọn một giải pháp đơn giản hơn."
+Main_LahaiRoi_3_2_800_1,"Vậy chúng ta cần tìm Foreseer Yngvar tại Haldarheim's Rite of Return, phải không?"
+Main_LahaiRoi_3_2_800_4,Tôi vẫn còn có việc phải làm trước.
+Main_LahaiRoi_3_2_800_5,"Được rồi, chúng ta lên đường thôi."
+Main_LahaiRoi_3_2_9_3,Nó vẫn còn đó.
+Main_LahaiRoi_3_2_9_2,Tuyệt vời! Bạn có nghĩ rằng dữ liệu...
+Main_LahaiRoi_3_2_9_4,"Nhưng việc gửi robot ra ngoài đó đã phá vỡ quy trình thí nghiệm. Ngay cả khi bạn có được dữ liệu, nó sẽ không được tính vào luận án của bạn."
 Main_LahaiRoi_3_2_9_1,"Bây giờ, họ đã trở lại bình thường."
-Main_LahaiRoi_3_2_9_4,"Nhưng việc cử robot ra ngoài đã phá vỡ quy trình thí nghiệm. Ngay cả khi bạn có được dữ liệu, nó cũng không được tính vào luận văn của bạn."
-Main_LahaiRoi_3_2_9_22,"Được rồi, tôi thà quay lại lớp trước khi mất hết điểm tín dụng. Ai biết hôm nay tôi lại gặp rắc rối nhỉ. Tôi còn nhờ mẹ giúp tôi với con robot nữa đấy."
-Main_LahaiRoi_3_2_9_12,"Có thể là ai đó ở cấp cao hơn. Giống như <te href=700025>Solsworn</te> từ Solisylum, hoặc thậm chí một trong <te href=700020>Sáu Người Ánh Sáng</te>."
-Main_LahaiRoi_3_2_9_32,"Ý bạn là, tôi cũng phải làm Giáo sư nữa à? Được thôi."
-Main_LahaiRoi_3_2_965_2,{PlayerName}! Sự nhiễu loạn bên trong Drive đang trở nên không ổn định. Giáo sư Mornye đang bị nó nuốt chửng!
-Main_LahaiRoi_3_2_968_13,"À, có vẻ như quân cờ tôi chọn vội vàng lại tỏ ra hoàn toàn vô dụng. Có vẻ tôi sẽ phải thêm một nét chấm phá cuối cùng để đẩy câu chuyện đến cao trào"
-Main_LahaiRoi_3_2_35_12,"Nếu một du khách đến từ bên ngoài Lahai-Roi bảo vệ Bjartr Woods khỏi sự hủy diệt, bạn sẽ nhận được lời mời đến Solisylum."
-Main_LahaiRoi_3_2_35_16,"Tần số bạn cảm nhận có lẽ là một Soliskin, mang thông điệp đến cho bạn. Nó đã tiêu hết sức lực để băng qua Lahai-Roi để đến với bạn."
-Main_LahaiRoi_3_2_35_17,"Nhưng hắn lại chọn một người Soliskin, không phải một trong số chúng ta, để gửi tin…"
-Main_LahaiRoi_3_2_39_6,"Bây giờ thì năm người còn lại không thể tính toán được, và không đủ những người kế thừa xứng đáng. Ngay cả khi Heliogyre quay trở lại, chúng ta cũng không thể giải mã được các chỉ số của nó."
-Main_LahaiRoi_3_2_41_14,Rồi tôi cũng sẽ thoát khỏi vùng đất hoang băng giá này và bắt đầu một cuộc sống mới ở Liên bang Mới!
-Main_LahaiRoi_3_2_41_17,"Và phương pháp kích hoạt cơ chế này là gây ô nhiễm hệ rễ của Cây Solis bằng Vật Chất Vô Định, khiến Động Cơ Phản Ứng xác định rằng Threnodian đã phá vỡ khóa."
-Main_LahaiRoi_3_2_41_24,"Hahaha... Không, mệnh lệnh của hắn rất rõ ràng. Bạn không được đi đâu cả. Sau đó, bất kể điều gì xảy ra với Lahai-Roi, tôi sẽ đến Liên bang Mới để bắt đầu cuộc sống mới của tôi!"
-Main_LahaiRoi_3_2_41_26,Đã lâu rồi tôi mới nghe ai nói chuyện như vậy. Ít nhất là kể từ khi tôi có được đôi chân này.
-Main_LahaiRoi_3_2_48_19,"Tch, đó là quá nhiều giả định và suy đoán. Không có bằng chứng, tôi có thể dễ dàng kiện bạn vì phỉ báng—"
-Main_LahaiRoi_3_2_991_11,Có một vị khách khác ở Rừng Bjartr rồi đúng không? Một nhà khoa học tàn tật.
+Main_LahaiRoi_3_2_9_5,Cái gì?!
+Main_LahaiRoi_3_2_9_6,"Nhưng... Ồ, được rồi. Cảm ơn dù sao vì đã giúp đỡ. Giáo sư Mornye, và—"
+Main_LahaiRoi_3_2_9_8,"Maja, chúng tôi có chuyện muốn hỏi bạn."
+Main_LahaiRoi_3_2_9_7,Bạn có thể gọi cho tôi {PlayerName}.
+Main_LahaiRoi_3_2_9_9,(Mô tả tầm nhìn bạn đã nhìn thấy.)
+Main_LahaiRoi_3_2_9_10,"Bạn muốn tìm một Roya trong bộ áo choàng đen thêu vàng, đội chiếc mũ sắt có hình hai chiếc sừng?"
+Main_LahaiRoi_3_2_9_13,Heliodic Six... Họ là những người được cho là sẽ cung cấp cho chúng ta bài đọc của Heliogyre trong Lễ Mặt Trời Mới.
+Main_LahaiRoi_3_2_9_14,Đúng vậy. Họ là sáu thành viên mạnh nhất của bộ tộc Roya. Cấp bậc cao nhất cũng vậy.
+Main_LahaiRoi_3_2_9_11,"Những chiếc sừng là biểu tượng của Exostrider. <te href=700024>Người chăn cừu</te> mặc chúng, nhưng không Mục Tử nào lại mặc áo choàng như thế..."
+Main_LahaiRoi_3_2_9_15,"Tôi nghe nói họ sử dụng Heliogyre để dự đoán mọi thứ, từ sự di cư của loài chim đến Bão Hư Không. Họ biết tất cả."
+Main_LahaiRoi_3_2_9_16,Làm thế nào để tôi gặp một trong số họ?
+Main_LahaiRoi_3_2_9_17,Huh?! Điều đó có thể khó khăn.
+Main_LahaiRoi_3_2_9_12,"Có thể là ai đó ở cấp cao hơn. Giống như <te href=700025>Solsworn</te> từ Solisylum, hoặc thậm chí một trong <te href=700020>the Heliodic Six</te>."
+Main_LahaiRoi_3_2_9_19,Nhưng có lẽ bạn có thể thử gặp một trong những Heliodic Six chưa được bổ nhiệm?
+Main_LahaiRoi_3_2_9_20,"Sigrika hiện đang đi nghiên cứu ở vùng băng giá. Người duy nhất xung quanh là Foreseer Yngvar, nhưng anh ấy không xuất hiện nhiều."
+Main_LahaiRoi_3_2_9_18,Họ không bao giờ rời khỏi <te href=700018>Solisylum</te>. Nó được bao quanh bởi ánh sáng quanh năm. Thậm chí rất ít Roya được phép vào.
+Main_LahaiRoi_3_2_9_21,"Nếu bạn muốn tìm anh ấy, mẹ tôi có thể giúp được. Cô ấy là Nữ chăn cừu Royan ở trại Atuja. Tên là Astrid."
+Main_LahaiRoi_3_2_9_22,"Bây giờ, tốt nhất là tôi nên quay lại lớp học trước khi mất hết tín chỉ. Ai biết hôm nay tôi sẽ gặp rắc rối? Tôi thậm chí còn nhờ mẹ giúp tôi với con robot."
+Main_LahaiRoi_3_2_9_23,Rất tốt. Chúc may mắn với bài luận văn của bạn.
+Main_LahaiRoi_3_2_9_24,Phew... Tôi giỏi hơn trong việc nói chuyện với học sinh trong lớp.
+Main_LahaiRoi_3_2_9_25,"{PlayerName}, bạn đã học được những gì bạn cần chưa?"
+Main_LahaiRoi_3_2_9_26,Người cuối cùng mà những con robot đó có khả năng nhìn thấy trước khi mất kiểm soát là mẹ của Maja.
+Main_LahaiRoi_3_2_9_27,Tôi nghĩ chúng ta có thể nói chuyện với cô ấy dưới hình thức một chuyến thăm nhà thân thiện.
+Main_LahaiRoi_3_2_9_28,"Hmm... Trong trường hợp đó, tôi có thể đồng hành cùng bạn với tư cách là Giáo sư của Học viện. Về danh tính của bạn, {PlayerName}..."
+Main_LahaiRoi_3_2_9_29,Không sao đâu. Nó sẽ chỉ đơn giản là một tiêu đề thuận tiện.
+Main_LahaiRoi_3_2_9_30,Mornye?
+Main_LahaiRoi_3_2_9_31,Bạn có thể làm... người cố vấn của tôi được không?
+Main_LahaiRoi_3_2_9_32,"Ý bạn là, cũng làm giáo sư à? Chắc chắn."
+Main_LahaiRoi_3_2_9_34,Tôi chỉ đang nghĩ cách giúp bạn tìm được người bạn đang tìm.
+Main_LahaiRoi_3_2_9_35,Lý do của bạn là của riêng bạn. Tôi tin tưởng vào phán đoán của bạn và bạn có thể nói cho tôi biết sau.
+Main_LahaiRoi_3_2_9_33,Nhưng bạn không định nói với tôi rằng tôi nên báo cáo việc này với Học viện để xử lý sao?
+Main_LahaiRoi_3_2_9_36,Tôi hy vọng tôi có thể diễn tốt vai Giáo sư.
+Main_LahaiRoi_3_2_9_37,"Hãy cho tôi những gợi ý, Giáo sư trẻ."
+Main_LahaiRoi_3_2_9_38,"Vâng, bạn cũng cứ tự do cho tôi lời khuyên nhé, Mentor."
+Main_LahaiRoi_3_2_960_1,Cẩn thận!
+Main_LahaiRoi_3_2_9_39,Tôi nghĩ con người tôi bây giờ... có thể giúp ích cho bạn.
+Main_LahaiRoi_3_2_961_29,"Vậy thiết bị này là của Foreseer Yngvar. Cố vấn, bạn nghĩ sao về điều này?"
+Main_LahaiRoi_3_2_961_30,Cô ấy có vẻ không nói dối.
+Main_LahaiRoi_3_2_9_40,"Dựa trên mô tả của Maja, người đàn ông yêu cầu sự giúp đỡ của bạn có thể là một trong Heliodic Six của Roya, những nhân vật hiếm khi rời khỏi Solisylum. Như một sự thỏa hiệp, bạn quyết định tìm kiếm một trong những người kế nhiệm chưa được bổ nhiệm của Heliodic Six, Foreseer Yngvar. Maja khuyên bạn nên nói chuyện với mẹ cô ấy, Astrid."
+Main_LahaiRoi_3_2_961_31,Chúng ta cần tự mình xác minh điều này.
+Main_LahaiRoi_3_2_961_32,Hmm... Tôi tin tưởng vào phán đoán của bạn.
+Main_LahaiRoi_3_2_961_33,"Foreseer Yngvar này chính là người mà Maja đã đề cập trước đó, thành viên chưa được bổ nhiệm của Heliodic Six. Phải chăng đây là một nỗ lực nhằm siết chặt quyền lực của ông?"
+Main_LahaiRoi_3_2_961_34,Không. Điều đó là không thể.
+Main_LahaiRoi_3_2_961_37,(Nhưng anh ta có thể nuôi dưỡng sự thù địch với Heliodic Six hiện tại. Yngvar vẫn là người dẫn đường cho chúng ta tìm ra họ.)
+Main_LahaiRoi_3_2_961_36,Hmm... nghĩa là không ai có thể đe dọa được vị trí của Yngvar.
+Main_LahaiRoi_3_2_961_38,(Mọi chuyện đang trở nên phức tạp hơn. Tiếp cận trực tiếp với Yngvar có thể không phải là một ý tưởng hay.)
+Main_LahaiRoi_3_2_961_39,Chúng ta có thể tìm thấy anh ấy ở đâu?
+Main_LahaiRoi_3_2_961_35,"Mỗi trong số <ano=Solsworn>những người kế nhiệm này</ano> được chọn khi Khả năng Cộng hưởng của họ lần đầu thức tỉnh. Ngay cả khi ai đó mong muốn vị trí đó, việc thay đổi cuộc hẹn là điều không thể."
+Main_LahaiRoi_3_2_961_40,"Người dân Solisylum thường cư trú tại ngôi làng giáp ranh với Rừng Bjartr, được gọi là Haldarheim."
+Main_LahaiRoi_3_2_961_42,Nhưng bạn không phải là Roya. Bạn có thể không được phép chứng kiến nghi thức.
+Main_LahaiRoi_3_2_961_43,Uuu...
+Main_LahaiRoi_3_2_961_41,"Đó là thời điểm của <te href=700028>Nghi thức trở về</te>. Soliskin sẽ trở lại Solistrees và Exostrider. Theo truyền thống, Foreseer Yngvar sẽ tham dự buổi lễ."
+Main_LahaiRoi_3_2_961_44,"Huh? Đợi đã, nhưng chúng tôi đã tìm thấy đứa trẻ này ở đây."
+Main_LahaiRoi_3_2_961_45,"Đây có phải là Soliskin bạn đã lưu không? Chà... Có lẽ bạn có thể tham dự với tư cách là ""Người chăn cừu."""
+Main_LahaiRoi_3_2_961_46,"Soliskin đã là bạn đồng hành của Hoàng gia trong hàng trăm năm. Nếu họ biết rằng bạn đã cứu được một người, họ sẽ rất biết ơn."
+Main_LahaiRoi_3_2_961_47,Chu... Chuuu!
+Main_LahaiRoi_3_2_961_50,Chuuu!
+Main_LahaiRoi_3_2_961_48,Bây giờ chúng ta đang ở trong đó cùng nhau.
+Main_LahaiRoi_3_2_961_49,Tôi chưa bao giờ ở gần Soliskin như vậy trước đây. Xin vui lòng cho tôi biết nếu tôi làm điều gì sai.
+Main_LahaiRoi_3_2_961_51,"Astrid cho bạn biết rằng Yngvar sẽ xuất hiện tại Lễ hội Trở về sắp tới. Để tìm thấy anh ta, bạn quyết định đi cùng Soliskin đã được giải cứu đến một ngôi làng tên là Haldarheim và tham gia nghi lễ."
+Main_LahaiRoi_3_2_962_1,Gió thật dễ chịu... Tôi có thể ở đây lâu hơn một chút.
+Main_LahaiRoi_3_2_962_2,Bạn có muốn tham gia cùng tôi không?
+Main_LahaiRoi_3_2_962_3,Bạn có chút thời gian để trò chuyện không?
+Main_LahaiRoi_3_2_962_4,Tôi có một số việc cần giải quyết.
+Main_LahaiRoi_3_2_962_5,Đúng. Tập thể Spacetrek đã cho tôi nghỉ ốm cả tháng có lương. Lịch trình của tôi rất rõ ràng.
+Main_LahaiRoi_3_2_962_6,Lần cuối cùng tôi được nghỉ nhiều như thế này... Tôi nghĩ mình đã quay lại thời cấp hai khi bị ngã cầu thang.
+Main_LahaiRoi_3_2_962_7,Bạn có ổn không?
+Main_LahaiRoi_3_2_962_9,Bây giờ bạn muốn thảo luận điều gì?
+Main_LahaiRoi_3_2_962_10,Lễ năng lượng mặt trời mới.
+Main_LahaiRoi_3_2_962_8,"À, lúc đó tôi đã đánh rơi cuốn sách đang đọc xuống cầu thang. Thế nên tôi vô tình... Không, tôi không nên đề cập đến những điều đáng xấu hổ như vậy trước mặt bạn."
+Main_LahaiRoi_3_2_962_11,Về biệt danh của bạn dành cho tôi...
+Main_LahaiRoi_3_2_962_12,Chúng ta có biết nhau trước đây không?
+Main_LahaiRoi_3_2_962_13,Hãy chăm sóc bản thân. Hẹn gặp lại lần sau.
+Main_LahaiRoi_3_2_962_14,"Reactor Drive đã không hạ cánh như Spacetrek Collective đã lên kế hoạch ban đầu. Nhưng bây giờ nó đã ở trên mặt đất, cuối cùng chúng ta cũng có thể bắt đầu nghiên cứu nó."
+Main_LahaiRoi_3_2_962_16,"Và rồi, một ngày nào đó, chúng ta sẽ chứng minh được rằng cả mặt trời và các ngôi sao đều nằm trong tầm tay của chúng ta."
+Main_LahaiRoi_3_2_962_17,Sẽ thật tuyệt nếu bạn có thể ở đó để chứng kiến điều đó cùng tôi.
+Main_LahaiRoi_3_2_962_18,(Trò chuyện về một điều gì đó khác.)
+Main_LahaiRoi_3_2_962_19,Ồ... đó là vì... nó ngăn cản danh tính của bạn bị lộ.
+Main_LahaiRoi_3_2_962_20,Nhưng điều đó không còn cần thiết nữa phải không?
+Main_LahaiRoi_3_2_962_21,Bạn nói đúng. Tôi nghĩ tôi không thể gọi anh như vậy nữa...
+Main_LahaiRoi_3_2_962_23,"Mặc dù người cố vấn đó đã rời đi ngay sau đó, nhưng ảnh hưởng của họ vẫn ở lại với cô ấy, và, à, vẫn ảnh hưởng đến tôi... Ý tôi là, bạn của tôi."
+Main_LahaiRoi_3_2_962_22,"Nhưng tôi có một người bạn. Cô ấy phải đối mặt với tình trạng sức khỏe, và trong khoảng thời gian khó khăn, cô ấy đã được một người cố vấn hướng dẫn."
+Main_LahaiRoi_3_2_962_26,(Trò chuyện về một điều gì đó khác.)
+Main_LahaiRoi_3_2_962_24,"Miễn là bạn có điều gì đó để dạy, bạn vẫn là người cố vấn."
+Main_LahaiRoi_3_2_962_28,Cái gì?!
+Main_LahaiRoi_3_2_962_25,Vậy... tôi vẫn có thể gọi cậu như vậy được không?
+Main_LahaiRoi_3_2_962_27,Đó là... một bí mật.
+Main_LahaiRoi_3_2_962_29,Đó là vì có người đã bắt tôi phải hứa điều đó khi họ rời đi. Họ nói: “Chỉ bằng cách nói lời tạm biệt mới có thể tiến bộ và thay đổi”.
+Main_LahaiRoi_3_2_962_30,"Vì vậy, cho đến khi đạt được mục tiêu, lời ""tạm biệt"" đó vẫn phải là lời cuối cùng."
+Main_LahaiRoi_3_2_962_31,Cho đến khi nào?
+Main_LahaiRoi_3_2_962_34,(Trò chuyện về một điều gì đó khác.)
+Main_LahaiRoi_3_2_962_32,"Hmm... có lẽ cho đến khi Reactor Drive được phân tích đầy đủ, Exostrider trên vùng đất băng giá được kích hoạt trở lại, và thảm họa chôn sâu bên dưới cuối cùng cũng được giải quyết. Hoặc có thể cho đến khi không còn tai họa nào trên hành tinh này nữa."
+Main_LahaiRoi_3_2_962_33,"Cho đến khi tôi có thể tự mình đưa ra câu trả lời cho bạn... Làm ơn, hãy giữ sự tò mò đó thêm một chút nữa thôi."
+Main_LahaiRoi_3_2_962_35,"Được rồi. Hẹn gặp lại lần sau. Ồ, còn một điều nữa—"
+Main_LahaiRoi_3_2_963_1,Tiếp cận ổ lò phản ứng. Chuyển sức mạnh tối đa sang các khẩu pháo bay lượn!
+Main_LahaiRoi_3_2_962_36,"Lần này hãy ở lại lâu hơn một chút, Mentor."
+Main_LahaiRoi_3_2_963_2,"Mornye, bạn đã làm được rất nhiều điều."
+Main_LahaiRoi_3_2_963_3,Cứ để phần còn lại cho tôi!
+Main_LahaiRoi_3_2_964_1,Chế độ tăng cường có thể được kích hoạt! Nhiên liệu có hạn nên hãy sử dụng cẩn thận.
+Main_LahaiRoi_3_2_964_2,Điều này là đủ cho những gì tôi cần.
+Main_LahaiRoi_3_2_965_1,"Ugh, ánh sáng càng trở nên tệ hơn khi chúng ta càng đến gần."
+Main_LahaiRoi_3_2_965_3,Nhanh hơn. Tôi cần phải di chuyển nhanh hơn!
+Main_LahaiRoi_3_2_965_2,{PlayerName}! Sự xáo trộn trong Drive ngày càng không ổn định. Giáo sư Mornye đang bị nó nuốt chửng!
+Main_LahaiRoi_3_2_967_2,Cảm ơn.
+Main_LahaiRoi_3_2_966_1,"Vì vậy, hãy thử công nghệ mới của Viện."
+Main_LahaiRoi_3_2_967_1,Sự tập trung năng lượng bên trong Bộ truyền động Lò phản ứng đang tăng lên. Các giao thức phòng thủ quan trọng có thể được kích hoạt.
+Main_LahaiRoi_3_2_968_1,"Ba ngày trước, khi Helios được phóng, chúng tôi đã ghi nhận sự gia tăng đột biến bất ngờ về nồng độ Voidmatter gần Hyvatia. Nó cản trở việc phóng."
+Main_LahaiRoi_3_2_968_2,"Chúng tôi vẫn chưa chắc điều gì đã gây ra sự đột biến này. Nhưng sau khi so sánh các dạng sóng với thiết bị Giáo sư Mornye mang về, chúng tôi nghi ngờ đó là một cơn Bão Hư Không được tạo ra một cách nhân tạo."
+Main_LahaiRoi_3_2_968_3,Và chúng tôi tìm thấy bạn bất tỉnh gần đó.
+Main_LahaiRoi_3_2_968_4,"Bác sĩ Herssen, tôi thực sự không nhớ được gì cả..."
+Main_LahaiRoi_3_2_968_6,"Heh, nhiệm vụ của bác sĩ phải không? Nhưng có một điều tôi cần lời khai của bạn."
+Main_LahaiRoi_3_2_968_7,"Trước khi bạn ngất đi, bạn đã nhìn thấy ai?"
+Main_LahaiRoi_3_2_968_9,Ai đó?
+Main_LahaiRoi_3_2_968_8,"Chúc một ngày tốt lành, ngài! Quá trình bảo trì định kỳ của Hyvatia đã hoàn tất. Tôi sẽ lên đường."
+Main_LahaiRoi_3_2_968_10,Đừng bận tâm. Không có thời gian để nghĩ về điều đó.
+Main_LahaiRoi_3_2_968_5,(Cười khúc khích) Bạn có thể thư giãn. Giáo sư Lucilla đã giải thích rõ ràng cho bạn rồi. Bạn không phải là nghi phạm.
+Main_LahaiRoi_3_2_968_11,"Tiến sĩ Herssen, ủy ban xét duyệt của Viện Hàn lâm cho rằng những điều tôi vừa nói là không thể tin được. Nhưng nếu bạn sẵn sàng tin tưởng tôi..."
+Main_LahaiRoi_3_2_968_12,"Trước khi ngất đi, tôi đã nhìn thấy... chính mình."
+Main_LahaiRoi_3_2_968_13,"Ah, có vẻ như con tốt được chọn vội vàng của tôi đã tỏ ra hoàn toàn vô dụng. Có vẻ như tôi sẽ phải thêm phần hoa mỹ cuối cùng để đẩy câu chuyện lên cao trào."
+Main_LahaiRoi_3_2_968_14,"Nhưng không sao, không sao cả. Tôi sẽ chỉ đơn giản coi đây là một lời kêu gọi đánh giá kém. Một nhóm ngu ngốc đã diễn ra một trò hề."
+Main_LahaiRoi_3_2_968_15,"Thật đáng tiếc, mặc dù. Với tác phẩm này đã hết, chương mà cô gái hình thành mối quan hệ của mình với Threnodian phải bị trì hoãn."
+Main_LahaiRoi_3_2_968_16,"Nhưng đó là một câu chuyện để thưởng thức sau này. Phải, {PlayerName}?"
+Main_LahaiRoi_3_2_968_18,Bạn không phải là bác sĩ của trường sao? Và bạn... ở đây để bảo vệ tôi?
+Main_LahaiRoi_3_2_968_17,"Tôi chỉ ở đây để giám sát bảo vệ. Có thể nói, bạn đóng vai trò là vệ sĩ riêng của mình."
+Main_LahaiRoi_3_2_976_1,Tôi đã tìm thấy thiết bị. Nó gần Solitree.
+Main_LahaiRoi_3_2_976_2,Solitree? Tôi có linh cảm xấu về điều này.
