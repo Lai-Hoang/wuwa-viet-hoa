@@ -1,4 +1,4 @@
-# 25/12/2025 update ver 3.0 dành cho launcher và steam. Bản dịch sẽ hơi lỏ vì ko dùng đc gemini AI :).
+# 04/01/2026 update ver 3.0 dành cho launcher và steam. ~~Bản dịch sẽ hơi lỏ vì ko dùng đc gemini AI~~ Thử dùng MistralAI :).
 # Wuthering Waves Việt Hóa 
 lưu ý vui lòng không sử dụng tài khoản chính.
 LỆNH CẤM LUÔN LUÔN LÀ 10 NĂM.
