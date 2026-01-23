@@ -37,8 +37,6 @@ Main_LahaiRoi_3_1_1002_7,"(Còn về Lynae, cô ấy đang che giấu điều g�
 Main_LahaiRoi_3_1_1002_11,"Hình như. Tôi đã bị theo dõi. Dự án nhóm suýt giết tôi, và giờ lại thêm chuyện này..."
 Main_LahaiRoi_3_1_1002_10,"Vậy câu chuyện thực sự của cậu là gì, {PlayerName} đến từ Bờ Biển Đen...?"
 Main_LahaiRoi_3_1_1002_12,"Từ giờ trở đi, mọi thứ sẽ bận rộn hơn."
-Main_LahaiRoi_3_1_1002_13,"Trên đường đến phòng y tế, Abby nhận xét rằng mặc dù tần số của bạn đã ổn định, nhưng phần bị mất vẫn chưa xuất hiện. Nó nghi ngờ Voidworm đã hấp thụ phần đó, vì sinh vật này mang mùi Threnodian giống như ""quả cầu mắt"" mà bạn đã thấy trong miền không gian kỳ lạ khi đi qua để đến Lahai-Roi.
-Bạn quyết định sửa tần số đang mờ dần của mình trước, sau đó tìm hiểu thêm về cô gái mà bạn đã thấy trong miền không gian. Không xa đó, Lynae lặng lẽ tắt một chiếc máy dường như đang theo dõi bạn. Rõ ràng cô ấy biết về bạn nhiều hơn những gì cô ấy tiết lộ."
 Main_LahaiRoi_3_1_11_2,"...À, {PlayerName}! Cuối cùng cũng tới!"
 Main_LahaiRoi_3_1_11_3,"Sau đường hầm không gian, tất cả những gì tôi có thể làm là chờ đợi! Và tôi thậm chí còn không thể liên lạc với Bờ Biển Đen. Đã mấy ngày rồi."
 Main_LahaiRoi_3_1_11_4,Có lẽ tôi đã nghĩ...
@@ -857,7 +855,6 @@ Main_LahaiRoi_3_1_5001_11,"Tập thể Spacetrek cũng đang lên kế hoạch t
 Main_LahaiRoi_3_1_5001_15,Tôi hiểu rồi. Hy vọng bạn sớm tìm ra nguyên nhân gốc rễ của các triệu chứng.
 Main_LahaiRoi_3_1_5001_14,Nhưng vẫn chưa hồi phục hoàn toàn.
 Main_LahaiRoi_3_1_5001_16,(Hỏi về điều gì khác.)
-Main_LahaiRoi_3_1_5001_18,"Quá khứ lính đánh thuê của tôi, toàn bộ màn đóng giả đặc vụ Fractsidus... Lần này, tôi đã thú nhận tất cả. Chẳng còn lý do gì để che giấu nữa."
 Main_LahaiRoi_3_1_5001_19,Bạn đã xử lý thiết bị Fractsidus như thế nào?
 Main_LahaiRoi_3_1_5001_17,"À, đó giống như một buổi tư vấn ""sức khỏe tinh thần"" hơn là một cuộc thẩm vấn. Các nhân viên thực sự rất chu đáo... điều đó khiến tớ bất ngờ."
 Main_LahaiRoi_3_1_5001_22,(Hỏi về điều gì khác.)
@@ -1294,3 +1291,6 @@ Main_LahaiRoi_3_1_325_10,Cuộc sống ở Học viện này quả thực là m�
 Main_LahaiRoi_3_1_37_32,"Bạn và Lynae cùng nhau hợp tác để ngăn chặn sự tàn phá của Hyvatia. Khi bạn hỏi tại sao cô ấy lại ở đó, cô ấy ngập ngừng giải thích.
 Warren đến và kinh hãi trước thiệt hại. Anh ta yêu cầu biết tại sao cô lại có mặt tại Viện trong giờ học và nghi ngờ sự dính líu của cô. Lynae im lặng, như thể đang che giấu điều gì đó.
 Ngay khi cô ấy chuẩn bị sử dụng Forte của mình để trốn thoát, bạn đã can thiệp. Bạn chỉ ra rằng cô ấy đã giúp ngăn chặn một thảm họa và không có động cơ để phá hoại, gọi lời buộc tội của Warren là vội vã. Cuối cùng, anh ấy ra lệnh cho cả hai quay trở lại Học viện để điều tra chính thức."
+Main_LahaiRoi_3_1_1002_13,"Trên đường đến phòng y tế, Abby nhận xét rằng dù tần số của bạn đã ổn định, phần bị mất vẫn chưa xuất hiện. Nó nghi ngờ Sâu Hư Không đã hấp thụ phần đó, bởi sinh vật này mang mùi hương Threnodian giống như ""quả cầu mắt"" mà bạn đã thấy trong không gian kỳ lạ khi băng qua để đến Lahai-Roi.
+Bạn quyết định sửa tần số đang mờ dần của mình trước, sau đó tìm hiểu thêm về cô gái mà bạn đã thấy trong miền không gian. Không xa đó, Lynae lặng lẽ tắt một chiếc máy dường như đang theo dõi bạn. Rõ ràng cô ấy biết về bạn nhiều hơn những gì cô ấy tiết lộ."
+Main_LahaiRoi_3_1_5001_18,"Quá khứ làm lính đánh thuê, màn giả vờ là đặc vụ Fractsidus giả tạo... Lần này, tôi đã thú hết. Chẳng còn lý do gì để che giấu nữa."

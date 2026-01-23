@@ -212,7 +212,6 @@ Main_LahaiRoi_3_2_24_31,Ôi tuyệt!
 Main_LahaiRoi_3_2_24_30,Tôi sẽ tham gia cùng cậu. Cùng nhảy với Buddy nhé. Cậu thấy sao?
 Main_LahaiRoi_3_2_24_32,Trận chiến thực sự của chúng ta sẽ bắt đầu vào ngày mai.
 Main_LahaiRoi_3_2_24_33,"Tối nay, chúng ta hãy thư giãn một chút nhé, Mornye."
-Main_LahaiRoi_3_2_24_34,Đúng vậy. Người thầy của tôi cũng nên nghe theo lời khuyên của {Male=chính anh ấy;Female=chính cô ấy} chứ.
 Main_LahaiRoi_3_2_24_36,Hừ...
 Main_LahaiRoi_3_2_24_35,Chu... Chu... Ừ... Ừ... Ốc...
 Main_LahaiRoi_3_2_24_37,Một vài vị khách không mời mà đến đã xuất hiện.
@@ -509,7 +508,6 @@ Main_LahaiRoi_3_2_8_14,Nguyên liệu <te href=700023>Exoswarm</te> bên trong �
 Main_LahaiRoi_3_2_8_17,"Vì lý do an toàn, bạn cần tắt các thiết bị trước, sau đó làm sạch các bộ phận bị nhiễm bẩn bằng Voidmatter."
 Main_LahaiRoi_3_2_8_18,Nhưng tiếp cận chúng lúc này có thể gây thêm tổn hại. Chúng ta cần một máy phát xung để làm choáng chúng từ xa. Tôi sẽ gửi yêu cầu ngay.
 Main_LahaiRoi_3_2_8_19,Có cách đơn giản hơn.
-Main_LahaiRoi_3_2_8_20,Rút kiếm ra đi.
 Main_LahaiRoi_3_2_8_21,"Không, đợi đã, như vậy là vi phạm quy trình..."
 Main_LahaiRoi_3_2_8_23,￥#&@... Đang quét... Mục tiêu... Tiêu diệt...
 Main_LahaiRoi_3_2_8_22,Đừng bận tâm. Để tôi suy nghĩ cách viết báo cáo đánh giá sau.
@@ -721,7 +719,6 @@ Main_LahaiRoi_3_2_999_20,Có.
 Main_LahaiRoi_3_2_999_19,"Chúng ta đã hứa sẽ cùng nhau chứng kiến điều này mà, phải không?"
 Main_LahaiRoi_3_2_999_22,Mình mong được cùng bạn tham dự buổi lễ.
 Main_LahaiRoi_3_2_999_23,"Tôi… tôi muốn có cậu ở đó để chứng kiến. Sự lên của mặt trời mới, và nhân loại đặt những bước chân đầu tiên vào tương lai mà họ đã tự tay xây dựng."
-Main_LahaiRoi_3_2_999_24,"Khi buổi lễ sắp diễn ra, Spactrek Collective sẽ ngày càng bận rộn. Những cơ hội gặp gỡ như thế này sẽ hiếm hoi. Nhưng lời hứa này vẫn sẽ được giữ vững."
 Main_LahaiRoi_3_2_999_21,Được rồi. Coi đây là lời mời chính thức của tôi nhé.
 Main_LahaiRoi_3_2_999_13,Lễ Hội Mặt Trời Mới sắp diễn ra. Đây là đỉnh cao của hàng thập kỷ nỗ lực. Mọi người ở Tập Thể đều dốc hết sức để biến nó thành hiện thực.
 Main_LahaiRoi_3_2_999_25,Vậy là chúng ta đã hứa rồi nhé.
@@ -1029,3 +1026,6 @@ Main_LahaiRoi_3_2_996_2,"Từ góc này, vòng sáng mờ nhạt ở trung tâm 
 Main_LahaiRoi_3_2_3902_31,"Kết nối với Heliogyre, Shaper đã nhìn thấy một thảm họa khủng khiếp đang ập đến Lahai-Roi. Ông thúc giục bạn hãy giữ gìn sức lực, và hứa rằng ông cùng Soliskin sẽ đối phó với mối nguy hiểm trước mắt."
 Main_LahaiRoi_3_2_996_1,"Ánh sáng mờ ảo ở đây...
 Giống như trong những ký ức ấy vậy."
+Main_LahaiRoi_3_2_24_34,Đúng vậy. Người thầy của tôi cũng nên nghe theo {Male=lời khuyên của chính anh ấy;Female=lời khuyên của chính cô ấy} chứ.
+Main_LahaiRoi_3_2_8_20,(Rút kiếm ra.)
+Main_LahaiRoi_3_2_999_24,"Khi buổi lễ đến gần, Spacetrek Collective sẽ ngày càng bận rộn. Những dịp gặp gỡ như thế này sẽ hiếm hoi. Nhưng lời hứa ấy vẫn sẽ còn đó."

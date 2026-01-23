@@ -212,7 +212,7 @@ Main_LahaiRoi_3_2_24_30,I'll join you. Let's dance with Buddy. What do you say?
 Main_LahaiRoi_3_2_24_31,HOORAY!
 Main_LahaiRoi_3_2_24_32,Our real battle starts tomorrow.
 Main_LahaiRoi_3_2_24_33,"Tonight, let's relax a little, Mornye."
-Main_LahaiRoi_3_2_24_34,"Yes. My mentor should take {Male=him;Female=her} own advice, too."
+Main_LahaiRoi_3_2_24_34,"Yes. My mentor should take {Male=his;Female=her} own advice, too."
 Main_LahaiRoi_3_2_24_35,Chu... Chu... Uuuugh...
 Main_LahaiRoi_3_2_24_36,Hmph...
 Main_LahaiRoi_3_2_24_37,Some uninvited guests have arrived.
@@ -508,7 +508,7 @@ Main_LahaiRoi_3_2_8_16,I'm so sorry...
 Main_LahaiRoi_3_2_8_17,"For safety reasons, you'll need to shut down the units first, then clean the contaminated parts with Voidmatter."
 Main_LahaiRoi_3_2_8_18,But approaching them right now may lead to further damage. We need a pulse generator to stun them from a distance. I'll submit a request.
 Main_LahaiRoi_3_2_8_19,There's a simpler solution.
-Main_LahaiRoi_3_2_8_20,(Unsheath your sword.)
+Main_LahaiRoi_3_2_8_20,(Unsheathe your sword.)
 Main_LahaiRoi_3_2_8_21,"No wait, that's against protocol..."
 Main_LahaiRoi_3_2_8_22,Never mind. I'll think about how to write the review report later.
 Main_LahaiRoi_3_2_8_23,￥#&@... Scanning... Target... Eradication...
@@ -721,7 +721,7 @@ Main_LahaiRoi_3_2_999_20,Yes.
 Main_LahaiRoi_3_2_999_21,"That's all right. Consider this my official invitation, then."
 Main_LahaiRoi_3_2_999_22,I hope to attend the ceremony together with you.
 Main_LahaiRoi_3_2_999_23,"I… I'd want you there to witness it. The rise of the new sun, and humanity taking their first steps into the future they've built with their own hands."
-Main_LahaiRoi_3_2_999_24,"As the ceremony draws near, the Spactrek Collective will become increasingly occupied. Opportunities to meet like this will be rare. But this promise will still stand."
+Main_LahaiRoi_3_2_999_24,"As the ceremony draws near, the Spacetrek Collective will become increasingly occupied. Opportunities to meet like this will be rare. But this promise will still stand."
 Main_LahaiRoi_3_2_999_25,Then it's a promise.
 Main_LahaiRoi_3_2_999_26,"Before my power is spent, I have little time left."
 Main_LahaiRoi_3_2_999_27,The only choice now is to force the Heliogyre to a standstill.
