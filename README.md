@@ -1,7 +1,8 @@
 # 04/01/2026 update ver 3.0 dành cho launcher và steam. ~~Bản dịch sẽ hơi lỏ vì ko dùng đc gemini AI~~ Thử dùng MistralAI :).
 # 03/02/2026 Gặp vấn đề ở 3.1 nên sẽ ko có update. Vậy nên tìm những app dùng OCR để dịch trên màn hình.
-Đừng chờ update ko đc đâu :)
-2 file dll để bypass ở phiên bản trước thì vẫn sài bình thường.
+## Đừng chờ update. ko update đc đâu :).
+
+## 2 file dll để bypass ở phiên bản trước thì vẫn sài bình thường.
 <img width="501" height="163" alt="Screenshot 2026-02-03 131109" src="https://github.com/user-attachments/assets/4b02eed8-5af1-46ca-88d1-4952fbe85d5b" />
 
 # Wuthering Waves Việt Hóa 
