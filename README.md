@@ -1,3 +1,6 @@
+<a href="https://discord.gg/2H5ebWhK4b">
+  <img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white&style=for-the-badge"/>
+</a>
 
 # 05/02/2026 Gặp vấn đề ở 3.1 nên sẽ ~~ko~~ có update. ~~Vậy nên tìm những app dùng OCR để dịch trên màn hình.~~ Chờ....
 ~~## Đừng chờ update. ko update đc đâu :).~~ 
